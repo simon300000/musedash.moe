@@ -1,0 +1,7 @@
+https://prpr-muse-dash.leanapp.cn/musedash/announce
+https://prpr-muse-dash.leanapp.cn/musedash/announce/pc
+
+https://prpr-muse-dash.leanapp.cn/musedash/v1/pcleaderboard/top?music_uid=0-21&music_difficulty=3&limit=10000
+https://prpr-muse-dash.leanapp.cn/musedash/v1/leaderboard/top?music_uid=0-10&music_difficulty=2&limit=99&offset=0
+
+https://prpr-muse-dash.leanapp.cn/musedash/v1/pcleaderboard/top?music_uid=13-5&music_difficulty=2&limit=99&offset=0
