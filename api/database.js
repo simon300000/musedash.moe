@@ -1,0 +1,36 @@
+const level = require('level')
+const LRU = require('lru-cache')
+
+const cache = new LRU({
+  max: 1000
+})
+
+class LevelDatabase {
+  constructor({ name, db }) {
+    this.name = name
+    this.db = db
+  }
+  put(key, value) {
+    cache.set(`${this.name}_${key}`, value)
+    return this.db.put(`${this.name}_${key}`, value)
+  }
+  async get(key) {
+    let value = cache.get(`${this.name}_${key}`)
+    if (!value) {
+      value = await this.db.get(`${this.name}_${key}`).catch(() => undefined)
+      cache.set(`${this.name}_${key}`, value)
+    }
+    return value
+  }
+}
+
+let db = level(`./db`, { valueEncoding: 'json' })
+
+let rank = new LevelDatabase({ name: 'rank', db })
+
+module.exports = {
+  rank: {
+    put: ({ uid, difficulty, value }) => rank.put(`${uid}_${difficulty}`, value),
+    get: ({ uid, difficulty }) => rank.get(`${uid}_${difficulty}`)
+  }
+}
