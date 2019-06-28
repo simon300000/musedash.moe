@@ -1,0 +1,47 @@
+[
+	{
+		"title": "Default Music"
+	},
+	{
+		"title": "Just as planned"
+	},
+	{
+		"title": "Cute Is Everyting Vol.2"
+	},
+	{
+		"title": "Give Up TREATMENT Vol.5"
+	},
+	{
+		"title": "Happy Otaku Pack Vol.5"
+	},
+	{
+		"title": "Give Up TREATMENT Vol.4"
+	},
+	{
+		"title": "Happy Otaku Pack Vol.4"
+	},
+	{
+		"title": "Give Up TREATMENT Vol.3"
+	},
+	{
+		"title": "Give Up TREATMENT Vol.2"
+	},
+	{
+		"title": "Budget is burning"
+	},
+	{
+		"title": "Happy Otaku Pack Vol.3"
+	},
+	{
+		"title": "Happy Otaku Pack Vol.2"
+	},
+	{
+		"title": "Happy Otaku Pack Vol.1"
+	},
+	{
+		"title": "Give Up TREATMENT Vol.1"
+	},
+	{
+		"title": "Cute Is Everyting Vol.1"
+	}
+]

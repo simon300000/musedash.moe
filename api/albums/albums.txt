@@ -1,0 +1,135 @@
+[
+	{
+		"uid": "music_package_0",
+		"title": "Default Music",
+		"needPurchase": false,
+		"price": "9.99 $",
+		"jsonName": "ALBUM1",
+		"prefabsName": "AlbumDisco1",
+		"free" : false
+	},
+	{
+		"uid": "unlockall_0",
+		"title": "forever friend",
+		"needPurchase": true,
+		"price": "¥188.00",
+		"free" : false
+	},
+	{
+		"uid": "music_package_13",
+		"title": "Cute Is Everyting Vol.2",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM14",
+		"prefabsName": "AlbumDisco14",
+		"free" : false
+	},
+	{
+		"uid": "music_package_12",
+		"title": "Give Up TREATMENT Vol.5",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM13",
+		"prefabsName": "AlbumDisco13",
+		"free" : false
+	},
+	{
+		"uid": "music_package_11",
+		"title": "Happy Otaku Pack Vol.5",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM12",
+		"prefabsName": "AlbumDisco12",
+		"free" : false
+	},
+	{
+		"uid": "music_package_10",
+		"title": "Give Up TREATMENT Vol.4",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM11",
+		"prefabsName": "AlbumDisco11",
+		"free" : false
+	},
+	{
+		"uid": "music_package_9",
+		"title": "Happy Otaku Pack Vol.4",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM10",
+		"prefabsName": "AlbumDisco10",
+		"free" : false
+	},
+	{
+		"uid": "music_package_8",
+		"title": "Give Up TREATMENT Vol.3",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM9",
+		"prefabsName": "AlbumDisco9",
+		"free" : false
+	},
+	{
+		"uid": "music_package_7",
+		"title": "Give Up TREATMENT Vol.2",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM8",
+		"prefabsName": "AlbumDisco8",
+		"free" : false
+	},
+	{
+		"uid": "music_package_6",
+		"title": "Budget is burning",
+		"needPurchase": true,
+		"price": "Free",
+		"jsonName": "ALBUM7",
+		"prefabsName": "AlbumDisco7",
+		"free" : true
+	},
+	{
+		"uid": "music_package_5",
+		"title": "Happy Otaku Pack Vol.3",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM6",
+		"prefabsName": "AlbumDisco6",
+		"free" : false
+	},
+	{
+		"uid": "music_package_4",
+		"title": "Happy Otaku Pack Vol.2",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM5",
+		"prefabsName": "AlbumDisco5",
+		"free" : false
+	},
+	{
+		"uid": "music_package_3",
+		"title": "Happy Otaku Pack Vol.1",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM4",
+		"prefabsName": "AlbumDisco4",
+		"free" : false
+	},
+	{
+		"uid": "music_package_2",
+		"title": "Give Up TREATMENT Vol.1",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM3",
+		"prefabsName": "AlbumDisco3",
+		"free" : false
+	},
+	{
+		"uid": "music_package_1",
+		"title": "Cute Is Everyting Vol.1",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM2",
+		"prefabsName": "AlbumDisco2",
+		"free" : false
+	}
+]
