@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Altale",
+		"author": "Sakuzyo"
+	},
+	{
+		"name": "Brain Power",
+		"author": "NOMA"
+	},
+	{
+		"name": "Berry Go!!",
+		"author": "Freezer feat. Kiichigo"
+	},
+	{
+		"name": "Sweet* Witch* Girl*",
+		"author": "Morimori Atsushi vs. uma"
+	},
+	{
+		"name": "trippers feeling!",
+		"author": "KAH"
+	},
+	{
+		"name": "Lilith ambivalence lovers",
+		"author": "ikaruga_nex"
+	}
+]

@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Maharajah",
+		"author": "Alice Schach and the Magic Orchestra"
+	},
+	{
+		"name": "keep on running",
+		"author": "uma"
+	},
+	{
+		"name": "Käfig",
+		"author": "Chicala Lpis"
+	},
+	{
+		"name": "-+",
+		"author": "daisan"
+	},
+	{
+		"name": "Tenri Kaku Jou",
+		"author": "a_hisa"
+	},
+	{
+		"name": "Adjudicatorz-DanZai-",
+		"author": "JurokuNeta."
+	}
+]

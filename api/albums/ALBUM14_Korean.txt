@@ -1,0 +1,26 @@
+[
+	{
+		"name": "速溶霓虹",
+		"author": "ANK feat.kumako"
+	},
+	{
+		"name": "星球上的追溯詩",
+		"author": "味素 feat.kumako"
+	},
+	{
+		"name": "我要買買買",
+		"author": "iKz"
+	},
+	{
+		"name": "約會宣言",
+		"author": "iKz feat.Hanser"
+	},
+	{
+		"name": "初雪",
+		"author": "KyuRu☆ feat.Yuu Shitsuka"
+	},
+	{
+		"name": "心上華海",
+		"author": "Nekock·LK"
+	}
+]

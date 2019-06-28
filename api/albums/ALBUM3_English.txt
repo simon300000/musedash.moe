@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Oriens",
+		"author": "ginkiha"
+	},
+	{
+		"name": "PUPA",
+		"author": "Morimori Atsushi"
+	},
+	{
+		"name": "Luna Express 2032",
+		"author": "Sakamiya feat.Mao Komiya"
+	},
+	{
+		"name": "Ukiyoe Yokochou",
+		"author": "Chaos City Niigata"
+	},
+	{
+		"name": "Alice in Misanthrope",
+		"author": "LeaF"
+	},
+	{
+		"name": "GOODMEN",
+		"author": "EBIMAYO"
+	}
+]

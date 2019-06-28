@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Brave My Heart",
+		"author": "uma feat.ましろ"
+	},
+	{
+		"name": "Sakura Fubuki",
+		"author": "Street"
+	},
+	{
+		"name": "8bit Adventurer",
+		"author": "Lime"
+	},
+	{
+		"name": "Suffering of screw",
+		"author": "Sakamiya feat.由地波瑠"
+	},
+	{
+		"name": "tiny lady",
+		"author": "Chicala Lpis"
+	},
+	{
+		"name": "Power Attack",
+		"author": "EBIMAYO"
+	}
+]

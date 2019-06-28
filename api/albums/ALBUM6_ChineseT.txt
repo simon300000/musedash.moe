@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Thirty Million Persona",
+		"author": "アリスシャッハと魔法の楽団"
+	},
+	{
+		"name": "conflict",
+		"author": "siromaru + cranky"
+	},
+	{
+		"name": "演華舞踊 ~Enka Dance Music~",
+		"author": "uma with モリモリあつし feat.ましろ"
+	},
+	{
+		"name": "XING",
+		"author": "ginkiha"
+	},
+	{
+		"name": "天翔ける蒼穹のセレナーデ",
+		"author": "Sakamiya feat.あらたきき"
+	},
+	{
+		"name": "Gift box",
+		"author": "K.key"
+	}
+]

@@ -1,0 +1,26 @@
+[
+	{
+		"name": "蓋棺クリサリス",
+		"author": "Team Grimoire"
+	},
+	{
+		"name": "Sterelogue",
+		"author": "VeetaCrush"
+	},
+	{
+		"name": "Cheshire's Dance",
+		"author": "a_hisa"
+	},
+	{
+		"name": "Skrik",
+		"author": "Chicala Lpis"
+	},
+	{
+		"name": "Soda Pop Canva5!",
+		"author": "モリモリあつし vs. XIzE"
+	},
+	{
+		"name": "ЯUBY:LINTe",
+		"author": "orangentle"
+	}
+]

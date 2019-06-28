@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Maharajah",
+		"author": "アリスシャッハと魔法の楽団"
+	},
+	{
+		"name": "keep on running",
+		"author": "uma"
+	},
+	{
+		"name": "Käfig",
+		"author": "Chicala Lpis"
+	},
+	{
+		"name": "-+",
+		"author": "daisan"
+	},
+	{
+		"name": "天理鶴情",
+		"author": "a_hisa"
+	},
+	{
+		"name": "Adjudicatorz-断罪-",
+		"author": "JurokuNeta."
+	}
+]

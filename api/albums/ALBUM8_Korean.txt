@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Brave My Soul",
+		"author": "uma feat.Mashiro"
+	},
+	{
+		"name": "Halcyon",
+		"author": "xi"
+	},
+	{
+		"name": "Crimson Nightingle",
+		"author": "VeetaCrush"
+	},
+	{
+		"name": "Invader",
+		"author": "SLT"
+	},
+	{
+		"name": "Lyrith",
+		"author": "yumemidoll"
+	},
+	{
+		"name": "GOODBOUNCE (Groove Edit)",
+		"author": "EBIMAYO"
+	}
+]

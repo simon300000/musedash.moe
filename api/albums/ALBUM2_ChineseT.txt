@@ -1,0 +1,26 @@
+[
+	{
+		"name": "八月雨後，初晴與彩虹",
+		"author": "yk!"
+	},
+	{
+		"name": "魔法數字",
+		"author": "味素"
+	},
+	{
+		"name": "Dreaming Girl",
+		"author": "Nano&板燒鵝尼子"
+	},
+	{
+		"name": "Daruma-san Fell Over",
+		"author": "Ncha-P"
+	},
+	{
+		"name": "Different",
+		"author": "Ncha-P"
+	},
+	{
+		"name": "The Future of the Phantom",
+		"author": "Ncha-P"
+	}
+]

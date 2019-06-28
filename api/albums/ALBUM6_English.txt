@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Thirty Million Persona",
+		"author": "Alice Schach and the Magic Orchestra"
+	},
+	{
+		"name": "conflict",
+		"author": "siromaru + cranky"
+	},
+	{
+		"name": "Enka Dance Music",
+		"author": "uma with Morimori Atsushi feat.Mashiro"
+	},
+	{
+		"name": "XING",
+		"author": "ginkiha"
+	},
+	{
+		"name": "Amakakeru Soukyuu no Serenade",
+		"author": "Sakamiya feat.Arata Kiki"
+	},
+	{
+		"name": "Gift box",
+		"author": "K.key"
+	}
+]
