@@ -1,26 +1,26 @@
 [
 	{
                 "name": "Out of Sense",
-                "author": "Sound Souler",
+                "author": "Sound Souler"
 	},
 	{
 		"name": "My Life Is For You",
-                "author": "HyuN feat.Yu-A",
+                "author": "HyuN feat.Yu-A"
 	},
 	{
 		"name": "Etude -Sunset-",
-                "author": "Polymath9",
+                "author": "Polymath9"
 	},
 	{
 		"name": "翘班",
-                "author": "KillerBlood",
+                "author": "KillerBlood"
 	},
 	{
 		"name": "Stargazer",
-                "author": "a_hisa",
+                "author": "a_hisa"
 	},
 	{
 		"name": "Lys Tourbillon",
-                "author": "Chicala Lpis",
+                "author": "Chicala Lpis"
 	}
 ]
