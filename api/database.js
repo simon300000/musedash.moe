@@ -30,7 +30,7 @@ let rank = new LevelDatabase({ name: 'rank', db })
 
 module.exports = {
   rank: {
-    put: ({ uid, difficulty, value }) => rank.put(`${uid}_${difficulty}`, value),
-    get: ({ uid, difficulty }) => rank.get(`${uid}_${difficulty}`)
+    put: ({ uid, difficulty, platform, value }) => rank.put(`${uid}_${platform}_${difficulty}`, value),
+    get: ({ uid, difficulty, platform }) => rank.get(`${uid}_${platform}_${difficulty}`)
   }
 }
