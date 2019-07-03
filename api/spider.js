@@ -29,6 +29,15 @@ const round = async ({ musicList, rank }) => {
       continue
     }
 
+    let currentRank = await rank.get({ uid, difficulty, platform })
+    if (currentRank) {
+      let currentUidRank = currentRank.map(({ play }) => play.user_id)
+      for (let i = 0; i < result.length; i++) {
+        let userId = result[i].play.user_id
+        result[i].history = { lastRank: currentUidRank.indexOf(userId) }
+      }
+    }
+
     await rank.put({ uid, difficulty, platform, value: result })
 
     console.log(`${uid}: ${name} - ${difficulty} - ${platform}`)
