@@ -22,6 +22,12 @@ class LevelDatabase {
     }
     return value
   }
+  clear() {
+    const batch = this.db.batch()
+    return new Promise(resolve => this.db.createKeyStream()
+      .on('data', key => batch.del(key))
+      .on('close', () => resolve(batch.write())))
+  }
 }
 
 let db = level(`./db`, { valueEncoding: 'json' })
