@@ -1,6 +1,6 @@
 const parser = require('./albumParser')
 
-const { rank } = require('./database')
+const { rank, player, nickname } = require('./database')
 const spider = require('./spider')
 
 ;
@@ -8,5 +8,5 @@ const spider = require('./spider')
   let albums = await parser()
   let music = [].concat(...albums
     .map(({ music }) => music))
-  spider({ music, rank })
+  spider({ music, rank, player, nickname })
 })()

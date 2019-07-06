@@ -44,11 +44,33 @@ const round = async ({ musicList, rank }) => {
   }
 }
 
-module.exports = async ({ music, rank }) => {
+const analyze = async ({ musicList, rank, player }) => {
+  await player.clear()
+
+  let pending = [...musicList]
+  for (; pending.length;) {
+    const { uid, difficulty, platform } = pending.shift()
+    let currentRank = await rank.get({ uid, difficulty, platform })
+    for (let i = 0; i < currentRank.length; i++) {
+      const { user, play, history } = currentRank[i]
+      let playerData = await player.get(user.user_id)
+      if (!playerData) {
+        playerData = { plays: [] }
+      }
+      playerData.user = user
+      playerData.plays.push({ ...play, index: i, platform, history })
+      await player.put(user.user_id, playerData)
+    }
+  }
+  console.log('Analyzed')
+}
+
+module.exports = async ({ music, rank, player, nickname }) => {
   for (;;) {
     let startTime = Date.now()
     let musicList = prepare(music)
     await round({ musicList, rank })
+    await analyze({ musicList, rank, player, nickname })
     let endTime = Date.now()
     console.log(`Wait ${INTERVAL - (endTime - startTime)}`)
     await wait(INTERVAL - (endTime - startTime))
