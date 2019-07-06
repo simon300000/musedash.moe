@@ -1,24 +1,23 @@
 const level = require('level')
 const LRU = require('lru-cache')
 
-const cache = new LRU({
-  max: 1000
-})
-
 class LevelDatabase {
   constructor({ name, db }) {
     this.name = name
     this.db = db
+    this.cache = new LRU({
+      max: 100
+    })
   }
   put(key, value) {
-    cache.set(`${this.name}_${key}`, value)
+    this.cache.set(`${this.name}_${key}`, value)
     return this.db.put(`${this.name}_${key}`, value)
   }
   async get(key) {
-    let value = cache.get(`${this.name}_${key}`)
+    let value = this.cache.get(`${this.name}_${key}`)
     if (!value) {
       value = await this.db.get(`${this.name}_${key}`).catch(() => undefined)
-      cache.set(`${this.name}_${key}`, value)
+      this.cache.set(`${this.name}_${key}`, value)
     }
     return value
   }
