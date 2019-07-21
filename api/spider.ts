@@ -68,7 +68,8 @@ const analyze = async ({ musicList, rank, player }) => {
 module.exports = async ({ music, rank, player, nickname }) => {
   for (;;) {
     let startTime = Date.now()
-    let musicList = prepare(music)
+    // let musicList = prepare(music)
+    let musicList = prepare(music).filter((_, index) => !index)
     await round({ musicList, rank })
     await analyze({ musicList, rank, player, nickname })
     let endTime = Date.now()
