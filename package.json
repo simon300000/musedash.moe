@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "build:api": "tsc",
+    "dev": "tsc -w",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
@@ -28,6 +30,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
+    "typescript": "^3.5.3",
     "vue-template-compiler": "^2.6.10"
   }
 }
