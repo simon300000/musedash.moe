@@ -3,22 +3,22 @@ import leveldown from 'leveldown'
 import encode from "encoding-down"
 import LRU = require('lru-cache')
 
-const level = (file: String) => levelup(encode(leveldown('./db1'), { valueEncoding: 'json' }))
+const level = (file: string) => levelup(encode(leveldown(file), { valueEncoding: 'json' }))
 
 class StandaloneLevelDatabase {
   db: LevelUp
-  cache: LRU<String, any>
+  cache: LRU<string, any>
   constructor(db: LevelUp) {
     this.db = db
     this.cache = new LRU({
       max: 100
     })
   }
-  put(key: String, value: any) {
+  put(key: string, value: any) {
     this.cache.set(key, value)
     return this.db.put(key, value)
   }
-  async get(key: String) {
+  async get(key: string) {
     let value = this.cache.get(key)
     if (!value) {
       value = await this.db.get(key).catch(() => undefined)
@@ -36,8 +36,8 @@ class StandaloneLevelDatabase {
 
 class LevelDatabase {
   db: LevelUp
-  name: String;
-  cache: LRU<String, any>
+  name: string;
+  cache: LRU<string, any>
   constructor({ name, db }) {
     this.name = name
     this.db = db
@@ -45,7 +45,7 @@ class LevelDatabase {
       max: 100
     })
   }
-  put(key: String, value: any) {
+  put(key: string, value: any) {
     this.cache.set(`${this.name}_${key}`, value)
     return this.db.put(`${this.name}_${key}`, value)
   }
