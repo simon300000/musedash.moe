@@ -44,7 +44,7 @@ const round = async ({ musicList, rank }) => {
   }
 }
 
-const analyze = async ({ musicList, rank, player }) => {
+const analyze = async ({ musicList, rank, player, nickname }) => {
   await player.clear()
 
   let pending = [...musicList]
@@ -66,10 +66,9 @@ const analyze = async ({ musicList, rank, player }) => {
 }
 
 module.exports = async ({ music, rank, player, nickname }) => {
-  for (;;) {
+  for (; ;) {
     let startTime = Date.now()
-    // let musicList = prepare(music)
-    let musicList = prepare(music).filter((_, index) => !index)
+    let musicList = prepare(music)
     await round({ musicList, rank })
     await analyze({ musicList, rank, player, nickname })
     let endTime = Date.now()

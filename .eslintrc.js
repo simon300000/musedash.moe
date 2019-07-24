@@ -6,6 +6,7 @@ module.exports = {
   'extends': [
     'plugin:vue/essential',
     '@vue/standard',
+    'standard'
   ],
   rules: {
     'space-before-function-paren': 'off'

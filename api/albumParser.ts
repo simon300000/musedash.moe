@@ -1,11 +1,11 @@
+import { join } from 'path'
 const fs = require('fs').promises
-const { join } = require('path')
 
 const availableLocales = ['ChineseS', 'ChineseT', 'English', 'Japanese', 'Korean']
 
-const parseFile = async file => JSON.parse(await fs.readFile(join(__dirname, 'albums', `${file}.txt`)))
+const parseFile = async (file: string) => JSON.parse(await fs.readFile(join(__dirname, 'albums', `${file}.txt`)))
 
-const readLocale = async file => {
+const readLocale = async (file: string) => {
   let content = await parseFile(file)
   let locales = await Promise.all(availableLocales
     .map(locale => parseFile(`${file}_${locale}`)))
