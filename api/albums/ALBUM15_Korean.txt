@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Elysion's Old Mans",
+		"author": "Alice Schach and the Magic Orchestra"
+	},
+	{
+		"name": "AXION",
+		"author": "Sakuzyo"
+	},
+	{
+		"name": "Amnesia",
+		"author": "a_hisa"
+	},
+	{
+		"name": "Onsen Dai Sakusen",
+		"author": "Freezer feat.Kiichigo"
+	},
+	{
+		"name": "Gleam stone",
+		"author": "adaptor"
+	},
+	{
+		"name": "GOODWORLD",
+		"author": "EBIMAYO"
+	}
+]
