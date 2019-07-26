@@ -1,6 +1,6 @@
-import levelup, { LevelUp } from 'levelup'
+import levelup, { LevelUp } from 'levelup' // eslint-disable-line
 import leveldown from 'leveldown'
-import encode from "encoding-down"
+import encode from 'encoding-down'
 import LRU = require('lru-cache')
 
 const level = (file: string) => levelup(encode(leveldown(file), { valueEncoding: 'json' }))
