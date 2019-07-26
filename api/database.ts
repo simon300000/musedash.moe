@@ -65,20 +65,16 @@ class LevelDatabase {
   }
 }
 
-let db = level('./db')
-let iddb = level('./db/id')
-let namedb = level('./db/name')
+const db = level('./db')
+const iddb = level('./db/id')
+const namedb = level('./db/name')
 
-let rank = new LevelDatabase({ name: 'rank', db })
+const rankdb = new LevelDatabase({ name: 'rank', db })
 
-let player = new StandaloneLevelDatabase(iddb)
-let nickname = new StandaloneLevelDatabase(namedb)
+export const player = new StandaloneLevelDatabase(iddb)
 
-module.exports = {
-  player,
-  nickname,
-  rank: {
-    put: ({ uid, difficulty, platform, value }) => rank.put(`${uid}_${platform}_${difficulty}`, value),
-    get: ({ uid, difficulty, platform }) => rank.get(`${uid}_${platform}_${difficulty}`)
-  }
+export const nickname = new StandaloneLevelDatabase(namedb)
+export const rank = {
+  put: ({ uid, difficulty, platform, value }) => rankdb.put(`${uid}_${platform}_${difficulty}`, value),
+  get: ({ uid, difficulty, platform }) => rankdb.get(`${uid}_${platform}_${difficulty}`)
 }

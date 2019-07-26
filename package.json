@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@types/encoding-down": "^5.0.0",
+    "@types/got": "^9.6.4",
     "@types/leveldown": "^4.0.0",
     "@types/levelup": "^3.1.1",
     "@types/lru-cache": "^5.1.0",

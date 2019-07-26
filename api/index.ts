@@ -1,9 +1,8 @@
-const parser = require('./albumParser')
+import parser from './albumParser'
 
-const { rank, player, nickname } = require('./database')
-const spider = require('./spider')
+import { rank, player, nickname } from './database'
+import spider from './spider'
 
-;
 (async () => {
   let albums = await parser()
   let music = [].concat(...albums

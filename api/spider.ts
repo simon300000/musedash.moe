@@ -1,8 +1,8 @@
-const got = require('got')
+import got = require('got')
 
 const INTERVAL = 1000 * 60 * 60 * 24
 
-const wait = ms => new Promise(resolve => setTimeout(resolve, ms))
+const wait = (ms: number): Promise<undefined> => new Promise(resolve => setTimeout(resolve, ms))
 
 const platforms = {
   mobile: 'leaderboard',
@@ -65,7 +65,7 @@ const analyze = async ({ musicList, rank, player, nickname }) => {
   console.log('Analyzed')
 }
 
-module.exports = async ({ music, rank, player, nickname }) => {
+export default async ({ music, rank, player, nickname }) => {
   for (; ;) {
     let startTime = Date.now()
     let musicList = prepare(music)

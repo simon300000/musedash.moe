@@ -1,9 +1,9 @@
 import { join } from 'path'
-const fs = require('fs').promises
+import { promises as fs } from 'fs'
 
 const availableLocales = ['ChineseS', 'ChineseT', 'English', 'Japanese', 'Korean']
 
-const parseFile = async (file: string) => JSON.parse(await fs.readFile(join(__dirname, 'albums', `${file}.txt`)))
+const parseFile = async (file: string) => JSON.parse(String(await fs.readFile(join(__dirname, 'albums', `${file}.txt`))))
 
 const readLocale = async (file: string) => {
   let content = await parseFile(file)
@@ -18,7 +18,7 @@ const readLocale = async (file: string) => {
     })
 }
 
-module.exports = async () => {
+export default async () => {
   let albums = (await readLocale('albums'))
     .filter(album => album.jsonName)
     .map(({ title, jsonName, ChineseS, ChineseT, English, Japanese, Korean }) => ({ title, json: jsonName, ChineseS, ChineseT, English, Japanese, Korean }))
