@@ -19,21 +19,21 @@ const prepare = music => music
   .filter(({ level }) => level)
 
 const round = async ({ musicList, rank }) => {
-  let pending = [...musicList]
+  const pending = [...musicList]
   for (; pending.length;) {
     const { uid, difficulty, name, platform, api } = pending.shift()
-    let result = await download({ uid, difficulty, api }).catch(() => undefined)
+    const result = await download({ uid, difficulty, api }).catch(() => undefined)
     if (!result) {
       pending.push({ uid, difficulty, name, platform, api })
       console.log(`RETRY: ${uid}: ${name} - ${difficulty} - ${platform}`)
       continue
     }
 
-    let currentRank = await rank.get({ uid, difficulty, platform })
+    const currentRank = await rank.get({ uid, difficulty, platform })
     if (currentRank) {
-      let currentUidRank = currentRank.map(({ play }) => play.user_id)
+      const currentUidRank = currentRank.map(({ play }) => play.user_id)
       for (let i = 0; i < result.length; i++) {
-        let userId = result[i].play.user_id
+        const userId = result[i].play.user_id
         result[i].history = { lastRank: currentUidRank.indexOf(userId) }
       }
     }
@@ -47,10 +47,10 @@ const round = async ({ musicList, rank }) => {
 const analyze = async ({ musicList, rank, player, nickname }) => {
   await player.clear()
 
-  let pending = [...musicList]
+  const pending = [...musicList]
   for (; pending.length;) {
     const { uid, difficulty, platform } = pending.shift()
-    let currentRank = await rank.get({ uid, difficulty, platform })
+    const currentRank = await rank.get({ uid, difficulty, platform })
     for (let i = 0; i < currentRank.length; i++) {
       const { user, play, history } = currentRank[i]
       let playerData = await player.get(user.user_id)
@@ -67,11 +67,11 @@ const analyze = async ({ musicList, rank, player, nickname }) => {
 
 export default async ({ music, rank, player, nickname }) => {
   for (; ;) {
-    let startTime = Date.now()
-    let musicList = prepare(music)
+    const startTime = Date.now()
+    const musicList = prepare(music)
     await round({ musicList, rank })
     await analyze({ musicList, rank, player, nickname })
-    let endTime = Date.now()
+    const endTime = Date.now()
     console.log(`Wait ${INTERVAL - (endTime - startTime)}`)
     await wait(INTERVAL - (endTime - startTime))
   }

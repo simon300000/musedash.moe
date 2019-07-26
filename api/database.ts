@@ -7,17 +7,21 @@ const level = (file: string) => levelup(encode(leveldown(file), { valueEncoding:
 
 class StandaloneLevelDatabase {
   db: LevelUp
+
   cache: LRU<string, any>
+
   constructor(db: LevelUp) {
     this.db = db
     this.cache = new LRU({
       max: 100
     })
   }
+
   put(key: string, value: any) {
     this.cache.set(key, value)
     return this.db.put(key, value)
   }
+
   async get(key: string) {
     let value = this.cache.get(key)
     if (!value) {
@@ -26,6 +30,7 @@ class StandaloneLevelDatabase {
     }
     return value
   }
+
   clear() {
     const batch = this.db.batch()
     return new Promise(resolve => this.db.createKeyStream()
@@ -36,8 +41,11 @@ class StandaloneLevelDatabase {
 
 class LevelDatabase {
   db: LevelUp
-  name: string;
+
+  name: string
+
   cache: LRU<string, any>
+
   constructor({ name, db }) {
     this.name = name
     this.db = db
@@ -45,10 +53,12 @@ class LevelDatabase {
       max: 100
     })
   }
+
   put(key: string, value: any) {
     this.cache.set(`${this.name}_${key}`, value)
     return this.db.put(`${this.name}_${key}`, value)
   }
+
   async get(key) {
     let value = this.cache.get(`${this.name}_${key}`)
     if (!value) {
@@ -57,6 +67,7 @@ class LevelDatabase {
     }
     return value
   }
+
   clear() {
     const batch = this.db.batch()
     return new Promise(resolve => this.db.createKeyStream()
