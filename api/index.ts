@@ -1,6 +1,6 @@
 import parser from './albumParser'
 
-import { rank, player, nickname } from './database'
+import { rank, player } from './database'
 import spider from './spider'
 
 import api from './api'
@@ -10,5 +10,5 @@ import api from './api'
   const music = [].concat(...albums
     .map(({ music }) => music))
   api({ albums, rank, player })
-  spider({ music, rank, player, nickname })
+  spider({ music, rank, player })
 })()
