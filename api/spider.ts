@@ -42,7 +42,7 @@ const round = async ({ musicList, rank }) => {
 
     await rank.put({ uid, difficulty, platform, value: result })
 
-    console.log(`${uid}: ${name} - ${difficulty} - ${platform}`)
+    console.log(`${uid}: ${name} - ${difficulty} - ${platform} / ${pending.length}`)
   }
 }
 
