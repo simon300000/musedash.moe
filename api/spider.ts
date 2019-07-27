@@ -22,12 +22,14 @@ const round = async ({ musicList, rank }) => {
   const pending = [...musicList]
   for (; pending.length;) {
     const { uid, difficulty, name, platform, api } = pending.shift()
-    const result = await download({ uid, difficulty, api }).catch(() => undefined)
+    let result = await download({ uid, difficulty, api }).catch(() => undefined)
     if (!result) {
       pending.push({ uid, difficulty, name, platform, api })
       console.log(`RETRY: ${uid}: ${name} - ${difficulty} - ${platform}`)
       continue
     }
+
+    result = result.filter(({ play, user }) => play && user)
 
     const currentRank = await rank.get({ uid, difficulty, platform })
     if (currentRank) {
