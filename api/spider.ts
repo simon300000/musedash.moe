@@ -54,13 +54,13 @@ const analyze = async ({ musicList, rank, player, nickname }) => {
     const { uid, difficulty, platform } = pending.shift()
     const currentRank = await rank.get({ uid, difficulty, platform })
     for (let i = 0; i < currentRank.length; i++) {
-      const { user, play, history } = currentRank[i]
+      const { user, play: { score, acc }, history } = currentRank[i]
       let playerData = await player.get(user.user_id)
       if (!playerData) {
         playerData = { plays: [] }
       }
       playerData.user = user
-      playerData.plays.push({ ...play, index: i, platform, history })
+      playerData.plays.push({ score, acc, i, platform, history, difficulty, uid })
       await player.put(user.user_id, playerData)
     }
   }

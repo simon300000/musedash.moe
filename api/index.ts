@@ -9,6 +9,6 @@ import api from './api'
   const albums = await parser()
   const music = [].concat(...albums
     .map(({ music }) => music))
-  api({ albums, rank })
+  api({ albums, rank, player })
   spider({ music, rank, player, nickname })
 })()

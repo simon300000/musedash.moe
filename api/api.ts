@@ -19,7 +19,7 @@ app.use(async (ctx, next) => {
   }
 })
 
-export default ({ albums, rank }) => {
+export default ({ albums, rank, player }) => {
   const router = new Router()
 
   router.get('/albums', ctx => {
@@ -32,6 +32,10 @@ export default ({ albums, rank }) => {
       result = result.map(({ play: { acc, score }, history, user }) => ({ acc, score, history, user }))
     }
     ctx.body = result
+  })
+
+  router.get('/player/:id', async ctx => {
+    ctx.body = await player.get(ctx.params.id)
   })
 
   app.use(router.routes())
