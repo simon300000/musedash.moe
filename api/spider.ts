@@ -18,8 +18,7 @@ const prepare = music => music
     .map(([platform, api]) => ({ uid, difficulty, name, level, platform, api })))
   .filter(({ level }) => level)
 
-const round = async ({ musicList, rank }) => {
-  const pending = [...musicList]
+const round = async ({ pending, rank }) => {
   for (; pending.length;) {
     const { uid, difficulty, name, platform, api } = pending.shift()
     let result = await download({ uid, difficulty, api }).catch(() => undefined)
@@ -67,11 +66,11 @@ const analyze = async ({ musicList, rank, player }) => {
   console.log('Analyzed')
 }
 
-export default async ({ music, rank, player }) => {
+export default async ({ music, rank, player, PARALLEL }) => {
   for (; ;) {
     const startTime = Date.now()
     const musicList = prepare(music)
-    await round({ musicList, rank })
+    await Promise.all(Array(PARALLEL).fill([...musicList]).map(pending => round({ pending, rank })))
     await analyze({ musicList, rank, player })
     const endTime = Date.now()
     console.log(`Wait ${INTERVAL - (endTime - startTime)}`)
