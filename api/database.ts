@@ -30,7 +30,12 @@ class StandaloneLevelDatabase {
     }
     return value
   }
-
+  keyList() {
+    let keys = []
+    return new Promise(resolve => this.db.createKeyStream()
+      .on('data', key => keys.push(key))
+      .on('close', () => resolve(keys)))
+  }
   clear() {
     const batch = this.db.batch()
     return new Promise(resolve => this.db.createKeyStream()
