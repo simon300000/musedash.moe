@@ -47,6 +47,7 @@ const round = async ({ pending, rank }) => {
 
 const analyze = async ({ musicList, rank, player }) => {
   await player.clear()
+  console.log('Analyze cleared')
 
   const pending = [...musicList]
   for (; pending.length;) {

@@ -1,3 +1,9 @@
 module.exports = {
-  lintOnSave: false
+  lintOnSave: false,
+  pages: {
+    index: {
+      entry: 'src/entry-client.js',
+      template: 'index.html'
+    }
+  }
 }
