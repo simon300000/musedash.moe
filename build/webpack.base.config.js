@@ -47,7 +47,6 @@ module.exports = merge(prodConfig, {
         test: /\.css$/,
         use: [
           MiniCssExtractPlugin.loader,
-          'style-loader',
           'css-loader'
         ]
       },
