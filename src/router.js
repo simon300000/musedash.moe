@@ -7,15 +7,9 @@ Vue.use(Router)
 export const createRouter = () => new Router({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home
-    }, {
-      path: '/about',
-      name: 'about',
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
-    }
-  ]
+  routes: [{
+    path: '/',
+    name: 'home',
+    component: Home
+  }]
 })
