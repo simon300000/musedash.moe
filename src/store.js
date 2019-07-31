@@ -4,7 +4,7 @@ import { getAlbums } from './api'
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
+export const createStore = () => new Vuex.Store({
   state: {
     fullAlbums: []
   },

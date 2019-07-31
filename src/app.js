@@ -1,12 +1,16 @@
 import Vue from 'vue'
 import App from './App.vue'
 import { createRouter } from './router'
-import store from './store'
+import { createStore } from './store'
+import { sync } from 'vuex-router-sync'
 
 Vue.config.productionTip = false
 
 export const createApp = () => {
   const router = createRouter()
+  const store = createStore()
+
+  sync(store, router)
 
   const app = new Vue({
     router,
