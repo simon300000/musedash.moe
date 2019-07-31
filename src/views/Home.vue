@@ -17,14 +17,12 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapActions, mapGetters } from 'vuex'
 
 export default {
   computed: {
     ...mapState(['lang', 'fullAlbums']),
-    albumsArray() {
-      return Object.values(this.fullAlbums)
-    },
+    ...mapGetters(['albumsArray']),
     albums() {
       return this.albumsArray.map(album => ({ title: album.title, json: album.json, ...(album[this.lang] || {}) }))
     }

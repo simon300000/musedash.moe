@@ -10,6 +10,12 @@ export const createStore = ({ lang }) => new Vuex.Store({
     fullAlbums: {},
     lang
   },
+  getters: {
+    albumsArray: ({ fullAlbums }) => Object.values(fullAlbums),
+    allMusics: ({ fullAlbums }) => {
+      return Object.assign({}, ...Object.values(fullAlbums).map(({ music }) => music))
+    }
+  },
   mutations: {
     setAlbums(state, data) {
       state.fullAlbums = data
