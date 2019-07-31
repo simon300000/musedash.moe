@@ -29,6 +29,7 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.5.5",
     "@types/encoding-down": "^5.0.0",
     "@types/got": "^9.6.4",
     "@types/koa": "^2.0.49",
