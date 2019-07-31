@@ -1,14 +1,9 @@
-module.exports = {
-  "presets": [
-    "@vue/app"
-  ],
-  "plugins": [
-    [
-      "component",
-      {
-        "libraryName": "element-ui",
-        "styleLibraryName": "theme-chalk"
-      }
-    ]
-  ]
+module.exports = api => {
+  api.cache(true)
+
+  const presets = ['@vue/app']
+
+  return {
+    presets
+  }
 }
