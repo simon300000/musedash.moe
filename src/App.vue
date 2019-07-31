@@ -62,4 +62,6 @@ export default {
 @import "~bulma/sass/elements/container.sass";
 @import "~bulma/sass/layout/section.sass";
 @import "~bulma/sass/elements/progress.sass";
+@import "~bulma/sass/components/level.sass";
+@import "~bulma/sass/elements/image.sass";
 </style>

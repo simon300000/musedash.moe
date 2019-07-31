@@ -12,6 +12,7 @@ export const createRouter = () => new Router({
   routes: [
     {
       path: '/',
+      alias: '/albums',
       name: 'home',
       component: Home,
       children: [
