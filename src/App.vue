@@ -8,6 +8,18 @@
       <div class="navbar-start">
         <router-link to="/" class="navbar-item">Home</router-link>
       </div>
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link is-arrowless">
+            {{currentLang}}
+          </a>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" v-for="[lang, name] in availableLang" :key="name" @click="setLang(lang)">
+              {{name}}
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </nav>
   <router-view></router-view>
@@ -15,7 +27,29 @@
 </template>
 
 <script>
-export default {}
+import { mapState, mapMutations } from 'vuex'
+
+const langs = {
+  ChineseS: '简体中文',
+  ChineseT: '繁體中文',
+  English: 'English',
+  Japanese: '日本語',
+  Korean: '한국어'
+}
+
+export default {
+  computed: {
+    ...mapState(['lang']),
+    currentLang() {
+      return langs[this.lang]
+    },
+    availableLang() {
+      return Object.entries(langs)
+        .filter(([lang]) => lang !== this.lang)
+    }
+  },
+  methods: mapMutations(['setLang'])
+}
 </script>
 
 <style lang="scss">
