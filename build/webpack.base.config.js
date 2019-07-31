@@ -51,6 +51,18 @@ module.exports = merge(prodConfig, {
         ]
       },
       {
+        test: /\.sass$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'sass-loader'
+          }
+        ]
+      },
+      {
         test: /\.scss$/,
         use: [
           process.env.NODE_ENV === 'development' ? 'vue-style-loader' : MiniCssExtractPlugin.loader,
