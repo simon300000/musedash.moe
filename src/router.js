@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Album from './views/Album.vue'
+import About from './views/About.vue'
 
 Vue.use(Router)
 
@@ -20,6 +21,10 @@ export const createRouter = () => new Router({
           component: Album
         }
       ]
+    },
+    {
+      path: '/about',
+      component: About
     }
   ]
 })

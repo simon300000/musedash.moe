@@ -17,6 +17,8 @@
             <a class="navbar-item" v-for="[lang, name] in availableLang" :key="name" @click="setLang(lang)">
               {{name}}
             </a>
+            <hr class="navbar-divider">
+            <router-link to="/about" class="navbar-item">About</router-link>
           </div>
         </div>
       </div>
