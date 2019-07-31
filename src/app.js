@@ -6,9 +6,9 @@ import { sync } from 'vuex-router-sync'
 
 Vue.config.productionTip = false
 
-export const createApp = () => {
+export const createApp = ({ lang = 'ChineseS' } = {}) => {
   const router = createRouter()
-  const store = createStore()
+  const store = createStore({ lang })
 
   sync(store, router)
 

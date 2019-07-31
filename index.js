@@ -15,7 +15,12 @@ const renderer = createBundleRenderer(serverBundle, {
 app.use(serve('dist'))
 
 app.use(async ctx => {
-  let result = await renderer.renderToString({ url: ctx.url }).catch(() => '404 找不到')
+  let lang = ctx.cookies.get('lang')
+  if (!lang) {
+    lang = 'ChineseS'
+    ctx.cookies.set('lang', lang)
+  }
+  let result = await renderer.renderToString({ url: ctx.url, lang }).catch(() => '404 找不到')
   ctx.type = 'text/html'
   ctx.body = result
 })

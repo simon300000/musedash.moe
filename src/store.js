@@ -4,9 +4,10 @@ import { getAlbums } from './api'
 
 Vue.use(Vuex)
 
-export const createStore = () => new Vuex.Store({
+export const createStore = ({ lang }) => new Vuex.Store({
   state: {
-    fullAlbums: []
+    fullAlbums: [],
+    lang
   },
   mutations: {
     setAlbums(state, data) {

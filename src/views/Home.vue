@@ -22,9 +22,9 @@ import { mapState, mapActions } from 'vuex'
 export default {
   components: {},
   computed: {
-    ...mapState(['fullAlbums']),
+    ...mapState(['fullAlbums', 'lang']),
     albums() {
-      return this.fullAlbums.map(({ title, json }) => ({ title, json }))
+      return this.fullAlbums.map(album => ({ title: album.title, json: album.json, ...(album[this.lang] || {}) }))
     }
   },
   serverPrefetch() {
