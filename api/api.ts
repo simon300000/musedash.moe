@@ -20,10 +20,17 @@ app.use(async (ctx, next) => {
 })
 
 export default ({ albums, rank, player }) => {
+  let albumsObject = {}
+  albums.forEach(album => {
+    albumsObject[album.json] = { ...album, music: {} }
+    album.music.forEach(music => {
+      albumsObject[album.json].music[music.uid] = music
+    })
+  })
   const router = new Router()
 
   router.get('/albums', ctx => {
-    ctx.body = albums
+    ctx.body = albumsObject
   })
 
   router.get('/rank/:uid/:difficulty/:platform', async ctx => {

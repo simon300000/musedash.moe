@@ -7,7 +7,7 @@ Vue.use(Vuex)
 
 export const createStore = ({ lang }) => new Vuex.Store({
   state: {
-    fullAlbums: [],
+    fullAlbums: {},
     lang
   },
   mutations: {
