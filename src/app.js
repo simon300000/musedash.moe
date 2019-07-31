@@ -2,7 +2,6 @@ import Vue from 'vue'
 import App from './App.vue'
 import { createRouter } from './router'
 import store from './store'
-import './plugins/semantic'
 
 Vue.config.productionTip = false
 
