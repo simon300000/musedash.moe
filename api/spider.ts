@@ -34,8 +34,7 @@ const round = async ({ pending, rank }) => {
     if (currentRank) {
       const currentUidRank = currentRank.map(({ play }) => play.user_id)
       for (let i = 0; i < result.length; i++) {
-        const userId = result[i].play.user_id
-        result[i].history = { lastRank: currentUidRank.indexOf(userId) }
+        result[i].history = { lastRank: currentUidRank.indexOf(result[i].play.user_id) }
       }
     }
 
@@ -49,21 +48,43 @@ const analyze = async ({ musicList, rank, player }) => {
   await player.clear()
   console.log('Analyze cleared')
 
-  const pending = [...musicList]
+  let pending = [...musicList]
   for (; pending.length;) {
     const { uid, difficulty, platform } = pending.shift()
     const currentRank = await rank.get({ uid, difficulty, platform })
+    const sumRank = await rank.get({ uid, difficulty, platform: 'all' })
     await Promise.all(currentRank.map(async ({ user, play: { score, acc }, history }, i) => {
       let playerData = await player.get(user.user_id)
       if (!playerData) {
         playerData = { plays: [] }
       }
       playerData.user = user
-      playerData.plays.push({ score, acc, i, platform, history, difficulty, uid })
+      const sum = sumRank.findIndex(play => play.platform === platform && play.user.user_id === user.user_id)
+      playerData.plays.push({ score, acc, i, platform, history, difficulty, uid, sum })
       await player.put(user.user_id, playerData)
     }))
   }
   console.log('Analyzed')
+}
+
+const sumRank = async ({ musicList, rank }) => {
+  const pending = musicList.filter(({ platform }) => platform === 'mobile')
+
+  for (let i = 0; i < pending.length; i++) {
+    const { uid, difficulty } = pending[i]
+    const result = []
+      .concat(...await Promise.all(Object.keys(platforms).map(async platform => (await rank.get({ uid, difficulty, platform })).map(play => ({ ...play, platform })))))
+      .sort((a, b) => b.play.score - a.play.score)
+    const currentRank = await rank.get({ uid, difficulty, platform: 'all' })
+    if (currentRank) {
+      const currentUidRank = currentRank.map(({ play }) => play.user_id)
+      for (let i = 0; i < result.length; i++) {
+        result[i].history = { lastRank: currentUidRank.indexOf(result[i].play.user_id) }
+      }
+    }
+    await rank.put({ uid, difficulty, platform: 'all', value: result })
+  }
+  console.log('Ranked')
 }
 
 export default async ({ music, rank, player, PARALLEL }) => {
@@ -71,6 +92,7 @@ export default async ({ music, rank, player, PARALLEL }) => {
     const startTime = Date.now()
     const musicList = prepare(music)
     await Promise.all(Array(PARALLEL).fill([...musicList]).map(pending => round({ pending, rank })))
+    await sumRank({ musicList, rank })
     await analyze({ musicList, rank, player })
     const endTime = Date.now()
     console.log(`Wait ${INTERVAL - (endTime - startTime)}`)
