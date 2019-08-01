@@ -77,9 +77,8 @@ const sumRank = async ({ musicList, rank }) => {
       .sort((a, b) => b.play.score - a.play.score)
     const currentRank = await rank.get({ uid, difficulty, platform: 'all' })
     if (currentRank) {
-      const currentUidRank = currentRank.map(({ play }) => play.user_id)
       for (let i = 0; i < result.length; i++) {
-        result[i].history = { lastRank: currentUidRank.indexOf(result[i].play.user_id) }
+        result[i].history = { lastRank: currentRank.findIndex(play => play.platform === result[i].platform && play.user.user_id === result[i].user.user_id) }
       }
     }
     await rank.put({ uid, difficulty, platform: 'all', value: result })
