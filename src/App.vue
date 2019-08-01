@@ -24,7 +24,11 @@
       </div>
     </div>
   </nav>
-  <router-view></router-view>
+  <section class="section">
+    <div class="container">
+      <router-view></router-view>
+    </div>
+  </section>
 </div>
 </template>
 
@@ -64,4 +68,5 @@ export default {
 @import "~bulma/sass/elements/progress.sass";
 @import "~bulma/sass/components/level.sass";
 @import "~bulma/sass/elements/image.sass";
+@import "~bulma/sass/elements/button.sass";
 </style>

@@ -1,18 +1,14 @@
 <template>
 <div>
-  <section class="section">
-    <div class="container">
-      <progress class="progress is-small" max="100" v-if="!albums.length"></progress>
-      <div class="tabs is-centered is-large" v-if="albums.length">
-        <ul>
-          <router-link :to="`/albums/${album.json}`" active-class="is-active" tag="li" :key="album.json" v-for="album in albums">
-            <a><span>{{album.title}}</span></a>
-          </router-link>
-        </ul>
-      </div>
-      <router-view v-if="albums.length"></router-view>
-    </div>
-  </section>
+  <progress class="progress is-small" max="100" v-if="!albums.length"></progress>
+  <div class="tabs is-centered is-large" v-if="albums.length">
+    <ul>
+      <router-link :to="`/albums/${album.json}`" active-class="is-active" tag="li" :key="album.json" v-for="album in albums">
+        <a><span>{{album.title}}</span></a>
+      </router-link>
+    </ul>
+  </div>
+  <router-view v-if="albums.length"></router-view>
 </div>
 </template>
 

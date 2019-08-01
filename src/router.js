@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Album from './views/Album.vue'
+import Music from './views/Music.vue'
+import Rank from './views/Rank.vue'
 import About from './views/About.vue'
 
 Vue.use(Router)
@@ -12,7 +14,7 @@ export const createRouter = () => new Router({
   routes: [
     {
       path: '/',
-      alias: '/albums',
+      alias: ['/albums', '/music'],
       name: 'home',
       component: Home,
       children: [
@@ -22,6 +24,11 @@ export const createRouter = () => new Router({
           component: Album
         }
       ]
+    },
+    {
+      path: '/music/:uid',
+      props: true,
+      component: Music
     },
     {
       path: '/about',
