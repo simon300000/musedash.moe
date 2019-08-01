@@ -42,7 +42,11 @@ export default ({ albums, rank, player }) => {
   router.get('/rank/:uid/:difficulty/:platform', async ctx => {
     let result = await rank.get(ctx.params)
     if (result) {
-      result = result.map(({ play: { acc, score }, history, user }) => ({ acc, score, history, user }))
+      if (ctx.params.platform === 'all') {
+        result = result.map(({ play: { acc, score }, history, user, platform }) => ({ acc, score, history, user, platform }))
+      } else {
+        result = result.map(({ play: { acc, score }, history, user }) => ({ acc, score, history, user }))
+      }
     }
     ctx.body = result
   })
