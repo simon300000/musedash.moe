@@ -7,7 +7,7 @@
   </div>
   <div class="level-item">
     <div>
-      <p class="title is-3 is-spaced">{{music.name}}</p>
+      <p class="title is-3 is-spaced">{{music.name}} <span class="subtitle is-6">Lv.{{lv}}</span></p>
       <p class="subtitle is-5 is-spaced">{{music.author}}</p>
     </div>
   </div>
@@ -47,6 +47,9 @@ export default {
     ...mapGetters(['allMusics']),
     music() {
       return { ...this.allMusics[this.play.uid], ...this.allMusics[this.play.uid][this.lang] }
+    },
+    lv() {
+      return this.music.difficulty[this.play.difficulty]
     }
   }
 }
