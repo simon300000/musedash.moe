@@ -1,34 +1,22 @@
 import levelup, { LevelUp } from 'levelup' // eslint-disable-line
 import leveldown from 'leveldown'
 import encode from 'encoding-down'
-import LRU = require('lru-cache')
 
 const level = (file: string) => levelup(encode(leveldown(file), { valueEncoding: 'json' }))
 
 class StandaloneLevelDatabase {
   db: LevelUp
 
-  cache: LRU<string, any>
-
   constructor(db: LevelUp) {
     this.db = db
-    this.cache = new LRU({
-      max: 100
-    })
   }
 
   put(key: string, value: any) {
-    this.cache.set(key, value)
     return this.db.put(key, value)
   }
 
-  async get(key: string) {
-    let value = this.cache.get(key)
-    if (!value) {
-      value = await this.db.get(key).catch(() => undefined)
-      this.cache.set(key, value)
-    }
-    return value
+  get(key: string) {
+    return this.db.get(key).catch(() => undefined)
   }
   keyList() {
     let keys = []
@@ -49,28 +37,17 @@ class LevelDatabase {
 
   name: string
 
-  cache: LRU<string, any>
-
   constructor({ name, db }) {
     this.name = name
     this.db = db
-    this.cache = new LRU({
-      max: 100
-    })
   }
 
   put(key: string, value: any) {
-    this.cache.set(`${this.name}_${key}`, value)
     return this.db.put(`${this.name}_${key}`, value)
   }
 
-  async get(key) {
-    let value = this.cache.get(`${this.name}_${key}`)
-    if (!value) {
-      value = await this.db.get(`${this.name}_${key}`).catch(() => undefined)
-      this.cache.set(`${this.name}_${key}`, value)
-    }
-    return value
+  get(key) {
+    return this.db.get(`${this.name}_${key}`).catch(() => undefined)
   }
 
   clear() {
