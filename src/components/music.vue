@@ -7,8 +7,14 @@
       </figure>
     </div>
   </div>
-  <div class="level-item"><strong>{{music.name}}</strong></div>
-  <div class="level-item">{{music.author}}</div>
+  <div class="level-item">
+    <div>
+      <p class="title is-5">{{music.name}}</p>
+    </div>
+  </div>
+  <div class="level-item">
+    <p class="subtitle is-6">{{music.author}}</p>
+  </div>
   <div class="level-right">
     <div class="level-item">
       <router-link :to="`/music/${music.uid}/0${this.platform ? `/${this.platform}` : ''}`" active-class="is-hovered" class="button is-success is-rounded is-outlined" v-if="music.difficulty[0]">{{music.difficulty[0]}}</router-link>
