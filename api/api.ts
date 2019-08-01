@@ -10,6 +10,12 @@ const cache = new LRU({
 const app = new Koa()
 
 app.use(async (ctx, next) => {
+  if (ctx.ip.includes('127.0.0.1')) {
+    ctx.set('Access-Control-Allow-Origin', 'http://0.0.0.0:8080')
+  } else {
+    ctx.set('Access-Control-Allow-Origin', 'https://musedash.moe')
+  }
+
   let hit = cache.get(ctx.url)
   if (hit) {
     ctx.body = hit
