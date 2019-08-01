@@ -1,0 +1,3 @@
+[submodule "src/components/vue-octicon"]
+	path = src/components/vue-octicon
+	url = https://github.com/Justineo/vue-octicon.git
