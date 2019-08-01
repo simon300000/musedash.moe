@@ -69,4 +69,6 @@ export default {
 @import "~bulma/sass/components/level.sass";
 @import "~bulma/sass/elements/image.sass";
 @import "~bulma/sass/elements/button.sass";
+@import "~bulma/sass/elements/table.sass";
+@import "~bulma/sass/elements/icon.sass";
 </style>

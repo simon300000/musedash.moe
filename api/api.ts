@@ -1,3 +1,4 @@
+/* eslint camelcase: ["off"] */
 import Koa = require('koa')
 import Router = require('koa-router')
 import LRU = require('lru-cache')
@@ -43,9 +44,9 @@ export default ({ albums, rank, player }) => {
     let result = await rank.get(ctx.params)
     if (result) {
       if (ctx.params.platform === 'all') {
-        result = result.map(({ play: { acc, score }, history, user, platform }) => ({ acc, score, history, user, platform }))
+        result = result.map(({ play: { acc, score }, history: { lastRank } = { lastRank: -1 }, user: { nickname, user_id }, platform }) => [acc, score, lastRank, nickname, user_id, platform])
       } else {
-        result = result.map(({ play: { acc, score }, history, user }) => ({ acc, score, history, user }))
+        result = result.map(({ play: { acc, score }, history: { lastRank } = { lastRank: -1 }, user: { nickname, user_id } }) => [acc, score, lastRank, nickname, user_id])
       }
     }
     ctx.body = result

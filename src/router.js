@@ -17,20 +17,22 @@ export const createRouter = () => new Router({
       alias: ['/albums', '/music'],
       name: 'home',
       component: Home,
-      children: [
-        {
-          path: 'albums/:album',
-          props: true,
-          component: Album
-        }
-      ]
-    },
-    {
+      children: [{
+        path: 'albums/:album',
+        props: true,
+        component: Album
+      }]
+    }, {
       path: '/music/:uid',
       props: true,
-      component: Music
-    },
-    {
+      component: Music,
+      children: [{
+        path: ':difficulty',
+        props: true,
+        component: Rank,
+        children: [{ path: ':platform', props: true }]
+      }]
+    }, {
       path: '/about',
       component: About
     }

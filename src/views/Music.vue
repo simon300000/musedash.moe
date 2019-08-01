@@ -3,6 +3,7 @@
   <progress class="progress is-small" max="100" v-if="!albumsArray.length"></progress>
   <template v-if="albumsArray.length">
     <music :music="currentMusic"></music>
+    <router-view></router-view>
   </template>
 </div>
 </template>
