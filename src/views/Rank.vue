@@ -30,7 +30,9 @@
           <td><template v-if="index!==play.lastRank">
               <change :before="play.lastRank" :after="index"></change>
             </template></td>
-          <td>{{play.nickname}}</td>
+          <td>
+            <router-link :to="`/player/${play.id}`">{{play.nickname}}</router-link>
+          </td>
           <td>{{Math.round(play.acc*10)/10}}%</td>
           <td>{{play.score}}</td>
           <td v-if="platform === 'all'">

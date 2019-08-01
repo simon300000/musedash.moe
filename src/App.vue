@@ -94,5 +94,6 @@ export default {
 @import "~bulma/sass/elements/button.sass";
 @import "~bulma/sass/elements/table.sass";
 @import "~bulma/sass/elements/icon.sass";
+@import "~bulma/sass/layout/hero.sass";
 @import "~bulma/sass/elements/title.sass";
 </style>
