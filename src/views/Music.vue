@@ -2,7 +2,7 @@
 <div>
   <progress class="progress is-small" max="100" v-if="!albumsArray.length"></progress>
   <template v-if="albumsArray.length">
-    <music :music="currentMusic"></music>
+    <music :music="currentMusic" :platform="platform"></music>
     <router-view></router-view>
   </template>
 </div>
@@ -14,7 +14,7 @@ import { mapGetters, mapActions, mapState } from 'vuex'
 import music from '@/components/music.vue'
 
 export default {
-  props: ['uid'],
+  props: ['uid', 'platform'],
   components: {
     music
   },
