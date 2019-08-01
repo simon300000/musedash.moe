@@ -23,9 +23,11 @@ app.use(async ctx => {
   let result = await renderer.renderToString({ url: ctx.url, lang }).catch(e => {
     console.error(e)
     if (e.code) {
-      return e.code
+      ctx.throw(e.code)
+    } else {
+      ctx.throw(e.code)
     }
-    return '500 出错啦'
+    return undefined
   })
   ctx.type = 'text/html'
   ctx.body = result
