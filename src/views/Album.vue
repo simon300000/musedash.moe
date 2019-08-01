@@ -1,24 +1,19 @@
 <template>
 <div>
-  <nav class="level" v-for="music in musics" :key="music.uid">
-    <div class="level-left">
-      <div class="level-item">
-        <figure class="image is-128x128">
-          <img class="is-rounded" :src="`/covers/${music.cover}.png`">
-        </figure>
-      </div>
-    </div>
-    <div class="level-item"><strong>{{music.name}}</strong></div>
-    <div class="level-item">{{music.author}}</div>
-  </nav>
+  <music :music="music" v-for="music in musics" :key="music.uid"></music>
 </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 
+import music from '@/components/music.vue'
+
 export default {
   props: ['album'],
+  components: {
+    music
+  },
   computed: {
     ...mapState(['fullAlbums', 'lang']),
     currentAlbum() {
