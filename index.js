@@ -18,7 +18,7 @@ app.use(async ctx => {
   let lang = ctx.cookies.get('lang')
   if (!lang) {
     lang = 'ChineseS'
-    ctx.cookies.set('lang', lang)
+    ctx.cookies.set('lang', lang, { httpOnly: false })
   }
   let result = await renderer.renderToString({ url: ctx.url, lang }).catch(e => {
     console.error(e)
