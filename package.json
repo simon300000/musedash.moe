@@ -10,6 +10,7 @@
     "dev": "tsc -w"
   },
   "dependencies": {
+    "axios": "^0.19.0",
     "bulma": "^0.7.5",
     "core-js": "^2.6.5",
     "encoding-down": "^6.1.0",
@@ -18,8 +19,6 @@
     "koa": "^2.7.0",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
-    "ky": "^0.11.2",
-    "ky-universal": "^0.2.2",
     "leveldown": "^5.1.1",
     "levelup": "^4.1.0",
     "lru-cache": "^5.1.1",
