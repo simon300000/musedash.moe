@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import { mapGetters, mapState, mapActions } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 import Octicon from '@/components/vue-octicon/src/components/Octicon.vue'
 import '@/components/vue-octicon/src/icons/device-desktop'
@@ -71,7 +71,6 @@ export default {
     change
   },
   computed: {
-    ...mapGetters(['allMusics']),
     ...mapState(['rankCache']),
     currentRank() {
       return this.rankCache[`${this.uid}_${this.platform}_${this.difficulty}`]

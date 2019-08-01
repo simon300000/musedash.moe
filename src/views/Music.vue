@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapGetters, mapActions, mapState } from 'vuex'
 
 import music from '@/components/music.vue'
 
@@ -20,8 +20,9 @@ export default {
   },
   computed: {
     ...mapGetters(['allMusics', 'albumsArray']),
+    ...mapState(['lang']),
     currentMusic() {
-      return this.allMusics[this.uid]
+      return { ...this.allMusics[this.uid], ...this.allMusics[this.uid][this.lang] }
     }
   },
   serverPrefetch() {
