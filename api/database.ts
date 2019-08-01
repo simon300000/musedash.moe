@@ -40,7 +40,7 @@ class StandaloneLevelDatabase {
     const batch = this.db.batch()
     return new Promise(resolve => this.db.createKeyStream()
       .on('data', key => batch.del(key))
-      .on('close', () => resolve(batch.write())))
+      .on('close', async () => resolve(await batch.write())))
   }
 }
 
