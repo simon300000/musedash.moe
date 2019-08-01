@@ -110,7 +110,7 @@ module.exports = merge(prodConfig, {
     new SizePlugin(),
     new GenerateSW({
       runtimeCaching: [{
-        urlPattern: /cover/,
+        urlPattern: /covers/,
         handler: 'CacheFirst'
       }]
     })
