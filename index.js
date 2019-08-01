@@ -20,7 +20,13 @@ app.use(async ctx => {
     lang = 'ChineseS'
     ctx.cookies.set('lang', lang)
   }
-  let result = await renderer.renderToString({ url: ctx.url, lang }).catch(() => '404 找不到')
+  let result = await renderer.renderToString({ url: ctx.url, lang }).catch(e => {
+    console.error(e)
+    if (e.code) {
+      return e.code
+    }
+    return '500 出错啦'
+  })
   ctx.type = 'text/html'
   ctx.body = result
 })
