@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import axios from 'axios'
 
-const url = new Vue().$isServer ? 'http://0.0.0.0:8301/' : 'http://0.0.0.0:8301/'
+const url = new Vue().$isServer ? 'http://0.0.0.0:8301/' : 'https://api.musedash.moe/'
 
 const get = async api => (await axios(`${url}${api}`)).data
 
