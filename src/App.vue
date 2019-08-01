@@ -1,30 +1,42 @@
 <template>
 <div id="app">
   <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-menu">
+    <div class="navbar-brand">
       <div class="navbar-brand">
-        <div class="navbar-item">👌</div>
+        <div class="navbar-item">musedash.moe</div>
       </div>
-      <div class="navbar-start">
+
+      <a role="button" class="navbar-burger burger" :class="{'is-active': menu}" aria-label="menu" @click="switchMenu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu" :class="{'is-active': menu}">
+      <div class="navbar-start" @click="closeMenu()">
         <router-link to="/" class="navbar-item">Home</router-link>
       </div>
+
       <div class="navbar-end">
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link is-arrowless">
-            {{currentLang}}
-          </a>
-          <div class="navbar-dropdown is-right">
-            <a class="navbar-item" v-for="[lang, name] in availableLang" :key="name" @click="setLang(lang)">
-              {{name}}
+        <div class="navbar-end">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link is-arrowless">
+              {{currentLang}}
             </a>
-            <hr class="navbar-divider">
-            <router-link to="/about" class="navbar-item">About</router-link>
+            <div class="navbar-dropdown is-right" @click="closeMenu()">
+              <a class="navbar-item" v-for="[lang, name] in availableLang" :key="name" @click="setLang(lang)">
+                {{name}}
+              </a>
+              <hr class="navbar-divider">
+              <router-link to="/about" class="navbar-item">About</router-link>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </nav>
-  <section class="section">
+  <section class="section" @click="closeMenu">
     <div class="container">
       <router-view></router-view>
     </div>
@@ -44,6 +56,9 @@ const langs = {
 }
 
 export default {
+  data() {
+    return { menu: false }
+  },
   computed: {
     ...mapState(['lang']),
     currentLang() {
@@ -54,7 +69,15 @@ export default {
         .filter(([lang]) => lang !== this.lang)
     }
   },
-  methods: mapMutations(['setLang'])
+  methods: {
+    ...mapMutations(['setLang']),
+    switchMenu() {
+      this.menu = !this.menu
+    },
+    closeMenu() {
+      this.menu = false
+    }
+  }
 }
 </script>
 
