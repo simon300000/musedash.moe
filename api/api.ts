@@ -44,7 +44,7 @@ export default ({ albums, rank, player }) => {
     if (result) {
       result = result.map(({ play: { acc, score }, history, user }) => ({ acc, score, history, user }))
     }
-    ctx.body = JSON.stringify(result)
+    ctx.body = result
   })
 
   router.get('/player/:id', async ctx => {
