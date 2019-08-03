@@ -18,11 +18,8 @@ class StandaloneLevelDatabase {
   get(key: string) {
     return this.db.get(key).catch(() => undefined)
   }
-  keyList() {
-    let keys = []
-    return new Promise(resolve => this.db.createKeyStream()
-      .on('data', key => keys.push(key))
-      .on('close', () => resolve(keys)))
+  createValueStream() {
+    return this.db.createValueStream()
   }
   clear() {
     const batch = this.db.batch()
