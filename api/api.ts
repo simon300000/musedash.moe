@@ -62,7 +62,7 @@ export default ({ albums, rank, player }) => {
         let result = []
         const stream = player.createValueStream()
         stream.on('data', ({ user: { nickname, user_id } }) => {
-          if (search.filter(word => nickname.includes(word)).length === search.length) {
+          if (!search.find(word => !nickname.includes(word))) {
             result.push([nickname, user_id])
           }
         })
