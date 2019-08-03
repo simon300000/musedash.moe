@@ -5,7 +5,8 @@ import LRU = require('lru-cache')
 
 const cache = new LRU({
   maxAge: 1000 * 5,
-  max: 100
+  max: 100,
+  updateAgeOnGet: true
 })
 
 const app = new Koa()
