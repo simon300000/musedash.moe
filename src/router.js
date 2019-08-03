@@ -5,6 +5,7 @@ import Album from './views/Album.vue'
 import Music from './views/Music.vue'
 import Rank from './views/Rank.vue'
 import Player from './views/Player.vue'
+import Search from './views/Search.vue'
 import About from './views/About.vue'
 
 Vue.use(Router)
@@ -37,6 +38,10 @@ export const createRouter = () => new Router({
       path: '/player/:id',
       props: true,
       component: Player
+    }, {
+      path: '/player',
+      alias: '/search',
+      component: Search
     }, {
       path: '/about',
       component: About

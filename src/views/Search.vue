@@ -1,0 +1,76 @@
+<template>
+<div>
+  <form @submit="submit" class="full-width">
+    <div class="field has-addons">
+      <div class="control is-expanded" :class="{'is-loading': loading}">
+        <input class="input" v-model="search" type="text" placeholder="Search Player">
+      </div>
+      <div class="control">
+        <input type="submit" class="button is-info" value="Search">
+      </div>
+    </div>
+    <p class="help" v-if="searched">Result: {{results.length}}</p>
+  </form>
+  <progress class="progress is-info" max="100" v-if="loading"></progress>
+  <router-link tag="nav" class="level clickabe" v-for="[username, id] in results" :key="id" :to="`/player/${id}`">
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">{{id}}</p>
+        <p class="title">{{username}}</p>
+      </div>
+    </div>
+  </router-link>
+</div>
+</template>
+
+<script>
+import { searchPlayer } from '@/api'
+
+export default {
+  data() {
+    return {
+      loading: false,
+      searching: undefined,
+      search: '',
+      results: [],
+      searched: false
+    }
+  },
+  watch: {
+    search() {
+      if (this.search !== this.searching) {
+        this.loading = false
+      }
+    }
+  },
+  methods: {
+    async submit(e) {
+      e.preventDefault()
+      if (this.searching !== this.search) {
+        let search = this.search
+        this.searching = search
+        this.loading = true
+        this.results = []
+        this.searched = false
+        let results = await searchPlayer(search)
+        this.searching = undefined
+        if (this.search === search) {
+          this.loading = false
+          this.searched = true
+          this.results = results
+        }
+      }
+    }
+  }
+}
+</script>
+
+<style scoped>
+form {
+  margin-bottom: 23.3px;
+}
+
+.clickabe {
+  cursor: pointer;
+}
+</style>

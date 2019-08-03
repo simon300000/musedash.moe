@@ -3,7 +3,7 @@
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <div class="navbar-brand">
-        <div class="navbar-item">musedash.moe</div>
+        <router-link to="/" class="navbar-item" exact-active-class="is-active">MuseDash.moe</router-link>
       </div>
 
       <a role="button" class="navbar-burger burger" :class="{'is-active': menu}" aria-label="menu" @click="switchMenu" aria-expanded="false">
@@ -15,7 +15,7 @@
 
     <div class="navbar-menu" :class="{'is-active': menu}">
       <div class="navbar-start" @click="closeMenu()">
-        <router-link to="/" class="navbar-item">Home</router-link>
+        <router-link to="/player" class="navbar-item" active-class="is-active">Search</router-link>
       </div>
 
       <div class="navbar-end">
@@ -96,4 +96,7 @@ export default {
 @import "~bulma/sass/elements/icon.sass";
 @import "~bulma/sass/layout/hero.sass";
 @import "~bulma/sass/elements/title.sass";
+@import "~bulma/sass/form/shared.sass";
+@import "~bulma/sass/form/tools.sass";
+@import "~bulma/sass/form/input-textarea.sass";
 </style>
