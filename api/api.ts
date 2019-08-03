@@ -56,16 +56,20 @@ export default ({ albums, rank, player }) => {
     const search = ctx.params.string
       .split(' ')
       .filter(Boolean)
-    ctx.body = await new Promise(resolve => {
-      let result = []
-      const stream = player.createValueStream()
-      stream.on('data', ({ user: { nickname, user_id } }) => {
-        if (search.filter(word => nickname.includes(word)).length === search.length) {
-          result.push([nickname, user_id])
-        }
+    if (search.length) {
+      ctx.body = await new Promise(resolve => {
+        let result = []
+        const stream = player.createValueStream()
+        stream.on('data', ({ user: { nickname, user_id } }) => {
+          if (search.filter(word => nickname.includes(word)).length === search.length) {
+            result.push([nickname, user_id])
+          }
+        })
+        stream.on('close', () => resolve(result))
       })
-      stream.on('close', () => resolve(result))
-    })
+    } else {
+      ctx.body = []
+    }
   })
 
   app.use(router.routes())
