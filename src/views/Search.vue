@@ -12,10 +12,10 @@
     <p class="help" v-if="searched">Result: {{results.length}}</p>
   </form>
   <progress class="progress is-info" max="100" v-if="loading"></progress>
-  <router-link tag="nav" class="level clickabe" v-for="[username, id] in results" :key="id" :to="`/player/${id}`">
+  <router-link class="level" v-for="[username, id] in results" :key="id" :to="`/player/${id}`">
     <div class="level-item has-text-centered">
       <div>
-        <p class="heading">{{id}}</p>
+        <p class="heading black">{{id}}</p>
         <p class="title">{{username}}</p>
       </div>
     </div>
@@ -70,7 +70,7 @@ form {
   margin-bottom: 23.3px;
 }
 
-.clickabe {
-  cursor: pointer;
+.black {
+  color: #4a4a4a;
 }
 </style>
