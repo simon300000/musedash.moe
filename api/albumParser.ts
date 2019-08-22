@@ -25,11 +25,12 @@ export default async () => {
     .map(({ title, jsonName, ChineseS, ChineseT, English, Japanese, Korean }) => ({ title, json: jsonName, ChineseS, ChineseT, English, Japanese, Korean }))
     .map(async object => {
       const music = (await readLocale(object.json))
-        .map(({ uid, name, author, cover, difficulty1, difficulty2, difficulty3, ChineseS, ChineseT, English, Japanese, Korean }) => ({
+        .map(({ uid, name, author, cover, difficulty1, difficulty2, difficulty3, ChineseS, ChineseT, English, Japanese, Korean, levelDesigner, levelDesigner1, levelDesigner2, levelDesigner3 }) => ({
           uid,
           name,
           author,
           cover,
+          levelDesigner: levelDesigner ? [levelDesigner] : [levelDesigner1, levelDesigner2, levelDesigner3],
           difficulty: [Number(difficulty1), Number(difficulty2), Number(difficulty3)],
           ChineseS,
           ChineseT,

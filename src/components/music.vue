@@ -9,11 +9,14 @@
   </div>
   <div class="level-item">
     <div>
-      <p class="title is-5">{{music.name}}</p>
+      <p class="title is-5 is-spaced">{{music.name}}</p>
+      <p class="subtitle is-6" title="Author">{{music.author}}</p>
     </div>
   </div>
   <div class="level-item">
-    <p class="subtitle is-6">{{music.author}}</p>
+    <div>
+      <p class="title is-6 is-spaced" title="Level Designer" v-for="(designer, i) in music.levelDesigner" :key="`${music.name}_${i}`">{{designer}}</p>
+    </div>
   </div>
   <div class="level-right">
     <div class="level-item">
