@@ -25,7 +25,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(play, index) in currentRank" :key="`${play.id}_${play.platform || platform}`">
+        <tr v-for="(play, index) in currentRankLimit" :key="`${play.id}_${play.platform || platform}`">
           <td>{{index+1}}</td>
           <td><template v-if="index!==play.lastRank">
               <change :before="play.lastRank" :after="index"></change>
@@ -60,6 +60,11 @@ import '@/components/vue-octicon/src/icons/device-mobile'
 import change from '@/components/change.vue'
 
 export default {
+  data() {
+    return {
+      limit: 250
+    }
+  },
   props: {
     uid: String,
     difficulty: String,
@@ -76,20 +81,43 @@ export default {
     ...mapState(['rankCache']),
     currentRank() {
       return this.rankCache[`${this.uid}_${this.platform}_${this.difficulty}`]
+    },
+    currentRankLimit() {
+      return this.currentRank.filter((_, i) => i < this.limit)
     }
   },
   mounted() {
-    if (!this.currentRank) {
-      const { uid, platform, difficulty } = this
-      this.loadRank({ uid, platform, difficulty })
-    }
+    this.mount()
   },
-  beforeUpdate() {
-    if (!this.currentRank) {
-      const { uid, platform, difficulty } = this
-      this.loadRank({ uid, platform, difficulty })
-    }
+  destroyed() {
+    document.onscroll = null
   },
-  methods: mapActions(['loadRank'])
+  watch: {
+    platform: 'mount',
+    difficulty: 'mount'
+  },
+  methods: {
+    ...mapActions(['loadRank']),
+    mount() {
+      this.limit = 250
+
+      if (!this.currentRank) {
+        const { uid, platform, difficulty } = this
+        this.loadRank({ uid, platform, difficulty })
+      }
+
+      this.$nextTick(function() {
+        document.onscroll = () => {
+          if (document.body.clientHeight - window.innerHeight - window.scrollY < document.body.clientHeight / 2 && this.currentRank?.length) {
+            if (this.limit < this.currentRank.length) {
+              this.limit *= 2
+            } else {
+              document.onscroll = null
+            }
+          }
+        }
+      })
+    }
+  }
 }
 </script>
