@@ -9,7 +9,7 @@
 	},
 	{
 		"name": "Dreaming Girl",
-		"author": "Nano&板燒鵝尼子"
+		"author": "Nano&板烧鹅尼子"
 	},
 	{
 		"name": "Daruma-san Fell Over",

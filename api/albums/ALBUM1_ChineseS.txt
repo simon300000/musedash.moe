@@ -1,7 +1,7 @@
 [
 	{
-		"name": "Iyaiya (short ver.)",
-		"author": "小野道"
+		"name": "Iyaiya",
+		"author": "小野道ono"
 	},
 	{
 		"name": "Wonderful Pain",
@@ -12,8 +12,8 @@
 		"author": "TetraCalyx"
 	},
 	{
-		"name": "单向地铁 (short ver.)",
-		"author": "小野道 feat.karin"
+		"name": "单向地铁 Feat.karin",
+		"author": "小野道ono"
 	},
 	{
 		"name": "Frost Land",
@@ -36,20 +36,20 @@
 	    "author": "Haloweak"
   	},
 	{
-		"name": "海豚与广播 (short ver.)",
-		"author": "小野道 feat.乌拉喵"
+		"name": "海豚与广播 feat.乌拉喵",
+		"author": "小野道ono"
 	},
 	{
 		"name": "雪の雫・雨の音",
-		"author": "天游 feat.东京塔子"
+		"author": "天游 feat.东京塔子",
 	},
 	{
 		"name": "糖果色恋爱学",
-		"author": "ANK feat.熊子"
+		"author": "ANK feat.熊子",
 	},
 	{
 		"name": "Night Wander (cnsouka Remix)",
-		"author": "cnsouka"
+		"author": "cnsouka",
 	},
 	{
 		"name": "Spring Carnival",
@@ -58,10 +58,10 @@
 	{
 		"name": "DISCO NIGHT",
 		"author": "ANK feat.熊子"
-	},
+	},	
 	{
-		"name": "恋爱语音导航 (short ver.)",
-		"author": "小野道 feat.yousa"
+		"name": "恋爱语音导航 feat.yousa",
+		"author": "小野道ono"
 	},
 	{
 		"name": "Lights of Muse",

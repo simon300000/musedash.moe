@@ -4,15 +4,15 @@
 		"author": "ANK feat.kumako"
 	},
 	{
-		"name": "星球上的追溯詩",
+		"name": "星球上的追溯诗",
 		"author": "味素 feat.kumako"
 	},
 	{
-		"name": "我要買買買",
+		"name": "我要买买买",
 		"author": "iKz"
 	},
 	{
-		"name": "約會宣言",
+		"name": "约会宣言",
 		"author": "iKz feat.Hanser"
 	},
 	{
@@ -20,7 +20,7 @@
 		"author": "KyuRu☆ feat.Yuu Shitsuka"
 	},
 	{
-		"name": "心上華海",
+		"name": "心上华海",
 		"author": "Nekock·LK"
 	}
 ]

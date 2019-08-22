@@ -1,0 +1,26 @@
+[
+	{
+		"name": "魔咒 feat.早木旋子",
+		"author": "ANK"
+	},
+	{
+		"name": "斑斕星，彩繪，旅行詩",
+		"author": "cnsouka Feat.karin"
+	},
+	{
+		"name": "Satell Knight",
+		"author": "UncleWang Feat.熊子"
+	},
+	{
+		"name": "Black River Feat.Mes",
+		"author": "小野道ono"
+	},
+	{
+		"name": "生而為人，我很抱歉",
+		"author": "Nekock·LK"
+	},
+	{
+		"name": "飢えた鳥たち",
+		"author": "MusikM"
+	}
+]

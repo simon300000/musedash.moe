@@ -6,14 +6,23 @@
 		"price": "9.99 $",
 		"jsonName": "ALBUM1",
 		"prefabsName": "AlbumDisco1",
-		"free" : false
+		"free" : false,
 	},
 	{
 		"uid": "unlockall_0",
 		"title": "forever friend",
 		"needPurchase": true,
 		"price": "¥188.00",
-		"free" : false
+		"free" : false,
+	},
+	{
+		"uid": "music_package_15",
+		"title": "Cute Is Everyting Vol.3",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM16",
+		"prefabsName": "AlbumDisco16",
+		"free" : false,
 	},
 	{
 		"uid": "music_package_14",
@@ -22,7 +31,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM15",
 		"prefabsName": "AlbumDisco15",
-		"free" : false
+		"free" : false,
 	},
 	{
 		"uid": "music_package_13",
@@ -31,7 +40,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM14",
 		"prefabsName": "AlbumDisco14",
-		"free" : false
+		"free" : false,
 	},
 	{
 		"uid": "music_package_12",
@@ -40,7 +49,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM13",
 		"prefabsName": "AlbumDisco13",
-		"free" : false
+		"free" : false,
 	},
 	{
 		"uid": "music_package_11",
@@ -49,7 +58,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM12",
 		"prefabsName": "AlbumDisco12",
-		"free" : false
+		"free" : false,
 	},
 	{
 		"uid": "music_package_10",
@@ -58,7 +67,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM11",
 		"prefabsName": "AlbumDisco11",
-		"free" : false
+		"free" : false,
 	},
 	{
 		"uid": "music_package_9",
@@ -67,7 +76,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM10",
 		"prefabsName": "AlbumDisco10",
-		"free" : false
+		"free" : false,
 	},
 	{
 		"uid": "music_package_8",
@@ -76,7 +85,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM9",
 		"prefabsName": "AlbumDisco9",
-		"free" : false
+		"free" : false,
 	},
 	{
 		"uid": "music_package_7",
@@ -85,7 +94,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM8",
 		"prefabsName": "AlbumDisco8",
-		"free" : false
+		"free" : false,
 	},
 	{
 		"uid": "music_package_6",
@@ -94,7 +103,7 @@
 		"price": "Free",
 		"jsonName": "ALBUM7",
 		"prefabsName": "AlbumDisco7",
-		"free" : true
+		"free" : true,
 	},
 	{
 		"uid": "music_package_5",
@@ -103,7 +112,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM6",
 		"prefabsName": "AlbumDisco6",
-		"free" : false
+		"free" : false,
 	},
 	{
 		"uid": "music_package_4",
@@ -112,7 +121,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM5",
 		"prefabsName": "AlbumDisco5",
-		"free" : false
+		"free" : false,
 	},
 	{
 		"uid": "music_package_3",
@@ -121,7 +130,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM4",
 		"prefabsName": "AlbumDisco4",
-		"free" : false
+		"free" : false,
 	},
 	{
 		"uid": "music_package_2",
@@ -130,7 +139,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM3",
 		"prefabsName": "AlbumDisco3",
-		"free" : false
+		"free" : false,
 	},
 	{
 		"uid": "music_package_1",
@@ -139,6 +148,6 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM2",
 		"prefabsName": "AlbumDisco2",
-		"free" : false
-	}
+		"free" : false,
+	},
 ]
