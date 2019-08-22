@@ -3,7 +3,7 @@
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <div class="navbar-brand">
-        <router-link to="/" class="navbar-item" exact-active-class="is-active">MuseDash.moe</router-link>
+        <router-link to="/" class="navbar-item">MuseDash.moe</router-link>
       </div>
 
       <a role="button" class="navbar-burger burger" :class="{'is-active': menu}" aria-label="menu" @click="switchMenu" aria-expanded="false">
@@ -15,7 +15,7 @@
 
     <div class="navbar-menu" :class="{'is-active': menu}">
       <div class="navbar-start" @click="closeMenu()">
-        <router-link to="/player" class="navbar-item" active-class="is-active">Search</router-link>
+        <router-link to="/player" class="navbar-item">Search</router-link>
       </div>
 
       <div class="navbar-end">
