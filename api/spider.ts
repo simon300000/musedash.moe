@@ -9,7 +9,7 @@ const platforms = {
   pc: 'pcleaderboard'
 }
 
-const download = async ({ api, uid, difficulty }) => (await got(`https://prpr-muse-dash.leanapp.cn/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=1999`, { json: true })).body.result
+const download = async ({ api, uid, difficulty }) => (await got(`https://prpr-muse-dash.leanapp.cn/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=1999`, { json: true, timeout: 1000 * 60 * 10 })).body.result
 
 const prepare = music => music
   .flatMap(({ uid, difficulty, name }) => difficulty
