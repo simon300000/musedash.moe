@@ -18,12 +18,12 @@ const prepare = music => music
     .map(([platform, api]) => ({ uid, difficulty, name, level, platform, api })))
   .filter(({ level }) => level)
 
-const round = async ({ pending, rank }) => {
+const round = async ({ pending, rank }: { pending: Array<any>, rank: any }) => {
   for (; pending.length;) {
     const { uid, difficulty, name, platform, api } = pending.shift()
     let result = await download({ uid, difficulty, api }).catch(() => undefined)
     if (!result) {
-      pending.push({ uid, difficulty, name, platform, api })
+      pending.unshift({ uid, difficulty, name, platform, api })
       console.log(`RETRY: ${uid}: ${name} - ${difficulty} - ${platform}`)
       continue
     }
