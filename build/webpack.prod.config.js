@@ -7,6 +7,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const utils = require('./utils')
 
 const config = {
+  mode: 'production',
   performance: {
     hints: false
   },

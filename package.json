@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "node build",
+    "build:dev": "export development=true;node build",
     "lint": "vue-cli-service lint",
     "build:api": "tsc",
     "dev": "tsc -w"

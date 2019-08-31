@@ -1,7 +1,8 @@
 const path = require('path')
 const utils = require('./utils')
 const merge = require('webpack-merge')
-const prodConfig = require('./webpack.prod.config.js')
+const prodConfig = require('./webpack.prod.config')
+const devConfig = require('./webpack.dev.config')
 
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const SizePlugin = require('size-plugin')
@@ -12,8 +13,11 @@ function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 
-module.exports = merge(prodConfig, {
-  mode: 'production',
+if (process.env.development) {
+  console.log('Build for Development')
+}
+
+module.exports = merge(process.env.development ? devConfig : prodConfig, {
   context: path.resolve(__dirname, '../'),
   output: {
     filename: '[name].[contenthash].js',
