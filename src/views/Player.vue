@@ -58,6 +58,7 @@ export default {
     plays() {
       return [...this.currentPlayer.plays]
         .sort(({ score: a }, { score: b }) => b - a)
+        .sort(({ i: a }, { i: b }) => a - b)
     },
     perfect() {
       return this.plays
