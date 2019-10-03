@@ -7,7 +7,8 @@
     "standard"
   ],
   "rules": {
-    "space-before-function-paren": "off"
+    "space-before-function-paren": "off",
+    "@typescript-eslint/no-unused-vars": "on"
   },
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],

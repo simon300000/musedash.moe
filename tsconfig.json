@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
+    "target": "es2018",
+    "lib": ["es2018"],
     "module": "commonjs",
     "noImplicitAny": false,
-    "removeComments": true,
-    "preserveConstEnums": true
+    "preserveConstEnums": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
   },
   "include": [
         "./api/**/*"

@@ -1,4 +1,5 @@
 /* eslint camelcase: ["off"] */
+import { StandaloneLevelDatabase } from './database'
 import got = require('got')
 
 const INTERVAL = 1000 * 60 * 60 * 24
@@ -85,7 +86,7 @@ const sumRank = async ({ musicList, rank }) => {
   }
 }
 
-const makeSearch = ({ player, search }) => new Promise(async resolve => {
+const makeSearch = ({ player, search }: { player: StandaloneLevelDatabase, search: StandaloneLevelDatabase }) => new Promise(async resolve => {
   await search.clear()
   console.log('Search cleared')
   const batch = search.batch()
@@ -96,7 +97,7 @@ const makeSearch = ({ player, search }) => new Promise(async resolve => {
   stream.on('close', () => resolve(batch.write()))
 })
 
-export default async ({ music, rank, player, PARALLEL, search }) => {
+export default async ({ music, rank, player, PARALLEL, search }: { music, rank: {}, player: StandaloneLevelDatabase, PARALLEL: number, search: StandaloneLevelDatabase }) => {
   for (; ;) {
     const startTime = Date.now()
     const musicList = prepare(music)

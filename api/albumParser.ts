@@ -4,7 +4,7 @@ import { promises as fs } from 'fs'
 const availableLocales = ['ChineseS', 'ChineseT', 'English', 'Japanese', 'Korean']
 
 // eslint-disable-next-line no-control-regex
-const parseFile = async (file: string) => JSON.parse(String(await fs.readFile(join(__dirname, 'albums', `${file}.txt`))).replace(/\n/g, '').replace(/,( |\x09)*}/g, '}').replace(/,( |\x09)*]/g, ']'))
+const parseFile = async (file: string): Promise<any> => JSON.parse(String(await fs.readFile(join(__dirname, 'albums', `${file}.txt`))).replace(/\n/g, '').replace(/,( |\x09)*}/g, '}').replace(/,( |\x09)*]/g, ']'))
 
 const readLocale = async (file: string) => {
   const content = await parseFile(file)

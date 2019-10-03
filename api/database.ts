@@ -4,7 +4,7 @@ import encode from 'encoding-down'
 
 const level = (file: string) => levelup(encode(leveldown(file), { valueEncoding: 'json' }))
 
-class StandaloneLevelDatabase {
+export class StandaloneLevelDatabase {
   db: LevelUp
 
   constructor(db: LevelUp) {
@@ -35,7 +35,7 @@ class StandaloneLevelDatabase {
   }
 }
 
-class LevelDatabase {
+export class LevelDatabase {
   db: LevelUp
 
   name: string
@@ -51,13 +51,6 @@ class LevelDatabase {
 
   get(key) {
     return this.db.get(`${this.name}_${key}`).catch(() => undefined)
-  }
-
-  clear() {
-    const batch = this.db.batch()
-    return new Promise(resolve => this.db.createKeyStream()
-      .on('data', key => batch.del(key))
-      .on('close', () => resolve(batch.write())))
   }
 }
 
