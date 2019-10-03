@@ -1,3 +1,4 @@
+/* eslint camelcase: ["off"] */
 import got = require('got')
 
 const INTERVAL = 1000 * 60 * 60 * 24
@@ -64,7 +65,6 @@ const analyze = async ({ musicList, rank, player }) => {
       await player.put(user.user_id, playerData)
     }))
   }
-  console.log('Analyzed')
 }
 
 const sumRank = async ({ musicList, rank }) => {
@@ -83,16 +83,30 @@ const sumRank = async ({ musicList, rank }) => {
     }
     await rank.put({ uid, difficulty, platform: 'all', value: result })
   }
-  console.log('Ranked')
 }
 
-export default async ({ music, rank, player, PARALLEL }) => {
+const makeSearch = ({ player, search }) => new Promise(async resolve => {
+  await search.clear()
+  console.log('Search cleared')
+  const batch = search.batch()
+  const stream = player.createValueStream()
+  stream.on('data', ({ user: { nickname, user_id } }) => {
+    batch.put(user_id, nickname)
+  })
+  stream.on('close', () => resolve(batch.write()))
+})
+
+export default async ({ music, rank, player, PARALLEL, search }) => {
   for (; ;) {
     const startTime = Date.now()
     const musicList = prepare(music)
     await Promise.all(Array(PARALLEL).fill([...musicList]).map(pending => round({ pending, rank })))
     await sumRank({ musicList, rank })
+    console.log('Ranked')
     await analyze({ musicList, rank, player })
+    console.log('Analyzed')
+    await makeSearch({ player, search })
+    console.log('Search Cached')
     const endTime = Date.now()
     console.log(`Wait ${INTERVAL - (endTime - startTime)}`)
     await wait(INTERVAL - (endTime - startTime))

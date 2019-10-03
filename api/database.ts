@@ -21,6 +21,12 @@ class StandaloneLevelDatabase {
   createValueStream() {
     return this.db.createValueStream()
   }
+  createReadStream() {
+    return this.db.createReadStream()
+  }
+  batch() {
+    return this.db.batch()
+  }
   clear() {
     const batch = this.db.batch()
     return new Promise(resolve => this.db.createKeyStream()
@@ -57,10 +63,12 @@ class LevelDatabase {
 
 const db = level('./db')
 const iddb = level('./db/id')
+const searchdb = level('./db/search')
 
 const rankdb = new LevelDatabase({ name: 'rank', db })
 
 export const player = new StandaloneLevelDatabase(iddb)
+export const search = new StandaloneLevelDatabase(searchdb)
 
 export const rank = {
   put: ({ uid, difficulty, platform, value }) => rankdb.put(`${uid}_${platform}_${difficulty}`, value),

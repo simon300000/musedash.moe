@@ -23,7 +23,7 @@ app.use(async (ctx, next) => {
   }
 })
 
-export default ({ albums, rank, player }) => {
+export default ({ albums, rank, player, search }) => {
   let albumsObject = {}
   albums.forEach(album => {
     albumsObject[album.json] = { ...album, music: {} }
@@ -54,15 +54,15 @@ export default ({ albums, rank, player }) => {
   })
 
   router.get('/search/:string', async ctx => {
-    const search = ctx.params.string
+    const query = ctx.params.string
       .split(' ')
       .filter(Boolean)
-    if (search.length) {
+    if (query.length) {
       ctx.body = await new Promise(resolve => {
         let result = []
-        const stream = player.createValueStream()
-        stream.on('data', ({ user: { nickname, user_id } }) => {
-          if (!search.find(word => !nickname.includes(word))) {
+        const stream = search.createReadStream()
+        stream.on('data', ({ key: user_id, value: nickname }) => {
+          if (!query.find(word => !nickname.includes(word))) {
             result.push([nickname, user_id])
           }
         })
