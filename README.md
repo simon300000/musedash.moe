@@ -12,7 +12,7 @@ Please download the game under :D
 
 
 
-#### Download the game
+### Download the game
 
 **Steam:(PC/macOS)** <https://store.steampowered.com/app/774171/Muse_Dash/>
 
@@ -26,17 +26,21 @@ Please download the game under :D
 
 
 
-##### Twitter:
+#### Twitter:
 
 [Muse Dash](https://twitter.com/musedashthegame)
 
 [PeroPeroGames](https://twitter.com/peroperoguys)
 
-##### Website:
+#### Website:
 
 [PeroPeroGames](http://www.peroperogames.com)
 
 
+
+### Todo
+
+* Rank for Nintendo Switch
 
 ## Project setup
 
@@ -44,29 +48,34 @@ Please download the game under :D
 npm install
 ```
 
-### Compiles frontend and hot-reloads for development
+### Development
+
+#### Compiles frontend and hot-reloads for development
+
 ```sh
 npm run serve
 ```
 
-### Compiles frontend and minifies for production
-```sh
-npm run build
-```
-
-### Compiles backend with watch for development
+#### Compiles backend with watch for development
 
 ```sh
 npm run dev
 ```
 
-### Compiles backend for production
+### Production
+
+#### Compiles frontend and minifies for production
+```sh
+npm run build
+```
+
+#### Compiles backend for production
 
 ```sh
 npm run build:api
 ```
 
-### Run for production with `pm2`
+#### Run for production with `pm2`
 
 ```sh
 pm2 start ecosystem.config.js 
