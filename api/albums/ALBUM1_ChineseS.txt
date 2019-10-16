@@ -72,6 +72,10 @@
 		"author": "MusMus"
 	},
 	{
+		"name": "你好",
+		"author": "MusikM"
+	},
+	{
 		"name": "Confession",
 		"author": "Haloweak & G.K"
 	},

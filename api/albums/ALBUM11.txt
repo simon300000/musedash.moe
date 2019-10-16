@@ -73,7 +73,7 @@
             "cover":"fly_again_cover",
             "noteJson":"fly_again_map",
             "scene":"scene_05",
-            "levelDesigner": "Amami.A",
+            "levelDesigner": "Amami.A.Myamsar",
             "difficulty1":"5",
             "difficulty2":"7",
             "difficulty3":"10",

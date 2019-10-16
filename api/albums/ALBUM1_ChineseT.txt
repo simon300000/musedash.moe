@@ -17,6 +17,7 @@
 	{ "name": "戀愛語音導航 feat.yousa", "author": "小野道ono" },
 	{ "name": "Lights of Muse", "author": "Ayatsugu_Otowa" },
 	{ "name": "midstream jam", "author": "MusMus" },
+	{ "name": "你好", "author": "MusikM" },
 	{ "name": "Confession", "author": "Haloweak & G.K" },
 	{ "name": "Galaxy Striker", "author": "M2U" },
 	{ "name": "Departure Road", "author": "daisan" },

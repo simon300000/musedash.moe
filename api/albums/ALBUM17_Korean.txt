@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Future Dive",
+		"author": "Lunatic Sounds"
+	},
+	{
+		"name": "Re：End of a Dream",
+		"author": "uma vs. Morimori Atsushi"
+	},
+	{
+		"name": "Etude -Storm-",
+		"author": "Polymath9"
+	},
+	{
+		"name": "Unlimited Katharsis",
+		"author": "Reku Mochizuki"
+	},
+	{
+		"name": "Magic Knight Girl",
+		"author": "Nizikawa"
+	},
+	{
+		"name": "Eeliaas",
+		"author": "Mitsuki"
+	}
+]

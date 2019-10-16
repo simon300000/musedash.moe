@@ -57,7 +57,7 @@
     "cover": "goodbye_boss_cover",
     "noteJson": "goodbye_boss_map",
     "scene": "scene_04",
-    "levelDesigner": "money",
+    "levelDesigner": "money钱",
     "difficulty1": "4",
     "difficulty2": "6",
     "difficulty3": "8",

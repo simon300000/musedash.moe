@@ -288,6 +288,22 @@
     "unlockLevel": "15"
   },
   {
+    "uid": "0-40",
+    "name": "你好",
+    "author": "MusikM",
+    "bpm": "140",
+    "music": "nihao_music",
+    "demo": "nihao_demo",
+    "cover": "nihao_cover",
+    "noteJson": "nihao_map",
+    "scene": "scene_05",
+    "levelDesigner": "Howard_Y",
+    "difficulty1": "3",
+    "difficulty2": "5",
+    "difficulty3": "7",
+    "unlockLevel": "16"
+  },
+  {
     "uid": "0-13",
     "name": "Confession",
     "author": "Haloweak & G.K",
@@ -301,7 +317,7 @@
     "difficulty1": "3",
     "difficulty2": "5",
     "difficulty3": "8",
-    "unlockLevel": "16"
+    "unlockLevel": "17"
   },
   {
     "uid": "0-32",
@@ -317,7 +333,7 @@
     "difficulty1": "4",
     "difficulty2": "6",
     "difficulty3": "9",
-    "unlockLevel": "17"
+    "unlockLevel": "18"
   },
   {
     "uid": "0-14",
@@ -333,7 +349,7 @@
     "difficulty1": "2",
     "difficulty2": "5",
     "difficulty3": "8",
-    "unlockLevel": "18"
+    "unlockLevel": "19"
   },
   {
     "uid": "0-15",
@@ -349,7 +365,7 @@
     "difficulty1": "2",
     "difficulty2": "5",
     "difficulty3": "8",
-    "unlockLevel": "19"
+    "unlockLevel": "20"
   },
   {
     "uid": "0-16",
@@ -365,7 +381,7 @@
     "difficulty1": "3",
     "difficulty2": "5",
     "difficulty3": "7",
-    "unlockLevel": "20"
+    "unlockLevel": "21"
   },
   {
     "uid": "0-17",
@@ -381,7 +397,7 @@
     "difficulty1": "4",
     "difficulty2": "6",
     "difficulty3": "8",
-    "unlockLevel": "21"
+    "unlockLevel": "22"
   },
   {
     "uid": "0-18",
@@ -397,7 +413,7 @@
     "difficulty1": "3",
     "difficulty2": "6",
     "difficulty3": "8",
-    "unlockLevel": "22"
+    "unlockLevel": "23"
   },
   {
     "uid": "0-19",
@@ -429,7 +445,7 @@
     "difficulty1": "3",
     "difficulty2": "6",
     "difficulty3": "8",
-    "unlockLevel": "26"
+    "unlockLevel": "25"
   },
   {
     "uid": "0-21",
@@ -445,7 +461,7 @@
     "difficulty1": "4",
     "difficulty2": "6",
     "difficulty3": "8",
-    "unlockLevel": "28"
+    "unlockLevel": "26"
   },
   {
     "uid": "0-22",
@@ -461,7 +477,7 @@
     "difficulty1": "4",
     "difficulty2": "7",
     "difficulty3": "9",
-    "unlockLevel": "30"
+    "unlockLevel": "28"
   },
   {
     "uid": "0-33",

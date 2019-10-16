@@ -73,7 +73,7 @@
     "cover": "bit_alize_cover",
     "noteJson": "bit_alize_map",
     "scene": "scene_05",
-    "levelDesigner": "Amami.A",
+    "levelDesigner": "Amami.A.Myamsar",
     "difficulty1": "3",
     "difficulty2": "6",
     "difficulty3": "8",
