@@ -50,7 +50,7 @@ export default ({ albums, rank, player, search }) => {
   })
 
   router.get('/player/:id', async ctx => {
-    ctx.body = await player.get(ctx.params.id)
+    ctx.body = await player.get(ctx.params.id).catch(() => undefined)
   })
 
   router.get('/search/:string', async ctx => {

@@ -1,5 +1,4 @@
 /* eslint camelcase: ["off"] */
-import { StandaloneLevelDatabase } from './database'
 import got = require('got')
 
 const INTERVAL = 1000 * 60 * 60 * 24
@@ -56,7 +55,7 @@ const analyze = async ({ musicList, rank, player }) => {
     const currentRank = await rank.get({ uid, difficulty, platform })
     const sumRank = await rank.get({ uid, difficulty, platform: 'all' })
     await Promise.all(currentRank.map(async ({ user, play: { score, acc }, history }, i) => {
-      let playerData = await player.get(user.user_id)
+      let playerData = await player.get(user.user_id).catch(() => undefined)
       if (!playerData) {
         playerData = { plays: [] }
       }
@@ -86,7 +85,7 @@ const sumRank = async ({ musicList, rank }) => {
   }
 }
 
-const makeSearch = ({ player, search }: { player: StandaloneLevelDatabase, search: StandaloneLevelDatabase }) => new Promise(async resolve => {
+const makeSearch = ({ player, search }) => new Promise(async resolve => {
   await search.clear()
   console.log('Search cleared')
   const batch = search.batch()
@@ -97,7 +96,7 @@ const makeSearch = ({ player, search }: { player: StandaloneLevelDatabase, searc
   stream.on('close', () => resolve(batch.write()))
 })
 
-export default async ({ music, rank, player, PARALLEL, search }: { music, rank: {}, player: StandaloneLevelDatabase, PARALLEL: number, search: StandaloneLevelDatabase }) => {
+export default async ({ music, rank, player, PARALLEL, search }: { music, rank: {}, player, PARALLEL: number, search }) => {
   for (; ;) {
     const startTime = Date.now()
     const musicList = prepare(music)
