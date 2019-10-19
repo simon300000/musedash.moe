@@ -67,23 +67,21 @@ const analyze = async ({ musicList, rank, player }) => {
   }
 }
 
-const sumRank = async ({ musicList, rank }) => {
-  const pending = musicList.filter(({ platform }) => platform === 'mobile')
-
-  for (let i = 0; i < pending.length; i++) {
-    const { uid, difficulty } = pending[i]
-    const result = []
-      .concat(...await Promise.all(Object.keys(platforms).map(async platform => (await rank.get({ uid, difficulty, platform })).map(play => ({ ...play, platform })))))
-      .sort((a, b) => b.play.score - a.play.score)
-    const currentRank = await rank.get({ uid, difficulty, platform: 'all' })
+const sumRank = async ({ musicList, rank }) => (await musicList
+  .filter(({ platform }) => platform === 'mobile')
+  .map(async ({ uid, difficulty }) => {
+    let [currentRank, result] = [await rank.get({ uid, difficulty, platform: 'all' }), (await Promise.all(Object.keys(platforms).map(async platform => (await rank.get({ uid, difficulty, platform })).map(play => ({ ...play, platform })))))
+      .flat()
+      .sort((a, b) => b.play.score - a.play.score)]
     if (currentRank) {
       for (let i = 0; i < result.length; i++) {
         result[i].history = { lastRank: currentRank.findIndex(play => play.platform === result[i].platform && play.user.user_id === result[i].user.user_id) }
       }
     }
-    await rank.put({ uid, difficulty, platform: 'all', value: result })
-  }
-}
+    return { uid, difficulty, platform: 'all', value: result }
+  })
+  .reduce(async (b, v) => (await b).put(await v), rank.batch()))
+  .write()
 
 const makeSearch = ({ player, search }) => new Promise(async resolve => {
   await search.clear()
