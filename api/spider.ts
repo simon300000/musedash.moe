@@ -45,27 +45,27 @@ const round = async ({ pending, rank }: { pending: Array<any>, rank: any }) => {
   }
 }
 
-const analyze = async ({ musicList, rank, player }) => {
-  await player.clear()
-  console.log('Analyze cleared')
-
-  let pending = [...musicList]
-  for (; pending.length;) {
-    const { uid, difficulty, platform } = pending.shift()
+const analyze = ({ musicList, rank, player }) => [...musicList]
+  .reduce(async (p, m) => {
+    await p
+    const { uid, difficulty, platform } = m
     const currentRank = await rank.get({ uid, difficulty, platform })
     const sumRank = await rank.get({ uid, difficulty, platform: 'all' })
-    await Promise.all(currentRank.map(async ({ user, play: { score, acc }, history }, i) => {
-      let playerData = await player.get(user.user_id).catch(() => undefined)
-      if (!playerData) {
-        playerData = { plays: [] }
-      }
-      playerData.user = user
-      const sum = sumRank.findIndex(play => play.platform === platform && play.user.user_id === user.user_id)
-      playerData.plays.push({ score, acc, i, platform, history, difficulty, uid, sum })
-      await player.put(user.user_id, playerData)
-    }))
-  }
-}
+    return (await currentRank
+      .map(async ({ user, play: { score, acc }, history }, i) => {
+        let playerData = await player.get(user.user_id).catch(() => ({ plays: [] }))
+        playerData.user = user
+        const sum = sumRank.findIndex(play => play.platform === platform && play.user.user_id === user.user_id)
+        playerData.plays.push({ score, acc, i, platform, history, difficulty, uid, sum })
+        return { key: user.user_id, value: playerData }
+      })
+      .reduce(async (b, v) => {
+        const { key, value } = await v
+        const batch = await b
+        return batch.put(key, value)
+      }, player.batch()))
+      .write()
+  }, player.clear())
 
 const sumRank = async ({ musicList, rank }) => (await musicList
   .filter(({ platform }) => platform === 'mobile')
