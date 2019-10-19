@@ -54,9 +54,9 @@ export default ({ albums, rank, player, search }) => {
   })
 
   router.get('/search/:string', async ctx => {
-    const query = ctx.params.string
+    const query = [...new Set(ctx.params.string
       .split(' ')
-      .filter(Boolean)
+      .filter(Boolean))]
     if (query.length) {
       ctx.body = await new Promise(resolve => {
         let result = []
