@@ -84,8 +84,8 @@ export default {
       // https://github.com/vuejs/vue-router/blob/65de048ee9f0ebf899ae99c82b71ad397727e55d/src/components/link.js#L159-L164
       e.preventDefault()
 
-      this.$router.push({ query: { lang } }).catch(console.error)
       this.setLang(lang)
+      this.$router.push({ query: { lang } })
     },
     switchMenu() {
       this.menu = !this.menu
