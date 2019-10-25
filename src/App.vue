@@ -25,7 +25,7 @@
               {{currentLang}}
             </a>
             <div class="navbar-dropdown is-right" @click="closeMenu()">
-              <a class="navbar-item" v-for="[lang, name] in availableLang" :key="name" @click="setLang(lang)">
+              <a class="navbar-item" v-for="[lang, name] in availableLang" :href="`?lang=${lang}`" :key="name" @click="updateLang(lang, $event)">
                 {{name}}
               </a>
               <hr class="navbar-divider">
@@ -74,6 +74,19 @@ export default {
   },
   methods: {
     ...mapMutations(['setLang', 'updateTitle']),
+    updateLang(lang, e) {
+      // don't redirect with control keys
+      if (e.metaKey || e.altKey || e.ctrlKey || e.shiftKey) return
+      // don't redirect when preventDefault called
+      if (e.defaultPrevented) return
+      // don't redirect on right click
+      if (e.button !== undefined && e.button !== 0) return
+      // https://github.com/vuejs/vue-router/blob/65de048ee9f0ebf899ae99c82b71ad397727e55d/src/components/link.js#L159-L164
+      e.preventDefault()
+
+      this.$router.push({ query: { lang } }).catch(console.error)
+      this.setLang(lang)
+    },
     switchMenu() {
       this.menu = !this.menu
     },
