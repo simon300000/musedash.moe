@@ -69,8 +69,11 @@ export default {
         .filter(([lang]) => lang !== this.lang)
     }
   },
+  created() {
+    this.updateTitle([this, 'MuseDash.moe'])
+  },
   methods: {
-    ...mapMutations(['setLang']),
+    ...mapMutations(['setLang', 'updateTitle']),
     switchMenu() {
       this.menu = !this.menu
     },

@@ -2,7 +2,12 @@ import { createApp } from './app'
 
 export default context => {
   return new Promise((resolve, reject) => {
-    const { app, router, store } = createApp({ lang: context.lang })
+    let titles = []
+    const changeTitle = (depth, part) => {
+      titles[depth] = part
+    }
+
+    const { app, router, store } = createApp({ lang: context.lang, changeTitle })
 
     router.push(context.url)
 
@@ -14,6 +19,7 @@ export default context => {
       }
       context.rendered = () => {
         context.state = store.state
+        context.title = titles.filter(Boolean).reverse().join(' - ')
       }
 
       resolve(app)

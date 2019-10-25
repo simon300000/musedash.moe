@@ -9,3 +9,16 @@
 
 </div>
 </template>
+
+<script>
+import { mapMutations } from 'vuex'
+export default {
+  methods: mapMutations(['updateTitle', 'removeTitle']),
+  created() {
+    this.updateTitle([this, 'About'])
+  },
+  beforeDestroy() {
+    this.removeTitle(this)
+  }
+}
+</script>

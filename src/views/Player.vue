@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import { mapActions, mapState, mapGetters } from 'vuex'
+import { mapActions, mapState, mapGetters, mapMutations } from 'vuex'
 
 import record from '@/components/record.vue'
 
@@ -49,11 +49,27 @@ export default {
   components: {
     record
   },
+  watch: {
+    title: {
+      immediate: true,
+      handler(title) {
+        if (title) {
+          this.updateTitle([this, title])
+        }
+      }
+    }
+  },
+  beforeDestroy() {
+    this.removeTitle(this)
+  },
   computed: {
     ...mapState(['userCache']),
     ...mapGetters(['albumsArray']),
     currentPlayer() {
       return this.userCache[this.id]
+    },
+    title() {
+      return this.currentPlayer?.user.nickname
     },
     plays() {
       return [...this.currentPlayer.plays]
@@ -72,7 +88,8 @@ export default {
   },
   async serverPrefetch() {
     await this.loadAlbums()
-    return this.loadUser(this.id)
+    await this.loadUser(this.id)
+    this.updateTitle([this, this.title])
   },
   async mounted() {
     if (!this.albumsArray.length) {
@@ -82,6 +99,9 @@ export default {
       this.loadUser(this.id)
     }
   },
-  methods: mapActions(['loadAlbums', 'loadUser'])
+  methods: {
+    ...mapActions(['loadAlbums', 'loadUser']),
+    ...mapMutations(['updateTitle', 'removeTitle'])
+  }
 }
 </script>

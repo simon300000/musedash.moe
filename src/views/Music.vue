@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { mapGetters, mapActions, mapState } from 'vuex'
+import { mapGetters, mapActions, mapState, mapMutations } from 'vuex'
 
 import music from '@/components/music.vue'
 
@@ -18,21 +18,46 @@ export default {
   components: {
     music
   },
+  watch: {
+    title: {
+      immediate: true,
+      handler(title) {
+        if (title) {
+          this.updateTitle([this, title])
+        }
+      }
+    }
+  },
+  beforeDestroy() {
+    this.removeTitle(this)
+  },
   computed: {
     ...mapGetters(['allMusics', 'albumsArray']),
     ...mapState(['lang']),
     currentMusic() {
-      return { ...this.allMusics[this.uid], ...this.allMusics[this.uid][this.lang] }
+      const all = this.allMusics
+      const current = all[this.uid]
+      if (current) {
+        return { ...current, ...current[this.lang] }
+      }
+      return {}
+    },
+    title() {
+      return this.currentMusic.name
     }
   },
-  serverPrefetch() {
-    return this.loadAlbums()
+  async serverPrefetch() {
+    await this.loadAlbums()
+    this.updateTitle([this, this.title])
   },
   mounted() {
     if (!this.albumsArray.length) {
       this.loadAlbums()
     }
   },
-  methods: mapActions(['loadAlbums'])
+  methods: {
+    ...mapActions(['loadAlbums']),
+    ...mapMutations(['removeTitle', 'updateTitle'])
+  }
 }
 </script>

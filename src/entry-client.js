@@ -5,7 +5,14 @@ import { get as cookieGet } from 'js-cookie'
 import { createApp } from './app'
 import './registerServiceWorker'
 
-const { app, store, router } = createApp({ lang: cookieGet('lang') })
+let titles = []
+
+const changeTitle = (depth, part) => {
+  titles[depth] = part
+  document.title = titles.filter(Boolean).reverse().join(' - ')
+}
+
+const { app, store, router } = createApp({ changeTitle, lang: cookieGet('lang') })
 
 if (window.__INITIAL_STATE__) {
   store.replaceState(window.__INITIAL_STATE__)

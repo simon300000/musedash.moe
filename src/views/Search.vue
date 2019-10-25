@@ -24,6 +24,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 import { searchPlayer } from '@/api'
 
 export default {
@@ -43,7 +44,14 @@ export default {
       }
     }
   },
+  created() {
+    this.updateTitle([this, 'Search'])
+  },
+  beforeDestroy() {
+    this.removeTitle(this)
+  },
   methods: {
+    ...mapMutations(['updateTitle', 'removeTitle']),
     async submit(e) {
       e.preventDefault()
       if (this.searching !== this.search) {
