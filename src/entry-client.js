@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import VueAnalytics from 'vue-analytics'
+import { get as cookieGet } from 'js-cookie'
 
 import { createApp } from './app'
 import './registerServiceWorker'
 
-const { app, store, router } = createApp()
+const { app, store, router } = createApp({ lang: cookieGet('lang') })
 
 if (window.__INITIAL_STATE__) {
   store.replaceState(window.__INITIAL_STATE__)
