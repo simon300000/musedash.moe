@@ -55,7 +55,7 @@
     "node-sass": "^4.9.0",
     "null-loader": "^3.0.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "ora": "^3.4.0",
+    "ora": "^4.0.2",
     "postcss-safe-parser": "^4.0.1",
     "rimraf": "^2.6.3",
     "sass": "^1.22.9",
