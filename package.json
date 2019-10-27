@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "axios": "^0.19.0",
-    "bulma": "^0.7.5",
+    "bulma": "^0.8.0",
     "core-js": "^2.6.5",
     "got": "^9.6.0",
     "js-cookie": "^2.2.0",
