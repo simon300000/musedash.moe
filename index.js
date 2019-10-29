@@ -41,7 +41,6 @@ app.use(async ctx => {
     ctx.cookies.set('lang', lang, { httpOnly: false })
   }
   lang = queryLang || lang
-  console.log(lang)
   let result = await renderer.renderToString({ url: ctx.url, lang }).catch(e => {
     console.error(e)
     if (e.code) {
