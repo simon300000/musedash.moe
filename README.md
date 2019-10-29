@@ -46,6 +46,8 @@ Please download the game under :D
 
 ```sh
 npm install
+git submodule init
+git submodule update
 ```
 
 ### Development
