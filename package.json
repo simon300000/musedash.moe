@@ -60,7 +60,7 @@
     "rimraf": "^2.6.3",
     "sass": "^1.22.9",
     "sass-loader": "^8.0.0",
-    "size-plugin": "^1.2.0",
+    "size-plugin": "^2.0.1",
     "terser-webpack-plugin": "^2.2.1",
     "typescript": "^3.5.3",
     "vue-server-renderer": "^2.6.10",
