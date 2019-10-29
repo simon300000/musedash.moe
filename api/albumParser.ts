@@ -1,6 +1,8 @@
 import { join } from 'path'
 import { promises as fs } from 'fs'
 
+import { Albums } from './type'
+
 const availableLocales = ['ChineseS', 'ChineseT', 'English', 'Japanese', 'Korean']
 
 // eslint-disable-next-line no-control-regex
@@ -19,7 +21,7 @@ const readLocale = async (file: string) => {
     })
 }
 
-export default async () => {
+export default async (): Promise<Albums> => {
   const albums = (await readLocale('albums'))
     .filter(album => album.jsonName)
     .map(({ title, jsonName, ChineseS, ChineseT, English, Japanese, Korean }) => ({ title, json: jsonName, ChineseS, ChineseT, English, Japanese, Korean }))

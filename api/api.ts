@@ -1,4 +1,6 @@
 /* eslint camelcase: ["off"] */
+import { Albums } from './type'
+
 import Koa = require('koa')
 import Router = require('koa-router')
 import LRU = require('lru-cache')
@@ -23,14 +25,8 @@ app.use(async (ctx, next) => {
   }
 })
 
-export default ({ albums, rank, player, search }) => {
-  let albumsObject = {}
-  albums.forEach(album => {
-    albumsObject[album.json] = { ...album, music: {} }
-    album.music.forEach(music => {
-      albumsObject[album.json].music[music.uid] = music
-    })
-  })
+export default ({ albums, rank, player, search }: { albums: Albums, rank, player, search }) => {
+  const albumsObject = Object.fromEntries(albums.map(album => [album.json, { ...album, music: Object.fromEntries(album.music.map(music => [music.uid, music])) }]))
   const router = new Router()
 
   router.get('/albums', ctx => {
