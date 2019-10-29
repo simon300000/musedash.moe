@@ -55,6 +55,8 @@ git submodule update
 
 ```sh
 npm install
+git submodule init
+git submodule update
 ```
 
 
