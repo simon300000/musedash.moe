@@ -1,3 +1,4 @@
+/* eslint camelcase: ["off"] */
 type MusicLang = {
   name: string,
   author: string
