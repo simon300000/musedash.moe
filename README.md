@@ -44,16 +44,19 @@ Please download the game under :D
 
 ## Project setup
 
-```sh
-npm install
-```
-
-#### Then init and update git submodule
+#### First, init the git submodule
 
 ```sh
 git submodule init
 git submodule update
 ```
+
+#### Then install npm dependencies
+
+```sh
+npm install
+```
+
 
 ### Development
 
