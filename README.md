@@ -48,6 +48,13 @@ Please download the game under :D
 npm install
 ```
 
+#### Then init and update git submodule
+
+```sh
+git submodule init
+git submodule update
+```
+
 ### Development
 
 #### Compiles frontend and hot-reloads for development
