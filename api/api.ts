@@ -51,19 +51,24 @@ export default ({ albums, rank, player, search }: { albums: Albums, rank, player
 
   router.get('/search/:string', async ctx => {
     const query = [...new Set(ctx.params.string
+      .toLowerCase()
       .split(' ')
       .filter(Boolean))]
     if (query.length) {
-      ctx.body = await new Promise(resolve => {
+      const profiles: Promise<any>[] = await new Promise(resolve => {
         let result = []
         const stream = search.createReadStream()
         stream.on('data', ({ key: user_id, value: nickname }) => {
           if (!query.find(word => !nickname.includes(word))) {
-            result.push([nickname, user_id])
+            result.push(player.get(user_id)
+              .then(({ user: { nickname, user_id } }) => [nickname, user_id])
+              .catch(() => undefined))
           }
         })
         stream.on('close', () => resolve(result))
       })
+      const result = await Promise.all(profiles)
+      ctx.body = result.filter(Boolean)
     } else {
       ctx.body = []
     }

@@ -94,9 +94,7 @@ const makeSearch = ({ player, search }) => new Promise(async resolve => {
   console.log('Search cleared')
   const batch = search.batch()
   const stream = player.createValueStream()
-  stream.on('data', ({ user: { nickname, user_id } }) => {
-    batch.put(user_id, nickname)
-  })
+  stream.on('data', ({ user: { nickname, user_id } }) => batch.put(user_id, nickname.toLowerCase()))
   stream.on('close', () => resolve(batch.write()))
 })
 
