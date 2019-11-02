@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Cotton Candy Wonderland",
+		"author": "Endorfin."
+	},
+	{
+		"name": "プナイプナイたいそう",
+		"author": "立秋 feat.ちょこ"
+	},
+	{
+		"name": "Fly↑High",
+		"author": "P4koo(feat.rerone)"
+	},
+	{
+		"name": "prejudice",
+		"author": "a_hisa"
+	},
+	{
+		"name": "The 89's Momentum",
+		"author": "MYUKKE."
+	},
+	{
+		"name": "energy night(DASH mix)",
+		"author": "KAH"
+	}
+]

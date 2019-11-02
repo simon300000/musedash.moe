@@ -6,6 +6,9 @@
 		"title": "Just as planned"
 	},
 	{
+		"title": "Happy Otaku Pack Vol.7"
+	},
+	{
 		"title": "Give Up TREATMENT Vol.6"
 	},
 	{

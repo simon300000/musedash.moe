@@ -641,7 +641,7 @@
   },
   {
     "uid": "0-36",
-    "name": "Milk",
+    "name": "MilK",
     "author": "モリモリあつし",
     "bpm": "150",
     "music": "milk_music",
@@ -654,5 +654,21 @@
     "difficulty2": "7",
     "difficulty3": "0",
     "unlockLevel": "55"
+  },
+  {
+    "uid": "0-41",
+    "name": "umpopoff",
+    "author": "まめこ",
+    "bpm": "123~177",
+    "music": "umpopoff_music",
+    "demo": "umpopoff_demo",
+    "cover": "umpopoff_cover",
+    "noteJson": "umpopoff_map",
+    "scene": "scene_03",
+    "levelDesigner": "Howard_Y",
+    "difficulty1": "0",
+    "difficulty2": "1",
+    "difficulty3": "0",
+    "unlockLevel": "60"
   }
 ]

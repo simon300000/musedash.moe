@@ -10,9 +10,18 @@
 	},
 	{
 		"uid": "unlockall_0",
-		"title": "forever friend",
+		"title": "Just as planned",
 		"needPurchase": true,
 		"price": "¥188.00",
+		"free" : false,
+	},
+	{
+		"uid": "music_package_17",
+		"title": "Happy Otaku Pack Vol.7",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM18",
+		"prefabsName": "AlbumDisco18",
 		"free" : false,
 	},
 	{

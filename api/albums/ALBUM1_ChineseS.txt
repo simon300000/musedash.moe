@@ -162,5 +162,9 @@
 	{
 		"name": "MilK",
 		"author": "モリモリあつし"
+	},
+	{
+		"name": "umpopoff",
+		"author": "まめこ"
 	}
 ]

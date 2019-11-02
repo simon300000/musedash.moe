@@ -6,6 +6,9 @@
 		"title": "計画通り"
 	},
 	{
+		"title": "MUSIC快楽天 Vol.7"
+	},
+	{
 		"title": "音ゲー依存症 Vol.6"
 	},
 	{
