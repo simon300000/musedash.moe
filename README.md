@@ -1,4 +1,4 @@
-# musedash.moe
+# musedash.moe ![Node CI](https://github.com/simon300000/musedash.moe/workflows/Node%20CI/badge.svg)
 
 Repository of <https://musedash.moe>
 
