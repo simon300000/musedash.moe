@@ -1,5 +1,6 @@
 /* eslint camelcase: ["off"] */
 import { Musics, APIResults } from './type'
+import { rank } from './database'
 
 import got = require('got')
 
@@ -51,10 +52,9 @@ const core = async ({ pending, rank }: { pending: ReturnType<typeof prepare>, ra
 
 const round = ({ PARALLEL, musicList, rank }: { musicList: ReturnType<typeof prepare>, rank, PARALLEL: number }) => Promise.all(Array(PARALLEL).fill([...musicList]).map(pending => core({ pending, rank })))
 
-const analyze = ({ musicList, rank, player }) => [...musicList]
-  .reduce(async (p, m) => {
+const analyze = ({ musicList, player }: { player, musicList: ReturnType<typeof prepare> }) => [...musicList]
+  .reduce(async (p, { uid, difficulty, platform }) => {
     await p
-    const { uid, difficulty, platform } = m
     const currentRank = await rank.get({ uid, difficulty, platform })
     const sumRank = await rank.get({ uid, difficulty, platform: 'all' })
     return (await currentRank
@@ -73,9 +73,9 @@ const analyze = ({ musicList, rank, player }) => [...musicList]
       .write()
   }, player.clear())
 
-const sumRank = async ({ musicList, rank }: { rank, musicList: ReturnType<typeof prepare> }) => (await musicList
+const sumRank = async ({ musicList }: { musicList: ReturnType<typeof prepare> }) => (await musicList
   .filter(({ platform }) => platform === 'mobile')
-  .map(async ({ uid, difficulty }) => {
+  .map(({ uid, difficulty }) => async () => {
     let [currentRank, result] = [await rank.get({ uid, difficulty, platform: 'all' }), (await Promise.all(Object.keys(platforms).map(async platform => (await rank.get({ uid, difficulty, platform })).map(play => ({ ...play, platform })))))
       .flat()
       .sort((a, b) => b.play.score - a.play.score)]
@@ -86,7 +86,7 @@ const sumRank = async ({ musicList, rank }: { rank, musicList: ReturnType<typeof
     }
     return { uid, difficulty, platform: 'all', value: result }
   })
-  .reduce(async (b, v) => (await b).put(await v), rank.batch()))
+  .reduce(async (b, v) => (await b).put(await v()), Promise.resolve(rank.batch())))
   .write()
 
 const makeSearch = ({ player, search }) => new Promise(async resolve => {
@@ -98,15 +98,16 @@ const makeSearch = ({ player, search }) => new Promise(async resolve => {
   stream.on('close', () => resolve(batch.write()))
 })
 
-export default async ({ music, rank, player, PARALLEL, search }: { music: Musics, rank: {}, player, PARALLEL: number, search }) => {
+export default async ({ music, player, PARALLEL, search }: { music: Musics, player, PARALLEL: number, search }) => {
   while (true) {
     const startTime = Date.now()
     const nextStart = wait(INTERVAL)
     const musicList = prepare(music)
     await round({ PARALLEL, musicList, rank })
-    await sumRank({ musicList, rank })
+    console.log('Downloaded')
+    await sumRank({ musicList })
     console.log('Ranked')
-    await analyze({ musicList, rank, player })
+    await analyze({ musicList, player })
     console.log('Analyzed')
     await makeSearch({ player, search })
     console.log('Search Cached')

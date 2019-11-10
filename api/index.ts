@@ -12,5 +12,5 @@ import { PARALLEL } from './config'
   const music = [].concat(...albums
     .map(({ music }) => music))
   api({ albums, rank, player, search })
-  spider({ music, rank, player, PARALLEL, search })
+  spider({ music, player, PARALLEL, search })
 })()
