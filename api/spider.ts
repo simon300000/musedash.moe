@@ -1,6 +1,7 @@
 /* eslint camelcase: ["off"] */
 import { Musics, APIResults } from './type'
 import { rank } from './database'
+import { PARALLEL } from './config'
 
 import got = require('got')
 
@@ -13,7 +14,18 @@ const platforms = {
   pc: 'pcleaderboard'
 }
 
-const download = async ({ api, uid, difficulty }): Promise<APIResults> => (await got(`https://prpr-muse-dash.leanapp.cn/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=1999`, { json: true, timeout: 1000 * 60 * 10 })).body.result
+const downloadCore = async ({ api, uid, difficulty }): Promise<APIResults | void> => (await got(`https://prpr-muse-dash.leanapp.cn/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=1999`, { json: true, timeout: 1000 * 60 * 10 })).body.result
+
+const download = async ({ api, uid, difficulty }): Promise<APIResults> => {
+  const result = await downloadCore({ api, uid, difficulty })
+  if (!result) {
+    console.log('retry')
+    await wait(1000 * 60 * Math.random())
+    return download({ api, uid, difficulty })
+  } else {
+    return result
+  }
+}
 
 const prepare = (music: Musics) => music
   .flatMap(({ uid, difficulty, name }) => difficulty
@@ -50,7 +62,7 @@ const core = async ({ pending, rank }: { pending: ReturnType<typeof prepare>, ra
   }
 }
 
-const round = ({ PARALLEL, musicList, rank }: { musicList: ReturnType<typeof prepare>, rank, PARALLEL: number }) => Promise.all(Array(PARALLEL).fill([...musicList]).map(pending => core({ pending, rank })))
+const round = ({ musicList, rank }: { musicList: ReturnType<typeof prepare>, rank }) => Promise.all(Array(PARALLEL).fill([...musicList]).map(pending => core({ pending, rank })))
 
 const analyze = ({ musicList, player }: { player, musicList: ReturnType<typeof prepare> }) => [...musicList]
   .reduce(async (p, { uid, difficulty, platform }) => {
@@ -98,12 +110,12 @@ const makeSearch = ({ player, search }) => new Promise(async resolve => {
   stream.on('close', () => resolve(batch.write()))
 })
 
-export default async ({ music, player, PARALLEL, search }: { music: Musics, player, PARALLEL: number, search }) => {
+export default async ({ music, player, search }: { music: Musics, player: number, search }) => {
   while (true) {
     const startTime = Date.now()
     const nextStart = wait(INTERVAL)
     const musicList = prepare(music)
-    await round({ PARALLEL, musicList, rank })
+    await round({ musicList, rank })
     console.log('Downloaded')
     await sumRank({ musicList })
     console.log('Ranked')
