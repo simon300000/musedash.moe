@@ -1,39 +1,65 @@
+import { AvailableLocales } from './albumParser'
+
 /* eslint camelcase: ["off"] */
-type MusicLang = {
-  name: string,
+export interface MusicLang {
+  name: string
   author: string
 }
 
-type Music = {
+export interface Music extends Record<AvailableLocales, MusicLang> {
+  uid: string,
+  name: string,
+  author: string,
+  bpm: number,
+  music: string,
+  demo: string,
+  cover: string,
+  noteJson: string,
+  scene: string,
+  levelDesigner: string,
+  levelDesigner1: string,
+  levelDesigner2: string,
+  levelDesigner3: string,
+  difficulty1: number,
+  difficulty2: number,
+  difficulty3: number,
+  unlockLevel: number
+}
+
+export interface MusicData extends Record<AvailableLocales, MusicLang> {
   uid: string,
   name: string,
   author: string,
   cover: string,
-  levelDesigner: [string] | [string, string, string],
-  difficulty: [number, number, number],
-  ChineseS: MusicLang,
-  ChineseT: MusicLang,
-  English: MusicLang,
-  Japanese: MusicLang,
-  Korean: MusicLang
+  levelDesigner: string[],
+  difficulty: number[]
 }
 
-export type Musics = Music[]
+export type Musics = MusicData[]
 
-type Album = {
+export interface AlbumLang {
+  title: string
+}
+
+export interface Album extends Record<AvailableLocales, AlbumLang> {
+  uid: string,
+  title: string,
+  needPurchase: boolean,
+  price: string,
+  jsonName: string,
+  prefabsName: string,
+  free: boolean
+}
+
+export interface AlbumData extends Record<AvailableLocales, AlbumLang> {
   title: string,
   json: string,
-  ChineseS: string,
-  ChineseT: string,
-  English: string,
-  Japanese: string,
-  Korean: string,
   music: Musics
 }
 
-export type Albums = Album[]
+export type Albums = AlbumData[]
 
-type APIResult = {
+interface APIResult {
   play: {
     acc: number,
     bms_id: number,
