@@ -1,6 +1,6 @@
 import { join } from 'path'
 import { promises as fs } from 'fs'
-import { AlbumLang, Album, Music, MusicLang, AlbumData, MusicData } from './type'
+import { AlbumLang, Album, Music, MusicLang, MusicData, Albums } from './type'
 
 const availableLocales = ['ChineseS', 'ChineseT', 'English', 'Japanese', 'Korean'] as const
 export type AvailableLocales = typeof availableLocales[number]
@@ -23,7 +23,7 @@ async function readLocale <S, T> (file: string) {
     })
 }
 
-export default async (): Promise<AlbumData[]> => {
+export default async (): Promise<Albums> => {
   const albums = (await readLocale<Album, AlbumLang>('albums'))
     .filter(album => album.jsonName)
     .map(({ title, jsonName, ChineseS, ChineseT, English, Japanese, Korean }) => ({ title, json: jsonName, ChineseS, ChineseT, English, Japanese, Korean }))
