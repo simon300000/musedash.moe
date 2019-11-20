@@ -1,17 +1,19 @@
 import { join } from 'path'
 import { promises as fs } from 'fs'
+import { AlbumLang, Album, Music, MusicLang, MusicData, Albums } from './type'
 
-import { Albums } from './type'
+const availableLocales = ['ChineseS', 'ChineseT', 'English', 'Japanese', 'Korean'] as const
+export type AvailableLocales = typeof availableLocales[number]
 
-const availableLocales = ['ChineseS', 'ChineseT', 'English', 'Japanese', 'Korean']
+async function parseFile <T> (file: string): Promise<T> {
+  // eslint-disable-next-line no-control-regex
+  return JSON.parse(String(await fs.readFile(join(__dirname, 'albums', `${file}.txt`))).replace(/\n/g, '').replace(/,( |\x09)*}/g, '}').replace(/,( |\x09)*]/g, ']'))
+}
 
-// eslint-disable-next-line no-control-regex
-const parseFile = async (file: string): Promise<any> => JSON.parse(String(await fs.readFile(join(__dirname, 'albums', `${file}.txt`))).replace(/\n/g, '').replace(/,( |\x09)*}/g, '}').replace(/,( |\x09)*]/g, ']'))
-
-const readLocale = async (file: string) => {
-  const content = await parseFile(file)
+async function readLocale <S, T> (file: string) {
+  const content = await parseFile<S[]>(file)
   const locales = await Promise.all(availableLocales
-    .map(locale => parseFile(`${file}_${locale}`)))
+    .map(locale => parseFile<T[]>(`${file}_${locale}`)))
   return content
     .map((object, index) => {
       availableLocales.forEach((locale, localeIndex) => {
@@ -22,12 +24,12 @@ const readLocale = async (file: string) => {
 }
 
 export default async (): Promise<Albums> => {
-  const albums = (await readLocale('albums'))
+  const albums = (await readLocale<Album, AlbumLang>('albums'))
     .filter(album => album.jsonName)
     .map(({ title, jsonName, ChineseS, ChineseT, English, Japanese, Korean }) => ({ title, json: jsonName, ChineseS, ChineseT, English, Japanese, Korean }))
     .map(async object => {
-      const music = (await readLocale(object.json))
-        .map(({ uid, name, author, cover, difficulty1, difficulty2, difficulty3, ChineseS, ChineseT, English, Japanese, Korean, levelDesigner, levelDesigner1, levelDesigner2, levelDesigner3 }) => ({
+      const music = (await readLocale<Music, MusicLang>(object.json))
+        .map<MusicData>(({ uid, name, author, cover, difficulty1, difficulty2, difficulty3, ChineseS, ChineseT, English, Japanese, Korean, levelDesigner, levelDesigner1, levelDesigner2, levelDesigner3 }) => ({
           uid,
           name,
           author,
