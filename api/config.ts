@@ -1,1 +1,1 @@
-export const PARALLEL = 64
+export const PARALLEL = 16
