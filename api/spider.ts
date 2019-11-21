@@ -5,8 +5,6 @@ import { PARALLEL } from './config'
 
 import got = require('got')
 
-const INTERVAL = 1000 * 60 * 60 * 24
-
 const wait = (ms: number): Promise<undefined> => new Promise(resolve => setTimeout(resolve, ms))
 
 const platforms = {
@@ -112,8 +110,11 @@ const makeSearch = ({ player, search }) => new Promise(async resolve => {
 
 export default async ({ music, player, search }: { music: Musics, player: number, search }) => {
   while (true) {
+    const currentHour = new Date().getUTCHours()
+    const waitTime = (19 - currentHour + 24) % 24 || 24
+    console.log(`WAIT: ${waitTime}h`)
+    await wait(waitTime * 60 * 60 * 1000)
     const startTime = Date.now()
-    const nextStart = wait(INTERVAL)
     const musicList = prepare(music)
     await round({ musicList, rank })
     console.log('Downloaded')
@@ -124,7 +125,6 @@ export default async ({ music, player, search }: { music: Musics, player: number
     await makeSearch({ player, search })
     console.log('Search Cached')
     const endTime = Date.now()
-    console.log(`Wait ${INTERVAL - (endTime - startTime)}`)
-    await nextStart
+    console.log(`TAKE ${endTime - startTime}, at ${new Date().toString()}`)
   }
 }
