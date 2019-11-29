@@ -35,7 +35,7 @@ export default async (): Promise<Albums> => {
           author,
           cover,
           levelDesigner: levelDesigner ? [levelDesigner] : [levelDesigner1, levelDesigner2, levelDesigner3],
-          difficulty: [Number(difficulty1), Number(difficulty2), Number(difficulty3)],
+          difficulty: [difficulty1, difficulty2, difficulty3],
           ChineseS,
           ChineseT,
           English,

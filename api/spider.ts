@@ -30,7 +30,7 @@ const prepare = (music: Musics) => music
     .map((difficultyNum, difficulty) => ({ uid, level: difficultyNum, difficulty, name })))
   .flatMap(({ uid, difficulty, name, level }) => Object.entries(platforms)
     .map(([platform, api]) => ({ uid, difficulty, name, level, platform, api })))
-  .filter(({ level }) => level)
+  .filter(({ level }) => level !== '0')
 
 const core = async ({ pending, rank }: { pending: ReturnType<typeof prepare>, rank: any }) => {
   for (; pending.length;) {

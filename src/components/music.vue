@@ -20,9 +20,9 @@
   </div>
   <div class="level-right">
     <div class="level-item">
-      <router-link :to="`/music/${music.uid}/0${this.platform ? `/${this.platform}` : ''}`" active-class="is-hovered" class="button is-success is-rounded is-outlined" v-if="music.difficulty[0]">{{music.difficulty[0]}}</router-link>
-      <router-link :to="`/music/${music.uid}/1${this.platform ? `/${this.platform}` : ''}`" active-class="is-hovered" class="button is-info is-rounded is-outlined" v-if="music.difficulty[1]">{{music.difficulty[1]}}</router-link>
-      <router-link :to="`/music/${music.uid}/2${this.platform ? `/${this.platform}` : ''}`" active-class="is-hovered" class="button is-danger is-rounded is-outlined" v-if="music.difficulty[2]">{{music.difficulty[2]}}</router-link>
+      <router-link :to="`/music/${music.uid}/0${this.platform ? `/${this.platform}` : ''}`" active-class="is-hovered" class="button is-success is-rounded is-outlined" v-if="music.difficulty[0] !== '0'">{{music.difficulty[0]}}</router-link>
+      <router-link :to="`/music/${music.uid}/1${this.platform ? `/${this.platform}` : ''}`" active-class="is-hovered" class="button is-info is-rounded is-outlined" v-if="music.difficulty[1] !== '0'">{{music.difficulty[1]}}</router-link>
+      <router-link :to="`/music/${music.uid}/2${this.platform ? `/${this.platform}` : ''}`" active-class="is-hovered" class="button is-danger is-rounded is-outlined" v-if="music.difficulty[2] !== '0'">{{music.difficulty[2]}}</router-link>
     </div>
   </div>
 </nav>

@@ -20,9 +20,9 @@ export interface Music extends Record<AvailableLocales, MusicLang> {
   levelDesigner1: string,
   levelDesigner2: string,
   levelDesigner3: string,
-  difficulty1: number,
-  difficulty2: number,
-  difficulty3: number,
+  difficulty1: string,
+  difficulty2: string,
+  difficulty3: string,
   unlockLevel: number
 }
 
@@ -32,7 +32,7 @@ export interface MusicData extends Record<AvailableLocales, MusicLang> {
   author: string,
   cover: string,
   levelDesigner: string[],
-  difficulty: number[]
+  difficulty: string[]
 }
 
 export type Musics = MusicData[]
