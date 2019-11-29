@@ -1,0 +1,26 @@
+[
+	{
+		"name": "SWEETSWEETSWEET feat.kumako",
+		"author": "ANK"
+	},
+	{
+		"name": "深蓝与夜的呼吸",
+		"author": "Sugar & Co.（ANK feat.kumako）"
+	},
+	{
+		"name": "Joy Connection",
+		"author": "MusikM / Jun Kuroda"
+	},
+	{
+		"name": "Self Willed Girl Ver.B",
+		"author": "小野道ono"
+	},
+	{
+		"name": "就是不听话",
+		"author": "iKz feat.Hanser"
+	},
+	{
+		"name": "Holy Shit Grass Snake",
+		"author": "麦当叔劳劳"
+	}
+]

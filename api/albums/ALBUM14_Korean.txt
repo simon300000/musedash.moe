@@ -1,7 +1,7 @@
 [
 	{
-		"name": "速溶霓虹",
-		"author": "ANK feat.kumako"
+		"name": "速溶霓虹 feat.kumako",
+		"author": "ANK"
 	},
 	{
 		"name": "星球上的追溯诗",

@@ -1,0 +1,26 @@
+[
+	{
+		"name": "SWEETSWEETSWEET feat.kumako",
+		"author": "ANK"
+	},
+	{
+		"name": "深蓝与夜的呼吸",
+		"author": "砂糖協会（ANK feat.熊子）"
+	},
+	{
+		"name": "Joy Connection",
+		"author": "MusikM / Jun Kuroda"
+	},
+	{
+		"name": "わがまま Ver.B",
+		"author": "小野道ono"
+	},
+	{
+		"name": "就是不听话",
+		"author": "iKz feat.Hanser"
+	},
+	{
+		"name": "怖い草蛇",
+		"author": "麦当叔劳劳"
+	}
+]

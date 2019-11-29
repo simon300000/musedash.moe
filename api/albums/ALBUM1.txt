@@ -667,8 +667,9 @@
     "scene": "scene_03",
     "levelDesigner": "Howard_Y",
     "difficulty1": "0",
-    "difficulty2": "1",
+    "difficulty2": "?",
     "difficulty3": "0",
     "unlockLevel": "60"
+
   }
 ]

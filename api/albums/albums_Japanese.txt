@@ -6,6 +6,9 @@
 		"title": "計画通り"
 	},
 	{
+		"title": "かわいいは正義 Vol.4"
+	},
+	{
 		"title": "MUSIC快楽天 Vol.7"
 	},
 	{
