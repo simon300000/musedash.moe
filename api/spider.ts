@@ -108,22 +108,27 @@ const makeSearch = ({ player, search }) => new Promise(async resolve => {
   stream.on('close', () => resolve(batch.write()))
 })
 
+const mal = async ({ music, player, search }) => {
+  const musicList = prepare(music)
+  await round({ musicList, rank })
+  console.log('Downloaded')
+  await sumRank({ musicList })
+  console.log('Ranked')
+  await analyze({ musicList, player })
+  console.log('Analyzed')
+  await makeSearch({ player, search })
+  console.log('Search Cached')
+}
+
 export default async ({ music, player, search }: { music: Musics, player: number, search }) => {
+  await mal({ music, player, search })
   while (true) {
     const currentHour = new Date().getUTCHours()
     const waitTime = (19 - currentHour + 24) % 24 || 24
     console.log(`WAIT: ${waitTime}h`)
     await wait(waitTime * 60 * 60 * 1000)
     const startTime = Date.now()
-    const musicList = prepare(music)
-    await round({ musicList, rank })
-    console.log('Downloaded')
-    await sumRank({ musicList })
-    console.log('Ranked')
-    await analyze({ musicList, player })
-    console.log('Analyzed')
-    await makeSearch({ player, search })
-    console.log('Search Cached')
+    await mal({ music, player, search })
     const endTime = Date.now()
     console.log(`TAKE ${endTime - startTime}, at ${new Date().toString()}`)
   }
