@@ -2,13 +2,13 @@
 <div>
   <input class="input" v-model="search" type="text" placeholder="Search Music">
   <hr v-if="finds.length">
-  <music v-for="({music}) in finds" :key="`find_${music.uid}`" :music="music"></music>
+  <music v-for="music in finds" :key="`find_${music.uid}`" :music="music"></music>
   <hr v-if="finds.length">
 </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 
 import music from '@/components/music.vue'
 
@@ -18,6 +18,7 @@ export default {
   },
   components: { music },
   computed: {
+    ...mapState(['lang']),
     ...mapGetters(['allMusics']),
     musicMap() {
       return Object.values(this.allMusics)
@@ -36,7 +37,9 @@ export default {
         return []
       }
       const keys = this.search.toLocaleLowerCase().split(' ')
-      return this.musicMap.filter(({ string }) => !keys.find(key => !string.includes(key)))
+      return this.musicMap
+        .filter(({ string }) => !keys.find(key => !string.includes(key)))
+        .map(({ music }) => ({ ...music, ...music[this.lang] }))
     }
   }
 }
