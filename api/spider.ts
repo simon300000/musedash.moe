@@ -3,7 +3,7 @@ import { Musics, APIResults } from './type'
 import { rank } from './database'
 import { PARALLEL } from './config'
 
-import got = require('got')
+import got from 'got'
 
 const wait = (ms: number): Promise<undefined> => new Promise(resolve => setTimeout(resolve, ms))
 
@@ -12,7 +12,7 @@ const platforms = {
   pc: 'pcleaderboard'
 }
 
-const downloadCore = async ({ api, uid, difficulty }): Promise<APIResults | void> => (await got(`https://prpr-muse-dash.leanapp.cn/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=1999`, { json: true, timeout: 1000 * 60 * 10 })).body.result
+const downloadCore = async ({ api, uid, difficulty }): Promise<APIResults | void> => (await got(`https://prpr-muse-dash.leanapp.cn/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=1999`, { timeout: 1000 * 60 * 10 }).json() as any).result
 
 const download = async ({ api, uid, difficulty }): Promise<APIResults> => {
   const result = await downloadCore({ api, uid, difficulty })
