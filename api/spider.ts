@@ -109,6 +109,7 @@ const makeSearch = ({ player, search }) => new Promise(async resolve => {
 })
 
 const mal = async ({ music, player, search }) => {
+  console.log('Start!')
   const musicList = prepare(music)
   await round({ musicList, rank })
   console.log('Downloaded')
@@ -121,6 +122,7 @@ const mal = async ({ music, player, search }) => {
 }
 
 export default async ({ music, player, search }: { music: Musics, player: number, search }) => {
+  console.log('hi~')
   await mal({ music, player, search })
   while (true) {
     const currentHour = new Date().getUTCHours()
