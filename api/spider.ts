@@ -56,6 +56,10 @@ const core = async ({ pending, rank }: { pending: ReturnType<typeof prepare>, ra
 
     await rank.put({ uid, difficulty, platform, value: resultWithHistory })
 
+    if (pending.length % 100 === 1) {
+      console.log(`...~${uid}: ${name} - ${difficulty} - ${platform} / ${pending.length}`)
+    }
+
     // console.log(`${uid}: ${name} - ${difficulty} - ${platform} / ${pending.length}`)
   }
 }
