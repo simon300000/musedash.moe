@@ -25,7 +25,7 @@
             "cover":"punai_punai_taiso_cover",
             "noteJson":"punai_punai_taiso_map",
             "scene":"scene_05",
-            "levelDesigner": "Trixxxter٩( 'o' )۶",
+            "levelDesigner": "TRIXXXTER • TERUYAMA",
             "difficulty1":"2",
             "difficulty2":"7",
             "difficulty3":"10",

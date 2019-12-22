@@ -1,0 +1,26 @@
+[
+	{
+		"name": "INFINITY",
+		"author": "Lunatic Sounds"
+	},
+	{
+		"name": "Punai Punai Senso",
+		"author": "rissyuu feat.Choko"
+	},
+	{
+		"name": "Maxi",
+		"author": "Nizikawa"
+	},
+	{
+		"name": "YInMn Blue",
+		"author": "siqlo"
+	},
+	{
+		"name": "Plumage",
+		"author": "brz1128"
+	},
+	{
+		"name": "Dr.Techro",
+		"author": "Meisenp."
+	}
+]

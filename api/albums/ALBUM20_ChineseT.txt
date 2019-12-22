@@ -1,0 +1,26 @@
+[
+	{
+		"name": "INFINITY",
+		"author": "Lunatic Sounds"
+	},
+	{
+		"name": "プナイプナイせんそう",
+		"author": "立秋 feat.ちょこ"
+	},
+	{
+		"name": "Maxi",
+		"author": "Nizikawa"
+	},
+	{
+		"name": "YInMn Blue",
+		"author": "siqlo"
+	},
+	{
+		"name": "Plumage",
+		"author": "brz1128"
+	},
+	{
+		"name": "Dr.Techro",
+		"author": "米線p."
+	}
+]
