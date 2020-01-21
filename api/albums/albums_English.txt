@@ -3,7 +3,13 @@
 		"title": "Default Music"
 	},
 	{
-		"title": "Just as planned"
+		"title": "Just as Planned"
+	},
+	{
+		"title": "Budget Is Burning: Nano Core"
+	},
+	{
+		"title": "Happy Otaku Pack Vol.8"
 	},
 	{
 		"title": "Give Up TREATMENT Vol.7"
@@ -45,7 +51,7 @@
 		"title": "Give Up TREATMENT Vol.2"
 	},
 	{
-		"title": "Budget is burning"
+		"title": "Budget Is Burning Vol.1"
 	},
 	{
 		"title": "Happy Otaku Pack Vol.3"

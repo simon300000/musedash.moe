@@ -1,8 +1,8 @@
 [
         {
             "uid":"18-0",
-            "name":"SWEETSWEETSWEET feat.熊子",
-            "author":"ANK",
+            "name":"SWEETSWEETSWEET",
+            "author":"砂糖协会（ANK feat.熊子）",
             "bpm":"131",
             "music":"sweetsweetsweet_music",
             "demo":"sweetsweetsweet_demo",

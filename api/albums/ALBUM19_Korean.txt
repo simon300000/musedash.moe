@@ -1,7 +1,7 @@
 [
 	{
-		"name": "SWEETSWEETSWEET feat.kumako",
-		"author": "ANK"
+		"name": "SWEETSWEETSWEET",
+		"author": "Sugar & Co.（ANK feat.kumako）"
 	},
 	{
 		"name": "深蓝与夜的呼吸",

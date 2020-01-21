@@ -1,7 +1,7 @@
 [
 	{
-		"name": "SWEETSWEETSWEET feat.熊子",
-		"author": "ANK"
+		"name": "SWEETSWEETSWEET",
+		"author": "砂糖协会（ANK feat.熊子）"
 	},
 	{
 		"name": "深蓝与夜的呼吸",

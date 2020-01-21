@@ -10,9 +10,28 @@
 	},
 	{
 		"uid": "unlockall_0",
-		"title": "Just as planned",
+		"title": "Just as Planned",
 		"needPurchase": true,
 		"price": "¥188.00",
+		"jsonName": "",
+		"free" : false,
+	},
+	{
+		"uid": "music_package_21",
+		"title": "Budget Is Burning: Nano Core",
+		"needPurchase": true,
+		"price": "Free",
+		"jsonName": "ALBUM22",
+		"prefabsName": "AlbumDisco22",
+		"free" : true,
+	},
+	{
+		"uid": "music_package_20",
+		"title": "Happy Otaku Pack Vol.8",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM21",
+		"prefabsName": "AlbumDisco21",
 		"free" : false,
 	},
 	{
@@ -134,7 +153,7 @@
 	},
 	{
 		"uid": "music_package_6",
-		"title": "Budget is burning",
+		"title": "Budget Is Burning Vol.1",
 		"needPurchase": true,
 		"price": "Free",
 		"jsonName": "ALBUM7",

@@ -285,7 +285,7 @@
     "difficulty1": "2",
     "difficulty2": "5",
     "difficulty3": "8",
-    "unlockLevel": "15"
+    "unlockLevel": "16"
   },
   {
     "uid": "0-40",
@@ -301,7 +301,7 @@
     "difficulty1": "3",
     "difficulty2": "5",
     "difficulty3": "7",
-    "unlockLevel": "16"
+    "unlockLevel": "17"
   },
   {
     "uid": "0-13",
@@ -317,7 +317,7 @@
     "difficulty1": "3",
     "difficulty2": "5",
     "difficulty3": "8",
-    "unlockLevel": "17"
+    "unlockLevel": "18"
   },
   {
     "uid": "0-32",
@@ -333,7 +333,7 @@
     "difficulty1": "4",
     "difficulty2": "6",
     "difficulty3": "9",
-    "unlockLevel": "18"
+    "unlockLevel": "19"
   },
   {
     "uid": "0-14",
@@ -349,7 +349,7 @@
     "difficulty1": "2",
     "difficulty2": "5",
     "difficulty3": "8",
-    "unlockLevel": "19"
+    "unlockLevel": "20"
   },
   {
     "uid": "0-15",
@@ -365,7 +365,7 @@
     "difficulty1": "2",
     "difficulty2": "5",
     "difficulty3": "8",
-    "unlockLevel": "20"
+    "unlockLevel": "21"
   },
   {
     "uid": "0-16",
@@ -381,7 +381,7 @@
     "difficulty1": "3",
     "difficulty2": "5",
     "difficulty3": "7",
-    "unlockLevel": "21"
+    "unlockLevel": "22"
   },
   {
     "uid": "0-17",
@@ -397,7 +397,7 @@
     "difficulty1": "4",
     "difficulty2": "6",
     "difficulty3": "8",
-    "unlockLevel": "22"
+    "unlockLevel": "23"
   },
   {
     "uid": "0-18",
@@ -413,7 +413,7 @@
     "difficulty1": "3",
     "difficulty2": "6",
     "difficulty3": "8",
-    "unlockLevel": "23"
+    "unlockLevel": "24"
   },
   {
     "uid": "0-19",
@@ -429,7 +429,7 @@
     "difficulty1": "3",
     "difficulty2": "6",
     "difficulty3": "9",
-    "unlockLevel": "24"
+    "unlockLevel": "25"
   },
   {
     "uid": "0-20",
@@ -445,7 +445,7 @@
     "difficulty1": "3",
     "difficulty2": "6",
     "difficulty3": "8",
-    "unlockLevel": "25"
+    "unlockLevel": "26"
   },
   {
     "uid": "0-21",
@@ -461,7 +461,7 @@
     "difficulty1": "4",
     "difficulty2": "6",
     "difficulty3": "8",
-    "unlockLevel": "26"
+    "unlockLevel": "27"
   },
   {
     "uid": "0-22",
@@ -667,10 +667,8 @@
     "scene": "scene_03",
     "levelDesigner": "Howard_Y",
     "difficulty1": "0",
-    "difficulty2": "?",
+    "difficulty2": "1",
     "difficulty3": "0",
     "unlockLevel": "60"
-
   }
-  
 ]

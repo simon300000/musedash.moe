@@ -1,0 +1,14 @@
+[
+	{
+		"name": "Glimmer feat.祈Inory",
+		"author": "Kors K"
+	},
+	{
+		"name": "EXIST feat.米雅",
+		"author": "G.K & Haloweak"
+	},
+	{
+		"name": "Irreplaceable feat.夏銅子",
+		"author": "Haloweak"
+	}
+]

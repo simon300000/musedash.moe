@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Moonlight Banquet",
+		"author": "a_hisa"
+	},
+	{
+		"name": "Flashdance",
+		"author": "litmus*"
+	},
+	{
+		"name": "INFiNiTE ENERZY -Overdoze-",
+		"author": "Reku Mochizuki"
+	},
+	{
+		"name": "One Way Street",
+		"author": "siqlo"
+	},
+	{
+		"name": "This Club is Not 4 U",
+		"author": "EmoCo."
+	},
+	{
+		"name": "ULTRA MEGA HAPPY PARTY!!!",
+		"author": "翡乃イスカ"
+	}
+]
