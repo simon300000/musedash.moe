@@ -17,7 +17,7 @@
     "got": "^10.0.3",
     "js-cookie": "^2.2.0",
     "koa": "^2.7.0",
-    "koa-router": "^7.4.0",
+    "koa-router": "^8.0.7",
     "koa-static": "^5.0.0",
     "level": "^6.0.0",
     "lru-cache": "^5.1.1",
