@@ -87,7 +87,7 @@ const analyze = ({ musicList, player }: { player, musicList: ReturnType<typeof p
       .write()
   }, player.clear())
 
-const sumRank = async ({ musicList }: { musicList: ReturnType<typeof prepare> }) => (await musicList
+const sumRank = ({ musicList }: { musicList: ReturnType<typeof prepare> }) => musicList
   .filter(({ platform }) => platform === 'mobile')
   .map(({ uid, difficulty }) => async () => {
     let [currentRank, result] = [await rank.get({ uid, difficulty, platform: 'all' }), (await Promise.all(Object.keys(platforms).map(async platform => (await rank.get({ uid, difficulty, platform })).map(play => ({ ...play, platform })))))
@@ -100,8 +100,10 @@ const sumRank = async ({ musicList }: { musicList: ReturnType<typeof prepare> })
     }
     return { uid, difficulty, platform: 'all', value: result }
   })
-  .reduce(async (b, v) => (await b).put(await v()), Promise.resolve(rank.batch())))
-  .write()
+  .reduce(async (p, v) => {
+    await p
+    await rank.put(await v())
+  }, Promise.resolve())
 
 const makeSearch = ({ player, search }) => new Promise(async resolve => {
   await search.clear()
