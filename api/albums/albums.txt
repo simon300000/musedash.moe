@@ -17,6 +17,15 @@
 		"free" : false,
 	},
 	{
+		"uid": "music_package_22",
+		"title": "Give Up TREATMENT Vol.8",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM23",
+		"prefabsName": "AlbumDisco23",
+		"free" : false,
+	},
+	{
 		"uid": "music_package_21",
 		"title": "Budget Is Burning: Nano Core",
 		"needPurchase": true,

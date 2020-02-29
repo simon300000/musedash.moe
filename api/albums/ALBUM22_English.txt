@@ -1,7 +1,7 @@
 [
 	{
 		"name": "Glimmer feat.祈Inory",
-		"author": "Kors K"
+		"author": "kors k"
 	},
 	{
 		"name": "EXIST feat.米雅",

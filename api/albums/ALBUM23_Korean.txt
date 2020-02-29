@@ -1,0 +1,26 @@
+[
+	{
+		"name": "The NightScape",
+		"author": "litmus*"
+	},
+	{
+		"name": "FREEDOM DiVE↓",
+		"author": "xi"
+	},
+	{
+		"name": "Φ",
+		"author": "Street"
+	},
+	{
+		"name": "Lueur de la nuit",
+		"author": "AAAA + ck"
+	},
+	{
+		"name": "Creamy Sugary OVERDRIVE!!!",
+		"author": "BTB"
+	},
+	{
+		"name": "Disorder (feat.YURI)",
+		"author": "HyuN"
+	}
+]

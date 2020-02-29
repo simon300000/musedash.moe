@@ -6,6 +6,9 @@
 		"title": "Just as Planned"
 	},
 	{
+		"title": "Give Up TREATMENT Vol.8"
+	},
+	{
 		"title": "Budget Is Burning: Nano Core"
 	},
 	{

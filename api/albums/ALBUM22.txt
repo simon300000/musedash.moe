@@ -2,7 +2,7 @@
         {
             "uid":"21-0",
             "name":"Glimmer feat.祈inory",
-            "author":"Kors K",
+            "author":"kors k",
             "bpm":"146",
             "music":"glimmer_music",
             "demo":"glimmer_demo",
