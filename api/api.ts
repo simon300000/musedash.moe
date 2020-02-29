@@ -1,9 +1,9 @@
 /* eslint camelcase: ["off"] */
 import { Albums } from './type'
 
-import Koa = require('koa')
-import Router = require('koa-router')
-import LRU = require('lru-cache')
+import Koa from 'koa'
+import Router from '@koa/router'
+import LRU from 'lru-cache'
 
 const cache = new LRU({
   maxAge: 1000 * 5,
