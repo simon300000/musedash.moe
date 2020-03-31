@@ -650,9 +650,9 @@
     "noteJson": "milk_map",
     "scene": "scene_05",
     "levelDesigner": "Howard_Y",
-    "difficulty1": "0",
+    "difficulty1": "5",
     "difficulty2": "7",
-    "difficulty3": "0",
+    "difficulty3": "9",
     "unlockLevel": "55"
   },
   {
@@ -667,7 +667,7 @@
     "scene": "scene_03",
     "levelDesigner": "Howard_Y",
     "difficulty1": "0",
-    "difficulty2": "1",
+    "difficulty2": "?",
     "difficulty3": "0",
     "unlockLevel": "60"
   }

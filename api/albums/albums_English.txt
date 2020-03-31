@@ -6,6 +6,9 @@
 		"title": "Just as Planned"
 	},
 	{
+		"title": "Cute Is Everyting Vol.5"
+	},
+	{
 		"title": "Give Up TREATMENT Vol.8"
 	},
 	{

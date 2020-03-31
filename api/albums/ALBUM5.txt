@@ -13,6 +13,7 @@
     "difficulty1": "2",
     "difficulty2": "6",
     "difficulty3": "9",
+    "difficulty4": "0",
     "unlockLevel": "0"
   },
   {
@@ -29,6 +30,7 @@
     "difficulty1": "3",
     "difficulty2": "6",
     "difficulty3": "9",
+    "difficulty4": "0",
     "unlockLevel": "0"
   },
   {
@@ -45,6 +47,7 @@
     "difficulty1": "4",
     "difficulty2": "7",
     "difficulty3": "10",
+    "difficulty4": "0",
     "unlockLevel": "0"
   },
   {
@@ -61,6 +64,7 @@
     "difficulty1": "2",
     "difficulty2": "5",
     "difficulty3": "8",
+    "difficulty4": "0",
     "unlockLevel": "0"
   },
   {
@@ -77,6 +81,7 @@
     "difficulty1": "3",
     "difficulty2": "6",
     "difficulty3": "8",
+    "difficulty4": "0",
     "unlockLevel": "0"
   },
   {
@@ -93,6 +98,7 @@
     "difficulty1": "4",
     "difficulty2": "6",
     "difficulty3": "9",
+    "difficulty4": "?",
     "unlockLevel": "0"
   }
 ]

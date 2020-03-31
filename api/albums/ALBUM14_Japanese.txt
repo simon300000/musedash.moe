@@ -1,11 +1,11 @@
 [
 	{
-		"name": "速溶霓虹 feat.熊子",
+		"name": "速溶霓虹 feat.kumako",
 		"author": "ANK"
 	},
 	{
 		"name": "星球上的追溯诗",
-		"author": "味素 feat.熊子"
+		"author": "味素 feat.kumako"
 	},
 	{
 		"name": "我要买买买",

@@ -1,0 +1,26 @@
+[
+	{
+		"name": "雨后甜点",
+		"author": "砂糖协会（ANK feat.kumako）"
+	},
+	{
+		"name": "告白应援方程式",
+		"author": "S9ryne Feat.祈Inory"
+	},
+	{
+		"name": "Omatsuri feat.兔子ST",
+		"author": "Nekock·LK"
+	},
+	{
+		"name": "FUTUREPOP",
+		"author": "砂糖协会（ANK feat.kumako）"
+	},
+	{
+		"name": "The Breeze",
+		"author": "sctl feat.Syepias"
+	},
+	{
+		"name": "ウォー・アイ・レタス炒飯！！",
+		"author": "諸星なな feat.加藤はるか&廣瀬祐輝"
+	}
+]

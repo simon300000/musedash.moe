@@ -8,7 +8,7 @@
 		"author": "Morimori Atsushi vs. uma"
 	},
 	{
-		"name": "Kyouki Ranbu",
+		"name": "Kyoukiranbu",
 		"author": "LeaF"
 	},
 	{

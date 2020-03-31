@@ -89,7 +89,7 @@
     "cover": "gift_box_cover",
     "noteJson": "gift_box_map",
     "scene": "scene_05",
-    "levelDesigner": "èlazao.B",
+    "levelDesigner": "baozale",
     "difficulty1": "5",
     "difficulty2": "7",
     "difficulty3": "10",

@@ -17,6 +17,15 @@
 		"free" : false,
 	},
 	{
+		"uid": "music_package_23",
+		"title": "Cute Is Everyting Vol.5",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM24",
+		"prefabsName": "AlbumDisco24",
+		"free" : false,
+	},
+	{
 		"uid": "music_package_22",
 		"title": "Give Up TREATMENT Vol.8",
 		"needPurchase": true,
