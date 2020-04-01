@@ -15,7 +15,7 @@
 
     <div class="navbar-menu" :class="{'is-active': menu}">
       <div class="navbar-start" @click="closeMenu()">
-        <router-link to="/player" class="navbar-item">Search</router-link>
+        <router-link to="/player" class="navbar-item">{{ha?'Suche':'Search'}}</router-link>
       </div>
 
       <div class="navbar-end">
@@ -29,7 +29,7 @@
                 {{name}}
               </a>
               <hr class="navbar-divider">
-              <router-link to="/about" class="navbar-item">About</router-link>
+              <router-link to="/about" class="navbar-item">{{ha?'Über uns':'About'}}</router-link>
             </div>
           </div>
         </div>
@@ -57,7 +57,10 @@ const langs = {
 
 export default {
   data() {
-    return { menu: false }
+    return { ha: false, menu: false }
+  },
+  mounted() {
+    this.ha = new Date().getMonth() + 1 === 4 && new Date().getDate() === 1
   },
   computed: {
     ...mapState(['lang']),

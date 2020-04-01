@@ -17,19 +17,19 @@
     <nav class="level">
       <div class="level-item has-text-centered">
         <div>
-          <p class="heading">Records</p>
+          <p class="heading">{{ha?'Aufzeichnungen':'Records'}}</p>
           <p class="title">{{plays.length}}</p>
         </div>
       </div>
       <div class="level-item has-text-centered">
         <div>
-          <p class="heading">Perfects</p>
+          <p class="heading">{{ha?'Vollkommenheit':'Perfects'}}</p>
           <p class="title">{{perfect.length}}</p>
         </div>
       </div>
       <div class="level-item has-text-centered">
         <div>
-          <p class="heading">Avg. Pct</p>
+          <p class="heading">{{ha?'Durchschnittlicher Prozentsatz':'Avg. Pct'}}</p>
           <p class="title">{{avgPct}} %</p>
         </div>
       </div>
@@ -49,6 +49,7 @@ export default {
   components: {
     record
   },
+  data() { return { ha: false } },
   watch: {
     title: {
       immediate: true,
@@ -92,6 +93,7 @@ export default {
     this.updateTitle([this, this.title])
   },
   async mounted() {
+    this.ha = new Date().getMonth() + 1 === 4 && new Date().getDate() === 1
     if (!this.albumsArray.length) {
       await this.loadAlbums()
     }

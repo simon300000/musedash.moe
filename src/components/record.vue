@@ -24,7 +24,7 @@
         <octicon v-else name="device-mobile" width="15" height="24"></octicon>
         #{{play.i+1}}
       </router-link>
-      <router-link tag="p" class="subtitle is-6 is-spaced clickable" :to="`/music/${play.uid}/${play.difficulty}`">sum #{{play.sum+1}}</router-link>
+      <router-link tag="p" class="subtitle is-6 is-spaced clickable" :to="`/music/${play.uid}/${play.difficulty}`">{{ha?'Insgesamt':'sum'}} #{{play.sum+1}}</router-link>
     </div>
   </div>
 </nav>
@@ -41,6 +41,10 @@ export default {
   props: ['play'],
   components: {
     Octicon
+  },
+  data() { return { ha: false } },
+  mounted() {
+    this.ha = new Date().getMonth() + 1 === 4 && new Date().getDate() === 1
   },
   computed: {
     ...mapState(['lang']),

@@ -18,10 +18,10 @@
         <tr>
           <th>#</th>
           <th></th>
-          <th>Username</th>
-          <th>Accuracy</th>
-          <th>Score</th>
-          <th v-if="platform === 'all'">Platform</th>
+          <th>{{ha?'Benutzername':'Username'}}</th>
+          <th>{{ha?'Ungenauigkeit':'Accuracy'}}</th>
+          <th>{{ha?'Punkte':'Score'}}</th>
+          <th v-if="platform === 'all'">{{ha?'Plattform':'Platform'}}</th>
         </tr>
       </thead>
       <tbody>
@@ -33,7 +33,7 @@
           <td>
             <router-link :to="`/player/${play.id}`">{{play.nickname}}</router-link>
           </td>
-          <td>{{Math.round(play.acc*10)/10}}%</td>
+          <td>{{Math.round((ha?100-play.acc:play.acc)*10)/10}}%</td>
           <td>{{play.score}}</td>
           <td v-if="platform === 'all'">
             <span class="icon" style="float:right;" v-if="play.platform === 'pc'">
@@ -62,6 +62,7 @@ import change from '@/components/change.vue'
 export default {
   data() {
     return {
+      ha: false,
       limit: 250
     }
   },
@@ -87,6 +88,7 @@ export default {
     }
   },
   mounted() {
+    this.ha = new Date().getMonth() + 1 === 4 && new Date().getDate() === 1
     this.mount()
   },
   destroyed() {
