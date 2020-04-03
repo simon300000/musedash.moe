@@ -16,13 +16,14 @@ export interface Music extends Record<AvailableLocales, MusicLang> {
   cover: string,
   noteJson: string,
   scene: string,
-  levelDesigner: string,
-  levelDesigner1: string,
-  levelDesigner2: string,
-  levelDesigner3: string,
+  levelDesigner?: string,
+  levelDesigner1?: string,
+  levelDesigner2?: string,
+  levelDesigner3?: string,
   difficulty1: string,
   difficulty2: string,
   difficulty3: string,
+  difficulty4?: string,
   unlockLevel: number
 }
 

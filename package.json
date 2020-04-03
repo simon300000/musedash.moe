@@ -9,7 +9,7 @@
     "build:dev": "export development=true; node build:vue; node index",
     "lint": "vue-cli-service lint",
     "build:api": "tsc",
-    "dev": "tsc -w"
+    "dev": "tsc -b -w"
   },
   "dependencies": {
     "@koa/router": "^8.0.8",
