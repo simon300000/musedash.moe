@@ -23,7 +23,7 @@
     "level": "^6.0.0",
     "lru-cache": "^5.1.1",
     "register-service-worker": "^1.6.2",
-    "subleveldown": "^4.1.4",
+    "subleveldown": "^5.0.0",
     "vue": "^2.6.10",
     "vue-analytics": "^5.17.0",
     "vue-router": "^3.0.3",
