@@ -19,7 +19,7 @@
   {
     "uid": "4-1",
     "name": "Imprinting",
-    "author": "Sakuzyo",
+    "author": "削除",
     "bpm": "175",
     "music": "imprinting_music",
     "demo": "imprinting_demo",

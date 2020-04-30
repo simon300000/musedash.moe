@@ -5,7 +5,7 @@
 	},
 	{
 		"name": "Imprinting",
-		"author": "Sakuzyo"
+		"author": "削除"
 	},
 	{
 		"name": "Skyward",

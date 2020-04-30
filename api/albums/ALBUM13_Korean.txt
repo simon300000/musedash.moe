@@ -1,7 +1,7 @@
 [
 	{
-		"name": "Futa Hitsugi Chrysalis",
-		"author": "Team Grimoire"
+		"name": "Gaikan Chrysalis",
+		"author": "Team Grimoire feat.Sennzai"
 	},
 	{
 		"name": "Sterelogue",

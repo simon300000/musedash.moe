@@ -2,12 +2,12 @@
         {
             "uid":"12-0",
             "name":"蓋棺クリサリス",
-            "author":"Team Grimoire",
+            "author":"Team Grimoire feat.Sennzai",
             "bpm":"160",
-            "music":"futa_hitsugi_chrysalis_music",
-            "demo":"futa_hitsugi_chrysalis_demo",
-            "cover":"futa_hitsugi_chrysalis_cover",
-            "noteJson":"futa_hitsugi_chrysalis_map",
+            "music":"gaikan_chrysalis_music",
+            "demo":"gaikan_chrysalis_demo",
+            "cover":"gaikan_chrysalis_cover",
+            "noteJson":"gaikan_chrysalis_map",
             "scene":"scene_03",
             "levelDesigner": "Howard_Y",
             "difficulty1":"4",
@@ -60,7 +60,7 @@
             "levelDesigner": "Phizer",
             "difficulty1":"5",
             "difficulty2":"7",
-            "difficulty3":"10",
+            "difficulty3":"11",
             "unlockLevel":"0"
         },
         {

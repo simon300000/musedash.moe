@@ -95,7 +95,7 @@
             "levelDesigner": "Phizer",
             "difficulty1":"4",
             "difficulty2":"7",
-            "difficulty3":"10",
+            "difficulty3":"9",
             "unlockLevel":"0"
         }
 ]

@@ -480,6 +480,22 @@
     "unlockLevel": "28"
   },
   {
+    "uid": "0-42",
+    "name": "新世界より",
+    "author": "綾奈なな (Prod.Aya2g+Works)",
+    "bpm": "128",
+    "music": "shinsekai_yori_music",
+    "demo": "shinsekai_yori_demo",
+    "cover": "shinsekai_yori_cover",
+    "noteJson": "shinsekai_yori_map",
+    "scene": "scene_05",
+    "levelDesigner": "Howard_Y",
+    "difficulty1": "2",
+    "difficulty2": "5",
+    "difficulty3": "7",
+    "unlockLevel": "29"
+  },
+  {
     "uid": "0-33",
     "name": "僞顏",
     "author": "天游",
@@ -620,7 +636,7 @@
     "levelDesigner": "Howard_Y",
     "difficulty1": "4",
     "difficulty2": "7",
-    "difficulty3": "10",
+    "difficulty3": "9",
     "unlockLevel": "48"
   },
   {

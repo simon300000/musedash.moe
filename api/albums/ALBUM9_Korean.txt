@@ -9,7 +9,7 @@
 	},
 	{
 		"name": "Berry Go!!",
-		"author": "Freezer feat. Kiichigo"
+		"author": "Freezer feat.Kiichigo"
 	},
 	{
 		"name": "Sweet* Witch* Girl*",

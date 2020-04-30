@@ -92,7 +92,7 @@
             "levelDesigner": "Howard_Y",
             "difficulty1":"5",
             "difficulty2":"7",
-            "difficulty3":"9",
+            "difficulty3":"10",
             "unlockLevel":"0"
         }
 ]

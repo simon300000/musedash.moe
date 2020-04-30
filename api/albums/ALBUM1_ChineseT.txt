@@ -29,6 +29,7 @@
 	{ "name": "irregulyze", "author": "daisan" },
 	{ "name": "Imaginary World", "author": "uma" },
 	{ "name": "Dysthymia", "author": "a_hisa" },
+	{ "name": "新世界より", "author": "綾奈奈奈 (Prod.Aya2g+Works)" },
 	{ "name": "僞顏", "author": "天游" },
 	{ "name": "流星车手", "author": "iKz feat.漆柚" },
 	{ "name": "Formation", "author": "SLT" },

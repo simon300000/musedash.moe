@@ -1,0 +1,26 @@
+[
+	{
+		"name": "The Last Page",
+		"author": "ARForest"
+	},
+	{
+		"name": "IKAROS",
+		"author": "ETIA. feat.Jenga"
+	},
+	{
+		"name": "Tsukuyomi",
+		"author": "Halv"
+	},
+	{
+		"name": "Future Stream",
+		"author": "Qutabire"
+	},
+	{
+		"name": "FULi AUTO SHOOTER",
+		"author": "MYUKKE."
+	},
+	{
+		"name": "GOODFORTUNE",
+		"author": "EBIMAYO"
+	}
+]

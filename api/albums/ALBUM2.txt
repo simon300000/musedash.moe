@@ -28,7 +28,7 @@
     "levelDesigner": "Howard_Y",
     "difficulty1": "2",
     "difficulty2": "5",
-    "difficulty3": "8",
+    "difficulty3": "7",
     "unlockLevel": "0"
   },
   {

@@ -17,6 +17,15 @@
 		"free" : false,
 	},
 	{
+		"uid": "music_package_24",
+		"title": "Happy Otaku Pack Vol.9",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM25",
+		"prefabsName": "AlbumDisco25",
+		"free" : false,
+	},
+	{
 		"uid": "music_package_23",
 		"title": "Cute Is Everyting Vol.5",
 		"needPurchase": true,

@@ -120,6 +120,10 @@
 		"author": "a_hisa"
 	},
 	{
+		"name": "新世界より",
+		"author": "綾奈奈奈 (Prod.Aya2g+Works)"
+	},
+	{
 		"name": "僞顏",
 		"author": "天游"
 	},
