@@ -6,6 +6,9 @@
 		"title": "Just as Planned"
 	},
 	{
+		"title": "MUSE RADIO"
+	},
+	{
 		"title": "Happy Otaku Pack Vol.9"
 	},
 	{

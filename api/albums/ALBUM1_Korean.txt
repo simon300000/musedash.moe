@@ -10,6 +10,7 @@
 	{ "name": "Evolution", "author": "Haloweak" },
 	{ "name": "海豚与广播 feat.Uranyan", "author": "小野道ono" },
 	{ "name": "Yuki no Shizuku Ame no Oto", "author": "Tianyou feat.Tokyo Tower" },
+	{ "name": "Best One feat.tooko", "author": "小野道ono" },
 	{ "name": "糖果色恋爱学", "author": "ANK feat.kumako" },
 	{ "name": "Night Wander (cnsouka Remix)", "author": "cnsouka" },
 	{ "name": "Spring Carnival", "author": "3R2" },
@@ -31,6 +32,7 @@
 	{ "name": "Dysthymia", "author": "a_hisa" },
 	{ "name": "新世界より", "author": "綾奈なな (Prod.Aya2g+Works)" },
 	{ "name": "NISEGAO", "author": "Tianyou" },
+	{ "name": "Say! Fanfare!", "author": "Fubuki Shirakami" },
 	{ "name": "Star Driver", "author": "iKz feat.Qiyou" },
 	{ "name": "Formation", "author": "SLT" },
 	{ "name": "Shinsou Masui", "author": "iKz" },
@@ -41,5 +43,6 @@
 	{ "name": "徒 花", "author": "Aya.Tsumi" },
 	{ "name": "Mujinku-Vacuum Track#ADD8E6-", "author": "NoKANY" },
 	{ "name": "MilK", "author": "Morimori Atsushi" },
-	{ "name": "umpopoff", "author": "Mameko" }
+	{ "name": "umpopoff", "author": "Mameko" },
+	{ "name": "Mopemope", "author": "LeaF" }
 ]

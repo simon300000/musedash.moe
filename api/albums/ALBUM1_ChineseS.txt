@@ -44,6 +44,10 @@
 		"author": "天游 feat.东京塔子",
 	},
 	{
+		"name": "Best One feat.墨橙",
+		"author": "小野道ono",
+	},
+	{
 		"name": "糖果色恋爱学",
 		"author": "ANK feat.熊子",
 	},
@@ -128,6 +132,10 @@
 		"author": "天游"
 	},
 	{
+		"name": "Say!ファンファーレ!",
+		"author": "白上フブキ"
+	},
+	{
 		"name": "流星车手",
 		"author": "iKz feat.漆柚"
 	},
@@ -170,5 +178,9 @@
 	{
 		"name": "umpopoff",
 		"author": "まめこ"
+	},
+	{
+		"name": "もぺもぺ",
+		"author": "LeaF"
 	}
 ]

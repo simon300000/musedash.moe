@@ -1,0 +1,26 @@
+[
+	{
+		"name": "tape/stop/night",
+		"author": "Sugar & Co."
+	},
+	{
+		"name": "Pixel Galaxy",
+		"author": "Snail's House"
+	},
+	{
+		"name": "Notice",
+		"author": "Moe Shop / TORIENA"
+	},
+	{
+		"name": "<b>sᴛʀᴀᴡʙᴇʀʀʏ ɢᴏᴅᴢɪʟʟᴀ</b>",
+		"author": "Sugar & Co."
+	},
+	{
+		"name": "OKIMOCHI EXPRESSION",
+		"author": "ディスコブラザーズ"
+	},
+	{
+		"name": "君とpool disco",
+		"author": "loopcoda"
+	}
+]

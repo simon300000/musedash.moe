@@ -176,6 +176,22 @@
     "unlockLevel": "8"
   },
   {
+    "uid": "0-43",
+    "name": "Best One feat.墨橙",
+    "author": "小野道ono",
+    "bpm": "110",
+    "music": "best_one_music",
+    "demo": "best_one_demo",
+    "cover": "best_one_cover",
+    "noteJson": "best_one_map",
+    "scene": "scene_02",
+    "levelDesigner": "Howard_Y",
+    "difficulty1": "3",
+    "difficulty2": "5",
+    "difficulty3": "0",
+    "unlockLevel": "9"
+  },
+  {
     "uid": "0-31",
     "name": "糖果色恋爱学",
     "author": "ANK feat.熊子",
@@ -189,7 +205,7 @@
     "difficulty1": "2",
     "difficulty2": "4",
     "difficulty3": "6",
-    "unlockLevel": "9"
+    "unlockLevel": "10"
   },
   {
     "uid": "0-38",
@@ -205,7 +221,7 @@
     "difficulty1": "3",
     "difficulty2": "5",
     "difficulty3": "7",
-    "unlockLevel": "10"
+    "unlockLevel": "11"
   },
   {
     "uid": "0-9",
@@ -221,7 +237,7 @@
     "difficulty1": "2",
     "difficulty2": "4",
     "difficulty3": "7",
-    "unlockLevel": "11"
+    "unlockLevel": "12"
   },
   {
     "uid": "0-30",
@@ -237,7 +253,7 @@
     "difficulty1": "2",
     "difficulty2": "4",
     "difficulty3": "7",
-    "unlockLevel": "12"
+    "unlockLevel": "13"
   },
   {
     "uid": "0-10",
@@ -253,7 +269,7 @@
     "difficulty1": "3",
     "difficulty2": "5",
     "difficulty3": "7",
-    "unlockLevel": "13"
+    "unlockLevel": "14"
   },
   {
     "uid": "0-11",
@@ -269,7 +285,7 @@
     "difficulty1": "4",
     "difficulty2": "6",
     "difficulty3": "8",
-    "unlockLevel": "14"
+    "unlockLevel": "16"
   },
   {
     "uid": "0-12",
@@ -285,7 +301,7 @@
     "difficulty1": "2",
     "difficulty2": "5",
     "difficulty3": "8",
-    "unlockLevel": "16"
+    "unlockLevel": "17"
   },
   {
     "uid": "0-40",
@@ -301,7 +317,7 @@
     "difficulty1": "3",
     "difficulty2": "5",
     "difficulty3": "7",
-    "unlockLevel": "17"
+    "unlockLevel": "18"
   },
   {
     "uid": "0-13",
@@ -317,7 +333,7 @@
     "difficulty1": "3",
     "difficulty2": "5",
     "difficulty3": "8",
-    "unlockLevel": "18"
+    "unlockLevel": "19"
   },
   {
     "uid": "0-32",
@@ -333,7 +349,7 @@
     "difficulty1": "4",
     "difficulty2": "6",
     "difficulty3": "9",
-    "unlockLevel": "19"
+    "unlockLevel": "20"
   },
   {
     "uid": "0-14",
@@ -349,7 +365,7 @@
     "difficulty1": "2",
     "difficulty2": "5",
     "difficulty3": "8",
-    "unlockLevel": "20"
+    "unlockLevel": "21"
   },
   {
     "uid": "0-15",
@@ -365,7 +381,7 @@
     "difficulty1": "2",
     "difficulty2": "5",
     "difficulty3": "8",
-    "unlockLevel": "21"
+    "unlockLevel": "22"
   },
   {
     "uid": "0-16",
@@ -381,7 +397,7 @@
     "difficulty1": "3",
     "difficulty2": "5",
     "difficulty3": "7",
-    "unlockLevel": "22"
+    "unlockLevel": "23"
   },
   {
     "uid": "0-17",
@@ -397,7 +413,7 @@
     "difficulty1": "4",
     "difficulty2": "6",
     "difficulty3": "8",
-    "unlockLevel": "23"
+    "unlockLevel": "24"
   },
   {
     "uid": "0-18",
@@ -413,7 +429,7 @@
     "difficulty1": "3",
     "difficulty2": "6",
     "difficulty3": "8",
-    "unlockLevel": "24"
+    "unlockLevel": "25"
   },
   {
     "uid": "0-19",
@@ -429,7 +445,7 @@
     "difficulty1": "3",
     "difficulty2": "6",
     "difficulty3": "9",
-    "unlockLevel": "25"
+    "unlockLevel": "26"
   },
   {
     "uid": "0-20",
@@ -445,7 +461,7 @@
     "difficulty1": "3",
     "difficulty2": "6",
     "difficulty3": "8",
-    "unlockLevel": "26"
+    "unlockLevel": "27"
   },
   {
     "uid": "0-21",
@@ -461,7 +477,7 @@
     "difficulty1": "4",
     "difficulty2": "6",
     "difficulty3": "8",
-    "unlockLevel": "27"
+    "unlockLevel": "28"
   },
   {
     "uid": "0-22",
@@ -477,7 +493,7 @@
     "difficulty1": "4",
     "difficulty2": "7",
     "difficulty3": "9",
-    "unlockLevel": "28"
+    "unlockLevel": "29"
   },
   {
     "uid": "0-42",
@@ -493,7 +509,7 @@
     "difficulty1": "2",
     "difficulty2": "5",
     "difficulty3": "7",
-    "unlockLevel": "29"
+    "unlockLevel": "31"
   },
   {
     "uid": "0-33",
@@ -510,6 +526,22 @@
     "difficulty2": "7",
     "difficulty3": "9",
     "unlockLevel": "32"
+  },
+  {
+    "uid": "0-44",
+    "name": "Say!ファンファーレ!",
+    "author": "白上フブキ",
+    "bpm": "170",
+    "music": "say_fanfare_music",
+    "demo": "say_fanfare_demo",
+    "cover": "say_fanfare_cover",
+    "noteJson": "say_fanfare_map",
+    "scene": "scene_05",
+    "levelDesigner": "Howard_Y",
+    "difficulty1": "4",
+    "difficulty2": "6",
+    "difficulty3": "8",
+    "unlockLevel": "33"
   },
   {
     "uid": "0-34",
@@ -686,5 +718,21 @@
     "difficulty2": "?",
     "difficulty3": "0",
     "unlockLevel": "60"
+  },
+  {
+    "uid": "0-45",
+    "name": "もぺもぺ",
+    "author": "LeaF",
+    "bpm": "100～200",
+    "music": "mopemope_music",
+    "demo": "mopemope_demo",
+    "cover": "mopemope_cover",
+    "noteJson": "mopemope_map",
+    "scene": "scene_05",
+    "levelDesigner": "Howard_Y in_tha_W0ndeR1and_",
+    "difficulty1": "4",
+    "difficulty2": "7",
+    "difficulty3": "9",
+    "unlockLevel": "65"
   }
 ]

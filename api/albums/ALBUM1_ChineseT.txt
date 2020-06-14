@@ -10,6 +10,7 @@
 	{ "name": "Evolution", "author": "Haloweak" },
 	{ "name": "海豚與廣播 feat.烏拉喵", "author": "小野道ono" },
 	{ "name": "雪の雫・雨の音", "author": "天遊 feat.東京塔子" },
+	{ "name": "Best One feat.墨橙", "author": "小野道ono" },
 	{ "name": "糖果色戀愛學", "author": "ANK feat.熊子" },
 	{ "name": "Night Wander (cnsouka Remix)", "author": "cnsouka" },
 	{ "name": "Spring Carnival", "author": "3R2" },
@@ -31,6 +32,7 @@
 	{ "name": "Dysthymia", "author": "a_hisa" },
 	{ "name": "新世界より", "author": "綾奈奈奈 (Prod.Aya2g+Works)" },
 	{ "name": "僞顏", "author": "天游" },
+	{ "name": "Say!ファンファーレ!", "author": "白上フブキ" },
 	{ "name": "流星车手", "author": "iKz feat.漆柚" },
 	{ "name": "Formation", "author": "SLT" },
 	{ "name": "心層麻酔", "author": "iKz" },
@@ -41,5 +43,6 @@
 	{ "name": "徒 花", "author": "Aya~亞夜罪~" },
 	{ "name": "無人区-Vacuum Track#ADD8E6-", "author": "NoKANY" },
 	{ "name": "MilK", "author": "モリモリあつし" },
-	{ "name": "umpopoff", "author": "まめこ" }
+	{ "name": "umpopoff", "author": "まめこ" },
+	{ "name": "もぺもぺ", "author": "LeaF" },
 ]

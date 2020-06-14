@@ -1,7 +1,7 @@
 [
 	{ 
         "uid": "9-0",
-        "name": "Leave it Alone",
+        "name": "Leave It Alone",
         "author": "a_hisa",
         "bpm": "128",
         "music": "leave_it_alone_music",

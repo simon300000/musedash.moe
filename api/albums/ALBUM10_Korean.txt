@@ -1,6 +1,6 @@
 [
 	{
-		"name": "Leave it Alone",
+		"name": "Leave It Alone",
 		"author": "a_hisa"
 	},
 	{

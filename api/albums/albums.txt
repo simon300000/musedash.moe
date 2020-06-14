@@ -17,6 +17,15 @@
 		"free" : false,
 	},
 	{
+		"uid": "music_package_25",
+		"title": "Mu Se Dian Tai",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM26",
+		"prefabsName": "AlbumDisco26",
+		"free" : false,
+	},
+	{
 		"uid": "music_package_24",
 		"title": "Happy Otaku Pack Vol.9",
 		"needPurchase": true,
