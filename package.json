@@ -8,7 +8,7 @@
     "build:vue": "node build",
     "build:dev": "export development=true; node build:vue; node index",
     "lint": "vue-cli-service lint",
-    "build:api": "tsc",
+    "build:api": "tsc -b",
     "dev": "tsc -b -w"
   },
   "dependencies": {
