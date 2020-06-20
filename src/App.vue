@@ -101,8 +101,10 @@ export default {
 </script>
 
 <style lang="scss">
+// @import "~bulma/bulma.sass";
 @import "~bulma/sass/utilities/_all.sass";
 @import "~bulma/sass/base/_all.sass";
+@import "~bulma/sass/helpers/color.sass";
 @import "~bulma/sass/components/navbar.sass";
 @import "~bulma/sass/components/tabs.sass";
 @import "~bulma/sass/elements/container.sass";
