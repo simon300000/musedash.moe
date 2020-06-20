@@ -9,7 +9,7 @@
   </div>
   <div class="level-item">
     <div>
-      <p class="title is-5 is-spaced">{{music.name}}</p>
+      <p class="title is-5 is-spaced" v-html="music.name"></p>
       <p class="subtitle is-6" title="Author">{{music.author}}</p>
     </div>
   </div>
