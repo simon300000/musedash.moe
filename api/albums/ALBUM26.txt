@@ -34,7 +34,7 @@
         {
             "uid":"25-2",
             "name":"Notice",
-            "author":"Halv",
+            "author":"Moe Shop / TORIENA",
             "bpm":"125",
             "music":"notice_music",
             "demo":"notice_demo",

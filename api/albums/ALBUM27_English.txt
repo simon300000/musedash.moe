@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Legend of Eastern Rabbit -SKY DEFENDER-",
+		"author": "sctl"
+	},
+	{
+		"name": "ENERGY SYNERGY MATRIX",
+		"author": "Tanchiky"
+	},
+	{
+		"name": "Punai Punai Genso ~Punai Punai in Wonderland~",
+		"author": "rissyuu feat.Choko"
+	},
+	{
+		"name": "Better Graphic Animation",
+		"author": "LUZE"
+	},
+	{
+		"name": "Variant Cross",
+		"author": "M-UE"
+	},
+	{
+		"name": "Ultra Happy Miracle Bazoooooka!!",
+		"author": "Hino Isuka vs. Umeboshi Chazuke"
+	}
+]

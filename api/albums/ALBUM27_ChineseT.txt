@@ -1,0 +1,26 @@
+[
+	{
+		"name": "東方兔傳說 -SKY DEFENDER-",
+		"author": "sctl"
+	},
+	{
+		"name": "ENERGY SYNERGY MATRIX",
+		"author": "Tanchiky"
+	},
+	{
+		"name": "プナイプナイげんそう ～プナイプナイinワンダーランド～",
+		"author": "立秋 feat.ちょこ"
+	},
+	{
+		"name": "Better Graphic Animation",
+		"author": "ルゼ"
+	},
+	{
+		"name": "Variant Cross",
+		"author": "M-UE"
+	},
+	{
+		"name": "Ultra Happy Miracle Bazoooooka!!",
+		"author": "翡乃イスカ vs. 梅干茶漬け"
+	}
+]

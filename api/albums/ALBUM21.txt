@@ -45,6 +45,7 @@
             "difficulty1":"4",
             "difficulty2":"7",
             "difficulty3":"9",
+            "difficulty4":"10",
             "unlockLevel":"0"
         },
         {

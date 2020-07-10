@@ -17,8 +17,17 @@
 		"free" : false,
 	},
 	{
+		"uid": "music_package_26",
+		"title": "Give Up TREATMENT Vol.9",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM27",
+		"prefabsName": "AlbumDisco27",
+		"free" : false,
+	},
+	{
 		"uid": "music_package_25",
-		"title": "Mu Se Dian Tai",
+		"title": "MUSE RADIO",
 		"needPurchase": true,
 		"price": "¥25.00",
 		"jsonName": "ALBUM26",

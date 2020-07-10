@@ -6,6 +6,9 @@
 		"title": "Just as Planned"
 	},
 	{
+		"title": "Give Up TREATMENT Vol.9"
+	},
+	{
 		"title": "MUSE RADIO"
 	},
 	{
