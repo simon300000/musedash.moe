@@ -41,11 +41,13 @@
       <router-view></router-view>
     </div>
   </section>
+  <CapsuleDef class="def"></CapsuleDef>
 </div>
 </template>
 
 <script>
 import { mapState, mapMutations } from 'vuex'
+import CapsuleDef from '@/components/capsule-def'
 
 const langs = {
   ChineseS: '简体中文',
@@ -58,6 +60,9 @@ const langs = {
 export default {
   data() {
     return { ha: false, menu: false }
+  },
+  components: {
+    CapsuleDef
   },
   mounted() {
     this.ha = new Date().getMonth() + 1 === 4 && new Date().getDate() === 1
@@ -99,6 +104,13 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.def {
+  position: absolute;
+  top: -1000px;
+}
+</style>
 
 <style lang="scss">
 // @import "~bulma/bulma.sass";
