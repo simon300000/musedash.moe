@@ -6,6 +6,9 @@
 		"title": "計劃通"
 	},
 	{
+		"title": "Nanahira Festival"
+	},
+	{
 		"title": "放棄治療 Vol.9"
 	},
 	{

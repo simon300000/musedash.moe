@@ -1,0 +1,26 @@
+[
+	{
+		"name": "ベースラインやってる?笑",
+		"author": "かめりあ feat.ななひら"
+	},
+	{
+		"name": "ゲーミング☆Everything",
+		"author": "かめりあ feat.ななひら"
+	},
+	{
+		"name": "レンジで好吃 ☆電子調理器使用中華料理四千年歴史瞬間調理完了武闘的料理長☆",
+		"author": "かめりあ feat.ななひら"
+	},
+	{
+		"name": "You Make My Life 1UP",
+		"author": "かめりあ feat.ななひら"
+	},
+	{
+		"name": "ニワカ三年オタ八年、インターネッツはforever",
+		"author": "かめりあ feat.ななひら"
+	},
+	{
+		"name": "お願い！コンコンお稲荷さま",
+		"author": "ARM×狐夢想 feat.ななひら"
+	}
+]

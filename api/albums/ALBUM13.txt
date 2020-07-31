@@ -40,7 +40,7 @@
             "demo":"cheshires_dance_demo",
             "cover":"cheshires_dance_cover",
             "noteJson":"cheshires_dance_map",
-            "scene":"scene_03",
+            "scene":"scene_05",
             "levelDesigner": "Phizer",
             "difficulty1":"4",
             "difficulty2":"7",

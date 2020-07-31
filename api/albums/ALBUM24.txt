@@ -56,7 +56,7 @@
             "demo":"futurepop_demo",
             "cover":"futurepop_cover",
             "noteJson":"futurepop_map",
-            "scene":"scene_04",
+            "scene":"scene_02",
             "levelDesigner": "Howard_Y",
             "difficulty1":"2",
             "difficulty2":"5",

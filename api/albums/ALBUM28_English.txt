@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Can I friend you on Bassbook? lol",
+		"author": "Camellia feat.Nanahira"
+	},
+	{
+		"name": "Gaming☆Everything",
+		"author": "Camellia feat.Nanahira"
+	},
+	{
+		"name": "Renji de haochi☆Denshi choriki shiyou chuka ryori 4000nen rekishi shunkan chori kanryo butouteki ryoricho☆",
+		"author": "Camellia feat.Nanahira"
+	},
+	{
+		"name": "You Make My Life 1UP",
+		"author": "Camellia feat.Nanahira"
+	},
+	{
+		"name": "Newbies take 3 years, geeks 8 years, and internets are forever",
+		"author": "Camellia feat.Nanahira"
+	},
+	{
+		"name": "Onegai!Kon kon Oinarisama",
+		"author": "ARM×Komso feat.Nanahira"
+	}
+]

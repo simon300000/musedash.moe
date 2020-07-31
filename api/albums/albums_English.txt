@@ -6,6 +6,9 @@
 		"title": "Just as Planned"
 	},
 	{
+		"title": "Nanahira Festival"
+	},
+	{
 		"title": "Give Up TREATMENT Vol.9"
 	},
 	{

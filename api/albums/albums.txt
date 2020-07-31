@@ -17,6 +17,15 @@
 		"free" : false,
 	},
 	{
+		"uid": "music_package_27",
+		"title": "Nanahira Festival",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM28",
+		"prefabsName": "AlbumDisco28",
+		"free" : false,
+	},
+	{
 		"uid": "music_package_26",
 		"title": "Give Up TREATMENT Vol.9",
 		"needPurchase": true,

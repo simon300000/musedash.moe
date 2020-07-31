@@ -8,7 +8,7 @@
             "demo":"sweetsweetsweet_demo",
             "cover":"sweetsweetsweet_cover",
             "noteJson":"sweetsweetsweet_map",
-            "scene":"scene_01",
+            "scene":"scene_02",
             "levelDesigner": "Howard_Y",
             "difficulty1":"2",
             "difficulty2":"5",

@@ -216,7 +216,7 @@
     "demo": "night_wander_cnsouka_remix_demo",
     "cover": "night_wander_cnsouka_remix_cover",
     "noteJson": "night_wander_cnsouka_remix_map",
-    "scene": "scene_01",
+    "scene": "scene_02",
     "levelDesigner": "Howard_Y",
     "difficulty1": "3",
     "difficulty2": "5",
@@ -248,7 +248,7 @@
     "demo": "disco_night_demo",
     "cover": "disco_night_cover",
     "noteJson": "disco_night_map",
-    "scene": "scene_01",
+    "scene": "scene_02",
     "levelDesigner": "Howard_Y",
     "difficulty1": "2",
     "difficulty2": "4",
@@ -540,7 +540,7 @@
     "levelDesigner": "Howard_Y",
     "difficulty1": "4",
     "difficulty2": "6",
-    "difficulty3": "8",
+    "difficulty3": "9",
     "unlockLevel": "33"
   },
   {
