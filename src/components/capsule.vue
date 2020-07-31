@@ -63,6 +63,11 @@ export default {
 </script>
 
 <style scoped>
+@font-face {
+  font-family: "Impact-face";
+  src: url(../Impact.ttf) format("truetype");
+}
+
 .only {
   opacity: 0;
 }
@@ -108,7 +113,7 @@ export default {
 .text {
   z-index: 2;
   text-align: center;
-  font-family: "Impact";
+  font-family: Impact, "Impact-face";
   font-size: 24px;
   dominant-baseline: central;
   text-anchor: middle;
