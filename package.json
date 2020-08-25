@@ -69,7 +69,7 @@
     "webpack": "^4.38.0",
     "webpack-bundle-analyzer": "^3.3.2",
     "webpack-merge": "^4.2.1",
-    "webpack-node-externals": "^1.7.2",
+    "webpack-node-externals": "^2.5.2",
     "workbox-webpack-plugin": "^4.3.1"
   }
 }
