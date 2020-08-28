@@ -6,6 +6,9 @@
 		"title": "計劃通"
 	},
 	{
+		"title": "肥宅快樂包 Vol.10"
+	},
+	{
 		"title": "Nanahira Festival"
 	},
 	{

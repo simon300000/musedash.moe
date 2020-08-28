@@ -1,0 +1,26 @@
+[
+	{
+		"name": "弊社御社",
+		"author": "ヒゲドライバー"
+	},
+	{
+		"name": "Ginevra",
+		"author": "MYUKKE."
+	},
+	{
+		"name": "Paracelestia",
+		"author": "Nego_tiator"
+	},
+	{
+		"name": "un secret",
+		"author": "モリモリあつし"
+	},
+	{
+		"name": "Good Life",
+		"author": "litmus*"
+	},
+	{
+		"name": "ニニ",
+		"author": "テヅカ × Qayo"
+	}
+]

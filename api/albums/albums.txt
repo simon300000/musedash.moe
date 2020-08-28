@@ -17,6 +17,15 @@
 		"free" : false,
 	},
 	{
+		"uid": "music_package_28",
+		"title": "Happy Otaku Pack Vol.10",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM29",
+		"prefabsName": "AlbumDisco29",
+		"free" : false,
+	},
+	{
 		"uid": "music_package_27",
 		"title": "Nanahira Festival",
 		"needPurchase": true,
