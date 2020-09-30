@@ -6,6 +6,9 @@
 		"title": "计划通"
 	},
 	{
+		"title": "Let' s GROOVE！"
+	},
+	{
 		"title": "肥宅快乐包 Vol.10"
 	},
 	{

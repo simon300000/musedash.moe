@@ -6,6 +6,9 @@
 		"title": "Just as Planned"
 	},
 	{
+		"title": "Let' s GROOVE！"
+	},
+	{
 		"title": "Happy Otaku Pack Vol.10"
 	},
 	{

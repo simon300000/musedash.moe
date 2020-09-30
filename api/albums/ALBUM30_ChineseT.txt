@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Groove Prayer",
+		"author": "COSIO (ZUNTATA) feat. ChouCho"
+	},
+	{
+		"name": "FUJIN Rumble",
+		"author": "COSIO(ZUNTATA)"
+	},
+	{
+		"name": "Marry me, Nightmare",
+		"author": "t+pazolite"
+	},
+	{
+		"name": "HG魔改造ポリビニル少年",
+		"author": "IOSYS TRAX (D.watt with さきぴょ)"
+	},
+	{
+		"name": "聖者の息吹",
+		"author": "世阿弥 vs Tatsh"
+	},
+	{
+		"name": "ouroboros -twin stroke of the end-",
+		"author": "Cranky VS MASAKI"
+	}
+]

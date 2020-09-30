@@ -17,6 +17,15 @@
 		"free" : false,
 	},
 	{
+		"uid": "music_package_29",
+		"title": "Let' s GROOVE！",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM30",
+		"prefabsName": "AlbumDisco30",
+		"free" : false,
+	},
+	{
 		"uid": "music_package_28",
 		"title": "Happy Otaku Pack Vol.10",
 		"needPurchase": true,

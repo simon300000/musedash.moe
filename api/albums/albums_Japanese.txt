@@ -6,6 +6,9 @@
 		"title": "計画通り"
 	},
 	{
+		"title": "Let' s GROOVE！"
+	},
+	{
 		"title": "MUSIC快楽天 Vol.10"
 	},
 	{
