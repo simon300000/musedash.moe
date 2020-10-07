@@ -15,7 +15,7 @@
   </div>
   <div class="level-item">
     <div>
-      <p class="title is-6 is-spaced" title="Level Designer" v-for="(designer, i) in music.levelDesigner" :key="`${music.name}_${i}`">{{designer}}</p>
+      <p class="title is-6 is-spaced" title="Level Designer" v-for="(designer, i) in levelDesigner" :key="`${music.name}_${i}`">{{designer}}</p>
     </div>
   </div>
   <div class="level-right">
@@ -31,6 +31,17 @@ export default {
   props: ['music', 'platform'],
   components: {
     Capsule
+  },
+  computed: {
+    levelDesigner() {
+      const levelDesigner = this.music.levelDesigner
+      const s = [...new Set(levelDesigner)]
+      if (s.length === 1) {
+        return [levelDesigner[0]]
+      } else {
+        return levelDesigner
+      }
+    }
   }
 }
 </script>
