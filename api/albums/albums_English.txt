@@ -6,6 +6,9 @@
 		"title": "Just as Planned"
 	},
 	{
+		"title": "Cute Is Everyting Vol.6"
+	},
+	{
 		"title": "Let' s GROOVE！"
 	},
 	{

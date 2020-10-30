@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Girly Cupid",
+		"author": "PSYQUI feat. Marpril"
+	},
+	{
+		"name": "sheep in the light",
+		"author": "Marpril"
+	},
+	{
+		"name": "Breaker city",
+		"author": "HAMA feat. Marpril"
+	},
+	{
+		"name": "heterodoxy",
+		"author": "memex"
+	},
+	{
+		"name": "Computer Music Girl",
+		"author": "Midy"
+	},
+	{
+		"name": "焦点 feat.早木旋子",
+		"author": "ANK"
+	}
+]

@@ -17,6 +17,15 @@
 		"free" : false,
 	},
 	{
+		"uid": "music_package_30",
+		"title": "Cute Is Everyting Vol.6",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM31",
+		"prefabsName": "AlbumDisco31",
+		"free" : false,
+	},
+	{
 		"uid": "music_package_29",
 		"title": "Let' s GROOVE！",
 		"needPurchase": true,

@@ -6,6 +6,9 @@
 		"title": "계획대로"
 	},
 	{
+		"title": "귀여움은 정의다 Vol.6"
+	},
+	{
 		"title": "Let' s GROOVE！"
 	},
 	{
