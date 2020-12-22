@@ -224,6 +224,22 @@
     "unlockLevel": "11"
   },
   {
+    "uid": "0-46",
+    "name": "ドーナドーナのうた",
+    "author": "水夏える feat.月乃",
+    "bpm": "152",
+    "music": "dohna_dohna_no_uta_music",
+    "demo": "dohna_dohna_no_uta_demo",
+    "cover": "dohna_dohna_no_uta_cover",
+    "noteJson": "dohna_dohna_no_uta_map",
+    "scene": "scene_05",
+    "levelDesigner": "Howard_Y",
+    "difficulty1": "2",
+    "difficulty2": "4",
+    "difficulty3": "6",
+    "unlockLevel": "12"
+  },
+  {
     "uid": "0-9",
     "name": "Spring Carnival",
     "author": "3R2",
@@ -237,7 +253,7 @@
     "difficulty1": "2",
     "difficulty2": "4",
     "difficulty3": "7",
-    "unlockLevel": "12"
+    "unlockLevel": "13"
   },
   {
     "uid": "0-30",
@@ -253,7 +269,7 @@
     "difficulty1": "2",
     "difficulty2": "4",
     "difficulty3": "7",
-    "unlockLevel": "13"
+    "unlockLevel": "14"
   },
   {
     "uid": "0-10",
@@ -269,7 +285,7 @@
     "difficulty1": "3",
     "difficulty2": "5",
     "difficulty3": "7",
-    "unlockLevel": "14"
+    "unlockLevel": "16"
   },
   {
     "uid": "0-11",
@@ -285,7 +301,7 @@
     "difficulty1": "4",
     "difficulty2": "6",
     "difficulty3": "8",
-    "unlockLevel": "16"
+    "unlockLevel": "17"
   },
   {
     "uid": "0-12",
@@ -301,7 +317,7 @@
     "difficulty1": "2",
     "difficulty2": "5",
     "difficulty3": "8",
-    "unlockLevel": "17"
+    "unlockLevel": "18"
   },
   {
     "uid": "0-40",
@@ -317,7 +333,7 @@
     "difficulty1": "3",
     "difficulty2": "5",
     "difficulty3": "7",
-    "unlockLevel": "18"
+    "unlockLevel": "19"
   },
   {
     "uid": "0-13",
@@ -333,7 +349,7 @@
     "difficulty1": "3",
     "difficulty2": "5",
     "difficulty3": "8",
-    "unlockLevel": "19"
+    "unlockLevel": "20"
   },
   {
     "uid": "0-32",
@@ -349,7 +365,7 @@
     "difficulty1": "4",
     "difficulty2": "6",
     "difficulty3": "9",
-    "unlockLevel": "20"
+    "unlockLevel": "21"
   },
   {
     "uid": "0-14",
@@ -365,7 +381,7 @@
     "difficulty1": "2",
     "difficulty2": "5",
     "difficulty3": "8",
-    "unlockLevel": "21"
+    "unlockLevel": "22"
   },
   {
     "uid": "0-15",
@@ -381,7 +397,7 @@
     "difficulty1": "2",
     "difficulty2": "5",
     "difficulty3": "8",
-    "unlockLevel": "22"
+    "unlockLevel": "23"
   },
   {
     "uid": "0-16",
@@ -397,7 +413,7 @@
     "difficulty1": "3",
     "difficulty2": "5",
     "difficulty3": "7",
-    "unlockLevel": "23"
+    "unlockLevel": "24"
   },
   {
     "uid": "0-17",
@@ -413,7 +429,7 @@
     "difficulty1": "4",
     "difficulty2": "6",
     "difficulty3": "8",
-    "unlockLevel": "24"
+    "unlockLevel": "25"
   },
   {
     "uid": "0-18",
@@ -429,7 +445,7 @@
     "difficulty1": "3",
     "difficulty2": "6",
     "difficulty3": "8",
-    "unlockLevel": "25"
+    "unlockLevel": "26"
   },
   {
     "uid": "0-19",
@@ -445,7 +461,7 @@
     "difficulty1": "3",
     "difficulty2": "6",
     "difficulty3": "9",
-    "unlockLevel": "26"
+    "unlockLevel": "27"
   },
   {
     "uid": "0-20",
@@ -461,7 +477,23 @@
     "difficulty1": "3",
     "difficulty2": "6",
     "difficulty3": "8",
-    "unlockLevel": "27"
+    "unlockLevel": "28"
+  },
+  {
+    "uid": "0-47",
+    "name": "クリスマスなんて興味ないけど",
+    "author": "かめりあ feat.ななひら",
+    "bpm": "136",
+    "music": "i_dont_care_about_christmas_though_music",
+    "demo": "i_dont_care_about_christmas_though_demo",
+    "cover": "i_dont_care_about_christmas_though_cover",
+    "noteJson": "i_dont_care_about_christmas_though_map",
+    "scene": "scene_05",
+    "levelDesigner": "Howard_Y",
+    "difficulty1": "4",
+    "difficulty2": "6",
+    "difficulty3": "8",
+    "unlockLevel": "29"
   },
   {
     "uid": "0-21",
@@ -477,7 +509,7 @@
     "difficulty1": "4",
     "difficulty2": "6",
     "difficulty3": "8",
-    "unlockLevel": "28"
+    "unlockLevel": "31"
   },
   {
     "uid": "0-22",
@@ -493,7 +525,7 @@
     "difficulty1": "4",
     "difficulty2": "7",
     "difficulty3": "9",
-    "unlockLevel": "29"
+    "unlockLevel": "32"
   },
   {
     "uid": "0-42",
@@ -509,7 +541,7 @@
     "difficulty1": "2",
     "difficulty2": "5",
     "difficulty3": "7",
-    "unlockLevel": "31"
+    "unlockLevel": "33"
   },
   {
     "uid": "0-33",
@@ -525,7 +557,7 @@
     "difficulty1": "4",
     "difficulty2": "7",
     "difficulty3": "9",
-    "unlockLevel": "32"
+    "unlockLevel": "34"
   },
   {
     "uid": "0-44",
@@ -541,7 +573,7 @@
     "difficulty1": "4",
     "difficulty2": "6",
     "difficulty3": "9",
-    "unlockLevel": "33"
+    "unlockLevel": "35"
   },
   {
     "uid": "0-34",
@@ -557,7 +589,7 @@
     "difficulty1": "5",
     "difficulty2": "7",
     "difficulty3": "9",
-    "unlockLevel": "34"
+    "unlockLevel": "36"
   },
   {
     "uid": "0-23",
@@ -573,7 +605,7 @@
     "difficulty1": "4",
     "difficulty2": "6",
     "difficulty3": "9",
-    "unlockLevel": "36"
+    "unlockLevel": "37"
   },
   {
     "uid": "0-24",
@@ -729,9 +761,7 @@
     "cover": "mopemope_cover",
     "noteJson": "mopemope_map",
     "scene": "scene_05",
-    "levelDesigner1": "Howard_Y in_tha_W0ndeR1and_",
-    "levelDesigner2": "Howard_Y in_tha_W0ndeR1and_",
-    "levelDesigner3": "Howard_Y in_tha_W0ndeR1and_",
+    "levelDesigner": "Howard_Y in_tha_W0ndeR1and_",
     "difficulty1": "4",
     "difficulty2": "7",
     "difficulty3": "9",

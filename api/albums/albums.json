@@ -17,6 +17,15 @@
 		"free" : false,
 	},
 	{
+		"uid": "music_package_32",
+		"title": "Let's do bad things together!",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM33",
+		"prefabsName": "AlbumDisco33",
+		"free" : false,
+	},
+	{
 		"uid": "music_package_31",
 		"title": "Happy Otaku Pack Vol.11",
 		"needPurchase": true,
