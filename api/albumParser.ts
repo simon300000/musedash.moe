@@ -5,12 +5,12 @@ import { AlbumLang, Album, Music, MusicLang, MusicData, Albums } from './type'
 const availableLocales = ['ChineseS', 'ChineseT', 'English', 'Japanese', 'Korean'] as const
 export type AvailableLocales = typeof availableLocales[number]
 
-async function parseFile <T> (file: string): Promise<T> {
+async function parseFile<T>(file: string): Promise<T> {
   // eslint-disable-next-line no-control-regex
   return JSON.parse(String(await fs.readFile(join(__dirname, 'albums', `${file}.json`))).replace(/\n/g, '').replace(/,( |\x09)*}/g, '}').replace(/,( |\x09)*]/g, ']'))
 }
 
-async function readLocale <S, T> (file: string) {
+async function readLocale<S, T>(file: string) {
   const content = await parseFile<S[]>(file)
   const locales = await Promise.all(availableLocales
     .map(locale => parseFile<T[]>(`${file}_${locale}`)))
@@ -29,12 +29,12 @@ export default async (): Promise<Albums> => {
     .map(({ title, jsonName, ChineseS, ChineseT, English, Japanese, Korean }) => ({ title, json: jsonName, ChineseS, ChineseT, English, Japanese, Korean }))
     .map(async object => {
       const music = (await readLocale<Music, MusicLang>(object.json))
-        .map<MusicData>(({ uid, name, author, cover, difficulty1, difficulty2, difficulty3, difficulty4 = '0', ChineseS, ChineseT, English, Japanese, Korean, levelDesigner, levelDesigner1, levelDesigner2, levelDesigner3 }) => ({
+        .map<MusicData>(({ uid, name, author, cover, difficulty1, difficulty2, difficulty3, difficulty4 = '0', ChineseS, ChineseT, English, Japanese, Korean, levelDesigner, levelDesigner1, levelDesigner2, levelDesigner3, levelDesigner4 }) => ({
           uid,
           name,
           author,
           cover,
-          levelDesigner: levelDesigner ? [levelDesigner] : [levelDesigner1, levelDesigner2, levelDesigner3],
+          levelDesigner: levelDesigner ? [levelDesigner] : [levelDesigner1, levelDesigner2, levelDesigner3, levelDesigner4].filter(Boolean),
           difficulty: [difficulty1, difficulty2, difficulty3, difficulty4],
           ChineseS,
           ChineseT,
