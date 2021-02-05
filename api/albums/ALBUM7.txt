@@ -76,9 +76,11 @@
     "levelDesigner1": "Phizer",
     "levelDesigner2": "Phizer",
     "levelDesigner3": "Phizer",
+    "levelDesigner4": "Howard_Y",
     "difficulty1": "2",
     "difficulty2": "5",
     "difficulty3": "8",
+    "difficulty4": "9",
     "unlockLevel": "0"
   },
   {

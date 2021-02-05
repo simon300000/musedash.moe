@@ -6,7 +6,13 @@
 		"title": "计划通"
 	},
 	{
-		"title": "一起来做坏事吧！"
+		"title": "HARDCORE TANO*C"
+	},
+	{
+		"title": "cyTus"
+	},
+	{
+		"title": "一起来干坏事吧"
 	},
 	{
 		"title": "肥宅快乐包 Vol.11"

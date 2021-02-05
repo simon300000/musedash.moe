@@ -6,6 +6,12 @@
 		"title": "計画通り"
 	},
 	{
+		"title": "HARDCORE TANO*C"
+	},
+	{
+		"title": "cyTus"
+	},
+	{
 		"title": "いっしょにわるいことをしよう"
 	},
 	{

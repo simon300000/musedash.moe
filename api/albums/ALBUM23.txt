@@ -28,6 +28,7 @@
             "levelDesigner1": "HOWARD_Y↓",
             "levelDesigner2": "HOWARD_Y↓",
             "levelDesigner3": "HOWARD_Y↓",
+            "levelDesigner4": "HOWARD↓Y",
             "difficulty1":"6",
             "difficulty2":"8",
             "difficulty3":"10",

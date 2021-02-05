@@ -28,6 +28,7 @@
             "levelDesigner1": "Howard_Y",
             "levelDesigner2": "Howard_Y",
             "levelDesigner3": "Howard_Y",
+            "levelDesigner4": "Howard_Y's Avatar",
             "difficulty1":"5",
             "difficulty2":"7",
             "difficulty3":"10",

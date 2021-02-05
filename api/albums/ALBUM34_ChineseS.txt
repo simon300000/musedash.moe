@@ -1,0 +1,54 @@
+[
+	{
+		"name": "Fireflies (Funk Fiction remix)",
+		"author": "Nikki Simmons"
+	},
+	{
+		"name": "Light up my love!!",
+		"author": "onoken feat. moco"
+	},
+	{
+		"name": "Happiness Breeze",
+		"author": "3R2 as DJ Mashiro"
+	},
+	{
+		"name": "Chrome VOX",
+		"author": "t+pazolite"
+	},
+	{
+		"name": "CHAOS",
+		"author": "Æsir"
+	},
+	{
+		"name": "Saika",
+		"author": "Rabpit"
+	},
+	{
+		"name": "Standby for Action",
+		"author": "3R2"
+	},
+	{
+		"name": "Hydrangea",
+		"author": "Tatsh"
+	},
+	{
+		"name": "Amenemhat",
+		"author": "Yesod (litmus* + Rabbit House + A. Ki)"
+	},
+	{
+		"name": "三灯火",
+		"author": "yuritoworks."
+	},
+	{
+		"name": "「妖怪録、我し来にけり。」",
+		"author": "TEZUKApo11o band ft. ランコ(豚乙女)+OFFICE萬田㈱"
+	},
+	{
+		"name": "Blah!!",
+		"author": "HiTECH NINJA"
+	},
+	{
+		"name": "CHAOS (Glitch)",
+		"author": "Æsir"
+	}
+]

@@ -6,7 +6,13 @@
 		"title": "계획대로"
 	},
 	{
-		"title": "같이 나쁜 짓 좀 해볼까!"
+		"title": "HARDCORE TANO*C"
+	},
+	{
+		"title": "cyTus"
+	},
+	{
+		"title": "같이 나쁜 짓 좀 해볼까"
 	},
 	{
 		"title": "오타쿠의 쾌락 모음 Vol.11"

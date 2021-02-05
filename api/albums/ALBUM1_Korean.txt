@@ -1,4 +1,5 @@
 [
+	{ "name": "Magical Wonderland (More colorful mix)", "author": "3R2" },
 	{ "name": "Iyaiya", "author": "小野道ono" },
 	{ "name": "Wonderful Pain", "author": "Haloweak" },
 	{ "name": "Breaking Dawn", "author": "TetraCalyx" },
@@ -16,6 +17,7 @@
 	{ "name": "Dohna Dohna no Uta", "author": "L-Minatsu feat.Tsukino" },
 	{ "name": "Spring Carnival", "author": "3R2" },
 	{ "name": "DISCO NIGHT", "author": "ANK feat.kumako" },
+	{ "name": "Koi no Moonlight", "author": "REDALiCE feat. Tamaki Inuyama" },
 	{ "name": "恋爱语音导航 feat.yousa", "author": "小野道ono" },
 	{ "name": "Lights of Muse", "author": "Ayatsugu_Otowa" },
 	{ "name": "midstream jam", "author": "MusMus" },
@@ -38,6 +40,8 @@
 	{ "name": "Star Driver", "author": "iKz feat.Qiyou" },
 	{ "name": "Formation", "author": "SLT" },
 	{ "name": "Shinsou Masui", "author": "iKz" },
+	{ "name": "Mezame Eurythmics", "author": "bermei.inazawa" },
+	{ "name": "Shenri Kuaira -repeat-", "author": "bermei.inazawa" },
 	{ "name": "Latitude", "author": "SLT" },
 	{ "name": "Aqua Stars", "author": "Sound Souler" },
 	{ "name": "Funkotsu Saishin Casino", "author": "Morimori Atsushi" }, 

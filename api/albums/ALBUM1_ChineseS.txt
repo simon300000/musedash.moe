@@ -1,5 +1,9 @@
 [
 	{
+		"name": "Magical Wonderland (More colorful mix)",
+		"author": "3R2"
+	},
+	{
 		"name": "Iyaiya",
 		"author": "小野道ono"
 	},
@@ -66,7 +70,11 @@
 	{
 		"name": "DISCO NIGHT",
 		"author": "ANK feat.熊子"
-	},	
+	},
+	{
+		"name": "恋のMoonlight",
+		"author": "REDALiCE feat. 犬山たまき"
+	},
 	{
 		"name": "恋爱语音导航 feat.yousa",
 		"author": "小野道ono"
@@ -154,6 +162,14 @@
 	{
 		"name": "心层麻醉",
 		"author": "iKz"
+	},
+	{
+		"name": "Mezame Eurythmics",
+		"author": "bermei.inazawa"
+	},
+	{
+		"name": "Shenri Kuaira -repeat-",
+		"author": "bermei.inazawa"
 	},
 	{
 		"name": "Latitude",

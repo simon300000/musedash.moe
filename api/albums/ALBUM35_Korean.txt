@@ -1,0 +1,26 @@
+[
+	{
+		"name": "ALiVE",
+		"author": "REDALiCE"
+	},
+	{
+		"name": "BATTLE NO.1",
+		"author": "TANO*C Sound Team"
+	},
+	{
+		"name": "Cthugha",
+		"author": "USAO"
+	},
+	{
+		"name": "TWINKLE★MAGIC",
+		"author": "P*Light"
+	},
+	{
+		"name": "Comet Coaster",
+		"author": "DJ Noriken & aran"
+	},
+	{
+		"name": "XODUS",
+		"author": "DJ Myosuke & Gram"
+	}
+]

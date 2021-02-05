@@ -61,6 +61,7 @@
     "difficulty1": "4",
     "difficulty2": "6",
     "difficulty3": "8",
+    "difficulty4": "9",
     "unlockLevel": "0"
   },
   {
