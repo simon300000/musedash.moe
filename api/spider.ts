@@ -17,7 +17,7 @@ const downloadCore = async ({ api, uid, difficulty }): Promise<APIResults | void
 const download = async ({ api, uid, difficulty }): Promise<APIResults> => {
   const result = await downloadCore({ api, uid, difficulty })
   if (!result) {
-    // console.log('retry')
+    console.log(`RETRY: ${uid} - ${difficulty} - ${api}`)
     await wait(1000 * 60 * Math.random())
     return download({ api, uid, difficulty })
   } else {
@@ -40,7 +40,7 @@ const core = async ({ pending, rank }: { pending: ReturnType<typeof prepare>, ra
       .filter(({ play, user }) => play && user)
     if (!result.length) {
       pending.unshift(music)
-      // console.log(`RETRY: ${uid}: ${name} - ${difficulty} - ${platform}`)
+      console.log(`EMPTY, RETRY: ${uid}: ${name} - ${difficulty} - ${platform}`)
       continue
     }
 
@@ -56,11 +56,7 @@ const core = async ({ pending, rank }: { pending: ReturnType<typeof prepare>, ra
 
     await rank.put({ uid, difficulty, platform, value: resultWithHistory })
 
-    if (pending.length % 100 === 1) {
-      console.log(`...~${uid}: ${name} - ${difficulty} - ${platform} / ${pending.length}`)
-    }
-
-    // console.log(`${uid}: ${name} - ${difficulty} - ${platform} / ${pending.length}`)
+    console.log(`${uid}: ${name} - ${difficulty} - ${platform} / ${pending.length}`)
   }
 }
 
