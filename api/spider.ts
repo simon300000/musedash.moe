@@ -36,13 +36,16 @@ const core = async ({ pending, rank }: { pending: ReturnType<typeof prepare>, ra
   while (pending.length) {
     const music = pending.shift()
     const { uid, difficulty, name, platform, api } = music
-    const result = (await download({ uid, difficulty, api }).catch((): APIResults => []))
+    const result = (await download({ uid, difficulty, api }).catch((): APIResults => undefined))
       .filter(({ play, user }) => play && user)
 
     const currentUidRank: string[] = (await rank.get({ uid, difficulty, platform }) || []).map(({ play }) => play.user_id)
 
-    if (!result.length) {
-      console.error(`EMPTY: ${uid}: ${name} - ${difficulty} - ${platform}`)
+    if (!result) {
+      pending.unshift(music)
+      await wait(1000 * 60 * Math.random())
+      console.error(`ERROR, RETRY: ${uid}: ${name} - ${difficulty} - ${platform}`)
+      continue
     }
 
     const resultWithHistory = result.map(r => {
