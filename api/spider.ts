@@ -17,7 +17,7 @@ const downloadCore = async ({ api, uid, difficulty }): Promise<APIResults | void
 const download = async ({ api, uid, difficulty }): Promise<APIResults> => {
   const result = await downloadCore({ api, uid, difficulty })
   if (!result) {
-    console.log(`RETRY: ${uid} - ${difficulty} - ${api}`)
+    console.error(`RETRY: ${uid} - ${difficulty} - ${api}`)
     await wait(1000 * 60 * Math.random())
     return download({ api, uid, difficulty })
   } else {
@@ -41,10 +41,8 @@ const core = async ({ pending, rank }: { pending: ReturnType<typeof prepare>, ra
 
     const currentUidRank: string[] = (await rank.get({ uid, difficulty, platform }) || []).map(({ play }) => play.user_id)
 
-    if (currentUidRank.length && !result.length) {
-      pending.unshift(music)
-      console.log(`EMPTY, RETRY: ${uid}: ${name} - ${difficulty} - ${platform}`)
-      continue
+    if (!result.length) {
+      console.error(`EMPTY: ${uid}: ${name} - ${difficulty} - ${platform}`)
     }
 
     const resultWithHistory = result.map(r => {
