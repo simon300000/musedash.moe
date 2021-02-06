@@ -38,13 +38,14 @@ const core = async ({ pending, rank }: { pending: ReturnType<typeof prepare>, ra
     const { uid, difficulty, name, platform, api } = music
     const result = (await download({ uid, difficulty, api }).catch((): APIResults => []))
       .filter(({ play, user }) => play && user)
-    if (!result.length) {
+
+    const currentUidRank: string[] = (await rank.get({ uid, difficulty, platform }) || []).map(({ play }) => play.user_id)
+
+    if (currentUidRank.length && !result.length) {
       pending.unshift(music)
       console.log(`EMPTY, RETRY: ${uid}: ${name} - ${difficulty} - ${platform}`)
       continue
     }
-
-    const currentUidRank: string[] = (await rank.get({ uid, difficulty, platform }) || []).map(({ play }) => play.user_id)
 
     const resultWithHistory = result.map(r => {
       if (currentUidRank.length) {
