@@ -33,7 +33,7 @@ const prepare = (music: Musics) => music
   .filter(({ level }) => level !== '0')
 
 const core = async ({ pending, rank }: { pending: ReturnType<typeof prepare>, rank: any }) => {
-  for (; pending.length;) {
+  while (pending.length) {
     const music = pending.shift()
     const { uid, difficulty, name, platform, api } = music
     const result = (await download({ uid, difficulty, api }).catch((): APIResults => []))
