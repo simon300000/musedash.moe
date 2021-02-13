@@ -63,4 +63,10 @@ export default {
 .clickable {
   cursor: pointer;
 }
+.level-item {
+  flex: 1;
+}
+.level-item:nth-child(2) {
+  flex: 2;
+}
 </style>
