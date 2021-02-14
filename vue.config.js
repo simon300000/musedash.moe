@@ -9,8 +9,8 @@ module.exports = {
   devServer: {
     proxy: {
       '^/api': {
-        // target: 'https://api.musedash.moe',
-        target: 'http://0.0.0.0:8301',
+        // target: 'https://api.musedash.moe', // use production api
+        target: 'http://0.0.0.0:8301', // local api
         changeOrigin: true,
         pathRewrite: {
           '^/api/': '/'

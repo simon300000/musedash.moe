@@ -66,6 +66,8 @@ npm install
 npm run serve
 ```
 
+Modify `vue.config.js`, to use production api server
+
 #### Compiles backend with watch for development
 
 ```sh
@@ -76,7 +78,7 @@ npm run dev
 
 #### Compiles frontend and minifies for production
 ```sh
-npm run build
+npm run build:vue
 ```
 
 #### Compiles backend for production
