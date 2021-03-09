@@ -20,8 +20,8 @@
 
       <div class="navbar-end">
         <div class="navbar-end">
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link is-arrowless">
+          <div class="navbar-item has-dropdown is-hoverable" :class="{'is-active': menu}">
+            <a class="navbar-link is-arrowless" @click="switchMenu">
               {{currentLang}}
             </a>
             <div class="navbar-dropdown is-right" @click="closeMenu()">
