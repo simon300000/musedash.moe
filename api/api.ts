@@ -25,6 +25,25 @@ app.use(async (ctx, next) => {
   }
 })
 
+const logs: string[] = []
+
+const logInsert = (s: string) => {
+  logs.unshift(s)
+  if (logs.length > 2048) {
+    logs.pop()
+  }
+}
+
+export const log = (s: string) => {
+  console.log(s)
+  logInsert(s)
+}
+
+export const error = (s: string) => {
+  console.error(s)
+  logInsert(s)
+}
+
 export default ({ albums, rank, player, search }: { albums: Albums, rank, player, search }) => {
   const albumsObject = Object.fromEntries(albums.map(album => [album.json, { ...album, music: Object.fromEntries(album.music.map(music => [music.uid, music])) }]))
   const router = new Router()
@@ -72,6 +91,10 @@ export default ({ albums, rank, player, search }: { albums: Albums, rank, player
     } else {
       ctx.body = []
     }
+  })
+
+  router.get('/log', ctx => {
+    ctx.body = logs.join('\n')
   })
 
   app.use(router.routes())

@@ -5,6 +5,8 @@ import { PARALLEL } from './config'
 
 import got from 'got'
 
+import { log,error } from './api'
+
 const wait = (ms: number): Promise<undefined> => new Promise(resolve => setTimeout(resolve, ms))
 
 const platforms = {
@@ -17,7 +19,7 @@ const downloadCore = async ({ api, uid, difficulty }): Promise<APIResults | void
 const download = async ({ api, uid, difficulty }): Promise<APIResults> => {
   const result = await downloadCore({ api, uid, difficulty })
   if (!result) {
-    console.error(`RETRY: ${uid} - ${difficulty} - ${api}`)
+    error(`RETRY: ${uid} - ${difficulty} - ${api}`)
     await wait(1000 * 60 * Math.random())
     return download({ api, uid, difficulty })
   } else {
@@ -44,7 +46,7 @@ const core = async ({ pending, rank }: { pending: ReturnType<typeof prepare>, ra
     if (!result) {
       pending.unshift(music)
       await wait(1000 * 60 * Math.random())
-      console.error(`ERROR, RETRY: ${uid}: ${name} - ${difficulty} - ${platform}`)
+      error(`ERROR, RETRY: ${uid}: ${name} - ${difficulty} - ${platform}`)
       continue
     }
 
@@ -58,7 +60,7 @@ const core = async ({ pending, rank }: { pending: ReturnType<typeof prepare>, ra
 
     await rank.put({ uid, difficulty, platform, value: resultWithHistory })
 
-    console.log(`${uid}: ${name} - ${difficulty} - ${platform} / ${pending.length}`)
+    log(`${uid}: ${name} - ${difficulty} - ${platform} / ${pending.length}`)
   }
 }
 
@@ -105,7 +107,7 @@ const sumRank = ({ musicList }: { musicList: ReturnType<typeof prepare> }) => mu
 
 const makeSearch = ({ player, search }) => new Promise(async resolve => {
   await search.clear()
-  console.log('Search cleared')
+  log('Search cleared')
   const batch = search.batch()
   const stream = player.createValueStream()
   stream.on('data', ({ user: { nickname, user_id } }) => batch.put(user_id, nickname.toLowerCase()))
@@ -113,29 +115,29 @@ const makeSearch = ({ player, search }) => new Promise(async resolve => {
 })
 
 const mal = async ({ music, player, search }) => {
-  console.log('Start!')
+  log('Start!')
   const musicList = prepare(music)
   await round({ musicList, rank })
-  console.log('Downloaded')
+  log('Downloaded')
   await sumRank({ musicList })
-  console.log('Ranked')
+  log('Ranked')
   await analyze({ musicList, player })
-  console.log('Analyzed')
+  log('Analyzed')
   await makeSearch({ player, search })
-  console.log('Search Cached')
+  log('Search Cached')
 }
 
 export default async ({ music, player, search }: { music: Musics, player: number, search }) => {
-  console.log('hi~')
+  log('hi~')
   await mal({ music, player, search })
   while (true) {
     const currentHour = new Date().getUTCHours()
     const waitTime = (19 - currentHour + 24) % 24 || 24
-    console.log(`WAIT: ${waitTime}h`)
+    log(`WAIT: ${waitTime}h`)
     await wait(waitTime * 60 * 60 * 1000)
     const startTime = Date.now()
     await mal({ music, player, search })
     const endTime = Date.now()
-    console.log(`TAKE ${endTime - startTime}, at ${new Date().toString()}`)
+    log(`TAKE ${endTime - startTime}, at ${new Date().toString()}`)
   }
 }
