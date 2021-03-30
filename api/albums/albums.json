@@ -17,6 +17,15 @@
 		"free" : false,
 	},
 	{
+		"uid": "music_package_35",
+		"title": "Happy Otaku Pack SP",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM36",
+		"prefabsName": "AlbumDisco36",
+		"free" : false,
+	},
+	{
 		"uid": "music_package_34",
 		"title": "HARDCORE TANO*C",
 		"needPurchase": true,
