@@ -7,7 +7,7 @@ export type AvailableLocales = typeof availableLocales[number]
 
 async function parseFile<T>(file: string): Promise<T> {
   // eslint-disable-next-line no-control-regex
-  return JSON.parse(String(await fs.readFile(join(__dirname, 'albums', `${file}.txt`))).replace(/\n/g, '').replace(/,( |\x09)*}/g, '}').replace(/,( |\x09)*]/g, ']'))
+  return JSON.parse(String(await fs.readFile(join(__dirname, 'albums', `${file}.json`))).replace(/\n/g, '').replace(/,( |\x09)*}/g, '}').replace(/,( |\x09)*]/g, ']'))
 }
 
 async function readLocale<S, T>(file: string) {
