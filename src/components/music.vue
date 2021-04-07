@@ -28,18 +28,22 @@
 import Capsule from './capsule'
 
 export default {
-  props: ['music', 'platform'],
+  props: ['music', 'platform', 'level'],
   components: {
     Capsule
   },
   computed: {
     levelDesigner() {
       const levelDesigner = this.music.levelDesigner
-      const s = [...new Set(levelDesigner)]
-      if (s.length === 1) {
-        return [levelDesigner[0]]
+      if (levelDesigner[this.level]) {
+        return [levelDesigner[this.level]]
       } else {
-        return levelDesigner
+        const s = [...new Set(levelDesigner)]
+        if (s.length === 1) {
+          return [levelDesigner[0]]
+        } else {
+          return levelDesigner
+        }
       }
     }
   }
