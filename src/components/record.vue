@@ -19,12 +19,16 @@
   </div>
   <div class="level-item">
     <div>
-      <router-link tag="p" class="title is-3 is-spaced clickable" :to="`/music/${play.uid}/${play.difficulty}/${play.platform}`">
-        <octicon v-if="play.platform === 'pc'" name="device-desktop" width="24" height="24"></octicon>
-        <octicon v-else name="device-mobile" width="15" height="24"></octicon>
-        #{{play.i+1}}
+      <router-link :to="`/music/${play.uid}/${play.difficulty}/${play.platform}`">
+        <p class="title is-3 is-spaced clickable">
+          <octicon v-if="play.platform === 'pc'" name="device-desktop" width="24" height="24"></octicon>
+          <octicon v-else name="device-mobile" width="15" height="24"></octicon>
+          #{{play.i+1}}
+        </p>
       </router-link>
-      <router-link tag="p" class="subtitle is-6 is-spaced clickable" :to="`/music/${play.uid}/${play.difficulty}`">{{ha?'Insgesamt':'sum'}} #{{play.sum+1}}</router-link>
+      <router-link :to="`/music/${play.uid}/${play.difficulty}`">
+        <p class="subtitle is-6 is-spaced clickable">{{ha?'Insgesamt':'sum'}} #{{play.sum+1}}</p>
+      </router-link>
     </div>
   </div>
 </nav>
@@ -63,9 +67,11 @@ export default {
 .clickable {
   cursor: pointer;
 }
+
 .level-item {
   flex: 1;
 }
+
 .level-item:nth-child(2) {
   flex: 2;
 }

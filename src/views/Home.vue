@@ -5,8 +5,8 @@
     <findMusic></findMusic>
     <div class="tabs is-centered is-large">
       <ul>
-        <router-link :to="`/albums/${album.json}`" active-class="is-active" tag="li" :key="album.json" v-for="album in albums">
-          <a><span>{{album.title}}</span></a>
+        <router-link :to="`/albums/${album.json}`" :key="album.json" v-for="album in albums" custom v-slot="{ navigate, href, isActive }">
+          <li @click="navigate" @keypress.enter="navigate" :class="{ 'is-active': isActive }"><a :href="href"><span>{{album.title}}</span></a></li>
         </router-link>
       </ul>
     </div>
