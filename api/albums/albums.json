@@ -17,6 +17,15 @@
 		"free" : false,
 	},
 	{
+		"uid": "music_package_36",
+		"title": "Give Up TREATMENT Vol.10",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM37",
+		"prefabsName": "AlbumDisco37",
+		"free" : false,
+	},
+	{
 		"uid": "music_package_35",
 		"title": "Happy Otaku Pack SP",
 		"needPurchase": true,
