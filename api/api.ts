@@ -1,9 +1,11 @@
 /* eslint camelcase: ["off"] */
-import { Albums } from './type.js'
-
 import Koa from 'koa'
 import Router from '@koa/router'
 import LRU from 'lru-cache'
+
+import { Albums } from './type.js'
+import { rank, player, search } from './database.js'
+import { albums } from './albumParser.js'
 
 const cache = new LRU({
   maxAge: 1000 * 5,
@@ -44,60 +46,68 @@ export const error = (s: string) => {
   logInsert(s)
 }
 
-export default ({ albums, rank, player, search }: { albums: Albums, rank, player, search }) => {
-  const albumsObject = Object.fromEntries(albums.map(album => [album.json, { ...album, music: Object.fromEntries(album.music.map(music => [music.uid, music])) }]))
-  const router = new Router()
+const parseAlbums = (a: Albums) => Object.fromEntries(a.map(album => [album.json, { ...album, music: Object.fromEntries(album.music.map(music => [music.uid, music])) }]))
 
-  router.get('/albums', ctx => {
-    ctx.body = albumsObject
-  })
+let albumsObject: ReturnType<typeof parseAlbums>
 
-  router.get('/rank/:uid/:difficulty/:platform', async ctx => {
-    let result = await rank.get(ctx.params)
-    if (result) {
-      if (ctx.params.platform === 'all') {
-        result = result.map(({ play: { acc, score }, history: { lastRank } = { lastRank: -1 }, user: { nickname, user_id }, platform }) => [acc, score, lastRank, nickname, user_id, platform])
-      } else {
-        result = result.map(({ play: { acc, score }, history: { lastRank } = { lastRank: -1 }, user: { nickname, user_id } }) => [acc, score, lastRank, nickname, user_id])
-      }
-    }
-    ctx.body = result
-  })
-
-  router.get('/player/:id', async ctx => {
-    ctx.body = await player.get(ctx.params.id).catch(() => undefined)
-  })
-
-  router.get('/search/:string', async ctx => {
-    const query = [...new Set(ctx.params.string
-      .toLowerCase()
-      .split(' ')
-      .filter(Boolean))]
-    if (query.length) {
-      const profiles: Promise<any>[] = await new Promise(resolve => {
-        let result = []
-        const stream = search.createReadStream()
-        stream.on('data', ({ key: user_id, value: nickname }) => {
-          if (!query.find(word => !nickname.includes(word))) {
-            result.push(player.get(user_id)
-              .then(({ user: { nickname, user_id } }) => [nickname, user_id])
-              .catch(() => undefined))
-          }
-        })
-        stream.on('close', () => resolve(result))
-      })
-      const result = await Promise.all(profiles)
-      ctx.body = result.filter(Boolean)
-    } else {
-      ctx.body = []
-    }
-  })
-
-  router.get('/log', ctx => {
-    ctx.body = logs.join('\n')
-  })
-
-  app.use(router.routes())
-
-  app.listen(8301)
+export const reloadAlbums = async () => {
+  albumsObject = parseAlbums(await albums())
+  console.log('Reload Albums')
 }
+
+reloadAlbums()
+
+const router = new Router()
+
+router.get('/albums', ctx => {
+  ctx.body = albumsObject
+})
+
+router.get('/rank/:uid/:difficulty/:platform', async ctx => {
+  let result = await rank.get(ctx.params as any)
+  if (result) {
+    if (ctx.params.platform === 'all') {
+      result = result.map(({ play: { acc, score }, history: { lastRank } = { lastRank: -1 }, user: { nickname, user_id }, platform }) => [acc, score, lastRank, nickname, user_id, platform])
+    } else {
+      result = result.map(({ play: { acc, score }, history: { lastRank } = { lastRank: -1 }, user: { nickname, user_id } }) => [acc, score, lastRank, nickname, user_id])
+    }
+  }
+  ctx.body = result
+})
+
+router.get('/player/:id', async ctx => {
+  ctx.body = await player.get(ctx.params.id).catch(() => undefined)
+})
+
+router.get('/search/:string', async ctx => {
+  const query = [...new Set(ctx.params.string
+    .toLowerCase()
+    .split(' ')
+    .filter(Boolean))]
+  if (query.length) {
+    const profiles: Promise<any>[] = await new Promise(resolve => {
+      const result = []
+      const stream = search.createReadStream()
+      stream.on('data', ({ key: user_id, value: nickname }) => {
+        if (!query.find(word => !nickname.includes(word))) {
+          result.push(player.get(user_id)
+            .then(({ user: { nickname: name, user_id: id } }) => [name, id])
+            .catch(() => undefined))
+        }
+      })
+      stream.on('close', () => resolve(result))
+    })
+    const result = await Promise.all(profiles)
+    ctx.body = result.filter(Boolean)
+  } else {
+    ctx.body = []
+  }
+})
+
+router.get('/log', ctx => {
+  ctx.body = logs.join('\n')
+})
+
+app.use(router.routes())
+
+app.listen(8301)

@@ -1,6 +1,6 @@
 import { join, dirname } from 'path'
 import { promises as fs } from 'fs'
-import { AlbumLang, Album, Music, MusicLang, MusicData, Albums } from './type.js'
+import { AlbumLang, Album, Music, MusicLang, MusicData, Albums, Musics } from './type.js'
 import { fileURLToPath } from 'url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -26,8 +26,8 @@ async function readLocale<S, T>(file: string) {
     })
 }
 
-export default async (): Promise<Albums> => {
-  const albums = (await readLocale<Album, AlbumLang>('albums'))
+export const albums = async (): Promise<Albums> => {
+  const w = (await readLocale<Album, AlbumLang>('albums'))
     .filter(album => album.jsonName)
     .map(({ title, jsonName, ChineseS, ChineseT, English, Japanese, Korean }) => ({ title, json: jsonName, ChineseS, ChineseT, English, Japanese, Korean }))
     .map(async object => {
@@ -47,5 +47,7 @@ export default async (): Promise<Albums> => {
         }))
       return { ...object, music }
     })
-  return Promise.all(albums)
+  return Promise.all(w)
 }
+
+export const musics = async (): Promise<Musics> => (await albums()).flatMap(({ music }) => music)

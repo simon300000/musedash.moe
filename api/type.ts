@@ -79,3 +79,13 @@ interface APIResult {
 }
 
 export type APIResults = APIResult[]
+
+export interface MusicCore {
+  uid: string,
+  difficulty: number
+}
+
+export interface RankCore extends MusicCore {
+  api: string,
+  platform: string
+}
