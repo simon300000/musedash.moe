@@ -1,8 +1,11 @@
 import Koa from 'koa'
 import serve from 'koa-static'
 
-import { createBundleRenderer } from 'vue-server-renderer'
+import vsr from 'vue-server-renderer'
 import { readFileSync } from 'fs'
+
+const { createBundleRenderer } = vsr
+
 const serverBundle = JSON.parse(readFileSync('./dist/vue-ssr-server-bundle.json'))
 const clientManifest = JSON.parse(readFileSync('./dist/vue-ssr-client-manifest.json'))
 
