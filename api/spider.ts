@@ -132,7 +132,7 @@ const makeSearch = () => new Promise(async resolve => {
 
 const mal = async () => {
   log('Start!')
-  const musicList = [(await musics())[0]]
+  const musicList = await musics()
   const pfs = musicList.map(prepare)
   const datass = await parallel(PARALLEL, pfs)
   log('Downloaded')
