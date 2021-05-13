@@ -2,9 +2,11 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import OptimizeCSSPlugin from 'optimize-css-assets-webpack-plugin'
 import safeParser from 'postcss-safe-parser'
 import TerserPlugin from 'terser-webpack-plugin'
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
+import * as wba from 'webpack-bundle-analyzer'
 
 import utils from './utils.js'
+
+const { BundleAnalyzerPlugin } = wba
 
 const config = {
   mode: 'production',
