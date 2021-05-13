@@ -7,7 +7,7 @@ import devConfig from './webpack.dev.config.js'
 import VueLoaderPlugin from 'vue-loader/lib/plugin.js'
 import SizePlugin from 'size-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
-import * as wwp from 'workbox-webpack-plugin'
+import wwp from 'workbox-webpack-plugin'
 
 import { fileURLToPath } from 'url'
 
