@@ -1,9 +1,9 @@
-import parser from './albumParser'
+import parser from './albumParser.js'
 
-import { rank, player, search } from './database'
-import spider from './spider'
+import { rank, player, search } from './database.js'
+import spider from './spider.js'
 
-import api from './api'
+import api from './api.js'
 
 (async () => {
   const albums = await parser()

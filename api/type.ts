@@ -1,4 +1,4 @@
-import { AvailableLocales } from './albumParser'
+import { AvailableLocales } from './albumParser.js'
 
 /* eslint camelcase: ["off"] */
 export interface MusicLang {

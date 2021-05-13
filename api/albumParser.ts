@@ -1,6 +1,9 @@
-import { join } from 'path'
+import { join, dirname } from 'path'
 import { promises as fs } from 'fs'
-import { AlbumLang, Album, Music, MusicLang, MusicData, Albums } from './type'
+import { AlbumLang, Album, Music, MusicLang, MusicData, Albums } from './type.js'
+import { fileURLToPath } from 'url'
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
 
 const availableLocales = ['ChineseS', 'ChineseT', 'English', 'Japanese', 'Korean'] as const
 export type AvailableLocales = typeof availableLocales[number]

@@ -1,10 +1,14 @@
-const ora = require('ora')
-const chalk = require('chalk')
-const webpackServerConfig = require('./webpack.server.config')
-const webpackClientConfig = require('./webpack.client.config')
-const path = require('path')
-const rm = require('rimraf')
-const webpack = require('webpack')
+import ora from 'ora'
+import chalk from 'chalk'
+import webpackServerConfig from './webpack.server.config.js'
+import webpackClientConfig from './webpack.client.config.js'
+import path from 'path'
+import rm from 'rimraf'
+import webpack from 'webpack'
+
+import { fileURLToPath } from 'url'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const webpackBuild = async config => new Promise((resolve, reject) => webpack(config, (err, stats) => {
   if (err) {

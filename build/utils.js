@@ -1,8 +1,10 @@
 'use strict'
-const path = require('path')
+import path from 'path'
 
-exports.assetsPath = function(_path) {
+const assetsPath = function(_path) {
   const assetsSubDirectory = 'static'
 
   return path.posix.join(assetsSubDirectory, _path)
 }
+
+export default { assetsPath }

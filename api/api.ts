@@ -1,5 +1,5 @@
 /* eslint camelcase: ["off"] */
-import { Albums } from './type'
+import { Albums } from './type.js'
 
 import Koa from 'koa'
 import Router from '@koa/router'

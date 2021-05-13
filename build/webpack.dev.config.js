@@ -1,5 +1,5 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const utils = require('./utils')
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import utils from './utils.js'
 
 const config = {
   mode: 'development',
@@ -28,4 +28,4 @@ const config = {
   ]
 }
 
-module.exports = config
+export default config

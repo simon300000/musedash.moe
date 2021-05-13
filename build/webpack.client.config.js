@@ -1,8 +1,8 @@
-const merge = require('webpack-merge')
-const baseConfig = require('./webpack.base.config.js')
-const VueSSRClientPlugin = require('vue-server-renderer/client-plugin')
+import merge from 'webpack-merge'
+import baseConfig from './webpack.base.config.js'
+import VueSSRClientPlugin from 'vue-server-renderer/client-plugin.js'
 
-module.exports = merge(baseConfig, {
+export default merge(baseConfig, {
   entry: './src/entry-client.js',
   plugins: [
     new VueSSRClientPlugin()

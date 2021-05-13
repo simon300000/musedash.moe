@@ -1,11 +1,11 @@
 /* eslint camelcase: ["off"] */
-import { Musics, APIResults } from './type'
-import { rank } from './database'
-import { PARALLEL } from './config'
+import { Musics, APIResults } from './type.js'
+import { rank } from './database.js'
+import { PARALLEL } from './config.js'
 
 import got from 'got'
 
-import { log,error } from './api'
+import { log,error } from './api.js'
 
 const wait = (ms: number): Promise<undefined> => new Promise(resolve => setTimeout(resolve, ms))
 

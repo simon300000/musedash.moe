@@ -1,10 +1,10 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-const safeParser = require('postcss-safe-parser')
-const TerserPlugin = require('terser-webpack-plugin')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import OptimizeCSSPlugin from 'optimize-css-assets-webpack-plugin'
+import safeParser from 'postcss-safe-parser'
+import TerserPlugin from 'terser-webpack-plugin'
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
-const utils = require('./utils')
+import utils from './utils.js'
 
 const config = {
   mode: 'production',
@@ -54,4 +54,4 @@ if (process.env.npm_config_report) {
   config.plugins.push(new BundleAnalyzerPlugin())
 }
 
-module.exports = config
+export default config

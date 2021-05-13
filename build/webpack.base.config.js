@@ -1,13 +1,17 @@
-const path = require('path')
-const utils = require('./utils')
-const merge = require('webpack-merge')
-const prodConfig = require('./webpack.prod.config')
-const devConfig = require('./webpack.dev.config')
+import path from 'path'
+import utils from './utils.js'
+import merge from 'webpack-merge'
+import prodConfig from './webpack.prod.config.js'
+import devConfig from './webpack.dev.config.js'
 
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
-const SizePlugin = require('size-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const { GenerateSW } = require('workbox-webpack-plugin')
+import VueLoaderPlugin from 'vue-loader/lib/plugin.js'
+import SizePlugin from 'size-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import { GenerateSW } from 'workbox-webpack-plugin'
+
+import { fileURLToPath } from 'url'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
@@ -17,7 +21,7 @@ if (process.env.development) {
   console.log('Build for Development')
 }
 
-module.exports = merge(process.env.development ? devConfig : prodConfig, {
+export default merge(process.env.development ? devConfig : prodConfig, {
   context: path.resolve(__dirname, '../'),
   output: {
     filename: '[name].[contenthash].js',

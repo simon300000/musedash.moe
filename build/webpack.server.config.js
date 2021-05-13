@@ -1,10 +1,10 @@
-const merge = require('webpack-merge')
-const nodeExternals = require('webpack-node-externals')
-const baseConfig = require('./webpack.base.config.js')
-const VueSSRServerPlugin = require('vue-server-renderer/server-plugin')
-const CopyPlugin = require('copy-webpack-plugin')
+import merge from 'webpack-merge'
+import nodeExternals from 'webpack-node-externals'
+import baseConfig from './webpack.base.config.js'
+import VueSSRServerPlugin from 'vue-server-renderer/server-plugin.js'
+import CopyPlugin from 'copy-webpack-plugin'
 
-module.exports = merge(baseConfig, {
+export default merge(baseConfig, {
   entry: './src/entry-server.js',
   target: 'node',
   devtool: 'source-map',
