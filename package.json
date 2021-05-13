@@ -10,7 +10,9 @@
     "build:dev": "export development=true; node build:vue; node index",
     "lint": "vue-cli-service lint",
     "build:api": "tsc -b",
-    "dev": "tsc -b -w"
+    "dev": "tsc -b -w",
+    "api": "node api",
+    "moe": "node index"
   },
   "dependencies": {
     "@koa/router": "^9.0.1",
