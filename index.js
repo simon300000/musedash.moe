@@ -1,11 +1,15 @@
-const Koa = require('koa')
-const app = new Koa()
-const serve = require('koa-static')
+import Koa from 'koa'
+import serve from 'koa-static'
 
-const { createBundleRenderer } = require('vue-server-renderer')
-const template = require('fs').readFileSync('index.html', 'utf-8').replace('<div id="app"></div>', '<!--vue-ssr-outlet-->')
-const serverBundle = require('./dist/vue-ssr-server-bundle.json')
-const clientManifest = require('./dist/vue-ssr-client-manifest.json')
+import { createBundleRenderer } from 'vue-server-renderer'
+import { readFileSync } from 'fs'
+const serverBundle = JSON.parse(readFileSync('./dist/vue-ssr-server-bundle.json'))
+const clientManifest = JSON.parse(readFileSync('./dist/vue-ssr-client-manifest.json'))
+
+const app = new Koa()
+
+const template = readFileSync('index.html', 'utf-8').replace('<div id="app"></div>', '<!--vue-ssr-outlet-->')
+
 const renderer = createBundleRenderer(serverBundle, {
   runInNewContext: 'once',
   template,
