@@ -3,7 +3,7 @@
   <div class="level-left">
     <div class="level-item">
       <figure class="image is-128x128">
-        <img class="is-rounded" :src="`/covers/${music.cover}.png`">
+        <img class="is-rounded" :src="src" :alt="src">
       </figure>
     </div>
   </div>
@@ -33,6 +33,9 @@ export default {
     Capsule
   },
   computed: {
+    src() {
+      return `/covers/${this.music.cover}.png`
+    },
     levelDesigner() {
       const levelDesigner = this.music.levelDesigner
       if (levelDesigner[this.level]) {
