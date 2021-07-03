@@ -32,7 +32,8 @@ export const createStore = ({ lang, changeTitle }) => {
       albumsArray: ({ fullAlbums }) => Object.values(fullAlbums),
       allMusics: ({ fullAlbums }) => {
         return Object.assign({}, ...Object.values(fullAlbums).map(({ music }) => music))
-      }
+      },
+      musicAlbum: ({ fullAlbums }) => Object.fromEntries(Object.entries(fullAlbums).flatMap(([id, { music }]) => Object.keys(music).map(k => [k, id])))
     },
     mutations: {
       setAlbums(state, data) {
