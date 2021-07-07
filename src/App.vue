@@ -20,7 +20,7 @@
       </div>
 
       <div class="navbar-end">
-        <a class="navbar-item" @click="switchTheme()">{{otherTheme}}</a>
+        <a class="navbar-item" @click="switchTheme($event)" :href="`?theme=${nextTheme}`">{{otherTheme}}</a>
         <div class="navbar-end">
           <div class="navbar-item has-dropdown is-hoverable" :class="{'is-active': menu}">
             <a class="navbar-link is-arrowless" @click="switchMenu">
@@ -64,6 +64,18 @@ const langs = {
   Korean: '한국어'
 }
 
+const preventDefault = e => {
+  // don't redirect with control keys
+  if (e.metaKey || e.altKey || e.ctrlKey || e.shiftKey) return false
+  // don't redirect when preventDefault called
+  if (e.defaultPrevented) return false
+  // don't redirect on right click
+  if (e.button !== undefined && e.button !== 0) return false
+  // https://github.com/vuejs/vue-router/blob/65de048ee9f0ebf899ae99c82b71ad397727e55d/src/components/link.js#L159-L164
+  e.preventDefault()
+  return true
+}
+
 export default {
   data() {
     return { ha: false, menu: false }
@@ -86,6 +98,13 @@ export default {
     themeCss() {
       return this.theme === 'dark' ? dark : light
     },
+    nextTheme() {
+      if (this.theme === 'dark') {
+        return 'light'
+      } else {
+        return 'dark'
+      }
+    },
     otherTheme() {
       return this.theme === 'dark' ? '💡' : '🌙'
     }
@@ -96,17 +115,10 @@ export default {
   methods: {
     ...mapMutations(['setLang', 'setTheme', 'updateTitle']),
     updateLang(lang, e) {
-      // don't redirect with control keys
-      if (e.metaKey || e.altKey || e.ctrlKey || e.shiftKey) return
-      // don't redirect when preventDefault called
-      if (e.defaultPrevented) return
-      // don't redirect on right click
-      if (e.button !== undefined && e.button !== 0) return
-      // https://github.com/vuejs/vue-router/blob/65de048ee9f0ebf899ae99c82b71ad397727e55d/src/components/link.js#L159-L164
-      e.preventDefault()
-
-      this.setLang(lang)
-      this.$router.push({ query: { lang } })
+      if (preventDefault(e)) {
+        this.setLang(lang)
+        this.$router.push({ query: { lang } })
+      }
     },
     switchMenu() {
       this.menu = !this.menu
@@ -114,11 +126,9 @@ export default {
     closeMenu() {
       this.menu = false
     },
-    switchTheme() {
-      if (this.theme === 'dark') {
-        this.setTheme('light')
-      } else {
-        this.setTheme('dark')
+    switchTheme(e) {
+      if (preventDefault(e)) {
+        this.setTheme(this.nextTheme)
       }
     }
   }
