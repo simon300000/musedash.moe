@@ -21,6 +21,9 @@ import { mapState, mapActions, mapGetters } from 'vuex'
 import findMusic from '@/components/findMusic'
 
 export default {
+  data() {
+    return { win: true }
+  },
   components: { findMusic },
   computed: {
     ...mapState(['lang', 'fullAlbums']),
@@ -28,14 +31,12 @@ export default {
     albums() {
       return this.albumsArray.map(album => ({ title: album.title, json: album.json, ...(album[this.lang] || {}) }))
     },
-    win() {
-      return navigator.appVersion.includes('Win')
-    }
   },
   serverPrefetch() {
     return this.loadAlbums()
   },
   mounted() {
+    this.win = navigator.appVersion.includes('Win')
     if (!this.albumsArray.length) {
       this.loadAlbums()
     }
