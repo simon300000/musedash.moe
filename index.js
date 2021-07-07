@@ -9,6 +9,8 @@ const { createBundleRenderer } = vsr
 const serverBundle = JSON.parse(readFileSync('./dist/vue-ssr-server-bundle.json'))
 const clientManifest = JSON.parse(readFileSync('./dist/vue-ssr-client-manifest.json'))
 
+clientManifest.async = clientManifest.async.filter(file => !file.includes('.noinject.'))
+
 const app = new Koa()
 
 const template = readFileSync('index.html', 'utf-8').replace('<div id="app"></div>', '<!--vue-ssr-outlet-->')
