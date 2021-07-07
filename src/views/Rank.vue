@@ -19,8 +19,8 @@
           <th>#</th>
           <th></th>
           <th>{{ha?'Benutzername':'Username'}}</th>
-          <th>{{ha?'Ungenauigkeit':'Accuracy'}}</th>
-          <th>{{ha?'Punkte':'Score'}}</th>
+          <th class="th-left">{{ha?'Ungenauigkeit':'Accuracy'}}</th>
+          <th class="th-left">{{ha?'Punkte':'Score'}}</th>
           <th v-if="platform === 'all'">{{ha?'Plattform':'Platform'}}</th>
         </tr>
       </thead>
@@ -123,3 +123,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.th-left {
+  text-align: left !important;
+}
+</style>
