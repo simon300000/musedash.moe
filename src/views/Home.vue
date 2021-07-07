@@ -30,7 +30,7 @@ export default {
     ...mapGetters(['albumsArray']),
     albums() {
       return this.albumsArray.map(album => ({ title: album.title, json: album.json, ...(album[this.lang] || {}) }))
-    },
+    }
   },
   serverPrefetch() {
     return this.loadAlbums()
