@@ -22,6 +22,7 @@ const renderer = createBundleRenderer(serverBundle, {
 app.use(serve('dist'))
 
 const langs = ['ChineseS', 'ChineseT', 'English', 'Japanese', 'Korean']
+const themes = ['dark', 'light']
 
 app.use(async ctx => {
   const queryLang = langs.includes(ctx.query.lang) ? ctx.query.lang : undefined
@@ -48,7 +49,16 @@ app.use(async ctx => {
     ctx.cookies.set('lang', lang, { httpOnly: false })
   }
   lang = queryLang || lang
-  let result = await renderer.renderToString({ url: ctx.url, lang }).catch(e => {
+
+  const queryTheme = themes.includes(ctx.query.theme) ? ctx.query.theme : undefined
+  let theme = ctx.cookies.get('theme')
+  if (!theme) {
+    theme = queryTheme || themes[0]
+    ctx.cookies.set('theme', theme, { httpOnly: false })
+  }
+  theme = queryTheme || theme
+
+  let result = await renderer.renderToString({ url: ctx.url, lang, theme }).catch(e => {
     console.error(e)
     if (e.code) {
       ctx.throw(e.code)

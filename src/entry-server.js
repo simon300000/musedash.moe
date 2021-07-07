@@ -7,7 +7,7 @@ export default context => {
       titles[depth] = part
     }
 
-    const { app, router, store } = createApp({ lang: context.lang, changeTitle })
+    const { app, router, store } = createApp({ lang: context.lang, changeTitle, theme: context.theme })
 
     router.push(context.url)
 

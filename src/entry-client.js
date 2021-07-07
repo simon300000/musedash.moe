@@ -12,7 +12,7 @@ const changeTitle = (depth, part) => {
   document.title = titles.filter(Boolean).reverse().join(' - ')
 }
 
-const { app, store, router } = createApp({ changeTitle, lang: cookieGet('lang') })
+const { app, store, router } = createApp({ changeTitle, lang: cookieGet('lang'), theme: cookieGet('theme') })
 
 if (window.__INITIAL_STATE__) {
   store.replaceState(window.__INITIAL_STATE__)

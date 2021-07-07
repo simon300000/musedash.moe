@@ -1,5 +1,6 @@
 <template>
 <div id="app">
+  <link rel="stylesheet" :href="themeCss">
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <div class="navbar-brand">
@@ -19,6 +20,7 @@
       </div>
 
       <div class="navbar-end">
+        <a class="navbar-item" @click="switchTheme()">{{otherTheme}}</a>
         <div class="navbar-end">
           <div class="navbar-item has-dropdown is-hoverable" :class="{'is-active': menu}">
             <a class="navbar-link is-arrowless" @click="switchMenu">
@@ -49,6 +51,11 @@
 import { mapState, mapMutations } from 'vuex'
 import CapsuleDef from '@/components/capsule-def'
 
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import dark from '!file-loader?name=static/css/[name].[contenthash].css!sass-loader!./dark.scss'
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import light from '!file-loader?name=static/css/[name].[contenthash].css!sass-loader!./bulma.scss'
+
 const langs = {
   ChineseS: '简体中文',
   ChineseT: '繁體中文',
@@ -68,20 +75,26 @@ export default {
     this.ha = new Date().getMonth() + 1 === 4 && new Date().getDate() === 1
   },
   computed: {
-    ...mapState(['lang']),
+    ...mapState(['lang', 'theme']),
     currentLang() {
       return langs[this.lang]
     },
     availableLang() {
       return Object.entries(langs)
         .filter(([lang]) => lang !== this.lang)
+    },
+    themeCss() {
+      return this.theme === 'dark' ? dark : light
+    },
+    otherTheme() {
+      return this.theme === 'dark' ? '💡' : '🌙'
     }
   },
   created() {
     this.updateTitle([this, 'MuseDash.moe'])
   },
   methods: {
-    ...mapMutations(['setLang', 'updateTitle']),
+    ...mapMutations(['setLang', 'setTheme', 'updateTitle']),
     updateLang(lang, e) {
       // don't redirect with control keys
       if (e.metaKey || e.altKey || e.ctrlKey || e.shiftKey) return
@@ -100,6 +113,13 @@ export default {
     },
     closeMenu() {
       this.menu = false
+    },
+    switchTheme() {
+      if (this.theme === 'dark') {
+        this.setTheme('light')
+      } else {
+        this.setTheme('dark')
+      }
     }
   }
 }
@@ -110,26 +130,4 @@ export default {
   position: absolute;
   top: -1000px;
 }
-</style>
-
-<style lang="scss">
-// @import "~bulma/bulma.sass";
-@import "~bulma/sass/utilities/_all.sass";
-@import "~bulma/sass/base/_all.sass";
-@import "~bulma/sass/helpers/color.sass";
-@import "~bulma/sass/components/navbar.sass";
-@import "~bulma/sass/components/tabs.sass";
-@import "~bulma/sass/elements/container.sass";
-@import "~bulma/sass/layout/section.sass";
-@import "~bulma/sass/elements/progress.sass";
-@import "~bulma/sass/components/level.sass";
-@import "~bulma/sass/elements/image.sass";
-@import "~bulma/sass/elements/button.sass";
-@import "~bulma/sass/elements/table.sass";
-@import "~bulma/sass/elements/icon.sass";
-@import "~bulma/sass/layout/hero.sass";
-@import "~bulma/sass/elements/title.sass";
-@import "~bulma/sass/form/shared.sass";
-@import "~bulma/sass/form/tools.sass";
-@import "~bulma/sass/form/input-textarea.sass";
 </style>

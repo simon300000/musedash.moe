@@ -5,7 +5,7 @@ import { set as cookieSet } from 'js-cookie'
 
 Vue.use(Vuex)
 
-export const createStore = ({ lang, changeTitle }) => {
+export const createStore = ({ lang, changeTitle, theme }) => {
   const countParent = instance => instance.$parent ? 1 + countParent(instance.$parent) : 0
   let owners = []
 
@@ -26,7 +26,8 @@ export const createStore = ({ lang, changeTitle }) => {
       fullAlbums: {},
       rankCache: {},
       userCache: {},
-      lang
+      lang,
+      theme
     },
     getters: {
       albumsArray: ({ fullAlbums }) => Object.values(fullAlbums),
@@ -48,6 +49,10 @@ export const createStore = ({ lang, changeTitle }) => {
       setLang(state, data) {
         cookieSet('lang', data)
         state.lang = data
+      },
+      setTheme(state, data) {
+        cookieSet('theme', data)
+        state.theme = data
       },
       updateTitle(_state, [instance, part]) {
         updateTitle(instance, part)

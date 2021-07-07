@@ -1,0 +1,19 @@
+$blue: #3498db;
+$primary: darken(#8c9b9d, 18);
+
+@import "./bulmaswatch/darkly/_variables.scss";
+
+$link: $blue;
+$link-hover: lighten($link, 5);
+$link-focus: darken($link, 5);
+$link-active: darken($link, 5);
+$link-focus-border: $grey-light;
+
+$navbar-background-color: darken($primary, 23);
+$navbar-dropdown-border-top: 1px solid $navbar-divider-background-color;
+$navbar-dropdown-background-color: darken($primary, 23);
+
+$bulmaswatch-import-font: false;
+
+@import "./bulma.scss";
+@import "./bulmaswatch/darkly/_overrides.scss";
