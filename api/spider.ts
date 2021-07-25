@@ -9,7 +9,7 @@ import got from 'got'
 
 import { log, error, reloadAlbums } from './api.js'
 
-const wait = (ms: number): Promise<undefined> => new Promise(resolve => setTimeout(resolve, ms))
+const wait = (ms: number): Promise<void> => new Promise(resolve => setTimeout(resolve, ms))
 
 const parallel = async <T>(n: number, pfs: (() => Promise<(number) => T>)[]) => {
   const ws = new Set<() => Promise<(number) => T>>()
