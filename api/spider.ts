@@ -41,7 +41,10 @@ const platforms = {
 const downloadCore = async ({ api, uid, difficulty }): Promise<APIResults | void> => (await got(`https://prpr-muse-dash.leanapp.cn/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=1999`, { timeout: 1000 * 60 * 10 }).json() as any).result
 
 const download = async ({ api, uid, difficulty, i = 3 }): Promise<APIResults> => {
-  const result = await downloadCore({ api, uid, difficulty }).catch((): APIResults => undefined)
+  const result = await downloadCore({ api, uid, difficulty }).catch((e): APIResults => {
+    console.error(e)
+    return undefined
+  })
   if (!result) {
     if (i >= 0) {
       error(`RETRY: ${uid} - ${difficulty} - ${api}, ${i}`)
