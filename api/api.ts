@@ -52,7 +52,7 @@ let albumsObject: ReturnType<typeof parseAlbums>
 
 export const reloadAlbums = async () => {
   albumsObject = parseAlbums(await albums())
-  console.log('Reload Albums')
+  log('Reload Albums')
 }
 
 reloadAlbums()
