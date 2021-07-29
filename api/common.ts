@@ -1,4 +1,8 @@
+import { LevelUp } from 'levelup'
+
 import { APIResults, RankValue } from './type'
+
+import { SearchType } from './database.js'
 
 const wait = (ms: number): Promise<void> => new Promise(resolve => setTimeout(resolve, ms))
 
@@ -31,3 +35,13 @@ export const resultWithHistory = ({ result, current }: { result: APIResults, cur
     }
   })
 }
+
+export const makeSearch = <PlayerType extends LevelUp>({ search, player, log }: { log: (w: string) => void, search: SearchType, player: PlayerType }) => new Promise(async resolve => {
+  await search.clear()
+  log('Search cleared')
+  const batch = search.batch()
+  const stream = player.createValueStream()
+  // eslint-disable-next-line camelcase
+  stream.on('data', ({ user: { nickname, user_id } }) => batch.put(user_id, nickname.toLowerCase()))
+  stream.on('close', () => resolve(batch.write()))
+})

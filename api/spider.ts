@@ -9,7 +9,7 @@ import got from 'got'
 
 import { log, error, reloadAlbums } from './api.js'
 
-import { download, resultWithHistory } from './common.js'
+import { download, resultWithHistory, makeSearch } from './common.js'
 
 const wait = (ms: number): Promise<void> => new Promise(resolve => setTimeout(resolve, ms))
 
@@ -102,15 +102,6 @@ const analyze = (musicList: RankCore[]) => musicList
       .write().then(() => undefined)
   }, player.clear())
 
-const makeSearch = () => new Promise(async resolve => {
-  await search.clear()
-  log('Search cleared')
-  const batch = search.batch()
-  const stream = player.createValueStream()
-  stream.on('data', ({ user: { nickname, user_id } }) => batch.put(user_id, nickname.toLowerCase()))
-  stream.on('close', () => resolve(batch.write()))
-})
-
 const mal = async () => {
   log('Start!')
   const musicList = await musics()
@@ -119,7 +110,7 @@ const mal = async () => {
   log('Downloaded')
   await analyze(datass.flat())
   log('Analyzed')
-  await makeSearch()
+  await makeSearch({ log, player, search })
   log('Search Cached')
   await reloadAlbums()
 }
