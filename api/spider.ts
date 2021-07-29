@@ -45,17 +45,19 @@ const downloadCore = ({ api, uid, difficulty }) => async (): Promise<APIResults 
 const core = ({ uid, difficulty, platform, api }: RankCore) => async () => {
   const result = await download({ s: `${uid} - ${difficulty} - ${api}`, error, f: downloadCore({ uid, difficulty, api }) })
 
-  const currentUidRank: string[] = (await rank.get({ uid, difficulty, platform }) || []).map(({ play }) => play.user_id)
+  if (result) {
+    const currentUidRank: string[] = (await rank.get({ uid, difficulty, platform }) || []).map(({ play }) => play.user_id)
 
-  const resultWithHistory = result.map(r => {
-    if (currentUidRank.length) {
-      return { ...r, history: { lastRank: currentUidRank.indexOf(r.play.user_id) } }
-    } else {
-      return r
-    }
-  })
+    const resultWithHistory = result.map(r => {
+      if (currentUidRank.length) {
+        return { ...r, history: { lastRank: currentUidRank.indexOf(r.play.user_id) } }
+      } else {
+        return r
+      }
+    })
 
-  await rank.put({ uid, difficulty, platform, value: resultWithHistory })
+    await rank.put({ uid, difficulty, platform, value: resultWithHistory })
+  }
 }
 
 const sum = async ({ uid, difficulty }: MusicCore) => {
