@@ -109,6 +109,8 @@ export interface Play {
   score: number,
   acc: number,
   i: number,
+  character_uid: string,
+  elfin_uid: string,
   platform: string,
   history: {
     lastRank: number

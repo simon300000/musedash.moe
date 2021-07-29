@@ -1,0 +1,60 @@
+[
+	{
+		"name": "Mio Sir",
+		"description": "Do you still have dried fish? Just a little bit~",
+		"skill": "Your Fever Mode will last for 2 more seconds with Mio Sir's cheering.",
+		"chipName": "Dried Fish",
+		"chipDescription": "Did Mio Sir sneak dried fish again?"
+	},
+	{
+		"name": "Angela",
+		"description": "Guardian Angel befalls~",
+		"skill": "Angela will reduce 6 damage each time you get hurt.",
+		"chipName": "White Feather",
+		"chipDescription": "Angela is under great pressure recently."
+	},
+	{
+		"name": "Thanatos",
+		"description": "Death won't catch you if you run fast enough.",
+		"skill": "Thanatos will bless you with 2 seconds of invincibility when getting hurt or collecting red hearts.",
+		"chipName": "Toy Bone",
+		"chipDescription": "A plastic bone without scary."
+	},
+	{
+		"name": "Rabot-233",
+		"description": "I...have...countless...carrots...here...",
+		"skill": "Rabot-233 can help you turn \"Miss\" into \"Great\" judgement for 5 times.",
+		"chipName": "Metal Carrot",
+		"chipDescription": "The high-tech carrot is awesome!"
+	},
+	{
+		"name": "Little Nurse",
+		"description": "Isn't it incurable?",
+		"skill":
+			"Little Nurse will restore you 10 HP per second when your HP is under 50; last for 15 seconds.\nIt can be only triggered once.",
+		"chipName": "Small Screw",
+		"chipDescription": "Machines can be repaired, but what about humans?"
+	},
+	{
+		"name": "Little Witch",
+		"description": "Sorry :( My magic is not proficient enough.",
+		"skill": "Little Witch will help you get 20% more score when knocking back enemies in Fever Mode.",
+		"chipName": "Watermelon Jelly",
+		"chipDescription": "The jelly made of watermelon juice. Hmm, looks so real."
+	},
+	{
+		"name": "Dragon Girl",
+		"description": "I have a green dragon~a green dragon~",
+		"skill": "Dragon Girl will help you get 30% more score when knocking back BOSS's attacks.",
+		"chipName": "Dragon Ball",
+		"chipDescription": "Collect 7 Dragon Balls to summon the dragon"
+	},
+	{
+		"name": "Lilith",
+		"description": "I'm Lord Lilith from the dungeon~hahahaha~~",
+		"skill":
+			"Lilith will help you get 5% more score for each \"Perfect\" judgement.\nWhen Lilith and Little Devil Marija are together, Marija will restore 2 HP upon each \"Perfect\" judgement.",
+		"chipName": "Bat Wing",
+		"chipDescription": "The item what hell envoy Lilith is looking for."
+	}
+]

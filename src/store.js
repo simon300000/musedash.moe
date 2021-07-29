@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { getAlbums, getRank, getPlayer } from './api'
+import { getAlbums, getRank, getPlayer, getCE } from './api'
 import { set as cookieSet } from 'js-cookie'
 
 Vue.use(Vuex)
@@ -26,6 +26,7 @@ export const createStore = ({ lang, changeTitle, theme }) => {
       fullAlbums: {},
       rankCache: {},
       userCache: {},
+      ce: { c: {}, e: {} },
       lang,
       theme
     },
@@ -34,11 +35,16 @@ export const createStore = ({ lang, changeTitle, theme }) => {
       allMusics: ({ fullAlbums }) => {
         return Object.assign({}, ...Object.values(fullAlbums).map(({ music }) => music))
       },
-      musicAlbum: ({ fullAlbums }) => Object.fromEntries(Object.entries(fullAlbums).flatMap(([id, { music }]) => Object.keys(music).map(k => [k, id])))
+      musicAlbum: ({ fullAlbums }) => Object.fromEntries(Object.entries(fullAlbums).flatMap(([id, { music }]) => Object.keys(music).map(k => [k, id]))),
+      characters: ({ ce, lang: l }) => ce.c[l] || [],
+      elfins: ({ ce, lang: l }) => ce.e[l] || []
     },
     mutations: {
       setAlbums(state, data) {
         state.fullAlbums = data
+      },
+      setCE(state, ce) {
+        state.ce = ce
       },
       setRank(state, { uid, difficulty, platform, rank }) {
         state.rankCache = { ...state.rankCache, [`${uid}_${platform}_${difficulty}`]: rank }
@@ -63,7 +69,9 @@ export const createStore = ({ lang, changeTitle, theme }) => {
     },
     actions: {
       async loadAlbums({ commit }) {
+        const ceP = getCE()
         commit('setAlbums', await getAlbums())
+        commit('setCE', await ceP)
       },
       async loadRank({ commit }, { uid, difficulty, platform }) {
         commit('setRank', { uid, difficulty, platform, rank: await getRank({ uid, difficulty, platform }) })

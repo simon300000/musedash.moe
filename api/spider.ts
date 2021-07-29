@@ -87,11 +87,11 @@ const analyze = (musicList: RankCore[]) => musicList
     const currentRank = await rank.get({ uid, difficulty, platform })
     const sumRank = await rank.get({ uid, difficulty, platform: 'all' })
     return (await currentRank
-      .map(async ({ user, play: { score, acc }, history }, i) => {
+      .map(async ({ user, play: { score, acc, character_uid, elfin_uid }, history }, i) => {
         let playerData = await player.get(user.user_id).catch(() => ({ plays: [] }) as PlayerValue)
         playerData.user = user
         const sumI = sumRank.findIndex(play => play.platform === platform && play.user.user_id === user.user_id)
-        playerData.plays.push({ score, acc, i, platform, history, difficulty, uid, sum: sumI })
+        playerData.plays.push({ score, acc, i, platform, history, difficulty, uid, sum: sumI, character_uid, elfin_uid })
         return { key: user.user_id, value: playerData }
       })
       .reduce(async (b, v: Promise<{ key: string, value: PlayerValue }>) => {

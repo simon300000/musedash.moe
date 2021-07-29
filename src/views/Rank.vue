@@ -22,6 +22,7 @@
           <th class="th-left">{{ha?'Ungenauigkeit':'Accuracy'}}</th>
           <th class="th-left">{{ha?'Punkte':'Score'}}</th>
           <th v-if="platform === 'all'">{{ha?'Plattform':'Platform'}}</th>
+          <th>Configure</th>
         </tr>
       </thead>
       <tbody>
@@ -43,6 +44,7 @@
               <octicon name="device-mobile"></octicon>
             </span>
           </td>
+          <td style="text-align:center;">{{characters[play.character]}} / {{elfins[play.elfin]}}</td>
         </tr>
       </tbody>
     </table>
@@ -51,7 +53,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapActions, mapGetters } from 'vuex'
 
 import Octicon from '@/components/vue-octicon/src/components/Octicon.vue'
 import '@/components/vue-octicon/src/icons/device-desktop'
@@ -80,6 +82,7 @@ export default {
   },
   computed: {
     ...mapState(['rankCache']),
+    ...mapGetters(['elfins', 'characters']),
     currentRank() {
       return this.rankCache[`${this.uid}_${this.platform}_${this.difficulty}`]
     },

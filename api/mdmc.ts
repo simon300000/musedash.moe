@@ -59,11 +59,11 @@ const core = async ({ name, id, difficulty, l }: MusicCore & { l: { i: number } 
 const analyze = async (results: (RankCode & { value: RankValue[] })[]) => (await Object.entries(results
   .reduce((r, { id, difficulty, value }) => value
     // eslint-disable-next-line camelcase
-    .reduce((rr, { user: { user_id, nickname }, history, play: { score, acc } }, i) => {
+    .reduce((rr, { user: { user_id, nickname }, history, play: { score, acc, character_uid, elfin_uid } }, i) => {
       if (!rr[user_id]) {
         rr[user_id] = { user: { user_id, nickname }, plays: [] }
       }
-      rr[user_id].plays.push({ id, history, score, acc, difficulty, i })
+      rr[user_id].plays.push({ id, history, score, acc, difficulty, i, character_uid, elfin_uid })
       return rr
     }, r), {} as PlayerR))
   .reduce(async (p, [id, player]) => {
@@ -125,7 +125,7 @@ router.get('/rank/:id/:difficulty', async ctx => {
   let result = await rank.get(ctx.params as any)
   if (result) {
     // eslint-disable-next-line camelcase
-    ctx.body = result.map(({ play: { acc, score }, history: { lastRank } = { lastRank: -1 }, user: { nickname, user_id } }) => [acc, score, lastRank, nickname, user_id])
+    ctx.body = result.map(({ play: { acc, score, character_uid, elfin_uid }, history: { lastRank } = { lastRank: -1 }, user: { nickname, user_id } }) => [acc, score, lastRank, nickname, user_id, character_uid, elfin_uid])
   }
 })
 

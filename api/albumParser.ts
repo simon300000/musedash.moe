@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
-const availableLocales = ['ChineseS', 'ChineseT', 'English', 'Japanese', 'Korean'] as const
+export const availableLocales = ['ChineseS', 'ChineseT', 'English', 'Japanese', 'Korean'] as const
 export type AvailableLocales = typeof availableLocales[number]
 
 async function parseFile<T>(file: string): Promise<T> {

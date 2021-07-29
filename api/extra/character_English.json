@@ -1,0 +1,393 @@
+[
+	{
+		"characterName": "Rin",
+		"cosName": "Bassist",
+		"description": "My little universe seems to be burning. Don't bother me if not forming a band.",
+		"skill": "The maximum HP of Bassist Rin increases 50.",
+		"chipName": "Band-Aid",
+		"chipDescription": "Ow~I think a band-aid is not enough.",
+		"cv":"Mami Uchida",
+		"expressions": [
+			[
+				"I'm listening! Stop poking!", "You dare to disturb me? You wanna go to hospital?",
+				"Hey, can you stop touching me?!"
+			],
+			[
+				"Well, great rhythm. Do you wanna join a band?", "Haha, you also like rock music?",
+				"Rules are made to be broken, aren't they?"
+			], ["Whoo-hoo---still not ready? ...", "Don't dilly dally, I almost fell asleep...", "So——boring——Let's do sports!"],
+			["I'm not the one to be conquered!", "Wow! Don't...don't take me as a fool!", "What a...strange feeling..."]
+		]
+	},
+	{
+		"characterName": "Rin",
+		"cosName": "Bad Girl",
+		"description": "You might kick the bucket under my stick! ~",
+		"skill": "Bad Girl Rin can turn \"Great\" into \"Perfect\" judgements for 5 times.",
+		"chipName": "Baseball",
+		"chipDescription": "If this baseball is yours, I won't return it.",
+		"cv":"Mami Uchida",
+		"expressions": [
+			[
+				"You look pretty strong. Why not have a competition between us?", "What? You wanna fight?",
+				"I never lose whether in solo or gang battles!"
+			],
+			[
+				"The ranking? Of course at the top!", "See my mighty and heroic look? ~",
+				"So! Let your fists talk rather than your mouth!"
+			],
+			[
+				"You'd better have that awareness...", "Hey, don't touch it! You wanna get your ass kicked?",
+				"You might die under my stick..."
+			], ["Wait! What are you doing!", "Nonsense! Who...who's being shy!!", "What, what are you going to do anyway!?"]
+		]
+	},
+	{
+		"characterName": "Rin",
+		"cosName": "Sleepwalker Girl",
+		"description": "Um? Did I just sleepwalk again?... Huhooo...",
+		"skill": "Sleepwalker Girl Rin will fight automatically in all stages and not be controlled by the player.",
+		"chipName": "White Pillow",
+		"chipDescription": "It feels so soft, just like a lass' chest~~~~whir~whir",
+		"cv":"Mami Uchida",
+		"expressions": [
+			["Om nom nom...", "Mr. RIce...Thank you for the meal...hic...", "Soft...Buro...Zzzz"],
+			["Fried rice, sushi, curry...all mine...", "Stupid Buro, don't grab my food...", "I'm already full...haha..."],
+			[
+				"Don't you...want to...take a nap...now? I do...Zzz", "Hmm...where's my big meal?",
+				"It's...not the time...to get up yet..."
+			],
+			[
+				"Um...Zzz...Um...Zzz...Um...Zzz...Um...Zzz... ", "Sure you can rest with me if you don't...don't get fresh...",
+				"Emm...it's a little hot here..."
+			]
+		]
+	},
+	{
+		"characterName": "Rin",
+		"cosName": "Bunny Girl",
+		"description": "You really like my current look? (Facepalm)",
+		"skill": "Bunny Girl Rin can get 200% more score when collecting Red Hearts (at maximum HP) and Notes, knocking back Ghosts and dodging barriers.",
+		"chipName": "Black Bow Tie",
+		"chipDescription": "Is it worn in front or on the back?",
+		"cv":"Mami Uchida",
+		"expressions": [
+			["Satisfied now? I've scarified so much...", "Hey, don't be that greedy...", "What? I'm quite busy..."],
+			[
+				"So...the punishment is over right?", "The sexy look is not really my style, is it?",
+				"Red cheek?! Because it's hot today!!"
+			],
+			[
+				"Your hand is boiling hot...are you sick?", "Please make it stop now! Don't let others see it...",
+				"Can I change my old suit back?"
+			],
+			[
+				"Here is your Stage Clear award. Don't, don't relate to anything nasty!!", "Wait, it...it's working time now...",
+				"The carrot is only used for battles!!"
+			]
+		]
+	},
+	{
+		"characterName": "Buro",
+		"cosName": "Pilot",
+		"description": "Hey! Give me a dollar! I wanna play the kiddie ride!",
+		"skill": "Pilot Buro becomes invincible while bursting into Fever Mode.",
+		"chipName": "Paper Plane",
+		"chipDescription": "Whoops! That paper looks like my report card!",
+		"cv":"Amatsuka Mao",
+		"expressions": [
+			[
+				"Well, it's OK to play with you if you have donuts.", "Strawberry cake and chocolate cake, which one is better...",
+				"Touching my head will stops me from growing taller..."
+			],
+			[
+				"Buro is on an important mission!", "Desserts are put into the other stomach of course!",
+				"Candy land? I really wanna go there!"
+			],
+			[
+				"Secretly taking photos of Marija? Leave it to me!", "One donut is not enough to buy off Buro!",
+				"Guess where did I put Marija's notebook?"
+			],
+			[
+				"I...I'm definitely growing up healthily...", "Don't look down on me though I'm cute!", "Of course I've got pants!!"
+			]
+		]
+	},
+	{
+		"characterName": "Buro",
+		"cosName": "Idol",
+		"description": "Niko~niko~ni~~~",
+		"skill": "Idol Buro gets 50% more EXP after clearing a stage.",
+		"chipName": "Energy Battery",
+		"chipDescription": "The battery filled with energy of love",
+		"cv":"Amatsuka Mao",
+		"expressions": [
+			[
+				"This hairstyle is carefully prepared! don't mess it up...",
+				"What are you doing! I know you're my fan but could you please stop it...",
+				"Praising is enough, don't touch my head!"
+			], ["I'm super charismatic now! ~", "Let's occupy the ranking!", "Kira~Kira~"],
+			["100% synchronized. Ready to show!", "it's OK to take hands and take photos together~", "La la la la~"],
+			[
+				"Want my autograph? Photo together? Hey...?!", "Where are you looking?! You freak!",
+				"Hello, Police? Here's a freak!"
+			]
+		]
+	},
+	{
+		"characterName": "Buro",
+		"cosName": "Zombie Girl",
+		"description": "Ring ring ring~Ring ring ring~ Dry air, take care, do not catch fire.",
+		"skill": "Zombie Girl can enter Dying Mode for 15 seconds when HP falls to the minimum.\nShe cannot enter Dying Mode again if not collecting any red hearts after quiting the mode.",
+		"chipName": "Misfortune Spell",
+		"chipDescription": "Bring bad luck once pasted on someone",
+		"cv":"Amatsuka Mao",
+		"expressions": [
+			[
+				"Can I still grow taller as a zombie...", "I'm a zombie, I'm not afraid not darkness!",
+				"Ghost?! Are, are you a kid? You even believe in that!"
+			],
+			[
+				"You wanna get bitten by Buro?", "Hoo——hoo——Did I scare you?", "I will bite you if you dare to touch my head again!"
+			],
+			[
+				"You also wanna follow me? Get your neck close to me~", "Ah? Isn't it a common sense that zombies love sweet food?",
+				"I'm a zombie now! You should all fear me!"
+			],
+			[
+				"You are even interested in zombies...you, you...", "It's not the right way to conquer me...It's not...",
+				"Hoo hoo, I'm going to bite you!!"
+			]
+		]
+	},
+	{
+		"characterName": "Buro",
+		"cosName": "Joker",
+		"description": "Let me show you a treasure~ (opening the bag)",
+		"skill": "When combo reaches above 60/70, Joker Buro can get higher combo bonus score.",
+		"chipName": "Colorful Ball",
+		"chipDescription": "Give you 3 seconds to find the treasures I hid~",
+		"cv":"Amatsuka Mao",
+		"expressions": [
+			["Hehehehe~", "Come to be the volunteer of my magic!", "Which one of the audience should I tease today~?"],
+			["What kind of joker will be more popular?", "Huh? This clothes is more convenient to move!", "If you always touch me, I will touch you back!"],
+		    ["What about this show: eating cakes while walking the wire!", "How about using donuts as tickets!?",
+				"I'm the best at making snacks disappeared!"
+			],
+			[
+				"I know you're cheering for me, but it's too...too passionate!", "What are you thinking? This is the show suit!",
+				"I...I don't know how to act that kind of show you said..."
+			]
+		]
+	},
+	{
+		"characterName": "Marija",
+		"cosName": "Violinist",
+		"description": "This is Symphony No.9 in D minor by Beethoven~",
+		"skill": "When combo is less than 100, Violinist Marija's \"Miss\" judgement won't interrupt the combo.",
+		"chipName": "Marija's diary",
+		"chipDescription": "What is written on earth in the girl's diary?",
+		"cv":"Yoshika Akashi",
+		"expressions": [
+			[
+				"If you have time to learn, you have time to read.", "You're reading books or my legs?",
+				"Aha, looks like you're prepared to die, aren't you?"
+			],
+			[
+				"Did Buro make any trouble?", "Um? Are we going to make battle plans?",
+				"What are the notebooks you are often talking about? Also books?"
+			],
+			[
+				"What? You want me to mock you for enjoying?", "Just play the game without having any daydreams.",
+				"Life would be so boring without music, right?"
+			], ["You face...is too close...", "Hey, you hands, behave yourself...", "Hello, police? Still that guy."]
+		]
+	},
+	{
+		"characterName": "Marija",
+		"cosName": "Maid",
+		"description": "Master, do you want other services?",
+		"skill":
+			"Maid Marija will gain 150% more HP and be invincible for 2 seconds upon collecting a Red Heart when HP is lower than 100.",
+		"chipName": "Salted Fish",
+		"chipDescription": "Master, should I believe in you?(ºOº)",
+	    "cv":"Yoshika Akashi",
+		"expressions": [
+			["I...I'm not enjoying...", "I...I don't know how to cope with it...", "Discipline...? I don't get it..."],
+			["Master...you wanna be packed into a garbage bag?", "Enough!...can... can I get off work? Master.", "I hope you can be more gentlemanly..."],
+			[
+				"So whose bad idea is it to let me wear the maid suit...", "Master, welcome back...",
+				"You wanna warm up or cook first...eh? Neither?"
+			],
+			[
+				"I can lick it clean if the screen gets dirty...", "The bathtub is fulfilled. Well...I don't mean that!",
+				"All clean...including myself..."
+			]
+		]
+	},
+	{
+		"characterName": "Marija",
+		"cosName": "Magical Girl",
+		"description": "No time to explain! Get on the broom!",
+		"skill": "Magical Girl Marija's increasing speed of Fever is 20% faster.",
+		"chipName": "Intricate Magic Book",
+		"chipDescription": "What does the book say? Why can't we do in our own way?",
+	    "cv":"Yoshika Akashi",
+		"expressions": [
+			[
+				"I cannot meow meow. don't think about it...", "I cannot do whatever I want even though I'm a witch.",
+				"don't think about strange magics all day!"
+			],
+			[
+				"What do you mean by filling with magic? Do you mean taking a rest?", "isn't your hobby...a little bit strange?",
+				"Eh? What's good of becoming a broom?"
+			],
+			[
+				"My driving skill is the best~", "Love magic? Want me to teach you?",
+				"Put your face close to me, let me cast a buff for you~"
+			],
+			[
+				"I know! I know! Um——————Meow?",
+				"As for messaging, stop where it should be stopped! Or I'll turn you into a panty!!",
+				"Ah? Black magic of turning into a grown up man?"
+			]
+		]
+	},
+	{
+		"characterName": "Marija",
+		"cosName": "Little Devil",
+		"description": "Hmm, the taste of souls is so addictive~",
+		"skill":
+			"Little Devil Marija will get 25% more score when knocking back enemies at the expense of losing 10 HP per second.",
+		"chipName": "Dry Eyeball",
+		"chipDescription": "Something left by a man who broke his oath",
+	    "cv":"Yoshika Akashi",
+		"expressions": [
+			[
+				"Specially produced wine, wanna have a drink with me? Hehehe♪", "My tail is not only a decoration...",
+				"Devote your soul to me, and I'll make any of your dreams come true~"
+			],
+			[
+				"Um? You wanna try dying?", "Don't think that I don't know what you're thinking~",
+				"You know the consequence of pissing me off~"
+			], ["What about having a trade?", "Be my servant and you can have the benefits...", "Fascinated by my charm?♪"],
+			[
+				"Band aid? I have no clue~", "Fan service? I can consider to serve you if you get a Full Combo...",
+				"it's not unacceptable to listen to your wishes once in a while..."
+			]
+		]
+	},
+	{
+		"characterName": "Marija",
+		"cosName": "The Girl In Black",
+		"description": "The Girl In Black",
+		"skill":"The Girl In Black lengthens the area of \"Perfect\" \"Great\" \"Pass\", \nmaking it easier to hit enemies and avoid barriers.",
+		"chipName": "Energy supressor",
+		"chipDescription": "No idea what will happen after removal",
+	    "cv":"Yoshika Akashi",
+		"expressions": [
+			[
+				"Let's have some fun, wimps!", "Surrender to my skirt, weaklings!",
+				"Hah, you think I just use this to conduct the band?"
+			],
+			[
+				"I'll put you in timeout if you poke me again!", "Someone rear-ended my car earlier. Can I ride you instead?",
+				"You want me to stomp on you?"
+			], ["Such an unrepentant creature. You really want to die, don't you?", "Have a taste of my baton.", "Hey, who said you could touch your master?"],
+			[
+				"Be patient until I give you permission.", "Wag your tail and I might just let you lick my boots.",
+				"An inferior being indeed... but you seem to be quite sensible."
+			]
+		]
+	},
+	{
+		"characterName": "Rin",
+		"cosName": "Christmas Gift",
+		"description": "圣诞凛",
+		"skill": "With Christmas Gift Rin clearing a stage, at most 5% accuracy can be added.",
+		"chipName": "Christmas Gift",
+		"chipDescription": "Nobody knows what's in it.",
+		"cv":"Mami Uchida",
+		"expressions": [
+			["I thought you might like me for Christmas…", "Ahhh, this tape is so sticky…", "B-b-b-rrr! I'm freezing…"],
+			["Ah? This box? Of course I can't let go of it!", "Did I scare you? M-merry Christmas!", "N-n-n-n-no comment!"],
+			["I thought I could jump out of the box and scare people… I don't think I thought this through…", "It might have been better to dress up as Santa…", "What do you think I dressed up like this for!"],
+			["It took ages to wrap myself up. Won't you cherish this Christmas gift?", "Sign your name… Hey! Why are you writing there?!", "There's only enough room for one in here! D-d-d-don't come in!"]
+		]
+	},
+	{
+		"characterName": "Buro",
+		"cosName": "Sailor Suit",
+		"description": "Sailor Suit",
+		"skill": "Hold down on the button/screen and Sailor Suit Buro will automatically attack marked enemies.\nkeep in mind that this will reduce your score by 20%.",
+		"chipName": "Plastic Master 90",
+		"chipDescription": "·Higher resistance to heat·Greater Durability·Wide Dynaic Range·Out of production",
+		"cv":"Amatsuka Mao",
+		"expressions": [
+			["My favorite genre? Nope, not gonna tell you～", "Why there is a pool alongside the road? That's not my business.", "If ... Rin and Marija fell into the water at the same time ... Should we go to the arcades or karaoke first?"],
+			["I like...rain", "You like surfing the Internet?", "I have pet, well, an electronic one."],
+			["That's an earphone not ears, \nall right?", "It's far better to stay alone, you dummies.",
+			"Milks are for kids, we grown-ups prefer coffee! ...ugh...that's terrible."
+			],
+			[
+				"Well, I do like you a little bit...I guess.", "Eeeeeek! That tail's just a decoration! No touching!!!",
+				"Since you are here. I can' share my earphone but...I can share my coffee"
+			]
+		]
+	},
+	{
+		"characterName": "Yume",
+		"cosName": "Navigator",
+		"description": "Navigator",
+		"skill": "Navigator Yume from Groove Coaster. Obstacles (gears) will not harm her.",
+		"chipName": "Rhombus hairband",
+		"chipDescription": "The crucial item to become a twin-tail girl. The secret to be kawaii.",
+		"cv":"Nanami Takahashi",
+		"expressions": [
+			["Welcome to Yume's party!", "Hmm...hmm... Oh! Sorry, I was distracted.", "Let's try Groove Coaster next time!"],
+			["7 times 9 is... 32?", "Eh... I hit a pole when walking around with my headphones on... It still hurts...", "It's a frog? How rude, I was drawing a cat!"],
+			["Rin-chan will blush if you say she's Kawaii, just like Seine senpai!", "Have you heard? I just got the coupon for new desert shop by the station. Let's go after school!",
+			"Why do I like summer? Because ice cream!"
+			],
+			[
+				"Kawaii? Me? Thanks, I'm happy to be said that!", "Huh... So hungry... need crepes...",
+				"I will be very happy if you choose me... it, it's about being your navigator!"
+			]
+		]
+	},
+	{
+		"characterName": "NEKO#ΦωΦ",
+		"cosName": "Game streamer",
+		"description": "Game streamer",
+		"skill": "The streamer from Cytus II, Neko#ΦωΦ. She will become invincible after her hp drops to 0. \nYour score will not be recorded if you clear the stage in this state. Yeah~ A collab character that won't die~",
+		"chipName": "Meow Bot",
+		"chipDescription": "That person will not stop until being able to buy a dozen of Meow Bot.",
+		"cv":"Hanamori Yumiri",
+		"expressions": [
+			["Yeah! NEKO is chosen again!Hmm... \nWhy did I say again?", "NEKO is taking the top of this leaderboard!", "Chit-chat time~"],
+			["What the...? Who did you say is a wildcat? ", "What's your problem? \nNEKO is busy, go away.", "The signal is so bad here!\n I can't scroll through iM..."],
+			["The girls are so cute here~ \nWho do we start with... heheheh", "Though MeowBot is always the cutest, \nthis Muse is really lovely!","Beating up monsters feels shockingly good?! Taste more of my meow meow punch!"
+			],
+			[
+				"I'm not your waifu! Disgusting! You are so banned! You're banned!", "Wha... Where are you touching?! Hentai! Get away from me!!!",
+				"Oh~ The blush on NEKO means nothing, stop guessing! Haha... Ahhahaha..."
+			]
+		]
+	},
+	{
+		"characterName": "Rin",
+		"cosName": "Part-Time Warrior",
+		"description": "Part-Time Warrior",
+		"skill": "The greatest skill in Muse Dash history, the power to defy the laws of physics! \nRotate the device 90 degrees counter-clockwise and turn it into a vertical rythm game!",
+		"chipName": "The Safety Helmet",
+		"chipDescription": "This beat-up ol' safety helmet is the true staple of a Part-Time Warrior.",
+		"cv":"▇▇▇▇▇▇▇▇▇▇",
+		"expressions": [
+			["My new skill? Doing true damage to IQ. ( ﾟq 。)", "Pay to win and not really fun at all! ⊂彡☆))∀`)", "ADVERTISING SPOT FOR RENT!!!"],
+			["Stop that, our writers ran away!", "Come on PeroPero, being poor is not the excuse to make me look like this!", "I worked my butt off and only two coins? WTF devs?"],
+			["Ha, not this time.", "If [Just As Planned] with 200+ tracks isn't the most ideal investment, then I don't know what is. ","What do you mean lazy drawing, less is more!"],
+			["Damn... today is a dark... ( TдT)", "Hmm... Running out of ideas... Might as well put this in."],
+			[":( Your character has encountered an voicing issue.\nError Code: peroperoispoor\nPlease try buying the [Just As Planned] DLC pass to support the devs."]
+		]
+	}
+]

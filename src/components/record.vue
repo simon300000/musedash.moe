@@ -15,6 +15,7 @@
     <div>
       <p class="title is-3 is-spaced">{{Math.round(play.acc*10)/10}}%</p>
       <p class="subtitle is-5 is-spaced">{{play.score}}</p>
+      <p class="subtitle is-6 is-spaced">{{characters[play.character_uid]}} / {{elfins[play.elfin_uid]}}</p>
     </div>
   </div>
   <div class="level-item">
@@ -52,7 +53,7 @@ export default {
   },
   computed: {
     ...mapState(['lang']),
-    ...mapGetters(['allMusics']),
+    ...mapGetters(['allMusics', 'elfins', 'characters']),
     music() {
       return { ...this.allMusics[this.play.uid], ...this.allMusics[this.play.uid][this.lang] }
     },
