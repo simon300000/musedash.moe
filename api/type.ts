@@ -61,7 +61,7 @@ export interface AlbumData extends Record<AvailableLocales, AlbumLang> {
 
 export type Albums = AlbumData[]
 
-interface User {
+export interface User {
   user_id: string,
   nickname: string
 }
@@ -105,7 +105,7 @@ export interface RankValue extends APIResult {
   platform?: string
 }
 
-interface Play {
+export interface Play {
   score: number,
   acc: number,
   i: number,

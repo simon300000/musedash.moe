@@ -13,7 +13,7 @@ const cache = new LRU({
   updateAgeOnGet: true
 })
 
-const app = new Koa()
+export const app = new Koa()
 
 app.use(async (ctx, next) => {
   ctx.set('Access-Control-Allow-Origin', 'https://musedash.moe')

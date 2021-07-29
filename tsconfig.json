@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es2019",
-    "lib": ["es2019"],
+    "target": "es2021",
+    "lib": ["esnext"],
     "module": "ESNext",
     "noImplicitAny": false,
     "preserveConstEnums": true,
