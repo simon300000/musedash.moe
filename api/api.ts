@@ -7,6 +7,8 @@ import { Albums } from './type.js'
 import { rank, player, search } from './database.js'
 import { albums } from './albumParser.js'
 
+import { search as searchF } from './common.js'
+
 const cache = new LRU({
   maxAge: 1000 * 5,
   max: 100,
@@ -79,28 +81,7 @@ router.get('/player/:id', async ctx => {
 })
 
 router.get('/search/:string', async ctx => {
-  const query = [...new Set(ctx.params.string
-    .toLowerCase()
-    .split(' ')
-    .filter(Boolean))]
-  if (query.length) {
-    const profiles: Promise<any>[] = await new Promise(resolve => {
-      const result = []
-      const stream = search.createReadStream()
-      stream.on('data', ({ key: user_id, value: nickname }) => {
-        if (!query.find(word => !nickname.includes(word))) {
-          result.push(player.get(user_id)
-            .then(({ user: { nickname: name, user_id: id } }) => [name, id])
-            .catch(() => undefined))
-        }
-      })
-      stream.on('close', () => resolve(result))
-    })
-    const result = await Promise.all(profiles)
-    ctx.body = result.filter(Boolean)
-  } else {
-    ctx.body = []
-  }
+  ctx.body = await searchF({ search, q: ctx.params.string, player })
 })
 
 router.get('/log', ctx => {

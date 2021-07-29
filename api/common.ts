@@ -45,3 +45,29 @@ export const makeSearch = <PlayerType extends LevelUp>({ search, player, log }: 
   stream.on('data', ({ user: { nickname, user_id } }) => batch.put(user_id, nickname.toLowerCase()))
   stream.on('close', () => resolve(batch.write()))
 })
+
+export const search = async <PlayerType extends LevelUp>({ search, q, player }: { search: SearchType, q: string, player: PlayerType }) => {
+  const query = [...new Set(q
+    .toLowerCase()
+    .split(' ')
+    .filter(Boolean))]
+  if (query.length) {
+    const profiles: Promise<any>[] = await new Promise(resolve => {
+      const result = []
+      const stream = search.createReadStream()
+      // eslint-disable-next-line camelcase
+      stream.on('data', ({ key: user_id, value: nickname }) => {
+        if (!query.find(word => !nickname.includes(word))) {
+          result.push(player.get(user_id)
+            .then(({ user: { nickname: name, user_id: id } }) => [name, id])
+            .catch(() => undefined))
+        }
+      })
+      stream.on('close', () => resolve(result))
+    })
+    const result = await Promise.all(profiles)
+    return result.filter(Boolean)
+  }
+  return []
+
+}

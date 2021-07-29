@@ -6,7 +6,7 @@ import Router from '@koa/router'
 import { mdmc as db } from './database.js'
 import { log as rawLog, error as rawError, app } from './api.js'
 
-import { download, resultWithHistory, makeSearch } from './common.js'
+import { download, resultWithHistory, makeSearch, search as searchF } from './common.js'
 
 import { APIResults, RankValue, User, Play as RawPlay } from './type.js'
 
@@ -127,6 +127,10 @@ router.get('/rank/:id/:difficulty', async ctx => {
     // eslint-disable-next-line camelcase
     ctx.body = result.map(({ play: { acc, score }, history: { lastRank } = { lastRank: -1 }, user: { nickname, user_id } }) => [acc, score, lastRank, nickname, user_id])
   }
+})
+
+router.get('/search/:string', async ctx => {
+  ctx.body = await searchF({ search, q: ctx.params.string, player })
 })
 
 app.use(router.routes())
