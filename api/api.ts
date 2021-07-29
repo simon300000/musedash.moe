@@ -67,12 +67,11 @@ router.get('/rank/:uid/:difficulty/:platform', async ctx => {
   let result = await rank.get(ctx.params as any)
   if (result) {
     if (ctx.params.platform === 'all') {
-      result = result.map(({ play: { acc, score }, history: { lastRank } = { lastRank: -1 }, user: { nickname, user_id }, platform }) => [acc, score, lastRank, nickname, user_id, platform])
+      ctx.body = result.map(({ play: { acc, score }, history: { lastRank } = { lastRank: -1 }, user: { nickname, user_id }, platform }) => [acc, score, lastRank, nickname, user_id, platform])
     } else {
-      result = result.map(({ play: { acc, score }, history: { lastRank } = { lastRank: -1 }, user: { nickname, user_id } }) => [acc, score, lastRank, nickname, user_id])
+      ctx.body = result.map(({ play: { acc, score }, history: { lastRank } = { lastRank: -1 }, user: { nickname, user_id } }) => [acc, score, lastRank, nickname, user_id])
     }
   }
-  ctx.body = result
 })
 
 router.get('/player/:id', async ctx => {

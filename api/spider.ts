@@ -1,5 +1,5 @@
 /* eslint camelcase: ["off"] */
-import { APIResults, MusicData, MusicCore, RankCore } from './type.js'
+import { APIResults, MusicData, MusicCore, RankCore, PlayerValue } from './type.js'
 import { rank, player, search } from './database.js'
 import { PARALLEL } from './config.js'
 
@@ -110,18 +110,18 @@ const analyze = (musicList: RankCore[]) => musicList
     const sumRank = await rank.get({ uid, difficulty, platform: 'all' })
     return (await currentRank
       .map(async ({ user, play: { score, acc }, history }, i) => {
-        let playerData = await player.get(user.user_id).catch(() => ({ plays: [] }))
+        let playerData = await player.get(user.user_id).catch(() => ({ plays: [] }) as PlayerValue)
         playerData.user = user
         const sumI = sumRank.findIndex(play => play.platform === platform && play.user.user_id === user.user_id)
         playerData.plays.push({ score, acc, i, platform, history, difficulty, uid, sum: sumI })
         return { key: user.user_id, value: playerData }
       })
-      .reduce(async (b, v) => {
+      .reduce(async (b, v: Promise<{ key: string, value: PlayerValue }>) => {
         const { key, value } = await v
         const batch = await b
         return batch.put(key, value)
-      }, player.batch()))
-      .write()
+      }, Promise.resolve(player.batch())))
+      .write().then(() => undefined)
   }, player.clear())
 
 const makeSearch = () => new Promise(async resolve => {

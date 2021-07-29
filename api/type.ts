@@ -61,6 +61,11 @@ export interface AlbumData extends Record<AvailableLocales, AlbumLang> {
 
 export type Albums = AlbumData[]
 
+interface User {
+  user_id: string,
+  nickname: string
+}
+
 interface APIResult {
   play: {
     acc: number,
@@ -72,10 +77,7 @@ interface APIResult {
     score: number,
     user_id: string
   },
-  user: {
-    nickname: string,
-    user_id: string
-  }
+  user: User
 }
 
 export type APIResults = APIResult[]
@@ -88,4 +90,35 @@ export interface MusicCore {
 export interface RankCore extends MusicCore {
   api: string,
   platform: string
+}
+
+export interface RankKey {
+  uid: string,
+  difficulty: number,
+  platform: string
+}
+
+export interface RankValue extends APIResult {
+  history?: {
+    lastRank: number
+  },
+  platform?: string
+}
+
+interface Play {
+  score: number,
+  acc: number,
+  i: number,
+  platform: string,
+  history: {
+    lastRank: number
+  },
+  difficulty: number,
+  uid: string,
+  sum: number
+}
+
+export interface PlayerValue {
+  plays: Play[],
+  user: User
 }
