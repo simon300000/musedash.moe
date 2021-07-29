@@ -9,7 +9,7 @@ import got from 'got'
 
 import { log, error, reloadAlbums } from './api.js'
 
-import { download } from './common.js'
+import { download, resultWithHistory } from './common.js'
 
 const wait = (ms: number): Promise<void> => new Promise(resolve => setTimeout(resolve, ms))
 
@@ -46,17 +46,9 @@ const core = ({ uid, difficulty, platform, api }: RankCore) => async () => {
   const result = await download({ s: `${uid} - ${difficulty} - ${api}`, error, f: downloadCore({ uid, difficulty, api }) })
 
   if (result) {
-    const currentUidRank: string[] = (await rank.get({ uid, difficulty, platform }) || []).map(({ play }) => play.user_id)
+    const current = (await rank.get({ uid, difficulty, platform }) || [])
 
-    const resultWithHistory = result.map(r => {
-      if (currentUidRank.length) {
-        return { ...r, history: { lastRank: currentUidRank.indexOf(r.play.user_id) } }
-      } else {
-        return r
-      }
-    })
-
-    await rank.put({ uid, difficulty, platform, value: resultWithHistory })
+    await rank.put({ uid, difficulty, platform, value: resultWithHistory({ result, current }) })
   }
 }
 

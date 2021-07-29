@@ -1,4 +1,4 @@
-import { APIResults } from './type'
+import { APIResults, RankValue } from './type'
 
 const wait = (ms: number): Promise<void> => new Promise(resolve => setTimeout(resolve, ms))
 
@@ -18,4 +18,16 @@ export const download = async<T extends APIResults>({ f, i = 3, s, error }: { i?
   } else {
     return result.filter(({ play, user }) => play && user) as T
   }
+}
+
+export const resultWithHistory = ({ result, current }: { result: APIResults, current: RankValue[] }): RankValue[] => {
+  const currentUidRank: string[] = current.map(({ play }) => play.user_id)
+
+  return result.map(r => {
+    if (currentUidRank.length) {
+      return { ...r, history: { lastRank: currentUidRank.indexOf(r.play.user_id) } }
+    } else {
+      return r
+    }
+  })
 }
