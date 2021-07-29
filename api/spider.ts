@@ -9,6 +9,8 @@ import got from 'got'
 
 import { log, error, reloadAlbums } from './api.js'
 
+import { download } from './common.js'
+
 const wait = (ms: number): Promise<void> => new Promise(resolve => setTimeout(resolve, ms))
 
 const parallel = async <T>(n: number, pfs: (() => Promise<(number) => T>)[]) => {
@@ -38,28 +40,10 @@ const platforms = {
   pc: 'pcleaderboard'
 } as const
 
-const downloadCore = async ({ api, uid, difficulty }): Promise<APIResults | void> => (await got(`https://prpr-muse-dash.leanapp.cn/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=1999`, { timeout: 1000 * 60 * 10 }).json() as any).result
-
-const download = async ({ api, uid, difficulty, i = 3 }): Promise<APIResults> => {
-  const result = await downloadCore({ api, uid, difficulty }).catch((e): APIResults => {
-    console.error(e)
-    return undefined
-  })
-  if (!result) {
-    if (i >= 0) {
-      error(`RETRY: ${uid} - ${difficulty} - ${api}, ${i}`)
-      await wait(1000 * 60 * Math.random())
-      return download({ api, uid, difficulty, i: i - 1 })
-    } else {
-      error(`NO: ${uid} - ${difficulty} - ${api}`)
-    }
-  } else {
-    return result.filter(({ play, user }) => play && user)
-  }
-}
+const downloadCore = ({ api, uid, difficulty }) => async (): Promise<APIResults | void> => (await got(`https://prpr-muse-dash.leanapp.cn/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=1999`, { timeout: 1000 * 60 * 10 }).json() as any).result
 
 const core = ({ uid, difficulty, platform, api }: RankCore) => async () => {
-  const result = await download({ uid, difficulty, api })
+  const result = await download({ s: `${uid} - ${difficulty} - ${api}`, error, f: downloadCore({ uid, difficulty, api }) })
 
   const currentUidRank: string[] = (await rank.get({ uid, difficulty, platform }) || []).map(({ play }) => play.user_id)
 
