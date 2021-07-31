@@ -1,16 +1,14 @@
 <template>
 <div>
   <progress class="progress is-small" max="100" v-if="!albums.length"></progress>
-  <template v-if="albums.length">
-    <findMusic></findMusic>
-    <div class="tabs is-centered is-large" :class="{overflowhide: win}">
-      <ul>
-        <router-link :to="`/albums/${album.json}`" :key="album.json" v-for="album in albums" custom v-slot="{ navigate, href, isActive }">
-          <li @click="navigate" @keypress.enter="navigate" :class="{ 'is-active': isActive }"><a :href="href"><span>{{album.title}}</span></a></li>
-        </router-link>
-      </ul>
-    </div>
-  </template>
+  <findMusic v-if="albums.length"></findMusic>
+  <div class="tabs is-centered is-large" ref="container" :class="{overflowhide: win}">
+    <ul>
+      <router-link :to="`/albums/${album.json}`" :key="album.json" v-for="album in albums" custom v-slot="{ navigate, href, isActive }">
+        <li @click="navigate" @keypress.enter="navigate" :class="{ 'is-active': isActive }"><a :href="href"><span>{{album.title}}</span></a></li>
+      </router-link>
+    </ul>
+  </div>
   <router-view v-if="albums.length"></router-view>
 </div>
 </template>
@@ -20,9 +18,18 @@ import { mapState, mapActions, mapGetters } from 'vuex'
 
 import findMusic from '@/components/findMusic'
 
+const onScroll = container => e => {
+  const d = e.deltaY + e.deltaX
+  container.scrollLeft += d
+  e.preventDefault()
+}
+
 export default {
   data() {
-    return { win: true }
+    return {
+      win: true,
+      scrollEventListner: undefined
+    }
   },
   components: { findMusic },
   computed: {
@@ -40,6 +47,13 @@ export default {
     if (!this.albumsArray.length) {
       this.loadAlbums()
     }
+    const { container } = this.$refs
+    this.scrollEventListner = onScroll(container)
+    container.addEventListener('wheel', this.scrollEventListner)
+  },
+  beforeDestroy() {
+    const { container } = this.$refs
+    container.removeEventListener('wheel', this.scrollEventListner)
   },
   methods: mapActions(['loadAlbums'])
 }
