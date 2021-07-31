@@ -69,5 +69,4 @@ export const search = async <PlayerType extends LevelUp>({ search, q, player }: 
     return result.filter(Boolean)
   }
   return []
-
 }
