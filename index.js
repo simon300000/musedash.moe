@@ -1,5 +1,6 @@
 import Koa from 'koa'
 import serve from 'koa-static'
+import mount from 'koa-mount'
 
 import vsr from 'vue-server-renderer'
 import { readFileSync } from 'fs'
@@ -21,6 +22,7 @@ const renderer = createBundleRenderer(serverBundle, {
   clientManifest
 })
 
+app.use(mount('/covers', serve('./public/covers')))
 app.use(serve('dist'))
 
 const langs = ['ChineseS', 'ChineseT', 'English', 'Japanese', 'Korean']
