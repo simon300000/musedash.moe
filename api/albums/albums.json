@@ -17,6 +17,15 @@
 		"free" : false,
 	},
 	{
+		"uid": "music_package_40",
+		"title": "Happy Otaku Pack Vol.12",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM41",
+		"prefabsName": "AlbumDisco41",
+		"free" : false,
+	},
+	{
 		"uid": "music_package_39",
 		"title": "MUSE RADIO FM102",
 		"needPurchase": true,

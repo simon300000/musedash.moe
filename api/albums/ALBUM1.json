@@ -124,7 +124,7 @@
     "levelDesigner": "Howard_Y",
     "difficulty1": "2",
     "difficulty2": "4",
-    "difficulty3": "6",
+    "difficulty3": "7",
     "unlockLevel": "4"
   },
   {
@@ -396,7 +396,7 @@
     "scene": "scene_01",
     "levelDesigner": "Howard_Y",
     "difficulty1": "4",
-    "difficulty2": "6",
+    "difficulty2": "7",
     "difficulty3": "9",
     "unlockLevel": "22"
   },
@@ -434,7 +434,7 @@
   },
   {
     "uid": "0-16",
-    "name": "アルメリアの鳥籠",
+    "name": "Cage of Almeria",
     "author": "a_hisa",
     "bpm": "150",
     "music": "armeria_no_torikago_music",
@@ -493,7 +493,7 @@
     "levelDesigner": "Howard_Y",
     "difficulty1": "3",
     "difficulty2": "6",
-    "difficulty3": "9",
+    "difficulty3": "8",
     "unlockLevel": "28"
   },
   {
@@ -701,7 +701,7 @@
     "levelDesigner": "Howard_Y",
     "difficulty1": "3",
     "difficulty2": "6",
-    "difficulty3": "8",
+    "difficulty3": "9",
     "unlockLevel": "42"
   },
   {
@@ -717,7 +717,7 @@
     "levelDesigner": "Howard_Y",
     "difficulty1": "5",
     "difficulty2": "7",
-    "difficulty3": "9",
+    "difficulty3": "10",
     "unlockLevel": "43"
   },
   {
@@ -738,7 +738,7 @@
   },
   {
     "uid": "0-27",
-    "name": "時計の部屋と精神世界",
+    "name": "Clock Room & Spiritual World",
     "author": "a_hisa",
     "bpm": "180",
     "music": "tokei_no_heya_to_seishin_sekai_music",

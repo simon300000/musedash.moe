@@ -44,7 +44,7 @@
         "levelDesigner": "Howard_Y",
         "difficulty1": "5",
         "difficulty2": "7",
-        "difficulty3": "9",
+        "difficulty3": "10",
         "unlockLevel": "0"
 	},
 	{ 
@@ -91,7 +91,7 @@
         "scene": "scene_01",
         "levelDesigner": "Howard_Y",
         "difficulty1": "6",
-        "difficulty2": "8",
+        "difficulty2": "9",
         "difficulty3": "11",
         "unlockLevel": "0"
 	}
