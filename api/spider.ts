@@ -97,7 +97,11 @@ const analyze = (musicList: RankCore[]) => musicList
       .reduce(async (b, v: Promise<{ key: string, value: PlayerValue }>) => {
         const { key, value } = await v
         const batch = await b
-        return batch.put(key, value)
+        if (key) {
+          return batch.put(key, value)
+        } else {
+          return batch
+        }
       }, Promise.resolve(player.batch())))
       .write().then(() => undefined)
   }, player.clear())
