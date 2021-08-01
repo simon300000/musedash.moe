@@ -20,7 +20,7 @@ export const download = async<T extends APIResults>({ f, i = 3, s, error }: { i?
       error(`NO: ${s}`)
     }
   } else {
-    return result.filter(({ play, user }) => play && user) as T
+    return result.filter(({ play, user } = { play: undefined, user: undefined }) => play && user) as T
   }
 }
 
