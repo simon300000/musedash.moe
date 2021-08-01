@@ -66,6 +66,11 @@ export interface User {
   nickname: string
 }
 
+export interface RawAPI {
+  result: APIResults,
+  total: number
+}
+
 interface APIResult {
   play: {
     acc: number,

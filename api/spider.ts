@@ -1,5 +1,5 @@
 /* eslint camelcase: ["off"] */
-import { APIResults, MusicData, MusicCore, RankCore, PlayerValue } from './type.js'
+import { APIResults, MusicData, MusicCore, RankCore, PlayerValue, RawAPI } from './type.js'
 import { rank, player, search } from './database.js'
 import { PARALLEL } from './config.js'
 
@@ -40,7 +40,12 @@ const platforms = {
   pc: 'pcleaderboard'
 } as const
 
-const downloadCore = ({ api, uid, difficulty }) => async (): Promise<APIResults | void> => (await got(`https://prpr-muse-dash.leanapp.cn/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=1999`, { timeout: 1000 * 60 * 10 }).json() as any).result
+const downloadCore = ({ api, uid, difficulty }) => async (): Promise<APIResults | void> => {
+  const { result: firstPage, total } = await got(`https://prpr-muse-dash.peropero.net/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=100&offset=0`, { timeout: 1000 * 60 * 10 }).json<RawAPI>()
+  const pageNumber = Math.max(Math.ceil(total / 100) - 1, 0)
+  const urls = Array(pageNumber).fill(undefined).map((_, i) => i + 1).map(i => i * 100 - 1).map(limit => `https://prpr-muse-dash.peropero.net/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=${limit}&offset=1`)
+  return [firstPage, ...await Promise.all(urls.map(url => got(url).json<RawAPI>().then(({ result }) => result)))].flat()
+}
 
 const core = ({ uid, difficulty, platform, api }: RankCore) => async () => {
   const result = await download({ s: `${uid} - ${difficulty} - ${api}`, error, f: downloadCore({ uid, difficulty, api }) })
