@@ -33,11 +33,11 @@ export const download = async<T extends APIResults>({ f, i = 3, s, error }: { i?
 }
 
 export const resultWithHistory = ({ result, current }: { result: APIResults, current: RankValue[] }): RankValue[] => {
-  const currentUidRank: string[] = current.map(({ play }) => play.user_id)
+  const currentUidRank: string[] = current.map(({ user }) => user.user_id)
 
   return result.map(r => {
     if (currentUidRank.length) {
-      return { ...r, history: { lastRank: currentUidRank.indexOf(r.play.user_id) } }
+      return { ...r, history: { lastRank: currentUidRank.indexOf(r.user.user_id) } }
     } else {
       return r
     }
