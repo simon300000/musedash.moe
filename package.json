@@ -62,6 +62,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "ora": "^5.0.0",
     "postcss-safe-parser": "^4.0.1",
+    "raw-loader": "^4.0.2",
     "rimraf": "^3.0.0",
     "sass": "^1.22.9",
     "sass-loader": "^8.0.0",
