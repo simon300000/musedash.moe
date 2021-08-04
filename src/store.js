@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { getAlbums, getRank, getPlayer, getCE } from './api'
+import { getAlbums, getRank, getPlayer, getCE, mdmcGetAlbum, mdmcGetPlayer, mdmcGetRank } from './api'
 import { set as cookieSet } from 'js-cookie'
 
 Vue.use(Vuex)
@@ -78,6 +78,38 @@ export const createStore = ({ lang, changeTitle, theme }) => {
       },
       async loadUser({ commit }, id) {
         commit('setUser', { id, data: await getPlayer(id) })
+      }
+    },
+    modules: {
+      mdmc: {
+        namespaced: true,
+        state: {
+          album: [],
+          rankCache: {},
+          userCache: {}
+        },
+        mutations: {
+          setAlbum(state, data) {
+            state.album = data
+          },
+          setRank(state, { id, difficulty, rank }) {
+            state.rankCache = { ...state.rankCache, [`${id}_${difficulty}`]: rank }
+          },
+          setUser(state, { id, data }) {
+            state.userCache = { ...state.userCache, [id]: data }
+          }
+        },
+        actions: {
+          async loadAlbum({ commit }) {
+            commit('setAlbum', await mdmcGetAlbum())
+          },
+          async loadRank({ commit }, { id, difficulty, }) {
+            commit('setRank', { id, difficulty, rank: await mdmcGetRank({ id, difficulty }) })
+          },
+          async loadUser({ commit }, id) {
+            commit('setUser', { id, data: await mdmcGetPlayer(id) })
+          }
+        }
       }
     }
   })

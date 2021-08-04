@@ -8,6 +8,8 @@ import Player from './views/Player.vue'
 import Search from './views/Search.vue'
 import About from './views/About.vue'
 
+import MDMC from './views/MDMC.vue'
+
 Vue.use(Router)
 
 export const createRouter = () => new Router({
@@ -45,6 +47,10 @@ export const createRouter = () => new Router({
     }, {
       path: '/about',
       component: About
+    }, {
+      path: '/mdmc',
+      alias: ['/mdmc/chart'],
+      component: MDMC
     }
   ]
 })
