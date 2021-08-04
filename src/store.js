@@ -68,10 +68,14 @@ export const createStore = ({ lang, changeTitle, theme }) => {
       }
     },
     actions: {
-      async loadAlbums({ commit }) {
-        const ceP = getCE()
+      async loadAlbums({ commit, dispatch }) {
+        dispatch('loadCE')
         commit('setAlbums', await getAlbums())
-        commit('setCE', await ceP)
+      },
+      async loadCE({ commit, state }) {
+        if (!Object.keys(state.ce.c).length) {
+          commit('setCE', await getCE())
+        }
       },
       async loadRank({ commit }, { uid, difficulty, platform }) {
         commit('setRank', { uid, difficulty, platform, rank: await getRank({ uid, difficulty, platform }) })
@@ -100,7 +104,8 @@ export const createStore = ({ lang, changeTitle, theme }) => {
           }
         },
         actions: {
-          async loadAlbum({ commit }) {
+          async loadAlbum({ commit, dispatch }) {
+            dispatch('loadCE', null, { root: true })
             commit('setAlbum', await mdmcGetAlbum())
           },
           async loadRank({ commit }, { id, difficulty, }) {
