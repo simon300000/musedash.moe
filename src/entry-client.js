@@ -18,10 +18,8 @@ if (window.__INITIAL_STATE__) {
   store.replaceState(window.__INITIAL_STATE__)
 }
 
-if (process.env.NODE_ENV === 'production') {
-  Vue.use(VueGtag, {
-    config: { id: "UA-123973162-5" }
-  }, router)
-}
+Vue.use(VueGtag, {
+  config: { id: "UA-123973162-5" }
+}, router)
 
 app.$mount('#app')

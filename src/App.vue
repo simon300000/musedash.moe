@@ -85,6 +85,7 @@ export default {
   },
   mounted() {
     this.ha = new Date().getMonth() + 1 === 4 && new Date().getDate() === 1
+    this.$gtag.set('theme', this.theme)
   },
   computed: {
     ...mapState(['lang', 'theme']),
@@ -128,6 +129,7 @@ export default {
     },
     switchTheme(e) {
       if (preventDefault(e)) {
+        this.$gtag.set('theme', this.nextTheme)
         this.setTheme(this.nextTheme)
       }
     }
