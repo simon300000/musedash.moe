@@ -1,6 +1,6 @@
 import Vue from 'vue'
-import VueAnalytics from 'vue-analytics'
 import { get as cookieGet } from 'js-cookie'
+import VueGtag from "vue-gtag"
 
 import { createApp } from './app'
 import './registerServiceWorker'
@@ -19,10 +19,9 @@ if (window.__INITIAL_STATE__) {
 }
 
 if (process.env.NODE_ENV === 'production') {
-  Vue.use(VueAnalytics, {
-    id: 'UA-123973162-5',
-    router
-  })
+  Vue.use(VueGtag, {
+    config: { id: "UA-123973162-5" }
+  }, router)
 }
 
 app.$mount('#app')
