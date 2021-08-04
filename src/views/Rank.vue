@@ -37,12 +37,8 @@
           <td>{{Math.round((ha?100-play.acc:play.acc)*10)/10}}%</td>
           <td>{{play.score}}</td>
           <td v-if="platform === 'all'">
-            <span class="icon" style="float:right;" v-if="play.platform === 'pc'">
-              <octicon name="device-desktop"></octicon>
-            </span>
-            <span class="icon" v-else>
-              <octicon name="device-mobile"></octicon>
-            </span>
+            <octicon type="desktop" size="17" style="float:right;" v-if="play.platform === 'pc'"></octicon>
+            <octicon type="mobile" size="17" v-else></octicon>
           </td>
           <td style="text-align:center;">{{characters[play.character]}} / {{elfins[play.elfin]}}</td>
         </tr>
@@ -55,10 +51,7 @@
 <script>
 import { mapState, mapActions, mapGetters } from 'vuex'
 
-import Octicon from '@/components/vue-octicon/src/components/Octicon.vue'
-import '@/components/vue-octicon/src/icons/device-desktop'
-import '@/components/vue-octicon/src/icons/device-mobile'
-
+import Octicon from '@/components/octicon.vue'
 import change from '@/components/change.vue'
 
 export default {

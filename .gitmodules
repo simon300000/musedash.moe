@@ -1,6 +1,6 @@
-[submodule "src/components/vue-octicon"]
-	path = src/components/vue-octicon
-	url = https://github.com/Justineo/vue-octicon.git
 [submodule "src/bulmaswatch"]
 	path = src/bulmaswatch
 	url = https://github.com/jenil/bulmaswatch.git
+[submodule "src/octicons"]
+	path = src/octicons
+	url = https://github.com/primer/octicons.git

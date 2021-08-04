@@ -22,8 +22,8 @@
     <div>
       <router-link :to="`/music/${play.uid}/${play.difficulty}/${play.platform}`">
         <p class="title is-3 is-spaced clickable">
-          <octicon v-if="play.platform === 'pc'" name="device-desktop" width="24" height="24"></octicon>
-          <octicon v-else name="device-mobile" width="15" height="24"></octicon>
+          <octicon v-if="play.platform === 'pc'" type="desktop" size="26"></octicon>
+          <octicon v-else type="mobile" size="26"></octicon>
           #{{play.i+1}}
         </p>
       </router-link>
@@ -38,9 +38,7 @@
 <script>
 import { mapGetters, mapState } from 'vuex'
 
-import Octicon from '@/components/vue-octicon/src/components/Octicon.vue'
-import '@/components/vue-octicon/src/icons/device-desktop'
-import '@/components/vue-octicon/src/icons/device-mobile'
+import Octicon from '@/components/octicon.vue'
 
 export default {
   props: ['play'],
