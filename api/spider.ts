@@ -41,7 +41,7 @@ const platforms = {
 } as const
 
 const downloadCore = ({ api, uid, difficulty }) => async (): Promise<APIResults | void> => {
-  const { result: firstPage, total } = await got(`https://prpr-muse-dash.peropero.net/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=100&offset=0&version=1.5.0&platform=musedash.moe`, { timeout: 1000 * 60 * 10 }).json<RawAPI>()
+  const { result: firstPage, total } = await got(`https://prpr-muse-dash.peropero.net/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=100&offset=0&version=1.5.0&platform=musedash.moe`, { timeout: 1000 * 10 }).json<RawAPI>()
   const pageNumber = Math.max(Math.ceil(total / 100) - 1, 0)
   const urls = Array(pageNumber).fill(undefined).map((_, i) => i + 1).map(i => i * 100 - 1).map(limit => `https://prpr-muse-dash.peropero.net/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=${limit}&offset=1&version=1.5.0&platform=musedash.moe`)
   return [firstPage, ...await Promise.all(urls.map(url => got(url).json<RawAPI>().then(({ result }) => result)))].flat()
