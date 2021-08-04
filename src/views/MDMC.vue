@@ -5,6 +5,7 @@
   <hr>
   <progress class="progress is-small" max="100" v-if="!album.length"></progress>
   <template v-else>
+    <find-music :album="album"></find-music>
     <music :music="music" v-for="music in album" :key="music.id"></music>
   </template>
 </div>
@@ -14,12 +15,14 @@
 import { createNamespacedHelpers } from 'vuex'
 
 import Music from '@/components/mdmc/music'
+import FindMusic from '@/components/mdmc/findMusic'
 
 const { mapState, mapActions } = createNamespacedHelpers('mdmc')
 
 export default {
   components: {
-    Music
+    Music,
+    FindMusic
   },
   computed: {
     ...mapState(['album'])
