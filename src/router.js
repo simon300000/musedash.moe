@@ -9,6 +9,8 @@ import Search from './views/Search.vue'
 import About from './views/About.vue'
 
 import MDMC from './views/MDMC.vue'
+import MDMCMusic from './views/MDMCMusic.vue'
+import MDMCRank from './views/MDMCRank.vue'
 
 Vue.use(Router)
 
@@ -51,6 +53,11 @@ export const createRouter = () => new Router({
       path: '/mdmc',
       alias: ['/mdmc/chart'],
       component: MDMC
+    }, {
+      path: '/mdmc/chart/:id',
+      props: true,
+      component: MDMCMusic,
+      children: [{ path: ':difficulty', props: true, component: MDMCRank }]
     }
   ]
 })
