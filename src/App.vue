@@ -88,10 +88,13 @@ export default {
     this.$gtag.config({
       'custom_map': { 'dimension1': 'theme' }
     })
+    this.$gtag.event('theme', {
+      'theme': this.theme
+    })
   },
   watch: {
     theme: {
-      immediate: true,
+      immediate: false,
       handler() {
         this.$gtag.event('theme', {
           'theme': this.theme
