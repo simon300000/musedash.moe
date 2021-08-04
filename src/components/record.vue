@@ -28,7 +28,7 @@
         </p>
       </router-link>
       <router-link :to="`/music/${play.uid}/${play.difficulty}`">
-        <p class="subtitle is-6 is-spaced clickable">{{ha?'Insgesamt':'sum'}} #{{play.sum+1}}</p>
+        <p class="subtitle is-6 is-spaced clickable">sum #{{play.sum+1}}</p>
       </router-link>
     </div>
   </div>
@@ -44,10 +44,6 @@ export default {
   props: ['play'],
   components: {
     Octicon
-  },
-  data() { return { ha: false } },
-  mounted() {
-    this.ha = new Date().getMonth() + 1 === 4 && new Date().getDate() === 1
   },
   computed: {
     ...mapState(['lang']),

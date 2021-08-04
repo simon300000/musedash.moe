@@ -1,6 +1,6 @@
 <template>
 <div>
-  <input class="input" v-model="search" type="text" :placeholder="ha?'Musik suchen':'Search Music'">
+  <input class="input" v-model="search" type="text" placeholder="Search Music">
   <hr v-if="finds.length">
   <music v-for="music in finds" :key="`find_${music.uid}`" :music="music"></music>
   <hr v-if="finds.length">
@@ -14,10 +14,7 @@ import music from '@/components/music.vue'
 
 export default {
   data() {
-    return { ha: false, search: '' }
-  },
-  mounted() {
-    this.ha = new Date().getMonth() + 1 === 4 && new Date().getDate() === 1
+    return { search: '' }
   },
   components: { music },
   computed: {

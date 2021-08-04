@@ -3,13 +3,13 @@
   <form @submit="submit" class="full-width">
     <div class="field has-addons">
       <div class="control is-expanded" :class="{'is-loading': loading}">
-        <input class="input" v-model="search" type="text" :placeholder="ha?'Spieler suchen':'Search Player'">
+        <input class="input" v-model="search" type="text" placeholder="Search Player">
       </div>
       <div class="control">
-        <input type="submit" class="button is-info" :value="ha?'Suche':'Search'">
+        <input type="submit" class="button is-info" value="Search">
       </div>
     </div>
-    <p class="help" v-if="searched">{{ha?'Ergebnisse':'Result'}}: {{results.length}}</p>
+    <p class="help" v-if="searched">Result: {{results.length}}</p>
   </form>
   <progress class="progress is-info" max="100" v-if="loading"></progress>
   <router-link class="level" v-for="[username, id] in results" :key="id" :to="`/player/${id}`">
@@ -30,7 +30,6 @@ import { searchPlayer } from '@/api'
 export default {
   data() {
     return {
-      ha: false,
       loading: false,
       searching: undefined,
       search: '',
@@ -50,9 +49,6 @@ export default {
   },
   beforeDestroy() {
     this.removeTitle(this)
-  },
-  mounted() {
-    this.ha = new Date().getMonth() + 1 === 4 && new Date().getDate() === 1
   },
   methods: {
     ...mapMutations(['updateTitle', 'removeTitle']),

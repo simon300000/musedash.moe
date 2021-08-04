@@ -16,7 +16,7 @@
 
     <div class="navbar-menu" :class="{'is-active': menu}">
       <div class="navbar-start" @click="closeMenu()">
-        <router-link to="/player" class="navbar-item">{{ha?'Suche':'Search'}}</router-link>
+        <router-link to="/player" class="navbar-item">Search</router-link>
       </div>
 
       <div class="navbar-end">
@@ -31,7 +31,7 @@
                 {{name}}
               </a>
               <hr class="navbar-divider">
-              <router-link to="/about" class="navbar-item">{{ha?'Über uns':'About'}}</router-link>
+              <router-link to="/about" class="navbar-item">About</router-link>
             </div>
           </div>
         </div>
@@ -78,13 +78,12 @@ const preventDefault = e => {
 
 export default {
   data() {
-    return { ha: false, menu: false }
+    return { menu: false }
   },
   components: {
     CapsuleDef
   },
   mounted() {
-    this.ha = new Date().getMonth() + 1 === 4 && new Date().getDate() === 1
     this.$gtag.config({
       'custom_map': { 'dimension1': 'theme' }
     })
