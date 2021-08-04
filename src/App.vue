@@ -85,7 +85,19 @@ export default {
   },
   mounted() {
     this.ha = new Date().getMonth() + 1 === 4 && new Date().getDate() === 1
-    this.$gtag.set('theme', this.theme)
+    this.$gtag.config({
+      'custom_map': { 'dimension1': 'theme' }
+    })
+  },
+  watch: {
+    theme: {
+      immediate: true,
+      handler() {
+        this.$gtag.event('theme', {
+          'theme': this.theme
+        })
+      }
+    }
   },
   computed: {
     ...mapState(['lang', 'theme']),
@@ -129,7 +141,6 @@ export default {
     },
     switchTheme(e) {
       if (preventDefault(e)) {
-        this.$gtag.set('theme', this.nextTheme)
         this.setTheme(this.nextTheme)
       }
     }
