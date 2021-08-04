@@ -1,14 +1,14 @@
 <!-- From AbnerSquared, https://codepen.io/AbnerSquared/pen/xxZYEKv -->
 <!-- Also capsule-def.vue-->
-<template>
+<template functional>
 <div class="level-item">
   <div class="capsule">
 
-    <router-link :to="`/music/${uid}/0${platform ? `/${platform}` : ''}`" v-if="difficulty[0] !== '0'">
+    <router-link :to="props.difficulties[0].link" v-if="props.difficulties[0].level !== '0'">
       <svg class="node">
         <use href="#round" fill="url(#white-slash)" class="only" />
         <use href="#star" fill="url(#easy_slash)" />
-        <text x="50%" y="50%" class="easy_text text outline_easy">{{difficulty[0]}}</text>
+        <text x="50%" y="50%" class="easy_text text outline_easy">{{props.difficulties[0].level}}</text>
       </svg>
     </router-link>
     <div class="empty node" v-else>
@@ -17,11 +17,11 @@
 
     <div class="padding"></div>
 
-    <router-link :to="`/music/${uid}/1${platform ? `/${platform}` : ''}`" v-if="difficulty[1] !== '0'">
+    <router-link :to="props.difficulties[1].link" v-if="props.difficulties[1].level !== '0'">
       <svg class="node">
         <use href="#round" fill="url(#white-slash)" class="only" />
         <use href="#star" fill="url(#hard_slash)" />
-        <text x="50%" y="50%" class="hard_text text outline_hard">{{difficulty[1]}}</text>
+        <text x="50%" y="50%" class="hard_text text outline_hard">{{props.difficulties[1].level}}</text>
       </svg>
     </router-link>
     <div class="empty node" v-else>
@@ -30,24 +30,24 @@
 
     <div class="padding"></div>
 
-    <router-link :to="`/music/${uid}/2${platform ? `/${platform}` : ''}`" v-if="difficulty[2] !== '0'">
+    <router-link :to="props.difficulties[2].link" v-if="props.difficulties[2].level !== '0'">
       <svg class="node">
         <use href="#round" fill="url(#white-slash)" class="only" />
         <use href="#star" fill="url(#master_slash)" />
-        <text x="50%" y="50%" class="master_text text outline_master">{{difficulty[2]}}</text>
+        <text x="50%" y="50%" class="master_text text outline_master">{{props.difficulties[2].level}}</text>
       </svg>
     </router-link>
     <div class="empty node" v-else>
       <div class="dot"></div>
     </div>
 
-    <template v-if="difficulty[3] !== '0'">
+    <template v-if="props.difficulties[3].level !== '0'">
       <div class="padding"></div>
-      <router-link :to="`/music/${uid}/3${platform ? `/${platform}` : ''}`">
+      <router-link :to="props.difficulties[3].link">
         <svg class="node">
           <use href="#round" fill="url(#white-slash)" class="only" />
           <use href="#star" fill="url(#inferno_slash)" />
-          <text x="50%" y="50%" class="inferno_text text outline_inferno">{{difficulty[3]}}</text>
+          <text x="50%" y="50%" class="inferno_text text outline_inferno">{{props.difficulties[3].level}}</text>
         </svg>
       </router-link>
     </template>
@@ -57,9 +57,7 @@
 </template>
 
 <script>
-export default {
-  props: ['difficulty', 'platform', 'uid']
-}
+export default {}
 </script>
 
 <style scoped>

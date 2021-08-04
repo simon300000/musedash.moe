@@ -1,41 +1,18 @@
 <template>
-<nav class="level">
-  <div class="level-left">
-    <div class="level-item">
-      <figure class="image is-128x128">
-        <img class="is-rounded" :src="src" :alt="src">
-      </figure>
-    </div>
-  </div>
-  <div class="level-item">
-    <div>
-      <p class="title is-5 is-spaced" v-html="music.name"></p>
-      <p class="subtitle is-6" title="Author">{{music.author}}</p>
-      <router-link :to="`/albums/${album}`" v-if="!hideAlbum">
-        <p class="subtitle is-6 clickable">「{{albumName}}」</p>
-      </router-link>
-    </div>
-  </div>
-  <div class="level-item">
-    <div>
-      <p class="title is-6 is-spaced" title="Level Designer" v-for="(designer, i) in levelDesigner" :key="`${music.name}_${i}`">{{designer}}</p>
-    </div>
-  </div>
-  <div class="level-right">
-    <capsule :difficulty="music.difficulty" :platform="platform" :uid="music.uid"></capsule>
-  </div>
-</nav>
+<core :music="music" :albumName="albumName" :albumLink="albumLink" :levelDesigner="levelDesigner" :src="src" :difficulties="difficulties"></core>
 </template>
 
 <script>
 import { mapState, mapGetters } from 'vuex'
 
 import Capsule from './capsule'
+import Core from './musicCore'
 
 export default {
   props: ['music', 'platform', 'level', 'hideAlbum'],
   components: {
-    Capsule
+    Capsule,
+    Core
   },
   computed: {
     ...mapState(['lang', 'fullAlbums']),
@@ -47,7 +24,10 @@ export default {
       return this.musicAlbum[this.music.uid]
     },
     albumName() {
-      return this.fullAlbums[this.album][this.lang].title
+      return !this.hideAlbum && this.fullAlbums[this.album][this.lang].title
+    },
+    albumLink() {
+      return `/albums/${this.album}`
     },
     levelDesigner() {
       const levelDesigner = this.music.levelDesigner
@@ -61,6 +41,11 @@ export default {
           return levelDesigner
         }
       }
+    },
+    difficulties() {
+      const uid = this.music.uid
+      const platform = this.platform
+      return this.music.difficulty.map((level, i) => ({ level, link: `/music/${uid}/${i}${platform ? `/${platform}` : ''}` }))
     }
   }
 }
