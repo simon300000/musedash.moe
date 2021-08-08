@@ -12,7 +12,7 @@
     <p class="help" v-if="searched">Result: {{results.length}}</p>
   </form>
   <progress class="progress is-info" max="100" v-if="loading"></progress>
-  <router-link class="level" v-for="[username, id] in results" :key="id" :to="`/player/${id}`">
+  <router-link class="level" v-for="[username, id] in results" :key="id" :to="mdmc ? `/mdmc/player/${id}` : `/player/${id}`">
     <div class="level-item has-text-centered">
       <div>
         <p class="heading black">{{id}}</p>
@@ -25,9 +25,10 @@
 
 <script>
 import { mapMutations } from 'vuex'
-import { searchPlayer } from '@/api'
+import { searchPlayer, mdmcSearchPlayer } from '@/api'
 
 export default {
+  props: ['mdmc'],
   data() {
     return {
       loading: false,
@@ -60,7 +61,7 @@ export default {
         this.loading = true
         this.results = []
         this.searched = false
-        let results = await searchPlayer(search)
+        let results = await (this.mdmc ? mdmcSearchPlayer : searchPlayer)(search)
         this.searching = undefined
         if (this.search === search) {
           this.loading = false

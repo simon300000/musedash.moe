@@ -63,6 +63,10 @@ export const createRouter = () => new Router({
       path: '/mdmc/player/:id',
       props: true,
       component: MDMCPlayer
+    }, {
+      path: '/mdmc/player/',
+      props: { mdmc: true },
+      component: Search
     }
   ]
 })
