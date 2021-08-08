@@ -2,9 +2,12 @@
 <div>
   <input class="input" v-model="search" type="text" placeholder="Search Music">
   <hr v-if="finds.length">
+  <div v-if="search.length && !finds.length">
+    <br>
+    <p>No result</p>
+  </div>
   <music v-for="music in finds" :key="`find_${music.id}`" :music="music"></music>
   <hr>
-  <hr v-if="finds.length">
 </div>
 </template>
 
