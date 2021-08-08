@@ -11,6 +11,7 @@ import About from './views/About.vue'
 import MDMC from './views/MDMC.vue'
 import MDMCMusic from './views/MDMCMusic.vue'
 import MDMCRank from './views/MDMCRank.vue'
+import MDMCPlayer from './views/MDMCPlayer.vue'
 
 Vue.use(Router)
 
@@ -58,6 +59,10 @@ export const createRouter = () => new Router({
       props: true,
       component: MDMCMusic,
       children: [{ path: ':difficulty', props: true, component: MDMCRank }]
+    }, {
+      path: '/mdmc/player/:id',
+      props: true,
+      component: MDMCPlayer
     }
   ]
 })

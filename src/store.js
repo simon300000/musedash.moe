@@ -94,6 +94,9 @@ export const createStore = ({ lang, changeTitle, theme }) => {
           rankCache: {},
           userCache: {}
         },
+        getters: {
+          songs: ({ album }) => Object.fromEntries(album.map(({ id, ...rest }) => [id, { ...rest, id }]))
+        },
         mutations: {
           setAlbum(state, data) {
             state.album = data

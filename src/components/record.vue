@@ -22,12 +22,14 @@
     <div>
       <router-link :to="props.link">
         <p class="title is-3 is-spaced clickable">
-          <octicon v-if="props.play.platform === 'pc'" type="desktop" size="26"></octicon>
-          <octicon v-else type="mobile" size="26"></octicon>
+          <template v-if="props.play.platform">
+            <octicon v-if="props.play.platform === 'pc'" type="desktop" size="26"></octicon>
+            <octicon v-else type="mobile" size="26"></octicon>
+          </template>
           #{{props.play.i+1}}
         </p>
       </router-link>
-      <router-link :to="props.sumLink">
+      <router-link :to="props.sumLink" v-if="props.sumLink">
         <p class="subtitle is-6 is-spaced clickable">sum #{{props.play.sum+1}}</p>
       </router-link>
     </div>
