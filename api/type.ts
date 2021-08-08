@@ -63,7 +63,8 @@ export type Albums = AlbumData[]
 
 export interface User {
   user_id: string,
-  nickname: string
+  nickname: string,
+  avatar?: string
 }
 
 export interface RawAPI {

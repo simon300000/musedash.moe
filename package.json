@@ -31,7 +31,8 @@
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1",
-    "vuex-router-sync": "^5.0.0"
+    "vuex-router-sync": "^5.0.0",
+    "xml2js": "^0.4.23"
   },
   "devDependencies": {
     "@babel/plugin-proposal-optional-chaining": "^7.2.0",
@@ -43,6 +44,7 @@
     "@types/level": "^6.0.0",
     "@types/lru-cache": "^5.1.0",
     "@types/subleveldown": "^4.1.0",
+    "@types/xml2js": "^0.4.9",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
     "@vue/cli-plugin-babel": "^4.0.5",

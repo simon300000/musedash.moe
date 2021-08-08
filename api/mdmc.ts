@@ -3,6 +3,8 @@ import got from 'got'
 
 import Router from '@koa/router'
 
+import { parseStringPromise } from 'xml2js'
+
 import { mdmc as db } from './database.js'
 import { log as rawLog, error as rawError, app } from './api.js'
 
@@ -39,6 +41,8 @@ const downloadSongs = async (): Promise<Musics> => (await got('https://mdmc.moe/
 // eslint-disable-next-line camelcase
 const downloadCore = ({ name, difficulty }: { name: string, difficulty: number }) => async (): Promise<APIResults | void> => (await got(`https://mdmc.moe/api/md?song_name=${Buffer.from(name).toString('base64url')}&music_difficulty=${difficulty + 1}`, { timeout: 1000 * 10 }).json() as any).result.map(({ user: { steam_id, ...restUser }, ...rest }) => ({ ...rest, user: { ...restUser, user_id: steam_id } }))
 
+const steamAvatarURL = (id: string) => got(`https://steamcommunity.com/profiles/${id}?xml=1`).text().then(parseStringPromise).then(({ profile: { avatarFull } }) => avatarFull[0] as string).catch(() => undefined)
+
 const core = async ({ name, id, difficulty, l }: MusicCore & { l: { i: number } }) => {
   const f = downloadCore({ name, difficulty })
   const s = `${name} - ${difficulty}`
@@ -67,9 +71,10 @@ const analyze = async (results: (RankCode & { value: RankValue[] })[]) => (await
       return rr
     }, r), {} as PlayerR))
   .reduce(async (p, [id, player]) => {
+    const avatar = await steamAvatarURL(id)
     const b = await p
-    b.put(id, player)
-    return b
+    player.user.avatar = avatar
+    return b.put(id, player)
   }, player.clear().then(() => player.batch())))
   .write()
 
