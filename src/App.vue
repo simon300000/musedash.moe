@@ -16,7 +16,8 @@
 
     <div class="navbar-menu" :class="{'is-active': menu}">
       <div class="navbar-start" @click="closeMenu()">
-        <router-link to="/player" class="navbar-item">Search</router-link>
+        <router-link to="/player" class="navbar-item" :exact-active-class="'is-active'">Search</router-link>
+        <router-link to="/mdmc" class="navbar-item mdmcPink" :active-class="'is-active'">mdmc</router-link>
       </div>
 
       <div class="navbar-end">
@@ -154,5 +155,13 @@ export default {
 .def {
   position: absolute;
   top: -1000px;
+}
+
+.mdmcPink:hover {
+  color: #ff55c3;
+}
+
+.mdmcPink.is-active {
+  color: #ff55c3;
 }
 </style>

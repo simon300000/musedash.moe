@@ -1,8 +1,8 @@
 <template>
 <div>
   <h1 class="title">MDMC</h1>
-  <h1 class="subtitle">Rank of <strong><a href="https://mdmc.moe" target="_blank" rel="noopener noreferrer">Muse Dash Modding Community</a></strong>!</h1>
-  
+  <h1 class="subtitle">Rank of <strong><a href="https://mdmc.moe" class="mdmcPink" target="_blank" rel="noopener noreferrer">Muse Dash Modding Community</a></strong>!</h1>
+
   <router-link to="/mdmc/player" class="button is-info">Player Search</router-link>
   <hr>
   <progress class="progress is-small" max="100" v-if="!album.length"></progress>
@@ -41,6 +41,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.mdmcPink {
+  color: #ff55c3;
+}
 </style>
