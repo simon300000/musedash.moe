@@ -15,6 +15,6 @@ export const getCE = () => get(`ce`)
 const getMDMC = api => get(`mdmc/${api}`)
 
 export const mdmcGetAlbum = () => getMDMC('musics')
-export const mdmcGetRank = async ({ id: i, difficulty }) => (await getMDMC(`rank/${i}/${difficulty}`)).map(([acc, score, lastRank, nickname, id, platform, character, elfin]) => ({ acc, score, lastRank, nickname, id, platform, character, elfin, url: `/mdmc/player/${id}` }))
+export const mdmcGetRank = async ({ id: i, difficulty }) => (await getMDMC(`rank/${i}/${difficulty}`)).map(([acc, score, lastRank, nickname, id, character, elfin]) => ({ acc, score, lastRank, nickname, id, character, elfin, url: `/mdmc/player/${id}` }))
 export const mdmcGetPlayer = id => getMDMC(`player/${id}`)
 export const mdmcSearchPlayer = search => getMDMC(`search/${search}`)
