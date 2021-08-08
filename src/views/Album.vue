@@ -34,10 +34,12 @@ export default {
       return this.fullAlbums[this.album]
     },
     title() {
-      return {
-        ...this.currentAlbum,
-        ...this.currentAlbum[this.lang]
-      }.title
+      if (this.currentAlbum) {
+        return {
+          ...this.currentAlbum,
+          ...this.currentAlbum[this.lang]
+        }.title
+      }
     },
     musics() {
       return Object.values(this.currentAlbum?.music || {})
