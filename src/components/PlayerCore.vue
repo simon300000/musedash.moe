@@ -2,13 +2,26 @@
 <div>
   <section class="hero full-width">
     <div class="hero-body">
-      <div class="container">
-        <h1 class="title">
-          {{current.user.nickname}}
-        </h1>
-        <h2 class="subtitle">
-          {{id}}
-        </h2>
+      <div class="level">
+        <div class="level-item">
+          <div class="container">
+            <div>
+              <h1 class="title">
+                {{current.user.nickname}}
+              </h1>
+            </div>
+            <div>
+              <h2 class="subtitle">
+                {{id}}
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="level-item" v-if="current.user.avatar">
+          <figure class="image is-128x128">
+            <img class="is-rounded" :src="current.user.avatar" alt="Steam Avatar">
+          </figure>
+        </div>
       </div>
     </div>
   </section>
