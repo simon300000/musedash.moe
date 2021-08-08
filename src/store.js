@@ -69,8 +69,10 @@ export const createStore = ({ lang, changeTitle, theme }) => {
     },
     actions: {
       async loadAlbums({ commit, dispatch }) {
-        dispatch('loadCE')
-        commit('setAlbums', await getAlbums())
+        const ceP = dispatch('loadCE')
+        const albumsP = getAlbums()
+        await ceP
+        commit('setAlbums', await albumsP)
       },
       async loadCE({ commit, state }) {
         if (!Object.keys(state.ce.c).length) {
@@ -105,8 +107,10 @@ export const createStore = ({ lang, changeTitle, theme }) => {
         },
         actions: {
           async loadAlbum({ commit, dispatch }) {
-            dispatch('loadCE', null, { root: true })
-            commit('setAlbum', await mdmcGetAlbum())
+            const ceP = dispatch('loadCE', null, { root: true })
+            const albumP = mdmcGetAlbum()
+            await ceP
+            commit('setAlbum', await albumP)
           },
           async loadRank({ commit }, { id, difficulty, }) {
             commit('setRank', { id, difficulty, rank: await mdmcGetRank({ id, difficulty }) })
