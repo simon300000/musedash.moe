@@ -9,6 +9,7 @@ import Search from './views/Search.vue'
 import About from './views/About.vue'
 
 import MDMC from './views/MDMC.vue'
+import MDMCHome from './views/MDMCHome.vue'
 import MDMCMusic from './views/MDMCMusic.vue'
 import MDMCRank from './views/MDMCRank.vue'
 import MDMCPlayer from './views/MDMCPlayer.vue'
@@ -52,21 +53,25 @@ export const createRouter = () => new Router({
       component: About
     }, {
       path: '/mdmc',
-      alias: ['/mdmc/chart'],
-      component: MDMC
-    }, {
-      path: '/mdmc/chart/:id',
-      props: true,
-      component: MDMCMusic,
-      children: [{ path: ':difficulty', props: true, component: MDMCRank }]
-    }, {
-      path: '/mdmc/player/:id',
-      props: true,
-      component: MDMCPlayer
-    }, {
-      path: '/mdmc/player/',
-      props: { mdmc: true },
-      component: Search
+      component: MDMC,
+      children: [{
+        path: '/',
+        alias: ['chart'],
+        component: MDMCHome
+      }, {
+        path: 'chart/:id',
+        props: true,
+        component: MDMCMusic,
+        children: [{ path: ':difficulty', props: true, component: MDMCRank }]
+      }, {
+        path: 'player/:id',
+        props: true,
+        component: MDMCPlayer
+      }, {
+        path: 'player',
+        props: { mdmc: true },
+        component: Search
+      }]
     }
   ]
 })

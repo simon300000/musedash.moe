@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { createNamespacedHelpers } from 'vuex'
+import { createNamespacedHelpers, mapMutations } from 'vuex'
 
 import Music from '@/components/mdmc/music'
 
@@ -18,6 +18,16 @@ const { mapState, mapActions } = createNamespacedHelpers('mdmc')
 
 export default {
   props: ['id'],
+  watch: {
+    music: {
+      immediate: true,
+      handler(music) {
+        if (music) {
+          this.updateTitle([this, music.name])
+        }
+      }
+    }
+  },
   computed: {
     ...mapState(['album']),
     music() {
@@ -25,10 +35,17 @@ export default {
     }
   },
   components: { Music },
-  MusicerverPrefetch() {
-    return this.loadAlbum()
+  beforeDestroy() {
+    this.removeTitle(this)
   },
-  methods: mapActions(['loadAlbum']),
+  async serverPrefetch() {
+    await this.loadAlbum()
+    this.updateTitle([this, this.music.name])
+  },
+  methods: {
+    ...mapActions(['loadAlbum']),
+    ...mapMutations(['removeTitle', 'updateTitle'])
+  },
   mounted() {
     if (!this.album.length) {
       this.loadAlbum()
