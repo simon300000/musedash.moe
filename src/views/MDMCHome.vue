@@ -4,6 +4,9 @@
   <h1 class="subtitle">Rank of <strong><a href="https://mdmc.moe" class="mdmcPink" target="_blank" rel="noopener noreferrer">Muse Dash Modding Community</a></strong>!</h1>
 
   <router-link to="/mdmc/player" class="button is-info">Player Search</router-link>
+  <br>
+  <br>
+  <p>Note that mdmc is a community project, and have no relationship to the official Muse Dash and PeroPeroGames.</p>
   <hr>
   <progress class="progress is-small" max="100" v-if="!album.length"></progress>
   <template v-else>
