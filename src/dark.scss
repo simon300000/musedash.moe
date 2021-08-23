@@ -3,6 +3,8 @@ $primary: darken(#8c9b9d, 18);
 
 @import "./bulmaswatch/darkly/_variables.scss";
 
+$body-size: 16px;
+
 $link: $blue;
 $link-hover: lighten($link, 5);
 $link-focus: darken($link, 5);
