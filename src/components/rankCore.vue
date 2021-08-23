@@ -18,7 +18,7 @@
         <td><template v-if="index!==play.lastRank">
             <change :before="play.lastRank" :after="index"></change>
           </template></td>
-        <td>
+        <td class="nowarp ellipsis">
           <router-link :to="play.url">{{play.nickname}}</router-link>
         </td>
         <td>{{Math.round(play.acc*10)/10}}%</td>
@@ -27,7 +27,7 @@
           <octicon type="desktop" size="17" style="float:right;" v-if="play.platform === 'pc'"></octicon>
           <octicon type="mobile" size="17" v-else></octicon>
         </td>
-        <td style="text-align:center;">{{characters[play.character]}} / {{elfins[play.elfin]}}</td>
+        <td style="text-align:center;" class="nowarp">{{characters[play.character]}} / {{elfins[play.elfin]}}</td>
       </tr>
     </tbody>
   </table>
@@ -82,5 +82,15 @@ export default {
 <style scoped>
 .th-left {
   text-align: left !important;
+}
+
+.nowarp {
+  white-space: nowrap;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  max-width: 11em;
+  overflow: hidden;
 }
 </style>
