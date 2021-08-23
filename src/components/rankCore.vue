@@ -6,7 +6,7 @@
         <tr>
           <th>#</th>
           <th></th>
-          <th>Username</th>
+          <th>Username <input class="input search" type="text" placeholder="Search everything" v-model="search" ref="search"></th>
           <th class="th-left">Accuracy</th>
           <th class="th-left">Score</th>
           <th v-if="platform === 'all'">Platform</th>
@@ -14,7 +14,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="play in currentRankFiltered" :key="play.indexKey">
+        <tr v-for="play in rankSliced" :key="play.indexKey">
           <td>{{play.index+1}}</td>
           <td><template v-if="play.index!==play.lastRank">
               <change :before="play.lastRank" :after="play.index"></change>
@@ -51,7 +51,8 @@ export default {
   data() {
     return {
       observer: undefined,
-      skipRatio: 0
+      skipRatio: 0,
+      search: '',
     }
   },
   components: {
@@ -62,24 +63,50 @@ export default {
   computed: {
     ...mapGetters(['elfins', 'characters']),
     renderLength() {
-      return Math.min(renderLength, this.currentRank.length)
+      return Math.min(renderLength, this.maxLength)
+    },
+    maxLength() {
+      return this.rankSearched.length
     },
     totalHeight() {
-      return (this.currentRank.length + 1) * rowHeight
+      return (this.maxLength + 1) * rowHeight
     },
     skipHeight() {
       return this.skipNum * rowHeight
     },
-    currentRankFilled() {
-      return this.currentRank.map((rest, index) => ({ ...rest, index, indexKey: `rank_${index % renderLength}` }))
+    rankSearched() {
+      const filled = this.currentRank
+      const keys = this.search.split(' ').filter(Boolean).map(key => key.toLowerCase())
+      if (keys.length === 0) {
+        return filled
+      }
+      return filled.filter(rank => {
+        const { nickname = '', character, elfin, score = '', acc = '', id = '', index } = rank
+        const name = nickname.toLowerCase()
+        const characterLowercase = (this.characters[character] || '').toLowerCase()
+        const elfinLowercase = (this.elfins[elfin] || '').toLowerCase()
+        const scoreString = String(score)
+        const accString = String(acc * 100)
+        const indexString = String(index + 1)
+        return keys.every(key => name.includes(key) || id.includes(key) || indexString === key || characterLowercase.includes(key) || elfinLowercase.includes(key) || scoreString.includes(key) || accString.includes(key))
+      })
     },
-    currentRankFiltered() {
-      return this.currentRankFilled.slice(this.skipNum, this.skipNum + this.renderLength)
+    rankKeyed() {
+      const search = this.rankSearched
+      return search.map((rest, i) => ({ ...rest, indexKey: `rank_${i % renderLength}` }))
+    },
+    rankSliced() {
+      const rankKeyed = this.rankKeyed
+      return rankKeyed.slice(this.skipNum, this.skipNum + this.renderLength)
     },
     skipNum() {
-      const skip = Math.floor(this.skipRatio * this.currentRank.length)
+      const skip = Math.floor(this.skipRatio * this.maxLength)
       const skipEven = skip % 2 === 0 ? skip : skip - 1
-      return Math.max(0, Math.min(this.currentRank.length - renderLength, skipEven - 2 * Math.floor(renderLength / 8)))
+      const result = Math.max(0, Math.min(this.maxLength - renderLength, skipEven - 2 * Math.floor(renderLength / 8)))
+      if (result > 0 && document.activeElement === this.$refs.search) {
+        this.$refs.search.blur()
+      }
+      return result
     }
   },
   mounted() {
@@ -112,5 +139,12 @@ export default {
   text-overflow: ellipsis;
   max-width: 11em;
   overflow: hidden;
+}
+
+.search {
+  width: 30%;
+  min-width: 70px;
+  font-size: 0.75em;
+  margin-left: 5%;
 }
 </style>
