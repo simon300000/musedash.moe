@@ -56,5 +56,12 @@
 			"Lilith will help you get 5% more score for each \"Perfect\" judgement.\nWhen Lilith and Little Devil Marija are together, Marija will restore 2 HP upon each \"Perfect\" judgement.",
 		"chipName": "Bat Wing",
 		"chipDescription": "The item what hell envoy Lilith is looking for."
+	},
+	{
+		"name": "Dr. Paige",
+		"description": "",
+		"skill": "Elfin Dr. Paige from Rhythm Doctor regenerates 2 HP when you land 7 notes in a row - the last of which will be a guaranteed \"Perfect\" if you land it, or a \"Great\" if you miss; all music notes and hearts will be automatically collected. Keep in mind that her skills are vulnerable to long notes, obstacles (gears), and rapid notes (bosses). ",
+		"chipName": "Stethoscope",
+		"chipDescription": "So what exactly makes Dr. Paige, the glasses or the stethoscope?"
 	}
 ]

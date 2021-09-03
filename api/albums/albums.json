@@ -17,6 +17,15 @@
 		"free" : false,
 	},
 	{
+		"uid": "music_package_41",
+		"title": "7th Beat Games",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM42",
+		"prefabsName": "AlbumDisco42",
+		"free" : false,
+	},
+	{
 		"uid": "music_package_40",
 		"title": "Happy Otaku Pack Vol.12",
 		"needPurchase": true,
