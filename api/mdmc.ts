@@ -39,7 +39,7 @@ const makeList = () => musics.flatMap(({ name, difficulty1, difficulty2, difficu
 const downloadSongs = async (): Promise<Musics> => (await got('https://mdmc.moe/api/data/charts', { timeout: 1000 * 60 }).json() as any)
 
 // eslint-disable-next-line camelcase
-const downloadCore = ({ name, difficulty }: { name: string, difficulty: number }) => async (): Promise<APIResults | void> => (await got(`https://mdmc.moe/api/md?song_name=${Buffer.from(name).toString('base64url')}&music_difficulty=${difficulty + 1}`, { timeout: 1000 * 10 }).json() as any).result.map(({ user: { steam_id, ...restUser }, ...rest }) => ({ ...rest, user: { ...restUser, user_id: steam_id } }))
+const downloadCore = ({ name, difficulty }: { name: string, difficulty: number }) => async (): Promise<APIResults | void> => (await got(`https://mdmc.moe/hq/api/md?song_name=${Buffer.from(name).toString('base64url')}&music_difficulty=${difficulty + 1}`, { timeout: 1000 * 10 }).json() as any).result.map(({ user: { steam_id, ...restUser }, ...rest }) => ({ ...rest, user: { ...restUser, user_id: steam_id } }))
 
 const steamAvatarURL = (id: string) => got(`https://steamcommunity.com/profiles/${id}?xml=1`).text().then(parseStringPromise).then(({ profile: { avatarFull } }) => avatarFull[0] as string).catch(() => undefined)
 
