@@ -84,12 +84,7 @@ const mal = async () => {
   const list = makeList()
   const l = { i: list.length }
 
-  const results = await list
-    .map(w => ({ ...w, l }))
-    .reduce(async (p, c) => {
-      const l = await p
-      return [...l, await core(c)]
-    }, Promise.all([] as ReturnType<typeof core>[]))
+  const results = await Promise.all(list.map(w => ({ ...w, l })).map(core))
   log('Downloaded')
 
   await analyze(results)
