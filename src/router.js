@@ -53,7 +53,7 @@ export const createRouter = () => new Router({
       path: '/about',
       component: About
     }, {
-      path: '/dd',
+      path: '/rd',
       component: D
     }, {
       path: '/mdmc',
