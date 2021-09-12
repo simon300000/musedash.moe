@@ -2,6 +2,7 @@ import sub from 'subleveldown'
 import level from 'level'
 
 import { RankKey, RankValue, PlayerValue } from './type.js'
+import { MusicDiffDiff } from './diffdiff.js'
 
 const db = level('./db')
 
@@ -19,3 +20,8 @@ export const rank = {
 }
 
 export const mdmc = sub(db, 'mdmc', { valueEncoding: 'json' })
+
+const diffDiffDB = sub<string, MusicDiffDiff[]>(db, 'diffDiff', { valueEncoding: 'json' })
+
+export const putDiffDiff = (diffDiff: MusicDiffDiff[]) => diffDiffDB.put('diff', diffDiff)
+export const getDiffDiff = () => diffDiffDB.get('diff').catch(() => [] as MusicDiffDiff[])

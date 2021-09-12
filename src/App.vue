@@ -18,6 +18,7 @@
       <div class="navbar-start" @click="closeMenu()">
         <router-link to="/player" class="navbar-item" :exact-active-class="'is-active'">Search</router-link>
         <router-link to="/mdmc" class="navbar-item mdmcPink" :active-class="'is-active'">mdmc</router-link>
+        <router-link to="/dd" class="navbar-item" :active-class="'is-active'">R. Difficulty</router-link>
       </div>
 
       <div class="navbar-end">

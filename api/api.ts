@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url'
 import { promises as fs } from 'fs'
 
 import { Albums } from './type.js'
-import { rank, player, search } from './database.js'
+import { rank, player, search, getDiffDiff } from './database.js'
 import { albums, AvailableLocales, availableLocales } from './albumParser.js'
 
 import { search as searchF } from './common.js'
@@ -106,6 +106,11 @@ router.get('/log', ctx => {
 
 router.get('/ce', ctx => {
   ctx.body = ce
+})
+
+router.get('/diffdiff', async ctx => {
+  const diffDiff = await getDiffDiff()
+  ctx.body = diffDiff.map(({ uid, difficulty, level, absolute, relative }) => [uid, difficulty, level, absolute, relative])
 })
 
 app.use(router.routes())

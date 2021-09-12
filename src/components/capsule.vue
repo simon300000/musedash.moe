@@ -11,11 +11,11 @@
         <text x="50%" y="50%" class="easy_text text outline_easy">{{props.difficulties[0].level}}</text>
       </svg>
     </router-link>
-    <div class="empty node" v-else>
+    <div class="empty node" v-else-if="!props.hide">
       <div class="dot"></div>
     </div>
 
-    <div class="padding"></div>
+    <div class="padding" v-if="props.difficulties[0].level !== '0' && props.difficulties[1].level !== '0'"></div>
 
     <router-link :to="props.difficulties[1].link" v-if="props.difficulties[1].level !== '0'">
       <svg class="node">
@@ -24,11 +24,11 @@
         <text x="50%" y="50%" class="hard_text text outline_hard">{{props.difficulties[1].level}}</text>
       </svg>
     </router-link>
-    <div class="empty node" v-else>
+    <div class="empty node" v-else-if="!props.hide">
       <div class="dot"></div>
     </div>
 
-    <div class="padding"></div>
+    <div class="padding" v-if="props.difficulties[1].level !== '0' && props.difficulties[2].level !== '0'"></div>
 
     <router-link :to="props.difficulties[2].link" v-if="props.difficulties[2].level !== '0'">
       <svg class="node">
@@ -37,20 +37,19 @@
         <text x="50%" y="50%" class="master_text text outline_master">{{props.difficulties[2].level}}</text>
       </svg>
     </router-link>
-    <div class="empty node" v-else>
+    <div class="empty node" v-else-if="!props.hide">
       <div class="dot"></div>
     </div>
 
-    <template v-if="props.difficulties[3].level !== '0'">
-      <div class="padding"></div>
-      <router-link :to="props.difficulties[3].link">
-        <svg class="node">
-          <use href="#round" fill="url(#white-slash)" class="only" />
-          <use href="#star" fill="url(#inferno_slash)" />
-          <text x="50%" y="50%" class="inferno_text text outline_inferno">{{props.difficulties[3].level}}</text>
-        </svg>
-      </router-link>
-    </template>
+    <div class="padding" v-if="props.difficulties[2].level !== '0' && props.difficulties[3].level !== '0'"></div>
+
+    <router-link :to="props.difficulties[3].link" v-if="props.difficulties[3].level !== '0'">
+      <svg class="node">
+        <use href="#round" fill="url(#white-slash)" class="only" />
+        <use href="#star" fill="url(#inferno_slash)" />
+        <text x="50%" y="50%" class="inferno_text text outline_inferno">{{props.difficulties[3].level}}</text>
+      </svg>
+    </router-link>
 
   </div>
 </div>

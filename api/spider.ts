@@ -11,6 +11,7 @@ import { log, error, reloadAlbums } from './api.js'
 
 import { download, resultWithHistory, makeSearch, wait } from './common.js'
 
+import { diffdiff } from './diffdiff.js'
 
 const parallel = async <T>(n: number, pfs: (() => Promise<(number: number) => T>)[]) => {
   const ws = new Set<() => Promise<(number) => T>>()
@@ -123,6 +124,8 @@ const mal = async () => {
   log('Analyzed')
   await makeSearch({ log, player, search })
   log('Search Cached')
+  await diffdiff(musicList)
+  log('Difficulty ranked')
   await reloadAlbums()
 }
 

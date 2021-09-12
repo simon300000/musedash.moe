@@ -11,6 +11,7 @@ export const getPlayer = id => get(`player/${id}`)
 export const searchPlayer = search => get(`search/${search}`)
 export const getLog = () => get('log')
 export const getCE = () => get('ce')
+export const getDiffDiff = async () => (await get('diffdiff')).map(([uid, difficulty, level, absolute, relative]) => ({ uid, difficulty, level, absolute, relative }))
 
 const getMDMC = api => get(`mdmc/${api}`)
 

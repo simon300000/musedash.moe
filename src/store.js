@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { getAlbums, getRank, getPlayer, getCE, mdmcGetAlbum, mdmcGetPlayer, mdmcGetRank } from './api'
+import { getAlbums, getRank, getPlayer, getCE, mdmcGetAlbum, mdmcGetPlayer, mdmcGetRank, getDiffDiff } from './api'
 import { set as cookieSet } from 'js-cookie'
 
 Vue.use(Vuex)
@@ -26,6 +26,7 @@ export const createStore = ({ lang, changeTitle, theme }) => {
       fullAlbums: {},
       rankCache: {},
       userCache: {},
+      diffDiff: [],
       ce: { c: {}, e: {} },
       lang,
       theme
@@ -37,7 +38,26 @@ export const createStore = ({ lang, changeTitle, theme }) => {
       },
       musicAlbum: ({ fullAlbums }) => Object.fromEntries(Object.entries(fullAlbums).flatMap(([id, { music }]) => Object.keys(music).map(k => [k, id]))),
       characters: ({ ce, lang: l }) => ce.c[l] || [],
-      elfins: ({ ce, lang: l }) => ce.e[l] || []
+      elfins: ({ ce, lang: l }) => ce.e[l] || [],
+      diffDiffMap: ({ diffDiff }) => diffDiff.reduce(({ uid, difficulty, level, absolute, relative }, result) => {
+        if (!result[uid]) {
+          result[uid] = []
+        }
+        result[uid][difficulty] = { level, absolute, relative }
+        return result
+      }, {}),
+      diffDiffList: ({ diffDiff, fullAlbums, lang: l }, { musicAlbum, allMusics }) => diffDiff.map(({ uid, difficulty, level, absolute, relative }) => {
+        const difficulties = Array(4).fill({ level: '0' })
+        difficulties[difficulty] = { level, link: `/music/${uid}/${difficulty}` }
+
+        const album = musicAlbum[uid]
+        const albumName = fullAlbums[album][l].title
+        const albumLink = `/albums/${album}`
+
+        const { name, author, cover } = allMusics[uid]
+        const src = `/covers/${cover}.png`
+        return { uid, absolute: Math.round(absolute * 100) / 100, relative: Math.round(relative * 100) / 100, difficulties, albumName, albumLink, name, author, src }
+      })
     },
     mutations: {
       setAlbums(state, data) {
@@ -65,6 +85,9 @@ export const createStore = ({ lang, changeTitle, theme }) => {
       },
       removeTitle(_state, instance) {
         removeTitle(instance)
+      },
+      setDiffDiff(state, data) {
+        state.diffDiff = data
       }
     },
     actions: {
@@ -84,6 +107,9 @@ export const createStore = ({ lang, changeTitle, theme }) => {
       },
       async loadUser({ commit }, id) {
         commit('setUser', { id, data: await getPlayer(id) })
+      },
+      async loadDiffDiff({ commit }) {
+        commit('setDiffDiff', await getDiffDiff())
       }
     },
     modules: {

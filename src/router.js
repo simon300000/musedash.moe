@@ -7,6 +7,7 @@ import Rank from './views/Rank.vue'
 import Player from './views/Player.vue'
 import Search from './views/Search.vue'
 import About from './views/About.vue'
+import D from './views/D.vue'
 
 import MDMC from './views/MDMC.vue'
 import MDMCHome from './views/MDMCHome.vue'
@@ -51,6 +52,9 @@ export const createRouter = () => new Router({
     }, {
       path: '/about',
       component: About
+    }, {
+      path: '/dd',
+      component: D
     }, {
       path: '/mdmc',
       component: MDMC,
