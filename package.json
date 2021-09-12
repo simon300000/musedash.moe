@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "npm run build:vue; npm run build:api",
+    "build": "npm run build:api; npm run build:vue",
     "build:vue": "node build",
     "build:dev": "export development=true; node build:vue; node index",
     "lint": "vue-cli-service lint",
