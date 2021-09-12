@@ -13,6 +13,7 @@
   </p>
   <br>
   <diffs v-if="diffDiff.length"></diffs>
+  <progress class="progress" max="100" v-else></progress>
 </div>
 </template>
 
