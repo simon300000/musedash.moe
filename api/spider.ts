@@ -13,7 +13,7 @@ import { download, resultWithHistory, makeSearch } from './common.js'
 
 const wait = (ms: number): Promise<void> => new Promise(resolve => setTimeout(resolve, ms))
 
-const parallel = async <T>(n: number, pfs: (() => Promise<(number) => T>)[]) => {
+const parallel = async <T>(n: number, pfs: (() => Promise<(number: number) => T>)[]) => {
   const ws = new Set<() => Promise<(number) => T>>()
   const ps: Promise<T>[] = []
   const epfs = pfs.map(w => async () => {
