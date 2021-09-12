@@ -37,7 +37,7 @@ export default {
       return this.diffDiff.length - 1 - RENDER_LENGTH
     },
     skip() {
-      return Math.max(0, Math.min(this.maxSkip, Math.round(this.skipRatio * this.diffDiff.length)))
+      return Math.max(0, Math.min(this.maxSkip, Math.round(this.skipRatio * this.diffDiff.length) - 3))
     },
     renderArray() {
       const pack = Math.floor(this.skip / RENDER_LENGTH)
