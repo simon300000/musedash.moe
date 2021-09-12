@@ -86,30 +86,33 @@ const prepare = (music: MusicData) => {
   })
 }
 
-const analyze = (musicList: RankCore[]) => musicList
-  .reduce(async (p, { uid, difficulty, platform }) => {
-    await p
+const analyzePlayers = (musicList: RankCore[]) => musicList
+  .reduce(async (rP, { uid, difficulty, platform }) => {
+    const records = await rP
+
     const currentRank = await rank.get({ uid, difficulty, platform })
     const sumRank = await rank.get({ uid, difficulty, platform: 'all' })
-    return (await currentRank
-      .map(async ({ user, play: { score, acc, character_uid, elfin_uid }, history }, i) => {
-        let playerData = await player.get(user.user_id).catch(() => ({ plays: [] }) as PlayerValue)
-        playerData.user = user
-        const sumI = sumRank.findIndex(play => play.platform === platform && play.user.user_id === user.user_id)
-        playerData.plays.push({ score, acc, i, platform, history, difficulty, uid, sum: sumI, character_uid, elfin_uid })
-        return { key: user.user_id, value: playerData }
-      })
-      .reduce(async (b, v: Promise<{ key: string, value: PlayerValue }>) => {
-        const { key, value } = await v
-        const batch = await b
-        if (key) {
-          return batch.put(key, value)
-        } else {
-          return batch
+
+    currentRank.forEach(({ user, play: { score, acc, character_uid, elfin_uid }, history }, i) => {
+      const id = user.user_id
+      if (id) {
+        if (!records[id]) {
+          records[id] = { plays: [], user }
         }
-      }, Promise.resolve(player.batch())))
-      .write().then(() => undefined)
-  }, player.clear())
+        const sumI = sumRank.findIndex(play => play.platform === platform && play.user.user_id === user.user_id)
+        records[id].plays.push({ score, acc, i, platform, history, difficulty, uid, sum: sumI, character_uid, elfin_uid })
+      }
+    })
+    return records
+  }, Promise.resolve({} as Record<string, PlayerValue>))
+
+const analyze = async (musicList: RankCore[]) => {
+  const players = Object.entries(await analyzePlayers(musicList))
+  await player.clear()
+  const batch = player.batch()
+  players.forEach(([k, v]) => batch.put(k, v))
+  await batch.write()
+}
 
 const mal = async () => {
   log('Start!')
