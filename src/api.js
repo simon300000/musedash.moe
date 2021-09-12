@@ -9,8 +9,8 @@ export const getAlbums = () => get('albums')
 export const getRank = async ({ uid, difficulty, platform }) => (await get(`rank/${uid}/${difficulty}/${platform}`)).map(([acc, score, lastRank, nickname, id, platform, character, elfin], index) => ({ acc, score, lastRank, nickname, id, platform, character, elfin, url: `/player/${id}`, index }))
 export const getPlayer = id => get(`player/${id}`)
 export const searchPlayer = search => get(`search/${search}`)
-export const getLog = () => get(`log`)
-export const getCE = () => get(`ce`)
+export const getLog = () => get('log')
+export const getCE = () => get('ce')
 
 const getMDMC = api => get(`mdmc/${api}`)
 
