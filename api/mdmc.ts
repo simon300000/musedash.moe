@@ -8,11 +8,9 @@ import { parseStringPromise } from 'xml2js'
 import { mdmc as db } from './database.js'
 import { log as rawLog, error as rawError, app } from './api.js'
 
-import { download, resultWithHistory, makeSearch, search as searchF } from './common.js'
+import { download, resultWithHistory, makeSearch, search as searchF, wait } from './common.js'
 
 import { APIResults, RankValue, User, Play as RawPlay } from './type.js'
-
-const wait = (ms: number): Promise<void> => new Promise(resolve => setTimeout(resolve, ms))
 
 const log = (msg: string) => rawLog(`mdmc: ${msg}`)
 const error = (msg: string) => rawError(`mdmc: ${msg}`)

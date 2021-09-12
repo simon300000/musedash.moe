@@ -9,9 +9,8 @@ import got from 'got'
 
 import { log, error, reloadAlbums } from './api.js'
 
-import { download, resultWithHistory, makeSearch } from './common.js'
+import { download, resultWithHistory, makeSearch, wait } from './common.js'
 
-const wait = (ms: number): Promise<void> => new Promise(resolve => setTimeout(resolve, ms))
 
 const parallel = async <T>(n: number, pfs: (() => Promise<(number: number) => T>)[]) => {
   const ws = new Set<() => Promise<(number) => T>>()

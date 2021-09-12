@@ -4,7 +4,7 @@ import { APIResults, RankValue } from './type'
 
 import { SearchType } from './database.js'
 
-const wait = (ms: number): Promise<void> => new Promise(resolve => setTimeout(resolve, ms))
+export const wait = (ms: number): Promise<void> => new Promise(resolve => setTimeout(resolve, ms))
 
 export const download = async<T extends APIResults>({ f, i = 3, s, error }: { i?: number, f: (() => Promise<T | void>), s: string, error: ((w: string) => void) }): Promise<T> => {
   const result = await f().catch((e): T => {
