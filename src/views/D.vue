@@ -12,7 +12,7 @@
     <br>
   </p>
   <br>
-  <diffs v-if="diffDiff.length"></diffs>
+  <diffs v-if="diffDiff.length && albumsArray.length"></diffs>
   <progress class="progress" max="100" v-else></progress>
 </div>
 </template>
