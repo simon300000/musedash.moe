@@ -1,9 +1,25 @@
 <template>
 <div>
-  <h1 class="title">Relative Difficulty</h1>
+  <h3 class="title is-3">「Relative Difficulty」</h3>
   <p>
-    Calculated by comparing accuracy of same player on different songs
+    Music Difficulty, Calculated by comparing accuracy of same player on different music
     <br>
+  </p>
+  <br>
+  <h3 class="title is-3">『Relative Level』</h3>
+  <p>
+    Performance of Player, Calculated from record performance
+    <br>
+    Highest record performance have greatest impact on the final result
+    <br>
+    *Record Performance: (accuracy - accuracy^2 + accuracy^4) * relative difficulty
+    <br>
+    *Impact on final result (higher to lower performance): 1/2, 1/4, 1/8 ...
+    <br>
+  </p>
+  <br>
+
+  <p>
     Not included:
     <br>
     {{characterSkip}}
@@ -11,7 +27,7 @@
     {{elfinSkip}}
     <br>
   </p>
-  <br>
+  <hr>
   <diffs v-if="diffDiff.length && albumsArray.length"></diffs>
   <progress class="progress" max="100" v-else></progress>
 </div>

@@ -1,8 +1,8 @@
 import { characterSkip, elfinSkip } from './config.js'
-import { MusicData, MusicCore } from './type.js'
+import { MusicData, MusicCore, PlayerValue } from './type.js'
 import { wait } from './common.js'
 
-import { rank as rankDB, putDiffDiff } from './database.js'
+import { rank as rankDB, putDiffDiff, playerDiff, getDiffDiff } from './database.js'
 
 const parseMusicc = (music: MusicData) => {
   const { uid, difficulty: difficulties } = music
@@ -21,7 +21,6 @@ export const diffdiff = async (musics: MusicData[]) => {
   for (const music of musicList) {
     const { uid, difficulty } = music
 
-    await wait(10)
     const ranks = await rankDB.get({ uid, difficulty, platform: 'all' })
     const pairs = ranks
       .filter(({ play: { elfin_uid, character_uid } }) => !characterSkip.includes(character_uid) && !elfinSkip.includes(elfin_uid))
@@ -33,7 +32,7 @@ export const diffdiff = async (musics: MusicData[]) => {
   for (let index = 0; index < musicList.length; index++) {
     const music = musicList[index];
     const rank = rankMap.get(music)
-    await wait(10)
+    await wait(5)
 
     for (let index2 = index + 1; index2 < musicList.length; index2++) {
       const music2 = musicList[index2];
@@ -83,6 +82,35 @@ export const diffdiff = async (musics: MusicData[]) => {
 
   const diffDiff = sortedMusicList.map((music, i) => ({ ...music, relative: interpolate(i) } as MusicDiffDiff))
   await putDiffDiff(diffDiff)
+}
+
+const accJudge = (acc: number) => {
+  const factor = acc / 100
+  return factor - Math.pow(factor, 2) + Math.pow(factor, 4)
+}
+
+export const diffPlayer = async (players: [string, PlayerValue][]) => {
+  const diffDiff = await getDiffDiff()
+  const diffDiffMap = {} as Record<string, number[]>
+  diffDiff.forEach(({ uid, difficulty, relative }) => {
+    if (!diffDiffMap[uid]) {
+      diffDiffMap[uid] = []
+    }
+    diffDiffMap[uid][difficulty] = relative
+  })
+
+  const batch = playerDiff.batch()
+  for (const [id, { plays }] of players) {
+    const rl = plays
+      .filter(({ character_uid, elfin_uid }) => !characterSkip.includes(character_uid) && !elfinSkip.includes(elfin_uid))
+      .map(({ uid, difficulty, acc }) => accJudge(acc) * diffDiffMap[uid][difficulty])
+      .sort((a, b) => a - b)
+      .reduce((a, r) => a + r / 2, 0) / 2
+
+    batch.put(id, rl)
+  }
+  await playerDiff.clear()
+  await batch.write()
 }
 
 type IdPercentagePairs = Record<string, number>

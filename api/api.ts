@@ -6,8 +6,8 @@ import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { promises as fs } from 'fs'
 
-import { Albums } from './type.js'
-import { rank, player, search, getDiffDiff } from './database.js'
+import { Albums, PlayerValue } from './type.js'
+import { rank, player, search, getDiffDiff, playerDiff } from './database.js'
 import { albums, AvailableLocales, availableLocales } from './albumParser.js'
 
 import { search as searchF } from './common.js'
@@ -93,7 +93,15 @@ router.get('/rank/:uid/:difficulty/:platform', async ctx => {
 })
 
 router.get('/player/:id', async ctx => {
-  ctx.body = await player.get(ctx.params.id).catch(() => undefined)
+  const { id } = ctx.params
+  const playerP = player.get(id).catch<undefined>(() => undefined)
+  const playerRLP = playerDiff.get(id).catch<undefined>(() => undefined)
+  const p = await playerP as PlayerValue & { rl: number }
+  const playerRL = await playerRLP
+  if (p && playerRL) {
+    p.rl = playerRL
+  }
+  ctx.body = p
 })
 
 router.get('/search/:string', async ctx => {

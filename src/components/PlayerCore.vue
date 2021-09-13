@@ -22,6 +22,22 @@
             <img class="is-rounded" :src="current.user.avatar" alt="Steam Avatar">
           </figure>
         </div>
+        <div class="level-item" v-if="current.rl !== undefined">
+          <div class="container">
+            <div>
+              <h1 class="title" :title="current.rl">
+                『{{rl}}』
+              </h1>
+            </div>
+            <div>
+              <router-link to="/rd">
+                <h2 class="subtitle is-6">
+                  → Relative Level
+                </h2>
+              </router-link>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -69,6 +85,9 @@ export default {
       return Math.round(this.plays
         .reduce(({ acc: a }, { acc: b }) => ({ acc: a + b }))
         .acc / this.plays.length * 10) / 10
+    },
+    rl() {
+      return Math.round(1000 * this.current.rl) / 1000
     }
   }
 }

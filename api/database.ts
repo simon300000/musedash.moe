@@ -25,3 +25,5 @@ const diffDiffDB = sub<string, MusicDiffDiff[]>(db, 'diffDiff', { valueEncoding:
 
 export const putDiffDiff = (diffDiff: MusicDiffDiff[]) => diffDiffDB.put('diff', diffDiff)
 export const getDiffDiff = () => diffDiffDB.get('diff').catch(() => [] as MusicDiffDiff[])
+
+export const playerDiff = sub<string, number>(db, 'playerDiff', { valueEncoding: 'json' })
