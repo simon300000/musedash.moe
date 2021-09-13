@@ -9,7 +9,7 @@ import got from 'got'
 
 import { log, error, reloadAlbums } from './api.js'
 
-import { download, resultWithHistory, makeSearch, wait } from './common.js'
+import { download, resultWithHistory, wait } from './common.js'
 
 import { diffdiff } from './diffdiff.js'
 
@@ -108,10 +108,17 @@ const analyzePlayers = (musicList: RankCore[]) => musicList
 
 const analyze = async (musicList: RankCore[]) => {
   const players = Object.entries(await analyzePlayers(musicList))
-  await player.clear()
   const batch = player.batch()
   players.forEach(([k, v]) => batch.put(k, v))
+  await player.clear()
   await batch.write()
+  return players
+}
+
+const makeSearch = (players: [string, PlayerValue][]) => {
+  const batch = search.batch()
+  players.forEach(([id, { user: { nickname } }]) => batch.put(id, nickname.toLowerCase()))
+  return search.clear().then(() => batch.write())
 }
 
 const mal = async () => {
@@ -120,9 +127,9 @@ const mal = async () => {
   const pfs = musicList.map(prepare)
   const datass = await parallel(PARALLEL, pfs)
   log('Downloaded')
-  await analyze(datass.flat())
+  const players = await analyze(datass.flat())
   log('Analyzed')
-  await makeSearch({ log, player, search })
+  await makeSearch(players)
   log('Search Cached')
   await diffdiff(musicList)
   log('Difficulty ranked')
