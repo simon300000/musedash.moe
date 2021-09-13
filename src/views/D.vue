@@ -14,7 +14,9 @@
     <br>
     *Record Performance: (accuracy - accuracy^2 + accuracy^4) * relative difficulty
     <br>
-    *Impact on final result (higher to lower performance): 1/2, 1/4, 1/8 ...
+    *Impact on final result (higher to lower performance): 0.8, 0.8^2, 0.8^3 ...
+    <br>
+    *Same music with different platform: count only higher accuracy
     <br>
   </p>
   <br>

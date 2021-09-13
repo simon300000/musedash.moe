@@ -101,11 +101,26 @@ export const diffPlayer = async (players: [string, PlayerValue][]) => {
 
   const batch = playerDiff.batch()
   for (const [id, { plays }] of players) {
-    const rl = plays
+    const accMap = {} as Record<string, number[]>
+    plays
       .filter(({ character_uid, elfin_uid }) => !characterSkip.includes(character_uid) && !elfinSkip.includes(elfin_uid))
+      .forEach(({ uid, difficulty, acc }) => {
+        if (!accMap[uid]) {
+          accMap[uid] = []
+        }
+        if (accMap[uid][difficulty] === undefined) {
+          accMap[uid][difficulty] = acc
+        } else {
+          accMap[uid][difficulty] = Math.max(accMap[uid][difficulty], acc)
+        }
+      })
+
+    const rl = Object.entries(accMap)
+      .flatMap(([uid, accs]) => accs.map((acc, difficulty) => ({ uid, difficulty, acc })))
+      .filter(({ acc }) => acc !== undefined)
       .map(({ uid, difficulty, acc }) => accJudge(acc) * diffDiffMap[uid][difficulty])
       .sort((a, b) => a - b)
-      .reduce((a, r) => a + r / 2, 0) / 2
+      .reduce((r, a) => a + r * 0.8, 0) / 5
 
     batch.put(id, rl)
   }
