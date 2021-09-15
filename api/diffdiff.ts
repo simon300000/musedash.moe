@@ -13,6 +13,8 @@ const parseMusicc = (music: MusicData) => {
   }).filter(Boolean)
 }
 
+const s = (x: number) => 1 / (1 + Math.exp(-x)) - 0.5
+
 export const diffdiff = async (musics: MusicData[]) => {
   const musicList = musics.map(parseMusicc).flat()
   const rankMap = new WeakMap<MusicCore, IdPercentagePairs>()
@@ -40,7 +42,7 @@ export const diffdiff = async (musics: MusicData[]) => {
 
       const keys = Object.keys(rank).filter(key => rank2[key] !== undefined)
       if (keys.length) {
-        const [sum, count] = keys.map(key => [rank[key], rank2[key]]).map(([acc1, acc2]) => [acc1 - acc2, acc1 * acc2 / 10000]).reduce(([sumDiff, sumImpact], [accDiff, impact]) => [sumDiff + accDiff * impact, sumImpact + impact], [0, 0])
+        const [sum, count] = keys.map(key => [rank[key], rank2[key]]).map(([acc1, acc2]) => [s(acc1 - acc2), acc1 * acc2 / 10000]).reduce(([sumDiff, sumImpact], [accDiff, impact]) => [sumDiff + accDiff * impact, sumImpact + impact], [0, 0])
         const averageDiff = sum / count
         absoluteValueMap.set(music, absoluteValueMap.get(music) - averageDiff)
         absoluteValueMap.set(music2, absoluteValueMap.get(music2) + averageDiff)
