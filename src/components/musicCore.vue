@@ -22,7 +22,7 @@
     </div>
   </div>
   <div class="level-right">
-    <capsule :difficulties="props.difficulties"></capsule>
+    <capsule :difficulties="props.difficulties" :hide="props.hide"></capsule>
   </div>
 </nav>
 </template>

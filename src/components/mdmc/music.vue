@@ -1,5 +1,5 @@
 <template>
-<core :music="music" :difficulties="difficulties" :albumName="false" :levelDesigner="levelDesigner" :src="src"></core>
+<core :music="music" :difficulties="difficulties" :albumName="false" :levelDesigner="levelDesigner" :src="src" :hide="true"></core>
 </template>
 
 <script>
