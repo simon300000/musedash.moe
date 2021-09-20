@@ -15,7 +15,7 @@
       <div class="dot"></div>
     </div>
 
-    <div class="padding" v-if="props.difficulties[0].level !== '0' && props.difficulties[1].level !== '0'"></div>
+    <div class="padding" v-if="props.difficulties[0].level !== '0' && props.difficulties[1].level !== '0' || !props.hide"></div>
 
     <router-link :to="props.difficulties[1].link" v-if="props.difficulties[1].level !== '0'">
       <svg class="node">
@@ -28,7 +28,7 @@
       <div class="dot"></div>
     </div>
 
-    <div class="padding" v-if="props.difficulties[1].level !== '0' && props.difficulties[2].level !== '0'"></div>
+    <div class="padding" v-if="props.difficulties[1].level !== '0' && props.difficulties[2].level !== '0' || !props.hide"></div>
 
     <router-link :to="props.difficulties[2].link" v-if="props.difficulties[2].level !== '0'">
       <svg class="node">
