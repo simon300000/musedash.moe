@@ -1,5 +1,5 @@
 <template>
-<div id="app">
+<div id="app" :class="{ blackWhite }">
   <link rel="stylesheet" :href="themeCss">
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
@@ -104,7 +104,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['lang', 'theme']),
+    ...mapState(['lang', 'theme', 'blackWhite']),
     currentLang() {
       return langs[this.lang]
     },
@@ -164,5 +164,9 @@ export default {
 
 .mdmcPink.is-active {
   color: #ff55c3;
+}
+
+.blackWhite {
+  filter: grayscale(100%);
 }
 </style>

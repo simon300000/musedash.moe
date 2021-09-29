@@ -28,6 +28,7 @@ export const createStore = ({ lang, changeTitle, theme }) => {
       userCache: {},
       diffDiff: [],
       ce: { c: {}, e: {} },
+      blackWhite: false,
       lang,
       theme
     },
@@ -88,6 +89,9 @@ export const createStore = ({ lang, changeTitle, theme }) => {
       },
       setDiffDiff(state, data) {
         state.diffDiff = data
+      },
+      setBlackWhite(state, data) {
+        state.blackWhite = data
       }
     },
     actions: {
