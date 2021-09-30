@@ -30,7 +30,7 @@ export default {
       return `/albums/${this.album}`
     },
     levelDesigner() {
-      const levelDesigner = this.music.levelDesigner
+      const { levelDesigner } = this.music
       if (levelDesigner[this.level]) {
         return [levelDesigner[this.level]]
       } else {
@@ -38,7 +38,7 @@ export default {
         if (s.length === 1) {
           return [levelDesigner[0]]
         } else {
-          return levelDesigner
+          return levelDesigner.filter(Boolean)
         }
       }
     },

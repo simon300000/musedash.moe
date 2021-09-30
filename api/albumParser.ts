@@ -32,13 +32,13 @@ export const albums = async (): Promise<Albums> => {
     .map(({ title, jsonName, ChineseS, ChineseT, English, Japanese, Korean }) => ({ title, json: jsonName, ChineseS, ChineseT, English, Japanese, Korean }))
     .map(async object => {
       const music = (await readLocale<Music, MusicLang>(object.json))
-        .map<MusicData>(({ uid, name, author, cover, difficulty1, difficulty2, difficulty3, difficulty4 = '0', ChineseS, ChineseT, English, Japanese, Korean, levelDesigner, levelDesigner1, levelDesigner2, levelDesigner3, levelDesigner4 }) => ({
+        .map<MusicData>(({ uid, name, author, cover, difficulty1, difficulty2, difficulty3, difficulty4 = '0', difficulty5 = '0', ChineseS, ChineseT, English, Japanese, Korean, levelDesigner, levelDesigner1, levelDesigner2, levelDesigner3, levelDesigner4, levelDesigner5 }) => ({
           uid,
           name,
           author,
           cover,
-          levelDesigner: levelDesigner ? [levelDesigner] : [levelDesigner1, levelDesigner2, levelDesigner3, levelDesigner4].filter(Boolean),
-          difficulty: [difficulty1, difficulty2, difficulty3, difficulty4],
+          levelDesigner: levelDesigner ? [levelDesigner] : [levelDesigner1, levelDesigner2, levelDesigner3, levelDesigner4, levelDesigner5],
+          difficulty: [difficulty1, difficulty2, difficulty3, difficulty4, difficulty5],
           ChineseS,
           ChineseT,
           English,

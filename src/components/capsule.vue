@@ -51,6 +51,16 @@
       </svg>
     </router-link>
 
+    <div class="padding" v-if="(props.difficulties[2].level !== '0' || props.difficulties[3].level !== '0') && props.difficulties[4].level !== '0'"></div>
+
+    <router-link :to="props.difficulties[4].link" v-if="props.difficulties[4].level !== '0'">
+      <svg class="node">
+        <use href="#round" fill="url(#white-slash)" class="only" />
+        <use href="#star" fill="url(#touhou_slash)" />
+        <text x="50%" y="50%" class="touhou_text text outline_touhou">{{props.difficulties[4].level}}</text>
+      </svg>
+    </router-link>
+
   </div>
 </div>
 </template>
@@ -164,6 +174,18 @@ export default {}
     #3a3a3a -2px 0;
 }
 
+.outline_touhou {
+  text-shadow:
+    #dfdfdf -2px -2px,
+    #dfdfdf 0 -2px,
+    #dfdfdf 2px -2px,
+    #dfdfdf 2px 0,
+    #dfdfdf 2px 2px,
+    #dfdfdf 0 2px,
+    #dfdfdf -2px 2px,
+    #dfdfdf -2px 0;
+}
+
 .easy_text {
   fill: #346460;
 }
@@ -178,6 +200,10 @@ export default {}
 
 .inferno_text {
   fill: #7e7e7e;
+}
+
+.touhou_text {
+  fill: black;
 }
 
 .capsule .padding {

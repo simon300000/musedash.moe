@@ -21,10 +21,12 @@ export interface Music extends Record<AvailableLocales, MusicLang> {
   levelDesigner2?: string,
   levelDesigner3?: string,
   levelDesigner4?: string,
+  levelDesigner5?: string,
   difficulty1: string,
   difficulty2: string,
   difficulty3: string,
   difficulty4?: string,
+  difficulty5?: string,
   unlockLevel: number
 }
 

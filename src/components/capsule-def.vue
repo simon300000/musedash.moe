@@ -21,6 +21,11 @@
       <stop class="inferno_dark" offset="51%" />
     </linearGradient>
 
+    <linearGradient id="touhou_slash" x1="0%" y1=0% x2="100%" y2="125%">
+      <stop class="touhou_light" offset="50%" />
+      <stop class="touhou_dark" offset="51%" />
+    </linearGradient>
+
     <linearGradient id="white-slash" x1="0%" y1=0% x2="100%" y2="125%">
       <stop class="white" offset="100%" />
     </linearGradient>
@@ -52,6 +57,11 @@
   stop-color: #3a3a3a;
 }
 
+.touhou_light {
+  fill: #dfdfdf;
+  stop-color: #dfdfdf;
+}
+
 .easy_dark {
   fill: #1CB161;
   stop-color: #1CB161;
@@ -70,6 +80,11 @@
 .inferno_dark {
   fill: #000000;
   stop-color: #000000;
+}
+
+.touhou_dark {
+  fill: #7e7e7e;
+  stop-color: #7e7e7e;
 }
 
 .white {
