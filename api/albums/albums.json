@@ -6,7 +6,7 @@
 		"price": "9.99 $",
 		"jsonName": "ALBUM1",
 		"prefabsName": "AlbumDisco1",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "unlockall_0",
@@ -14,7 +14,26 @@
 		"needPurchase": true,
 		"price": "¥188.00",
 		"jsonName": "",
-		"free" : false,
+		"free": false
+	},
+
+	{
+		"uid": "music_package_43",
+		"title": "计划通补完计划",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM44",
+		"prefabsName": "AlbumDisco44",
+		"free": false
+	},
+	{
+		"uid": "music_package_42",
+		"title": "东方暮乐团",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM43",
+		"prefabsName": "AlbumDisco43",
+		"free": false
 	},
 	{
 		"uid": "music_package_41",
@@ -23,7 +42,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM42",
 		"prefabsName": "AlbumDisco42",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_40",
@@ -32,7 +51,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM41",
 		"prefabsName": "AlbumDisco41",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_39",
@@ -41,7 +60,7 @@
 		"price": "¥30.00",
 		"jsonName": "ALBUM40",
 		"prefabsName": "AlbumDisco40",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_38",
@@ -50,7 +69,7 @@
 		"price": "¥12.00",
 		"jsonName": "ALBUM39",
 		"prefabsName": "AlbumDisco39",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_37",
@@ -59,7 +78,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM38",
 		"prefabsName": "AlbumDisco38",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_36",
@@ -68,7 +87,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM37",
 		"prefabsName": "AlbumDisco37",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_35",
@@ -77,7 +96,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM36",
 		"prefabsName": "AlbumDisco36",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_34",
@@ -86,7 +105,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM35",
 		"prefabsName": "AlbumDisco35",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_33",
@@ -95,7 +114,7 @@
 		"price": "¥36.00",
 		"jsonName": "ALBUM34",
 		"prefabsName": "AlbumDisco34",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_32",
@@ -104,7 +123,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM33",
 		"prefabsName": "AlbumDisco33",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_31",
@@ -113,7 +132,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM32",
 		"prefabsName": "AlbumDisco32",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_30",
@@ -122,7 +141,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM31",
 		"prefabsName": "AlbumDisco31",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_29",
@@ -131,7 +150,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM30",
 		"prefabsName": "AlbumDisco30",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_28",
@@ -140,7 +159,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM29",
 		"prefabsName": "AlbumDisco29",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_27",
@@ -149,7 +168,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM28",
 		"prefabsName": "AlbumDisco28",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_26",
@@ -158,7 +177,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM27",
 		"prefabsName": "AlbumDisco27",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_25",
@@ -167,7 +186,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM26",
 		"prefabsName": "AlbumDisco26",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_24",
@@ -176,7 +195,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM25",
 		"prefabsName": "AlbumDisco25",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_23",
@@ -185,7 +204,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM24",
 		"prefabsName": "AlbumDisco24",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_22",
@@ -194,7 +213,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM23",
 		"prefabsName": "AlbumDisco23",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_21",
@@ -203,7 +222,7 @@
 		"price": "Free",
 		"jsonName": "ALBUM22",
 		"prefabsName": "AlbumDisco22",
-		"free" : true,
+		"free": true
 	},
 	{
 		"uid": "music_package_20",
@@ -212,7 +231,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM21",
 		"prefabsName": "AlbumDisco21",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_19",
@@ -221,7 +240,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM20",
 		"prefabsName": "AlbumDisco20",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_18",
@@ -230,7 +249,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM19",
 		"prefabsName": "AlbumDisco19",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_17",
@@ -239,7 +258,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM18",
 		"prefabsName": "AlbumDisco18",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_16",
@@ -248,7 +267,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM17",
 		"prefabsName": "AlbumDisco17",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_15",
@@ -257,7 +276,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM16",
 		"prefabsName": "AlbumDisco16",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_14",
@@ -266,7 +285,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM15",
 		"prefabsName": "AlbumDisco15",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_13",
@@ -275,7 +294,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM14",
 		"prefabsName": "AlbumDisco14",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_12",
@@ -284,7 +303,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM13",
 		"prefabsName": "AlbumDisco13",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_11",
@@ -293,7 +312,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM12",
 		"prefabsName": "AlbumDisco12",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_10",
@@ -302,7 +321,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM11",
 		"prefabsName": "AlbumDisco11",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_9",
@@ -311,7 +330,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM10",
 		"prefabsName": "AlbumDisco10",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_8",
@@ -320,7 +339,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM9",
 		"prefabsName": "AlbumDisco9",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_7",
@@ -329,7 +348,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM8",
 		"prefabsName": "AlbumDisco8",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_6",
@@ -338,7 +357,7 @@
 		"price": "Free",
 		"jsonName": "ALBUM7",
 		"prefabsName": "AlbumDisco7",
-		"free" : true,
+		"free": true
 	},
 	{
 		"uid": "music_package_5",
@@ -347,7 +366,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM6",
 		"prefabsName": "AlbumDisco6",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_4",
@@ -356,7 +375,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM5",
 		"prefabsName": "AlbumDisco5",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_3",
@@ -365,7 +384,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM4",
 		"prefabsName": "AlbumDisco4",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_2",
@@ -374,7 +393,7 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM3",
 		"prefabsName": "AlbumDisco3",
-		"free" : false,
+		"free": false
 	},
 	{
 		"uid": "music_package_1",
@@ -383,6 +402,6 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM2",
 		"prefabsName": "AlbumDisco2",
-		"free" : false,
-	},
+		"free": false
+	}
 ]

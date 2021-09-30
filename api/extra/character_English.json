@@ -378,7 +378,7 @@
 		"characterName": "Rin",
 		"cosName": "Part-Time Warrior",
 		"description": "Part-Time Warrior",
-		"skill": "The greatest skill in Muse Dash history, the power to defy the laws of physics! \nRotate the device 90 degrees counter-clockwise and turn it into a vertical rythm game!",
+		"skill": "I give up, no idea for the skill. Eh, I'll do something funny to make up for it.",
 		"chipName": "The Safety Helmet",
 		"chipDescription": "This beat-up ol' safety helmet is the true staple of a Part-Time Warrior.",
 		"cv":"▇▇▇▇▇▇▇▇▇▇",
@@ -388,6 +388,23 @@
 			["Ha, not this time.", "If [Just As Planned] with 200+ tracks isn't the most ideal investment, then I don't know what is. ","What do you mean lazy drawing, less is more!"],
 			["Damn... today is a dark... ( TдT)", "Hmm... Running out of ideas... Might as well put this in."],
 			[":( Your character has encountered an voicing issue.\nError Code: peroperoispoor\nPlease try buying the [Just As Planned] DLC pass to support the devs."]
+		]
+	},
+	{
+		"characterName": "Hakurei Reimu",
+		"cosName": "Red-white Miko",
+		"description": "Red-white Miko",
+		"skill": "Reimu can keep hovering in the air without automatically landing, and shrunk the hitbox of obstacles (gears) , making it easier to dodge.",
+		"chipName": "Yin-Yang Orb",
+		"chipDescription": "A heavy and hard orb. It is in fact the key to Gensokyo.",
+		"cv":"Hiromi Igarashi",
+		"expressions": [
+			["Rhythm? Isn't it all about defeating the enemies?", "Buro? That kid is kinda like Suika ... Noisy, but not annoying.", "Have nothing to do, huh? Would you like a cup of tea?"],
+			["Ughhh Yukari! Got tricked by her prank again and now I'm here!"],
+			["Enough already, I did my part didn't I?", "Do you ever get tired of poking me? You know that I'm not ticklish, right?"],
+			["Props? Illustrations? Is there nothing more valuable?", "You're welcome, please put my pay in the donation box~", "I have made up my mind, how about building a shrine here too? This will double my income!"],
+			["For what you've done to me, I will take double the payback!", "Why are you so concerned about my armpits? There is no weak point here!"],
+			["Want an S? That will cost you 100,000 yen. No? Then what?"]
 		]
 	}
 ]
