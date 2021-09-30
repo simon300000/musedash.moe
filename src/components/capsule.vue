@@ -51,15 +51,17 @@
       </svg>
     </router-link>
 
-    <div class="padding" v-if="(props.difficulties[2].level !== '0' || props.difficulties[3].level !== '0') && props.difficulties[4].level !== '0'"></div>
+    <template v-if="props.difficulties[4]">
+      <div class="padding" v-if="(props.difficulties[2].level !== '0' || props.difficulties[3].level !== '0') && props.difficulties[4].level !== '0'"></div>
 
-    <router-link :to="props.difficulties[4].link" v-if="props.difficulties[4].level !== '0'">
-      <svg class="node">
-        <use href="#round" fill="url(#white-slash)" class="only" />
-        <use href="#star" fill="url(#touhou_slash)" />
-        <text x="50%" y="50%" class="touhou_text text outline_touhou">{{props.difficulties[4].level}}</text>
-      </svg>
-    </router-link>
+      <router-link :to="props.difficulties[4].link" v-if="props.difficulties[4].level !== '0'">
+        <svg class="node">
+          <use href="#round" fill="url(#white-slash)" class="only" />
+          <use href="#star" fill="url(#touhou_slash)" />
+          <text x="50%" y="50%" class="touhou_text text outline_touhou">{{props.difficulties[4].level}}</text>
+        </svg>
+      </router-link>
+    </template>
 
   </div>
 </div>
