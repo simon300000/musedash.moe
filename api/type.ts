@@ -132,3 +132,9 @@ export interface PlayerValue {
   plays: Play[],
   user: User
 }
+
+export type Job = {
+  url: string
+  resolve: (value: RawAPI) => void
+  reject: (reason: any) => void
+}

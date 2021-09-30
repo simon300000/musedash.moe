@@ -1,11 +1,9 @@
 /* eslint camelcase: ["off"] */
 import { APIResults, MusicData, MusicCore, RankCore, PlayerValue, RawAPI } from './type.js'
 import { rank, player, search } from './database.js'
-import { PARALLEL } from './config.js'
-
 import { musics } from './albumParser.js'
 
-import got from 'got'
+import { down } from './download.js'
 
 import { log, error, reloadAlbums } from './api.js'
 
@@ -13,26 +11,13 @@ import { download, resultWithHistory, wait } from './common.js'
 
 import { diffdiff, diffPlayer } from './diffdiff.js'
 
-const parallel = async <T>(n: number, pfs: (() => Promise<(number: number) => T>)[]) => {
-  const ws = new Set<() => Promise<(number) => T>>()
-  const ps: Promise<T>[] = []
-  const epfs = pfs.map(w => async () => {
-    ws.add(w)
-    const l = await w()
+const parallel = async <T>(pfs: (() => Promise<(number: number) => T>)[]) => {
+  const ws = new Set(pfs)
+  return Promise.all(pfs.map(async w => {
+    const p = await w()
     ws.delete(w)
-    const result = l(ws.size + epfs.length)
-    if (ws.size < n && epfs.length) {
-      const p = epfs.shift()()
-      ps.push(p)
-      await p
-    }
-    return result
-  })
-  for (let i = 0; i < n && epfs.length; i++) {
-    ps.push(epfs.shift()())
-  }
-  await Promise.all(ps)
-  return Promise.all(ps)
+    return p(ws.size)
+  }))
 }
 
 const platforms = {
@@ -41,10 +26,10 @@ const platforms = {
 } as const
 
 const downloadCore = ({ api, uid, difficulty }) => async (): Promise<APIResults | void> => {
-  const { result: firstPage, total } = await got(`https://prpr-muse-dash.peropero.net/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=100&offset=0&version=1.5.0&platform=musedash.moe`, { timeout: 1000 * 10 }).json<RawAPI>()
+  const { result: firstPage, total } = await down(`https://prpr-muse-dash.peropero.net/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=100&offset=0&version=1.5.0&platform=musedash.moe`)
   const pageNumber = Math.max(Math.ceil(total / 100) - 1, 0)
   const urls = Array(pageNumber).fill(undefined).map((_, i) => i + 1).map(i => i * 100 - 1).map(limit => `https://prpr-muse-dash.peropero.net/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=${limit}&offset=1&version=1.5.0&platform=musedash.moe`)
-  return [firstPage, ...await Promise.all(urls.map(url => got(url, { timeout: 1000 * 10 }).json<RawAPI>().then(({ result }) => result)))].flat()
+  return [firstPage, ...await Promise.all(urls.map(url => down(url).then(({ result }) => result)))].flat()
 }
 
 const core = ({ uid, difficulty, platform, api }: RankCore) => async () => {
@@ -125,7 +110,7 @@ const mal = async () => {
   log('Start!')
   const musicList = await musics()
   const pfs = musicList.map(prepare)
-  const datass = await parallel(PARALLEL, pfs)
+  const datass = await parallel(pfs)
   log('Downloaded')
   const players = await analyze(datass.flat())
   log('Analyzed')
