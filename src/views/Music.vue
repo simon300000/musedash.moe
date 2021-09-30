@@ -26,10 +26,17 @@ export default {
           this.updateTitle([this, title])
         }
       }
+    },
+    uid: {
+      immediate: true,
+      handler(uid) {
+        this.setBlackWhite(uid === '42-0')
+      }
     }
   },
   beforeDestroy() {
     this.removeTitle(this)
+    this.setBlackWhite(false)
   },
   computed: {
     ...mapGetters(['allMusics', 'albumsArray']),
@@ -57,7 +64,7 @@ export default {
   },
   methods: {
     ...mapActions(['loadAlbums']),
-    ...mapMutations(['removeTitle', 'updateTitle'])
+    ...mapMutations(['removeTitle', 'updateTitle', 'setBlackWhite'])
   }
 }
 </script>
