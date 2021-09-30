@@ -22,6 +22,7 @@
       </div>
 
       <div class="navbar-end">
+        <span class="navbar-item">(There is currently some problem causing record being missing, sorry for the inconvenience)</span>
         <a class="navbar-item" @click="switchTheme($event)" :href="`?theme=${nextTheme}`">{{otherTheme}}</a>
         <div class="navbar-end">
           <div class="navbar-item has-dropdown is-hoverable" :class="{'is-active': menu}">
