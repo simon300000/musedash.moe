@@ -124,7 +124,7 @@ const makeSearch = (players: [string, PlayerValue][]) => {
 const mal = async () => {
   log('Start!')
   const musicList = await musics()
-  const pfs = musicList.map(prepare).reverse()
+  const pfs = musicList.map(prepare)
   const datass = await parallel(PARALLEL, pfs)
   log('Downloaded')
   const players = await analyze(datass.flat())
