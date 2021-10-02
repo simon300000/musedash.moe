@@ -130,7 +130,8 @@ export interface Play {
 
 export interface PlayerValue {
   plays: Play[],
-  user: User
+  user: User,
+  key: string
 }
 
 export type Job = {

@@ -71,7 +71,7 @@ const prepare = (music: MusicData) => {
   })
 }
 
-const analyzePlayers = (musicList: RankCore[]) => musicList
+const analyzePlayers = (musicList: RankCore[], key: string) => musicList
   .reduce(async (rP, { uid, difficulty, platform }) => {
     const records = await rP
 
@@ -82,7 +82,7 @@ const analyzePlayers = (musicList: RankCore[]) => musicList
       const id = user.user_id
       if (id) {
         if (!records[id]) {
-          records[id] = { plays: [], user }
+          records[id] = { plays: [], user, key }
         }
         const sumI = sumRank.findIndex(play => play.platform === platform && play.user.user_id === user.user_id)
         records[id].plays.push({ score, acc, i, platform, history, difficulty, uid, sum: sumI, character_uid, elfin_uid })
@@ -91,12 +91,31 @@ const analyzePlayers = (musicList: RankCore[]) => musicList
     return records
   }, Promise.resolve({} as Record<string, PlayerValue>))
 
+const deleteOld = async (k: string) => new Promise(resolve => {
+  const deleteBatch = player.batch()
+  player.createReadStream()
+    .on('data', ({ key, value }) => {
+      if (value.key !== k) {
+        deleteBatch.del(key)
+      }
+    })
+    .on('end', () => {
+      resolve(deleteBatch.write())
+    })
+})
+
 const analyze = async (musicList: RankCore[]) => {
-  const players = Object.entries(await analyzePlayers(musicList))
+  const key = String(Math.random())
+  const players = Object.entries(await analyzePlayers(musicList, key))
   const batch = player.batch()
   players.forEach(([k, v]) => batch.put(k, v))
-  await player.clear()
+
   await batch.write()
+  log('Analyzed')
+
+  await deleteOld(key)
+  log('Player Refreshed')
+
   return players
 }
 
@@ -113,7 +132,6 @@ const mal = async () => {
   const datass = await parallel(pfs)
   log('Downloaded')
   const players = await analyze(datass.flat())
-  log('Analyzed')
   await makeSearch(players)
   log('Search Cached')
   await diffdiff(musicList)
