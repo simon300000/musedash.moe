@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run build:api; npm run build:vue",
