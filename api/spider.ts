@@ -91,7 +91,7 @@ const analyzePlayers = (musicList: RankCore[], key: string) => musicList
     return records
   }, Promise.resolve({} as Record<string, PlayerValue>))
 
-const deleteOld = async (k: string) => new Promise(resolve => {
+const deleteOld = (k: string) => new Promise(resolve => {
   const deleteBatch = player.batch()
   player.createReadStream()
     .on('data', ({ key, value }) => {
