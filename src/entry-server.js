@@ -1,6 +1,10 @@
 import { createApp } from './app'
 
+import { injectFetch } from './api'
+
 export default context => {
+  injectFetch(context.fetch)
+
   return new Promise((resolve, reject) => {
     let titles = []
     const changeTitle = (depth, part) => {

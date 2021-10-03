@@ -1,15 +1,20 @@
 import Vue from 'vue'
-import axios from 'axios'
 
 const url = process.env.NODE_ENV === 'development' ? '/api/' : new Vue().$isServer ? 'http://0.0.0.0:8301/' : 'https://api.musedash.moe/'
 
-const get = async api => (await axios(`${url}${api}`)).data
+let f = undefined
+export const injectFetch = w => {
+  f = w
+}
+
+const get = async api => (await (f || fetch)(`${url}${api}`)).json()
+const getText = async api => (await (f || fetch)(`${url}${api}`)).text()
 
 export const getAlbums = () => get('albums')
 export const getRank = async ({ uid, difficulty, platform }) => (await get(`rank/${uid}/${difficulty}/${platform}`)).map(([acc, score, lastRank, nickname, id, platform, character, elfin], index) => ({ acc, score, lastRank, nickname, id, platform, character, elfin, url: `/player/${id}`, index }))
 export const getPlayer = id => get(`player/${id}`)
 export const searchPlayer = search => get(`search/${search}`)
-export const getLog = () => get('log')
+export const getLog = () => getText('log')
 export const getCE = () => get('ce')
 export const getDiffDiff = async () => (await get('diffdiff')).map(([uid, difficulty, level, absolute, relative]) => ({ uid, difficulty, level, absolute, relative }))
 

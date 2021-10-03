@@ -5,6 +5,8 @@ import mount from 'koa-mount'
 import vsr from 'vue-server-renderer'
 import { readFileSync } from 'fs'
 
+import fetch from 'node-fetch'
+
 const { createBundleRenderer } = vsr
 
 const serverBundle = JSON.parse(readFileSync('./dist/vue-ssr-server-bundle.json'))
@@ -62,8 +64,8 @@ app.use(async ctx => {
   }
   theme = queryTheme || theme
 
-  let result = await renderer.renderToString({ url: ctx.url, lang, theme }).catch(e => {
-    console.error(e, { url })
+  let result = await renderer.renderToString({ url: ctx.url, lang, theme, fetch }).catch(e => {
+    console.error(e, { url: ctx.url })
     if (e.code) {
       ctx.throw(e.code)
     } else {
