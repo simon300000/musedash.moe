@@ -1,6 +1,6 @@
 import path from 'path'
 import utils from './utils.js'
-import merge from 'webpack-merge'
+import { merge } from 'webpack-merge'
 import prodConfig from './webpack.prod.config.js'
 import devConfig from './webpack.dev.config.js'
 

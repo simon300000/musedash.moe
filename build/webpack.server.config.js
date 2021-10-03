@@ -1,4 +1,4 @@
-import merge from 'webpack-merge'
+import { merge } from 'webpack-merge'
 import nodeExternals from 'webpack-node-externals'
 import baseConfig from './webpack.base.config.js'
 import VueSSRServerPlugin from 'vue-server-renderer/server-plugin.js'
