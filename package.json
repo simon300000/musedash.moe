@@ -24,7 +24,7 @@
     "koa": "^2.7.0",
     "koa-mount": "^4.0.0",
     "koa-static": "^5.0.0",
-    "level": "^6.0.0",
+    "level": "^7.0.0",
     "lru-cache": "^6.0.0",
     "register-service-worker": "^1.6.2",
     "subleveldown": "^6.0.0",
