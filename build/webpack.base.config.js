@@ -7,11 +7,8 @@ import devConfig from './webpack.dev.config.js'
 import VueLoaderPlugin from 'vue-loader/lib/plugin.js'
 import SizePlugin from 'size-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
-import wwp from 'workbox-webpack-plugin'
 
 import { fileURLToPath } from 'url'
-
-const { GenerateSW } = wwp
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -117,12 +114,6 @@ export default merge(process.env.development ? devConfig : prodConfig, {
   },
   plugins: [
     new VueLoaderPlugin(),
-    new SizePlugin(),
-    new GenerateSW({
-      runtimeCaching: [{
-        urlPattern: /covers/,
-        handler: 'CacheFirst'
-      }]
-    })
+    new SizePlugin()
   ]
 })
