@@ -63,7 +63,7 @@ app.use(async ctx => {
   theme = queryTheme || theme
 
   let result = await renderer.renderToString({ url: ctx.url, lang, theme }).catch(e => {
-    console.error(e)
+    console.error(e, { url })
     if (e.code) {
       ctx.throw(e.code)
     } else {
