@@ -3,20 +3,20 @@ import serve from 'koa-static'
 import mount from 'koa-mount'
 
 import vsr from 'vue-server-renderer'
-import { readFileSync } from 'fs'
+import { readFile } from 'fs/promises'
 
 import fetch from 'node-fetch'
 
 const { createBundleRenderer } = vsr
 
-const serverBundle = JSON.parse(readFileSync('./dist/vue-ssr-server-bundle.json'))
-const clientManifest = JSON.parse(readFileSync('./dist/vue-ssr-client-manifest.json'))
+const serverBundle = JSON.parse(await readFile('./dist/vue-ssr-server-bundle.json'))
+const clientManifest = JSON.parse(await readFile('./dist/vue-ssr-client-manifest.json'))
 
 clientManifest.async = clientManifest.async.filter(file => !file.includes('.noinject.'))
 
 const app = new Koa()
 
-const template = readFileSync('index.html', 'utf-8').replace('<div id="app"></div>', '<!--vue-ssr-outlet-->')
+const template = (await readFile('index.html', 'utf-8')).replace('<div id="app"></div>', '<!--vue-ssr-outlet-->')
 
 const renderer = createBundleRenderer(serverBundle, {
   runInNewContext: 'once',
