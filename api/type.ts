@@ -31,12 +31,13 @@ export interface Music extends Record<AvailableLocales, MusicLang> {
 }
 
 export interface MusicData extends Record<AvailableLocales, MusicLang> {
-  uid: string,
-  name: string,
-  author: string,
-  cover: string,
-  levelDesigner: string[],
-  difficulty: string[]
+  uid: string;
+  name: string;
+  author: string;
+  cover: string;
+  levelDesigner: string[];
+  difficulty: string[];
+  bpm: number;
 }
 
 export type Musics = MusicData[]
