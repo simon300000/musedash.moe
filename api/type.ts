@@ -37,7 +37,7 @@ export interface MusicData extends Record<AvailableLocales, MusicLang> {
   cover: string;
   levelDesigner: string[];
   difficulty: string[];
-  bpm: number;
+  bpm: string;
 }
 
 export type Musics = MusicData[]
