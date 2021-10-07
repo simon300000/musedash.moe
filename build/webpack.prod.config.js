@@ -38,7 +38,7 @@ const config = {
           loader: 'url-loader',
           options: {
             limit: 10000,
-            name: utils.assetsPath('img/[name].[hash:7].[ext]')
+            name: utils.assetsPath('img/[name].hash.[hash:7].[ext]')
           }
         }
       ]
@@ -46,8 +46,8 @@ const config = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'static/css/[name].[contenthash].css',
-      chunkFilename: 'static/css/[id].[contenthash].css'
+      filename: 'static/css/[name].hash.[contenthash].css',
+      chunkFilename: 'static/css/[id].hash.[contenthash].css'
     })
   ]
 }

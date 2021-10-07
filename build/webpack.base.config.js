@@ -23,7 +23,7 @@ if (process.env.development) {
 export default merge(process.env.development ? devConfig : prodConfig, {
   context: path.resolve(__dirname, '../'),
   output: {
-    filename: '[name].[contenthash].js',
+    filename: '[name].hash.[contenthash].js',
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/'
   },
@@ -87,7 +87,7 @@ export default merge(process.env.development ? devConfig : prodConfig, {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: utils.assetsPath('media/[name].[hash:7].[ext]')
+          name: utils.assetsPath('media/[name].hash.[hash:7].[ext]')
         }
       },
       {
@@ -95,7 +95,7 @@ export default merge(process.env.development ? devConfig : prodConfig, {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
+          name: utils.assetsPath('fonts/[name].hash.[hash:7].[ext]')
         }
       }
     ]

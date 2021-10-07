@@ -55,9 +55,9 @@ import { mapState, mapMutations } from 'vuex'
 import CapsuleDef from '@/components/capsule-def'
 
 // eslint-disable-next-line import/no-webpack-loader-syntax
-import dark from '!file-loader?name=static/css/[name].noinject.[contenthash].css!sass-loader!./dark.scss'
+import dark from '!file-loader?name=static/css/[name].noinject.hash.[contenthash].css!sass-loader!./dark.scss'
 // eslint-disable-next-line import/no-webpack-loader-syntax
-import light from '!file-loader?name=static/css/[name].noinject.[contenthash].css!sass-loader!./bulma.scss'
+import light from '!file-loader?name=static/css/[name].noinject.hash.[contenthash].css!sass-loader!./bulma.scss'
 
 const langs = {
   ChineseS: '简体中文',
