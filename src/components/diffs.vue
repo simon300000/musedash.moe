@@ -10,7 +10,7 @@ import { mapState } from 'vuex'
 
 import Diff from '@/components/diff'
 
-const RENDER_LENGTH = 12
+const RENDER_LENGTH = 22
 
 const keys = Array(RENDER_LENGTH).fill().map((_, i) => `diffdiff_${i}`)
 
@@ -37,7 +37,7 @@ export default {
       return this.diffDiff.length - 1 - RENDER_LENGTH
     },
     skip() {
-      return Math.max(0, Math.min(this.maxSkip, Math.round(this.skipRatio * this.diffDiff.length) - 3))
+      return Math.max(0, Math.min(this.maxSkip, Math.round(this.skipRatio * this.diffDiff.length) - RENDER_LENGTH / 2))
     },
     renderArray() {
       const pack = Math.floor(this.skip / RENDER_LENGTH)
@@ -60,7 +60,7 @@ export default {
     this.intersectionObserver = new IntersectionObserver(([{ intersectionRatio }]) => {
       this.skipRatio = intersectionRatio
     }, {
-      rootMargin: '999999px 0px -140% 0px',
+      rootMargin: '999999px 0px -50% 0px',
       root: null,
       threshold
     })
