@@ -77,7 +77,6 @@ export default {
 
     this.intersectionObserver = new IntersectionObserver(([{ intersectionRatio }]) => {
       this.skipRatio = intersectionRatio
-      console.log(intersectionRatio)
     }, {
       rootMargin: '999999px 0px -50% 0px',
       root: null,
