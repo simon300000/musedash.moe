@@ -10,7 +10,7 @@ export interface Music extends Record<AvailableLocales, MusicLang> {
   uid: string,
   name: string,
   author: string,
-  bpm: number,
+  bpm: string,
   music: string,
   demo: string,
   cover: string,
