@@ -8,6 +8,8 @@ import { mapState, mapGetters } from 'vuex'
 import Capsule from './capsule'
 import Core from './musicCore'
 
+import { loadCover } from '@/coverLoader'
+
 export default {
   props: ['music', 'platform', 'level', 'hideAlbum'],
   components: {
@@ -18,7 +20,7 @@ export default {
     ...mapState(['lang', 'fullAlbums']),
     ...mapGetters(['musicAlbum']),
     src() {
-      return `/covers/${this.music.cover}.png`
+      return loadCover(this.music.cover)
     },
     album() {
       return this.musicAlbum[this.music.uid]

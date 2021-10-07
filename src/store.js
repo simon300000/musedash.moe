@@ -3,6 +3,8 @@ import Vuex from 'vuex'
 import { getAlbums, getRank, getPlayer, getCE, mdmcGetAlbum, mdmcGetPlayer, mdmcGetRank, getDiffDiff } from './api'
 import { set as cookieSet } from 'js-cookie'
 
+import { loadCover } from './coverLoader'
+
 Vue.use(Vuex)
 
 export const createStore = ({ lang, changeTitle, theme }) => {
@@ -56,7 +58,7 @@ export const createStore = ({ lang, changeTitle, theme }) => {
         const albumLink = `/albums/${album}`
 
         const { name, author, cover } = allMusics[uid]
-        const src = `/covers/${cover}.png`
+        const src = loadCover(cover)
         return { uid, absolute: Math.round(absolute * 100) / 100, relative: Math.round(relative * 100) / 100, difficulties, albumName, albumLink, name, author, src }
       })
     },

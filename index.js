@@ -24,7 +24,7 @@ const renderer = createBundleRenderer(serverBundle, {
   clientManifest
 })
 
-app.use(mount('/covers', serve('./public/covers')))
+app.use(mount('/covers', serve('./src/covers')))
 app.use(serve('dist'))
 
 const langs = ['ChineseS', 'ChineseT', 'English', 'Japanese', 'Korean']

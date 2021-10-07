@@ -97,6 +97,34 @@ export default merge(process.env.development ? devConfig : prodConfig, {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].hash.[hash:7].[ext]')
         }
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        oneOf: [
+          {
+            test: /covers\/.*_cover\.png$/,
+            use: [
+              {
+                loader: 'file-loader',
+                options: {
+                  esModule: false,
+                  name: 'covers/[name].hash.[hash:9].[ext]'
+                }
+              }
+            ]
+          },
+          {
+            use: [
+              {
+                loader: 'url-loader',
+                options: {
+                  limit: 10000,
+                  name: utils.assetsPath('img/[name].hash.[hash:7].[ext]')
+                }
+              }
+            ]
+          }
+        ]
       }
     ]
   },

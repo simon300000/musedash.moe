@@ -10,6 +10,8 @@ import { mapActions, mapState, mapGetters, mapMutations } from 'vuex'
 
 import Core from '@/components/PlayerCore.vue'
 
+import { loadCover } from '@/coverLoader'
+
 export default {
   props: ['id'],
   components: {
@@ -51,7 +53,7 @@ export default {
         .sort(({ i: a }, { i: b }) => a - b)
         .map(({ uid, difficulty, platform, character_uid, elfin_uid, ...rest }) => {
           const music = { ...this.allMusics[uid], ...this.allMusics[uid][this.lang] }
-          const src = `/covers/${music.cover}.png`
+          const src = loadCover(music.cover)
           const { name, author } = music
           const lv = music.difficulty[difficulty]
           const link = `/music/${uid}/${difficulty}/${platform}`

@@ -11,6 +11,10 @@ export default merge(baseConfig, {
     new VueSSRClientPlugin(),
     new InjectManifest({
       swSrc: './src/service-worker.js',
+      exclude: [
+        ({ asset: { name } }) => name.includes('covers/') && !name.includes('.hash.'),
+        ({ asset: { name } }) => name.includes('icons/')
+      ]
     }),
     new CopyPlugin({ patterns: [{ from: 'public' }] })
   ]

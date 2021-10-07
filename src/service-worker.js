@@ -13,6 +13,18 @@ setDefaultHandler(new NetworkOnly())
 precacheAndRoute(self.__WB_MANIFEST)
 
 registerRoute(
+  /\/covers\/.*\.hash\..*\.png$/,
+  new CacheFirst({
+    cacheName: 'hashCovers',
+    plugins: [
+      new ExpirationPlugin({
+        maxEntries: 500
+      })
+    ]
+  })
+)
+
+registerRoute(
   /\.hash\./,
   new CacheFirst({
     cacheName: 'hash',

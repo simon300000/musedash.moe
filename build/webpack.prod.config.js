@@ -4,8 +4,6 @@ import safeParser from 'postcss-safe-parser'
 import TerserPlugin from 'terser-webpack-plugin'
 import * as wba from 'webpack-bundle-analyzer'
 
-import utils from './utils.js'
-
 const { BundleAnalyzerPlugin } = wba
 
 const config = {
@@ -29,20 +27,6 @@ const config = {
       new TerserPlugin({ parallel: true }),
       new OptimizeCSSPlugin({ cssProcessorOptions: { parser: safeParser, map: { inline: false } } })
     ]
-  },
-  module: {
-    rules: [{
-      test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-      use: [
-        {
-          loader: 'url-loader',
-          options: {
-            limit: 10000,
-            name: utils.assetsPath('img/[name].hash.[hash:7].[ext]')
-          }
-        }
-      ]
-    }]
   },
   plugins: [
     new MiniCssExtractPlugin({
