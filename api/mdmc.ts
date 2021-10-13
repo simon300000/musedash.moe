@@ -119,7 +119,7 @@ router.get('/musics', async (ctx: any) => {
 })
 
 router.get('/player/:id', async ctx => {
-  ctx.body = await player.get(ctx.params.id).catch(() => undefined)
+  ctx.body = await player.get(ctx.params.id).catch(() => ({ plays: [], key: '', user: { user_id: '404', nickname: 'User not Found' } }))
 })
 
 router.get('/rank/:id/:difficulty', async ctx => {
