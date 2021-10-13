@@ -82,9 +82,7 @@ export default {
         .filter(({ acc }) => acc === 100)
     },
     avgPct() {
-      return Math.round(this.plays
-        .reduce(({ acc: a }, { acc: b }) => ({ acc: a + b }))
-        .acc / this.plays.length * 10) / 10
+      return Math.round(this.plays.reduce((a, { acc: b }) => a + b, 0) / this.plays.length * 10) / 10
     },
     rl() {
       return Math.round(1000 * this.current.rl) / 1000
