@@ -94,9 +94,9 @@ router.get('/rank/:uid/:difficulty/:platform', async ctx => {
 
 router.get('/player/:id', async ctx => {
   const { id } = ctx.params
-  const playerP = player.get(id).catch<undefined>(() => undefined)
-  const playerRLP = playerDiff.get(id).catch<undefined>(() => undefined)
-  const p = await playerP as PlayerValue & { rl: number }
+  const playerP = player.get(id).catch<any>(() => ({ plays: [{ uid: '35-0', history: {}, difficulty: 0 }], key: '', user: { user_id: '404', nickname: 'User not Found' } }))
+  const playerRLP = playerDiff.get(id).catch<string>(() => 'NaN')
+  const p = await playerP as PlayerValue & { rl: number | string }
   const playerRL = await playerRLP
   if (p && playerRL) {
     p.rl = playerRL
