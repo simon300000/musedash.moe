@@ -64,5 +64,21 @@
             "difficulty3":"10",
             "difficulty5":"L",
             "unlockLevel":"0"
+        },
+        {
+            "uid":"43-4",
+            "name":"#サイケデリック目黒川",
+            "author":"uma with モリモリあつし feat. ましろ",
+            "bpm":"140",
+            "music":"psychedelic_meguro_river_music",
+            "demo":"psychedelic_meguro_river_demo",
+            "cover":"psychedelic_meguro_river_cover",
+            "noteJson":"psychedelic_meguro_river_map",
+            "scene":"scene_06",
+            "levelDesigner": "Howard_Y",
+            "difficulty1":"3",
+            "difficulty2":"6",
+            "difficulty3":"8",
+            "unlockLevel":"0"
         }
 ]

@@ -1,0 +1,50 @@
+[
+        {
+            "uid":"44-0",
+            "name":"Party in the HOLLOWood feat. ななひら",
+            "author":"t+pazolite",
+            "bpm":"178",
+            "music":"party_in_the_hollowood_music",
+            "demo":"party_in_the_hollowood_demo",
+            "cover":"party_in_the_hollowood_cover",
+            "noteJson":"party_in_the_hollowood_map",
+            "scene":"scene_03",
+            "levelDesigner": "ForeverFXS",
+            "difficulty1":"3",
+            "difficulty2":"6",
+            "difficulty3":"8",
+            "unlockLevel":"0"
+        },
+        {
+            "uid":"44-1",
+            "name":"嘤嘤大作战",
+            "author":"iKz feat.祖娅纳惜",
+            "bpm":"128",
+            "music":"yingying_dazuozhan_music",
+            "demo":"yingying_dazuozhan_demo",
+            "cover":"yingying_dazuozhan_cover",
+            "noteJson":"yingying_dazuozhan_map",
+            "scene":"scene_03",
+            "levelDesigner": "money钱钱",
+            "difficulty1":"5",
+            "difficulty2":"7",
+            "difficulty3":"9",
+            "unlockLevel":"0"
+        },
+        {
+            "uid":"44-2",
+            "name":"Howlin' Pumpkin",
+            "author":"brz1128",
+            "bpm":"140",
+            "music":"howlin_pumpkin_music",
+            "demo":"howlin_pumpkin_demo",
+            "cover":"howlin_pumpkin_cover",
+            "noteJson":"howlin_pumpkin_map",
+            "scene":"scene_03",
+            "levelDesigner": "Howard_Y",
+            "difficulty1":"4",
+            "difficulty2":"6",
+            "difficulty3":"8",
+            "unlockLevel":"0"
+        }
+]

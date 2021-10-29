@@ -16,7 +16,6 @@
 		"jsonName": "",
 		"free": false
 	},
-
 	{
 		"uid": "music_package_43",
 		"title": "计划通补完计划",
@@ -24,6 +23,16 @@
 		"price": "¥25.00",
 		"jsonName": "ALBUM44",
 		"prefabsName": "AlbumDisco44",
+		"free": false
+	},
+
+	{
+		"uid": "music_package_44",
+		"title": "Happy Otaku Pack Vol.13",
+		"needPurchase": true,
+		"price": "¥12.00",
+		"jsonName": "ALBUM45",
+		"prefabsName": "AlbumDisco45",
 		"free": false
 	},
 	{
