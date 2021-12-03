@@ -26,6 +26,15 @@
 		"free": false
 	},
 	{
+		"uid": "music_package_46",
+		"title": "Happy Otaku Pack Vol.14",
+		"needPurchase": true,
+		"price": "¥25.00",
+		"jsonName": "ALBUM47",
+		"prefabsName": "AlbumDisco47",
+		"free": false
+	},
+	{
 		"uid": "music_package_45",
 		"title": "WACCA Horizon",
 		"needPurchase": true,
