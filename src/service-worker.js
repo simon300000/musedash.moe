@@ -1,7 +1,7 @@
 import { clientsClaim } from 'workbox-core'
 import { precacheAndRoute } from 'workbox-precaching'
 import { registerRoute, setDefaultHandler } from 'workbox-routing'
-import { StaleWhileRevalidate, CacheFirst } from 'workbox-strategies'
+import { StaleWhileRevalidate, CacheFirst, NetworkFirst } from 'workbox-strategies'
 import { ExpirationPlugin } from 'workbox-expiration'
 
 clientsClaim()
@@ -11,6 +11,8 @@ console.log('yay')
 setDefaultHandler(new StaleWhileRevalidate())
 
 precacheAndRoute(self.__WB_MANIFEST)
+
+registerRoute(/https:\/\/api\.musedash\.moe/, new NetworkFirst())
 
 registerRoute(
   /\/covers\/.*\.hash\..*\.png$/,
