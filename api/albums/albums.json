@@ -26,6 +26,15 @@
 		"free": false
 	},
 	{
+		"uid": "music_package_47",
+		"title": "Arcaea",
+		"needPurchase": true,
+		"price": "¥18.00",
+		"jsonName": "ALBUM48",
+		"prefabsName": "AlbumDisco48",
+		"free": false
+	},
+	{
 		"uid": "music_package_46",
 		"title": "Happy Otaku Pack Vol.14",
 		"needPurchase": true,
