@@ -406,5 +406,24 @@
 			["For what you've done to me, I will take double the payback!", "Why are you so concerned about my armpits? There is no weak point here!"],
 			["Want an S? That will cost you 100,000 yen. No? Then what?"]
 		]
+	},
+	{
+		"characterName": "El_Clear",
+		"cosName": "Rebirth Girl",
+		"description": "Rebirth Girl",
+		"skill": "Clear can automatically catch all the missed notes, red hearts, ghosts, and enemies with Heart. The automatically caught ghosts and enemies with Heart is \"Perfect\" judgment.",
+		"chipName": "Crown",
+		"chipDescription": "The crown which brings Clear falling to the ground, absolutely who hit by it will shout Ouch.",
+		"cv": "Ai Kakuma",
+		"expressions": [
+			[ "Born in the grave, standing for the return of glory! How about it, isn't it cool? " ],
+			[ "Fail comes here with me? What a clingy girl... Don't worry, I'll take care of her myself!" ],
+			[ "Clear will clear all the songs here! Eh... an awkward silence?" ],
+			[ "How long are you going to cool my heels? Hurry up and start playing with me! Come on, come on, come on!", "Love from everyone is the source of my power, so always praise me~" , "Today is the day of solo with Fail, whoever loses will do whatever the winner says! Come and cheer me on!"],
+			[ "Is that little zombie named Buro also resurrected from the graveyard? What...that is a cosplay?!" ],
+			[ "You want me to fight with the guitar... What if I destroy it? I mean the mob of monsters!" ],
+			[ "Just now! I saved another spectator who was almost bewitched by Fail. It was literally a close call." ],
+			[ "I don't look like Fail. Obviously I'm in better shape... Yes, that's definitely true!", "Eh? Eh? Ah... I can't take it anymore! If you want something, just say it!", "Ahhhh, geez! To prevent you from poking me and thus losing the game, keep three meters away from now on!" ]
+		]
 	}
 ]

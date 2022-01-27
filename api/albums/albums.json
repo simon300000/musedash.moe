@@ -26,6 +26,15 @@
 		"free": false
 	},
 	{
+		"uid": "music_package_48",
+		"title": "DJMAX Reflect",
+		"needPurchase": true,
+		"price": "¥50.00",
+		"jsonName": "ALBUM49",
+		"prefabsName": "AlbumDisco49",
+		"free": false
+	},
+	{
 		"uid": "music_package_47",
 		"title": "Arcaea",
 		"needPurchase": true,

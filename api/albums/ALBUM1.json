@@ -800,6 +800,23 @@
     "unlockLevel": "46"
   },
   {
+    "uid": "0-52",
+    "name": "INTERNET OVERDOSE（Aiobahn feat.KOTOKO）",
+    "author": "『NEEDY GIRL OVERDOSE』主題歌",
+    "bpm": "90~163",
+    "music": "internet_overdose_music",
+    "demo": "internet_overdose_demo",
+    "cover": "internet_overdose_cover",
+    "hexieCover": "",
+    "noteJson": "internet_overdose_map",
+    "scene": "scene_02",
+    "levelDesigner": "Howard_Y",
+    "difficulty1": "3",
+    "difficulty2": "6",
+    "difficulty3": "9",
+    "unlockLevel": "47"
+  },
+  {
     "uid": "0-35",
     "name": "徒 花",
     "author": "Aya~亜夜罪~",
