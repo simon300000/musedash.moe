@@ -7,7 +7,7 @@
   </div>
   <div class="level-item">
     <div>
-      <p class="title is-3 is-spaced">{{props.name}} <span class="subtitle is-6">Lv.{{props.lv}}</span></p>
+      <p class="title is-3 is-spaced"><span v-html="props.name"></span> <span class="subtitle is-6">Lv.{{props.lv}}</span></p>
       <p class="subtitle is-5 is-spaced">{{props.author}}</p>
     </div>
   </div>
