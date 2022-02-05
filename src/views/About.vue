@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="break">
   Not Official
   <p>
     This project/website is unofficial! I have no copyright with the music/picture/cover displayed in the website, they belong to the original owner. This website has no relation with MuseDash or PeroPeroGames.
@@ -63,6 +63,10 @@ export default {
 </script>
 
 <style scoped>
+.break {
+  word-wrap: break-word;
+}
+
 .log {
   height: 480px;
   overflow-y: auto;
