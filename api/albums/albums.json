@@ -26,6 +26,15 @@
 		"free": false
 	},
 	{
+		"uid": "music_package_49",
+		"title": "DokiDoki! Valentine!",
+		"needPurchase": true,
+		"price": "¥12.00",
+		"jsonName": "ALBUM50",
+		"prefabsName": "AlbumDisco50",
+		"free": false
+	},
+	{
 		"uid": "music_package_48",
 		"title": "DJMAX Reflect",
 		"needPurchase": true,

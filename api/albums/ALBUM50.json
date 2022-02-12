@@ -1,0 +1,50 @@
+[
+        {
+            "uid":"49-0",
+            "name":"Pray a LOVE",
+            "author":"BOOGEY VOXX",
+            "bpm":"123",
+            "music":"pray_a_love_music",
+            "demo":"pray_a_love_demo",
+            "cover":"pray_a_love_cover",
+            "noteJson":"pray_a_love_map",
+            "scene":"scene_02",
+            "levelDesigner": "HXJ_ConveX",
+            "difficulty1":"2",
+            "difficulty2":"5",
+            "difficulty3":"8",
+            "unlockLevel":"0"
+        },
+        {
+            "uid":"49-1",
+            "name":"恋愛回避依存症",
+            "author":"Matthiola Records",
+            "bpm":"132",
+            "music":"renai_kaihi_izonsho_music",
+            "demo":"renai_kaihi_izonsho_demo",
+            "cover":"renai_kaihi_izonsho_cover",
+            "noteJson":"renai_kaihi_izonsho_map",
+            "scene":"scene_02",
+            "levelDesigner": "money钱",
+            "difficulty1":"3",
+            "difficulty2":"5",
+            "difficulty3":"7",
+            "unlockLevel":"0"
+        },
+        {
+            "uid":"49-2",
+            "name":"Daisuki Dayo feat.Wotoha",
+            "author":"Neko Hacker",
+            "bpm":"170",
+            "music":"daisuki_dayo_music",
+            "demo":"daisuki_dayo_demo",
+            "cover":"daisuki_dayo_cover",
+            "noteJson":"daisuki_dayo_map",
+            "scene":"scene_05",
+            "levelDesigner":"ForeverFXS",
+            "difficulty1":"5",
+            "difficulty2":"7",
+            "difficulty3":"10",
+            "unlockLevel":"0"
+        }
+]
