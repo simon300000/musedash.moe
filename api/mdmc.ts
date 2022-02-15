@@ -97,14 +97,14 @@ const mal = async () => {
 
 export const run = async () => {
   log('hi~')
-  await mal()
+  await mal().catch(() => log('error, skip'))
   while (true) {
     const currentHour = new Date().getUTCHours()
     const waitTime = (19 - currentHour + 24) % 24 || 24
     log(`WAIT: ${waitTime}h`)
     await wait(waitTime * 60 * 60 * 1000)
     const startTime = Date.now()
-    await mal()
+    await mal().catch(() => log('error, skip'))
     const endTime = Date.now()
     log(`TAKE ${endTime - startTime}, at ${new Date().toString()}`)
   }
