@@ -3,14 +3,10 @@ import got from 'got'
 
 import Router from '@koa/router'
 
-import { parseStringPromise } from 'xml2js'
-
 import { mdmc as db } from './database.js'
 import { log as rawLog, error as rawError, app } from './api.js'
 
-import { download, resultWithHistory, makeSearch, search as searchF, wait } from './common.js'
-
-import { APIResults, RankValue, User, Play as RawPlay } from './type.js'
+import { resultWithHistory, makeSearch, search as searchF, wait } from './common.js'
 
 const log = (msg: string) => rawLog(`mdmc: ${msg}`)
 const error = (msg: string) => rawError(`mdmc: ${msg}`)
@@ -34,17 +30,19 @@ const refreshMusics = async () => {
 
 const makeList = () => musics.flatMap(({ name, difficulty1, difficulty2, difficulty3, id }) => [{ name, difficulty: 0, id, level: difficulty1 }, { name, difficulty: 1, id, level: difficulty2 }, { name, difficulty: 2, id, level: difficulty3 }]).filter(({ level }) => level !== '0')
 
-const downloadSongs = async (): Promise<Musics> => (await got('https://mdmc.moe/api/data/charts', { timeout: 1000 * 60 }).json() as any)
+const downloadSongs = () => got('https://mdmc.moe/api/v3/charts', { timeout: 1000 * 60 }).json<Musics>()
 
-// eslint-disable-next-line camelcase
-const downloadCore = ({ name, difficulty }: { name: string, difficulty: number }) => async (): Promise<APIResults | void> => (await got(`https://mdmc.moe/hq/api/md?song_name=${Buffer.from(name).toString('base64url')}&music_difficulty=${difficulty + 1}`, { timeout: 1000 * 10 }).json() as any).result.map(({ user: { steam_id, ...restUser }, ...rest }) => ({ ...rest, user: { ...restUser, user_id: steam_id } }))
-
-const steamAvatarURL = (id: string) => got(`https://steamcommunity.com/profiles/${id}?xml=1`).text().then(parseStringPromise).then(({ profile: { avatarFull } }) => avatarFull[0] as string).catch(() => undefined)
+const downloadCore = async ({ name, difficulty }: { name: string, difficulty: number }) => {
+  const w = await got(`https://mdmc.moe/api/v3/hq/md?song_name=${Buffer.from(name).toString('base64url')}&music_difficulty=${difficulty + 1}`, { timeout: 1000 * 10 }).json<APIResults>()
+  return w.result.map(({ user: { discord_id, ...restUser }, ...rest }) => ({ ...rest, user: { ...restUser, user_id: discord_id } }))
+}
 
 const core = async ({ name, id, difficulty, l }: MusicCore & { l: { i: number } }) => {
-  const f = downloadCore({ name, difficulty })
   const s = `${name} - ${difficulty}`
-  const result = await download({ f, s, error })
+  const result = await downloadCore({ name, difficulty }).catch<undefined>(() => {
+    error(`Skip: ${s} - Failed`)
+    return undefined
+  })
 
   const current = await rank.get({ id, difficulty })
   if (result) {
@@ -61,7 +59,6 @@ const core = async ({ name, id, difficulty, l }: MusicCore & { l: { i: number } 
 const analyze = async (results: (RankCode & { value: RankValue[] })[]) => {
   const batch = await Object.entries(results
     .reduce((r, { id, difficulty, value }) => value
-      // eslint-disable-next-line camelcase
       .reduce((rr, { user: { user_id, nickname }, history, play: { score, acc, character_uid, elfin_uid } }, i) => {
         if (!rr[user_id]) {
           rr[user_id] = { user: { user_id, nickname }, plays: [] }
@@ -70,9 +67,7 @@ const analyze = async (results: (RankCode & { value: RankValue[] })[]) => {
         return rr
       }, r), {} as PlayerR))
     .reduce(async (p, [id, player]) => {
-      const avatar = await steamAvatarURL(id)
       const b = await p
-      player.user.avatar = avatar
       return b.put(id, player)
     }, Promise.resolve(player.batch()))
   await player.clear()
@@ -97,14 +92,14 @@ const mal = async () => {
 
 export const run = async () => {
   log('hi~')
-  await mal().catch(() => log('error, skip'))
+  await mal().catch(() => error('error, skip'))
   while (true) {
     const currentHour = new Date().getUTCHours()
     const waitTime = (19 - currentHour + 24) % 24 || 24
     log(`WAIT: ${waitTime}h`)
     await wait(waitTime * 60 * 60 * 1000)
     const startTime = Date.now()
-    await mal().catch(() => log('error, skip'))
+    await mal().catch(() => error('error, skip'))
     const endTime = Date.now()
     log(`TAKE ${endTime - startTime}, at ${new Date().toString()}`)
   }
@@ -136,39 +131,88 @@ router.get('/search/:string', async ctx => {
 
 app.use(router.routes())
 
-interface Music {
-  id: string,
-  name: string,
-  author: string,
-  bpm: number,
-  levelDesigner?: string,
-  levelDesigner1?: string,
-  levelDesigner2?: string,
-  levelDesigner3?: string,
-  levelDesigner4?: string,
-  difficulty1: string,
-  difficulty2: string,
-  difficulty3: string,
-  scene: string,
+
+
+type Music = {
+  name: string
+  author: string
+  bpm: number
+  scene: string
+  levelDesigner: string
+  levelDesigner1: string
+  levelDesigner2: string
+  levelDesigner3: string
+  levelDesigner4: string
+  difficulty1: string
+  difficulty2: string
+  difficulty3: string
   unlockLevel: string
+  id: string
 }
 
 type Musics = Music[]
 
-interface RankCode {
+type Play = {
+  acc: number
+  bms_id: string
+  character_uid: string
+  combo: number
+  elfin_uid: string
+  hp: number
+  score: number
+  user_id: string | unknown
+  music_uid: string | unknown
+  music_difficulty: number | unknown
+  miss: number
+  judge: string
+  visible: boolean
+}
+
+type UserRaw = {
+  nickname: string
+  user_id: string | unknown
+  discord_id: string
+}
+
+type User = {
+  nickname: string
+  user_id: string
+}
+
+type APIResult = {
+  play: Play
+  user: UserRaw
+}
+
+type APIResults = {
+  code: number
+  rank: {
+    detail: unknown
+    order: unknown
+  }
+  result: APIResult[]
+  total: unknown
+}
+
+type RankCode = {
   difficulty: number,
   id: string
 }
 
-interface MusicCore extends RankCode {
+type MusicCore = RankCode & {
   name: string
 }
 
-type Play = Omit<RawPlay, 'platform' | 'uid' | 'sum'> & { id: string }
-
-export interface PlayerValue {
-  plays: Play[],
+type PlayerValue = {
+  plays: (Pick<Play, 'acc' | 'score' | 'character_uid' | 'elfin_uid'> & RankCode & { history: { lastRank: number }, i: number })[]
   user: User
 }
 
 type PlayerR = Record<string, PlayerValue>
+
+type RankValue = Omit<APIResult, 'user'> & {
+  history?: {
+    lastRank: number
+  }
+  user: User
+}

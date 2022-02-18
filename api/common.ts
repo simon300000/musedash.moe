@@ -1,6 +1,6 @@
 import { LevelUp } from 'levelup'
 
-import { APIResults, RankValue } from './type'
+import { APIResults } from './type'
 
 import { SearchType } from './database.js'
 
@@ -32,7 +32,7 @@ export const download = async<T extends APIResults>({ f, i = 3, s, error }: { i?
   }
 }
 
-export const resultWithHistory = ({ result, current }: { result: APIResults, current: RankValue[] }): RankValue[] => {
+export const resultWithHistory = <U extends { user: { user_id: string } }, T extends U,>({ result, current }: { result: T[], current: U[] }): U[] => {
   const currentUidRank: string[] = current.map(({ user }) => user.user_id)
 
   return result.map(r => {

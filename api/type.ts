@@ -75,7 +75,7 @@ export interface RawAPI {
   total: number
 }
 
-interface APIResult {
+export interface APIResult {
   play: {
     acc: number,
     bms_id: number,
