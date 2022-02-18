@@ -1,49 +1,43 @@
 /* eslint camelcase: ["off"] */
-import { APIResults, MusicData, MusicCore, RankCore, PlayerValue, RawAPI } from './type.js'
+import got from 'got'
+
+import { MusicData, MusicCore, PlayerValue, RawAPI, RankKey } from './type.js'
 import { rank, player, search } from './database.js'
 import { musics } from './albumParser.js'
 
-import { down } from './download.js'
-
 import { log, error, reloadAlbums } from './api.js'
 
-import { download, resultWithHistory, wait } from './common.js'
+import { resultWithHistory, wait } from './common.js'
 
 import { diffdiff, diffPlayer } from './diffdiff.js'
 
-const parallel = async <T>(pfs: (() => Promise<(number: number) => T>)[]) => {
-  const ws = new Set(pfs)
-  return Promise.all(pfs.map(async w => {
-    const p = await w()
-    ws.delete(w)
-    return p(ws.size)
-  }))
-}
+import { SPIDER_PARALLEL } from './config.js'
+
+const waits = new Map<string, Wait>()
+
+let spiders = SPIDER_PARALLEL
+
+let musicList: MusicData[] = []
 
 const platforms = {
   mobile: 'leaderboard',
   pc: 'pcleaderboard'
 } as const
 
-const downloadCore = ({ api, uid, difficulty }) => async (): Promise<APIResults | void> => {
+const down = async (url: string) => got(url, { timeout: 1000 * 10 }).json<RawAPI>()
+
+const downloadCore = async ({ uid, difficulty, platform }: RankKey) => {
+  const api = platforms[platform]
   const { result: firstPage, total } = await down(`https://prpr-muse-dash.peropero.net/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=100&offset=0&version=1.5.0&platform=musedash.moe`)
   const pageNumber = Math.max(Math.ceil(total / 100) - 1, 0)
   const urls = Array(pageNumber).fill(undefined).map((_, i) => i + 1).map(i => i * 100 - 1).map(limit => `https://prpr-muse-dash.peropero.net/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=${limit}&offset=1&version=1.5.0&platform=musedash.moe`)
-  return [firstPage, ...await Promise.all(urls.map(url => down(url).then(({ result }) => result)))].flat()
-}
-
-const core = ({ uid, difficulty, platform, api }: RankCore) => async () => {
-  const result = await download({ s: `${uid} - ${difficulty} - ${api}`, error, f: downloadCore({ uid, difficulty, api }) })
-
-  if (result) {
-    const current = (await rank.get({ uid, difficulty, platform }) || [])
-
-    await rank.put({ uid, difficulty, platform, value: resultWithHistory({ result, current }) })
-  }
+  return [firstPage, ...await Promise.all(urls.map(url => down(url).then(({ result }) => result)))]
+    .flat()
+    .filter(r => r?.play?.score != undefined && r?.user?.user_id != undefined)
 }
 
 const sum = async ({ uid, difficulty }: MusicCore) => {
-  const [currentRank, result] = [await rank.get({ uid, difficulty, platform: 'all' }), (await Promise.all(Object.keys(platforms).map(async platform => (await rank.get({ uid, difficulty, platform })).map(play => ({ ...play, platform })))))
+  const [currentRank, result] = [await rank.get({ uid, difficulty, platform: 'all' }), (await Promise.all(Object.keys(platforms).map(async platform => (await rank.get({ uid, difficulty, platform }) || []).map(play => ({ ...play, platform })))))
     .flat()
     .sort((a, b) => b.play.score - a.play.score)]
   if (currentRank) {
@@ -51,27 +45,30 @@ const sum = async ({ uid, difficulty }: MusicCore) => {
       result[i].history = { lastRank: currentRank.findIndex(play => play.platform === result[i].platform && play.user.user_id === result[i].user.user_id) }
     }
   }
-  return rank.put({ uid, difficulty, platform: 'all', value: result })
+  await rank.put({ uid, difficulty, platform: 'all', value: result })
+  log(`SUM Update: ${waits.get(genKey({ uid, difficulty, platform: 'pc' })).music.name} - ${difficulty}`)
 }
 
-const prepare = (music: MusicData) => {
-  const { uid, difficulty: difficulties, name } = music
-  const dfs = difficulties.map((difficultyNum, difficulty) => {
-    if (difficultyNum !== '0') {
-      const musicData = Object.entries(platforms)
-        .map(([platform, api]) => ({ uid, difficulty, api, platform }))
-      return () => Promise.all(musicData.map(core).map(w => w()))
-        .then(() => sum({ uid, difficulty }))
-        .then(() => musicData)
-    }
-  }).filter(Boolean)
-  return () => Promise.all(dfs.map(w => w())).then(datas => (i: number) => {
-    log(`${uid}: ${name} / ${i}`)
-    return datas.flat() as RankCore[]
+const spiderWorks = () => [...waits.values()].filter(({ ready, nextDownload }) => ready && nextDownload < Date.now()).length
+
+const download = async ({ uid, difficulty, platform }: RankKey) => {
+  const s = `${waits.get(genKey({ uid, difficulty, platform })).music.name} - ${difficulty} - ${platform}`
+  const result = await downloadCore({ uid, difficulty, platform }).catch(() => {
+    error(`Skip: ${s}`)
   })
+
+  if (result) {
+    const current = (await rank.get({ uid, difficulty, platform }) || [])
+    await rank.put({ uid, difficulty, platform, value: resultWithHistory({ result, current }) })
+    log(`Download: ${s} / ${spiderWorks()}`)
+    await sum({ uid, difficulty })
+    return true
+  }
+  return false
 }
 
-const analyzePlayers = (musicList: RankCore[], key: string) => musicList
+
+const analyzePlayers = (musicData: RankKey[], key: string) => musicData
   .reduce(async (rP, { uid, difficulty, platform }) => {
     const records = await rP
 
@@ -104,9 +101,9 @@ const deleteOld = (k: string) => new Promise(resolve => {
     })
 })
 
-const analyze = async (musicList: RankCore[]) => {
+const analyze = async (musicData: RankKey[]) => {
   const key = String(Math.random())
-  const players = Object.entries(await analyzePlayers(musicList, key))
+  const players = Object.entries(await analyzePlayers(musicData, key))
   const batch = player.batch()
   players.forEach(([k, v]) => batch.put(k, v))
 
@@ -125,33 +122,113 @@ const makeSearch = (players: [string, PlayerValue][]) => {
   return search.clear().then(() => batch.write())
 }
 
-const mal = async () => {
+const prepare = (music: MusicData) => {
+  const { uid, difficulty: difficulties } = music
+  const cores = difficulties
+    .map((diffculty, diffcultyNum) => {
+      if (diffculty !== '0') {
+        return diffcultyNum
+      }
+    })
+    .filter(diffculty => diffculty !== undefined)
+    .flatMap<RankKey>(difficulty => Object.keys(platforms).map(platform => ({ uid, difficulty, platform })))
+  return cores.map(core => ({ core, music }))
+}
+
+const genKey = ({ uid, difficulty, platform }: RankKey) => `${uid}-${difficulty}-${platform}`
+
+const refreshMusicList = async () => {
+  log('Refresh Music List')
+  musicList = await musics()
+  const cores = musicList.flatMap(prepare)
+  cores.forEach(({ core, music }) => {
+    const key = genKey(core)
+    if (!waits.has(key)) {
+      log(`Add ${key}`)
+      waits.set(key, { key, core, music, nextDownload: 0, ready: true })
+    }
+  })
+}
+
+const waitSpiderSleep = async () => {
+  while (spiderWorks()) {
+    await wait(1000 * 60 * 3)
+  }
+}
+
+const spider = async () => {
+  while (spiderWorks()) {
+    const next = [...waits.values()].find(({ ready, nextDownload }) => ready && nextDownload < Date.now())
+    if (next) {
+      next.ready = false
+      const { core } = next
+      const success = await download(core)
+      if (success) {
+        next.nextDownload = Date.now() + 1000 * 60 * 60 * 20
+      } else {
+        next.nextDownload = Date.now() + 1000 * 60 * 60 * 3
+      }
+      next.ready = true
+    }
+  }
+}
+
+const wakeupSpider = async () => {
+  if (spiders) {
+    spiders--
+    wakeupSpider()
+    console.log('spider wake')
+    await spider()
+    spiders++
+    console.log('spider sleep')
+  }
+}
+
+const spiderClock = async () => {
+  while (true) {
+    if (spiderWorks()) {
+      wakeupSpider()
+    }
+    await wait(1000 * 60 * 5)
+  }
+}
+
+const mal = async (musicData: MusicData[]) => {
   log('Start!')
-  const musicList = await musics()
-  const pfs = musicList.map(prepare)
-  const datass = await parallel(pfs)
-  log('Downloaded')
-  const players = await analyze(datass.flat())
+  const players = await analyze([...waits.values()].map(({ core }) => core))
   await makeSearch(players)
   log('Search Cached')
-  await diffdiff(musicList)
+  await diffdiff(musicData)
   log('Difficulty ranked')
   await diffPlayer(players)
   log('Players Analyzed')
   await reloadAlbums()
 }
 
+
 export const run = async () => {
   log('hi~')
-  await mal()
+  await refreshMusicList()
+  spiderClock()
+  await waitSpiderSleep()
   while (true) {
+    const startTime = Date.now()
+    await mal(musicList)
+    const endTime = Date.now()
+    log(`TAKE ${endTime - startTime}, at ${new Date().toString()}`)
     const currentHour = new Date().getUTCHours()
     const waitTime = (19 - currentHour + 24) % 24 || 24
     log(`WAIT: ${waitTime}h`)
     await wait(waitTime * 60 * 60 * 1000)
-    const startTime = Date.now()
-    await mal()
-    const endTime = Date.now()
-    log(`TAKE ${endTime - startTime}, at ${new Date().toString()}`)
+    await refreshMusicList()
+    await waitSpiderSleep()
   }
+}
+
+type Wait = {
+  key: string
+  nextDownload: number
+  ready: boolean
+  core: RankKey
+  music: MusicData
 }

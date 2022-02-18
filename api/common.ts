@@ -1,36 +1,8 @@
 import { LevelUp } from 'levelup'
 
-import { APIResults } from './type'
-
 import { SearchType } from './database.js'
 
 export const wait = (ms: number): Promise<void> => new Promise(resolve => setTimeout(resolve, ms))
-
-export const download = async<T extends APIResults>({ f, i = 3, s, error }: { i?: number, f: (() => Promise<T | void>), s: string, error: ((w: string) => void) }): Promise<T> => {
-  const result = await f().catch((e): T => {
-    console.error(e)
-    return undefined
-  })
-  if (!result) {
-    if (i >= 0) {
-      error(`RETRY: ${s}, ${i}`)
-      await wait(1000 * 60 * Math.random())
-      return download({ f, error, s, i: i - 1 })
-    } else {
-      error(`NO: ${s}`)
-    }
-  } else {
-    return result.filter(entry => {
-      try {
-        const { play, user } = entry
-        return play && user
-      } catch (_) {
-        console.error({ entry })
-        return false
-      }
-    }) as T
-  }
-}
 
 export const resultWithHistory = <U extends { user: { user_id: string } }, T extends U,>({ result, current }: { result: T[], current: U[] }): U[] => {
   const currentUidRank: string[] = current.map(({ user }) => user.user_id)
