@@ -4,7 +4,7 @@ import level from 'level'
 import { RankKey, RankValue, PlayerValue } from './type.js'
 import { MusicDiffDiff } from './diffdiff.js'
 
-const db = level('./db')
+const db = level('./db', { cacheSize: 128 * 1024 * 1024 })
 
 const rankdb = sub<string, RankValue[]>(db, 'rank', { valueEncoding: 'json' })
 
