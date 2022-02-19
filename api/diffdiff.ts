@@ -130,11 +130,11 @@ export const diffPlayer = async (players: [string, PlayerValue][]) => {
 
 type IdPercentagePairs = Record<string, number>
 
-interface MusicCoreExtended extends MusicCore {
+type MusicCoreExtended = MusicCore & {
   level: string
 }
 
-export interface MusicDiffDiff extends MusicCoreExtended {
+export type MusicDiffDiff = MusicCoreExtended & {
   absolute: number
   relative: number
 }

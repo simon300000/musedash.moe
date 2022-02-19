@@ -6,8 +6,8 @@ import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { promises as fs } from 'fs'
 
-import { Albums, PlayerValue } from './type.js'
-import { rank, player, search, getDiffDiff, playerDiff } from './database.js'
+import { Albums, PlayerValue, RankKey } from './type.js'
+import { rank, player, search, getDiffDiff, playerDiff, rankUpdateTime, playerUpdateTime } from './database.js'
 import { albums, AvailableLocales, availableLocales } from './albumParser.js'
 
 import { search as searchF } from './common.js'
@@ -90,6 +90,14 @@ router.get('/rank/:uid/:difficulty/:platform', async ctx => {
       ctx.body = result.map(({ play: { acc, score, character_uid, elfin_uid }, history: { lastRank } = { lastRank: -1 }, user: { nickname, user_id } }) => [acc, score, lastRank, nickname, user_id, undefined, character_uid, elfin_uid])
     }
   }
+})
+
+router.get('/rankUpdateTime/:uid/:difficulty/:platform', async ctx => {
+  ctx.body = await rankUpdateTime.get(ctx.params as any as RankKey)
+})
+
+router.get('/playerUpdateTime/:id', async ctx => {
+  ctx.body = await playerUpdateTime.get(ctx.params.id)
 })
 
 router.get('/player/:id', async ctx => {

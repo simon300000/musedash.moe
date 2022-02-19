@@ -14,10 +14,47 @@ export const search = sub<string, string>(db, 'search', { valueEncoding: 'json' 
 export type PlayerType = typeof player
 export type SearchType = typeof search
 
+class TimeDB<K> {
+  db: ReturnType<typeof TimeDB.mkDB>
+  f: (k: K) => string
+  batch: ReturnType<typeof db.batch>
+
+  constructor(name: string, f: (k: K) => string) {
+    this.db = TimeDB.mkDB(name)
+    this.f = f
+  }
+  async update(k: K) {
+    await this.db.put(this.f(k), Date.now())
+  }
+  get(k: K) {
+    return this.db.get(this.f(k)).catch(() => 0)
+  }
+  batchUpdate(k: K) {
+    if (!this.batch) {
+      this.batch = this.db.batch()
+    }
+    this.batch.put(this.f(k), Date.now())
+  }
+  async flush() {
+    if (this.batch) {
+      const batch = this.batch
+      this.batch = undefined
+      await batch.write()
+    }
+  }
+
+  static mkDB(name: string) {
+    return sub<string, number>(db, `time-${name}`, { valueEncoding: 'json' })
+  }
+}
+
 export const rank = {
   put: ({ uid, difficulty, platform, value }: RankKey & { value: RankValue[] }) => rankdb.put(`${uid}_${platform}_${difficulty}`, value),
   get: ({ uid, difficulty, platform }: RankKey) => rankdb.get(`${uid}_${platform}_${difficulty}`).catch(() => undefined as RankValue[])
 }
+
+export const rankUpdateTime = new TimeDB<RankKey>('rank', ({ uid, difficulty, platform }) => `${uid}_${platform}_${difficulty}`)
+export const playerUpdateTime = new TimeDB<string>('player', id => id)
 
 export const mdmc = sub(db, 'mdmc', { valueEncoding: 'json' })
 

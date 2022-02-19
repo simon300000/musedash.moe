@@ -2,7 +2,7 @@
 import got from 'got'
 
 import { MusicData, MusicCore, PlayerValue, RawAPI, RankKey } from './type.js'
-import { rank, player, search } from './database.js'
+import { rank, player, search, rankUpdateTime, playerUpdateTime } from './database.js'
 import { musics } from './albumParser.js'
 
 import { log, error, reloadAlbums } from './api.js'
@@ -46,6 +46,7 @@ const sum = async ({ uid, difficulty }: MusicCore) => {
     }
   }
   await rank.put({ uid, difficulty, platform: 'all', value: result })
+  await rankUpdateTime.update({ uid, difficulty, platform: 'all' })
   log(`SUM Update: ${waits.get(genKey({ uid, difficulty, platform: 'pc' })).music.name} - ${difficulty}`)
 }
 
@@ -61,6 +62,7 @@ const download = async ({ uid, difficulty, platform }: RankKey) => {
     const current = (await rank.get({ uid, difficulty, platform }) || [])
     await rank.put({ uid, difficulty, platform, value: resultWithHistory({ result, current }) })
     log(`Download: ${s} / ${spiderWorks()}`)
+    await rankUpdateTime.update({ uid, difficulty, platform })
     await sum({ uid, difficulty })
     return true
   }
@@ -105,12 +107,18 @@ const analyze = async (musicData: RankKey[]) => {
   const key = String(Math.random())
   const players = Object.entries(await analyzePlayers(musicData, key))
   const batch = player.batch()
-  players.forEach(([k, v]) => batch.put(k, v))
+  players.forEach(([k, v]) => {
+    batch.put(k, v)
+    playerUpdateTime.batchUpdate(k)
+  })
+
+  const playerTimeP = playerUpdateTime.flush()
 
   await batch.write()
   log('Analyzed')
 
   await deleteOld(key)
+  await playerTimeP
   log('Player Refreshed')
 
   return players

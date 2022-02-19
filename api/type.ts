@@ -91,7 +91,7 @@ export interface APIResult {
 
 export type APIResults = APIResult[]
 
-export interface MusicCore {
+export type MusicCore = {
   uid: string,
   difficulty: number
 }
@@ -101,7 +101,7 @@ export interface RankCore extends MusicCore {
   platform: string
 }
 
-export interface RankKey {
+export type RankKey = {
   uid: string,
   difficulty: number,
   platform: string
