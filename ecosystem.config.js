@@ -4,6 +4,7 @@ module.exports = {
     script: 'api/index.js',
     instances: 1,
     autorestart: true,
+    node_args: '--max-old-space-size=8192',
     watch: false
   }, {
     name: 'musedash.moe',
