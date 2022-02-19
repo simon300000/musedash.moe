@@ -218,18 +218,17 @@ export const run = async () => {
   log('hi~')
   await refreshMusicList()
   spiderClock()
-  await waitSpiderSleep()
   while (true) {
-    const startTime = Date.now()
-    await mal(musicList)
-    const endTime = Date.now()
-    log(`TAKE ${endTime - startTime}, at ${new Date().toString()}`)
     const currentHour = new Date().getUTCHours()
     const waitTime = (19 - currentHour + 24) % 24 || 24
     log(`WAIT: ${waitTime}h`)
     await wait(waitTime * 60 * 60 * 1000)
     await refreshMusicList()
     await waitSpiderSleep()
+    const startTime = Date.now()
+    await mal(musicList)
+    const endTime = Date.now()
+    log(`TAKE ${endTime - startTime}, at ${new Date().toString()}`)
   }
 }
 
