@@ -24,8 +24,11 @@ export const app = new Koa()
 
 app.use(async (ctx, next) => {
   ctx.set('Access-Control-Allow-Origin', 'https://musedash.moe')
+  await next()
+})
 
-  let hit = cache.get(ctx.url)
+app.use(async (ctx, next) => {
+  const hit = cache.get(ctx.url)
   if (hit) {
     ctx.body = hit
   } else {
