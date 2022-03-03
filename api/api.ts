@@ -28,12 +28,16 @@ app.use(async (ctx, next) => {
 })
 
 app.use(async (ctx, next) => {
-  const hit = cache.get(ctx.url)
-  if (hit) {
-    ctx.body = hit
+  if (ctx.method === 'GET') {
+    const hit = cache.get(ctx.url)
+    if (hit) {
+      ctx.body = hit
+    } else {
+      await next()
+      cache.set(ctx.url, ctx.body)
+    }
   } else {
     await next()
-    cache.set(ctx.url, ctx.body)
   }
 })
 
