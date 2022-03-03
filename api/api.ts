@@ -16,8 +16,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 
 const cache = new LRU({
   maxAge: 1000 * 5,
-  max: 100,
-  updateAgeOnGet: true
+  max: 100
 })
 
 export const app = new Koa()
