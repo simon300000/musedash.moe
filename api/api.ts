@@ -4,7 +4,7 @@ import Router from '@koa/router'
 import LRU from 'lru-cache'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
-import { promises as fs } from 'fs'
+import { readFile } from 'fs/promises'
 
 import { Albums, PlayerValue, RankKey } from './type.js'
 import { rank, player, search, getDiffDiff, playerDiff, rankUpdateTime, playerUpdateTime } from './database.js'
@@ -13,8 +13,6 @@ import { albums, AvailableLocales, availableLocales } from './albumParser.js'
 import { search as searchF } from './common.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
-
-const { readFile } = fs
 
 const cache = new LRU({
   maxAge: 1000 * 5,
