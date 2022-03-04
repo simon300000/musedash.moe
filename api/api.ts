@@ -1,6 +1,8 @@
 /* eslint camelcase: ["off"] */
 import Koa from 'koa'
 import Router from '@koa/router'
+import koaBody from 'koa-body'
+
 import LRU from 'lru-cache'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
@@ -11,6 +13,8 @@ import { rank, player, search, getDiffDiff, playerDiff, rankUpdateTime, playerUp
 import { albums, AvailableLocales, availableLocales } from './albumParser.js'
 
 import { search as searchF } from './common.js'
+
+import { joinJob } from './spider.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -102,6 +106,12 @@ router.get('/rankUpdateTime/:uid/:difficulty/:platform', async ctx => {
 
 router.get('/playerUpdateTime/:id', async ctx => {
   ctx.body = await playerUpdateTime.get(ctx.params.id)
+})
+
+router.post('/refreshRank', koaBody(), async ctx => {
+  const { uid, difficulty, platform } = ctx.request.body
+  await joinJob({ uid, difficulty, platform })
+  ctx.body = { hi: 'you found me!' }
 })
 
 router.get('/player/:id', async ctx => {

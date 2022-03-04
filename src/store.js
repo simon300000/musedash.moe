@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { getAlbums, getRank, getPlayer, getCE, mdmcGetAlbum, mdmcGetPlayer, mdmcGetRank, getDiffDiff } from './api'
+import { getAlbums, getRank, getRankUpdateTime, refreshRank, getPlayer, getCE, mdmcGetAlbum, mdmcGetPlayer, mdmcGetRank, getDiffDiff } from './api'
 import { set as cookieSet } from 'js-cookie'
 
 import { loadCover } from './coverLoader'
@@ -27,6 +27,7 @@ export const createStore = ({ lang, changeTitle, theme }) => {
     state: {
       fullAlbums: {},
       rankCache: {},
+      rankUpdateTimeCache: {},
       userCache: {},
       diffDiff: [],
       ce: { c: {}, e: {} },
@@ -72,6 +73,9 @@ export const createStore = ({ lang, changeTitle, theme }) => {
       setRank(state, { uid, difficulty, platform, rank }) {
         state.rankCache = { ...state.rankCache, [`${uid}_${platform}_${difficulty}`]: rank }
       },
+      setRankUpdateTime(state, { uid, difficulty, platform, updateTime }) {
+        state.rankUpdateTimeCache = { ...state.rankUpdateTimeCache, [`${uid}_${platform}_${difficulty}`]: updateTime }
+      },
       setUser(state, { id, data }) {
         state.userCache = { ...state.userCache, [id]: data }
       },
@@ -110,6 +114,12 @@ export const createStore = ({ lang, changeTitle, theme }) => {
       },
       async loadRank({ commit }, { uid, difficulty, platform }) {
         commit('setRank', { uid, difficulty, platform, rank: await getRank({ uid, difficulty, platform }) })
+        commit('setRankUpdateTime', { uid, difficulty, platform, updateTime: await getRankUpdateTime({ uid, difficulty, platform }) })
+      },
+      async updateRank({ commit, dispatch }, { uid, difficulty, platform }) {
+        commit('setRankUpdateTime', { uid, difficulty, platform, updateTime: 0 })
+        await refreshRank({ uid, difficulty, platform })
+        await dispatch('loadRank', { uid, difficulty, platform })
       },
       async loadUser({ commit }, id) {
         commit('setUser', { id, data: await getPlayer(id) })

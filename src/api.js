@@ -10,6 +10,14 @@ export const injectFetch = w => {
 const get = async api => (await (f || fetch)(`${url}${api}`)).json()
 const getText = async api => (await (f || fetch)(`${url}${api}`)).text()
 
+const post = async (api, obj) => (await (f || fetch)(`${url}${api}`, {
+  method: 'POST',
+  body: JSON.stringify(obj),
+  headers: {
+    'Content-Type': 'application/json'
+  }
+})).json()
+
 export const getAlbums = () => get('albums')
 export const getRank = async ({ uid, difficulty, platform }) => (await get(`rank/${uid}/${difficulty}/${platform}`)).map(([acc, score, lastRank, nickname, id, platform, character, elfin], index) => ({ acc, score, lastRank, nickname, id, platform, character, elfin, url: `/player/${id}`, index }))
 export const getPlayer = id => get(`player/${id}`)
@@ -17,6 +25,11 @@ export const searchPlayer = search => get(`search/${search}`)
 export const getLog = () => getText('log')
 export const getCE = () => get('ce')
 export const getDiffDiff = async () => (await get('diffdiff')).map(([uid, difficulty, level, absolute, relative]) => ({ uid, difficulty, level, absolute, relative }))
+
+export const getRankUpdateTime = ({ uid, difficulty, platform }) => get(`/rankUpdateTime/${uid}/${difficulty}/${platform}`)
+export const getPlayerUpdateTime = id => get(`/playerUpdateTime/${id}`)
+
+export const refreshRank = ({ uid, difficulty, platform }) => post('/refreshRank', { uid, difficulty, platform })
 
 const getMDMC = api => get(`mdmc/${api}`)
 

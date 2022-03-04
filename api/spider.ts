@@ -177,6 +177,10 @@ const spider = async () => {
         next.nextDownload = Date.now() + 1000 * 60 * 60 * 3
       }
       next.ready = true
+      if (next.pending) {
+        next.pending()
+        next.pending = undefined
+      }
     }
   }
 }
@@ -199,6 +203,28 @@ const spiderClock = async () => {
     }
     await wait(1000 * 60 * 5)
   }
+}
+
+export const joinJob = ({ uid, difficulty, platform }: RankKey): Promise<any> => {
+  if (platform === 'all') {
+    return Promise.all([joinJob({ uid, difficulty, platform: 'mobile' }), joinJob({ uid, difficulty, platform: 'pc' })])
+  }
+
+  const key = genKey({ uid, difficulty, platform })
+
+  if (waits.has(key)) {
+    const w = waits.get(key)
+    const { nextDownload, pending } = w
+    if (!pending && nextDownload - 1000 * 60 * 60 * 2 > Date.now()) {
+      w.nextDownload = 0
+      return new Promise(resolve => {
+        w.pending = resolve
+        wakeupSpider()
+      })
+    }
+  }
+
+  return Promise.resolve()
 }
 
 const mal = async (musicData: MusicData[]) => {
@@ -238,4 +264,5 @@ type Wait = {
   ready: boolean
   core: RankKey
   music: MusicData
+  pending?: (value?: any) => void
 }
