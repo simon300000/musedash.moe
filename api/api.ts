@@ -104,10 +104,6 @@ router.get('/rankUpdateTime/:uid/:difficulty/:platform', async ctx => {
   ctx.body = await rankUpdateTime.get(ctx.params as any as RankKey)
 })
 
-router.get('/playerUpdateTime/:id', async ctx => {
-  ctx.body = await playerUpdateTime.get(ctx.params.id)
-})
-
 router.post('/refreshRank', koaBody(), async ctx => {
   const { uid, difficulty, platform } = ctx.request.body
   await joinJob({ uid, difficulty, platform })
@@ -118,11 +114,12 @@ router.get('/player/:id', async ctx => {
   const { id } = ctx.params
   const playerP = player.get(id).catch<any>(() => ({ plays: [{ uid: '35-0', history: {}, difficulty: 0 }], key: '', user: { user_id: '404', nickname: 'User not Found' } }))
   const playerRLP = playerDiff.get(id).catch<string>(() => 'NaN')
-  const p = await playerP as PlayerValue & { rl: number | string }
+  const p = await playerP as PlayerValue & { rl: number | string, lastUpdate: number }
   const playerRL = await playerRLP
   if (p && playerRL) {
     p.rl = playerRL
   }
+  p.lastUpdate = await playerUpdateTime.get(ctx.params.id)
   ctx.body = p
 })
 

@@ -38,6 +38,9 @@
             </div>
           </div>
         </div>
+        <div class="level-item" v-if="current.lastUpdate">
+          <p>Last update {{updateTimeDiff}}</p>
+        </div>
       </div>
     </div>
   </section>
@@ -86,6 +89,19 @@ export default {
     },
     rl() {
       return Math.round(1000 * this.current.rl) / 1000
+    },
+    updateTimeDiff() {
+      if (!this.current.lastUpdate) {
+        return false
+      }
+      const now = Date.now()
+      const diff = now - this.current.lastUpdate
+      const diffMin = Math.floor(diff / 1000 / 60)
+      const diffHour = Math.floor(diffMin / 60)
+      if (diffHour > 0) {
+        return `${diffHour}h ago`
+      }
+      return `${diffMin}min ago`
     }
   }
 }
