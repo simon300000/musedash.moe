@@ -26,10 +26,9 @@ export const getLog = () => getText('log')
 export const getCE = () => get('ce')
 export const getDiffDiff = async () => (await get('diffdiff')).map(([uid, difficulty, level, absolute, relative]) => ({ uid, difficulty, level, absolute, relative }))
 
-export const getRankUpdateTime = ({ uid, difficulty, platform }) => get(`/rankUpdateTime/${uid}/${difficulty}/${platform}`)
-export const getPlayerUpdateTime = id => get(`/playerUpdateTime/${id}`)
+export const getRankUpdateTime = ({ uid, difficulty, platform }) => get(`rankUpdateTime/${uid}/${difficulty}/${platform}`)
 
-export const refreshRank = ({ uid, difficulty, platform }) => post('/refreshRank', { uid, difficulty, platform })
+export const refreshRank = ({ uid, difficulty, platform }) => post('refreshRank', { uid, difficulty, platform })
 
 const getMDMC = api => get(`mdmc/${api}`)
 
