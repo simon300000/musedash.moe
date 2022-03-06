@@ -27,6 +27,7 @@ export const app = new Koa()
 
 app.use(async (ctx, next) => {
   ctx.set('Access-Control-Allow-Origin', 'https://musedash.moe')
+  ctx.set('Access-Control-Allow-Headers', 'Content-Type')
   ctx.set('Access-Control-Allow-Methods', 'POST, GET, OPTIONS')
   await next()
 })
