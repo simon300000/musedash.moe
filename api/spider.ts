@@ -149,13 +149,14 @@ const refreshMusicList = async () => {
   log('Refresh Music List')
   musicList = await musics()
   const cores = musicList.flatMap(prepare)
-  cores.forEach(({ core, music }) => {
+  await Promise.all(cores.map(async ({ core, music }) => {
     const key = genKey(core)
     if (!waits.has(key)) {
       log(`Add ${key}`)
-      waits.set(key, { key, core, music, nextDownload: 0, ready: true })
+      const nextDownload = await rankUpdateTime.get(core) + 1000 * 60 * 60 * 24
+      waits.set(key, { key, core, music, nextDownload, ready: true })
     }
-  })
+  }))
 }
 
 const waitSpiderSleep = async () => {
