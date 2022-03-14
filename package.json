@@ -26,7 +26,7 @@
     "koa-static": "^5.0.0",
     "level": "^7.0.0",
     "lru-cache": "^6.0.0",
-    "node-fetch": "^3.0.0",
+    "node-fetch": "^3.2.3",
     "register-service-worker": "^1.6.2",
     "subleveldown": "^6.0.0",
     "vue": "^2.6.10",
