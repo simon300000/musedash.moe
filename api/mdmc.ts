@@ -30,10 +30,10 @@ const refreshMusics = async () => {
 
 const makeList = () => musics.flatMap(({ name, difficulty1, difficulty2, difficulty3, id }) => [{ name, difficulty: 0, id, level: difficulty1 }, { name, difficulty: 1, id, level: difficulty2 }, { name, difficulty: 2, id, level: difficulty3 }]).filter(({ level }) => level !== '0')
 
-const downloadSongs = () => got('https://mdmc.moe/api/v3/charts', { timeout: 1000 * 60 }).json<Musics>()
+const downloadSongs = () => got('https://mdmc.moe/api/v4/charts', { timeout: 1000 * 60 }).json<Musics>()
 
 const downloadCore = async ({ name, difficulty }: { name: string, difficulty: number }) => {
-  const w = await got(`https://mdmc.moe/api/v3/hq/md?song_name=${encodeURI(name)}&music_difficulty=${difficulty + 1}`, { timeout: 1000 * 10 }).json<APIResults>()
+  const w = await got(`https://mdmc.moe/api/v4/hq/md?song_name=${encodeURI(name)}&music_difficulty=${difficulty + 1}`, { timeout: 1000 * 10 }).json<APIResults>()
   return w.result.map(({ user: { discord_id, ...restUser }, ...rest }) => ({ ...rest, user: { ...restUser, user_id: discord_id } }))
 }
 
