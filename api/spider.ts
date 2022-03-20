@@ -217,6 +217,7 @@ export const joinJob = ({ uid, difficulty, platform }: RankKey): Promise<any> =>
     const w = waits.get(key)
     const { nextDownload, pending } = w
     if (!pending && nextDownload - 1000 * 60 * 60 * 2 > Date.now()) {
+      log(`Join: ${w.music.name} - ${w.core.difficulty} - ${w.core.platform}`)
       w.nextDownload = 0
       return new Promise(resolve => {
         w.pending = resolve
