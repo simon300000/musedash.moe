@@ -140,5 +140,22 @@
     "difficulty2": "7",
     "difficulty3": "10",
     "unlockLevel": "0"
+  },
+  {
+    "uid": "43-8",
+    "name": "Smile-mileS",
+    "author": "onoken",
+    "bpm": "214",
+    "music": "smile_miles_music",
+    "demo": "smile_miles_demo",
+    "cover": "smile_miles_cover",
+    "hexieCover": "",
+    "noteJson": "smile_miles_map",
+    "scene": "scene_03",
+    "levelDesigner": "Smile-fxS",
+    "difficulty1": "5",
+    "difficulty2": "8",
+    "difficulty3": "9",
+    "unlockLevel": "0"
   }
 ]
