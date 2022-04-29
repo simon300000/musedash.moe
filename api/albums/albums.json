@@ -30,6 +30,16 @@
     "free": false
   },
   {
+    "uid": "music_package_51",
+    "title": "Virtual Idol Production",
+    "tag": "Theme",
+    "needPurchase": true,
+    "price": "¥25.00",
+    "jsonName": "ALBUM52",
+    "prefabsName": "AlbumDisco52",
+    "free": false
+  },
+  {
     "uid": "music_package_50",
     "title": "Nyanya Universe!",
     "tag": "Theme",
