@@ -5,8 +5,6 @@ import mount from 'koa-mount'
 import vsr from 'vue-server-renderer'
 import { readFile } from 'fs/promises'
 
-import fetch from 'node-fetch'
-
 const { createBundleRenderer } = vsr
 
 const serverBundle = JSON.parse(await readFile('./dist/vue-ssr-server-bundle.json'))

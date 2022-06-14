@@ -1,6 +1,4 @@
 /* eslint camelcase: ["off"] */
-import got from 'got'
-
 import { MusicData, MusicCore, PlayerValue, RawAPI, RankKey } from './type.js'
 import { rank, player, search, rankUpdateTime, playerUpdateTime } from './database.js'
 import { musics } from './albumParser.js'
@@ -24,7 +22,7 @@ const platforms = {
   pc: 'pcleaderboard'
 } as const
 
-const down = async (url: string) => got(url, { timeout: 1000 * 10 }).json<RawAPI>()
+const down = async (url: string) => fetch(url).then<RawAPI>(w=>w.json())
 
 const downloadCore = async ({ uid, difficulty, platform }: RankKey) => {
   const api = platforms[platform]
