@@ -22,6 +22,21 @@ const platforms = {
   pc: 'pcleaderboard'
 } as const
 
+const sumMutexMap = new Map<string, Promise<void>>()
+
+const genKey = ({ uid, difficulty, platform }: RankKey) => `${uid}-${difficulty}-${platform}`
+
+const sumWait = async ({ uid, difficulty }: MusicCore) => Promise.all(Object.keys(platforms).map(platform => genKey({ uid, difficulty, platform })).map(k => sumMutexMap.get(k)))
+
+const sumLock = ({ uid, difficulty, platform }: RankKey) => {
+  const key = genKey({ uid, difficulty, platform })
+  let res
+  sumMutexMap.set(key, new Promise(resolve => {
+    res = resolve
+  }))
+  return res
+}
+
 const down = async <T>(url: string) => fetch(url).then<T>(w => w.json())
 
 const downloadTag = () => down<MusicTagList>('https://prpr-muse-dash.peropero.net/musedash/v1/music_tag?platform=pc')
@@ -36,7 +51,14 @@ const downloadCore = async ({ uid, difficulty, platform }: RankKey) => {
     .filter(r => r?.play?.score != undefined && r?.user?.user_id != undefined)
 }
 
+const toSum = ({ uid, difficulty }: RankKey) => !Object.keys(platforms)
+  .map(otherPlatform => genKey({ uid, difficulty, platform: otherPlatform }))
+  .map(k => waits.get(k))
+  .filter(Boolean)
+  .some(({ ready, nextDownload }) => ready && nextDownload < Date.now())
+
 const sum = async ({ uid, difficulty }: MusicCore) => {
+  await sumWait({ uid, difficulty })
   const [currentRank, result] = [await rank.get({ uid, difficulty, platform: 'all' }), (await Promise.all(Object.keys(platforms).map(async platform => (await rank.get({ uid, difficulty, platform }) || []).map(play => ({ ...play, platform })))))
     .flat()
     .sort((a, b) => b.play.score - a.play.score)]
@@ -52,8 +74,9 @@ const sum = async ({ uid, difficulty }: MusicCore) => {
 
 const spiderWorks = () => [...waits.values()].filter(({ ready, nextDownload }) => ready && nextDownload < Date.now()).length
 
-const download = async ({ uid, difficulty, platform }: RankKey) => {
+const download = async ({ uid, difficulty, platform }: RankKey, sumAfter = true) => {
   const s = `${waits.get(genKey({ uid, difficulty, platform })).music.name} - ${difficulty} - ${platform}`
+  const relese = sumLock({ uid, difficulty, platform })
   const result = await downloadCore({ uid, difficulty, platform }).catch(() => {
     error(`Skip: ${s}`)
   })
@@ -63,9 +86,13 @@ const download = async ({ uid, difficulty, platform }: RankKey) => {
     await rank.put({ uid, difficulty, platform, value: resultWithHistory({ result, current }) })
     log(`Download: ${s} / ${spiderWorks()}`)
     await rankUpdateTime.update({ uid, difficulty, platform })
-    await sum({ uid, difficulty })
+    relese()
+    if (sumAfter) {
+      await sum({ uid, difficulty })
+    }
     return true
   }
+  relese()
   return false
 }
 
@@ -142,8 +169,6 @@ const prepare = (music: MusicData) => {
     .flatMap<RankKey>(difficulty => Object.keys(platforms).map(platform => ({ uid, difficulty, platform })))
   return cores.map(core => ({ core, music }))
 }
-
-const genKey = ({ uid, difficulty, platform }: RankKey) => `${uid}-${difficulty}-${platform}`
 
 const refreshMusicList = async () => {
   log('Refresh Music List')
@@ -277,7 +302,8 @@ const spider = async () => {
     if (next) {
       next.ready = false
       const { core } = next
-      const success = await download(core)
+      const sumAfter = toSum(core)
+      const success = await download(core, sumAfter)
       if (success) {
         next.nextDownload = Date.now() + 1000 * 60 * 60 * 20
       } else {
@@ -325,9 +351,9 @@ export const joinJob = ({ uid, difficulty, platform }: RankKey): Promise<any> =>
     if (!pending && nextDownload - 1000 * 60 * 60 * 2 > Date.now()) {
       log(`Join: ${w.music.name} - ${w.core.difficulty} - ${w.core.platform}`)
       w.nextDownload = 0
+      wait(0).then(() => wakeupSpider())
       return new Promise(resolve => {
         w.pending = resolve
-        wakeupSpider()
       })
     }
   }
