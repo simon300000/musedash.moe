@@ -43,7 +43,7 @@ class TimeDB<K> {
     }
   }
 
-  static mkDB(name: string) {
+  private static mkDB(name: string) {
     return sub<string, number>(db, `time-${name}`, { valueEncoding: 'json' })
   }
 }
