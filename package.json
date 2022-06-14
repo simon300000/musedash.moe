@@ -5,9 +5,9 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service serve",
     "build": "npm run build:api && npm run build:vue",
-    "build:vue": "node build",
+    "build:vue": "NODE_OPTIONS=--openssl-legacy-provider node build",
     "build:dev": "export development=true; node build:vue; node index",
     "lint": "vue-cli-service lint",
     "build:api": "npx tsc -b",
