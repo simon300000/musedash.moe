@@ -19,6 +19,7 @@ const post = async (api, obj) => (await (f || fetch)(`${url}${api}`, {
 })).json()
 
 export const getAlbums = () => get('albums')
+export const getTag = () => get('tag')
 export const getRank = async ({ uid, difficulty, platform }) => (await get(`rank/${uid}/${difficulty}/${platform}`)).map(([acc, score, lastRank, nickname, id, platform, character, elfin], index) => ({ acc, score, lastRank, nickname, id, platform, character, elfin, url: `/player/${id}`, index }))
 export const getPlayer = id => get(`player/${id}`)
 export const searchPlayer = search => get(`search/${search}`)

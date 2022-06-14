@@ -1,7 +1,7 @@
 /* eslint camelcase: ["off"] */
-import { MusicData, MusicCore, PlayerValue, RawAPI, RankKey } from './type.js'
-import { rank, player, search, rankUpdateTime, playerUpdateTime } from './database.js'
-import { musics } from './albumParser.js'
+import { MusicData, MusicCore, PlayerValue, RawAPI, RankKey, MusicTagList } from './type.js'
+import { rank, player, search, rankUpdateTime, playerUpdateTime, putTag } from './database.js'
+import { albums, AvailableLocales, musics } from './albumParser.js'
 
 import { log, error, reloadAlbums } from './api.js'
 
@@ -22,14 +22,16 @@ const platforms = {
   pc: 'pcleaderboard'
 } as const
 
-const down = async (url: string) => fetch(url).then<RawAPI>(w=>w.json())
+const down = async <T>(url: string) => fetch(url).then<T>(w => w.json())
+
+const downloadTag = () => down<MusicTagList>('https://prpr-muse-dash.peropero.net/musedash/v1/music_tag?platform=pc')
 
 const downloadCore = async ({ uid, difficulty, platform }: RankKey) => {
   const api = platforms[platform]
-  const { result: firstPage, total } = await down(`https://prpr-muse-dash.peropero.net/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=100&offset=0&version=1.5.0&platform=musedash.moe`)
+  const { result: firstPage, total } = await down<RawAPI>(`https://prpr-muse-dash.peropero.net/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=100&offset=0&version=1.5.0&platform=musedash.moe`)
   const pageNumber = Math.max(Math.ceil(total / 100) - 1, 0)
   const urls = Array(pageNumber).fill(undefined).map((_, i) => i + 1).map(i => i * 100 - 1).map(limit => `https://prpr-muse-dash.peropero.net/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=${limit}&offset=1&version=1.5.0&platform=musedash.moe`)
-  return [firstPage, ...await Promise.all(urls.map(url => down(url).then(({ result }) => result)))]
+  return [firstPage, ...await Promise.all(urls.map(url => down<RawAPI>(url).then(({ result }) => result)))]
     .flat()
     .filter(r => r?.play?.score != undefined && r?.user?.user_id != undefined)
 }
@@ -155,6 +157,112 @@ const refreshMusicList = async () => {
       waits.set(key, { key, core, music, nextDownload, ready: true })
     }
   }))
+
+  const albumList = await albums()
+
+  type Wellknown = Record<string, {
+    displayName: Record<AvailableLocales, string>
+    musicList: {
+      json: string
+      musics?: string[]
+    }[]
+  }>
+
+  const tags: Wellknown = {
+    Default: {
+      displayName: {
+        ChineseS: '基础包',
+        ChineseT: '基礎包',
+        English: 'Default Music',
+        Japanese: 'デフォルト曲',
+        Korean: '기본 패키지'
+      },
+      musicList: []
+    },
+    Theme: {
+      displayName: {
+        ChineseS: '主题包',
+        ChineseT: '主題包',
+        English: 'Concept Pack',
+        Japanese: 'Concept Pack',
+        Korean: 'Concept Pack'
+      },
+      musicList: []
+    },
+    Happy: {
+      displayName: {
+        ChineseS: '肥宅快乐包',
+        ChineseT: '肥宅快樂包',
+        English: 'Happy Otaku Pack',
+        Japanese: 'MUSIC快楽天',
+        Korean: '오타쿠의 쾌락 모음'
+      },
+      musicList: []
+    },
+    Cute: {
+      displayName: {
+        ChineseS: '可爱即正义',
+        ChineseT: '可愛即正義',
+        English: 'Cute Is Everyting',
+        Japanese: 'かわいいは正義',
+        Korean: '귀여움은 정의다'
+      },
+      musicList: []
+    },
+    GiveUp: {
+      displayName: {
+        ChineseS: '放弃治疗',
+        ChineseT: '放棄治療',
+        English: 'Give Up TREATMENT',
+        Japanese: '音ゲー依存症',
+        Korean: '치유는 포기했어'
+      },
+      musicList: []
+    },
+    X: {
+      displayName: {
+        ChineseS: "联动",
+        ChineseT: "聯動",
+        English: "Collab",
+        Japanese: "コラボ",
+        Korean: "콜라보"
+      },
+      musicList: []
+    },
+    PlannedPlus: {
+      displayName: {
+        ChineseS: '计划通补完计划',
+        ChineseT: '計劃通補完計劃',
+        English: '[ Just as Planned ] Plus',
+        Japanese: '計画通り補完計画',
+        Korean: '"계획대로" 보완 계획'
+      },
+      musicList: []
+    }
+  }
+
+  albumList.forEach(({ tag, json }) => {
+    if (tags[tag]) {
+      tags[tag].musicList.push({ json })
+    }
+  })
+
+  const { music_tag_list: rawTag } = await downloadTag()
+  const collab = rawTag.filter(({ tag_name: { English } }) => English === 'Collab').flatMap(({ music_list }) => music_list)
+  const collabMusicList: Record<string, string[]> = {}
+  collab.forEach(id => {
+    const [albumNum] = id.split('-')
+    const json = `ALBUM${Number(albumNum) + 1}`
+    if (!collabMusicList[json]) {
+      collabMusicList[json] = []
+    }
+    collabMusicList[json].push(id)
+  })
+
+  tags.X.musicList = Object.entries(collabMusicList).map(([json, ids]) => ({ json, musics: ids }))
+
+  const tagExport = Object.entries(tags).map(([n, v]) => ({ name: n, ...v }))
+  await putTag(tagExport)
 }
 
 const waitSpiderSleep = async () => {

@@ -49,6 +49,7 @@ export interface AlbumLang {
 export interface Album extends Record<AvailableLocales, AlbumLang> {
   uid: string,
   title: string,
+  tag: string,
   needPurchase: boolean,
   price: string,
   jsonName: string,
@@ -59,6 +60,7 @@ export interface Album extends Record<AvailableLocales, AlbumLang> {
 export interface AlbumData extends Record<AvailableLocales, AlbumLang> {
   title: string,
   json: string,
+  tag: string,
   music: Musics
 }
 
@@ -140,3 +142,27 @@ export type Job = {
   resolve: (value: RawAPI) => void
   reject: (reason: any) => void
 }
+
+export type MusicTagList = {
+  code: number
+  music_tag_list: {
+    anchor_pattern: boolean
+    created_at: string
+    icon_name: string
+    music_list: string[]
+    object_id: string
+    sort_key: number
+    tag_name: Record<AvailableLocales, string>
+    tag_picture: string
+    updated_at: string
+  }[]
+}
+
+export type TagExport = {
+  name: string
+  displayName: Record<AvailableLocales, string>
+  musicList: {
+    json: string
+    musics?: string[]
+  }[]
+}[]

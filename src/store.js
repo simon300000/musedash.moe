@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { getAlbums, getRank, getRankUpdateTime, refreshRank, getPlayer, getCE, mdmcGetAlbum, mdmcGetPlayer, mdmcGetRank, getDiffDiff } from './api'
+import { getAlbums, getTag, getRank, getRankUpdateTime, refreshRank, getPlayer, getCE, mdmcGetAlbum, mdmcGetPlayer, mdmcGetRank, getDiffDiff } from './api'
 import { set as cookieSet } from 'js-cookie'
 
 import { loadCover } from './coverLoader'
@@ -26,6 +26,7 @@ export const createStore = ({ lang, changeTitle, theme }) => {
   return new Vuex.Store({
     state: {
       fullAlbums: {},
+      tag: [],
       rankCache: {},
       rankUpdateTimeCache: {},
       userCache: {},
@@ -40,6 +41,7 @@ export const createStore = ({ lang, changeTitle, theme }) => {
       allMusics: ({ fullAlbums }) => {
         return Object.assign({}, ...Object.values(fullAlbums).map(({ music }) => music))
       },
+      tagMap: ({ tag }) => Object.fromEntries(tag.map(({ name, musicList }) => [name, musicList])),
       musicAlbum: ({ fullAlbums }) => Object.fromEntries(Object.entries(fullAlbums).flatMap(([id, { music }]) => Object.keys(music).map(k => [k, id]))),
       characters: ({ ce, lang: l }) => ce.c[l] || [],
       elfins: ({ ce, lang: l }) => ce.e[l] || [],
@@ -66,6 +68,9 @@ export const createStore = ({ lang, changeTitle, theme }) => {
     mutations: {
       setAlbums(state, data) {
         state.fullAlbums = data
+      },
+      setTag(state, data) {
+        state.tag = data
       },
       setCE(state, ce) {
         state.ce = ce
@@ -104,8 +109,10 @@ export const createStore = ({ lang, changeTitle, theme }) => {
       async loadAlbums({ commit, dispatch }) {
         const ceP = dispatch('loadCE')
         const albumsP = getAlbums()
+        const tagP = getTag()
         await ceP
         commit('setAlbums', await albumsP)
+        commit('setTag', await tagP)
       },
       async loadCE({ commit, state }) {
         if (!Object.keys(state.ce.c).length) {

@@ -9,7 +9,7 @@ import { fileURLToPath } from 'url'
 import { readFile } from 'fs/promises'
 
 import { Albums, PlayerValue, RankKey } from './type.js'
-import { rank, player, search, getDiffDiff, playerDiff, rankUpdateTime, playerUpdateTime } from './database.js'
+import { rank, player, search, getDiffDiff, playerDiff, rankUpdateTime, playerUpdateTime, getTag } from './database.js'
 import { albums, AvailableLocales, availableLocales } from './albumParser.js'
 
 import { search as searchF } from './common.js'
@@ -93,6 +93,10 @@ const router = new Router()
 
 router.get('/albums', ctx => {
   ctx.body = albumsObject
+})
+
+router.get('/tag', async ctx => {
+  ctx.body = await getTag()
 })
 
 router.get('/rank/:uid/:difficulty/:platform', async ctx => {

@@ -10,7 +10,7 @@ import { mapState, mapMutations } from 'vuex'
 import music from '@/components/music.vue'
 
 export default {
-  props: ['album'],
+  props: ['album', 'only'],
   components: {
     music
   },
@@ -42,8 +42,12 @@ export default {
       }
     },
     musics() {
-      return Object.values(this.currentAlbum?.music || {})
+      const result = Object.values(this.currentAlbum?.music || {})
         .map(music => ({ ...music, ...music[this.lang] }))
+      if (this.only) {
+        return result.filter(({ uid }) => this.only.includes(uid))
+      }
+      return result
     }
   }
 }

@@ -1,7 +1,7 @@
 import sub from 'subleveldown'
 import level from 'level'
 
-import { RankKey, RankValue, PlayerValue } from './type.js'
+import { RankKey, RankValue, PlayerValue, TagExport } from './type.js'
 import { MusicDiffDiff } from './diffdiff.js'
 
 const db = level('./db', { cacheSize: 128 * 1024 * 1024 })
@@ -64,3 +64,9 @@ export const putDiffDiff = (diffDiff: MusicDiffDiff[]) => diffDiffDB.put('diff',
 export const getDiffDiff = () => diffDiffDB.get('diff').catch(() => [] as MusicDiffDiff[])
 
 export const playerDiff = sub<string, number>(db, 'playerDiff', { valueEncoding: 'json' })
+
+const state = sub<string, any>(db, 'state', { valueEncoding: 'json' })
+
+export const putTag = (tag: TagExport) => state.put('tag', tag)
+export const getTag = () => state.get('tag').catch(() => [] as TagExport)
+

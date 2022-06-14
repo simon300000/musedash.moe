@@ -29,7 +29,7 @@ async function readLocale<S, T>(file: string) {
 export const albums = async (): Promise<Albums> => {
   const w = (await readLocale<Album, AlbumLang>('albums'))
     .filter(album => album.jsonName)
-    .map(({ title, jsonName, ChineseS, ChineseT, English, Japanese, Korean }) => ({ title, json: jsonName, ChineseS, ChineseT, English, Japanese, Korean }))
+    .map(({ title, jsonName, ChineseS, ChineseT, English, Japanese, tag, Korean }) => ({ title, json: jsonName, ChineseS, ChineseT, English, Japanese, Korean, tag }))
     .map(async object => {
       const music = (await readLocale<Music, MusicLang>(object.json))
         .map<MusicData>(({ uid, name, author, cover, difficulty1, difficulty2, difficulty3, difficulty4 = '0', difficulty5 = '0', ChineseS, ChineseT, English, Japanese, Korean, levelDesigner, levelDesigner1, levelDesigner2, levelDesigner3, levelDesigner4, levelDesigner5, bpm }) => ({
