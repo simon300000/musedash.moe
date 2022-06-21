@@ -209,8 +209,8 @@ const refreshMusicList = async () => {
         ChineseS: '主题包',
         ChineseT: '主題包',
         English: 'Concept Pack',
-        Japanese: 'Concept Pack',
-        Korean: 'Concept Pack'
+        Japanese: 'テーマパック',
+        Korean: '콘셉트 팩'
       },
       musicList: []
     },
