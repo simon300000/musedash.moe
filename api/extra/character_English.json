@@ -51,7 +51,8 @@
       ],
       [
         "I'm not the one to be conquered!",
-        "Wow! Don't...don't take me as a fool!"
+        "Wow! Don't...don't take me as a fool!",
+        "What... What is this strange feeling...?"
       ]
     ],
     "catExpressions": [
@@ -70,9 +71,9 @@
     "characterName": "Rin",
     "cosName": "Bad Girl",
     "description": "You might kick the bucket under my stick! ~",
-    "skill": "Bad Girl Rin can turn \"Great\" into \"Perfect\" judgements for 5 times, (doesn't work for Sheets [Hold Note] and Mash Enemies nya)!",
+    "skill": "Bad Girl Rin can turn  \"Great\" into \"Perfect\" judgements for 5 times (doesn't work for Sheets [hold note] and Mash Enemies)!",
     "skills": [
-      "Bad Girl Rin can turn \"Great\" into \"Perfect\" judgements for 5 times, (doesn't work for Sheets [Hold Note] and Mash Enemies nya)!",
+      "Bad Girl Rin can turn  \"Great\" into \"Perfect\" judgements for 5 times (doesn't work for Sheets [hold note] and Mash Enemies)!",
       "Bad Girl Rin Nya can turn \"Great\" nya into \"Perfect\" nya judgements for 5 times,  (doesn't work for Sheets [Hold Note] and Mash Enemies nya)!"
     ],
     "chipName": "Baseball",
@@ -138,10 +139,10 @@
     "characterName": "Rin",
     "cosName": "Sleepwalker Girl",
     "description": "Um? Did I just sleepwalk again?... Huhooo...",
-    "skill": "Sleepwalker Girl Rin will fight automatically in all stages and not be controlled by the player.",
+    "skill": "Sleepwalker Girl Rin will fight automatically in all stages and not be controlled by the player. Scores will not be recorded.",
     "skills": [
-      "Sleepwalker Girl Rin will fight automatically in all stages and not be controlled by the player.",
-      "Sleepwalker Girl Rin Nya will fight automatically in all nya stages and not be controlled by the player nya!"
+      "Sleepwalker Girl Rin will fight automatically in all stages and not be controlled by the player. Scores will not be recorded.",
+      "Sleepwalker Girl Rin Nya will fight automatically in all nya stages and not be controlled by the player nya! Scores will not be recorded nya!"
     ],
     "chipName": "White Pillow",
     "chipDescription": "It feels so soft, just like a lass' chest~~~~whir~whir",
@@ -183,6 +184,11 @@
         "Don't you...want to...take a nap...now? I do...Zzz",
         "Hmm...where's my big meal?",
         "It's...not the time...to get up yet..."
+      ],
+      [
+        "Hmm... Zzz... Hehe... Zzz... Mmm... Interesting... Zzz... ",
+        "Rest together? If that won't bother my rest...",
+        "It's so warm here... *whine*..."
       ]
     ],
     "catExpressions": [
@@ -244,10 +250,13 @@
       ],
       [
         "Your hand is boiling hot...are you sick?",
+        "If anyone sees me like this, I'd be so embarrassed!",
         "Can I change my old suit back?"
       ],
       [
-        "It's working time now…"
+        "This… This is merely a reward for you since you cleared the levels! Don't overthink it!",
+        "It's working time now…",
+        "What's so weird about me fighting with a carrot? You're the weird one!"
       ]
     ],
     "catExpressions": [
@@ -367,6 +376,7 @@
     "reviewExpressions": [
       [
         "This hairstyle is carefully prepared! don't mess it up...",
+        "Who told you to do this? I'm going to kick you out of my fan club!",
         "Praising is enough, don't touch my head!"
       ],
       [
@@ -449,6 +459,7 @@
       ],
       [
         "You are even interested in zombies...you, you...",
+        "No… Stop… That is not the way to convince a zombie…",
         "Hoo hoo, I'm going to bite you!!"
       ]
     ],
@@ -515,7 +526,9 @@
         "I'm the best at making snacks disappeared!"
       ],
       [
-        "I know you're cheering for me, but it's too...too passionate!"
+        "I know you're cheering for me, but it's too...too passionate!",
+        "... Huh? This is for the performance! H-haven't you seen it before? ><",
+        "I… I don’t know how to do that… Y-you can't demand something that I don't know how to do! ><"
       ]
     ],
     "catExpressions": [
@@ -582,6 +595,7 @@
       ],
       [
         "You face...is too close...",
+        "Hmmph! Your hands are being disobedient again.",
         "Hello, police? Still that guy."
       ]
     ],
@@ -648,6 +662,7 @@
         "You wanna warm up or cook first...eh? Neither?"
       ],
       [
+        "Oh no… If the screen gets dirty… What should I do…? I have no idea…",
         "The bathtub is fulfilled...",
         "All clean..."
       ]
@@ -716,6 +731,7 @@
       ],
       [
         "I know! I know! Um——————Meow?",
+        "If you dare do anything evil, I'll punish you with my magic!!",
         "Ah? Black magic of turning into a grown up man?"
       ]
     ],
@@ -768,6 +784,7 @@
     "reviewExpressions": [
       [
         "Specially produced wine, wanna have a drink with me? Hehehe♪",
+        "Hmm? What do you want my tail to do? It's okay. Just tell me.",
         "Devote your soul to me, and I'll make any of your dreams come true~"
       ],
       [
@@ -849,6 +866,8 @@
         "Hey, who said you could poke your master?"
       ],
       [
+        "Well… Keep it to yourself until I agree to it!",
+        "If you wag your tail, I may allow you to lick my boot out of mercy!",
         "An inferior being indeed..."
       ]
     ],
@@ -981,6 +1000,7 @@
       ],
       [
         "Well, I do like you a little bit...I guess.",
+        "Ahhh! The tail is only an… an accessory! No touching, please! ><",
         "Since you are here. I can' share my earphone but...I can share my coffee"
       ]
     ],
@@ -1222,7 +1242,7 @@
     "characterName": "El_Clear",
     "cosName": "Rebirth Girl",
     "description": "Rebirth Girl",
-    "skill": "Clear can automatically catch all the missed notes, red hearts, ghosts, and enemies with Heart. The automatically caught ghosts and enemies with Heart is \"Perfect\" judgment.",
+    "skill": "Clear can automatically catch all the missed Blue Notes, Red Hearts, ghosts, and enemies with Heart. The automatically caught ghosts and enemies with Heart is \"Perfect\" judgment.",
     "skills": null,
     "chipName": "Crown",
     "chipDescription": "The crown which brings Clear falling to the ground, absolutely who hit by it will shout Ouch.",
@@ -1287,6 +1307,32 @@
         "Ahhhh, geez! To prevent you from poking me and thus losing the game, keep three meters away from now on!"
       ]
     ],
+    "catExpressions": null
+  },
+  {
+    "characterName": "Marija",
+    "cosName": "Sister",
+    "description": "Sister",
+    "skill": "Sister Marija will swap the locations of enemies in the sky and on the ground. Specifically, raiders, hanging hammers, and ordinary obstacles (gears) will be rolled over.",
+    "skills": null,
+    "chipName": "Star Pendant",
+    "chipDescription": "She finds the star shape more adorable for it’s a symbol of her belief.",
+    "cv": "Yoshika Akashi",
+    "expressions": [
+      [ "A good sense of smell, careful planning, and swift handling—those are what I've learned at the Church.",
+        "Can enemies be defeated by prayers only? Of course not. So let's get started, while God is still in slumber.",
+        "You need not fear me. Only bad people are my target... Huh, are you here to confess?"],
+      [ "Enemies? It-It is they that targeted me first. I just... beat them too hard..."],
+      [ "If you are really a kind-hearted person, you should support me, as long as the result is correct, no...?"],
+      [ "Even if you are against my approach, we are already accomplices... So what do you think should be done to traitors..."],
+      [ "Unlike my devil who has a gentle soul, my angel is a naughty kid... Well, keep it a secret to the Church.",
+        "Wanna make a confession? Just tell me about it. I'm efficient~"],
+      [ "Familiars, who have lived several hundreds of years, can even argue about either the bunny girl suit or the sailor suit is cuter for a whole day. Oh, this is really..."],
+      [ "Behave yourself... This is not any doctrine, but something that even a child can understand...",
+        "Calm down, calm down, Marija... Don't submit to profane temptations. Come recite prayers. That's right, that's what you should do..."],
+      [ "What a sinful person... you are. I really look forward to the day when you are punished by myself..."]
+    ],
+    "reviewExpressions": null,
     "catExpressions": null
   }
 ]
