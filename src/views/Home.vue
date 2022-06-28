@@ -80,7 +80,7 @@ export default {
   border-radius: 12px;
   height: 67px;
   width: 67px;
-  overflow-x: hidden;
+  overflow: hidden;
   margin: 4px;
   transition: width 0.3s;
 }
