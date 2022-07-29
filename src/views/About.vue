@@ -4,6 +4,11 @@
   <p>
     This project/website is unofficial! I have no copyright with the music/picture/cover displayed in the website, they belong to the original owner. This website has no relation with MuseDash or PeroPeroGames.
     <br>
+    Player's infomation update everyday, around 20 GMT.
+    <br>
+    Music rank update every 24h, can be triggered manually with 🌀 button.
+    <br>
+    <br>
     Please download the game under :D
     <br>
     <br>
