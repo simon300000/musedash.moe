@@ -161,7 +161,7 @@
   {
     "uid": "43-9",
     "name": "信仰と存在",
-    "author": "他人事",
+    "author": "他人事 feat. 否",
     "bpm": "173",
     "music": "shinkou_to_sonzai_music",
     "demo": "shinkou_to_sonzai_demo",
@@ -263,6 +263,23 @@
     "difficulty1": "5",
     "difficulty2": "8",
     "difficulty3": "10",
+    "unlockLevel": "0"
+  },
+  {
+    "uid": "43-15",
+    "name": "悪夢 / feat.つぐ",
+    "author": "吐息．",
+    "bpm": "135",
+    "music": "akumu_music",
+    "demo": "akumu_demo",
+    "cover": "akumu_cover",
+    "hexieCover": "",
+    "noteJson": "akumu_map",
+    "scene": "scene_03",
+    "levelDesigner": "money钱",
+    "difficulty1": "4",
+    "difficulty2": "6",
+    "difficulty3": "8",
     "unlockLevel": "0"
   }
 ]

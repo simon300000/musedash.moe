@@ -29,6 +29,16 @@
         "prefabsName": "AlbumDisco44",
         "free": false
     },
+     {
+        "uid": "music_package_53",
+        "title": "Happy Otaku Pack Vol.15",
+        "tag": "Happy",
+        "needPurchase": true,
+        "price": "¥25.00",
+        "jsonName": "ALBUM54",
+        "prefabsName": "AlbumDisco54",
+        "free": false
+    },
     {
         "uid": "music_package_52",
         "title": "MUSE RADIO FM103",
