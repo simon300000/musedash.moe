@@ -273,7 +273,7 @@ const refreshMusicList = async () => {
   })
 
   for (const { uid } of musicList) {
-    console.log(await checkNewSong(uid))
+    await checkNewSong(uid)
   }
 
   const { music_tag_list: rawTag } = await downloadTag()
