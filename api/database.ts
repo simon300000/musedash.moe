@@ -70,3 +70,31 @@ const state = sub<string, any>(db, 'state', { valueEncoding: 'json' })
 export const putTag = (tag: TagExport) => state.put('tag', tag)
 export const getTag = () => state.get('tag').catch(() => [] as TagExport)
 
+const updateNewest = async (time: number) => {
+  const current = await state.get('newest').catch(() => 0)
+  if (time > current) {
+    await state.put('newest', time)
+  }
+}
+
+const isNew = async (time: number) => {
+  const current = await state.get('newest').catch(() => 0)
+  return time >= (current - 1000 * 60 * 60 * 24)
+}
+
+const newSong = sub<string, number>(db, 'newSong', { valueEncoding: 'json' })
+
+export const checkNewSong = async (id: string) => {
+  const current = await newSong.get(id).catch(() => 0)
+  if (current === 0) {
+    const now = Date.now()
+    await newSong.put(id, now)
+    await updateNewest(now)
+  }
+}
+
+export const isNewSong = async (id: string) => {
+  const current = await newSong.get(id).catch(() => 0)
+  return isNew(current)
+}
+

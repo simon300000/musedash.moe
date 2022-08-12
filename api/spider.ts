@@ -1,6 +1,6 @@
 /* eslint camelcase: ["off"] */
 import { MusicData, MusicCore, PlayerValue, RawAPI, RankKey, MusicTagList } from './type.js'
-import { rank, player, search, rankUpdateTime, playerUpdateTime, putTag } from './database.js'
+import { rank, player, search, rankUpdateTime, playerUpdateTime, putTag, checkNewSong } from './database.js'
 import { albums, AvailableLocales, musics } from './albumParser.js'
 
 import { log, error, reloadAlbums } from './api.js'
@@ -271,6 +271,10 @@ const refreshMusicList = async () => {
       tags[tag].musicList.push({ json })
     }
   })
+
+  for (const { uid } of musicList) {
+    console.log(await checkNewSong(uid))
+  }
 
   const { music_tag_list: rawTag } = await downloadTag()
   const collab = rawTag.filter(({ tag_name: { English } }) => English === 'Collab').flatMap(({ music_list }) => music_list)
