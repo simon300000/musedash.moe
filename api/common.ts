@@ -1,6 +1,9 @@
-import { LevelUp } from 'levelup'
+import { AbstractSublevel } from 'abstract-level'
 
-import { SearchType } from './database.js'
+import { PlayerValue } from './type.js'
+
+type SearchType = AbstractSublevel<any, any, string, string>
+type PlayerType = AbstractSublevel<any, any, string, PlayerValue>
 
 export const wait = (ms: number): Promise<void> => new Promise(resolve => setTimeout(resolve, ms))
 
@@ -16,37 +19,29 @@ export const resultWithHistory = <U extends { user: { user_id: string } }, T ext
   })
 }
 
-export const makeSearch = <PlayerType extends LevelUp>({ search, player, log }: { log: (w: string) => void, search: SearchType, player: PlayerType }) => new Promise(async resolve => {
+export const makeSearch = async ({ search, player, log }: { log: (w: string) => void, search: SearchType, player: PlayerType }) => {
   await search.clear()
   log('Search cleared')
   const batch = search.batch()
-  const stream = player.createValueStream()
-  // eslint-disable-next-line camelcase
-  stream.on('data', ({ user: { nickname, user_id } }) => batch.put(user_id, nickname.toLowerCase()))
-  stream.on('close', () => resolve(batch.write()))
-})
+  for await (const { user: { nickname, user_id } } of player.values()) {
+    batch.put(user_id, nickname.toLowerCase())
+  }
+  await batch.write()
+}
 
-export const search = async <PlayerType extends LevelUp>({ search, q, player }: { search: SearchType, q: string, player: PlayerType }) => {
+export const search = async ({ search, q }: { search: SearchType, q: string }) => {
   const query = [...new Set(q
     .toLowerCase()
     .split(' ')
     .filter(Boolean))]
   if (query.length) {
-    const profiles: Promise<any>[] = await new Promise(resolve => {
-      const result = []
-      const stream = search.createReadStream()
-      // eslint-disable-next-line camelcase
-      stream.on('data', ({ key: user_id, value: nickname }) => {
-        if (!query.find(word => !nickname.includes(word))) {
-          result.push(player.get(user_id)
-            .then(({ user: { nickname: name, user_id: id } }) => [name, id])
-            .catch(() => undefined))
-        }
-      })
-      stream.on('close', () => resolve(result))
-    })
-    const result = await Promise.all(profiles)
-    return result.filter(Boolean)
+    const result = []
+    for await (const [id, name] of search.iterator()) {
+      if (query.every(word => name.includes(word))) {
+        result.push([name, id])
+      }
+    }
+    return result
   }
   return []
 }

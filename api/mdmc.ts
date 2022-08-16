@@ -1,5 +1,3 @@
-import sub from 'subleveldown'
-
 import Router from '@koa/router'
 
 import { mdmc as db } from './database.js'
@@ -10,15 +8,15 @@ import { resultWithHistory, makeSearch, search as searchF, wait } from './common
 const log = (msg: string) => rawLog(`mdmc: ${msg}`)
 const error = (msg: string) => rawError(`mdmc: ${msg}`)
 
-const rankdb = sub<string, RankValue[]>(db, 'rank', { valueEncoding: 'json' })
+const rankdb = db.sublevel<string, RankValue[]>('rank', { valueEncoding: 'json' })
 
 const rank = {
   put: ({ id, difficulty, value }: RankCode & { value: RankValue[] }) => rankdb.put(`${id}_${difficulty}`, value),
   get: ({ id, difficulty }: RankCode) => rankdb.get(`${id}_${difficulty}`).catch(() => [] as RankValue[])
 }
 
-export const player = sub<string, PlayerValue>(db, 'player', { valueEncoding: 'json' })
-const search = sub<string, string>(db, 'search', { valueEncoding: 'json' })
+export const player = db.sublevel<string, PlayerValue>('player', { valueEncoding: 'json' })
+const search = db.sublevel<string, string>('search', { valueEncoding: 'json' })
 
 let musics: Musics = []
 
@@ -85,7 +83,7 @@ const mal = async () => {
   await analyze(results)
   log('Analyzed')
 
-  await makeSearch({ log, player, search })
+  await makeSearch({ log, player: player as any, search })
   log('Search Cached')
 }
 
@@ -125,7 +123,7 @@ router.get('/rank/:id/:difficulty', async ctx => {
 })
 
 router.get('/search/:string', async ctx => {
-  ctx.body = await searchF({ search, q: ctx.params.string, player })
+  ctx.body = await searchF({ search, q: ctx.params.string })
 })
 
 app.use(router.routes())

@@ -117,18 +117,15 @@ const analyzePlayers = (musicData: RankKey[], key: string) => musicData
     return records
   }, Promise.resolve({} as Record<string, PlayerValue>))
 
-const deleteOld = (k: string) => new Promise(resolve => {
+const deleteOld = async (k: string) => {
   const deleteBatch = player.batch()
-  player.createReadStream()
-    .on('data', ({ key, value }) => {
-      if (value.key !== k) {
-        deleteBatch.del(key)
-      }
-    })
-    .on('end', () => {
-      resolve(deleteBatch.write())
-    })
-})
+  for await (const [id, { key }] of player.iterator()) {
+    if (key !== k) {
+      deleteBatch.del(id)
+    }
+  }
+  await deleteBatch.write()
+}
 
 const analyze = async (musicData: RankKey[]) => {
   const key = String(Math.random())

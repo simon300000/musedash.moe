@@ -138,7 +138,7 @@ router.get('/search', async ctx => {
 })
 
 router.get('/search/:string', async ctx => {
-  ctx.body = await searchF({ search, q: ctx.params.string, player })
+  ctx.body = await searchF({ search, q: ctx.params.string })
 })
 
 router.get('/log', ctx => {

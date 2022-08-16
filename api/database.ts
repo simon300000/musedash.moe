@@ -1,15 +1,14 @@
-import sub from 'subleveldown'
-import level from 'level'
+import { Level } from 'level'
 
 import { RankKey, RankValue, PlayerValue, TagExport } from './type.js'
 import { MusicDiffDiff } from './diffdiff.js'
 
-const db = level('./db', { cacheSize: 128 * 1024 * 1024 })
+const db = new Level('./db', { cacheSize: 128 * 1024 * 1024 })
 
-const rankdb = sub<string, RankValue[]>(db, 'rank', { valueEncoding: 'json' })
+const rankdb = db.sublevel<string, RankValue[]>('rank', { valueEncoding: 'json' })
 
-export const player = sub<string, PlayerValue>(db, 'player', { valueEncoding: 'json' })
-export const search = sub<string, string>(db, 'search', { valueEncoding: 'json' })
+export const player = db.sublevel<string, PlayerValue>('player', { valueEncoding: 'json' })
+export const search = db.sublevel<string, string>('search', { valueEncoding: 'json' })
 
 export type PlayerType = typeof player
 export type SearchType = typeof search
@@ -17,7 +16,7 @@ export type SearchType = typeof search
 class TimeDB<K> {
   db: ReturnType<typeof TimeDB.mkDB>
   f: (k: K) => string
-  batch: ReturnType<typeof db.batch>
+  batch: ReturnType<typeof this.db.batch>
 
   constructor(name: string, f: (k: K) => string) {
     this.db = TimeDB.mkDB(name)
@@ -44,7 +43,7 @@ class TimeDB<K> {
   }
 
   private static mkDB(name: string) {
-    return sub<string, number>(db, `time-${name}`, { valueEncoding: 'json' })
+    return db.sublevel<string, number>(`time-${name}`, { valueEncoding: 'json' })
   }
 }
 
@@ -56,16 +55,16 @@ export const rank = {
 export const rankUpdateTime = new TimeDB<RankKey>('rank', ({ uid, difficulty, platform }) => `${uid}_${platform}_${difficulty}`)
 export const playerUpdateTime = new TimeDB<string>('player', id => id)
 
-export const mdmc = sub(db, 'mdmc', { valueEncoding: 'json' })
+export const mdmc = db.sublevel('mdmc', { valueEncoding: 'json' })
 
-const diffDiffDB = sub<string, MusicDiffDiff[]>(db, 'diffDiff', { valueEncoding: 'json' })
+const diffDiffDB = db.sublevel<string, MusicDiffDiff[]>('diffDiff', { valueEncoding: 'json' })
 
 export const putDiffDiff = (diffDiff: MusicDiffDiff[]) => diffDiffDB.put('diff', diffDiff)
 export const getDiffDiff = () => diffDiffDB.get('diff').catch(() => [] as MusicDiffDiff[])
 
-export const playerDiff = sub<string, number>(db, 'playerDiff', { valueEncoding: 'json' })
+export const playerDiff = db.sublevel<string, number>('playerDiff', { valueEncoding: 'json' })
 
-const state = sub<string, any>(db, 'state', { valueEncoding: 'json' })
+const state = db.sublevel<string, any>('state', { valueEncoding: 'json' })
 
 export const putTag = (tag: TagExport) => state.put('tag', tag)
 export const getTag = () => state.get('tag').catch(() => [] as TagExport)
@@ -82,7 +81,7 @@ const isNew = async (time: number) => {
   return time >= (current - 1000 * 60 * 60 * 24)
 }
 
-const newSong = sub<string, number>(db, 'newSong', { valueEncoding: 'json' })
+const newSong = db.sublevel<string, number>( 'newSong', { valueEncoding: 'json' })
 
 export const checkNewSong = async (id: string) => {
   const current = await newSong.get(id).catch(() => 0)
