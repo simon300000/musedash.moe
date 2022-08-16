@@ -24,7 +24,7 @@ export const makeSearch = async ({ search, player, log }: { log: (w: string) => 
   log('Search cleared')
   const batch = search.batch()
   for await (const { user: { nickname, user_id } } of player.values()) {
-    batch.put(user_id, nickname.toLowerCase())
+    batch.put(user_id, nickname)
   }
   await batch.write()
 }
@@ -37,7 +37,8 @@ export const search = async ({ search, q }: { search: SearchType, q: string }) =
   if (query.length) {
     const result = []
     for await (const [id, name] of search.iterator()) {
-      if (query.every(word => name.includes(word))) {
+      const lower = name.toLowerCase()
+      if (query.every(word => lower.includes(word))) {
         result.push([name, id])
       }
     }
