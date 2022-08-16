@@ -133,6 +133,10 @@ router.get('/player/:id', async ctx => {
   ctx.body = p
 })
 
+router.get('/search', async ctx => {
+  ctx.body = []
+})
+
 router.get('/search/:string', async ctx => {
   ctx.body = await searchF({ search, q: ctx.params.string, player })
 })
