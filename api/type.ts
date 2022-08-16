@@ -166,3 +166,6 @@ export type TagExport = {
     musics?: string[]
   }[]
 }[]
+
+export const genKey = ({ uid, difficulty, platform }: RankKey) => `${uid}-${difficulty}-${platform}`
+

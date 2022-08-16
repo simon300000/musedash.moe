@@ -1,6 +1,6 @@
 /* eslint camelcase: ["off"] */
-import { MusicData, MusicCore, PlayerValue, RawAPI, RankKey, MusicTagList } from './type.js'
-import { rank, player, search, rankUpdateTime, playerUpdateTime, putTag, checkNewSong } from './database.js'
+import { MusicData, MusicCore, PlayerValue, RawAPI, RankKey, MusicTagList, genKey } from './type.js'
+import { rank, player, search, rankUpdateTime, playerUpdateTime, putTag, checkNewSong, saveRaw } from './database.js'
 import { albums, AvailableLocales, musics } from './albumParser.js'
 
 import { log, error, reloadAlbums } from './api.js'
@@ -23,8 +23,6 @@ const platforms = {
 } as const
 
 const sumMutexMap = new Map<string, Promise<void>>()
-
-const genKey = ({ uid, difficulty, platform }: RankKey) => `${uid}-${difficulty}-${platform}`
 
 const sumWait = async ({ uid, difficulty }: MusicCore) => Promise.all(Object.keys(platforms).map(platform => genKey({ uid, difficulty, platform })).map(k => sumMutexMap.get(k)))
 
@@ -90,6 +88,7 @@ const download = async ({ uid, difficulty, platform }: RankKey, sumAfter = true)
     if (sumAfter) {
       await sum({ uid, difficulty })
     }
+    await Promise.all(result.map(({ play, user: { user_id, ...user } }) => saveRaw({ uid, difficulty, platform }, user_id, { play, user: { ...user, user_id } })))
     return true
   }
   relese()

@@ -1,7 +1,9 @@
 import { Level } from 'level'
 
-import { RankKey, RankValue, PlayerValue, TagExport } from './type.js'
+import { RankKey, RankValue, PlayerValue, TagExport, APIResult, genKey } from './type.js'
 import { MusicDiffDiff } from './diffdiff.js'
+
+const TWO_DAY = 1000 * 60 * 60 * 24 * 2
 
 const db = new Level('./db', { cacheSize: 128 * 1024 * 1024 })
 
@@ -81,7 +83,7 @@ const isNew = async (time: number) => {
   return time >= (current - 1000 * 60 * 60 * 24)
 }
 
-const newSong = db.sublevel<string, number>( 'newSong', { valueEncoding: 'json' })
+const newSong = db.sublevel<string, number>('newSong', { valueEncoding: 'json' })
 
 export const checkNewSong = async (id: string) => {
   const current = await newSong.get(id).catch(() => 0)
@@ -95,5 +97,32 @@ export const checkNewSong = async (id: string) => {
 export const isNewSong = async (id: string) => {
   const current = await newSong.get(id).catch(() => 0)
   return isNew(current)
+}
+
+type NOW = {
+  now: number
+}
+
+const raw = db.sublevel<string, APIResult & NOW>('raw', { valueEncoding: 'json' })
+
+export const saveRaw = async (rankKey: RankKey, id: string, value: APIResult) => {
+  const key = `${genKey(rankKey)}_${id}`
+  const now = Date.now()
+  await raw.put(key, { ...value, now })
+}
+
+export const getRaw = async (rankKey: RankKey, id: string) => {
+  const key = `${genKey(rankKey)}_${id}`
+  return raw.get(key).catch<undefined>(() => undefined)
+}
+
+export const cleanOldRaw = async () => {
+  const chain = raw.batch()
+  for await (const [w, { now }] of raw.iterator()) {
+    if (now < Date.now() - TWO_DAY) {
+      chain.del(w)
+    }
+  }
+  await chain.write()
 }
 

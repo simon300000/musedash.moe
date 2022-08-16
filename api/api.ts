@@ -9,7 +9,7 @@ import { fileURLToPath } from 'url'
 import { readFile } from 'fs/promises'
 
 import { Albums, PlayerValue, RankKey } from './type.js'
-import { rank, player, search, getDiffDiff, playerDiff, rankUpdateTime, playerUpdateTime, getTag } from './database.js'
+import { rank, player, search, getDiffDiff, playerDiff, rankUpdateTime, playerUpdateTime, getTag, getRaw } from './database.js'
 import { albums, AvailableLocales, availableLocales } from './albumParser.js'
 
 import { search as searchF } from './common.js'
@@ -108,6 +108,11 @@ router.get('/rank/:uid/:difficulty/:platform', async ctx => {
       ctx.body = result.map(({ play: { acc, score, character_uid, elfin_uid }, history: { lastRank } = { lastRank: -1 }, user: { nickname, user_id } }) => [acc, score, lastRank, nickname, user_id, undefined, character_uid, elfin_uid])
     }
   }
+})
+
+router.get('/rank/:uid/:difficulty/:platform/:id', ctx => {
+  const { uid, difficulty, platform, id } = ctx.params
+  return getRaw({ uid, difficulty: Number(difficulty), platform }, id)
 })
 
 router.get('/rankUpdateTime/:uid/:difficulty/:platform', async ctx => {
