@@ -111,7 +111,7 @@ export const saveRaw = async (rankKey: RankKey, id: string, value: APIResult) =>
   await raw.put(key, { ...value, now })
 }
 
-export const getRaw = async (rankKey: RankKey, id: string) => {
+export const getRaw = (rankKey: RankKey, id: string) => {
   const key = `${genKey(rankKey)}_${id}`
   return raw.get(key).catch<undefined>(() => undefined)
 }

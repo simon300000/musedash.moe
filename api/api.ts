@@ -110,9 +110,9 @@ router.get('/rank/:uid/:difficulty/:platform', async ctx => {
   }
 })
 
-router.get('/rank/:uid/:difficulty/:platform/:id', ctx => {
+router.get('/rank/:uid/:difficulty/:platform/:id', async ctx => {
   const { uid, difficulty, platform, id } = ctx.params
-  return getRaw({ uid, difficulty: Number(difficulty), platform }, id)
+  ctx.body = await getRaw({ uid, difficulty: Number(difficulty), platform }, id)
 })
 
 router.get('/rankUpdateTime/:uid/:difficulty/:platform', async ctx => {
