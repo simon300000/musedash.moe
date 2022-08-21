@@ -5,7 +5,7 @@ import { MusicDiffDiff } from './diffdiff.js'
 
 const TWO_DAY = 1000 * 60 * 60 * 24 * 2
 
-const db = new Level('./db', { cacheSize: 128 * 1024 * 1024 })
+const db = new Level('./db')
 
 const rankdb = db.sublevel<string, RankValue[]>('rank', { valueEncoding: 'json' })
 
