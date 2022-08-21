@@ -1,7 +1,25 @@
 <template>
 <div class="break">
-  Not Official
   <p>
+    <label class="checkbox">
+      <input type="checkbox" v-model="rawEnabled">
+      Raw Data
+      <br>
+      "Raw Data" button will appear
+    </label>
+    <br>
+    <label class="checkbox">
+      <input type="checkbox" v-model="vt">
+      Disable virtual scroll
+      <br>
+      Will make rank page slow and laggie, disable if you encounter problem
+      <br>
+    </label>
+  </p>
+  <br>
+  <p>
+    Not Official
+    <br>
     This project/website is unofficial! I have no copyright with the music/picture/cover displayed in the website, they belong to the original owner. This website has no relation with MuseDash or PeroPeroGames.
     <br>
     Player's infomation update everyday, around 20 GMT.
@@ -51,7 +69,17 @@ import { getLog } from '@/api'
 export default {
   data() {
     return {
+      rawEnabled: localStorage.rawEnabled === 'true',
+      vt: localStorage.vt === 'true',
       log: 'loading...'
+    }
+  },
+  watch: {
+    rawEnabled() {
+      localStorage.rawEnabled = String(this.rawEnabled)
+    },
+    vt() {
+      localStorage.vt = String(this.vt)
     }
   },
   methods: mapMutations(['updateTitle', 'removeTitle']),

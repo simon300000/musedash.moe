@@ -11,6 +11,7 @@
           <th class="th-left">Score</th>
           <th v-if="platform === 'all'">Platform</th>
           <th>Configure</th>
+          <th v-if="raw && platform">Raw Data</th>
         </tr>
       </thead>
       <tbody>
@@ -29,6 +30,10 @@
             <octicon type="mobile" size="17" v-else></octicon>
           </td>
           <td style="text-align:center;" class="nowarp">{{characters[play.character]}} / {{elfins[play.elfin]}}</td>
+          <td v-if="raw && platform" class="no-padding">
+            <pre v-if="rawMap[`${play.uid}-${play.difficulty}-${play.platform}-${play.id}`]"><code>{{rawMap[`${play.uid}-${play.difficulty}-${play.platform}-${play.id}`]}}</code></pre>
+            <button v-else class="button is-text is-small" @click="loadRaw(play)">Load</button>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -42,9 +47,11 @@ import { mapGetters } from 'vuex'
 import Octicon from '@/components/octicon.vue'
 import change from '@/components/change.vue'
 
+import { getRankRaw } from '@/api'
+
 const threshold = Array(300).fill().map((_, i) => i / 300)
 
-const renderLength = 80
+const renderLength = 120
 const rowHeight = 41
 
 export default {
@@ -53,11 +60,22 @@ export default {
       observer: undefined,
       skipRatio: 0,
       search: '',
+      raw: localStorage.rawEnabled === 'true',
+      vt: localStorage.vt === 'true',
+      rawMap: {}
     }
   },
   components: {
     Octicon,
     change
+  },
+  methods: {
+    async loadRaw({ id, uid, difficulty, platform }) {
+      const key = `${uid}-${difficulty}-${platform}-${id}`
+      this.rawMap = { ...this.rawMap, [key]: 'loading...' }
+      const data = await getRankRaw({ id, uid, difficulty, platform })
+      this.rawMap = { ...this.rawMap, [key]: data }
+    }
   },
   props: ['currentRank', 'platform'],
   computed: {
@@ -72,6 +90,9 @@ export default {
       return (this.maxLength + 1) * rowHeight
     },
     skipHeight() {
+      if (this.vt) {
+        return 0
+      }
       return this.skipNum * rowHeight
     },
     rankSearched() {
@@ -93,10 +114,16 @@ export default {
     },
     rankKeyed() {
       const search = this.rankSearched
+      if (this.vt) {
+        return search.map((rest, i) => ({ ...rest, indexKey: `rank_${i}` }))
+      }
       return search.map((rest, i) => ({ ...rest, indexKey: `rank_${i % renderLength}` }))
     },
     rankSliced() {
       const rankKeyed = this.rankKeyed
+      if (this.vt) {
+        return rankKeyed
+      }
       return rankKeyed.slice(this.skipNum, this.skipNum + this.renderLength)
     },
     skipNum() {
@@ -146,5 +173,9 @@ export default {
   min-width: 70px;
   font-size: 0.75em;
   margin-left: 5%;
+}
+
+.no-padding {
+  padding: 0;
 }
 </style>

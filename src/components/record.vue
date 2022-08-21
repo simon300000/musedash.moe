@@ -32,6 +32,7 @@
       <router-link :to="props.sumLink" v-if="props.sumLink">
         <p class="subtitle is-6 is-spaced clickable">sum #{{props.play.sum+1}}</p>
       </router-link>
+      <slot></slot>
     </div>
   </div>
 </nav>

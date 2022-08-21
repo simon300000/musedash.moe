@@ -1,7 +1,7 @@
 <template>
 <div>
   <progress class="progress is-small" max="100" v-if="!currentRank"></progress>
-  <core v-else platform="pc" :currentRank="currentRank"></core>
+  <core v-else :currentRank="currentRank"></core>
 </div>
 </template>
 

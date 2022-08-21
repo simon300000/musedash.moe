@@ -1,7 +1,7 @@
 <template>
 <div>
   <progress class="progress is-small" max="100" v-if="!currentPlayer || !this.albumsArray.length"></progress>
-  <core v-else :plays="plays" :current="currentPlayer" :id="currentPlayer.user.user_id"></core>
+  <core v-else :plays="plays" :current="currentPlayer" :id="currentPlayer.user.user_id" :rawA="true"></core>
 </div>
 </template>
 
@@ -60,7 +60,7 @@ export default {
           const sumLink = `/music/${uid}/${difficulty}`
           const elfin = this.elfins[elfin_uid]
           const character = this.characters[character_uid]
-          return { ...rest, src, name, author, lv, difficulty, platform, link, sumLink, elfin, character }
+          return { ...rest, src, name, author, lv, difficulty, platform, link, sumLink, elfin, character, uid }
         })
     }
   },
