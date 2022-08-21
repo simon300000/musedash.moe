@@ -31,7 +31,7 @@
           </td>
           <td style="text-align:center;" class="nowarp">{{characters[play.character]}} / {{elfins[play.elfin]}}</td>
           <td v-if="raw && platform" class="no-padding">
-            <pre v-if="rawMap[`${play.uid}-${play.difficulty}-${play.platform}-${play.id}`]"><code>{{rawMap[`${play.uid}-${play.difficulty}-${play.platform}-${play.id}`]}}</code></pre>
+            <pre v-if="rawMap[`${play.uid}-${play.difficulty}-${play.platform || platform}-${play.id}`]"><code>{{rawMap[`${play.uid}-${play.difficulty}-${play.platform || platform}-${play.id}`]}}</code></pre>
             <button v-else class="button is-text is-small" @click="loadRaw(play)">Load</button>
           </td>
         </tr>
@@ -70,7 +70,8 @@ export default {
     change
   },
   methods: {
-    async loadRaw({ id, uid, difficulty, platform }) {
+    async loadRaw({ id, uid, difficulty, platform: p }) {
+      const platform = p || this.platform
       const key = `${uid}-${difficulty}-${platform}-${id}`
       this.rawMap = { ...this.rawMap, [key]: 'loading...' }
       const data = await getRankRaw({ id, uid, difficulty, platform })
