@@ -69,8 +69,8 @@ import { getLog } from '@/api'
 export default {
   data() {
     return {
-      rawEnabled: localStorage.rawEnabled === 'true',
-      vt: localStorage.vt === 'true',
+      rawEnabled: false,
+      vt: false,
       log: 'loading...'
     }
   },
@@ -90,6 +90,8 @@ export default {
     this.removeTitle(this)
   },
   async mounted() {
+    this.rawEnabled = localStorage.rawEnabled === 'true'
+    this.vt = localStorage.vt === 'true'
     this.log = await getLog()
   }
 }
