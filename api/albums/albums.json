@@ -29,6 +29,16 @@
         "prefabsName": "AlbumDisco44",
         "free": false
     },
+    {
+        "uid": "music_package_54",
+        "title": "MEGAREX THE FUTURE",
+        "tag": "Other",
+        "needPurchase": true,
+        "price": "¥25.00",
+        "jsonName": "ALBUM55",
+        "prefabsName": "AlbumDisco55",
+        "free": false
+    },
      {
         "uid": "music_package_53",
         "title": "Happy Otaku Pack Vol.15",

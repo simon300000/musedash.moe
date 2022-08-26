@@ -281,5 +281,39 @@
     "difficulty2": "6",
     "difficulty3": "8",
     "unlockLevel": "0"
+  },
+  {
+    "uid": "43-16",
+    "name": "Queen Aluett",
+    "author": "LeaF",
+    "bpm": "212",
+    "music": "queen_aluett_music",
+    "demo": "queen_aluett_demo",
+    "cover": "queen_aluett_cover",
+    "hexieCover": "",
+    "noteJson": "queen_aluett_map",
+    "scene": "scene_03",
+    "levelDesigner": "Howard_Y",
+    "difficulty1": "7",
+    "difficulty2": "9",
+    "difficulty3": "11",
+    "unlockLevel": "0"
+  },
+  {
+    "uid": "43-17",
+    "name": "DROPS (feat. Such)",
+    "author": "Zekk, poplavor",
+    "bpm": "120",
+    "music": "drops_music",
+    "demo": "drops_demo",
+    "cover": "drops_cover",
+    "hexieCover": "",
+    "noteJson": "drops_map",
+    "scene": "scene_02",
+    "levelDesigner": "HXJ_ConveX",
+    "difficulty1": "2",
+    "difficulty2": "5",
+    "difficulty3": "8",
+    "unlockLevel": "0"
   }
 ]
