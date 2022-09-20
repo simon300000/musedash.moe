@@ -30,7 +30,7 @@ export const diffdiff = async (musics: MusicData[]) => {
   }
 
   for (let index = 0; index < musicList.length; index++) {
-    const music = musicList[index];
+    const music = musicList[index]
     const rank = rankMap.get(music)
     await wait(5)
 
@@ -42,8 +42,15 @@ export const diffdiff = async (musics: MusicData[]) => {
       if (keys.length) {
         const sum = keys.map(key => [rank[key], rank2[key]]).map(([acc1, acc2]) => accJudge(acc1) - accJudge(acc2)).reduce((sumDiff, accDiff) => sumDiff + accDiff, 0)
         const averageDiff = sum / keys.length
-        absoluteValueMap.set(music, absoluteValueMap.get(music) - averageDiff)
-        absoluteValueMap.set(music2, absoluteValueMap.get(music2) + averageDiff)
+        if (averageDiff > 100) {
+          const log = (...w) => console.log('diffdiff error', ...w)
+          log(averageDiff, { music, music2, keys })
+          log('sum', sum)
+          log('ranks', { rank, rank2 })
+        } else {
+          absoluteValueMap.set(music, absoluteValueMap.get(music) - averageDiff)
+          absoluteValueMap.set(music2, absoluteValueMap.get(music2) + averageDiff)
+        }
       }
     }
   }
