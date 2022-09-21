@@ -47,6 +47,7 @@ const downloadCore = async ({ uid, difficulty, platform }: RankKey) => {
   return [firstPage, ...await Promise.all(urls.map(url => down<RawAPI>(url).then(({ result }) => result)))]
     .flat()
     .filter(r => r?.play?.score != undefined && r?.user?.user_id != undefined)
+    .filter(r => r.play.acc <= 100)
 }
 
 const toSum = ({ uid, difficulty }: RankKey) => !Object.keys(platforms)
