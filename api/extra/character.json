@@ -3208,5 +3208,96 @@
     ],
     "reviewExpressions": null,
     "catExpressions": null
+  },
+  {
+    "characterName": "$",
+    "cosName": "$",
+    "description": "$",
+    "defaultHP": "200",
+    "skillName": "tmp",
+    "skill": "$",
+    "chipName": "$",
+    "chipDescription": "$",
+    "cv": "$",
+    "chipAmount": 8,
+    "chipImage": "8_marisa_girl_chip2",
+    "mainShow": "marisa_girl_main_show",
+    "battleShow": "marisa_girl_battle",
+    "feverShow": "marisa_girl_battle_fever",
+    "atkFxGreat": "marisa_girl_fx_atk_g",
+    "atkFxPerfect": "marisa_girl_fx_atk_p",
+    "atkFxCrit": "marisa_girl_fx_atk_c",
+    "victoryShow": "marisa_girl_victory_show",
+    "failShow": "marisa_girl_fail",
+    "bgm": "char_8_marisa_bgm",
+    "unlockType": 0,
+    "unlockCount": 0,
+    "rarity": "s",
+    "free": false,
+    "hide": false,
+    "order": 22,
+    "skins": [
+      {
+        "index": 0,
+        "albumJsonIndex": 0,
+        "mainShow": "marisa_girl_main_show",
+        "battleShow": "marisa_girl_battle",
+        "victoryShow": "marisa_girl_victory_show",
+        "failShow": "marisa_girl_fail",
+        "free": true,
+        "hide": false
+      }
+    ],
+    "expressions": [
+      {
+        "animName": "touch_excite",
+        "audioNames": [
+          "VoiceMarisaMain01"
+        ],
+        "texts": "$",
+        "weight": 0.1
+      },
+      {
+        "animName": "touch_wink",
+        "audioNames": [
+          "VoiceMarisaMain02",
+          "VoiceMarisaMain03"
+        ],
+        "texts": "$",
+        "weight": 0.2
+      },
+      {
+        "animName": "touch_angry",
+        "audioNames": [
+          "VoiceMarisaMain04",
+          "VoiceMarisaMain05",
+          "VoiceMarisaMain06"
+        ],
+        "texts": "$",
+        "weight": 0.3
+      },
+      {
+        "animName": "touch_awkward",
+        "audioNames": [
+          "VoiceMarisaMain07",
+          "VoiceMarisaMain08",
+          "VoiceMarisaMain09"
+        ],
+        "texts": "$",
+        "weight": 0.3
+      },
+      {
+        "animName": "touch_panic",
+        "audioNames": [
+          "VoiceMarisaMainHidden01",
+          "VoiceMarisaMainHidden02",
+          "VoiceMarisaMainHidden03"
+        ],
+        "texts": "$",
+        "weight": 0.1
+      }
+    ],
+    "reviewExpressions": null,
+    "catExpressions": null
   }
 ]

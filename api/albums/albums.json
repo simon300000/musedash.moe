@@ -30,6 +30,16 @@
         "free": false
     },
     {
+        "uid": "music_package_55",
+        "title": "东方暮乐团 -贰-",
+        "tag": "Other",
+        "needPurchase": true,
+        "price": "¥25.00",
+        "jsonName": "ALBUM56",
+        "prefabsName": "AlbumDisco56",
+        "free": false
+    },
+    {
         "uid": "music_package_54",
         "title": "MEGAREX THE FUTURE",
         "tag": "Other",
@@ -141,7 +151,7 @@
     },
     {
         "uid": "music_package_42",
-        "title": "东方暮乐团",
+        "title": "东方暮乐团 -壹-",
         "tag": "Other",
         "needPurchase": true,
         "price": "¥25.00",
