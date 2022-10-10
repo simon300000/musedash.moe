@@ -1,6 +1,6 @@
 /* eslint camelcase: ["off"] */
 import { MusicData, MusicCore, PlayerValue, RawAPI, RankKey, MusicTagList, genKey } from './type.js'
-import { rank, player, search, rankUpdateTime, playerUpdateTime, putTag, checkNewSong, saveRaw } from './database.js'
+import { rank, player, search, rankUpdateTime, playerUpdateTime, putTag, checkNewSong, isNewSong, saveRaw } from './database.js'
 import { albums, AvailableLocales, musics } from './albumParser.js'
 
 import { log, error, reloadAlbums } from './api.js'
@@ -191,6 +191,16 @@ const refreshMusicList = async () => {
   }>
 
   const tags: Wellknown = {
+    New: {
+      displayName: {
+        ChineseS: 'New',
+        ChineseT: 'New',
+        English: 'New',
+        Japanese: 'New',
+        Korean: 'New'
+      },
+      musicList: []
+    },
     Default: {
       displayName: {
         ChineseS: '基础包',
@@ -272,6 +282,21 @@ const refreshMusicList = async () => {
   for (const { uid } of musicList) {
     await checkNewSong(uid)
   }
+
+
+  const newList: Record<string, string[]> = {}
+  for (const { uid } of musicList) {
+    if (await isNewSong(uid)) {
+      const [albumNum] = uid.split('-')
+      const json = `ALBUM${Number(albumNum) + 1}`
+      if (!newList[json]) {
+        newList[json] = []
+      }
+      newList[json].push(uid)
+    }
+  }
+
+  tags.New.musicList = Object.entries(newList).map(([json, ids]) => ({ json, musics: ids }))
 
   const { music_tag_list: rawTag } = await downloadTag()
   const collab = rawTag.filter(({ tag_name: { English } }) => English === 'Collab').flatMap(({ music_list }) => music_list)

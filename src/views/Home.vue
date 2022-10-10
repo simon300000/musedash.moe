@@ -43,6 +43,7 @@ export default {
       Cute: 'IconCuteIsEveryting.png',
       GiveUp: 'IconGiveUpTreatment.png',
       X: 'X.png',
+      New: 'IconNew.png',
       PlannedPlus: 'IconJustAsPlanned.png'
     }
     return {}
