@@ -1334,5 +1334,31 @@
     ],
     "reviewExpressions": null,
     "catExpressions": null
+  },
+  {
+    "characterName": "Kirisame Marisa",
+    "cosName": "Black-white Magician",
+    "description": "Black-white Magician",
+    "skill": "Marisa can keep hovering in the air without automatically landing. She gains a 200% score bonus when catching Blue Notes or Red Hearts in full health.",
+    "skills": null,
+    "chipName": "Mini-Hakkero",
+    "chipDescription": "A mighty self-made magical item that can shoot lasers when stuffed with mushrooms - use it to blast your way to Gensokyo!",
+    "cv": "Machico",
+    "expressions": [
+      [ "I am the Great Magician—Kirisame Marisa! … Huh? You didn’t think it was me?"],
+      [ "Not like someone, if your request brings me fun, I won't charge you ~ ☆",
+        "Treating every enemy with care is not my style. Let me teach you how to use Master Spark ~ ☆"],
+      [ "It's Marija's book, I borrowed it! ...Taking a book can't be considered stealing!",
+        "The mushroom world is really complicated! It took me a night to do a little research! So—please don't look at me as if I were an overachiever.",
+        "My luck today is… future blessing?! Future blessing again? Isn't it  \"Almost Misfortune \"!!"],
+      [ "Ah~ There are too many notes in some stages. Now, I understand how they feel when they see my danmaku…",
+        "Don't give me that\"please do Love Sign Master Spark again\"look! I'm not a busking magician!",
+        "I was called by a dangerous-looking girl in black to dust her car… Do I look like a maid?"],
+      [ "What are you staring at?! Ah… How do you know there are bombs under my dress?",
+        "You can't eat that mushroom! It is… the magic mushroom, which can increase intimacy between you and who you love… I don't know the details! I didn't eat it!!",
+        "Stop—I handed over everything I stole... I took!If you dare do something that crosses the line, I'll call Reimu to sort you out!"]
+    ],
+    "reviewExpressions": null,
+    "catExpressions": null
   }
 ]
