@@ -119,6 +119,14 @@ router.get('/rankUpdateTime/:uid/:difficulty/:platform', async ctx => {
   ctx.body = await rankUpdateTime.get(ctx.params as any as RankKey)
 })
 
+router.get('rankDiffDiff/:uid/:difficulty', async ctx => {
+  const { uid, difficulty } = ctx.params
+  // TODO: use getDIffDiffMusic
+  const diffdiff = await getDiffDiff()
+  const [{ relative, absolute }] = diffdiff.filter(({ uid: u, difficulty: d }) => uid === u && Number(difficulty) === d)
+  ctx.body = { relative, absolute }
+})
+
 router.post('/refreshRank', koaBody(), async ctx => {
   const { uid, difficulty, platform } = ctx.request.body
   await joinJob({ uid, difficulty, platform })
