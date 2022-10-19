@@ -119,7 +119,7 @@ router.get('/rankUpdateTime/:uid/:difficulty/:platform', async ctx => {
   ctx.body = await rankUpdateTime.get(ctx.params as any as RankKey)
 })
 
-router.get('/rankDiffDiff/:uid/:difficulty', async ctx => {
+router.get('/diffDiffMusic/:uid/:difficulty', async ctx => {
   const { uid, difficulty } = ctx.params
   // TODO: use getDIffDiffMusic
   const diffdiff = await getDiffDiff()
