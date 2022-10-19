@@ -21,6 +21,11 @@
       <p class="title is-6 is-spaced" title="Level Designer" v-for="(designer, i) in props.levelDesigner" :key="`${props.music.name}_${i}`">{{designer}}</p>
     </div>
   </div>
+  <div class="level-item" v-if="props.diffdiff">
+    <div>
+      <p class="title is-3 is-spaced" title="Relative Difficulty">「{{props.diffdiff}}」</p>
+    </div>
+  </div>
   <div class="level-right">
     <capsule :difficulties="props.difficulties" :hide="props.hide"></capsule>
   </div>

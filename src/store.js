@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { getAlbums, getTag, getRank, getRankUpdateTime, refreshRank, getPlayer, getCE, mdmcGetAlbum, mdmcGetPlayer, mdmcGetRank, getDiffDiff } from './api'
+import { getAlbums, getTag, getRank, getRankUpdateTime, refreshRank, getPlayer, getCE, mdmcGetAlbum, mdmcGetPlayer, mdmcGetRank, getDiffDiff, getDiffDiffMusic } from './api'
 import { set as cookieSet } from 'js-cookie'
 
 import { loadCover } from './coverLoader'
@@ -28,6 +28,7 @@ export const createStore = ({ lang, changeTitle, theme }) => {
       fullAlbums: {},
       tag: [],
       rankCache: {},
+      diffDiffMusic: {},
       rankUpdateTimeCache: {},
       userCache: {},
       diffDiff: [],
@@ -78,6 +79,9 @@ export const createStore = ({ lang, changeTitle, theme }) => {
       setRank(state, { uid, difficulty, platform, rank }) {
         state.rankCache = { ...state.rankCache, [`${uid}_${platform}_${difficulty}`]: rank }
       },
+      setDiffDiffMusic(state, { uid, difficulty, value }) {
+        state.diffDiffMusic = { ...state.diffDiffMusic, [`${uid}_${difficulty}`]: value }
+      },
       setRankUpdateTime(state, { uid, difficulty, platform, updateTime }) {
         state.rankUpdateTimeCache = { ...state.rankUpdateTimeCache, [`${uid}_${platform}_${difficulty}`]: updateTime }
       },
@@ -119,9 +123,18 @@ export const createStore = ({ lang, changeTitle, theme }) => {
           commit('setCE', await getCE())
         }
       },
-      async loadRank({ commit }, { uid, difficulty, platform }) {
+      async loadDiffDiffMusic({ commit }, { uid, difficulty }) {
+        console.log('loadDiffDiffMusic', uid, difficulty)
+        commit('setDiffDiffMusic', { uid, difficulty, value: await getDiffDiffMusic({ uid, difficulty }) })
+      },
+      async loadRank({ commit, state, dispatch }, { uid, difficulty, platform }) {
+        const defer = []
+        if (!state.diffDiffMusic[`${uid}_${difficulty}`]) {
+          defer.push(dispatch('loadDiffDiffMusic', { uid, difficulty }))
+        }
         commit('setRank', { uid, difficulty, platform, rank: await getRank({ uid, difficulty, platform }) })
         commit('setRankUpdateTime', { uid, difficulty, platform, updateTime: await getRankUpdateTime({ uid, difficulty, platform }) })
+        await Promise.all(defer)
       },
       async updateRank({ commit, dispatch }, { uid, difficulty, platform }) {
         commit('setRankUpdateTime', { uid, difficulty, platform, updateTime: 0 })

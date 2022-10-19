@@ -1,5 +1,5 @@
 <template>
-<core :music="music" :albumName="albumName" :albumLink="albumLink" :levelDesigner="levelDesigner" :src="src" :difficulties="difficulties"></core>
+<core :music="music" :albumName="albumName" :albumLink="albumLink" :levelDesigner="levelDesigner" :src="src" :difficulties="difficulties" :diffdiff="diffdiff"></core>
 </template>
 
 <script>
@@ -17,10 +17,18 @@ export default {
     Core
   },
   computed: {
-    ...mapState(['lang', 'fullAlbums']),
+    ...mapState(['lang', 'fullAlbums', 'diffDiffMusic']),
     ...mapGetters(['musicAlbum']),
     src() {
       return loadCover(this.music.cover)
+    },
+    diffdiff() {
+      const diffdiff = this.diffDiffMusic[`${this.music.uid}_${this.level}`]
+      if (diffdiff) {
+        const { relative } = diffdiff
+        return Math.round(relative * 100) / 100
+      }
+      return undefined
     },
     album() {
       return this.musicAlbum[this.music.uid]
