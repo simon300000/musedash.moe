@@ -2,7 +2,7 @@ import { characterSkip, elfinSkip } from './config.js'
 import { MusicData, MusicCore, PlayerValue } from './type.js'
 import { wait } from './common.js'
 
-import { rank as rankDB, putDiffDiff, playerDiff, getDiffDiff } from './database.js'
+import { rank as rankDB, putDiffDiff, playerDiff, getDiffDiff, putDIffDiffMusic } from './database.js'
 
 const parseMusicc = (music: MusicData) => {
   const { uid, difficulty: difficulties } = music
@@ -89,6 +89,9 @@ export const diffdiff = async (musics: MusicData[]) => {
 
   const diffDiff = sortedMusicList.map((music, i) => ({ ...music, relative: interpolate(i) } as MusicDiffDiff))
   await putDiffDiff(diffDiff)
+  for (const { relative, absolute, ...music } of diffDiff) {
+    await putDIffDiffMusic(music, { relative, absolute })
+  }
 }
 
 const accJudge = (acc: number) => {
@@ -141,9 +144,11 @@ type MusicCoreExtended = MusicCore & {
   level: string
 }
 
-export type MusicDiffDiff = MusicCoreExtended & {
+export type DiffDiffResult = {
   absolute: number
   relative: number
 }
+
+export type MusicDiffDiff = MusicCoreExtended & DiffDiffResult
 
 type LevelAverage = Record<string, { sum: number, count: number, level: number }>

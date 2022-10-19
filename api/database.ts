@@ -1,7 +1,7 @@
 import { Level } from 'level'
 
-import { RankKey, RankValue, PlayerValue, TagExport, APIResult, genKey } from './type.js'
-import { MusicDiffDiff } from './diffdiff.js'
+import { RankKey, RankValue, PlayerValue, TagExport, APIResult, genKey, MusicCore } from './type.js'
+import { MusicDiffDiff, DiffDiffResult } from './diffdiff.js'
 
 const TWO_DAY = 1000 * 60 * 60 * 24 * 2
 
@@ -63,6 +63,13 @@ const diffDiffDB = db.sublevel<string, MusicDiffDiff[]>('diffDiff', { valueEncod
 
 export const putDiffDiff = (diffDiff: MusicDiffDiff[]) => diffDiffDB.put('diff', diffDiff)
 export const getDiffDiff = () => diffDiffDB.get('diff').catch(() => [] as MusicDiffDiff[])
+
+const diffDiffDBMusic = db.sublevel<string, DiffDiffResult>('diffDiffMusic', { valueEncoding: 'json' })
+export const putDIffDiffMusic = async ({ uid, difficulty }: MusicCore, value: DiffDiffResult) => {
+  const key = `${uid}_${difficulty}`
+  await diffDiffDBMusic.put(key, value)
+}
+export const getDIffDiffMusic = async ({ uid, difficulty }: MusicCore) => diffDiffDBMusic.get(`${uid}_${difficulty}`)
 
 export const playerDiff = db.sublevel<string, number>('playerDiff', { valueEncoding: 'json' })
 
