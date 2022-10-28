@@ -333,5 +333,23 @@
     "difficulty3": "10",
     "difficulty5": "L",
     "unlockLevel": "0"
+  },
+  {
+    "uid": "43-19",
+    "name": "snooze",
+    "author": "wotaku feat. SHIKI",
+    "bpm": "150",
+    "music": "snooze_music",
+    "demo": "snooze_demo",
+    "cover": "snooze_cover",
+    "hexieCover": "",
+    "noteJson": "snooze_map",
+    "scene": "scene_01",
+    "levelDesigner": "HXJ_ConveX",
+    "difficulty1": "5",
+    "difficulty2": "7",
+    "difficulty3": "10",
+    "unlockLevel": "0"
   }
+
 ]

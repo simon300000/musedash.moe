@@ -30,6 +30,16 @@
         "free": false
     },
     {
+        "uid": "music_package_56",
+        "title": "放弃治疗 Vol.11",
+        "tag": "GiveUp",
+        "needPurchase": true,
+        "price": "¥25.00",
+        "jsonName": "ALBUM57",
+        "prefabsName": "AlbumDisco57",
+        "free": false
+    },
+    {
         "uid": "music_package_55",
         "title": "东方暮乐团 -贰-",
         "tag": "Other",
