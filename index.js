@@ -62,6 +62,10 @@ app.use(async ctx => {
   }
   theme = queryTheme || theme
 
+  if (ctx.url === '/index.html') {
+    ctx.url = '/'
+  }
+
   let result = await renderer.renderToString({ url: ctx.url, lang, theme, fetch }).catch(e => {
     console.error(e, { url: ctx.url })
     if (e.code) {
