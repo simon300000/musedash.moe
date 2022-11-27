@@ -30,6 +30,16 @@
         "free": false
     },
     {
+        "uid": "music_package_57",
+        "title": "Happy Otaku Pack Vol.16",
+        "tag": "Happy",
+        "needPurchase": true,
+        "price": "¥25.00",
+        "jsonName": "ALBUM58",
+        "prefabsName": "AlbumDisco58",
+        "free": false
+    },
+    {
         "uid": "music_package_56",
         "title": "放弃治疗 Vol.11",
         "tag": "GiveUp",
