@@ -28,6 +28,15 @@
         "jsonName": "ALBUM44",
         "prefabsName": "AlbumDisco44",
         "free": false
+    },    {
+        "uid": "music_package_58",
+        "title": "Nanahira Paradise",
+        "tag": "Other",
+        "needPurchase": true,
+        "price": "¥18.00",
+        "jsonName": "ALBUM59",
+        "prefabsName": "AlbumDisco59",
+        "free": false
     },
     {
         "uid": "music_package_57",

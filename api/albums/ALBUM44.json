@@ -350,6 +350,40 @@
     "difficulty2": "7",
     "difficulty3": "10",
     "unlockLevel": "0"
+  },
+  {
+    "uid": "43-20",
+    "name": "Kuishinbo Hacker feat.Kuishinbo Akachan",
+    "author": "Neko Hacker",
+    "bpm": "140",
+    "music": "kuishinbo_hacker_music",
+    "demo": "kuishinbo_hacker_demo",
+    "cover": "kuishinbo_hacker_cover",
+    "hexieCover": "",
+    "noteJson": "kuishinbo_hacker_map",
+    "scene": "scene_05",
+    "levelDesigner": "Hacker_FXS",
+    "difficulty1": "5",
+    "difficulty2": "7",
+    "difficulty3": "9",
+    "unlockLevel": "0"
+  },
+  {
+    "uid": "43-21",
+    "name": "犬之歌",
+    "author": "Aiobahn feat.Nanahira",
+    "bpm": "175",
+    "music": "inu_no_outa_music",
+    "demo": "inu_no_outa_demo",
+    "cover": "inu_no_outa_cover",
+    "hexieCover": "",
+    "noteJson": "inu_no_outa_map",
+    "scene": "scene_05",
+    "levelDesigner": "SugarSu",
+    "difficulty1": "3",
+    "difficulty2": "5",
+    "difficulty3": "7",
+    "unlockLevel": "0"
   }
 
 ]
