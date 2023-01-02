@@ -2,7 +2,7 @@ import { characterSkip, elfinSkip } from './config.js'
 import { MusicData, MusicCore, PlayerValue } from './type.js'
 import { wait } from './common.js'
 
-import { rank as rankDB, putDiffDiff, playerDiff, getDiffDiff, putDIffDiffMusic } from './database.js'
+import { rank as rankDB, putDiffDiff, playerDiff, getDiffDiff, putDIffDiffMusic, isWeekOldSong } from './database.js'
 
 const parseMusicc = (music: MusicData) => {
   const { uid, difficulty: difficulties } = music
@@ -48,8 +48,12 @@ export const diffdiff = async (musics: MusicData[]) => {
           log('sum', sum)
           log('ranks', { rank, rank2 })
         } else {
-          absoluteValueMap.set(music, absoluteValueMap.get(music) - averageDiff)
-          absoluteValueMap.set(music2, absoluteValueMap.get(music2) + averageDiff)
+          if (await isWeekOldSong(music2.uid)) {
+            absoluteValueMap.set(music, absoluteValueMap.get(music) - averageDiff)
+          }
+          if (await isWeekOldSong(music.uid)) {
+            absoluteValueMap.set(music2, absoluteValueMap.get(music2) + averageDiff)
+          }
         }
       }
     }
@@ -102,12 +106,16 @@ const accJudge = (acc: number) => {
 export const diffPlayer = async (players: [string, PlayerValue][]) => {
   const diffDiff = await getDiffDiff()
   const diffDiffMap = {} as Record<string, number[]>
-  diffDiff.forEach(({ uid, difficulty, relative }) => {
+  for (const { uid, difficulty, relative } of diffDiff) {
     if (!diffDiffMap[uid]) {
       diffDiffMap[uid] = []
     }
-    diffDiffMap[uid][difficulty] = relative
-  })
+    if (await isWeekOldSong(uid)) {
+      diffDiffMap[uid][difficulty] = relative
+    } else {
+      diffDiffMap[uid][difficulty] = 0
+    }
+  }
 
   const batch = playerDiff.batch()
   for (const [id, { plays }] of players) {
