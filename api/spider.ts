@@ -311,7 +311,13 @@ const refreshMusicList = async () => {
 
   tags.New.musicList = Object.entries(newList).map(([json, ids]) => ({ json, musics: ids }))
 
-  const { music_tag_list: rawTag } = await downloadTag()
+  const { music_tag_list: rawTag } = await downloadTag().catch(e => {
+    log(e)
+    return { music_tag_list: [] }
+  })
+  if (!rawTag.length) {
+    return
+  }
   const collab = rawTag.filter(({ tag_name: { English } }) => English === 'Collab').flatMap(({ music_list }) => music_list)
   const collabMusicList: Record<string, string[]> = {}
   collab.forEach(id => {
