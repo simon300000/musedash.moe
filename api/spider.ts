@@ -1,4 +1,5 @@
-/* eslint camelcase: ["off"] */
+import LRU from 'lru-cache'
+
 import { MusicData, MusicCore, PlayerValue, RawAPI, RankKey, MusicTagList, genKey } from './type.js'
 import { rank, player, search, rankUpdateTime, playerUpdateTime, putTag, checkNewSong, isNewSong, saveRaw } from './database.js'
 import { albums, AvailableLocales, musics } from './albumParser.js'
@@ -12,6 +13,10 @@ import { diffdiff, diffPlayer } from './diffdiff.js'
 import { SPIDER_PARALLEL } from './config.js'
 
 const waits = new Map<string, Wait>()
+
+const downCache = new LRU<string, any>({
+  maxAge: 1000 * 60 * 60
+})
 
 let spiders = SPIDER_PARALLEL
 
@@ -35,7 +40,15 @@ const sumLock = ({ uid, difficulty, platform }: RankKey) => {
   return res
 }
 
-const down = async <T>(url: string) => fetch(url).then<T>(w => w.json())
+const down = async <T>(url: string) => {
+  const hit = downCache.get(url)
+  if (hit) {
+    return hit
+  }
+  const result = await fetch(url).then<T>(w => w.json())
+  downCache.set(url, result)
+  return result
+}
 
 const downloadTag = () => down<MusicTagList>('https://prpr-muse-dash.peropero.net/musedash/v1/music_tag?platform=pc')
 
