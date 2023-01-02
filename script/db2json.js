@@ -1,7 +1,7 @@
 const fs = require('fs')
-const level = require('level')
+const { RaveLevel } = require('level')
 
-let db = level(`./db`, { valueEncoding: 'json' })
+const db = new RaveLevel('./db', { valueEncoding: 'json' })
 
 let json = {}
 

@@ -1,11 +1,11 @@
-import { Level } from 'level'
+import { RaveLevel } from 'rave-level'
 
 import { RankKey, RankValue, PlayerValue, TagExport, APIResult, genKey, MusicCore } from './type.js'
 import { MusicDiffDiff, DiffDiffResult } from './diffdiff.js'
 
 const TWO_DAY = 1000 * 60 * 60 * 24 * 2
 
-const db = new Level('./db')
+const db = new RaveLevel('./db')
 
 const rankdb = db.sublevel<string, RankValue[]>('rank', { valueEncoding: 'json' })
 
