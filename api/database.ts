@@ -112,6 +112,14 @@ export const isWeekOldSong = async (id: string) => {
   return now - current > 1000 * 60 * 60 * 24 * 7
 }
 
+export const playerDataOld = async () => {
+  const now = Date.now()
+  const lastUpdate = await state.get('playerLastUpdate').catch(() => 0) as number
+  return now - lastUpdate > 1000 * 60 * 60 * 24
+}
+
+export const updatePlayerData = () => state.put('playerLastUpdate', Date.now())
+
 type NOW = {
   now: number
 }

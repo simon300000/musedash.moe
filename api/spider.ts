@@ -3,7 +3,7 @@ import { fetch, setGlobalDispatcher, Agent } from 'undici'
 import LRU from 'lru-cache'
 
 import { MusicData, MusicCore, PlayerValue, RawAPI, RankKey, MusicTagList, genKey } from './type.js'
-import { rank, player, search, rankUpdateTime, playerUpdateTime, putTag, checkNewSong, isNewSong, saveRaw } from './database.js'
+import { rank, player, search, rankUpdateTime, playerUpdateTime, putTag, checkNewSong, isNewSong, saveRaw, playerDataOld, updatePlayerData } from './database.js'
 import { albums, AvailableLocales, musics } from './albumParser.js'
 
 import { log, error, reloadAlbums } from './api.js'
@@ -420,6 +420,7 @@ const mal = async (musicData: MusicData[]) => {
   await diffPlayer(players)
   log('Players Analyzed')
   await reloadAlbums()
+  await updatePlayerData()
 }
 
 
@@ -427,6 +428,12 @@ export const run = async () => {
   log('hi~')
   await refreshMusicList()
   spiderClock()
+  if (await playerDataOld()) {
+    const startTime = Date.now()
+    await mal(musicList)
+    const endTime = Date.now()
+    log(`TAKE ${endTime - startTime}, at ${new Date().toString()}`)
+  }
   while (true) {
     const currentHour = new Date().getUTCHours()
     const waitTime = (19 - currentHour + 24) % 24 || 24
