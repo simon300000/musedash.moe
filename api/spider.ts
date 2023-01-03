@@ -371,10 +371,8 @@ const wakeupSpider = async () => {
   if (spiders) {
     spiders--
     wakeupSpider()
-    console.log('spider wake')
     await spider()
     spiders++
-    console.log('spider sleep')
   }
 }
 
