@@ -1,8 +1,18 @@
+import { isMainThread, Worker, parentPort } from 'node:worker_threads'
+
 import { characterSkip, elfinSkip } from './config.js'
 import { MusicData, MusicCore, PlayerValue } from './type.js'
-import { wait } from './common.js'
 
 import { rank as rankDB, putDiffDiff, playerDiff, getDiffDiff, putDIffDiffMusic, isWeekOldSong } from './database.js'
+
+const worker = isMainThread ? new Worker(new URL(import.meta.url)) : undefined
+const workerJobs = new Map<number, () => void>()
+
+const dispatchJob = (instruction: WorkerInstruction) => new Promise<void>(resolve => {
+  const key = Math.random()
+  workerJobs.set(key, resolve)
+  worker?.postMessage({ key, ...instruction })
+})
 
 const parseMusicc = (music: MusicData) => {
   const { uid, difficulty: difficulties } = music
@@ -14,6 +24,9 @@ const parseMusicc = (music: MusicData) => {
 }
 
 export const diffdiff = async (musics: MusicData[]) => {
+  if (worker) {
+    return dispatchJob({ cmd: 'diffdiff', params: [musics] })
+  }
   const musicList = musics.map(parseMusicc).flat()
   const rankMap = new WeakMap<MusicCore, IdPercentagePairs>()
   const absoluteValueMap = new WeakMap<MusicCore, number>()
@@ -32,7 +45,6 @@ export const diffdiff = async (musics: MusicData[]) => {
   for (let index = 0; index < musicList.length; index++) {
     const music = musicList[index]
     const rank = rankMap.get(music)
-    await wait(5)
 
     for (let index2 = index + 1; index2 < musicList.length; index2++) {
       const music2 = musicList[index2];
@@ -104,6 +116,9 @@ const accJudge = (acc: number) => {
 }
 
 export const diffPlayer = async (players: [string, PlayerValue][]) => {
+  if (worker) {
+    return dispatchJob({ cmd: 'diffPlayer', params: [players] })
+  }
   const diffDiff = await getDiffDiff()
   const diffDiffMap = {} as Record<string, number[]>
   for (const { uid, difficulty, relative } of diffDiff) {
@@ -146,6 +161,25 @@ export const diffPlayer = async (players: [string, PlayerValue][]) => {
   await batch.write()
 }
 
+if (!worker) {
+  parentPort.on('message', async (message: WorkerCommand) => {
+    if (message.cmd === 'diffdiff') {
+      await diffdiff(...message.params)
+    } else if (message.cmd === 'diffPlayer') {
+      await diffPlayer(...message.params)
+    }
+    parentPort.postMessage(message.key)
+  })
+} else {
+  worker.on('message', (key: number) => {
+    const resolve = workerJobs.get(key)
+    if (resolve) {
+      resolve()
+      workerJobs.delete(key)
+    }
+  })
+}
+
 type IdPercentagePairs = Record<string, number>
 
 type MusicCoreExtended = MusicCore & {
@@ -160,3 +194,15 @@ export type DiffDiffResult = {
 export type MusicDiffDiff = MusicCoreExtended & DiffDiffResult
 
 type LevelAverage = Record<string, { sum: number, count: number, level: number }>
+
+type WorkerInstruction = {
+  cmd: 'diffdiff'
+  params: [MusicData[]]
+} | {
+  cmd: 'diffPlayer'
+  params: [[string, PlayerValue][]]
+}
+
+type WorkerCommand = WorkerInstruction & {
+  key: number
+}
