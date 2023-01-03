@@ -1,3 +1,5 @@
+import { fetch, setGlobalDispatcher, Agent } from 'undici'
+
 import LRU from 'lru-cache'
 
 import { MusicData, MusicCore, PlayerValue, RawAPI, RankKey, MusicTagList, genKey } from './type.js'
@@ -11,6 +13,8 @@ import { resultWithHistory, wait } from './common.js'
 import { diffdiff, diffPlayer } from './diffdiff.js'
 
 import { SPIDER_PARALLEL } from './config.js'
+
+setGlobalDispatcher(new Agent({ connect: { timeout: 120_000 } }))
 
 const waits = new Map<string, Wait>()
 
@@ -43,11 +47,11 @@ const sumLock = ({ uid, difficulty, platform }: RankKey) => {
 const down = async <T>(url: string) => {
   const hit = downCache.get(url)
   if (hit) {
-    return hit
+    return hit as T
   }
-  const result = await fetch(url).then<T>(w => w.json())
+  const result = await fetch(url).then(w => w.json())
   downCache.set(url, result)
-  return result
+  return result as T
 }
 
 const downloadTag = () => down<MusicTagList>('https://prpr-muse-dash.peropero.net/musedash/v1/music_tag?platform=pc')

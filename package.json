@@ -26,6 +26,7 @@
     "lru-cache": "^6.0.0",
     "rave-level": "^1.0.0",
     "register-service-worker": "^1.6.2",
+    "undici": "^5.14.0",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1",
