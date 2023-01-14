@@ -147,3 +147,36 @@ export const cleanOldRaw = async () => {
   await chain.write()
 }
 
+const MAX_TIME_DELTA = 1000 * 60 * 60 * 24 * 3
+const MIN_DIFF_DELTA = 0.0005
+
+type PlayerDiffEntry = {
+  time: number
+  diff: number
+  rank: number
+}
+
+const playerDiffHistory = db.sublevel<string, any>('playerDiffHistory', { valueEncoding: 'json' })
+const playerDiffHistoryNumber = playerDiffHistory.sublevel<string, number>('number', { valueEncoding: 'json' })
+const playerDiffHistoryDB = playerDiffHistory.sublevel<string, PlayerDiffEntry>('db', { valueEncoding: 'json' })
+
+const getPlayerDiffHistoryNumber = (id: string) => playerDiffHistoryNumber.get(id).catch(() => 0)
+const setPlayerDiffHistoryNumber = (id: string, value: number) => playerDiffHistoryNumber.put(id, value)
+
+export const insertPlayerDiffHistory = async (id: string, diff: number, rank: number) => {
+  const time = Date.now()
+  const number = await getPlayerDiffHistoryNumber(id)
+  const key = `${id}_${number}`
+  const entry = { time, diff, rank }
+  if (number === 0) {
+    await playerDiffHistoryDB.put(key, entry)
+    await setPlayerDiffHistoryNumber(id, 1)
+    return
+  }
+
+  const { time: lastTime, diff: lastDiff, rank: lastRank } = await playerDiffHistoryDB.get(`${id}_${number - 1}`)
+  if (time - lastTime > MAX_TIME_DELTA || rank !== lastRank || Math.abs(diff - lastDiff) > MIN_DIFF_DELTA) {
+    await playerDiffHistoryDB.put(key, entry)
+    await setPlayerDiffHistoryNumber(id, number + 1)
+  }
+}

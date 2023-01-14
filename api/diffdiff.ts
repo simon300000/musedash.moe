@@ -3,7 +3,7 @@ import { isMainThread, Worker, parentPort } from 'node:worker_threads'
 import { characterSkip, elfinSkip } from './config.js'
 import { MusicData, MusicCore, PlayerValue } from './type.js'
 
-import { rank as rankDB, putDiffDiff, playerDiff, getDiffDiff, putDIffDiffMusic, isWeekOldSong } from './database.js'
+import { rank as rankDB, putDiffDiff, playerDiff, getDiffDiff, putDIffDiffMusic, isWeekOldSong, insertPlayerDiffHistory } from './database.js'
 
 const worker = isMainThread ? new Worker(new URL(import.meta.url)) : undefined
 const workerJobs = new Map<number, () => void>()
@@ -132,8 +132,7 @@ export const diffPlayer = async (players: [string, PlayerValue][]) => {
     }
   }
 
-  const batch = playerDiff.batch()
-  for (const [id, { plays }] of players) {
+  const playerDiffs = players.map(([id, { plays }]) => {
     const accMap = {} as Record<string, number[]>
     plays
       .filter(({ character_uid, elfin_uid }) => !characterSkip.includes(character_uid) && !elfinSkip.includes(elfin_uid))
@@ -155,10 +154,17 @@ export const diffPlayer = async (players: [string, PlayerValue][]) => {
       .sort((a, b) => a - b)
       .reduce((r, a) => a + r * 0.8, 0) / 5
 
-    batch.put(id, rl)
-  }
+    return { id, rl }
+  })
+
+  const batch = playerDiffs.reduce((batch, { id, rl }) => batch.put(id, rl), playerDiff.batch())
   await playerDiff.clear()
   await batch.write()
+
+  const playerDiffsRanked = playerDiffs.sort((a, b) => b.rl - a.rl).map((w, i) => ({ ...w, rank: i + 1 }))
+  for (const { id, rl, rank } of playerDiffsRanked) {
+    await insertPlayerDiffHistory(id, rl, rank)
+  }
 }
 
 if (!worker) {
