@@ -8,8 +8,8 @@ import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { readFile } from 'fs/promises'
 
-import { Albums, PlayerValue, RankKey } from './type.js'
-import { rank, player, search, getDiffDiff, playerDiff, rankUpdateTime, playerUpdateTime, getTag, getRaw } from './database.js'
+import { Albums, RankKey } from './type.js'
+import { rank, player, search, getDiffDiff, playerDiff, rankUpdateTime, playerUpdateTime, getTag, getRaw, getPlayerDiffHistoryNumber, getPlayerDiffHistory } from './database.js'
 import { albums, AvailableLocales, availableLocales } from './albumParser.js'
 
 import { search as searchF } from './common.js'
@@ -135,15 +135,18 @@ router.post('/refreshRank', koaBody(), async ctx => {
 
 router.get('/player/:id', async ctx => {
   const { id } = ctx.params
-  const playerP = player.get(id).catch<any>(() => ({ plays: [{ uid: '35-0', history: {}, difficulty: 0 }], key: '', user: { user_id: '404', nickname: 'User not Found' } }))
-  const playerRLP = playerDiff.get(id).catch<string>(() => 'NaN')
-  const p = await playerP as PlayerValue & { rl: number | string, lastUpdate: number }
-  const playerRL = await playerRLP
-  if (p && playerRL) {
-    p.rl = playerRL
-  }
-  p.lastUpdate = await playerUpdateTime.get(ctx.params.id)
+  const [p, playerRL, playerDiffHistoryNumber, lastUpdate] = await Promise.all([player.get(id).catch<any>(() => ({ plays: [{ uid: '35-0', history: {}, difficulty: 0 }], key: '', user: { user_id: '404', nickname: 'User not Found' } })), playerDiff.get(id).catch<string>(() => 'NaN'), getPlayerDiffHistoryNumber(id), playerUpdateTime.get(ctx.params.id)])
+
+  p.rl = playerRL
+  p.diffHistoryNumber = playerDiffHistoryNumber
+  p.lastUpdate = lastUpdate
   ctx.body = p
+})
+
+router.get('/player/diffHistory/:id', async ctx => {
+  const { id } = ctx.params
+  const { start, length } = ctx.query
+  ctx.body = await getPlayerDiffHistory(id, Number(start), Number(length))
 })
 
 router.get('/search', async ctx => {

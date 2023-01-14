@@ -160,7 +160,7 @@ const playerDiffHistory = db.sublevel<string, any>('playerDiffHistory', { valueE
 const playerDiffHistoryNumber = playerDiffHistory.sublevel<string, number>('number', { valueEncoding: 'json' })
 const playerDiffHistoryDB = playerDiffHistory.sublevel<string, PlayerDiffEntry>('db', { valueEncoding: 'json' })
 
-const getPlayerDiffHistoryNumber = (id: string) => playerDiffHistoryNumber.get(id).catch(() => 0)
+export const getPlayerDiffHistoryNumber = (id: string) => playerDiffHistoryNumber.get(id).catch(() => 0)
 const setPlayerDiffHistoryNumber = (id: string, value: number) => playerDiffHistoryNumber.put(id, value)
 
 export const insertPlayerDiffHistory = async (id: string, diff: number, rank: number) => {
@@ -180,3 +180,11 @@ export const insertPlayerDiffHistory = async (id: string, diff: number, rank: nu
     await setPlayerDiffHistoryNumber(id, number + 1)
   }
 }
+
+export const getPlayerDiffHistory = async (id: string, start: number, length: number) => Promise.all(
+  Array(length)
+    .fill(start)
+    .map((v, i) => v + i)
+    .map(w => `${id}_${w}`)
+    .map(w => playerDiffHistoryDB.get(w).catch(() => undefined))
+)
