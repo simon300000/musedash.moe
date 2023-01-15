@@ -3,7 +3,7 @@ import { fetch, setGlobalDispatcher, Agent } from 'undici'
 import LRU from 'lru-cache'
 
 import { MusicData, MusicCore, PlayerValue, RawAPI, RankKey, MusicTagList, genKey } from './type.js'
-import { rank, player, search, rankUpdateTime, playerUpdateTime, putTag, checkNewSong, isNewSong, saveRaw, playerDataOld, updatePlayerData } from './database.js'
+import { rank, player, search, rankUpdateTime, playerUpdateTime, putTag, checkNewSong, isNewSong, saveRaw, playerDataOld, updatePlayerData, setPlayerNumer } from './database.js'
 import { albums, AvailableLocales, musics } from './albumParser.js'
 
 import { log, error, reloadAlbums } from './api.js'
@@ -160,6 +160,7 @@ const analyze = async (musicData: RankKey[]) => {
 
   await deleteOld(key)
   await playerTimeP
+  await setPlayerNumer(players.length)
   log('Player Refreshed')
 
   return players

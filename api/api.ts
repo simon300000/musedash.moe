@@ -9,7 +9,7 @@ import { fileURLToPath } from 'url'
 import { readFile } from 'fs/promises'
 
 import { Albums, RankKey, PlayerValue } from './type.js'
-import { rank, player, search, getDiffDiff, playerDiff, rankUpdateTime, playerUpdateTime, getTag, getRaw, getPlayerDiffHistoryNumber, getPlayerDiffHistory } from './database.js'
+import { rank, player, search, getDiffDiff, playerDiff, rankUpdateTime, playerUpdateTime, getTag, getRaw, getPlayerDiffHistoryNumber, getPlayerDiffHistory, getPlayerNumer } from './database.js'
 import { albums, AvailableLocales, availableLocales } from './albumParser.js'
 
 import { search as searchF } from './common.js'
@@ -181,6 +181,10 @@ router.get('/diffdiff', async ctx => {
 
 router.get('/uptime', ctx => {
   ctx.body = process.uptime()
+})
+
+router.get('/state/playerNumber', async ctx => {
+  ctx.body = await getPlayerNumer()
 })
 
 app.use(router.routes())

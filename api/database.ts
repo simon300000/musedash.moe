@@ -90,6 +90,9 @@ const isNew = async (time: number) => {
   return time >= (current - 1000 * 60 * 60 * 24)
 }
 
+export const setPlayerNumer = (num: number) => state.put('playerNum', num)
+export const getPlayerNumer = () => state.get('playerNum').catch(() => 0)
+
 const newSong = db.sublevel<string, number>('newSong', { valueEncoding: 'json' })
 
 export const checkNewSong = async (id: string) => {
