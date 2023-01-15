@@ -179,6 +179,10 @@ router.get('/diffdiff', async ctx => {
   ctx.body = diffDiff.map(({ uid, difficulty, level, absolute, relative }) => [uid, difficulty, level, absolute, relative])
 })
 
+router.get('/uptime', ctx => {
+  ctx.body = process.uptime()
+})
+
 app.use(router.routes())
 
 app.listen(8301)
