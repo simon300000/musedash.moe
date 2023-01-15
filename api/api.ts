@@ -8,7 +8,7 @@ import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { readFile } from 'fs/promises'
 
-import { Albums, RankKey } from './type.js'
+import { Albums, RankKey, PlayerValue } from './type.js'
 import { rank, player, search, getDiffDiff, playerDiff, rankUpdateTime, playerUpdateTime, getTag, getRaw, getPlayerDiffHistoryNumber, getPlayerDiffHistory } from './database.js'
 import { albums, AvailableLocales, availableLocales } from './albumParser.js'
 
@@ -17,6 +17,8 @@ import { search as searchF } from './common.js'
 import { joinJob } from './spider.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
+
+const PLAYER_NOT_FOUND: PlayerValue = { plays: [{ uid: '35-0', history: { lastRank: NaN }, difficulty: 0, score: NaN, acc: NaN, i: NaN, sum: NaN, platform: '?', character_uid: '2', elfin_uid: '' }], key: '', user: { user_id: '404', nickname: 'User not Found' } }
 
 const cache = new LRU({
   maxAge: 1000 * 5,
@@ -135,12 +137,19 @@ router.post('/refreshRank', koaBody(), async ctx => {
 
 router.get('/player/:id', async ctx => {
   const { id } = ctx.params
-  const [p, playerRL, playerDiffHistoryNumber, lastUpdate] = await Promise.all([player.get(id).catch<any>(() => ({ plays: [{ uid: '35-0', history: {}, difficulty: 0 }], key: '', user: { user_id: '404', nickname: 'User not Found' } })), playerDiff.get(id).catch<string>(() => 'NaN'), getPlayerDiffHistoryNumber(id), playerUpdateTime.get(ctx.params.id)])
+  const [
+    p,
+    rl,
+    diffHistoryNumber,
+    lastUpdate
+  ] = await Promise.all([
+    player.get(id).catch(() => PLAYER_NOT_FOUND),
+    playerDiff.get(id).catch<string>(() => 'NaN'),
+    getPlayerDiffHistoryNumber(id),
+    playerUpdateTime.get(ctx.params.id)
+  ])
 
-  p.rl = playerRL
-  p.diffHistoryNumber = playerDiffHistoryNumber
-  p.lastUpdate = lastUpdate
-  ctx.body = p
+  ctx.body = { lastUpdate, rl, diffHistoryNumber, ...p }
 })
 
 router.get('/player/diffHistory/:id', async ctx => {
