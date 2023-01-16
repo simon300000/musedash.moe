@@ -183,11 +183,11 @@ router.get('/uptime', ctx => {
   ctx.body = process.uptime()
 })
 
-router.get('/state/playerNumber', async ctx => {
+router.get('/playerNumber', async ctx => {
   ctx.body = await getPlayerNumer()
 })
 
-router.get('/state/playerDiffRank', async ctx => {
+router.get('/playerDiffRank', async ctx => {
   ctx.body = await getPlayerDiffRank()
 })
 
