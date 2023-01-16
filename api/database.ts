@@ -93,6 +93,14 @@ const isNew = async (time: number) => {
 export const setPlayerNumer = (num: number) => state.put('playerNum', num)
 export const getPlayerNumer = () => state.get('playerNum').catch(() => 0)
 
+type PlayerDiff = {
+  id: string
+  rl: number
+}
+
+export const setPlayerDiffRank = (diff: PlayerDiff[]) => state.put('playerDiffRank', diff)
+export const getPlayerDiffRank = () => state.get('playerDiffRank').catch(() => [] as PlayerDiff[])
+
 const newSong = db.sublevel<string, number>('newSong', { valueEncoding: 'json' })
 
 export const checkNewSong = async (id: string) => {

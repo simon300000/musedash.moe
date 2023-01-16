@@ -3,7 +3,7 @@ import { isMainThread, Worker, parentPort } from 'node:worker_threads'
 import { characterSkip, elfinSkip } from './config.js'
 import { MusicData, MusicCore, PlayerValue } from './type.js'
 
-import { rank as rankDB, putDiffDiff, playerDiff, getDiffDiff, putDIffDiffMusic, isWeekOldSong, insertPlayerDiffHistory } from './database.js'
+import { rank as rankDB, putDiffDiff, playerDiff, getDiffDiff, putDIffDiffMusic, isWeekOldSong, insertPlayerDiffHistory, setPlayerDiffRank } from './database.js'
 
 const worker = isMainThread ? new Worker(new URL(import.meta.url)) : undefined
 const workerJobs = new Map<number, () => void>()
@@ -161,7 +161,9 @@ export const diffPlayer = async (players: [string, PlayerValue][]) => {
   await playerDiff.clear()
   await batch.write()
 
-  const playerDiffsRanked = playerDiffs.sort((a, b) => b.rl - a.rl).map((w, i) => ({ ...w, rank: i + 1 }))
+  const playerDiffsRank = playerDiffs.sort((a, b) => b.rl - a.rl)
+  await setPlayerDiffRank(playerDiffsRank)
+  const playerDiffsRanked = playerDiffsRank.map((w, i) => ({ ...w, rank: i + 1 }))
   for (const { id, rl, rank } of playerDiffsRanked) {
     await insertPlayerDiffHistory(id, rl, rank)
   }
