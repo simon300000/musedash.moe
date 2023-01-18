@@ -65,7 +65,7 @@
     </div>
   </nav>
   <record v-for="play in plays" :play="play" :src="play.src" :name="play.name" :lv="play.lv" :author="play.author" :link="play.link" :sum-link="play.sumLink" :elfin="play.elfin" :character="play.character" :key="`${play.platform}_${play.difficulty}_${play.uid}`">
-    <template v-if="rawA && raw">
+    <template v-if="!mdmc && raw">
       <pre v-if="rawMap[`${play.uid}-${play.difficulty}-${play.platform}-${id}`]"><code>{{rawMap[`${play.uid}-${play.difficulty}-${play.platform}-${id}`]}}</code></pre>
       <button v-else class="button is-text is-small" @click="loadRaw(play)">Load raw</button>
     </template>
@@ -81,7 +81,7 @@ import record from '@/components/record.vue'
 import { getRankRaw } from '@/api'
 
 export default {
-  props: ['plays', 'current', 'id', 'rawA'],
+  props: ['plays', 'current', 'id', 'mdmc'],
   data() {
     return {
       raw: false,
