@@ -124,7 +124,6 @@ export const createStore = ({ lang, changeTitle, theme }) => {
         }
       },
       async loadDiffDiffMusic({ commit }, { uid, difficulty }) {
-        console.log('loadDiffDiffMusic', uid, difficulty)
         commit('setDiffDiffMusic', { uid, difficulty, value: await getDiffDiffMusic({ uid, difficulty }) })
       },
       async loadRank({ commit, state, dispatch }, { uid, difficulty, platform }) {
