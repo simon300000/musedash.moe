@@ -79,8 +79,7 @@ export default merge(process.env.development ? devConfig : prodConfig, {
       },
       {
         test: /\.js$/,
-        loader: 'babel-loader',
-        include: [resolve('src')]
+        loader: 'babel-loader'
       },
       {
         test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,

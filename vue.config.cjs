@@ -1,5 +1,13 @@
 module.exports = {
   lintOnSave: false,
+  configureWebpack: {
+    module: {
+      rules: [{
+        test: /\.js$/,
+        loader: 'babel-loader'
+        }]
+    },
+  },
   pages: {
     index: {
       entry: 'src/entry-client.js',
