@@ -64,6 +64,7 @@
       </div>
     </div>
   </nav>
+  <History v-if="!mdmc" :player="current" />
   <record v-for="play in plays" :play="play" :src="play.src" :name="play.name" :lv="play.lv" :author="play.author" :link="play.link" :sum-link="play.sumLink" :elfin="play.elfin" :character="play.character" :key="`${play.platform}_${play.difficulty}_${play.uid}`">
     <template v-if="!mdmc && raw">
       <pre v-if="rawMap[`${play.uid}-${play.difficulty}-${play.platform}-${id}`]"><code>{{rawMap[`${play.uid}-${play.difficulty}-${play.platform}-${id}`]}}</code></pre>
@@ -77,6 +78,7 @@
 <script>
 import Octicon from '@/components/octicon.vue'
 import record from '@/components/record.vue'
+import History from '@/components/history.vue'
 
 import { getRankRaw } from '@/api'
 
@@ -90,7 +92,8 @@ export default {
   },
   components: {
     Octicon,
-    record
+    record,
+    History
   },
   methods: {
     async loadRaw({ uid, difficulty, platform }) {

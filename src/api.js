@@ -27,6 +27,7 @@ export const searchPlayer = search => get(`search/${search}`)
 export const getLog = () => getText('log')
 export const getCE = () => get('ce')
 export const getDiffDiff = async () => (await get('diffdiff')).map(([uid, difficulty, level, absolute, relative]) => ({ uid, difficulty, level, absolute, relative }))
+export const getDiffHistory = ({ id, start, length }) => get(`player/diffHistory/${id}?start=${start}&length=${length}`)
 
 export const getDiffDiffMusic = ({ uid, difficulty }) => get(`diffDiffMusic/${uid}/${difficulty}`)
 export const getRankUpdateTime = ({ uid, difficulty, platform }) => get(`rankUpdateTime/${uid}/${difficulty}/${platform}`)
