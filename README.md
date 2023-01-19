@@ -54,7 +54,7 @@ git submodule update
 #### Then install npm dependencies
 
 ```sh
-npm install --legacy-peer-deps
+npm install
 ```
 
 
