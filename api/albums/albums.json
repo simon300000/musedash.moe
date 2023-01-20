@@ -28,7 +28,18 @@
         "jsonName": "ALBUM44",
         "prefabsName": "AlbumDisco44",
         "free": false
-    },    {
+    },    
+    {
+        "uid": "music_package_59",
+        "title": "MSR 特选曲目组合包",
+        "tag": "Other",
+        "needPurchase": true,
+        "price": "¥40.00",
+        "jsonName": "ALBUM60",
+        "prefabsName": "AlbumDisco60",
+        "free": false
+    },
+    {
         "uid": "music_package_58",
         "title": "Nanahira Paradise",
         "tag": "Other",

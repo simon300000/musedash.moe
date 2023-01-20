@@ -275,10 +275,10 @@
     "characterName": "Buro",
     "cosName": "Pilot",
     "description": "Hey! Give me a dollar! I wanna play the kiddie ride!",
-    "skill": "Pilot Buro becomes invincible while bursting into Fever Mode.",
+    "skill": "Pilot Buro will not get hurt when bursting into Fever.",
     "skills": [
-      "Pilot Buro becomes invincible while bursting into Fever Mode.",
-      "Pilot Buro Nya becomes invincible  while bursting into Fever Mode nya!"
+      "Pilot Buro will not get hurt when bursting into Fever.",
+      "Pilot Buro Nya will not get hurt when bursting into Fever nya."
     ],
     "chipName": "Paper Plane",
     "chipDescription": "Whoops! That paper looks like my report card!",
@@ -617,8 +617,8 @@
     "description": "Master, do you want other services?",
     "skill": "Maid Marija will gain 150% more HP and be invincible for 2 seconds upon collecting a Red Heart when HP is lower than 100.",
     "skills": [
-      "Maid Marija will gain 150% more HP and be invincible for 2 seconds upon collecting a Red Heart when HP is lower than 100.",
-      "Maid Marija Nya will gain 150% more HP and be invincible for 2 seconds upon collecting a nya Red Heart when nya HP is lower than 100 nya!"
+      "Maid Marija will gain 150% more HP and be invincible for 2 seconds upon first collecting a Red Heart when HP is lower than 100.",
+      "Maid Marija Nya will gain 150% more HP and be invincible for 2 seconds upon first collecting a nya Red Heart when nya HP is lower than 100 nya!"
     ],
     "chipName": "Salted Fish",
     "chipDescription": "Master, should I believe in you?(ºOº)",
@@ -1065,7 +1065,7 @@
     "characterName": "NEKO#ΦωΦ",
     "cosName": "Game streamer",
     "description": "Game streamer",
-    "skill": "The streamer from Cytus II, Neko#ΦωΦ. She will become invincible after her hp drops to 0. \nYour score will not be recorded if you clear the stage in this state. Yeah~ A collab character that won't die~",
+    "skill": "The streamer from Cytus II, Neko#ΦωΦ. You can still continue the game after her HP drops to 0. \nYour score will not be recorded if you clear the stage in this state. Yeah~ A collab character that won't die~",
     "skills": null,
     "chipName": "Meow Bot",
     "chipDescription": "That person will not stop until being able to buy a dozen of Meow Bot.",
@@ -1357,6 +1357,32 @@
       [ "What are you staring at?! Ah… How do you know there are bombs under my dress?",
         "You can't eat that mushroom! It is… the magic mushroom, which can increase intimacy between you and who you love… I don't know the details! I didn't eat it!!",
         "Stop—I handed over everything I stole... I took!If you dare do something that crosses the line, I'll call Reimu to sort you out!"]
+    ],
+    "reviewExpressions": null,
+    "catExpressions": null
+  },
+  {
+    "characterName": "Amiya",
+    "cosName": "Leader of Rhodes Island",
+    "description": "Leader of Rhodes Island",
+    "skill": "Amiya earns more Fever Energy by repelling enemies. When Fever Mode is active, she will convert \"Miss\" into \"Great\", \nand \"Great\" into \"Perfect\".However, Amiya will not earn any Fever Energy for 3 seconds after Fever Mode ends.",
+    "skills": null,
+    "chipName": "Ring",
+    "chipDescription": "One of Amiya's ten rings. Not sure which finger it's for, but it definitely won't fit you, Doctor.",
+    "cv": "Tomoyo Kurosawa",
+    "expressions": [
+      [ "The very thought of performing before you is making me a little nervous, Doctor... but I'll do my best!",
+        "Running with music makes it easier. I must share this discovery with Miss Dobermann. It'll be great if she uses this in training!"],
+      [ "There are still many stages to challenge, Doctor... but make sure you get some rest, okay?"],
+      [ "Do the enemies feel pain if I knock them back with my Originium Arts? What? They enjoy this...? Alright then.",
+        "Perhaps you can try mashing the buttons to get through the enemy mob. Don't give up now, Doctor.",
+        "Swing that violin like a weapon? If I must..."],
+      [ "Strategy matters, even in rhythm games. Let's have a mission briefing, Doctor.",
+        "I just plucked up my courage to ask Miss Marija for some violin tips, but she just picked me up and spun me around and around... Was that a yes or no?"],
+      [ "Please predict the charts based on our intel about the boss, Doctor! What? You can't? I'm sorry."],
+      [ "My violin skills have improved? Thank you, Doctor... you're also getting better at the game.",
+        "I'm so happy to hear people around us say how reliable you are, Doctor. But does that mean you're secretly doing overtime? I thought you told me you were getting some rest...",
+        "Me? No, I'm not nervous... but getting stage fright is pretty normal, Doctor. Do let me know if you're nervous as well."]
     ],
     "reviewExpressions": null,
     "catExpressions": null
