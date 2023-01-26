@@ -159,7 +159,7 @@ export const cleanOldRaw = async () => {
 }
 
 const MAX_TIME_DELTA = 1000 * 60 * 60 * 24 * 3
-const MIN_DIFF_DELTA = 0.0005
+const MIN_DIFF_DELTA = 0.005
 
 type PlayerDiffEntry = {
   time: number
@@ -186,7 +186,8 @@ export const insertPlayerDiffHistory = async (id: string, diff: number, rank: nu
   }
 
   const { time: lastTime, diff: lastDiff, rank: lastRank } = await playerDiffHistoryDB.get(`${id}_${number - 1}`)
-  if (time - lastTime > MAX_TIME_DELTA || rank !== lastRank || Math.abs(diff - lastDiff) > MIN_DIFF_DELTA) {
+  const minRankDelta = Math.min(rank, lastRank) * 0.05
+  if (time - lastTime > MAX_TIME_DELTA || Math.abs(rank - lastRank) > minRankDelta || Math.abs(diff - lastDiff) > MIN_DIFF_DELTA) {
     await playerDiffHistoryDB.put(key, entry)
     await setPlayerDiffHistoryNumber(id, number + 1)
   }
