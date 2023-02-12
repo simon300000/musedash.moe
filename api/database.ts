@@ -158,7 +158,7 @@ export const cleanOldRaw = async () => {
   await chain.write()
 }
 
-const MAX_TIME_DELTA = 1000 * 60 * 60 * 24 * 3
+const MAX_TIME_DELTA = 1000 * 60 * 60 * 24 * 15
 const MIN_DIFF_DELTA = 0.005
 
 type PlayerDiffEntry = {
