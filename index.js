@@ -22,13 +22,10 @@ app.use(async (ctx, next) => {
       return
     }
     if (url.includes('.hash.')) {
-      console.log('hash', url)
       ctx.set('Cache-Control', 'public, max-age=31536000')
     } else if (url.includes('/covers/')) {
-      console.log('cover', url)
       ctx.set('Cache-Control', 'public, max-age=604800')
     } else {
-      console.log('other', url)
       ctx.set('Cache-Control', 'max-age=14400')
     }
   } catch (e) {
