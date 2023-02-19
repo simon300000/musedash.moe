@@ -77,7 +77,6 @@ export default {
 
 <style scoped>
 .canvas {
-  width: max(65vw);
   height: 320px;
   margin: auto;
 }
