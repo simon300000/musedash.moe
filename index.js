@@ -14,6 +14,30 @@ clientManifest.async = clientManifest.async.filter(file => !file.includes('.noin
 
 const app = new Koa()
 
+app.use(async (ctx, next) => {
+  try {
+    await next()
+    const { url, status } = ctx
+    if (status !== 200) {
+      return
+    }
+    if (url.includes('.hash.')) {
+      console.log('hash', url)
+      ctx.set('Cache-Control', 'public, max-age=31536000')
+    } else if (url.includes('/covers/')) {
+      console.log('cover', url)
+      ctx.set('Cache-Control', 'public, max-age=604800')
+    } else {
+      console.log('other', url)
+      ctx.set('Cache-Control', 'max-age=14400')
+    }
+  } catch (e) {
+    if (e.status === 404) {
+      ctx.set('Cache-Control', 'no-cache')
+    }
+  }
+})
+
 const template = (await readFile('index.html', 'utf-8')).replace('<div id="app"></div>', '<!--vue-ssr-outlet-->')
 
 const renderer = createBundleRenderer(serverBundle, {
@@ -69,8 +93,6 @@ app.use(async ctx => {
   let result = await renderer.renderToString({ url: ctx.url, lang, theme, fetch }).catch(e => {
     console.error(e, { url: ctx.url })
     if (e.code) {
-      ctx.throw(e.code)
-    } else {
       ctx.throw(e.code)
     }
     return undefined

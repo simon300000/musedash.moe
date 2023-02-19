@@ -20,7 +20,7 @@ registerRoute(
     cacheName: 'hashCovers',
     plugins: [
       new ExpirationPlugin({
-        maxEntries: 500
+        maxEntries: 768
       })
     ]
   })
@@ -33,19 +33,6 @@ registerRoute(
     plugins: [
       new ExpirationPlugin({
         maxEntries: 50
-      })
-    ]
-  })
-)
-
-registerRoute(
-  /\/covers\/.*\.png$/,
-  new CacheFirst({
-    cacheName: 'covers',
-    plugins: [
-      new ExpirationPlugin({
-        maxEntries: 400,
-        maxAgeSeconds: 60 * 60 * 24 * 7,
       })
     ]
   })
