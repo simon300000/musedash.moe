@@ -1,6 +1,9 @@
 <template>
 <div id="app" :class="{ blackWhite }">
-  <link rel="stylesheet" :href="themeCss">
+  <link rel="stylesheet" :href="currentTheme.css">
+  <p>
+    {{ currentTheme }}
+  </p>
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <div class="navbar-brand">
@@ -22,7 +25,7 @@
       </div>
 
       <div class="navbar-end">
-        <a class="navbar-item" @click="switchTheme($event)" :href="`?theme=${nextTheme}`">{{otherTheme}}</a>
+        <a class="navbar-item" @click.prevent="setTheme(currentTheme.next)" :href="`?theme=${currentTheme.next}`">{{currentTheme.button}}</a>
         <div class="navbar-end">
           <div class="navbar-item has-dropdown is-hoverable" :class="{'is-active': menu}">
             <a class="navbar-link is-arrowless" @click="switchMenu">
@@ -53,10 +56,27 @@
 import { mapState, mapMutations } from 'vuex'
 import CapsuleDef from '@/components/capsule-def'
 
-// eslint-disable-next-line import/no-webpack-loader-syntax
 import dark from '!file-loader?name=static/css/[name].noinject.hash.[contenthash].css!sass-loader!./dark.scss'
-// eslint-disable-next-line import/no-webpack-loader-syntax
 import light from '!file-loader?name=static/css/[name].noinject.hash.[contenthash].css!sass-loader!./bulma.scss'
+import auto from '!file-loader?name=static/css/[name].noinject.hash.[contenthash].css!sass-loader!./auto.scss'
+
+const themeConfig = {
+  dark: {
+    css: dark,
+    next: 'light',
+    button: '🌙'
+  },
+  light: {
+    css: light,
+    next: 'auto',
+    button: '💡'
+  },
+  auto: {
+    css: auto,
+    next: 'dark',
+    button: 'Auto'
+  }
+}
 
 const langs = {
   ChineseS: '简体中文',
@@ -112,18 +132,8 @@ export default {
       return Object.entries(langs)
         .filter(([lang]) => lang !== this.lang)
     },
-    themeCss() {
-      return this.theme === 'dark' ? dark : light
-    },
-    nextTheme() {
-      if (this.theme === 'dark') {
-        return 'light'
-      } else {
-        return 'dark'
-      }
-    },
-    otherTheme() {
-      return this.theme === 'dark' ? '💡' : '🌙'
+    currentTheme(){
+      return themeConfig[this.theme] || themeConfig.dark
     }
   },
   created() {
@@ -142,11 +152,6 @@ export default {
     },
     closeMenu() {
       this.menu = false
-    },
-    switchTheme(e) {
-      if (preventDefault(e)) {
-        this.setTheme(this.nextTheme)
-      }
     }
   }
 }

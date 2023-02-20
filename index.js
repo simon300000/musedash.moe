@@ -47,7 +47,7 @@ app.use(mount('/covers', serve('./src/covers')))
 app.use(serve('dist'))
 
 const langs = ['ChineseS', 'ChineseT', 'English', 'Japanese', 'Korean']
-const themes = ['dark', 'light']
+const themes = ['dark', 'light', 'auto']
 
 app.use(async ctx => {
   const queryLang = langs.includes(ctx.query.lang) ? ctx.query.lang : undefined

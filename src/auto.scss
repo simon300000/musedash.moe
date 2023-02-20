@@ -1,0 +1,6 @@
+@use "./bulma.scss";
+
+
+@media (prefers-color-scheme: dark) {
+  @import "./darkw.scss";
+}
