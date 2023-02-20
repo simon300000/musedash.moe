@@ -193,10 +193,13 @@ export const insertPlayerDiffHistory = async (id: string, diff: number, rank: nu
   }
 }
 
-export const getPlayerDiffHistory = async (id: string, start: number, length: number) => Promise.all(
-  Array(length)
-    .fill(start)
-    .map((v, i) => v + i)
-    .map(w => `${id}_${w}`)
-    .map(w => playerDiffHistoryDB.get(w).catch(() => undefined))
-)
+export const getPlayerDiffHistory = async (id: string, start: number, length: number) => {
+  const max = await getPlayerDiffHistoryNumber(id)
+  return Promise.all(
+    Array(Math.min(max, length))
+      .fill(start)
+      .map((v, i) => v + i)
+      .map(w => `${id}_${w}`)
+      .map(w => playerDiffHistoryDB.get(w).catch(() => undefined))
+  )
+}
