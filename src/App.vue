@@ -1,9 +1,6 @@
 <template>
 <div id="app" :class="{ blackWhite }">
   <link rel="stylesheet" :href="currentTheme.css">
-  <p>
-    {{ currentTheme }}
-  </p>
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <div class="navbar-brand">
