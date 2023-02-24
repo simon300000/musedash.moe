@@ -110,14 +110,16 @@ export const diffdiff = async (musics: MusicData[]) => {
   }
 }
 
-const accJudge = (acc: number) => {
+const accJudge = (acc: number, param1 = 0.36) => {
   const factor = acc / 100
   if (factor === 1) {
     return 1
   }
   const result = factor - Math.pow(factor, 2) + Math.pow(factor, 4)
-  return result * 0.36
+  return result * param1
 }
+
+const accJudgePlayerRL = (acc: number) => accJudge(acc, 0.72)
 
 export const diffPlayer = async (players: [string, PlayerValue][]) => {
   if (worker) {
@@ -154,7 +156,7 @@ export const diffPlayer = async (players: [string, PlayerValue][]) => {
     const rl = Object.entries(accMap)
       .flatMap(([uid, accs]) => accs.map((acc, difficulty) => ({ uid, difficulty, acc })))
       .filter(({ acc }) => acc !== undefined)
-      .map(({ uid, difficulty, acc }) => accJudge(acc) * diffDiffMap[uid][difficulty])
+      .map(({ uid, difficulty, acc }) => accJudgePlayerRL(acc) * diffDiffMap[uid][difficulty])
       .sort((a, b) => a - b)
       .reduce((r, a) => a + r * 0.8, 0) / 5
 
