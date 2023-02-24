@@ -112,7 +112,11 @@ export const diffdiff = async (musics: MusicData[]) => {
 
 const accJudge = (acc: number) => {
   const factor = acc / 100
-  return factor - Math.pow(factor, 2) + Math.pow(factor, 4)
+  if (factor === 1) {
+    return 1
+  }
+  const result = factor - Math.pow(factor, 2) + Math.pow(factor, 4)
+  return result * 0.36
 }
 
 export const diffPlayer = async (players: [string, PlayerValue][]) => {
