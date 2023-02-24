@@ -28,16 +28,27 @@
         "jsonName": "ALBUM44",
         "prefabsName": "AlbumDisco44",
         "free": false
-    },    
+    },
     {
-        "uid": "music_package_59",
-        "title": "MSR 特选曲目组合包",
-        "tag": "Other",
-        "needPurchase": true,
-        "price": "¥40.00",
-        "jsonName": "ALBUM60",
-        "prefabsName": "AlbumDisco60",
-        "free": false
+      "uid": "music_package_60",
+      "title": "舞萌DX期间限定组曲",
+      "tag": "Other",
+      "needPurchase": true,
+      "price": "¥25.00",
+      "jsonName": "ALBUM61",
+      "prefabsName": "AlbumDisco61",
+      "free": false,
+      "lastActiveTime": "2026-01-31T15:00:00Z"
+    },
+    {
+      "uid": "music_package_59",
+      "title": "MSR 特选曲目组合包",
+      "tag": "Other",
+      "needPurchase": true,
+      "price": "¥40.00",
+      "jsonName": "ALBUM60",
+      "prefabsName": "AlbumDisco60",
+      "free": false
     },
     {
         "uid": "music_package_58",
