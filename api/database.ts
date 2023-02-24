@@ -167,7 +167,7 @@ type PlayerDiffEntry = {
   rank: number
 }
 
-const playerDiffHistory = db.sublevel<string, any>('playerDiffHistory', { valueEncoding: 'json' })
+const playerDiffHistory = db.sublevel<string, any>('playerDiffHistory2', { valueEncoding: 'json' })
 const playerDiffHistoryNumber = playerDiffHistory.sublevel<string, number>('number', { valueEncoding: 'json' })
 const playerDiffHistoryDB = playerDiffHistory.sublevel<string, PlayerDiffEntry>('db', { valueEncoding: 'json' })
 
