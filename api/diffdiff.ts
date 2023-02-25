@@ -119,7 +119,7 @@ const accJudge = (acc: number, param1 = 0.36) => {
   return result * param1
 }
 
-const accJudgePlayerRL = (acc: number) => accJudge(acc, 0.72)
+const accJudgePlayerRL = (acc: number) => accJudge(acc, 1)
 
 export const diffPlayer = async (players: [string, PlayerValue][]) => {
   if (worker) {
