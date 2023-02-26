@@ -110,7 +110,7 @@ export const diffdiff = async (musics: MusicData[]) => {
   }
 }
 
-const accJudge = (acc: number, param1 = 0.36) => {
+const accJudge = (acc: number, param1 = 1) => {
   const factor = acc / 100
   if (factor === 1) {
     return 1
