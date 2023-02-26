@@ -75,7 +75,7 @@ const toSum = ({ uid, difficulty }: RankKey) => !Object.keys(platforms)
 
 const sum = async ({ uid, difficulty }: MusicCore) => {
   await sumWait({ uid, difficulty })
-  const [currentRank, result] = [await rank.get({ uid, difficulty, platform: 'all' }), (await Promise.all(Object.keys(platforms).map(async platform => (await rank.get({ uid, difficulty, platform }) || []).map(play => ({ ...play, platform })))))
+  const [currentRank, result] = [await rank.get({ uid, difficulty, platform: 'all' }), (await Promise.all(Object.keys(platforms).map(async platform => (await rank.get({ uid, difficulty, platform })).map(play => ({ ...play, platform })))))
     .flat()
     .sort((a, b) => b.play.score - a.play.score)]
   if (currentRank) {
@@ -98,7 +98,7 @@ const download = async ({ uid, difficulty, platform }: RankKey, sumAfter = true)
   })
 
   if (result) {
-    const current = (await rank.get({ uid, difficulty, platform }) || [])
+    const current = (await rank.get({ uid, difficulty, platform }))
     await rank.put({ uid, difficulty, platform, value: resultWithHistory({ result, current }) })
     log(`Download: ${s} / ${spiderWorks()}`)
     await rankUpdateTime.update({ uid, difficulty, platform })

@@ -34,7 +34,7 @@ export const diffdiff = async (musics: MusicData[]) => {
   for (const music of musicList) {
     const { uid, difficulty } = music
 
-    const ranks = await rankDB.get({ uid, difficulty, platform: 'all' }) || []
+    const ranks = await rankDB.get({ uid, difficulty, platform: 'all' })
     const pairs = ranks
       .filter(({ play: { elfin_uid, character_uid } }) => !characterSkip.includes(character_uid) && !elfinSkip.includes(elfin_uid))
       .map(({ platform, user: { user_id }, play: { acc } }) => [`${user_id}${platform}`, acc])
