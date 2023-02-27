@@ -1,9 +1,14 @@
 import { isMainThread, Worker, parentPort } from 'node:worker_threads'
+import { join } from 'node:path'
+import { writeFile } from 'node:fs/promises'
 
 import { characterSkip, elfinSkip } from './config.js'
 import { MusicData, MusicCore } from './type.js'
 
-import { rank as rankDB, putDiffDiff, playerDiff, getDiffDiff, putDIffDiffMusic, isWeekOldSong, insertPlayerDiffHistory, setPlayerDiffRank, player } from './database.js'
+import { rank as rankDB, putDiffDiff, playerDiff, getDiffDiff, putDIffDiffMusic, isWeekOldSong, insertPlayerDiffHistory, setPlayerDiffRank, player, tuneName } from './database.js'
+
+
+const base = join('tune', tuneName)
 
 const worker = isMainThread ? new Worker(new URL(import.meta.url)) : undefined
 const workerJobs = new Map<number, () => void>()
@@ -27,6 +32,7 @@ export const diffdiff = async (musics: MusicData[]) => {
   if (worker) {
     return dispatchJob({ cmd: 'diffdiff', params: [musics] })
   }
+  console.log('tune', tuneName)
   const musicList = musics.map(parseMusicc).flat()
   const rankMap = new WeakMap<MusicCore, IdPercentagePairs>()
   const absoluteValueMap = new WeakMap<MusicCore, number>()
@@ -115,6 +121,7 @@ export const diffdiff = async (musics: MusicData[]) => {
   for (const { relative, absolute, ...music } of diffDiff) {
     await putDIffDiffMusic(music, { relative, absolute })
   }
+  await writeFile(join(base, 'diffdiff.json'), JSON.stringify(diffDiff, null, 2))
 }
 
 const accJudge = (acc: number, param1 = 1) => {
@@ -183,6 +190,7 @@ export const diffPlayer = async () => {
   for (const { id, rl, rank } of playerDiffsRanked) {
     await insertPlayerDiffHistory(id, rl, rank)
   }
+  await writeFile(join(base, 'playerdiff.json'), JSON.stringify(playerDiffsRank, null, 2))
 }
 
 if (!worker) {

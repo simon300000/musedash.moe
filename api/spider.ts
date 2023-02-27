@@ -411,28 +411,29 @@ export const joinJob = ({ uid, difficulty, platform }: RankKey): Promise<any> =>
 
 const mal = async (musicData: MusicData[]) => {
   log('Start!')
-  const players = await analyze([...waits.values()].map(({ core }) => core))
-  await makeSearch(players)
-  log('Search Cached')
+  // const players = await analyze([...waits.values()].map(({ core }) => core))
+  // await makeSearch(players)
+  // log('Search Cached')
   await diffdiff(musicData)
   log('Difficulty ranked')
   await diffPlayer()
   log('Players Analyzed')
-  await reloadAlbums()
-  await updatePlayerData()
+  // await reloadAlbums()
+  // await updatePlayerData()
 }
 
 
 export const run = async () => {
   log('hi~')
   await refreshMusicList()
-  spiderClock()
-  if (await playerDataOld()) {
-    const startTime = Date.now()
-    await mal(musicList)
-    const endTime = Date.now()
-    log(`TAKE ${endTime - startTime}, at ${new Date().toString()}`)
-  }
+  // spiderClock()
+  // if (await playerDataOld()) {
+  const startTime = Date.now()
+  await mal(musicList)
+  const endTime = Date.now()
+  log(`TAKE ${endTime - startTime}, at ${new Date().toString()}`)
+  // }
+  return
   while (true) {
     const currentHour = new Date().getUTCHours()
     const waitTime = (19 - currentHour + 24) % 24 || 24

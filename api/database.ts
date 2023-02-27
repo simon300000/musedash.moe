@@ -7,6 +7,8 @@ const TWO_DAY = 1000 * 60 * 60 * 24 * 2
 
 const db = new RaveLevel('./db')
 
+export const tuneName = 'base'
+
 const rankdb = db.sublevel<string, RankValue[]>('rank', { valueEncoding: 'json' })
 
 export const player = db.sublevel<string, PlayerValue>('player', { valueEncoding: 'json' })
@@ -59,19 +61,19 @@ export const playerUpdateTime = new TimeDB<string>('player', id => id)
 
 export const mdmc = db.sublevel('mdmc', { valueEncoding: 'json' })
 
-const diffDiffDB = db.sublevel<string, MusicDiffDiff[]>('diffDiff', { valueEncoding: 'json' })
+const diffDiffDB = db.sublevel<string, MusicDiffDiff[]>(`diffDiff${tuneName}`, { valueEncoding: 'json' })
 
 export const putDiffDiff = (diffDiff: MusicDiffDiff[]) => diffDiffDB.put('diff', diffDiff)
 export const getDiffDiff = () => diffDiffDB.get('diff').catch(() => [] as MusicDiffDiff[])
 
-const diffDiffDBMusic = db.sublevel<string, DiffDiffResult>('diffDiffMusic', { valueEncoding: 'json' })
+const diffDiffDBMusic = db.sublevel<string, DiffDiffResult>(`diffDiffMusic${tuneName}`, { valueEncoding: 'json' })
 export const putDIffDiffMusic = async ({ uid, difficulty }: MusicCore, value: DiffDiffResult) => {
   const key = `${uid}_${difficulty}`
   await diffDiffDBMusic.put(key, value)
 }
 export const getDIffDiffMusic = async ({ uid, difficulty }: MusicCore) => diffDiffDBMusic.get(`${uid}_${difficulty}`)
 
-export const playerDiff = db.sublevel<string, number>('playerDiff', { valueEncoding: 'json' })
+export const playerDiff = db.sublevel<string, number>(`playerDiff${tuneName}`, { valueEncoding: 'json' })
 
 const state = db.sublevel<string, any>('state', { valueEncoding: 'json' })
 
