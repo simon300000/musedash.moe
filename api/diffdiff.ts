@@ -7,9 +7,6 @@ import { MusicData, MusicCore } from './type.js'
 
 import { rank as rankDB, putDiffDiff, playerDiff, getDiffDiff, putDIffDiffMusic, isWeekOldSong, insertPlayerDiffHistory, setPlayerDiffRank, player, tuneName } from './database.js'
 
-
-const base = join('tune', tuneName)
-
 const worker = isMainThread ? new Worker(new URL(import.meta.url)) : undefined
 const workerJobs = new Map<number, () => void>()
 
@@ -121,7 +118,7 @@ export const diffdiff = async (musics: MusicData[]) => {
   for (const { relative, absolute, ...music } of diffDiff) {
     await putDIffDiffMusic(music, { relative, absolute })
   }
-  await writeFile(join(base, 'diffdiff.json'), JSON.stringify(diffDiff, null, 2))
+  await writeFile(`tune-${tuneName}-diffdiff.json`, JSON.stringify(diffDiff, null, 2))
 }
 
 const accJudge = (acc: number, param1 = 0.36) => {
@@ -190,7 +187,7 @@ export const diffPlayer = async () => {
   for (const { id, rl, rank } of playerDiffsRanked) {
     await insertPlayerDiffHistory(id, rl, rank)
   }
-  await writeFile(join(base, 'playerdiff.json'), JSON.stringify(playerDiffsRank, null, 2))
+  await writeFile(`tune-${tuneName}-playerdiff.json`, JSON.stringify(playerDiffsRank, null, 2))
 }
 
 if (!worker) {
