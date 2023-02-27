@@ -79,20 +79,23 @@ export const diffdiff = async (musics: MusicData[]) => {
     })
 
   const levelAverage = {} as LevelAverage
-  sortedMusicList.forEach(({ level }, index) => {
+  sortedMusicList.forEach(({ level }) => {
     if (!Number.isNaN(Number(level))) {
-      levelAverage[level] = levelAverage[level] || { sum: 0, count: 0, level: Number(level) }
-      levelAverage[level].sum += index
+      levelAverage[level] = levelAverage[level] || { count: 0, level: Number(level) }
       levelAverage[level].count += 1
     }
   })
 
   const levels = Object.keys(levelAverage).map(Number).sort((a, b) => b - a)
-  const indexes = Object.values(levelAverage).map(({ sum, count }) => sum / count).sort((a, b) => a - b)
+  const indexes = Object.values(levelAverage)
+    .sort(({ level: a }, { level: b }) => b - a)
+    .map(({ count }) => count)
+    .reduce(([last, ...counts], count) => ([last + count, last, ...counts]), [0])
+    .reverse()
   const maxLevel = Math.max(...levels)
 
   const levelsInclude = [maxLevel + 0.5, ...levels, 0]
-  const indexesInclude = [0, ...indexes, sortedMusicList.length]
+  const indexesInclude = [...indexes, sortedMusicList.length]
 
   const interpolate = (x: number) => {
     const i = indexesInclude.findIndex(index => x < index)
@@ -207,7 +210,7 @@ export type DiffDiffResult = {
 
 export type MusicDiffDiff = MusicCoreExtended & DiffDiffResult
 
-type LevelAverage = Record<string, { sum: number, count: number, level: number }>
+type LevelAverage = Record<string, { count: number, level: number }>
 
 type WorkerInstruction = {
   cmd: 'diffdiff'
