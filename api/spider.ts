@@ -416,7 +416,7 @@ const mal = async (musicData: MusicData[]) => {
   log('Search Cached')
   await diffdiff(musicData)
   log('Difficulty ranked')
-  await diffPlayer(players)
+  await diffPlayer()
   log('Players Analyzed')
   await reloadAlbums()
   await updatePlayerData()

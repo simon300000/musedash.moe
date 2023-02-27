@@ -1,9 +1,9 @@
 import { isMainThread, Worker, parentPort } from 'node:worker_threads'
 
 import { characterSkip, elfinSkip } from './config.js'
-import { MusicData, MusicCore, PlayerValue } from './type.js'
+import { MusicData, MusicCore } from './type.js'
 
-import { rank as rankDB, putDiffDiff, playerDiff, getDiffDiff, putDIffDiffMusic, isWeekOldSong, insertPlayerDiffHistory, setPlayerDiffRank } from './database.js'
+import { rank as rankDB, putDiffDiff, playerDiff, getDiffDiff, putDIffDiffMusic, isWeekOldSong, insertPlayerDiffHistory, setPlayerDiffRank, player } from './database.js'
 
 const worker = isMainThread ? new Worker(new URL(import.meta.url)) : undefined
 const workerJobs = new Map<number, () => void>()
@@ -124,9 +124,9 @@ const accJudge = (acc: number, param1 = 1) => {
 
 const accJudgePlayerRL = (acc: number) => accJudge(acc, 1)
 
-export const diffPlayer = async (players: [string, PlayerValue][]) => {
+export const diffPlayer = async () => {
   if (worker) {
-    return dispatchJob({ cmd: 'diffPlayer', params: [players] })
+    return dispatchJob({ cmd: 'diffPlayer', params: [] })
   }
   const diffDiff = await getDiffDiff()
   const diffDiffMap = {} as Record<string, number[]>
@@ -141,7 +141,10 @@ export const diffPlayer = async (players: [string, PlayerValue][]) => {
     }
   }
 
-  const playerDiffs = players.map(([id, { plays }]) => {
+  const batch = playerDiff.batch()
+  const playerDiffs = [] as { id: string, rl: number }[]
+
+  for await (const [id, { plays }] of player.iterator()) {
     const accMap = {} as Record<string, number[]>
     plays
       .filter(({ character_uid, elfin_uid }) => !characterSkip.includes(character_uid) && !elfinSkip.includes(elfin_uid))
@@ -163,10 +166,10 @@ export const diffPlayer = async (players: [string, PlayerValue][]) => {
       .sort((a, b) => a - b)
       .reduce((r, a) => a + r * 0.8, 0) / 5
 
-    return { id, rl }
-  })
+    batch.put(id, rl)
+    playerDiffs.push({ id, rl })
+  }
 
-  const batch = playerDiffs.reduce((batch, { id, rl }) => batch.put(id, rl), playerDiff.batch())
   await playerDiff.clear()
   await batch.write()
 
@@ -217,7 +220,7 @@ type WorkerInstruction = {
   params: [MusicData[]]
 } | {
   cmd: 'diffPlayer'
-  params: [[string, PlayerValue][]]
+  params: []
 }
 
 type WorkerCommand = WorkerInstruction & {
