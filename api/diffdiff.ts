@@ -30,6 +30,7 @@ export const diffdiff = async (musics: MusicData[]) => {
   const musicList = musics.map(parseMusicc).flat()
   const rankMap = new WeakMap<MusicCore, IdPercentagePairs>()
   const absoluteValueMap = new WeakMap<MusicCore, number>()
+  const isWeekOld = new Map<string, boolean>()
 
   for (const music of musicList) {
     const { uid, difficulty } = music
@@ -40,6 +41,9 @@ export const diffdiff = async (musics: MusicData[]) => {
       .map(({ platform, user: { user_id }, play: { acc } }) => [`${user_id}${platform}`, acc])
     rankMap.set(music, Object.fromEntries(pairs))
     absoluteValueMap.set(music, 0)
+    if (!isWeekOld.has(uid)) {
+      isWeekOld.set(uid, await isWeekOldSong(uid))
+    }
   }
 
   for (let index = 0; index < musicList.length; index++) {
@@ -60,10 +64,10 @@ export const diffdiff = async (musics: MusicData[]) => {
           log('sum', sum)
           log('ranks', { rank, rank2 })
         } else {
-          if (await isWeekOldSong(music2.uid)) {
+          if (isWeekOld.get(music2.uid)) {
             absoluteValueMap.set(music, absoluteValueMap.get(music) - averageDiff)
           }
-          if (await isWeekOldSong(music.uid)) {
+          if (isWeekOld.get(music.uid)) {
             absoluteValueMap.set(music2, absoluteValueMap.get(music2) + averageDiff)
           }
         }
