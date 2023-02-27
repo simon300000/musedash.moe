@@ -124,7 +124,7 @@ export const diffdiff = async (musics: MusicData[]) => {
   await writeFile(join(base, 'diffdiff.json'), JSON.stringify(diffDiff, null, 2))
 }
 
-const accJudge = (acc: number, param1 = 1) => {
+const accJudge = (acc: number, param1 = 0.36) => {
   const factor = acc / 100
   if (factor === 1) {
     return 1
