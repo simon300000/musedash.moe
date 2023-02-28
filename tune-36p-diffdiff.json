@@ -1,0 +1,9382 @@
+[
+  {
+    "uid": "34-5",
+    "difficulty": 3,
+    "level": "12",
+    "absolute": 386.3171333640299,
+    "relative": 12.5
+  },
+  {
+    "uid": "29-5",
+    "difficulty": 3,
+    "level": "12",
+    "absolute": 357.07138084302,
+    "relative": 12.424050632911392
+  },
+  {
+    "uid": "50-4",
+    "difficulty": 3,
+    "level": "12",
+    "absolute": 338.8927169768066,
+    "relative": 12.348101265822784
+  },
+  {
+    "uid": "22-1",
+    "difficulty": 3,
+    "level": "12",
+    "absolute": 338.21802357141746,
+    "relative": 12.272151898734178
+  },
+  {
+    "uid": "36-2",
+    "difficulty": 3,
+    "level": "11",
+    "absolute": 332.9090335143173,
+    "relative": 12.19620253164557
+  },
+  {
+    "uid": "34-1",
+    "difficulty": 3,
+    "level": "11",
+    "absolute": 326.15991102806356,
+    "relative": 12.120253164556962
+  },
+  {
+    "uid": "26-2",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 311.2946150212852,
+    "relative": 12.044303797468354
+  },
+  {
+    "uid": "34-2",
+    "difficulty": 3,
+    "level": "11",
+    "absolute": 308.38999637946927,
+    "relative": 11.991922455573505
+  },
+  {
+    "uid": "43-16",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 304.36915813446194,
+    "relative": 11.97253634894992
+  },
+  {
+    "uid": "10-5",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 302.9217585595744,
+    "relative": 11.953150242326332
+  },
+  {
+    "uid": "19-5",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 301.85749316037146,
+    "relative": 11.933764135702747
+  },
+  {
+    "uid": "46-5",
+    "difficulty": 3,
+    "level": "11",
+    "absolute": 297.32574678525214,
+    "relative": 11.91437802907916
+  },
+  {
+    "uid": "45-1",
+    "difficulty": 3,
+    "level": "11",
+    "absolute": 294.37557264769003,
+    "relative": 11.894991922455574
+  },
+  {
+    "uid": "48-14",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 293.28906748064566,
+    "relative": 11.875605815831987
+  },
+  {
+    "uid": "26-3",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 292.48881910781586,
+    "relative": 11.8562197092084
+  },
+  {
+    "uid": "31-5",
+    "difficulty": 3,
+    "level": "11",
+    "absolute": 291.91749961415655,
+    "relative": 11.836833602584814
+  },
+  {
+    "uid": "56-4",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 291.2092189759932,
+    "relative": 11.817447495961227
+  },
+  {
+    "uid": "38-2",
+    "difficulty": 3,
+    "level": "11",
+    "absolute": 285.3594126458965,
+    "relative": 11.798061389337642
+  },
+  {
+    "uid": "51-5",
+    "difficulty": 3,
+    "level": "11",
+    "absolute": 282.1655777316036,
+    "relative": 11.778675282714055
+  },
+  {
+    "uid": "34-3",
+    "difficulty": 3,
+    "level": "11",
+    "absolute": 279.5933518298254,
+    "relative": 11.75928917609047
+  },
+  {
+    "uid": "0-45",
+    "difficulty": 3,
+    "level": "11",
+    "absolute": 278.06547659659554,
+    "relative": 11.739903069466882
+  },
+  {
+    "uid": "56-5",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 276.53416991406425,
+    "relative": 11.720516962843295
+  },
+  {
+    "uid": "36-0",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 269.7188908015657,
+    "relative": 11.70113085621971
+  },
+  {
+    "uid": "29-2",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 268.9043333474088,
+    "relative": 11.681744749596122
+  },
+  {
+    "uid": "33-11",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 266.6654508338917,
+    "relative": 11.662358642972537
+  },
+  {
+    "uid": "29-1",
+    "difficulty": 3,
+    "level": "11",
+    "absolute": 263.63381937348055,
+    "relative": 11.64297253634895
+  },
+  {
+    "uid": "43-13",
+    "difficulty": 3,
+    "level": "11",
+    "absolute": 261.90456914264183,
+    "relative": 11.623586429725364
+  },
+  {
+    "uid": "34-5",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 261.754113395558,
+    "relative": 11.604200323101777
+  },
+  {
+    "uid": "45-5",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 259.6814201645873,
+    "relative": 11.584814216478192
+  },
+  {
+    "uid": "2-1",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 259.50321373153696,
+    "relative": 11.565428109854604
+  },
+  {
+    "uid": "19-1",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 257.65862467784876,
+    "relative": 11.546042003231017
+  },
+  {
+    "uid": "34-4",
+    "difficulty": 3,
+    "level": "11",
+    "absolute": 257.45593843461774,
+    "relative": 11.526655896607432
+  },
+  {
+    "uid": "36-4",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 256.38248618930857,
+    "relative": 11.507269789983845
+  },
+  {
+    "uid": "10-2",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 255.51682475085008,
+    "relative": 11.48788368336026
+  },
+  {
+    "uid": "47-3",
+    "difficulty": 3,
+    "level": "11",
+    "absolute": 255.12063935782646,
+    "relative": 11.468497576736672
+  },
+  {
+    "uid": "16-1",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 254.0041961950817,
+    "relative": 11.449111470113086
+  },
+  {
+    "uid": "12-5",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 253.5346145985634,
+    "relative": 11.4297253634895
+  },
+  {
+    "uid": "8-4",
+    "difficulty": 3,
+    "level": "11",
+    "absolute": 253.35988361945584,
+    "relative": 11.410339256865912
+  },
+  {
+    "uid": "36-2",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 250.0285898733348,
+    "relative": 11.390953150242327
+  },
+  {
+    "uid": "33-3",
+    "difficulty": 3,
+    "level": "11",
+    "absolute": 249.12154380924403,
+    "relative": 11.37156704361874
+  },
+  {
+    "uid": "35-0",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 239.60592807942544,
+    "relative": 11.352180936995154
+  },
+  {
+    "uid": "53-0",
+    "difficulty": 3,
+    "level": "11",
+    "absolute": 232.58182390113777,
+    "relative": 11.332794830371567
+  },
+  {
+    "uid": "50-1",
+    "difficulty": 2,
+    "level": "¿",
+    "absolute": 232.37886589034656,
+    "relative": 11.313408723747981
+  },
+  {
+    "uid": "29-3",
+    "difficulty": 3,
+    "level": "10",
+    "absolute": 232.36804386476953,
+    "relative": 11.294022617124394
+  },
+  {
+    "uid": "12-3",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 229.83729142041693,
+    "relative": 11.274636510500807
+  },
+  {
+    "uid": "16-5",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 226.8113578409641,
+    "relative": 11.255250403877222
+  },
+  {
+    "uid": "28-1",
+    "difficulty": 3,
+    "level": "10",
+    "absolute": 226.79115372828065,
+    "relative": 11.235864297253634
+  },
+  {
+    "uid": "29-5",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 221.63609489002016,
+    "relative": 11.216478190630049
+  },
+  {
+    "uid": "9-5",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 219.52337001324568,
+    "relative": 11.197092084006462
+  },
+  {
+    "uid": "27-1",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 217.7541657008435,
+    "relative": 11.177705977382876
+  },
+  {
+    "uid": "29-1",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 216.20822534444272,
+    "relative": 11.15831987075929
+  },
+  {
+    "uid": "53-3",
+    "difficulty": 3,
+    "level": "11",
+    "absolute": 214.07189198696383,
+    "relative": 11.138933764135702
+  },
+  {
+    "uid": "5-1",
+    "difficulty": 3,
+    "level": "10",
+    "absolute": 209.76976039056802,
+    "relative": 11.119547657512117
+  },
+  {
+    "uid": "46-3",
+    "difficulty": 3,
+    "level": "11",
+    "absolute": 206.0433770877621,
+    "relative": 11.10016155088853
+  },
+  {
+    "uid": "58-0",
+    "difficulty": 3,
+    "level": "11",
+    "absolute": 204.8241122438447,
+    "relative": 11.080775444264944
+  },
+  {
+    "uid": "11-2",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 203.00929387712313,
+    "relative": 11.061389337641357
+  },
+  {
+    "uid": "10-1",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 202.2265175436081,
+    "relative": 11.042003231017771
+  },
+  {
+    "uid": "34-2",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 200.47036390231287,
+    "relative": 11.022617124394184
+  },
+  {
+    "uid": "26-5",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 198.41113739413424,
+    "relative": 11.003231017770599
+  },
+  {
+    "uid": "20-5",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 198.2516872523691,
+    "relative": 10.992790194664744
+  },
+  {
+    "uid": "36-5",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 197.8152906325466,
+    "relative": 10.984138428262437
+  },
+  {
+    "uid": "36-1",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 197.74003243544294,
+    "relative": 10.97548666186013
+  },
+  {
+    "uid": "54-2",
+    "difficulty": 2,
+    "level": "¿",
+    "absolute": 196.97788179823806,
+    "relative": 10.966834895457822
+  },
+  {
+    "uid": "25-4",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 195.77056490884397,
+    "relative": 10.958183129055515
+  },
+  {
+    "uid": "9-4",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 194.1790737077469,
+    "relative": 10.94953136265321
+  },
+  {
+    "uid": "33-3",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 193.8447836693093,
+    "relative": 10.940879596250902
+  },
+  {
+    "uid": "22-3",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 191.8845888181314,
+    "relative": 10.932227829848594
+  },
+  {
+    "uid": "57-5",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 190.81192553219978,
+    "relative": 10.923576063446287
+  },
+  {
+    "uid": "53-5",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 190.12789895124286,
+    "relative": 10.91492429704398
+  },
+  {
+    "uid": "17-1",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 189.5511864839497,
+    "relative": 10.906272530641672
+  },
+  {
+    "uid": "50-4",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 189.36301631340376,
+    "relative": 10.897620764239365
+  },
+  {
+    "uid": "27-4",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 188.20425284099144,
+    "relative": 10.888968997837058
+  },
+  {
+    "uid": "20-2",
+    "difficulty": 3,
+    "level": "10",
+    "absolute": 188.16792111400304,
+    "relative": 10.880317231434752
+  },
+  {
+    "uid": "22-5",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 187.74856679990793,
+    "relative": 10.871665465032445
+  },
+  {
+    "uid": "43-5",
+    "difficulty": 3,
+    "level": "9",
+    "absolute": 186.85825251647597,
+    "relative": 10.863013698630137
+  },
+  {
+    "uid": "11-1",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 186.3957504322876,
+    "relative": 10.85436193222783
+  },
+  {
+    "uid": "24-1",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 185.68777434478156,
+    "relative": 10.845710165825523
+  },
+  {
+    "uid": "29-2",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 185.4162617342962,
+    "relative": 10.837058399423215
+  },
+  {
+    "uid": "5-1",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 184.02616101324702,
+    "relative": 10.828406633020908
+  },
+  {
+    "uid": "0-51",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 183.5987810869154,
+    "relative": 10.8197548666186
+  },
+  {
+    "uid": "7-4",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 183.14225261566742,
+    "relative": 10.811103100216295
+  },
+  {
+    "uid": "48-6",
+    "difficulty": 3,
+    "level": "10",
+    "absolute": 178.7729938282469,
+    "relative": 10.802451333813988
+  },
+  {
+    "uid": "7-1",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 178.55582511997662,
+    "relative": 10.79379956741168
+  },
+  {
+    "uid": "4-5",
+    "difficulty": 3,
+    "level": "?",
+    "absolute": 178.23532635579306,
+    "relative": 10.785147801009373
+  },
+  {
+    "uid": "35-1",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 178.22037108635317,
+    "relative": 10.776496034607066
+  },
+  {
+    "uid": "34-5",
+    "difficulty": 1,
+    "level": "9",
+    "absolute": 178.15993337319486,
+    "relative": 10.767844268204758
+  },
+  {
+    "uid": "31-1",
+    "difficulty": 3,
+    "level": "10",
+    "absolute": 177.61537054348727,
+    "relative": 10.75919250180245
+  },
+  {
+    "uid": "9-2",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 176.20630633696118,
+    "relative": 10.750540735400143
+  },
+  {
+    "uid": "35-4",
+    "difficulty": 3,
+    "level": "?",
+    "absolute": 174.72055290770894,
+    "relative": 10.741888968997838
+  },
+  {
+    "uid": "43-3",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 174.39795153268128,
+    "relative": 10.73323720259553
+  },
+  {
+    "uid": "12-2",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 174.3703794816686,
+    "relative": 10.724585436193223
+  },
+  {
+    "uid": "34-3",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 174.2010350515285,
+    "relative": 10.715933669790916
+  },
+  {
+    "uid": "38-1",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 174.11897895442786,
+    "relative": 10.707281903388608
+  },
+  {
+    "uid": "7-5",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 173.6238891319847,
+    "relative": 10.698630136986301
+  },
+  {
+    "uid": "28-1",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 172.4554530538806,
+    "relative": 10.689978370583994
+  },
+  {
+    "uid": "31-2",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 171.95054345222954,
+    "relative": 10.681326604181686
+  },
+  {
+    "uid": "46-5",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 171.913197614203,
+    "relative": 10.67267483777938
+  },
+  {
+    "uid": "45-4",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 170.8411059390869,
+    "relative": 10.664023071377073
+  },
+  {
+    "uid": "16-0",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 170.37541499006448,
+    "relative": 10.655371304974766
+  },
+  {
+    "uid": "25-2",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 170.152263399261,
+    "relative": 10.646719538572459
+  },
+  {
+    "uid": "22-1",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 170.03963717121601,
+    "relative": 10.638067772170151
+  },
+  {
+    "uid": "8-5",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 169.67221285150003,
+    "relative": 10.629416005767844
+  },
+  {
+    "uid": "7-3",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 169.53559401916166,
+    "relative": 10.620764239365537
+  },
+  {
+    "uid": "10-5",
+    "difficulty": 1,
+    "level": "9",
+    "absolute": 169.2526638489123,
+    "relative": 10.61211247296323
+  },
+  {
+    "uid": "53-4",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 168.8902177985792,
+    "relative": 10.603460706560924
+  },
+  {
+    "uid": "26-4",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 168.57585234785336,
+    "relative": 10.594808940158616
+  },
+  {
+    "uid": "20-3",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 168.2479940121094,
+    "relative": 10.586157173756309
+  },
+  {
+    "uid": "30-2",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 168.14519312525698,
+    "relative": 10.577505407354002
+  },
+  {
+    "uid": "0-21",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 167.95301117779132,
+    "relative": 10.568853640951694
+  },
+  {
+    "uid": "17-4",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 167.39746568389103,
+    "relative": 10.560201874549387
+  },
+  {
+    "uid": "41-0",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 167.1324832068094,
+    "relative": 10.55155010814708
+  },
+  {
+    "uid": "19-3",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 166.93180636935938,
+    "relative": 10.542898341744772
+  },
+  {
+    "uid": "33-7",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 166.2994138041776,
+    "relative": 10.534246575342467
+  },
+  {
+    "uid": "36-2",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 166.0482125737513,
+    "relative": 10.52559480894016
+  },
+  {
+    "uid": "40-1",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 164.4554159321097,
+    "relative": 10.516943042537852
+  },
+  {
+    "uid": "43-2",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 164.32392037707243,
+    "relative": 10.508291276135544
+  },
+  {
+    "uid": "35-0",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 164.1808689937799,
+    "relative": 10.499639509733237
+  },
+  {
+    "uid": "26-1",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 163.8484655382058,
+    "relative": 10.49098774333093
+  },
+  {
+    "uid": "38-2",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 163.4159054393443,
+    "relative": 10.482335976928622
+  },
+  {
+    "uid": "56-1",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 163.1440603436919,
+    "relative": 10.473684210526315
+  },
+  {
+    "uid": "43-8",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 162.85069731214503,
+    "relative": 10.46503244412401
+  },
+  {
+    "uid": "10-4",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 162.84161885152784,
+    "relative": 10.456380677721702
+  },
+  {
+    "uid": "51-1",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 162.82474255831283,
+    "relative": 10.447728911319395
+  },
+  {
+    "uid": "37-1",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 162.75690729192337,
+    "relative": 10.439077144917087
+  },
+  {
+    "uid": "17-5",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 162.4991073402819,
+    "relative": 10.43042537851478
+  },
+  {
+    "uid": "22-0",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 162.14855307005016,
+    "relative": 10.421773612112473
+  },
+  {
+    "uid": "6-4",
+    "difficulty": 3,
+    "level": "9",
+    "absolute": 161.25389568502013,
+    "relative": 10.413121845710165
+  },
+  {
+    "uid": "0-45",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 160.96112077625358,
+    "relative": 10.404470079307858
+  },
+  {
+    "uid": "27-5",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 160.68916060313055,
+    "relative": 10.395818312905552
+  },
+  {
+    "uid": "0-47",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 160.62742501686122,
+    "relative": 10.387166546503245
+  },
+  {
+    "uid": "45-2",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 160.5900067904659,
+    "relative": 10.378514780100938
+  },
+  {
+    "uid": "22-4",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 160.23002224227338,
+    "relative": 10.36986301369863
+  },
+  {
+    "uid": "34-4",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 159.12867506939705,
+    "relative": 10.361211247296323
+  },
+  {
+    "uid": "41-4",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 158.2233655266609,
+    "relative": 10.352559480894016
+  },
+  {
+    "uid": "57-3",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 157.84598364362245,
+    "relative": 10.343907714491708
+  },
+  {
+    "uid": "32-2",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 156.8131303741836,
+    "relative": 10.3352559480894
+  },
+  {
+    "uid": "10-0",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 156.57526708200135,
+    "relative": 10.326604181687095
+  },
+  {
+    "uid": "10-3",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 155.76012585332992,
+    "relative": 10.317952415284788
+  },
+  {
+    "uid": "0-26",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 154.00546389567825,
+    "relative": 10.30930064888248
+  },
+  {
+    "uid": "33-10",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 153.61342733838455,
+    "relative": 10.300648882480173
+  },
+  {
+    "uid": "43-14",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 153.52516742798,
+    "relative": 10.291997116077866
+  },
+  {
+    "uid": "31-0",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 152.70097600661393,
+    "relative": 10.283345349675558
+  },
+  {
+    "uid": "43-12",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 152.4401225294789,
+    "relative": 10.274693583273251
+  },
+  {
+    "uid": "29-4",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 151.50869420998148,
+    "relative": 10.266041816870944
+  },
+  {
+    "uid": "43-1",
+    "difficulty": 3,
+    "level": "10",
+    "absolute": 151.45688820921873,
+    "relative": 10.257390050468638
+  },
+  {
+    "uid": "56-5",
+    "difficulty": 1,
+    "level": "9",
+    "absolute": 151.01416849959705,
+    "relative": 10.24873828406633
+  },
+  {
+    "uid": "50-2",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 150.47217651861166,
+    "relative": 10.240086517664023
+  },
+  {
+    "uid": "30-1",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 150.38436738239287,
+    "relative": 10.231434751261716
+  },
+  {
+    "uid": "8-5",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 150.17073929678483,
+    "relative": 10.222782984859409
+  },
+  {
+    "uid": "8-3",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 150.16758266271484,
+    "relative": 10.214131218457101
+  },
+  {
+    "uid": "0-50",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 149.57575304752496,
+    "relative": 10.205479452054794
+  },
+  {
+    "uid": "28-2",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 148.41545526330793,
+    "relative": 10.196827685652487
+  },
+  {
+    "uid": "0-22",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 147.48977348408633,
+    "relative": 10.188175919250181
+  },
+  {
+    "uid": "24-5",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 147.23186376266264,
+    "relative": 10.179524152847874
+  },
+  {
+    "uid": "43-13",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 146.9914939284352,
+    "relative": 10.170872386445566
+  },
+  {
+    "uid": "0-39",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 146.97308664931197,
+    "relative": 10.162220620043259
+  },
+  {
+    "uid": "37-2",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 146.26931543211188,
+    "relative": 10.153568853640952
+  },
+  {
+    "uid": "49-2",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 145.68475120022708,
+    "relative": 10.144917087238644
+  },
+  {
+    "uid": "16-1",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 145.48256962144006,
+    "relative": 10.136265320836337
+  },
+  {
+    "uid": "33-4",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 145.22896533942293,
+    "relative": 10.12761355443403
+  },
+  {
+    "uid": "56-2",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 145.16341806689772,
+    "relative": 10.118961788031724
+  },
+  {
+    "uid": "12-4",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 144.7066464242614,
+    "relative": 10.110310021629417
+  },
+  {
+    "uid": "16-5",
+    "difficulty": 1,
+    "level": "9",
+    "absolute": 144.5124974468633,
+    "relative": 10.10165825522711
+  },
+  {
+    "uid": "55-4",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 144.17678460388098,
+    "relative": 10.093006488824802
+  },
+  {
+    "uid": "26-1",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 144.0622110155986,
+    "relative": 10.084354722422495
+  },
+  {
+    "uid": "43-8",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 143.95984280436042,
+    "relative": 10.075702956020187
+  },
+  {
+    "uid": "27-4",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 143.42087098696095,
+    "relative": 10.06705118961788
+  },
+  {
+    "uid": "35-2",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 142.54918267714908,
+    "relative": 10.058399423215572
+  },
+  {
+    "uid": "59-0",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 142.2441639705401,
+    "relative": 10.049747656813267
+  },
+  {
+    "uid": "4-5",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 142.14716363004908,
+    "relative": 10.04109589041096
+  },
+  {
+    "uid": "5-5",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 142.08064185546107,
+    "relative": 10.032444124008652
+  },
+  {
+    "uid": "48-14",
+    "difficulty": 1,
+    "level": "9",
+    "absolute": 141.69499074935956,
+    "relative": 10.023792357606345
+  },
+  {
+    "uid": "2-3",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 141.64671749837566,
+    "relative": 10.015140591204037
+  },
+  {
+    "uid": "41-5",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 140.96694443439574,
+    "relative": 10.00648882480173
+  },
+  {
+    "uid": "40-5",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 140.7704529777183,
+    "relative": 9.997993311036788
+  },
+  {
+    "uid": "24-4",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 140.30397549974998,
+    "relative": 9.989966555183946
+  },
+  {
+    "uid": "30-0",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 140.143465053892,
+    "relative": 9.981939799331103
+  },
+  {
+    "uid": "46-4",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 139.96944761165264,
+    "relative": 9.97391304347826
+  },
+  {
+    "uid": "40-2",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 139.3539119518998,
+    "relative": 9.965886287625418
+  },
+  {
+    "uid": "0-52",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 139.0062856641791,
+    "relative": 9.957859531772575
+  },
+  {
+    "uid": "58-1",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 138.84956184645702,
+    "relative": 9.949832775919733
+  },
+  {
+    "uid": "44-1",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 138.71504497674047,
+    "relative": 9.94180602006689
+  },
+  {
+    "uid": "26-3",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 138.51284309693557,
+    "relative": 9.933779264214047
+  },
+  {
+    "uid": "19-2",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 138.48604855071207,
+    "relative": 9.925752508361205
+  },
+  {
+    "uid": "20-1",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 137.4044815814653,
+    "relative": 9.91772575250836
+  },
+  {
+    "uid": "33-8",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 137.34154445568865,
+    "relative": 9.909698996655518
+  },
+  {
+    "uid": "27-2",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 137.31886966340267,
+    "relative": 9.901672240802675
+  },
+  {
+    "uid": "35-4",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 136.51269367921344,
+    "relative": 9.893645484949833
+  },
+  {
+    "uid": "43-19",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 135.7811840137933,
+    "relative": 9.88561872909699
+  },
+  {
+    "uid": "56-3",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 135.57359873394307,
+    "relative": 9.877591973244147
+  },
+  {
+    "uid": "4-2",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 135.42291775582655,
+    "relative": 9.869565217391305
+  },
+  {
+    "uid": "43-10",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 134.97786636706195,
+    "relative": 9.861538461538462
+  },
+  {
+    "uid": "16-3",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 134.18975936727142,
+    "relative": 9.85351170568562
+  },
+  {
+    "uid": "50-1",
+    "difficulty": 1,
+    "level": "?",
+    "absolute": 133.7273447344,
+    "relative": 9.845484949832777
+  },
+  {
+    "uid": "17-3",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 133.1249931052868,
+    "relative": 9.837458193979932
+  },
+  {
+    "uid": "57-4",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 132.77282377026384,
+    "relative": 9.82943143812709
+  },
+  {
+    "uid": "16-2",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 132.6583036875491,
+    "relative": 9.821404682274247
+  },
+  {
+    "uid": "57-2",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 132.33778887164283,
+    "relative": 9.813377926421404
+  },
+  {
+    "uid": "43-11",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 132.247056399019,
+    "relative": 9.805351170568562
+  },
+  {
+    "uid": "47-2",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 132.2395252593781,
+    "relative": 9.79732441471572
+  },
+  {
+    "uid": "43-7",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 132.2055690300853,
+    "relative": 9.789297658862877
+  },
+  {
+    "uid": "41-3",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 132.09221633402504,
+    "relative": 9.781270903010034
+  },
+  {
+    "uid": "47-1",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 131.60106441429588,
+    "relative": 9.773244147157191
+  },
+  {
+    "uid": "51-2",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 130.99931403559015,
+    "relative": 9.765217391304347
+  },
+  {
+    "uid": "34-1",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 130.1721268886812,
+    "relative": 9.757190635451504
+  },
+  {
+    "uid": "2-1",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 129.62851495891812,
+    "relative": 9.749163879598662
+  },
+  {
+    "uid": "0-27",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 129.55508051164898,
+    "relative": 9.741137123745819
+  },
+  {
+    "uid": "25-1",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 129.51041363683458,
+    "relative": 9.733110367892976
+  },
+  {
+    "uid": "43-16",
+    "difficulty": 1,
+    "level": "9",
+    "absolute": 129.1903943439868,
+    "relative": 9.725083612040134
+  },
+  {
+    "uid": "28-4",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 128.27884708257278,
+    "relative": 9.717056856187291
+  },
+  {
+    "uid": "43-9",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 128.2097058306186,
+    "relative": 9.709030100334449
+  },
+  {
+    "uid": "33-10",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 128.02086869882373,
+    "relative": 9.701003344481606
+  },
+  {
+    "uid": "11-5",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 127.53305073802187,
+    "relative": 9.692976588628763
+  },
+  {
+    "uid": "43-18",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 127.50774126945954,
+    "relative": 9.684949832775919
+  },
+  {
+    "uid": "11-4",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 127.38933543191456,
+    "relative": 9.676923076923076
+  },
+  {
+    "uid": "9-0",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 126.83278825341063,
+    "relative": 9.668896321070234
+  },
+  {
+    "uid": "29-3",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 126.48521389461855,
+    "relative": 9.660869565217391
+  },
+  {
+    "uid": "56-0",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 125.69977519775125,
+    "relative": 9.652842809364548
+  },
+  {
+    "uid": "0-36",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 125.3884499759183,
+    "relative": 9.644816053511706
+  },
+  {
+    "uid": "45-5",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 125.12236700101693,
+    "relative": 9.636789297658863
+  },
+  {
+    "uid": "31-1",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 124.84875052220542,
+    "relative": 9.62876254180602
+  },
+  {
+    "uid": "41-5",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 124.75252964980957,
+    "relative": 9.620735785953178
+  },
+  {
+    "uid": "48-9",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 124.64579227479804,
+    "relative": 9.612709030100334
+  },
+  {
+    "uid": "17-1",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 124.51176035334933,
+    "relative": 9.60468227424749
+  },
+  {
+    "uid": "40-3",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 124.33345262056186,
+    "relative": 9.596655518394648
+  },
+  {
+    "uid": "0-11",
+    "difficulty": 3,
+    "level": "10",
+    "absolute": 124.16538239163239,
+    "relative": 9.588628762541806
+  },
+  {
+    "uid": "22-5",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 124.0299334065016,
+    "relative": 9.580602006688963
+  },
+  {
+    "uid": "46-1",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 123.69077525515176,
+    "relative": 9.57257525083612
+  },
+  {
+    "uid": "31-5",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 123.35970599862426,
+    "relative": 9.564548494983278
+  },
+  {
+    "uid": "27-1",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 123.26546722382494,
+    "relative": 9.556521739130435
+  },
+  {
+    "uid": "22-3",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 122.4880281223911,
+    "relative": 9.548494983277592
+  },
+  {
+    "uid": "45-1",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 122.40867214161992,
+    "relative": 9.54046822742475
+  },
+  {
+    "uid": "32-1",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 122.22823028451529,
+    "relative": 9.532441471571905
+  },
+  {
+    "uid": "14-5",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 121.99890996597006,
+    "relative": 9.524414715719063
+  },
+  {
+    "uid": "18-3",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 121.918692374725,
+    "relative": 9.51638795986622
+  },
+  {
+    "uid": "6-2",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 120.84614070324821,
+    "relative": 9.508361204013378
+  },
+  {
+    "uid": "54-2",
+    "difficulty": 1,
+    "level": "?",
+    "absolute": 120.59485134028442,
+    "relative": 9.500334448160535
+  },
+  {
+    "uid": "19-0",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 120.30361594167239,
+    "relative": 9.492307692307692
+  },
+  {
+    "uid": "28-2",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 120.23049930761447,
+    "relative": 9.48428093645485
+  },
+  {
+    "uid": "35-3",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 120.07325279109143,
+    "relative": 9.476254180602007
+  },
+  {
+    "uid": "54-1",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 119.65866383684774,
+    "relative": 9.468227424749164
+  },
+  {
+    "uid": "50-2",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 119.42385794174291,
+    "relative": 9.46020066889632
+  },
+  {
+    "uid": "0-34",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 119.37463455799512,
+    "relative": 9.452173913043477
+  },
+  {
+    "uid": "8-4",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 118.93760933308582,
+    "relative": 9.444147157190635
+  },
+  {
+    "uid": "9-3",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 118.78099791328991,
+    "relative": 9.436120401337792
+  },
+  {
+    "uid": "22-2",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 118.54301853993351,
+    "relative": 9.42809364548495
+  },
+  {
+    "uid": "36-3",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 118.25739775462,
+    "relative": 9.420066889632107
+  },
+  {
+    "uid": "32-3",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 118.07705104205873,
+    "relative": 9.412040133779264
+  },
+  {
+    "uid": "33-11",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 117.83143551546137,
+    "relative": 9.404013377926422
+  },
+  {
+    "uid": "14-2",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 117.71301024558389,
+    "relative": 9.395986622073579
+  },
+  {
+    "uid": "6-3",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 117.69978296183994,
+    "relative": 9.387959866220736
+  },
+  {
+    "uid": "5-3",
+    "difficulty": 3,
+    "level": "9",
+    "absolute": 117.39258018001675,
+    "relative": 9.379933110367894
+  },
+  {
+    "uid": "51-5",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 117.31742518708317,
+    "relative": 9.37190635451505
+  },
+  {
+    "uid": "22-2",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 117.285992994852,
+    "relative": 9.363879598662207
+  },
+  {
+    "uid": "0-12",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 116.46649076172466,
+    "relative": 9.355852842809364
+  },
+  {
+    "uid": "0-28",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 116.37955883012387,
+    "relative": 9.347826086956522
+  },
+  {
+    "uid": "44-2",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 115.77334536717638,
+    "relative": 9.339799331103679
+  },
+  {
+    "uid": "11-2",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 115.70323742308165,
+    "relative": 9.331772575250836
+  },
+  {
+    "uid": "36-0",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 115.34946140832245,
+    "relative": 9.323745819397994
+  },
+  {
+    "uid": "17-0",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 114.15351318437905,
+    "relative": 9.315719063545151
+  },
+  {
+    "uid": "47-0",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 114.109824075541,
+    "relative": 9.307692307692308
+  },
+  {
+    "uid": "43-13",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 113.9167219674981,
+    "relative": 9.299665551839464
+  },
+  {
+    "uid": "38-1",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 113.9120091457421,
+    "relative": 9.291638795986621
+  },
+  {
+    "uid": "15-2",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 113.45960056359242,
+    "relative": 9.283612040133779
+  },
+  {
+    "uid": "24-2",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 113.44720394925282,
+    "relative": 9.275585284280936
+  },
+  {
+    "uid": "19-2",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 112.71298309722616,
+    "relative": 9.267558528428093
+  },
+  {
+    "uid": "26-5",
+    "difficulty": 1,
+    "level": "9",
+    "absolute": 112.66902560192857,
+    "relative": 9.25953177257525
+  },
+  {
+    "uid": "54-3",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 112.53369935619298,
+    "relative": 9.251505016722408
+  },
+  {
+    "uid": "2-4",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 112.50795971305337,
+    "relative": 9.243478260869566
+  },
+  {
+    "uid": "14-4",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 112.08306257814517,
+    "relative": 9.235451505016723
+  },
+  {
+    "uid": "14-0",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 112.08247048165876,
+    "relative": 9.22742474916388
+  },
+  {
+    "uid": "45-4",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 112.00585519531734,
+    "relative": 9.219397993311036
+  },
+  {
+    "uid": "58-3",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 111.57165275682519,
+    "relative": 9.211371237458193
+  },
+  {
+    "uid": "19-5",
+    "difficulty": 1,
+    "level": "9",
+    "absolute": 111.40910016876741,
+    "relative": 9.20334448160535
+  },
+  {
+    "uid": "34-4",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 111.36342397893009,
+    "relative": 9.195317725752508
+  },
+  {
+    "uid": "14-1",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 110.9788139133206,
+    "relative": 9.187290969899665
+  },
+  {
+    "uid": "19-0",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 110.92002892543724,
+    "relative": 9.179264214046823
+  },
+  {
+    "uid": "48-10",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 110.67842061453737,
+    "relative": 9.17123745819398
+  },
+  {
+    "uid": "50-4",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 110.06028191978454,
+    "relative": 9.163210702341138
+  },
+  {
+    "uid": "2-5",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 110.05520638622723,
+    "relative": 9.155183946488295
+  },
+  {
+    "uid": "1-1",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 110.03194012899631,
+    "relative": 9.14715719063545
+  },
+  {
+    "uid": "6-5",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 109.94556457104412,
+    "relative": 9.139130434782608
+  },
+  {
+    "uid": "33-6",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 109.92977229244624,
+    "relative": 9.131103678929765
+  },
+  {
+    "uid": "37-5",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 109.79897699054933,
+    "relative": 9.123076923076923
+  },
+  {
+    "uid": "54-1",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 109.68193455565138,
+    "relative": 9.11505016722408
+  },
+  {
+    "uid": "48-5",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 109.40936119739094,
+    "relative": 9.107023411371237
+  },
+  {
+    "uid": "9-5",
+    "difficulty": 1,
+    "level": "9",
+    "absolute": 109.24503272342996,
+    "relative": 9.098996655518395
+  },
+  {
+    "uid": "53-3",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 109.14583636027852,
+    "relative": 9.090969899665552
+  },
+  {
+    "uid": "10-1",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 108.95711558577334,
+    "relative": 9.08294314381271
+  },
+  {
+    "uid": "2-3",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 108.21689697567989,
+    "relative": 9.074916387959867
+  },
+  {
+    "uid": "20-2",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 108.16833930981895,
+    "relative": 9.066889632107022
+  },
+  {
+    "uid": "12-0",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 108.02984292849649,
+    "relative": 9.05886287625418
+  },
+  {
+    "uid": "0-23",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 107.58075771202036,
+    "relative": 9.050836120401337
+  },
+  {
+    "uid": "48-4",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 107.13490337491208,
+    "relative": 9.042809364548495
+  },
+  {
+    "uid": "39-6",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 106.39048135605775,
+    "relative": 9.034782608695652
+  },
+  {
+    "uid": "41-3",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 105.70132306914871,
+    "relative": 9.02675585284281
+  },
+  {
+    "uid": "51-4",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 105.53037223277597,
+    "relative": 9.018729096989967
+  },
+  {
+    "uid": "52-3",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 105.4875806480379,
+    "relative": 9.010702341137124
+  },
+  {
+    "uid": "34-0",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 105.33667374468257,
+    "relative": 9.002675585284281
+  },
+  {
+    "uid": "50-0",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 105.30746684301413,
+    "relative": 8.996137131820376
+  },
+  {
+    "uid": "46-2",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 104.88803849428373,
+    "relative": 8.990342829550942
+  },
+  {
+    "uid": "46-0",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 104.71398167639624,
+    "relative": 8.984548527281506
+  },
+  {
+    "uid": "0-35",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 104.60161126775321,
+    "relative": 8.978754225012072
+  },
+  {
+    "uid": "56-0",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 104.32439142337635,
+    "relative": 8.972959922742636
+  },
+  {
+    "uid": "14-4",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 104.02566370663294,
+    "relative": 8.967165620473201
+  },
+  {
+    "uid": "31-5",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 103.93958779231654,
+    "relative": 8.961371318203765
+  },
+  {
+    "uid": "8-1",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 103.68385052886451,
+    "relative": 8.955577015934331
+  },
+  {
+    "uid": "43-20",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 103.17228853727278,
+    "relative": 8.949782713664897
+  },
+  {
+    "uid": "28-5",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 103.16209029545897,
+    "relative": 8.94398841139546
+  },
+  {
+    "uid": "46-5",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 102.5507368535577,
+    "relative": 8.938194109126027
+  },
+  {
+    "uid": "16-2",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 102.32858785849044,
+    "relative": 8.93239980685659
+  },
+  {
+    "uid": "19-4",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 102.3207158288182,
+    "relative": 8.926605504587156
+  },
+  {
+    "uid": "20-4",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 101.97816967078009,
+    "relative": 8.92081120231772
+  },
+  {
+    "uid": "41-4",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 101.89012102838274,
+    "relative": 8.915016900048286
+  },
+  {
+    "uid": "58-2",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 101.25795288203898,
+    "relative": 8.90922259777885
+  },
+  {
+    "uid": "8-3",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 101.22866771136117,
+    "relative": 8.903428295509416
+  },
+  {
+    "uid": "24-3",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 101.11546056270639,
+    "relative": 8.89763399323998
+  },
+  {
+    "uid": "21-1",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 100.72696581296385,
+    "relative": 8.891839690970546
+  },
+  {
+    "uid": "25-5",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 100.34629154702823,
+    "relative": 8.88604538870111
+  },
+  {
+    "uid": "33-2",
+    "difficulty": 3,
+    "level": "9",
+    "absolute": 100.13256854931282,
+    "relative": 8.880251086431675
+  },
+  {
+    "uid": "43-4",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 100.07985358351372,
+    "relative": 8.87445678416224
+  },
+  {
+    "uid": "0-45",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 99.48075222907968,
+    "relative": 8.868662481892805
+  },
+  {
+    "uid": "0-20",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 99.17980590175381,
+    "relative": 8.862868179623371
+  },
+  {
+    "uid": "0-24",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 99.13537469087817,
+    "relative": 8.857073877353935
+  },
+  {
+    "uid": "36-5",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 98.71477463199228,
+    "relative": 8.8512795750845
+  },
+  {
+    "uid": "18-5",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 98.60467859971807,
+    "relative": 8.845485272815065
+  },
+  {
+    "uid": "57-4",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 98.19130644264378,
+    "relative": 8.83969097054563
+  },
+  {
+    "uid": "33-9",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 97.81224816720967,
+    "relative": 8.833896668276195
+  },
+  {
+    "uid": "43-1",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 97.74881169118223,
+    "relative": 8.82810236600676
+  },
+  {
+    "uid": "48-12",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 97.4967995967895,
+    "relative": 8.822308063737324
+  },
+  {
+    "uid": "53-5",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 97.4955768850538,
+    "relative": 8.81651376146789
+  },
+  {
+    "uid": "12-2",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 96.87348968484174,
+    "relative": 8.810719459198454
+  },
+  {
+    "uid": "18-4",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 96.8127476783723,
+    "relative": 8.80492515692902
+  },
+  {
+    "uid": "38-0",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 96.62276614586007,
+    "relative": 8.799130854659584
+  },
+  {
+    "uid": "4-0",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 96.50388768117503,
+    "relative": 8.79333655239015
+  },
+  {
+    "uid": "10-0",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 95.91921555813666,
+    "relative": 8.787542250120714
+  },
+  {
+    "uid": "12-3",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 95.59247579240959,
+    "relative": 8.78174794785128
+  },
+  {
+    "uid": "29-4",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 95.25209415154445,
+    "relative": 8.775953645581845
+  },
+  {
+    "uid": "41-0",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 95.20807635494614,
+    "relative": 8.77015934331241
+  },
+  {
+    "uid": "45-1",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 95.11996762837882,
+    "relative": 8.764365041042975
+  },
+  {
+    "uid": "51-5",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 94.28763261010721,
+    "relative": 8.758570738773539
+  },
+  {
+    "uid": "47-3",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 94.21156837861727,
+    "relative": 8.752776436504105
+  },
+  {
+    "uid": "4-3",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 94.0425924727228,
+    "relative": 8.746982134234669
+  },
+  {
+    "uid": "34-1",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 93.59015295655307,
+    "relative": 8.741187831965235
+  },
+  {
+    "uid": "48-2",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 93.47485731391566,
+    "relative": 8.735393529695799
+  },
+  {
+    "uid": "51-3",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 92.53522875879479,
+    "relative": 8.729599227426364
+  },
+  {
+    "uid": "19-3",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 92.06513718455189,
+    "relative": 8.723804925156928
+  },
+  {
+    "uid": "49-0",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 91.90355450711307,
+    "relative": 8.718010622887494
+  },
+  {
+    "uid": "40-4",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 91.69313545661174,
+    "relative": 8.712216320618058
+  },
+  {
+    "uid": "43-6",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 91.30515277360169,
+    "relative": 8.706422018348624
+  },
+  {
+    "uid": "41-0",
+    "difficulty": 3,
+    "level": "?",
+    "absolute": 90.96303133567675,
+    "relative": 8.700627716079188
+  },
+  {
+    "uid": "36-4",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 90.95408325811732,
+    "relative": 8.694833413809754
+  },
+  {
+    "uid": "0-17",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 90.50294966971404,
+    "relative": 8.68903911154032
+  },
+  {
+    "uid": "7-2",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 90.3457524958417,
+    "relative": 8.683244809270883
+  },
+  {
+    "uid": "6-4",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 90.27280448560244,
+    "relative": 8.67745050700145
+  },
+  {
+    "uid": "16-4",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 90.21031863902184,
+    "relative": 8.671656204732013
+  },
+  {
+    "uid": "3-4",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 90.20157159372799,
+    "relative": 8.665861902462579
+  },
+  {
+    "uid": "25-2",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 89.88750536490053,
+    "relative": 8.660067600193143
+  },
+  {
+    "uid": "0-25",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 89.7765648286758,
+    "relative": 8.654273297923709
+  },
+  {
+    "uid": "29-5",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 89.70477179714725,
+    "relative": 8.648478995654273
+  },
+  {
+    "uid": "40-0",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 89.65198738373562,
+    "relative": 8.642684693384838
+  },
+  {
+    "uid": "33-8",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 89.59491097819974,
+    "relative": 8.636890391115402
+  },
+  {
+    "uid": "0-36",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 89.55611175412513,
+    "relative": 8.631096088845968
+  },
+  {
+    "uid": "27-2",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 88.60616102768077,
+    "relative": 8.625301786576532
+  },
+  {
+    "uid": "47-2",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 88.07053059101855,
+    "relative": 8.619507484307098
+  },
+  {
+    "uid": "6-2",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 87.91896249364684,
+    "relative": 8.613713182037662
+  },
+  {
+    "uid": "46-3",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 87.91526852237097,
+    "relative": 8.607918879768228
+  },
+  {
+    "uid": "21-0",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 87.76223915740898,
+    "relative": 8.602124577498794
+  },
+  {
+    "uid": "37-1",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 87.59002088605708,
+    "relative": 8.596330275229358
+  },
+  {
+    "uid": "9-4",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 87.45101079694679,
+    "relative": 8.590535972959923
+  },
+  {
+    "uid": "29-3",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 87.14452227316043,
+    "relative": 8.584741670690487
+  },
+  {
+    "uid": "28-0",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 87.10550877805447,
+    "relative": 8.578947368421053
+  },
+  {
+    "uid": "27-3",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 86.37308367033764,
+    "relative": 8.573153066151617
+  },
+  {
+    "uid": "45-3",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 86.18765923166389,
+    "relative": 8.567358763882183
+  },
+  {
+    "uid": "17-3",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 85.95718554215108,
+    "relative": 8.561564461612747
+  },
+  {
+    "uid": "6-0",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 85.92491000756468,
+    "relative": 8.555770159343313
+  },
+  {
+    "uid": "59-0",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 85.80837690548225,
+    "relative": 8.549975857073877
+  },
+  {
+    "uid": "1-0",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 85.79411021153092,
+    "relative": 8.544181554804442
+  },
+  {
+    "uid": "12-5",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 85.6103402540156,
+    "relative": 8.538387252535006
+  },
+  {
+    "uid": "0-33",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 85.49964136621837,
+    "relative": 8.532592950265572
+  },
+  {
+    "uid": "41-2",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 85.02735955812406,
+    "relative": 8.526798647996136
+  },
+  {
+    "uid": "0-49",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 84.88691061455205,
+    "relative": 8.521004345726702
+  },
+  {
+    "uid": "56-4",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 84.82699581022509,
+    "relative": 8.515210043457266
+  },
+  {
+    "uid": "30-3",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 84.14532015089375,
+    "relative": 8.509415741187832
+  },
+  {
+    "uid": "18-2",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 83.87560714209988,
+    "relative": 8.503621438918398
+  },
+  {
+    "uid": "41-5",
+    "difficulty": 3,
+    "level": "?",
+    "absolute": 83.36397399850047,
+    "relative": 8.497827136648961
+  },
+  {
+    "uid": "15-5",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 83.30489705702769,
+    "relative": 8.492032834379527
+  },
+  {
+    "uid": "51-1",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 83.25354424281542,
+    "relative": 8.486238532110091
+  },
+  {
+    "uid": "10-5",
+    "difficulty": 0,
+    "level": "7",
+    "absolute": 83.08982762504093,
+    "relative": 8.480444229840657
+  },
+  {
+    "uid": "20-4",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 82.7113008898146,
+    "relative": 8.474649927571221
+  },
+  {
+    "uid": "59-1",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 82.6378564986983,
+    "relative": 8.468855625301787
+  },
+  {
+    "uid": "17-5",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 82.47670093716843,
+    "relative": 8.46306132303235
+  },
+  {
+    "uid": "48-8",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 82.28117283898406,
+    "relative": 8.457267020762917
+  },
+  {
+    "uid": "33-7",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 82.18645153809646,
+    "relative": 8.45147271849348
+  },
+  {
+    "uid": "54-4",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 82.11407877935339,
+    "relative": 8.445678416224046
+  },
+  {
+    "uid": "0-19",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 81.96421015876238,
+    "relative": 8.43988411395461
+  },
+  {
+    "uid": "2-0",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 81.66755095368966,
+    "relative": 8.434089811685176
+  },
+  {
+    "uid": "48-11",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 81.62725120756409,
+    "relative": 8.42829550941574
+  },
+  {
+    "uid": "35-2",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 81.3718099390917,
+    "relative": 8.422501207146306
+  },
+  {
+    "uid": "42-5",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 81.22471940811596,
+    "relative": 8.416706904876872
+  },
+  {
+    "uid": "26-2",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 81.0753534501006,
+    "relative": 8.410912602607436
+  },
+  {
+    "uid": "43-12",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 80.8832770745666,
+    "relative": 8.405118300338001
+  },
+  {
+    "uid": "13-2",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 80.61696514915904,
+    "relative": 8.399323998068565
+  },
+  {
+    "uid": "4-4",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 80.36662148804805,
+    "relative": 8.393529695799131
+  },
+  {
+    "uid": "43-15",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 80.18132294291715,
+    "relative": 8.387735393529695
+  },
+  {
+    "uid": "42-2",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 79.87402737664075,
+    "relative": 8.381941091260261
+  },
+  {
+    "uid": "55-5",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 79.6692642243197,
+    "relative": 8.376146788990825
+  },
+  {
+    "uid": "2-4",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 79.24917874542022,
+    "relative": 8.37035248672139
+  },
+  {
+    "uid": "33-3",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 79.16623196963727,
+    "relative": 8.364558184451955
+  },
+  {
+    "uid": "56-1",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 78.49681130760514,
+    "relative": 8.35876388218252
+  },
+  {
+    "uid": "26-0",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 78.30347908870546,
+    "relative": 8.352969579913085
+  },
+  {
+    "uid": "46-1",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 78.01661829561989,
+    "relative": 8.34717527764365
+  },
+  {
+    "uid": "38-2",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 77.59837562817548,
+    "relative": 8.341380975374214
+  },
+  {
+    "uid": "0-26",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 77.55960072534799,
+    "relative": 8.33558667310478
+  },
+  {
+    "uid": "53-2",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 77.1722963206368,
+    "relative": 8.329792370835346
+  },
+  {
+    "uid": "10-2",
+    "difficulty": 1,
+    "level": "9",
+    "absolute": 77.12803514414036,
+    "relative": 8.32399806856591
+  },
+  {
+    "uid": "35-5",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 77.04191325035295,
+    "relative": 8.318203766296476
+  },
+  {
+    "uid": "57-5",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 77.00687073196012,
+    "relative": 8.31240946402704
+  },
+  {
+    "uid": "9-1",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 76.74246878515305,
+    "relative": 8.306615161757605
+  },
+  {
+    "uid": "22-0",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 76.71162531258847,
+    "relative": 8.30082085948817
+  },
+  {
+    "uid": "0-35",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 76.56775025037756,
+    "relative": 8.295026557218735
+  },
+  {
+    "uid": "59-4",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 76.13866491389336,
+    "relative": 8.2892322549493
+  },
+  {
+    "uid": "46-3",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 75.67720920508278,
+    "relative": 8.283437952679865
+  },
+  {
+    "uid": "0-51",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 74.68170089013422,
+    "relative": 8.277643650410429
+  },
+  {
+    "uid": "43-14",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 74.29070732607802,
+    "relative": 8.271849348140995
+  },
+  {
+    "uid": "57-1",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 74.17253725555071,
+    "relative": 8.266055045871559
+  },
+  {
+    "uid": "23-5",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 74.02054984952883,
+    "relative": 8.260260743602124
+  },
+  {
+    "uid": "12-1",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 73.59766002271716,
+    "relative": 8.254466441332688
+  },
+  {
+    "uid": "46-4",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 73.53298897682559,
+    "relative": 8.248672139063254
+  },
+  {
+    "uid": "14-3",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 73.34266053928066,
+    "relative": 8.24287783679382
+  },
+  {
+    "uid": "45-0",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 72.90177872153625,
+    "relative": 8.237083534524384
+  },
+  {
+    "uid": "52-1",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 72.41640767096781,
+    "relative": 8.23128923225495
+  },
+  {
+    "uid": "48-9",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 72.32681305777568,
+    "relative": 8.225494929985514
+  },
+  {
+    "uid": "25-4",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 71.7180905835792,
+    "relative": 8.21970062771608
+  },
+  {
+    "uid": "33-5",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 71.6728524182057,
+    "relative": 8.213906325446644
+  },
+  {
+    "uid": "26-5",
+    "difficulty": 0,
+    "level": "7",
+    "absolute": 71.34260605582455,
+    "relative": 8.20811202317721
+  },
+  {
+    "uid": "10-4",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 70.71930384826015,
+    "relative": 8.202317720907773
+  },
+  {
+    "uid": "16-0",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 70.6655788547304,
+    "relative": 8.196523418638339
+  },
+  {
+    "uid": "37-5",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 70.56836302741145,
+    "relative": 8.190729116368903
+  },
+  {
+    "uid": "40-3",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 70.32558412519919,
+    "relative": 8.184934814099469
+  },
+  {
+    "uid": "0-39",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": 70.2178986347194,
+    "relative": 8.179140511830033
+  },
+  {
+    "uid": "0-39",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 70.06879057352646,
+    "relative": 8.173346209560599
+  },
+  {
+    "uid": "30-2",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 70.03084183844938,
+    "relative": 8.167551907291163
+  },
+  {
+    "uid": "21-2",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 70.0208788440057,
+    "relative": 8.161757605021728
+  },
+  {
+    "uid": "58-0",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 69.84777671819934,
+    "relative": 8.155963302752294
+  },
+  {
+    "uid": "23-1",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": 69.71088336177118,
+    "relative": 8.150169000482858
+  },
+  {
+    "uid": "30-3",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 69.65838941339437,
+    "relative": 8.144374698213424
+  },
+  {
+    "uid": "11-3",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 69.43962209330653,
+    "relative": 8.138580395943988
+  },
+  {
+    "uid": "8-2",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 69.1131007620949,
+    "relative": 8.132786093674554
+  },
+  {
+    "uid": "0-18",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 69.05388424332246,
+    "relative": 8.126991791405118
+  },
+  {
+    "uid": "29-0",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": 67.85314300927587,
+    "relative": 8.121197489135684
+  },
+  {
+    "uid": "54-5",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 67.57563705771294,
+    "relative": 8.115403186866248
+  },
+  {
+    "uid": "35-4",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 67.425987728906,
+    "relative": 8.109608884596813
+  },
+  {
+    "uid": "15-4",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 66.33764100180842,
+    "relative": 8.103814582327377
+  },
+  {
+    "uid": "43-5",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 65.9865127945458,
+    "relative": 8.098020280057943
+  },
+  {
+    "uid": "3-5",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 65.33461463042923,
+    "relative": 8.092225977788507
+  },
+  {
+    "uid": "28-1",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 65.04187428983292,
+    "relative": 8.086431675519073
+  },
+  {
+    "uid": "50-1",
+    "difficulty": 0,
+    "level": "?",
+    "absolute": 64.4957694126859,
+    "relative": 8.080637373249637
+  },
+  {
+    "uid": "32-4",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 63.65316963508318,
+    "relative": 8.074843070980203
+  },
+  {
+    "uid": "41-1",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 63.084747702480264,
+    "relative": 8.069048768710768
+  },
+  {
+    "uid": "5-4",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 62.48452862339283,
+    "relative": 8.063254466441332
+  },
+  {
+    "uid": "31-0",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 61.93211410313198,
+    "relative": 8.057460164171898
+  },
+  {
+    "uid": "36-3",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 61.93076142022182,
+    "relative": 8.051665861902462
+  },
+  {
+    "uid": "39-4",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": 61.756943103872864,
+    "relative": 8.045871559633028
+  },
+  {
+    "uid": "55-1",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 61.105564898836974,
+    "relative": 8.040077257363592
+  },
+  {
+    "uid": "2-2",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 60.844021519088656,
+    "relative": 8.034282955094158
+  },
+  {
+    "uid": "49-1",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": 60.545343994508535,
+    "relative": 8.028488652824722
+  },
+  {
+    "uid": "34-3",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 60.15568171082804,
+    "relative": 8.022694350555287
+  },
+  {
+    "uid": "3-3",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 59.70031060369824,
+    "relative": 8.016900048285851
+  },
+  {
+    "uid": "27-0",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 59.468591423152716,
+    "relative": 8.011105746016417
+  },
+  {
+    "uid": "5-5",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 58.635235758634394,
+    "relative": 8.005311443746981
+  },
+  {
+    "uid": "35-1",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 58.55060016893321,
+    "relative": 7.999530736743313
+  },
+  {
+    "uid": "55-4",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 58.54098706477692,
+    "relative": 7.993899577663068
+  },
+  {
+    "uid": "48-6",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 58.51448138763974,
+    "relative": 7.988268418582825
+  },
+  {
+    "uid": "53-3",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 57.70574322223859,
+    "relative": 7.982637259502581
+  },
+  {
+    "uid": "39-2",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 57.350802959904996,
+    "relative": 7.9770061004223365
+  },
+  {
+    "uid": "11-5",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 56.93044236950481,
+    "relative": 7.971374941342093
+  },
+  {
+    "uid": "48-3",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 56.54713454814075,
+    "relative": 7.965743782261849
+  },
+  {
+    "uid": "50-3",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 55.80046747948065,
+    "relative": 7.960112623181605
+  },
+  {
+    "uid": "27-4",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": 55.529106354623835,
+    "relative": 7.95448146410136
+  },
+  {
+    "uid": "18-3",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 55.36902256243071,
+    "relative": 7.948850305021117
+  },
+  {
+    "uid": "40-4",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": 55.17669726296733,
+    "relative": 7.943219145940873
+  },
+  {
+    "uid": "52-2",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 55.06373129277288,
+    "relative": 7.9375879868606285
+  },
+  {
+    "uid": "31-3",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 54.71876623168099,
+    "relative": 7.931956827780384
+  },
+  {
+    "uid": "7-1",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 54.45153410904282,
+    "relative": 7.926325668700141
+  },
+  {
+    "uid": "30-5",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": 54.11715100845809,
+    "relative": 7.920694509619897
+  },
+  {
+    "uid": "29-2",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": 54.05137711487244,
+    "relative": 7.915063350539652
+  },
+  {
+    "uid": "4-1",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 53.628886258530535,
+    "relative": 7.909432191459408
+  },
+  {
+    "uid": "3-1",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 53.370547004841505,
+    "relative": 7.903801032379165
+  },
+  {
+    "uid": "39-6",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 53.312938412394345,
+    "relative": 7.8981698732989205
+  },
+  {
+    "uid": "20-2",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 53.28631771009256,
+    "relative": 7.892538714218676
+  },
+  {
+    "uid": "24-0",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": 52.97683462095707,
+    "relative": 7.886907555138433
+  },
+  {
+    "uid": "51-0",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 52.88481481131911,
+    "relative": 7.881276396058189
+  },
+  {
+    "uid": "13-5",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 51.683456566566136,
+    "relative": 7.875645236977944
+  },
+  {
+    "uid": "12-4",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 51.42439919666685,
+    "relative": 7.8700140778977
+  },
+  {
+    "uid": "33-6",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 50.51573040850474,
+    "relative": 7.864382918817457
+  },
+  {
+    "uid": "18-4",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 50.512148618572795,
+    "relative": 7.8587517597372125
+  },
+  {
+    "uid": "43-11",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 50.281898601280794,
+    "relative": 7.853120600656968
+  },
+  {
+    "uid": "57-1",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 50.018868403198084,
+    "relative": 7.847489441576724
+  },
+  {
+    "uid": "10-3",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 49.74962190670347,
+    "relative": 7.841858282496481
+  },
+  {
+    "uid": "42-0",
+    "difficulty": 3,
+    "level": "8",
+    "absolute": 49.7353359035588,
+    "relative": 7.836227123416236
+  },
+  {
+    "uid": "14-5",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 49.55500978546771,
+    "relative": 7.830595964335992
+  },
+  {
+    "uid": "39-2",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 49.481722508264816,
+    "relative": 7.824964805255748
+  },
+  {
+    "uid": "39-7",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": 49.4011093294501,
+    "relative": 7.8193336461755045
+  },
+  {
+    "uid": "23-1",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": 49.31716308256156,
+    "relative": 7.81370248709526
+  },
+  {
+    "uid": "28-4",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 49.137750328445165,
+    "relative": 7.808071328015016
+  },
+  {
+    "uid": "37-0",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": 48.84858237112216,
+    "relative": 7.802440168934773
+  },
+  {
+    "uid": "58-3",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 48.7782743282165,
+    "relative": 7.796809009854528
+  },
+  {
+    "uid": "32-2",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 48.08697957621438,
+    "relative": 7.791177850774284
+  },
+  {
+    "uid": "33-4",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 47.980564059222,
+    "relative": 7.78554669169404
+  },
+  {
+    "uid": "47-1",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 47.96736976080085,
+    "relative": 7.7799155326137965
+  },
+  {
+    "uid": "44-1",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 47.546979676629576,
+    "relative": 7.774284373533552
+  },
+  {
+    "uid": "46-0",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 47.50784438078778,
+    "relative": 7.768653214453308
+  },
+  {
+    "uid": "43-6",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 47.433820598358054,
+    "relative": 7.763022055373064
+  },
+  {
+    "uid": "57-0",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 47.23720276546308,
+    "relative": 7.75739089629282
+  },
+  {
+    "uid": "32-3",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 47.08356208666329,
+    "relative": 7.751759737212576
+  },
+  {
+    "uid": "48-13",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 46.712433894250196,
+    "relative": 7.746128578132332
+  },
+  {
+    "uid": "52-4",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 46.57600393069163,
+    "relative": 7.740497419052088
+  },
+  {
+    "uid": "33-2",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 46.44734249705002,
+    "relative": 7.734866259971844
+  },
+  {
+    "uid": "48-12",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 45.98449802618744,
+    "relative": 7.7292351008916
+  },
+  {
+    "uid": "54-0",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 45.879609765532194,
+    "relative": 7.723603941811356
+  },
+  {
+    "uid": "31-4",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 45.60951051358884,
+    "relative": 7.7179727827311115
+  },
+  {
+    "uid": "46-2",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 45.341994373106985,
+    "relative": 7.712341623650868
+  },
+  {
+    "uid": "39-3",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 45.2991122227254,
+    "relative": 7.706710464570624
+  },
+  {
+    "uid": "44-0",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 44.89234940536272,
+    "relative": 7.70107930549038
+  },
+  {
+    "uid": "19-1",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 44.352360020964454,
+    "relative": 7.695448146410136
+  },
+  {
+    "uid": "35-0",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": 43.85178186153202,
+    "relative": 7.689816987329892
+  },
+  {
+    "uid": "44-0",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 43.47983328735247,
+    "relative": 7.684185828249648
+  },
+  {
+    "uid": "16-4",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 43.45935946500185,
+    "relative": 7.6785546691694035
+  },
+  {
+    "uid": "3-2",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 43.316725069540695,
+    "relative": 7.67292351008916
+  },
+  {
+    "uid": "27-0",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 42.96865490629336,
+    "relative": 7.667292351008916
+  },
+  {
+    "uid": "0-50",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 42.179031792894094,
+    "relative": 7.661661191928672
+  },
+  {
+    "uid": "0-14",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 42.0068771395237,
+    "relative": 7.656030032848427
+  },
+  {
+    "uid": "26-3",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": 41.99237125519319,
+    "relative": 7.650398873768184
+  },
+  {
+    "uid": "58-1",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 41.879513824939785,
+    "relative": 7.64476771468794
+  },
+  {
+    "uid": "0-13",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 41.55397311973411,
+    "relative": 7.6391365556076956
+  },
+  {
+    "uid": "41-5",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": 40.7561036174883,
+    "relative": 7.633505396527452
+  },
+  {
+    "uid": "33-0",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": 40.65418774453513,
+    "relative": 7.627874237447208
+  },
+  {
+    "uid": "29-0",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": 40.48208152281279,
+    "relative": 7.622243078366964
+  },
+  {
+    "uid": "42-4",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 40.42475094741885,
+    "relative": 7.616611919286719
+  },
+  {
+    "uid": "31-1",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 40.082004494675445,
+    "relative": 7.610980760206476
+  },
+  {
+    "uid": "2-3",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": 40.01992445500249,
+    "relative": 7.605349601126232
+  },
+  {
+    "uid": "19-4",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 39.14816974361315,
+    "relative": 7.599718442045988
+  },
+  {
+    "uid": "11-3",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": 38.54943446464029,
+    "relative": 7.594087282965743
+  },
+  {
+    "uid": "12-0",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 38.52625016957104,
+    "relative": 7.5884561238855
+  },
+  {
+    "uid": "41-2",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 38.24370592614244,
+    "relative": 7.582824964805256
+  },
+  {
+    "uid": "40-0",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 38.18032991049733,
+    "relative": 7.577193805725011
+  },
+  {
+    "uid": "5-3",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 37.725125780628034,
+    "relative": 7.571562646644767
+  },
+  {
+    "uid": "43-4",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 37.06322843959512,
+    "relative": 7.565931487564524
+  },
+  {
+    "uid": "22-1",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 36.82831802239256,
+    "relative": 7.56030032848428
+  },
+  {
+    "uid": "11-1",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 36.48186381106387,
+    "relative": 7.554669169404035
+  },
+  {
+    "uid": "42-1",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": 36.3891494179377,
+    "relative": 7.549038010323791
+  },
+  {
+    "uid": "2-1",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": 36.25929317951681,
+    "relative": 7.543406851243548
+  },
+  {
+    "uid": "8-4",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 36.09402865430382,
+    "relative": 7.5377756921633035
+  },
+  {
+    "uid": "28-5",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 35.718670605605105,
+    "relative": 7.532144533083059
+  },
+  {
+    "uid": "36-2",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": 35.39880368069131,
+    "relative": 7.526513374002816
+  },
+  {
+    "uid": "41-1",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 34.600567931839144,
+    "relative": 7.520882214922572
+  },
+  {
+    "uid": "7-4",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 34.26411850144365,
+    "relative": 7.515251055842327
+  },
+  {
+    "uid": "30-4",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": 34.141865592185525,
+    "relative": 7.509619896762083
+  },
+  {
+    "uid": "4-3",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": 33.93353633712339,
+    "relative": 7.50398873768184
+  },
+  {
+    "uid": "9-2",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 33.39208984281319,
+    "relative": 7.4983575786015955
+  },
+  {
+    "uid": "42-3",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 33.263473072026684,
+    "relative": 7.492726419521351
+  },
+  {
+    "uid": "22-3",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": 32.646581209481326,
+    "relative": 7.487095260441107
+  },
+  {
+    "uid": "4-4",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 32.1017824619556,
+    "relative": 7.481464101360864
+  },
+  {
+    "uid": "11-4",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 31.800616640301737,
+    "relative": 7.475832942280619
+  },
+  {
+    "uid": "57-3",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 31.698163961190104,
+    "relative": 7.470201783200375
+  },
+  {
+    "uid": "49-1",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": 31.144915656401018,
+    "relative": 7.464570624120132
+  },
+  {
+    "uid": "20-5",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 31.064033106132836,
+    "relative": 7.4589394650398875
+  },
+  {
+    "uid": "18-0",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": 30.98603220557739,
+    "relative": 7.453308305959643
+  },
+  {
+    "uid": "23-3",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": 30.89657057472319,
+    "relative": 7.447677146879399
+  },
+  {
+    "uid": "20-0",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 30.571080093919413,
+    "relative": 7.442045987799156
+  },
+  {
+    "uid": "18-5",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 30.570323576990575,
+    "relative": 7.436414828718911
+  },
+  {
+    "uid": "32-5",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 30.31689365342593,
+    "relative": 7.430783669638667
+  },
+  {
+    "uid": "59-6",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 30.239039494653053,
+    "relative": 7.425152510558423
+  },
+  {
+    "uid": "39-8",
+    "difficulty": 2,
+    "level": "?",
+    "absolute": 29.979322157101674,
+    "relative": 7.4195213514781795
+  },
+  {
+    "uid": "9-0",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": 29.3553930612096,
+    "relative": 7.413890192397935
+  },
+  {
+    "uid": "17-0",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": 28.20065709762095,
+    "relative": 7.408259033317691
+  },
+  {
+    "uid": "23-3",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": 27.784878550582604,
+    "relative": 7.402627874237448
+  },
+  {
+    "uid": "38-2",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": 26.807964663263327,
+    "relative": 7.396996715157203
+  },
+  {
+    "uid": "43-16",
+    "difficulty": 0,
+    "level": "7",
+    "absolute": 26.487666467825253,
+    "relative": 7.391365556076959
+  },
+  {
+    "uid": "0-47",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 26.432825256034906,
+    "relative": 7.385734396996715
+  },
+  {
+    "uid": "33-1",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": 26.42291628212123,
+    "relative": 7.380103237916471
+  },
+  {
+    "uid": "29-1",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 26.003066728572406,
+    "relative": 7.374472078836227
+  },
+  {
+    "uid": "54-3",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 25.874520778235052,
+    "relative": 7.368840919755983
+  },
+  {
+    "uid": "7-2",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 25.621492990487805,
+    "relative": 7.363209760675739
+  },
+  {
+    "uid": "31-3",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 25.40004974167898,
+    "relative": 7.357578601595495
+  },
+  {
+    "uid": "5-0",
+    "difficulty": 2,
+    "level": "6",
+    "absolute": 25.360652975356146,
+    "relative": 7.351947442515251
+  },
+  {
+    "uid": "7-0",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 25.34844702883281,
+    "relative": 7.346316283435007
+  },
+  {
+    "uid": "41-0",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": 25.342593432873148,
+    "relative": 7.340685124354763
+  },
+  {
+    "uid": "24-2",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 25.341127721492956,
+    "relative": 7.335053965274519
+  },
+  {
+    "uid": "0-12",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": 25.27774975746424,
+    "relative": 7.329422806194275
+  },
+  {
+    "uid": "56-5",
+    "difficulty": 0,
+    "level": "7",
+    "absolute": 25.19708534364461,
+    "relative": 7.323791647114031
+  },
+  {
+    "uid": "54-4",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 25.00637228386518,
+    "relative": 7.3181604880337865
+  },
+  {
+    "uid": "55-3",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 24.11588620729947,
+    "relative": 7.312529328953543
+  },
+  {
+    "uid": "37-4",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": 23.98871964890795,
+    "relative": 7.306898169873299
+  },
+  {
+    "uid": "43-10",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 23.72038926607088,
+    "relative": 7.301267010793055
+  },
+  {
+    "uid": "51-4",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 23.578052149930233,
+    "relative": 7.295635851712811
+  },
+  {
+    "uid": "6-3",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 23.363379324297483,
+    "relative": 7.290004692632567
+  },
+  {
+    "uid": "36-1",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 23.0468002958368,
+    "relative": 7.284373533552323
+  },
+  {
+    "uid": "43-18",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 21.807536533624113,
+    "relative": 7.2787423744720785
+  },
+  {
+    "uid": "0-32",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 21.22009543705699,
+    "relative": 7.273111215391835
+  },
+  {
+    "uid": "6-5",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 21.203173471275846,
+    "relative": 7.267480056311591
+  },
+  {
+    "uid": "15-2",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 20.954855763673365,
+    "relative": 7.261848897231347
+  },
+  {
+    "uid": "37-3",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 20.58526715384861,
+    "relative": 7.256217738151102
+  },
+  {
+    "uid": "18-2",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 20.27813828595771,
+    "relative": 7.250586579070859
+  },
+  {
+    "uid": "58-2",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 19.93324511858821,
+    "relative": 7.244955419990615
+  },
+  {
+    "uid": "22-4",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 19.889022681210772,
+    "relative": 7.2393242609103705
+  },
+  {
+    "uid": "12-1",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 19.7995574453628,
+    "relative": 7.233693101830127
+  },
+  {
+    "uid": "40-2",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 19.267717496717754,
+    "relative": 7.228061942749883
+  },
+  {
+    "uid": "54-2",
+    "difficulty": 0,
+    "level": "?",
+    "absolute": 19.10145221621352,
+    "relative": 7.222430783669639
+  },
+  {
+    "uid": "36-5",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": 18.93148003622638,
+    "relative": 7.216799624589394
+  },
+  {
+    "uid": "4-5",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 18.90596593979192,
+    "relative": 7.21116846550915
+  },
+  {
+    "uid": "19-5",
+    "difficulty": 0,
+    "level": "7",
+    "absolute": 18.89395643925655,
+    "relative": 7.205537306428907
+  },
+  {
+    "uid": "14-2",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 18.78914387067706,
+    "relative": 7.1999061473486625
+  },
+  {
+    "uid": "24-0",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": 18.437723721782938,
+    "relative": 7.194274988268418
+  },
+  {
+    "uid": "11-0",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": 18.15845362073428,
+    "relative": 7.188643829188175
+  },
+  {
+    "uid": "39-4",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": 18.009310167040308,
+    "relative": 7.183012670107931
+  },
+  {
+    "uid": "37-2",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 17.843943615688406,
+    "relative": 7.177381511027686
+  },
+  {
+    "uid": "9-3",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 17.750455280131202,
+    "relative": 7.171750351947442
+  },
+  {
+    "uid": "0-33",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 17.72943520066127,
+    "relative": 7.166119192867199
+  },
+  {
+    "uid": "34-0",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 17.115748335473278,
+    "relative": 7.1604880337869545
+  },
+  {
+    "uid": "20-3",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 17.09233240014831,
+    "relative": 7.15485687470671
+  },
+  {
+    "uid": "1-1",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": 16.826346284134694,
+    "relative": 7.149225715626466
+  },
+  {
+    "uid": "28-3",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": 16.585583508425234,
+    "relative": 7.143594556546223
+  },
+  {
+    "uid": "2-2",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 16.506449221525827,
+    "relative": 7.137963397465978
+  },
+  {
+    "uid": "48-6",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 15.709113457776404,
+    "relative": 7.132332238385734
+  },
+  {
+    "uid": "48-13",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 15.558286584399964,
+    "relative": 7.126701079305491
+  },
+  {
+    "uid": "0-11",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 15.53245153162362,
+    "relative": 7.1210699202252465
+  },
+  {
+    "uid": "30-0",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 15.52123341690378,
+    "relative": 7.115438761145002
+  },
+  {
+    "uid": "17-4",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 15.365405964700875,
+    "relative": 7.109807602064758
+  },
+  {
+    "uid": "50-4",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": 15.281588323970396,
+    "relative": 7.104176442984515
+  },
+  {
+    "uid": "56-2",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 15.196025129610813,
+    "relative": 7.09854528390427
+  },
+  {
+    "uid": "4-0",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 14.89457670882391,
+    "relative": 7.092914124824026
+  },
+  {
+    "uid": "20-1",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 14.88734039202736,
+    "relative": 7.087282965743782
+  },
+  {
+    "uid": "48-4",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 14.50361420962365,
+    "relative": 7.0816518066635386
+  },
+  {
+    "uid": "50-2",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": 14.011506459886949,
+    "relative": 7.076020647583294
+  },
+  {
+    "uid": "18-1",
+    "difficulty": 2,
+    "level": "6",
+    "absolute": 13.939738410935012,
+    "relative": 7.07038948850305
+  },
+  {
+    "uid": "15-0",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": 13.569486755258122,
+    "relative": 7.064758329422806
+  },
+  {
+    "uid": "43-8",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": 13.395475205937428,
+    "relative": 7.059127170342562
+  },
+  {
+    "uid": "15-5",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 13.338133509028088,
+    "relative": 7.053496011262318
+  },
+  {
+    "uid": "0-52",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 12.542137113859257,
+    "relative": 7.047864852182074
+  },
+  {
+    "uid": "5-2",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": 12.500720961277624,
+    "relative": 7.04223369310183
+  },
+  {
+    "uid": "5-1",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 12.258926681686052,
+    "relative": 7.036602534021586
+  },
+  {
+    "uid": "43-1",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 12.11162101219763,
+    "relative": 7.030971374941342
+  },
+  {
+    "uid": "58-0",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 12.020627879431395,
+    "relative": 7.025340215861098
+  },
+  {
+    "uid": "9-4",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": 11.767676697587937,
+    "relative": 7.019709056780854
+  },
+  {
+    "uid": "19-3",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": 11.577492375234723,
+    "relative": 7.01407789770061
+  },
+  {
+    "uid": "29-4",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": 10.894463534477453,
+    "relative": 7.008446738620366
+  },
+  {
+    "uid": "43-19",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 10.275426493163096,
+    "relative": 7.002815579540122
+  },
+  {
+    "uid": "3-2",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 10.231068515072835,
+    "relative": 6.997261524418074
+  },
+  {
+    "uid": "53-4",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 9.963898390430703,
+    "relative": 6.991784573254222
+  },
+  {
+    "uid": "48-10",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 9.882364595008166,
+    "relative": 6.9863076220903695
+  },
+  {
+    "uid": "31-2",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 9.535689743484555,
+    "relative": 6.980830670926518
+  },
+  {
+    "uid": "27-1",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": 9.484327813340945,
+    "relative": 6.975353719762666
+  },
+  {
+    "uid": "53-2",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 9.313473769552814,
+    "relative": 6.969876768598813
+  },
+  {
+    "uid": "42-5",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 8.948549573198026,
+    "relative": 6.964399817434961
+  },
+  {
+    "uid": "35-5",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 8.500562464671955,
+    "relative": 6.958922866271109
+  },
+  {
+    "uid": "43-20",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 8.459475550159585,
+    "relative": 6.953445915107257
+  },
+  {
+    "uid": "30-1",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": 7.690597548916124,
+    "relative": 6.947968963943405
+  },
+  {
+    "uid": "40-2",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": 7.4804811963555915,
+    "relative": 6.942492012779553
+  },
+  {
+    "uid": "40-1",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 7.360367882222423,
+    "relative": 6.937015061615701
+  },
+  {
+    "uid": "12-3",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": 6.662540746454304,
+    "relative": 6.931538110451848
+  },
+  {
+    "uid": "0-15",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": 6.634019879480529,
+    "relative": 6.926061159287996
+  },
+  {
+    "uid": "14-3",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 6.473568486234945,
+    "relative": 6.920584208124144
+  },
+  {
+    "uid": "24-3",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 6.175445081759583,
+    "relative": 6.915107256960292
+  },
+  {
+    "uid": "48-2",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 5.501569427384292,
+    "relative": 6.90963030579644
+  },
+  {
+    "uid": "52-2",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": 5.318961131150996,
+    "relative": 6.904153354632588
+  },
+  {
+    "uid": "43-0",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": 4.437425986796435,
+    "relative": 6.898676403468736
+  },
+  {
+    "uid": "25-0",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": 4.42011639918291,
+    "relative": 6.893199452304883
+  },
+  {
+    "uid": "53-5",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": 4.349090815002641,
+    "relative": 6.887722501141032
+  },
+  {
+    "uid": "35-3",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 3.466749777865435,
+    "relative": 6.8822455499771795
+  },
+  {
+    "uid": "33-5",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": 3.0429000127751493,
+    "relative": 6.876768598813327
+  },
+  {
+    "uid": "43-5",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 3.0326053704197573,
+    "relative": 6.871291647649475
+  },
+  {
+    "uid": "47-0",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 2.867790985589524,
+    "relative": 6.865814696485623
+  },
+  {
+    "uid": "0-16",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": 2.3491131912065413,
+    "relative": 6.860337745321771
+  },
+  {
+    "uid": "25-3",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": 2.2870590774770165,
+    "relative": 6.8548607941579185
+  },
+  {
+    "uid": "3-3",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 2.2781034921971233,
+    "relative": 6.849383842994067
+  },
+  {
+    "uid": "9-1",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 2.198449482879058,
+    "relative": 6.843906891830215
+  },
+  {
+    "uid": "55-2",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": 2.1581287445100212,
+    "relative": 6.838429940666362
+  },
+  {
+    "uid": "5-4",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": 2.017463526626442,
+    "relative": 6.832952989502511
+  },
+  {
+    "uid": "0-34",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 1.693900773446386,
+    "relative": 6.827476038338658
+  },
+  {
+    "uid": "0-7",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": 1.5952071872954754,
+    "relative": 6.821999087174806
+  },
+  {
+    "uid": "34-5",
+    "difficulty": 0,
+    "level": "7",
+    "absolute": 0.9976599832322296,
+    "relative": 6.816522136010954
+  },
+  {
+    "uid": "6-3",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": 0.8875776930658232,
+    "relative": 6.811045184847102
+  },
+  {
+    "uid": "33-8",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": 0.5243972000649112,
+    "relative": 6.80556823368325
+  },
+  {
+    "uid": "33-7",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": 0.1639848921249152,
+    "relative": 6.800091282519397
+  },
+  {
+    "uid": "16-0",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": 0.10967056265008163,
+    "relative": 6.794614331355546
+  },
+  {
+    "uid": "43-3",
+    "difficulty": 4,
+    "level": "L",
+    "absolute": 0,
+    "relative": 6.789137380191693
+  },
+  {
+    "uid": "43-18",
+    "difficulty": 4,
+    "level": "L",
+    "absolute": 0,
+    "relative": 6.783660429027841
+  },
+  {
+    "uid": "60-0",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": 0,
+    "relative": 6.778183477863989
+  },
+  {
+    "uid": "60-0",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 0,
+    "relative": 6.772706526700137
+  },
+  {
+    "uid": "60-0",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 0,
+    "relative": 6.767229575536285
+  },
+  {
+    "uid": "60-1",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": 0,
+    "relative": 6.761752624372432
+  },
+  {
+    "uid": "60-1",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 0,
+    "relative": 6.756275673208581
+  },
+  {
+    "uid": "60-1",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 0,
+    "relative": 6.7507987220447285
+  },
+  {
+    "uid": "60-2",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": 0,
+    "relative": 6.745321770880876
+  },
+  {
+    "uid": "60-2",
+    "difficulty": 1,
+    "level": "9",
+    "absolute": 0,
+    "relative": 6.739844819717025
+  },
+  {
+    "uid": "60-2",
+    "difficulty": 2,
+    "level": "11",
+    "absolute": 0,
+    "relative": 6.734367868553172
+  },
+  {
+    "uid": "60-3",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": 0,
+    "relative": 6.72889091738932
+  },
+  {
+    "uid": "60-3",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": 0,
+    "relative": 6.7234139662254675
+  },
+  {
+    "uid": "60-3",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": 0,
+    "relative": 6.717937015061616
+  },
+  {
+    "uid": "60-4",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": 0,
+    "relative": 6.712460063897764
+  },
+  {
+    "uid": "60-4",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 0,
+    "relative": 6.706983112733911
+  },
+  {
+    "uid": "60-4",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 0,
+    "relative": 6.70150616157006
+  },
+  {
+    "uid": "60-4",
+    "difficulty": 3,
+    "level": "?",
+    "absolute": 0,
+    "relative": 6.696029210406207
+  },
+  {
+    "uid": "60-5",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": 0,
+    "relative": 6.690552259242355
+  },
+  {
+    "uid": "60-5",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": 0,
+    "relative": 6.685075308078503
+  },
+  {
+    "uid": "60-5",
+    "difficulty": 2,
+    "level": "10",
+    "absolute": 0,
+    "relative": 6.679598356914651
+  },
+  {
+    "uid": "55-0",
+    "difficulty": 4,
+    "level": "E",
+    "absolute": 0,
+    "relative": 6.674121405750799
+  },
+  {
+    "uid": "55-1",
+    "difficulty": 4,
+    "level": "E",
+    "absolute": 0,
+    "relative": 6.668644454586946
+  },
+  {
+    "uid": "55-2",
+    "difficulty": 4,
+    "level": "N",
+    "absolute": 0,
+    "relative": 6.663167503423095
+  },
+  {
+    "uid": "55-3",
+    "difficulty": 4,
+    "level": "N",
+    "absolute": 0,
+    "relative": 6.6576905522592424
+  },
+  {
+    "uid": "55-4",
+    "difficulty": 4,
+    "level": "H",
+    "absolute": 0,
+    "relative": 6.65221360109539
+  },
+  {
+    "uid": "55-5",
+    "difficulty": 4,
+    "level": "H",
+    "absolute": 0,
+    "relative": 6.646736649931539
+  },
+  {
+    "uid": "42-0",
+    "difficulty": 4,
+    "level": "E",
+    "absolute": 0,
+    "relative": 6.641259698767686
+  },
+  {
+    "uid": "42-1",
+    "difficulty": 4,
+    "level": "H",
+    "absolute": 0,
+    "relative": 6.635782747603834
+  },
+  {
+    "uid": "42-2",
+    "difficulty": 4,
+    "level": "H",
+    "absolute": 0,
+    "relative": 6.630305796439981
+  },
+  {
+    "uid": "42-3",
+    "difficulty": 4,
+    "level": "N",
+    "absolute": 0,
+    "relative": 6.62482884527613
+  },
+  {
+    "uid": "42-4",
+    "difficulty": 4,
+    "level": "N",
+    "absolute": 0,
+    "relative": 6.6193518941122775
+  },
+  {
+    "uid": "42-5",
+    "difficulty": 4,
+    "level": "N",
+    "absolute": 0,
+    "relative": 6.613874942948425
+  },
+  {
+    "uid": "8-3",
+    "difficulty": 3,
+    "level": "?",
+    "absolute": 0,
+    "relative": 6.608397991784574
+  },
+  {
+    "uid": "54-0",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -0.7281530417155727,
+    "relative": 6.602921040620721
+  },
+  {
+    "uid": "30-5",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -0.8293536991178291,
+    "relative": 6.597444089456869
+  },
+  {
+    "uid": "0-22",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -0.868287673457369,
+    "relative": 6.5919671382930165
+  },
+  {
+    "uid": "10-2",
+    "difficulty": 0,
+    "level": "7",
+    "absolute": -1.6176406578461404,
+    "relative": 6.586490187129165
+  },
+  {
+    "uid": "56-3",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -1.695229111461956,
+    "relative": 6.581013235965313
+  },
+  {
+    "uid": "16-5",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": -1.788573415886344,
+    "relative": 6.57553628480146
+  },
+  {
+    "uid": "48-14",
+    "difficulty": 0,
+    "level": "7",
+    "absolute": -2.2898896309446553,
+    "relative": 6.570059333637609
+  },
+  {
+    "uid": "45-4",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": -2.360641991539078,
+    "relative": 6.564582382473756
+  },
+  {
+    "uid": "28-3",
+    "difficulty": 2,
+    "level": "6",
+    "absolute": -2.6781180492639387,
+    "relative": 6.559105431309904
+  },
+  {
+    "uid": "11-0",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -2.702171665244588,
+    "relative": 6.5536284801460525
+  },
+  {
+    "uid": "48-1",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": -3.6955292002690796,
+    "relative": 6.5481515289822
+  },
+  {
+    "uid": "31-5",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": -5.150225082671377,
+    "relative": 6.542674577818348
+  },
+  {
+    "uid": "40-5",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -5.211937451836516,
+    "relative": 6.537197626654496
+  },
+  {
+    "uid": "28-0",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -5.226251099519341,
+    "relative": 6.531720675490644
+  },
+  {
+    "uid": "0-38",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": -5.231985851181852,
+    "relative": 6.5262437243267915
+  },
+  {
+    "uid": "34-2",
+    "difficulty": 1,
+    "level": "8",
+    "absolute": -5.251769340449595,
+    "relative": 6.520766773162939
+  },
+  {
+    "uid": "51-3",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -5.375137328748732,
+    "relative": 6.515289821999088
+  },
+  {
+    "uid": "48-8",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -5.654582838940425,
+    "relative": 6.509812870835235
+  },
+  {
+    "uid": "5-2",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -6.068752580159714,
+    "relative": 6.504335919671383
+  },
+  {
+    "uid": "49-0",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -6.1074144797987815,
+    "relative": 6.49885896850753
+  },
+  {
+    "uid": "12-5",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -6.901131052684099,
+    "relative": 6.493382017343679
+  },
+  {
+    "uid": "0-23",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -7.1085094124639525,
+    "relative": 6.4879050661798265
+  },
+  {
+    "uid": "55-0",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": -7.312233594793933,
+    "relative": 6.482428115015974
+  },
+  {
+    "uid": "53-0",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": -7.638074448257265,
+    "relative": 6.476951163852123
+  },
+  {
+    "uid": "0-18",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -7.678415137582056,
+    "relative": 6.47147421268827
+  },
+  {
+    "uid": "0-17",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -8.46270537454303,
+    "relative": 6.465997261524418
+  },
+  {
+    "uid": "22-1",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": -8.716946490395094,
+    "relative": 6.460520310360566
+  },
+  {
+    "uid": "33-3",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": -9.069042475199678,
+    "relative": 6.455043359196714
+  },
+  {
+    "uid": "45-5",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -9.318003595659631,
+    "relative": 6.449566408032862
+  },
+  {
+    "uid": "10-4",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -9.404552884536491,
+    "relative": 6.44408945686901
+  },
+  {
+    "uid": "48-5",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -9.465038790139985,
+    "relative": 6.438612505705158
+  },
+  {
+    "uid": "53-1",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -9.4904135477635,
+    "relative": 6.433135554541305
+  },
+  {
+    "uid": "50-3",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -9.61324271194791,
+    "relative": 6.427658603377453
+  },
+  {
+    "uid": "17-4",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -9.674689467789614,
+    "relative": 6.4221816522136015
+  },
+  {
+    "uid": "49-2",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -9.771056762345344,
+    "relative": 6.416704701049749
+  },
+  {
+    "uid": "17-3",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -9.83365852594171,
+    "relative": 6.411227749885897
+  },
+  {
+    "uid": "22-5",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -10.119222387308547,
+    "relative": 6.405750798722045
+  },
+  {
+    "uid": "7-0",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": -10.308807080724986,
+    "relative": 6.400273847558193
+  },
+  {
+    "uid": "59-7",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": -10.555768330654386,
+    "relative": 6.3947968963943405
+  },
+  {
+    "uid": "24-4",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -10.58925774937257,
+    "relative": 6.389319945230488
+  },
+  {
+    "uid": "16-3",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -11.092278223901799,
+    "relative": 6.383842994066637
+  },
+  {
+    "uid": "13-2",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -11.620522999675837,
+    "relative": 6.378366042902784
+  },
+  {
+    "uid": "14-1",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -11.866745627368468,
+    "relative": 6.372889091738932
+  },
+  {
+    "uid": "0-19",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -12.626727059455643,
+    "relative": 6.36741214057508
+  },
+  {
+    "uid": "4-2",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -12.634640570146495,
+    "relative": 6.361935189411228
+  },
+  {
+    "uid": "8-0",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": -12.683181008256192,
+    "relative": 6.3564582382473755
+  },
+  {
+    "uid": "23-4",
+    "difficulty": 2,
+    "level": "6",
+    "absolute": -12.70986196335496,
+    "relative": 6.350981287083524
+  },
+  {
+    "uid": "51-5",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -12.824971458483548,
+    "relative": 6.345504335919672
+  },
+  {
+    "uid": "52-4",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -12.990431057520894,
+    "relative": 6.340027384755819
+  },
+  {
+    "uid": "53-1",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": -13.665536171825483,
+    "relative": 6.334550433591967
+  },
+  {
+    "uid": "57-2",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -13.97372594900037,
+    "relative": 6.329073482428115
+  },
+  {
+    "uid": "56-1",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": -14.171643350224597,
+    "relative": 6.323596531264263
+  },
+  {
+    "uid": "0-44",
+    "difficulty": 2,
+    "level": "9",
+    "absolute": -14.211793317947187,
+    "relative": 6.318119580100411
+  },
+  {
+    "uid": "35-4",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -14.240134812469591,
+    "relative": 6.312642628936559
+  },
+  {
+    "uid": "18-0",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -14.711772294897697,
+    "relative": 6.307165677772707
+  },
+  {
+    "uid": "23-5",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -14.720305214583004,
+    "relative": 6.301688726608854
+  },
+  {
+    "uid": "25-5",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -14.987826724259689,
+    "relative": 6.296211775445002
+  },
+  {
+    "uid": "37-3",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -15.04540907642745,
+    "relative": 6.2907348242811505
+  },
+  {
+    "uid": "27-5",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -15.05598654977137,
+    "relative": 6.285257873117298
+  },
+  {
+    "uid": "37-0",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -16.126614805690654,
+    "relative": 6.279780921953446
+  },
+  {
+    "uid": "12-2",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -16.224396867470105,
+    "relative": 6.274303970789594
+  },
+  {
+    "uid": "29-5",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -16.381953557588716,
+    "relative": 6.268827019625742
+  },
+  {
+    "uid": "35-1",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -16.741384631116535,
+    "relative": 6.2633500684618895
+  },
+  {
+    "uid": "16-2",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": -17.047740239332033,
+    "relative": 6.257873117298038
+  },
+  {
+    "uid": "46-3",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -17.71781555457962,
+    "relative": 6.252396166134186
+  },
+  {
+    "uid": "40-1",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -19.10059470044085,
+    "relative": 6.246919214970333
+  },
+  {
+    "uid": "8-3",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": -19.263770582717918,
+    "relative": 6.241442263806482
+  },
+  {
+    "uid": "45-0",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -19.556992173671297,
+    "relative": 6.235965312642629
+  },
+  {
+    "uid": "56-4",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": -19.623124906025776,
+    "relative": 6.230488361478777
+  },
+  {
+    "uid": "47-3",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -19.64447215825131,
+    "relative": 6.2250114103149246
+  },
+  {
+    "uid": "13-5",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -19.689243565633458,
+    "relative": 6.219534459151073
+  },
+  {
+    "uid": "43-21",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": -21.65106875279098,
+    "relative": 6.214057507987221
+  },
+  {
+    "uid": "55-0",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -21.651218684754202,
+    "relative": 6.208580556823368
+  },
+  {
+    "uid": "3-4",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -21.762130519599232,
+    "relative": 6.203103605659516
+  },
+  {
+    "uid": "2-5",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -22.250807771461492,
+    "relative": 6.197626654495664
+  },
+  {
+    "uid": "0-49",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -22.260755777719112,
+    "relative": 6.192149703331812
+  },
+  {
+    "uid": "43-7",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -22.64759412327988,
+    "relative": 6.18667275216796
+  },
+  {
+    "uid": "9-2",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -23.616572783610685,
+    "relative": 6.181195801004108
+  },
+  {
+    "uid": "28-1",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -23.640156732804286,
+    "relative": 6.175718849840256
+  },
+  {
+    "uid": "0-20",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -23.671708780128245,
+    "relative": 6.170241898676403
+  },
+  {
+    "uid": "0-31",
+    "difficulty": 2,
+    "level": "6",
+    "absolute": -24.05491317703356,
+    "relative": 6.164764947512552
+  },
+  {
+    "uid": "16-1",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -24.463355779938993,
+    "relative": 6.1592879963486995
+  },
+  {
+    "uid": "23-0",
+    "difficulty": 2,
+    "level": "6",
+    "absolute": -24.59506727796288,
+    "relative": 6.153811045184847
+  },
+  {
+    "uid": "29-1",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -24.62396794414263,
+    "relative": 6.148334094020996
+  },
+  {
+    "uid": "2-4",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -25.511986194179137,
+    "relative": 6.142857142857143
+  },
+  {
+    "uid": "25-1",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -25.621067908996647,
+    "relative": 6.137380191693291
+  },
+  {
+    "uid": "39-7",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -25.678501152073284,
+    "relative": 6.1319032405294385
+  },
+  {
+    "uid": "45-2",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -25.945651408672568,
+    "relative": 6.126426289365587
+  },
+  {
+    "uid": "11-2",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": -26.42557031298663,
+    "relative": 6.120949338201735
+  },
+  {
+    "uid": "51-2",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -26.7587423303258,
+    "relative": 6.115472387037882
+  },
+  {
+    "uid": "0-25",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -27.26289449368315,
+    "relative": 6.10999543587403
+  },
+  {
+    "uid": "0-18",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -28.078794361639844,
+    "relative": 6.104518484710178
+  },
+  {
+    "uid": "39-0",
+    "difficulty": 2,
+    "level": "6",
+    "absolute": -28.247408753992996,
+    "relative": 6.099041533546326
+  },
+  {
+    "uid": "43-2",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -28.653607802980677,
+    "relative": 6.093564582382474
+  },
+  {
+    "uid": "23-1",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -28.88601712129003,
+    "relative": 6.088087631218622
+  },
+  {
+    "uid": "19-0",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -28.918032227352818,
+    "relative": 6.08261068005477
+  },
+  {
+    "uid": "0-51",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -28.926669527566993,
+    "relative": 6.077133728890917
+  },
+  {
+    "uid": "14-5",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -29.233707349325332,
+    "relative": 6.071656777727066
+  },
+  {
+    "uid": "43-15",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -29.367312489870237,
+    "relative": 6.066179826563213
+  },
+  {
+    "uid": "45-1",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": -30.01734789991742,
+    "relative": 6.060702875399361
+  },
+  {
+    "uid": "15-0",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -30.052879508719016,
+    "relative": 6.0552259242355095
+  },
+  {
+    "uid": "24-1",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -30.149149998113803,
+    "relative": 6.049748973071657
+  },
+  {
+    "uid": "37-5",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -30.638919770309993,
+    "relative": 6.044272021907805
+  },
+  {
+    "uid": "0-26",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -31.44312156130718,
+    "relative": 6.038795070743952
+  },
+  {
+    "uid": "13-0",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": -31.538756142534858,
+    "relative": 6.033318119580101
+  },
+  {
+    "uid": "27-2",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -31.58282598981423,
+    "relative": 6.0278411684162485
+  },
+  {
+    "uid": "8-0",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -31.592597861386402,
+    "relative": 6.022364217252396
+  },
+  {
+    "uid": "25-3",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -31.742220625544117,
+    "relative": 6.016887266088545
+  },
+  {
+    "uid": "0-41",
+    "difficulty": 1,
+    "level": "?",
+    "absolute": -32.557262754121,
+    "relative": 6.011410314924692
+  },
+  {
+    "uid": "8-4",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -32.70412698930853,
+    "relative": 6.00593336376084
+  },
+  {
+    "uid": "43-17",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -32.729418164606834,
+    "relative": 6.0004564125969875
+  },
+  {
+    "uid": "26-1",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": -33.13109300264691,
+    "relative": 5.994430379746835
+  },
+  {
+    "uid": "22-2",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -33.2701631858192,
+    "relative": 5.988354430379747
+  },
+  {
+    "uid": "28-2",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -33.618155334759095,
+    "relative": 5.982278481012658
+  },
+  {
+    "uid": "0-10",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": -34.01604640990282,
+    "relative": 5.97620253164557
+  },
+  {
+    "uid": "3-0",
+    "difficulty": 2,
+    "level": "6",
+    "absolute": -34.098562028225494,
+    "relative": 5.970126582278481
+  },
+  {
+    "uid": "7-4",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -35.145904775106665,
+    "relative": 5.964050632911393
+  },
+  {
+    "uid": "30-2",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -35.224533652162506,
+    "relative": 5.957974683544304
+  },
+  {
+    "uid": "43-13",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": -35.33066378806848,
+    "relative": 5.951898734177216
+  },
+  {
+    "uid": "48-0",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": -35.36656645569164,
+    "relative": 5.945822784810127
+  },
+  {
+    "uid": "5-5",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -36.230412959068694,
+    "relative": 5.939746835443038
+  },
+  {
+    "uid": "1-3",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -36.36010815659979,
+    "relative": 5.93367088607595
+  },
+  {
+    "uid": "45-3",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -36.57846896636421,
+    "relative": 5.927594936708861
+  },
+  {
+    "uid": "43-12",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": -36.64416025851205,
+    "relative": 5.921518987341773
+  },
+  {
+    "uid": "32-4",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -36.913556108446784,
+    "relative": 5.915443037974684
+  },
+  {
+    "uid": "28-4",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -36.91634325601265,
+    "relative": 5.9093670886075955
+  },
+  {
+    "uid": "8-5",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -36.96752275437014,
+    "relative": 5.9032911392405065
+  },
+  {
+    "uid": "17-5",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -37.11290649242301,
+    "relative": 5.8972151898734175
+  },
+  {
+    "uid": "32-0",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -37.49247378482011,
+    "relative": 5.891139240506329
+  },
+  {
+    "uid": "59-2",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": -37.76311388948984,
+    "relative": 5.88506329113924
+  },
+  {
+    "uid": "14-0",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -38.2769841766686,
+    "relative": 5.878987341772152
+  },
+  {
+    "uid": "37-4",
+    "difficulty": 2,
+    "level": "6",
+    "absolute": -38.406126201712745,
+    "relative": 5.872911392405063
+  },
+  {
+    "uid": "55-5",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -38.90753152443447,
+    "relative": 5.866835443037975
+  },
+  {
+    "uid": "12-1",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -38.97090707038866,
+    "relative": 5.860759493670886
+  },
+  {
+    "uid": "51-1",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -39.275681175486305,
+    "relative": 5.854683544303798
+  },
+  {
+    "uid": "48-1",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -39.59579870003719,
+    "relative": 5.848607594936709
+  },
+  {
+    "uid": "0-30",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": -39.85687370678498,
+    "relative": 5.84253164556962
+  },
+  {
+    "uid": "7-1",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -40.07275459835803,
+    "relative": 5.836455696202532
+  },
+  {
+    "uid": "46-5",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": -40.14238521452784,
+    "relative": 5.830379746835443
+  },
+  {
+    "uid": "1-2",
+    "difficulty": 2,
+    "level": "6",
+    "absolute": -40.24570046839266,
+    "relative": 5.824303797468355
+  },
+  {
+    "uid": "59-5",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": -40.34634732336517,
+    "relative": 5.818227848101266
+  },
+  {
+    "uid": "0-14",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -40.42422018495993,
+    "relative": 5.812151898734178
+  },
+  {
+    "uid": "41-3",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -40.679211412286605,
+    "relative": 5.806075949367089
+  },
+  {
+    "uid": "25-0",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -40.82230691758635,
+    "relative": 5.800000000000001
+  },
+  {
+    "uid": "7-5",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -40.97065017649336,
+    "relative": 5.793924050632912
+  },
+  {
+    "uid": "48-12",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -41.108246854661836,
+    "relative": 5.787848101265823
+  },
+  {
+    "uid": "24-5",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -41.64261468478909,
+    "relative": 5.781772151898735
+  },
+  {
+    "uid": "51-4",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -41.81060547697979,
+    "relative": 5.775696202531646
+  },
+  {
+    "uid": "10-1",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -42.11225848090826,
+    "relative": 5.7696202531645575
+  },
+  {
+    "uid": "0-15",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -42.1690401954611,
+    "relative": 5.7635443037974685
+  },
+  {
+    "uid": "53-0",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -42.6080587731958,
+    "relative": 5.75746835443038
+  },
+  {
+    "uid": "0-27",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -43.145618454470785,
+    "relative": 5.751392405063291
+  },
+  {
+    "uid": "21-1",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -43.20373686693354,
+    "relative": 5.745316455696202
+  },
+  {
+    "uid": "38-0",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -43.8473910581286,
+    "relative": 5.739240506329114
+  },
+  {
+    "uid": "7-3",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -44.36717031149003,
+    "relative": 5.733164556962025
+  },
+  {
+    "uid": "48-11",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -44.40427558351286,
+    "relative": 5.727088607594937
+  },
+  {
+    "uid": "31-0",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -44.62463486696695,
+    "relative": 5.721012658227848
+  },
+  {
+    "uid": "19-2",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -44.67910396218938,
+    "relative": 5.71493670886076
+  },
+  {
+    "uid": "49-2",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -44.783618962585656,
+    "relative": 5.708860759493671
+  },
+  {
+    "uid": "0-42",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": -45.10845372388756,
+    "relative": 5.702784810126582
+  },
+  {
+    "uid": "2-0",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -45.13022689475188,
+    "relative": 5.696708860759494
+  },
+  {
+    "uid": "42-1",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -45.14102484022063,
+    "relative": 5.690632911392405
+  },
+  {
+    "uid": "1-3",
+    "difficulty": 2,
+    "level": "6",
+    "absolute": -45.904385124421154,
+    "relative": 5.684556962025317
+  },
+  {
+    "uid": "51-0",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -45.94791714696761,
+    "relative": 5.678481012658228
+  },
+  {
+    "uid": "37-1",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -46.117420976713305,
+    "relative": 5.67240506329114
+  },
+  {
+    "uid": "25-4",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -46.12241648203802,
+    "relative": 5.666329113924051
+  },
+  {
+    "uid": "43-11",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -46.570380546025085,
+    "relative": 5.660253164556963
+  },
+  {
+    "uid": "18-1",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -46.873987484240736,
+    "relative": 5.654177215189874
+  },
+  {
+    "uid": "59-2",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -47.115440059400555,
+    "relative": 5.648101265822785
+  },
+  {
+    "uid": "15-1",
+    "difficulty": 2,
+    "level": "6",
+    "absolute": -47.28886282773171,
+    "relative": 5.642025316455697
+  },
+  {
+    "uid": "0-37",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": -47.4306027901078,
+    "relative": 5.635949367088608
+  },
+  {
+    "uid": "44-2",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -47.60523490067468,
+    "relative": 5.6298734177215195
+  },
+  {
+    "uid": "34-1",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -48.03434521848529,
+    "relative": 5.6237974683544305
+  },
+  {
+    "uid": "36-4",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -48.19996410613375,
+    "relative": 5.617721518987342
+  },
+  {
+    "uid": "13-0",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -48.635222838512064,
+    "relative": 5.611645569620253
+  },
+  {
+    "uid": "3-2",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -48.946118945213534,
+    "relative": 5.605569620253165
+  },
+  {
+    "uid": "13-3",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -49.07653605902686,
+    "relative": 5.599493670886076
+  },
+  {
+    "uid": "36-0",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": -49.141401619104975,
+    "relative": 5.593417721518987
+  },
+  {
+    "uid": "21-2",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -49.408632808995044,
+    "relative": 5.587341772151899
+  },
+  {
+    "uid": "0-50",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -50.040250705586644,
+    "relative": 5.58126582278481
+  },
+  {
+    "uid": "20-5",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -50.61248290535771,
+    "relative": 5.575189873417722
+  },
+  {
+    "uid": "48-0",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -51.097269499695685,
+    "relative": 5.569113924050633
+  },
+  {
+    "uid": "22-0",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -51.61226179916208,
+    "relative": 5.563037974683545
+  },
+  {
+    "uid": "1-5",
+    "difficulty": 2,
+    "level": "5",
+    "absolute": -52.035976044294316,
+    "relative": 5.556962025316456
+  },
+  {
+    "uid": "27-3",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -52.569482204203716,
+    "relative": 5.550886075949368
+  },
+  {
+    "uid": "59-3",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": -52.78135011120787,
+    "relative": 5.544810126582279
+  },
+  {
+    "uid": "33-2",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -52.88211952615965,
+    "relative": 5.53873417721519
+  },
+  {
+    "uid": "7-2",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -53.206789541227735,
+    "relative": 5.532658227848102
+  },
+  {
+    "uid": "34-4",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": -53.289563399025305,
+    "relative": 5.526582278481013
+  },
+  {
+    "uid": "38-1",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -53.861273932975834,
+    "relative": 5.520506329113925
+  },
+  {
+    "uid": "48-7",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": -53.89082811773499,
+    "relative": 5.514430379746836
+  },
+  {
+    "uid": "1-4",
+    "difficulty": 2,
+    "level": "6",
+    "absolute": -53.92148617253001,
+    "relative": 5.508354430379748
+  },
+  {
+    "uid": "55-2",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -53.98355017635439,
+    "relative": 5.502278481012659
+  },
+  {
+    "uid": "6-2",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -54.110740552996816,
+    "relative": 5.49620253164557
+  },
+  {
+    "uid": "0-38",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -54.329316047153476,
+    "relative": 5.4901265822784815
+  },
+  {
+    "uid": "12-4",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -55.05683041515471,
+    "relative": 5.4840506329113925
+  },
+  {
+    "uid": "39-3",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -55.60618279042613,
+    "relative": 5.477974683544304
+  },
+  {
+    "uid": "5-3",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -55.942143092392044,
+    "relative": 5.471898734177215
+  },
+  {
+    "uid": "55-1",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -56.30879280112206,
+    "relative": 5.465822784810127
+  },
+  {
+    "uid": "14-3",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -56.51410183801271,
+    "relative": 5.459746835443038
+  },
+  {
+    "uid": "10-0",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -56.82236574350004,
+    "relative": 5.453670886075949
+  },
+  {
+    "uid": "39-5",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": -57.29461252879866,
+    "relative": 5.447594936708861
+  },
+  {
+    "uid": "0-10",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -57.31851610641247,
+    "relative": 5.441518987341772
+  },
+  {
+    "uid": "17-2",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": -57.5123942631098,
+    "relative": 5.435443037974684
+  },
+  {
+    "uid": "9-3",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -57.55755424109996,
+    "relative": 5.429367088607595
+  },
+  {
+    "uid": "46-2",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -57.59617069065465,
+    "relative": 5.423291139240507
+  },
+  {
+    "uid": "17-2",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -58.26590914612504,
+    "relative": 5.417215189873418
+  },
+  {
+    "uid": "19-4",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -60.21072714553353,
+    "relative": 5.41113924050633
+  },
+  {
+    "uid": "43-19",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -61.143741854536145,
+    "relative": 5.405063291139241
+  },
+  {
+    "uid": "52-1",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -61.67179115624444,
+    "relative": 5.398987341772152
+  },
+  {
+    "uid": "59-6",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -62.058099696340925,
+    "relative": 5.392911392405064
+  },
+  {
+    "uid": "42-3",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -62.589138151052694,
+    "relative": 5.386835443037975
+  },
+  {
+    "uid": "16-3",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -62.692249763530654,
+    "relative": 5.380759493670887
+  },
+  {
+    "uid": "54-5",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -63.13414238833727,
+    "relative": 5.374683544303798
+  },
+  {
+    "uid": "43-17",
+    "difficulty": 2,
+    "level": "8",
+    "absolute": -63.55732159262881,
+    "relative": 5.36860759493671
+  },
+  {
+    "uid": "43-14",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -63.63330616443766,
+    "relative": 5.362531645569621
+  },
+  {
+    "uid": "15-3",
+    "difficulty": 2,
+    "level": "6",
+    "absolute": -63.76544595308827,
+    "relative": 5.3564556962025325
+  },
+  {
+    "uid": "40-4",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -63.824750014607986,
+    "relative": 5.3503797468354435
+  },
+  {
+    "uid": "34-2",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": -64.1758022419008,
+    "relative": 5.3443037974683545
+  },
+  {
+    "uid": "42-2",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -64.47026953736058,
+    "relative": 5.338227848101266
+  },
+  {
+    "uid": "31-2",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -64.83795709361983,
+    "relative": 5.332151898734177
+  },
+  {
+    "uid": "15-4",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -65.31366127799105,
+    "relative": 5.326075949367089
+  },
+  {
+    "uid": "24-3",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -65.49548037333464,
+    "relative": 5.32
+  },
+  {
+    "uid": "13-1",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -65.5789809379628,
+    "relative": 5.313924050632911
+  },
+  {
+    "uid": "47-1",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -65.88288569944594,
+    "relative": 5.307848101265823
+  },
+  {
+    "uid": "21-0",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -66.01521734992598,
+    "relative": 5.301772151898734
+  },
+  {
+    "uid": "32-4",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -66.02545104778704,
+    "relative": 5.295696202531646
+  },
+  {
+    "uid": "58-0",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -66.46306016538934,
+    "relative": 5.289620253164557
+  },
+  {
+    "uid": "40-3",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -67.07938055631007,
+    "relative": 5.283544303797469
+  },
+  {
+    "uid": "32-1",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -67.42356104208325,
+    "relative": 5.27746835443038
+  },
+  {
+    "uid": "14-4",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -70.29121120077593,
+    "relative": 5.271392405063292
+  },
+  {
+    "uid": "52-3",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -70.58151944395384,
+    "relative": 5.265316455696203
+  },
+  {
+    "uid": "13-4",
+    "difficulty": 2,
+    "level": "6",
+    "absolute": -70.71742787467818,
+    "relative": 5.259240506329114
+  },
+  {
+    "uid": "4-4",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -70.79222494613056,
+    "relative": 5.253164556962026
+  },
+  {
+    "uid": "8-1",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -71.59747499030175,
+    "relative": 5.247088607594937
+  },
+  {
+    "uid": "23-5",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -71.61763337653514,
+    "relative": 5.241012658227849
+  },
+  {
+    "uid": "33-9",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -72.0432409599354,
+    "relative": 5.23493670886076
+  },
+  {
+    "uid": "33-4",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -72.12164727269571,
+    "relative": 5.228860759493672
+  },
+  {
+    "uid": "0-43",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -72.2024848801475,
+    "relative": 5.222784810126583
+  },
+  {
+    "uid": "43-0",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -73.40734676277349,
+    "relative": 5.2167088607594945
+  },
+  {
+    "uid": "59-3",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -73.42242501310552,
+    "relative": 5.2106329113924055
+  },
+  {
+    "uid": "1-2",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -73.46873806172307,
+    "relative": 5.2045569620253165
+  },
+  {
+    "uid": "30-4",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -74.79495497223905,
+    "relative": 5.198481012658228
+  },
+  {
+    "uid": "32-0",
+    "difficulty": 2,
+    "level": "6",
+    "absolute": -75.70234683077722,
+    "relative": 5.192405063291139
+  },
+  {
+    "uid": "44-1",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -75.91687637200621,
+    "relative": 5.186329113924051
+  },
+  {
+    "uid": "39-1",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": -75.94040431547117,
+    "relative": 5.180253164556962
+  },
+  {
+    "uid": "46-0",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -75.95402096284282,
+    "relative": 5.174177215189874
+  },
+  {
+    "uid": "33-0",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -77.35716461622287,
+    "relative": 5.168101265822785
+  },
+  {
+    "uid": "9-1",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -77.71556215562377,
+    "relative": 5.162025316455697
+  },
+  {
+    "uid": "35-2",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": -77.7813489268101,
+    "relative": 5.155949367088608
+  },
+  {
+    "uid": "32-5",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -78.01670440273634,
+    "relative": 5.149873417721519
+  },
+  {
+    "uid": "32-2",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -78.45366978922229,
+    "relative": 5.143797468354431
+  },
+  {
+    "uid": "13-4",
+    "difficulty": 1,
+    "level": "3",
+    "absolute": -78.73696716201826,
+    "relative": 5.137721518987342
+  },
+  {
+    "uid": "4-2",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -79.78799864565951,
+    "relative": 5.131645569620254
+  },
+  {
+    "uid": "1-5",
+    "difficulty": 1,
+    "level": "3",
+    "absolute": -79.84405902342617,
+    "relative": 5.125569620253165
+  },
+  {
+    "uid": "3-1",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -80.20241328845458,
+    "relative": 5.119493670886077
+  },
+  {
+    "uid": "9-5",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": -80.28572527836121,
+    "relative": 5.113417721518988
+  },
+  {
+    "uid": "29-3",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -81.27977151352749,
+    "relative": 5.1073417721519
+  },
+  {
+    "uid": "33-11",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -82.13341775819704,
+    "relative": 5.101265822784811
+  },
+  {
+    "uid": "6-5",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -82.5586225856499,
+    "relative": 5.095189873417722
+  },
+  {
+    "uid": "30-3",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -83.38052751977278,
+    "relative": 5.089113924050634
+  },
+  {
+    "uid": "30-4",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -83.50248387974023,
+    "relative": 5.083037974683545
+  },
+  {
+    "uid": "42-4",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -83.55530651083615,
+    "relative": 5.0769620253164565
+  },
+  {
+    "uid": "36-1",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -83.8261611151144,
+    "relative": 5.0708860759493675
+  },
+  {
+    "uid": "11-1",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -84.0241887788935,
+    "relative": 5.0648101265822785
+  },
+  {
+    "uid": "0-16",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -84.13010155670176,
+    "relative": 5.05873417721519
+  },
+  {
+    "uid": "0-28",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -84.69801105631531,
+    "relative": 5.052658227848101
+  },
+  {
+    "uid": "58-1",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -85.28607497764088,
+    "relative": 5.046582278481013
+  },
+  {
+    "uid": "43-10",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -85.90874602037518,
+    "relative": 5.040506329113924
+  },
+  {
+    "uid": "28-3",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -85.94134415302166,
+    "relative": 5.034430379746836
+  },
+  {
+    "uid": "13-1",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": -87.38132321663709,
+    "relative": 5.028354430379747
+  },
+  {
+    "uid": "37-3",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -88.13591864837875,
+    "relative": 5.022278481012659
+  },
+  {
+    "uid": "33-1",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -88.23054862540762,
+    "relative": 5.01620253164557
+  },
+  {
+    "uid": "43-3",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -89.39252611096542,
+    "relative": 5.010126582278481
+  },
+  {
+    "uid": "13-3",
+    "difficulty": 2,
+    "level": "6",
+    "absolute": -89.85264598163876,
+    "relative": 5.004050632911393
+  },
+  {
+    "uid": "0-30",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -89.88388107240692,
+    "relative": 4.99787120808941
+  },
+  {
+    "uid": "23-4",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -90.2776323666852,
+    "relative": 4.991484832357638
+  },
+  {
+    "uid": "0-42",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -90.77760996176751,
+    "relative": 4.985098456625865
+  },
+  {
+    "uid": "23-2",
+    "difficulty": 2,
+    "level": "6",
+    "absolute": -90.87782160870982,
+    "relative": 4.978712080894093
+  },
+  {
+    "uid": "3-5",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -90.96105640963309,
+    "relative": 4.972325705162321
+  },
+  {
+    "uid": "3-3",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -91.51684873554177,
+    "relative": 4.965939329430548
+  },
+  {
+    "uid": "18-3",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -91.94116524853793,
+    "relative": 4.959552953698776
+  },
+  {
+    "uid": "0-22",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -91.98986083052182,
+    "relative": 4.953166577967004
+  },
+  {
+    "uid": "33-6",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -92.75980928785276,
+    "relative": 4.946780202235232
+  },
+  {
+    "uid": "58-2",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -92.80823919244976,
+    "relative": 4.94039382650346
+  },
+  {
+    "uid": "24-0",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -93.03293421522756,
+    "relative": 4.934007450771688
+  },
+  {
+    "uid": "48-3",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -93.0335359526347,
+    "relative": 4.927621075039915
+  },
+  {
+    "uid": "6-0",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -93.46446286817479,
+    "relative": 4.921234699308143
+  },
+  {
+    "uid": "4-1",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -93.58113659654879,
+    "relative": 4.914848323576371
+  },
+  {
+    "uid": "57-0",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -93.9214654772266,
+    "relative": 4.908461947844598
+  },
+  {
+    "uid": "26-4",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -94.71926008443339,
+    "relative": 4.902075572112826
+  },
+  {
+    "uid": "48-9",
+    "difficulty": 0,
+    "level": "6",
+    "absolute": -95.85842576175509,
+    "relative": 4.8956891963810545
+  },
+  {
+    "uid": "11-5",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -96.14925541548442,
+    "relative": 4.889302820649282
+  },
+  {
+    "uid": "53-3",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -96.61545603092182,
+    "relative": 4.88291644491751
+  },
+  {
+    "uid": "0-13",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -96.63981091829876,
+    "relative": 4.876530069185738
+  },
+  {
+    "uid": "16-4",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -96.8065272479332,
+    "relative": 4.870143693453965
+  },
+  {
+    "uid": "43-21",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -96.83564143723066,
+    "relative": 4.863757317722193
+  },
+  {
+    "uid": "17-2",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -96.9416008389232,
+    "relative": 4.857370941990421
+  },
+  {
+    "uid": "42-3",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -97.02558952668493,
+    "relative": 4.850984566258648
+  },
+  {
+    "uid": "1-3",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -97.02924448032243,
+    "relative": 4.8445981905268765
+  },
+  {
+    "uid": "39-2",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -97.40450418031804,
+    "relative": 4.8382118147951045
+  },
+  {
+    "uid": "7-0",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -97.5811253105987,
+    "relative": 4.831825439063332
+  },
+  {
+    "uid": "33-10",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -97.96014276149717,
+    "relative": 4.82543906333156
+  },
+  {
+    "uid": "55-3",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -98.12127625440401,
+    "relative": 4.819052687599788
+  },
+  {
+    "uid": "39-6",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -98.3697462555892,
+    "relative": 4.812666311868015
+  },
+  {
+    "uid": "31-3",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -98.66644203437671,
+    "relative": 4.806279936136243
+  },
+  {
+    "uid": "33-12",
+    "difficulty": 1,
+    "level": "?",
+    "absolute": -99.1064209930371,
+    "relative": 4.799893560404471
+  },
+  {
+    "uid": "23-0",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -99.15420216853418,
+    "relative": 4.793507184672698
+  },
+  {
+    "uid": "0-37",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -99.21714950312769,
+    "relative": 4.7871208089409265
+  },
+  {
+    "uid": "59-1",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -99.55829533853766,
+    "relative": 4.780734433209155
+  },
+  {
+    "uid": "57-5",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -99.87874001271126,
+    "relative": 4.774348057477382
+  },
+  {
+    "uid": "43-15",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -100.06044543336581,
+    "relative": 4.76796168174561
+  },
+  {
+    "uid": "15-1",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -100.22831495911242,
+    "relative": 4.761575306013838
+  },
+  {
+    "uid": "59-4",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -100.96389701315077,
+    "relative": 4.755188930282065
+  },
+  {
+    "uid": "0-24",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -101.094013409824,
+    "relative": 4.748802554550293
+  },
+  {
+    "uid": "48-2",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -101.34933785379144,
+    "relative": 4.742416178818521
+  },
+  {
+    "uid": "8-2",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -101.88175770131167,
+    "relative": 4.7360298030867485
+  },
+  {
+    "uid": "24-4",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -101.90511541915268,
+    "relative": 4.729643427354977
+  },
+  {
+    "uid": "2-0",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -101.97264141195977,
+    "relative": 4.723257051623204
+  },
+  {
+    "uid": "41-2",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -102.35788760779208,
+    "relative": 4.716870675891432
+  },
+  {
+    "uid": "15-5",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -102.37145068804321,
+    "relative": 4.71048430015966
+  },
+  {
+    "uid": "43-9",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -102.47798200001232,
+    "relative": 4.704097924427887
+  },
+  {
+    "uid": "24-5",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -102.59360852847203,
+    "relative": 4.697711548696115
+  },
+  {
+    "uid": "26-2",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -103.492981402798,
+    "relative": 4.691325172964343
+  },
+  {
+    "uid": "8-0",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -103.67601043002536,
+    "relative": 4.6849387972325705
+  },
+  {
+    "uid": "1-0",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -103.68498972397178,
+    "relative": 4.6785524215007985
+  },
+  {
+    "uid": "26-0",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -105.12739157520029,
+    "relative": 4.672166045769027
+  },
+  {
+    "uid": "40-5",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -105.21269383982592,
+    "relative": 4.665779670037254
+  },
+  {
+    "uid": "0-3",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -106.20980709524245,
+    "relative": 4.659393294305482
+  },
+  {
+    "uid": "42-5",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -106.74480115667085,
+    "relative": 4.65300691857371
+  },
+  {
+    "uid": "0-40",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -107.13804258487617,
+    "relative": 4.646620542841937
+  },
+  {
+    "uid": "12-0",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -107.69424627110877,
+    "relative": 4.640234167110165
+  },
+  {
+    "uid": "37-4",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -107.98538091920136,
+    "relative": 4.633847791378393
+  },
+  {
+    "uid": "14-2",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -108.01114129008168,
+    "relative": 4.6274614156466205
+  },
+  {
+    "uid": "28-5",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -108.15388196869257,
+    "relative": 4.621075039914849
+  },
+  {
+    "uid": "24-2",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -108.2649849141349,
+    "relative": 4.614688664183077
+  },
+  {
+    "uid": "4-5",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -108.35000315324582,
+    "relative": 4.608302288451304
+  },
+  {
+    "uid": "0-21",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -109.1968665961955,
+    "relative": 4.601915912719532
+  },
+  {
+    "uid": "25-5",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -109.33747876332211,
+    "relative": 4.59552953698776
+  },
+  {
+    "uid": "0-47",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -109.50986682340128,
+    "relative": 4.589143161255987
+  },
+  {
+    "uid": "10-3",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -110.10279171239654,
+    "relative": 4.582756785524215
+  },
+  {
+    "uid": "55-5",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -111.21160429649797,
+    "relative": 4.576370409792443
+  },
+  {
+    "uid": "0-6",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -111.30470535139347,
+    "relative": 4.5699840340606706
+  },
+  {
+    "uid": "13-2",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -111.755472632851,
+    "relative": 4.563597658328899
+  },
+  {
+    "uid": "38-0",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -111.89903005815644,
+    "relative": 4.557211282597127
+  },
+  {
+    "uid": "15-2",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -112.2629417026222,
+    "relative": 4.550824906865354
+  },
+  {
+    "uid": "0-8",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -112.43279314695535,
+    "relative": 4.544438531133582
+  },
+  {
+    "uid": "11-4",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -112.66520426773084,
+    "relative": 4.53805215540181
+  },
+  {
+    "uid": "0-35",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -112.69102298925408,
+    "relative": 4.531665779670037
+  },
+  {
+    "uid": "4-3",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -112.78477996144149,
+    "relative": 4.525279403938265
+  },
+  {
+    "uid": "33-2",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -112.81823890554807,
+    "relative": 4.518893028206493
+  },
+  {
+    "uid": "31-4",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -113.01442980706227,
+    "relative": 4.512506652474721
+  },
+  {
+    "uid": "32-3",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -113.12122339301915,
+    "relative": 4.506120276742949
+  },
+  {
+    "uid": "18-2",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -113.17191811388479,
+    "relative": 4.499733901011177
+  },
+  {
+    "uid": "0-40",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -113.19852310891574,
+    "relative": 4.493347525279404
+  },
+  {
+    "uid": "51-3",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -113.23850799134736,
+    "relative": 4.486961149547632
+  },
+  {
+    "uid": "35-5",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -114.99168796028883,
+    "relative": 4.48057477381586
+  },
+  {
+    "uid": "0-34",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -116.40344562310706,
+    "relative": 4.474188398084087
+  },
+  {
+    "uid": "26-4",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -116.53961839194984,
+    "relative": 4.467802022352315
+  },
+  {
+    "uid": "5-0",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -117.37019894954726,
+    "relative": 4.461415646620543
+  },
+  {
+    "uid": "54-1",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -117.53360097998483,
+    "relative": 4.455029270888771
+  },
+  {
+    "uid": "27-3",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -117.77456343238705,
+    "relative": 4.448642895156999
+  },
+  {
+    "uid": "5-4",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -118.09345312407032,
+    "relative": 4.442256519425227
+  },
+  {
+    "uid": "25-1",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -118.34382931365492,
+    "relative": 4.435870143693454
+  },
+  {
+    "uid": "0-36",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -118.53019727218127,
+    "relative": 4.429483767961682
+  },
+  {
+    "uid": "0-40",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": -118.7227895648149,
+    "relative": 4.423097392229909
+  },
+  {
+    "uid": "28-0",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -119.68934058989072,
+    "relative": 4.416711016498137
+  },
+  {
+    "uid": "6-4",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -121.78339277296784,
+    "relative": 4.410324640766365
+  },
+  {
+    "uid": "3-0",
+    "difficulty": 1,
+    "level": "3",
+    "absolute": -122.19053182626276,
+    "relative": 4.4039382650345935
+  },
+  {
+    "uid": "0-24",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -122.39868764136142,
+    "relative": 4.397551889302821
+  },
+  {
+    "uid": "24-1",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -122.5196263318323,
+    "relative": 4.391165513571049
+  },
+  {
+    "uid": "34-3",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -123.01710956864954,
+    "relative": 4.384779137839276
+  },
+  {
+    "uid": "43-21",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -123.40546830913321,
+    "relative": 4.378392762107504
+  },
+  {
+    "uid": "41-1",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -123.81266335843286,
+    "relative": 4.372006386375732
+  },
+  {
+    "uid": "53-2",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -123.92309162035647,
+    "relative": 4.36562001064396
+  },
+  {
+    "uid": "43-7",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -123.98753783522825,
+    "relative": 4.359233634912187
+  },
+  {
+    "uid": "0-11",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -124.00952815760903,
+    "relative": 4.3528472591804155
+  },
+  {
+    "uid": "0-1",
+    "difficulty": 2,
+    "level": "6",
+    "absolute": -124.19448248381933,
+    "relative": 4.346460883448643
+  },
+  {
+    "uid": "6-0",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -124.28457034865104,
+    "relative": 4.340074507716871
+  },
+  {
+    "uid": "49-1",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -125.4039281169663,
+    "relative": 4.333688131985099
+  },
+  {
+    "uid": "33-1",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -126.3149463710895,
+    "relative": 4.327301756253326
+  },
+  {
+    "uid": "34-0",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -126.73463326687263,
+    "relative": 4.320915380521554
+  },
+  {
+    "uid": "59-5",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -127.72759741698283,
+    "relative": 4.314529004789782
+  },
+  {
+    "uid": "13-1",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -129.21174407635561,
+    "relative": 4.308142629058009
+  },
+  {
+    "uid": "33-9",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -129.4397423435094,
+    "relative": 4.3017562533262375
+  },
+  {
+    "uid": "48-6",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -130.09125682350518,
+    "relative": 4.2953698775944655
+  },
+  {
+    "uid": "5-2",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -130.1687304494871,
+    "relative": 4.288983501862693
+  },
+  {
+    "uid": "0-20",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -130.40144772736758,
+    "relative": 4.282597126130921
+  },
+  {
+    "uid": "50-0",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -130.74552533756489,
+    "relative": 4.276210750399149
+  },
+  {
+    "uid": "57-2",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -130.77766753696517,
+    "relative": 4.269824374667376
+  },
+  {
+    "uid": "39-8",
+    "difficulty": 1,
+    "level": "?",
+    "absolute": -130.82557417963793,
+    "relative": 4.263437998935604
+  },
+  {
+    "uid": "2-2",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -130.92933320809084,
+    "relative": 4.257051623203832
+  },
+  {
+    "uid": "48-7",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -130.9842315903125,
+    "relative": 4.250665247472059
+  },
+  {
+    "uid": "20-3",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -131.09867651411403,
+    "relative": 4.2442788717402875
+  },
+  {
+    "uid": "29-0",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -132.53070393984913,
+    "relative": 4.237892496008516
+  },
+  {
+    "uid": "59-7",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -133.29840313689598,
+    "relative": 4.231506120276743
+  },
+  {
+    "uid": "48-8",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -133.72662074580424,
+    "relative": 4.225119744544971
+  },
+  {
+    "uid": "20-1",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -134.210800790059,
+    "relative": 4.218733368813199
+  },
+  {
+    "uid": "0-9",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": -134.3082368796124,
+    "relative": 4.212346993081426
+  },
+  {
+    "uid": "25-0",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -134.68779326543415,
+    "relative": 4.205960617349654
+  },
+  {
+    "uid": "37-2",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -134.71903430980083,
+    "relative": 4.199574241617882
+  },
+  {
+    "uid": "0-12",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -134.7512033772564,
+    "relative": 4.1931878658861095
+  },
+  {
+    "uid": "59-0",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -135.4667768102647,
+    "relative": 4.186801490154338
+  },
+  {
+    "uid": "0-44",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -135.66411503460466,
+    "relative": 4.180415114422566
+  },
+  {
+    "uid": "15-3",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -135.79786734570447,
+    "relative": 4.174028738690793
+  },
+  {
+    "uid": "45-3",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -136.19057044147635,
+    "relative": 4.167642362959021
+  },
+  {
+    "uid": "0-44",
+    "difficulty": 1,
+    "level": "6",
+    "absolute": -136.83000272766827,
+    "relative": 4.161255987227249
+  },
+  {
+    "uid": "0-29",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": -138.14506406599966,
+    "relative": 4.154869611495476
+  },
+  {
+    "uid": "2-5",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -138.7979821747648,
+    "relative": 4.148483235763704
+  },
+  {
+    "uid": "43-20",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -139.2561367903498,
+    "relative": 4.142096860031932
+  },
+  {
+    "uid": "43-5",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -139.86310597474136,
+    "relative": 4.1357104843001595
+  },
+  {
+    "uid": "0-49",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -140.3139648846418,
+    "relative": 4.129324108568388
+  },
+  {
+    "uid": "56-0",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -140.7760716102395,
+    "relative": 4.122937732836615
+  },
+  {
+    "uid": "13-4",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -141.33925085980385,
+    "relative": 4.116551357104843
+  },
+  {
+    "uid": "44-2",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -141.59234472630715,
+    "relative": 4.110164981373071
+  },
+  {
+    "uid": "35-3",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -142.2029790048793,
+    "relative": 4.103778605641299
+  },
+  {
+    "uid": "23-2",
+    "difficulty": 1,
+    "level": "3",
+    "absolute": -142.86754114550686,
+    "relative": 4.097392229909526
+  },
+  {
+    "uid": "43-6",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -143.35768174373214,
+    "relative": 4.091005854177754
+  },
+  {
+    "uid": "14-1",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -143.7513568939359,
+    "relative": 4.0846194784459815
+  },
+  {
+    "uid": "52-0",
+    "difficulty": 2,
+    "level": "6",
+    "absolute": -143.92030409265587,
+    "relative": 4.07823310271421
+  },
+  {
+    "uid": "33-5",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -144.25866613656737,
+    "relative": 4.071846726982438
+  },
+  {
+    "uid": "27-0",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -144.2588435305383,
+    "relative": 4.065460351250666
+  },
+  {
+    "uid": "43-1",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -145.74101820157478,
+    "relative": 4.059073975518893
+  },
+  {
+    "uid": "0-25",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -146.46529093757815,
+    "relative": 4.052687599787121
+  },
+  {
+    "uid": "56-3",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -147.19971007470585,
+    "relative": 4.046301224055348
+  },
+  {
+    "uid": "0-46",
+    "difficulty": 2,
+    "level": "6",
+    "absolute": -147.71715028843784,
+    "relative": 4.039914848323576
+  },
+  {
+    "uid": "19-1",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -147.7451777213818,
+    "relative": 4.033528472591804
+  },
+  {
+    "uid": "55-4",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -148.0158900130726,
+    "relative": 4.027142096860032
+  },
+  {
+    "uid": "47-3",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -148.17714277675427,
+    "relative": 4.02075572112826
+  },
+  {
+    "uid": "6-1",
+    "difficulty": 2,
+    "level": "7",
+    "absolute": -148.50289311528323,
+    "relative": 4.014369345396488
+  },
+  {
+    "uid": "0-32",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -149.04782757279438,
+    "relative": 4.007982969664715
+  },
+  {
+    "uid": "1-2",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -149.25566925887702,
+    "relative": 4.001596593932943
+  },
+  {
+    "uid": "54-4",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -149.47659755902873,
+    "relative": 3.992616899097621
+  },
+  {
+    "uid": "27-5",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -149.50269480253826,
+    "relative": 3.9827727645611155
+  },
+  {
+    "uid": "5-1",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -150.36588030168085,
+    "relative": 3.9729286300246103
+  },
+  {
+    "uid": "7-3",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -151.09975296799294,
+    "relative": 3.963084495488105
+  },
+  {
+    "uid": "20-0",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -152.49485467978042,
+    "relative": 3.9532403609516
+  },
+  {
+    "uid": "5-0",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -152.5330538632003,
+    "relative": 3.943396226415094
+  },
+  {
+    "uid": "11-3",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -152.68012360678148,
+    "relative": 3.933552091878589
+  },
+  {
+    "uid": "7-5",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -153.5340614607571,
+    "relative": 3.9237079573420837
+  },
+  {
+    "uid": "0-8",
+    "difficulty": 2,
+    "level": "6",
+    "absolute": -153.6296166434498,
+    "relative": 3.9138638228055784
+  },
+  {
+    "uid": "0-14",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -153.7873641649916,
+    "relative": 3.9040196882690728
+  },
+  {
+    "uid": "39-1",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -153.98286070315268,
+    "relative": 3.8941755537325675
+  },
+  {
+    "uid": "46-4",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -154.4695522894794,
+    "relative": 3.8843314191960623
+  },
+  {
+    "uid": "1-4",
+    "difficulty": 1,
+    "level": "3",
+    "absolute": -154.5079253590366,
+    "relative": 3.874487284659557
+  },
+  {
+    "uid": "0-29",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -156.02219576397073,
+    "relative": 3.8646431501230514
+  },
+  {
+    "uid": "46-1",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -156.83006964496593,
+    "relative": 3.854799015586546
+  },
+  {
+    "uid": "40-0",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -157.45113810946748,
+    "relative": 3.844954881050041
+  },
+  {
+    "uid": "13-5",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -157.66113157936547,
+    "relative": 3.8351107465135357
+  },
+  {
+    "uid": "30-1",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -157.87206556366687,
+    "relative": 3.82526661197703
+  },
+  {
+    "uid": "20-2",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -158.46481626209635,
+    "relative": 3.8154224774405248
+  },
+  {
+    "uid": "45-0",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -158.63429626204618,
+    "relative": 3.8055783429040195
+  },
+  {
+    "uid": "59-4",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -159.32972206750492,
+    "relative": 3.7957342083675143
+  },
+  {
+    "uid": "3-1",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -159.38346205725028,
+    "relative": 3.785890073831009
+  },
+  {
+    "uid": "20-4",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -160.27238779048994,
+    "relative": 3.7760459392945034
+  },
+  {
+    "uid": "50-3",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -160.27899534241024,
+    "relative": 3.766201804757998
+  },
+  {
+    "uid": "15-1",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -162.49419686676524,
+    "relative": 3.756357670221493
+  },
+  {
+    "uid": "0-45",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -163.9076035819409,
+    "relative": 3.7465135356849877
+  },
+  {
+    "uid": "54-0",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -164.44515742921175,
+    "relative": 3.736669401148482
+  },
+  {
+    "uid": "0-17",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -165.27530009296117,
+    "relative": 3.7268252666119768
+  },
+  {
+    "uid": "0-10",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -165.65113536250823,
+    "relative": 3.7169811320754715
+  },
+  {
+    "uid": "59-6",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -165.73805801071197,
+    "relative": 3.7071369975389663
+  },
+  {
+    "uid": "48-10",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -165.9207489531408,
+    "relative": 3.6972928630024606
+  },
+  {
+    "uid": "22-4",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -166.12698034798984,
+    "relative": 3.6874487284659554
+  },
+  {
+    "uid": "57-4",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -166.25137870849784,
+    "relative": 3.67760459392945
+  },
+  {
+    "uid": "6-1",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -166.4082267792861,
+    "relative": 3.667760459392945
+  },
+  {
+    "uid": "31-1",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -166.8199445519535,
+    "relative": 3.6579163248564397
+  },
+  {
+    "uid": "30-0",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -168.40009658495075,
+    "relative": 3.648072190319934
+  },
+  {
+    "uid": "11-0",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -168.67650570538123,
+    "relative": 3.638228055783429
+  },
+  {
+    "uid": "57-3",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -169.83794206850158,
+    "relative": 3.6283839212469235
+  },
+  {
+    "uid": "54-3",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -170.10059875824598,
+    "relative": 3.618539786710418
+  },
+  {
+    "uid": "36-3",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -170.75538989046447,
+    "relative": 3.6086956521739126
+  },
+  {
+    "uid": "54-5",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -171.37631645409843,
+    "relative": 3.5988515176374074
+  },
+  {
+    "uid": "56-2",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -171.39602263698052,
+    "relative": 3.589007383100902
+  },
+  {
+    "uid": "52-4",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -173.85387143832352,
+    "relative": 3.579163248564397
+  },
+  {
+    "uid": "0-19",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -175.05030662781138,
+    "relative": 3.5693191140278913
+  },
+  {
+    "uid": "50-0",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -175.4731841607348,
+    "relative": 3.559474979491386
+  },
+  {
+    "uid": "31-4",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -175.63667863271925,
+    "relative": 3.549630844954881
+  },
+  {
+    "uid": "18-1",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -176.0507716034235,
+    "relative": 3.5397867104183756
+  },
+  {
+    "uid": "43-18",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -176.19368441970403,
+    "relative": 3.52994257588187
+  },
+  {
+    "uid": "0-46",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -177.10173102080637,
+    "relative": 3.5200984413453646
+  },
+  {
+    "uid": "1-0",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -177.32252464603368,
+    "relative": 3.5102543068088594
+  },
+  {
+    "uid": "48-11",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -178.00971181155953,
+    "relative": 3.500410172272354
+  },
+  {
+    "uid": "6-4",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -178.3716211829492,
+    "relative": 3.4905660377358485
+  },
+  {
+    "uid": "30-5",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -179.78592324072005,
+    "relative": 3.4807219031993433
+  },
+  {
+    "uid": "45-2",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -180.3861027720996,
+    "relative": 3.470877768662838
+  },
+  {
+    "uid": "39-3",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -180.44466438289783,
+    "relative": 3.461033634126333
+  },
+  {
+    "uid": "0-11",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -180.48425377153234,
+    "relative": 3.4511894995898276
+  },
+  {
+    "uid": "42-2",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -180.7474188636263,
+    "relative": 3.441345365053322
+  },
+  {
+    "uid": "59-3",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -181.15415184153352,
+    "relative": 3.4315012305168167
+  },
+  {
+    "uid": "0-1",
+    "difficulty": 1,
+    "level": "3",
+    "absolute": -184.65546089062138,
+    "relative": 3.4216570959803114
+  },
+  {
+    "uid": "55-0",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -184.6870100084161,
+    "relative": 3.4118129614438057
+  },
+  {
+    "uid": "0-33",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -185.5900054970625,
+    "relative": 3.4019688269073005
+  },
+  {
+    "uid": "18-5",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -185.95021326846145,
+    "relative": 3.3921246923707953
+  },
+  {
+    "uid": "57-1",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -187.85367319162097,
+    "relative": 3.38228055783429
+  },
+  {
+    "uid": "0-8",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -188.24671917421972,
+    "relative": 3.372436423297785
+  },
+  {
+    "uid": "53-0",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -188.55775588293244,
+    "relative": 3.362592288761279
+  },
+  {
+    "uid": "26-0",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -188.7309706401776,
+    "relative": 3.352748154224774
+  },
+  {
+    "uid": "42-4",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -188.79443821760884,
+    "relative": 3.3429040196882687
+  },
+  {
+    "uid": "8-2",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -191.1945216872297,
+    "relative": 3.333059885151763
+  },
+  {
+    "uid": "0-42",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -191.36761054419205,
+    "relative": 3.3232157506152578
+  },
+  {
+    "uid": "39-0",
+    "difficulty": 1,
+    "level": "3",
+    "absolute": -191.4609973192867,
+    "relative": 3.3133716160787525
+  },
+  {
+    "uid": "21-1",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -191.50553117214122,
+    "relative": 3.3035274815422473
+  },
+  {
+    "uid": "52-0",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -192.85439426732978,
+    "relative": 3.293683347005742
+  },
+  {
+    "uid": "0-31",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -192.94275307368792,
+    "relative": 3.2838392124692364
+  },
+  {
+    "uid": "14-0",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -193.5405043630878,
+    "relative": 3.273995077932731
+  },
+  {
+    "uid": "0-32",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -193.5685679666229,
+    "relative": 3.264150943396226
+  },
+  {
+    "uid": "0-23",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -194.04785826221965,
+    "relative": 3.2543068088597207
+  },
+  {
+    "uid": "39-4",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -194.19517818591711,
+    "relative": 3.2444626743232154
+  },
+  {
+    "uid": "41-4",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -196.30126955977448,
+    "relative": 3.2346185397867098
+  },
+  {
+    "uid": "43-4",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -196.3545001681507,
+    "relative": 3.2247744052502045
+  },
+  {
+    "uid": "18-4",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -196.87964767945874,
+    "relative": 3.2149302707136993
+  },
+  {
+    "uid": "55-1",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -197.26405422435684,
+    "relative": 3.2050861361771936
+  },
+  {
+    "uid": "47-2",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -197.52007709917422,
+    "relative": 3.1952420016406884
+  },
+  {
+    "uid": "39-5",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -198.35162741226355,
+    "relative": 3.185397867104183
+  },
+  {
+    "uid": "0-27",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -198.41442691416313,
+    "relative": 3.175553732567678
+  },
+  {
+    "uid": "0-21",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -198.53395885915538,
+    "relative": 3.1657095980311727
+  },
+  {
+    "uid": "25-3",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -198.6078737151867,
+    "relative": 3.155865463494667
+  },
+  {
+    "uid": "17-0",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -200.48337215735475,
+    "relative": 3.1460213289581618
+  },
+  {
+    "uid": "58-3",
+    "difficulty": 0,
+    "level": "5",
+    "absolute": -200.962835544232,
+    "relative": 3.1361771944216565
+  },
+  {
+    "uid": "48-5",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -201.48047184351407,
+    "relative": 3.126333059885151
+  },
+  {
+    "uid": "0-29",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -201.7895949150245,
+    "relative": 3.1164889253486456
+  },
+  {
+    "uid": "44-0",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -202.3287503184024,
+    "relative": 3.1066447908121404
+  },
+  {
+    "uid": "23-3",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -202.4630387848565,
+    "relative": 3.096800656275635
+  },
+  {
+    "uid": "18-0",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -204.74842468372344,
+    "relative": 3.08695652173913
+  },
+  {
+    "uid": "6-1",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -204.7607800175221,
+    "relative": 3.0771123872026243
+  },
+  {
+    "uid": "17-1",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -205.4257086253735,
+    "relative": 3.067268252666119
+  },
+  {
+    "uid": "15-0",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -206.58391867623564,
+    "relative": 3.057424118129614
+  },
+  {
+    "uid": "9-0",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -206.6407149503002,
+    "relative": 3.0475799835931086
+  },
+  {
+    "uid": "32-1",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -207.19226310960502,
+    "relative": 3.0377358490566033
+  },
+  {
+    "uid": "5-3",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -207.55054034548928,
+    "relative": 3.0278917145200976
+  },
+  {
+    "uid": "4-0",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -208.63280612330257,
+    "relative": 3.0180475799835924
+  },
+  {
+    "uid": "0-13",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -209.6189750845955,
+    "relative": 3.008203445447087
+  },
+  {
+    "uid": "32-5",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -209.9827901640758,
+    "relative": 2.99749687108886
+  },
+  {
+    "uid": "43-9",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -210.1185169423916,
+    "relative": 2.9824780976220264
+  },
+  {
+    "uid": "1-1",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -210.65067151345966,
+    "relative": 2.9674593241551928
+  },
+  {
+    "uid": "15-4",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -211.10681764336093,
+    "relative": 2.952440550688359
+  },
+  {
+    "uid": "23-0",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -213.08078797642293,
+    "relative": 2.937421777221526
+  },
+  {
+    "uid": "48-3",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -213.48698055570222,
+    "relative": 2.922403003754692
+  },
+  {
+    "uid": "3-5",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -213.52708300028286,
+    "relative": 2.9073842302878585
+  },
+  {
+    "uid": "53-4",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -213.75397331530613,
+    "relative": 2.892365456821025
+  },
+  {
+    "uid": "0-6",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -214.19541816061374,
+    "relative": 2.8773466833541916
+  },
+  {
+    "uid": "51-2",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -216.47469816565942,
+    "relative": 2.862327909887358
+  },
+  {
+    "uid": "0-2",
+    "difficulty": 1,
+    "level": "3",
+    "absolute": -219.4702602396334,
+    "relative": 2.8473091364205243
+  },
+  {
+    "uid": "47-0",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -221.4567035715261,
+    "relative": 2.8322903629536906
+  },
+  {
+    "uid": "49-0",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -221.99529229147092,
+    "relative": 2.8172715894868574
+  },
+  {
+    "uid": "0-4",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -222.7090738442841,
+    "relative": 2.8022528160200237
+  },
+  {
+    "uid": "43-2",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -223.46426915164545,
+    "relative": 2.78723404255319
+  },
+  {
+    "uid": "3-4",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -223.611679569526,
+    "relative": 2.7722152690863564
+  },
+  {
+    "uid": "3-0",
+    "difficulty": 0,
+    "level": "1",
+    "absolute": -224.53570253774419,
+    "relative": 2.757196495619523
+  },
+  {
+    "uid": "0-37",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -224.67676650132015,
+    "relative": 2.7421777221526895
+  },
+  {
+    "uid": "0-9",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -225.99984767975454,
+    "relative": 2.727158948685856
+  },
+  {
+    "uid": "0-43",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -228.2235682669398,
+    "relative": 2.712140175219022
+  },
+  {
+    "uid": "48-7",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -228.48291304370744,
+    "relative": 2.697121401752189
+  },
+  {
+    "uid": "8-1",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -229.0300257496331,
+    "relative": 2.6821026282853553
+  },
+  {
+    "uid": "25-2",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -229.12137888780833,
+    "relative": 2.6670838548185216
+  },
+  {
+    "uid": "42-0",
+    "difficulty": 1,
+    "level": "3",
+    "absolute": -231.62650834402453,
+    "relative": 2.652065081351688
+  },
+  {
+    "uid": "52-2",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -234.65534319718074,
+    "relative": 2.6370463078848543
+  },
+  {
+    "uid": "0-0",
+    "difficulty": 1,
+    "level": "4",
+    "absolute": -235.77154282139213,
+    "relative": 2.622027534418021
+  },
+  {
+    "uid": "48-4",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -235.8875812481453,
+    "relative": 2.6070087609511874
+  },
+  {
+    "uid": "59-7",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -236.3375192705627,
+    "relative": 2.5919899874843537
+  },
+  {
+    "uid": "52-1",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -236.3530631795158,
+    "relative": 2.5769712140175205
+  },
+  {
+    "uid": "0-31",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -237.7080607232413,
+    "relative": 2.561952440550687
+  },
+  {
+    "uid": "21-2",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -238.08247077800522,
+    "relative": 2.546933667083853
+  },
+  {
+    "uid": "43-0",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -238.3656454241559,
+    "relative": 2.5319148936170195
+  },
+  {
+    "uid": "13-0",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -238.83964523738697,
+    "relative": 2.516896120150186
+  },
+  {
+    "uid": "0-16",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -239.00835395827346,
+    "relative": 2.5018773466833526
+  },
+  {
+    "uid": "20-0",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -241.0592672889947,
+    "relative": 2.486858573216519
+  },
+  {
+    "uid": "59-2",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -241.75311447925466,
+    "relative": 2.4718397997496853
+  },
+  {
+    "uid": "55-2",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -243.4489211808546,
+    "relative": 2.456821026282852
+  },
+  {
+    "uid": "0-52",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -243.48753732016175,
+    "relative": 2.4418022528160184
+  },
+  {
+    "uid": "13-3",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -244.54621561276218,
+    "relative": 2.4267834793491847
+  },
+  {
+    "uid": "52-3",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -246.94924399340547,
+    "relative": 2.411764705882351
+  },
+  {
+    "uid": "33-0",
+    "difficulty": 0,
+    "level": "1",
+    "absolute": -249.71641704527877,
+    "relative": 2.3967459324155174
+  },
+  {
+    "uid": "59-1",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -250.1354896746483,
+    "relative": 2.381727158948684
+  },
+  {
+    "uid": "0-38",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -250.5175820524472,
+    "relative": 2.3667083854818505
+  },
+  {
+    "uid": "55-3",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -252.18898644371342,
+    "relative": 2.351689612015017
+  },
+  {
+    "uid": "4-1",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -255.16561244693182,
+    "relative": 2.3366708385481836
+  },
+  {
+    "uid": "0-46",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -255.73846003704102,
+    "relative": 2.32165206508135
+  },
+  {
+    "uid": "37-0",
+    "difficulty": 0,
+    "level": "1",
+    "absolute": -257.9034380848798,
+    "relative": 2.3066332916145162
+  },
+  {
+    "uid": "0-15",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -257.9404065199351,
+    "relative": 2.2916145181476826
+  },
+  {
+    "uid": "0-5",
+    "difficulty": 1,
+    "level": "5",
+    "absolute": -258.6340933670816,
+    "relative": 2.276595744680849
+  },
+  {
+    "uid": "23-2",
+    "difficulty": 0,
+    "level": "1",
+    "absolute": -259.84464197959096,
+    "relative": 2.2615769712140157
+  },
+  {
+    "uid": "43-3",
+    "difficulty": 0,
+    "level": "4",
+    "absolute": -266.3306582858569,
+    "relative": 2.246558197747182
+  },
+  {
+    "uid": "39-5",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -266.68942606796094,
+    "relative": 2.2315394242803483
+  },
+  {
+    "uid": "0-30",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -267.66805369822754,
+    "relative": 2.216520650813515
+  },
+  {
+    "uid": "51-0",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -267.66839399218844,
+    "relative": 2.2015018773466815
+  },
+  {
+    "uid": "21-0",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -268.1721870826016,
+    "relative": 2.186483103879848
+  },
+  {
+    "uid": "39-8",
+    "difficulty": 0,
+    "level": "?",
+    "absolute": -269.6712061437016,
+    "relative": 2.171464330413014
+  },
+  {
+    "uid": "57-0",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -271.56606236591807,
+    "relative": 2.1564455569461805
+  },
+  {
+    "uid": "48-1",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -275.9086570358746,
+    "relative": 2.1414267834793472
+  },
+  {
+    "uid": "53-1",
+    "difficulty": 0,
+    "level": "3",
+    "absolute": -276.0710865554001,
+    "relative": 2.1264080100125136
+  },
+  {
+    "uid": "42-0",
+    "difficulty": 2,
+    "level": "6",
+    "absolute": -278.2265734272478,
+    "relative": 2.11138923654568
+  },
+  {
+    "uid": "48-0",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -280.69851115177374,
+    "relative": 2.0963704630788467
+  },
+  {
+    "uid": "0-48",
+    "difficulty": 1,
+    "level": "3",
+    "absolute": -282.94966692863306,
+    "relative": 2.081351689612013
+  },
+  {
+    "uid": "0-7",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -284.0259583273489,
+    "relative": 2.0663329161451793
+  },
+  {
+    "uid": "0-3",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -284.2203679770192,
+    "relative": 2.0513141426783457
+  },
+  {
+    "uid": "0-1",
+    "difficulty": 0,
+    "level": "1",
+    "absolute": -286.73397920892404,
+    "relative": 2.036295369211512
+  },
+  {
+    "uid": "39-7",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -288.78546917352213,
+    "relative": 2.0212765957446788
+  },
+  {
+    "uid": "39-1",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -290.4537530767619,
+    "relative": 2.006257822277845
+  },
+  {
+    "uid": "15-3",
+    "difficulty": 0,
+    "level": "1",
+    "absolute": -295.35494580823195,
+    "relative": 1.9702127659574389
+  },
+  {
+    "uid": "1-4",
+    "difficulty": 0,
+    "level": "1",
+    "absolute": -301.0274632119308,
+    "relative": 1.9191489361702048
+  },
+  {
+    "uid": "1-5",
+    "difficulty": 0,
+    "level": "1",
+    "absolute": -302.5018149026333,
+    "relative": 1.8680851063829704
+  },
+  {
+    "uid": "43-17",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -302.8843138223853,
+    "relative": 1.8170212765957363
+  },
+  {
+    "uid": "59-5",
+    "difficulty": 0,
+    "level": "1",
+    "absolute": -303.2279745646961,
+    "relative": 1.765957446808502
+  },
+  {
+    "uid": "0-9",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -310.39824957629327,
+    "relative": 1.7148936170212679
+  },
+  {
+    "uid": "42-1",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -311.55322329062835,
+    "relative": 1.6638297872340335
+  },
+  {
+    "uid": "0-28",
+    "difficulty": 1,
+    "level": "7",
+    "absolute": -320.5932896142351,
+    "relative": 1.6127659574467992
+  },
+  {
+    "uid": "48-13",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -321.58490605085564,
+    "relative": 1.561702127659565
+  },
+  {
+    "uid": "0-5",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -327.46432596066575,
+    "relative": 1.5106382978723307
+  },
+  {
+    "uid": "0-4",
+    "difficulty": 0,
+    "level": "1",
+    "absolute": -328.33154592675703,
+    "relative": 1.4595744680850964
+  },
+  {
+    "uid": "23-4",
+    "difficulty": 0,
+    "level": "1",
+    "absolute": -332.44624826856426,
+    "relative": 1.4085106382978623
+  },
+  {
+    "uid": "52-0",
+    "difficulty": 0,
+    "level": "2",
+    "absolute": -343.89472734784164,
+    "relative": 1.3574468085106282
+  },
+  {
+    "uid": "39-0",
+    "difficulty": 0,
+    "level": "1",
+    "absolute": -347.57303140992866,
+    "relative": 1.3063829787233938
+  },
+  {
+    "uid": "0-2",
+    "difficulty": 0,
+    "level": "1",
+    "absolute": -351.5408184383514,
+    "relative": 1.2553191489361595
+  },
+  {
+    "uid": "0-0",
+    "difficulty": 0,
+    "level": "1",
+    "absolute": -376.8203666886462,
+    "relative": 1.2042553191489254
+  },
+  {
+    "uid": "42-0",
+    "difficulty": 0,
+    "level": "1",
+    "absolute": -391.5969421295475,
+    "relative": 1.1531914893616912
+  },
+  {
+    "uid": "0-48",
+    "difficulty": 0,
+    "level": "1",
+    "absolute": -414.8577848500957,
+    "relative": 1.102127659574457
+  },
+  {
+    "uid": "32-0",
+    "difficulty": 0,
+    "level": "1",
+    "absolute": -491.023634195245,
+    "relative": 1.0510638297872226
+  }
+]
