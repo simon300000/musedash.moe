@@ -7,7 +7,7 @@ const TWO_DAY = 1000 * 60 * 60 * 24 * 2
 
 const db = new RaveLevel('./db')
 
-export const tuneName = '36'
+export const tuneName = '36p'
 
 const rankdb = db.sublevel<string, RankValue[]>('rank', { valueEncoding: 'json' })
 

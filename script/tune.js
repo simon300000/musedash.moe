@@ -11,7 +11,7 @@ const basePlayerRL = Object.fromEntries(basePlayer.map(({ id, rl }) => [id, rl])
 const newPlayerRL = Object.fromEntries(newPlayer.map(({ id, rl }) => [id, rl]))
 
 const difference = basePlayer
-  .filter(({ rl }) => rl > 7)
+  .filter(({ rl }) => rl > 8)
   .map(({ id, rl }) => ({ rl, diff: newPlayerRL[id] - rl })).map(({ rl, diff }) => ({ x: rl, y: diff }))
 
 await writeFile('tune-sort-playerdiff.csv', toXYCSV(difference))
