@@ -18,6 +18,8 @@
     <br>
     *Same music with different platform: count only higher accuracy
     <br>
+    *New music: will be added to the calculation after 1 week
+    <br>
     <br>
     Note, This is inaccurate, only a rough estimation based on the top 2000 players in each rank
   </p>

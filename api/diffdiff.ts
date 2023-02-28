@@ -25,6 +25,14 @@ const parseMusicc = (music: MusicData) => {
   }).filter(Boolean)
 }
 
+const normalDistribution = (level: number) => {
+  const u = 7
+  const s = 2
+  const p1 = -0.5 * Math.pow((level - u) / s, 2)
+  const p2 = Math.pow(Math.E, p1)
+  return p2 / (s * Math.sqrt(2 * Math.PI))
+}
+
 export const diffdiff = async (musics: MusicData[]) => {
   if (worker) {
     return dispatchJob({ cmd: 'diffdiff', params: [musics] })
@@ -99,8 +107,7 @@ export const diffdiff = async (musics: MusicData[]) => {
   const levels = Object.keys(levelAverage).map(Number).sort((a, b) => b - a)
   const indexes = Object.values(levelAverage)
     .sort(({ level: a }, { level: b }) => b - a)
-    .map(({ count }) => count)
-    .map(count => (questionCount / levels.length) + count)
+    .map(({ count, level }) => questionCount * normalDistribution(level) + count)
     .reduce(([last, ...counts], count) => ([last + count, last, ...counts]), [0])
     .reverse()
   const maxLevel = Math.max(...levels)
