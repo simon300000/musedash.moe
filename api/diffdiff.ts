@@ -26,8 +26,8 @@ const parseMusicc = (music: MusicData) => {
 }
 
 const normalDistribution = (level: number) => {
-  const u = 7
-  const s = 2
+  const u = 10
+  const s = 0.8
   const p1 = -0.5 * Math.pow((level - u) / s, 2)
   const p2 = Math.pow(Math.E, p1)
   return p2 / (s * Math.sqrt(2 * Math.PI))
