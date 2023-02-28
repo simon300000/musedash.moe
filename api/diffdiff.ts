@@ -83,10 +83,13 @@ export const diffdiff = async (musics: MusicData[]) => {
     })
 
   const levelAverage = {} as LevelAverage
+  let questionCount = 0
   sortedMusicList.forEach(({ level }) => {
     if (!Number.isNaN(Number(level))) {
       levelAverage[level] = levelAverage[level] || { count: 0, level: Number(level) }
       levelAverage[level].count += 1
+    } else {
+      questionCount++
     }
   })
 
@@ -94,6 +97,7 @@ export const diffdiff = async (musics: MusicData[]) => {
   const indexes = Object.values(levelAverage)
     .sort(({ level: a }, { level: b }) => b - a)
     .map(({ count }) => count)
+    .map(count => (questionCount / levels.length) + count)
     .reduce(([last, ...counts], count) => ([last + count, last, ...counts]), [0])
     .reverse()
   const maxLevel = Math.max(...levels)
