@@ -168,7 +168,7 @@ const analyze = async (musicData: RankKey[]) => {
 
 const makeSearch = (players: [string, PlayerValue][]) => {
   const batch = search.batch()
-  players.forEach(([id, { user: { nickname } }]) => batch.put(id, nickname.toLowerCase()))
+  players.forEach(([id, { user: { nickname } }]) => batch.put(id, nickname))
   return search.clear().then(() => batch.write())
 }
 

@@ -30,10 +30,12 @@ export const makeSearch = async ({ search, player, log }: { log: (w: string) => 
 }
 
 export const search = async ({ search, q }: { search: SearchType, q: string }) => {
-  const query = [...new Set(q
-    .toLowerCase()
-    .split(' ')
-    .filter(Boolean))]
+  const query = [
+    ...new Set(q
+      .toLowerCase()
+      .split(' ')
+      .filter(Boolean))
+  ]
   if (query.length) {
     const result = []
     for await (const [id, name] of search.iterator()) {
