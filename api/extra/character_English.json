@@ -1386,5 +1386,31 @@
     ],
     "reviewExpressions": null,
     "catExpressions": null
+  },
+  {
+    "characterName": "Ola",
+    "cosName": "Boxer",
+    "description": "Boxer",
+    "skill": "Ola will not get hurt when bursting into Fever.But in exchange for the temporary command, he can only use Sis's skill? His rebellion is totally frustrated!",
+    "skills": null,
+    "chipName": "Champion Belt",
+    "chipDescription": "A mountain of champion belts at home? How about we take them to Sis and transform them into henshin device?!",
+    "cv": "Mariya Ise",
+    "expressions": [
+      [ "I just found out I only have Sis's skill... Um, maybe it's okay. She is powerful after all...",
+        "Ahhhhh, I'm so nervous. Think back to what Sis once told me: \"Run away from the fight you can't win.\"Run away from the fight I can't win. Run away from the fight I can't win...",
+        "Wow, I'm really weak in human form. I have a bad feeling that I'm gonna make a fool of myself... Oh, no..."],
+      [ "Gloves, check. Headgear, check. Henshin device, check. Skill, check. Good! I'm invincible today!!",
+        "Ola ola ola ola ola! My endless punches can defeat any enemy!!",
+        "This is my trump card, Bear Punch! If that's not enough, Bear Punch Plus! Still not enough? Bear Punch Ultimate!"],
+      [ "Stamina—As long as I have it, I can take care of all my enemies! You should get more exercise like me, partner!",
+        "Bear, sanjou! How about that? I'm a copycat? It’s not that obvious!"],
+      [ "Sis is in that bear in pink braces? It can't be! Wait a minute, let me look again...?"],
+      [ "Feel lonely because sisters are not here? Me, too. But I can play with you like sisters did... Maybe?",
+        "I used to feel your gaze when I was in bear form...",
+        "But now I don't have the soft, furry tummy. So... that means... you have nothing to feel, do you?"]
+    ],
+    "reviewExpressions": null,
+    "catExpressions": null
   }
 ]
