@@ -125,7 +125,7 @@ router.get('/diffDiffMusic/:uid/:difficulty', async ctx => {
   const { uid, difficulty } = ctx.params
   // TODO: use getDIffDiffMusic
   const diffdiff = await getDiffDiff()
-  const [{ relative, absolute }] = diffdiff.filter(({ uid: u, difficulty: d }) => uid === u && Number(difficulty) === d)
+  const [{ relative = NaN, absolute = NaN } = {}] = diffdiff.filter(({ uid: u, difficulty: d }) => uid === u && Number(difficulty) === d)
   ctx.body = { relative, absolute }
 })
 
