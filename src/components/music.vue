@@ -28,7 +28,7 @@ export default {
         const { relative } = diffdiff
         return Math.round(relative * 100) / 100
       }
-      return undefined
+      return this.level && 'NaN'
     },
     album() {
       return this.musicAlbum[this.music.uid]
