@@ -31,19 +31,22 @@ export default {
   },
   components: { music },
   computed: {
-    ...mapState(['lang']),
-    ...mapGetters(['allMusics']),
+    ...mapState(['lang', 'fullAlbums']),
+    ...mapGetters(['allMusics', 'musicAlbum']),
     musicMap() {
       return Object.values(this.allMusics)
-        .map(music => ({
-          music,
-          string: ['ChineseS', 'ChineseT', 'English', 'Japanese', 'Korean']
-            .map(lang => music[lang])
-            .flatMap(({ author, name }) => [author, name])
-            .concat(music.levelDesigner)
-            .join('')
-            .toLocaleLowerCase()
-        }))
+        .map(music => {
+          const album = this.fullAlbums[this.musicAlbum[music.uid]]
+          return {
+            music,
+            string: [...new Set(['ChineseS', 'ChineseT', 'English', 'Japanese', 'Korean']
+                .map(lang => [music[lang], album[lang]])
+                .flatMap(([{ author, name }, { title }]) => [author, name, title])
+                .concat(music.levelDesigner))]
+              .join('')
+              .toLocaleLowerCase()
+          }
+        })
     },
     finds() {
       if (!this.search) {

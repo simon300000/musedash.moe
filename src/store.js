@@ -40,7 +40,7 @@ export const createStore = ({ lang, changeTitle, theme }) => {
     getters: {
       albumsArray: ({ fullAlbums }) => Object.values(fullAlbums),
       allMusics: ({ fullAlbums }) => {
-        return Object.assign({}, ...Object.values(fullAlbums).map(({ music }) => music))
+        return Object.fromEntries(Object.values(fullAlbums).flatMap(({ music }) => Object.entries(music)))
       },
       tagMap: ({ tag }) => Object.fromEntries(tag.map(({ name, musicList }) => [name, musicList])),
       musicAlbum: ({ fullAlbums }) => Object.fromEntries(Object.entries(fullAlbums).flatMap(([id, { music }]) => Object.keys(music).map(k => [k, id]))),
