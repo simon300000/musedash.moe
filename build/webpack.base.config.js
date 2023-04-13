@@ -5,7 +5,6 @@ import prodConfig from './webpack.prod.config.js'
 import devConfig from './webpack.dev.config.js'
 
 import VueLoaderPlugin from 'vue-loader/lib/plugin.js'
-import SizePlugin from 'size-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 import { fileURLToPath } from 'url'
@@ -140,7 +139,6 @@ export default merge(process.env.development ? devConfig : prodConfig, {
     child_process: 'empty'
   },
   plugins: [
-    new VueLoaderPlugin(),
-    new SizePlugin()
+    new VueLoaderPlugin()
   ]
 })

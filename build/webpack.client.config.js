@@ -2,6 +2,7 @@ import { merge } from 'webpack-merge'
 import baseConfig from './webpack.base.config.js'
 import VueSSRClientPlugin from 'vue-server-renderer/client-plugin.js'
 import CopyPlugin from 'copy-webpack-plugin'
+import SizePlugin from 'size-plugin'
 
 import { InjectManifest } from 'workbox-webpack-plugin'
 
@@ -16,6 +17,7 @@ export default merge(baseConfig, {
         ({ asset: { name } }) => name.includes('icons/')
       ]
     }),
-    new CopyPlugin({ patterns: [{ from: 'public' }] })
+    new CopyPlugin({ patterns: [{ from: 'public' }] }),
+    new SizePlugin()
   ]
 })
