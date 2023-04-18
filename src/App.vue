@@ -134,7 +134,7 @@ export default {
     }
   },
   created() {
-    this.updateTitle([this, 'MuseDash.moe'])
+    this.updateTitle([this, 'MuseDash.moe - Rank of Muse Dash'])
   },
   methods: {
     ...mapMutations(['setLang', 'setTheme', 'updateTitle']),
