@@ -475,5 +475,25 @@
 	    "callBackDifficulty2": "9",
 	    "callBackDifficulty3": "11",
 	    "unlockLevel": "0"
+    },
+    {
+	    "uid": "43-23",
+	    "name": "福音",
+	    "author": "wotaku feat. SHIKI",
+	    "bpm": "160",
+	    "music": "fukuin_music",
+	    "demo": "fukuin_demo",
+	    "cover": "fukuin_cover",
+	    "hexieCover": "",
+	    "noteJson": "fukuin_map",
+	    "scene": "scene_03",
+	    "levelDesigner": "HXJ_ConveX",
+	    "difficulty1": "4",
+	    "difficulty2": "6",
+	    "difficulty3": "10",
+	    "callBackDifficulty1": "4",
+	    "callBackDifficulty2": "6",
+	    "callBackDifficulty3": "10",
+	    "unlockLevel": "0"
     }
 ]

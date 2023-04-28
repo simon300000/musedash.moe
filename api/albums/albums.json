@@ -30,6 +30,16 @@
       "free": false
   },
   {
+    "uid": "music_package_62",
+    "title": "Happy Otaku Pack Vol.17",
+    "tag": "Happy",
+    "needPurchase": true,
+    "price": "¥25.00",
+    "jsonName": "ALBUM63",
+    "prefabsName": "AlbumDisco63",
+    "free": false
+},
+  {
       "uid": "music_package_61",
       "title": "欧拉快跑OlaDash",
       "tag": "Theme",
