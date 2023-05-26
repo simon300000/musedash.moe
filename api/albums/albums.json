@@ -30,6 +30,16 @@
       "free": false
   },
   {
+    "uid": "music_package_63",
+    "title": "暮 色 電 台 ＦＭ１０４",
+    "tag": "Theme",
+    "needPurchase": true,
+    "price": "¥25.00",
+    "jsonName": "ALBUM64",
+    "prefabsName": "AlbumDisco64",
+    "free": false
+  },
+  {
     "uid": "music_package_62",
     "title": "Happy Otaku Pack Vol.17",
     "tag": "Happy",
@@ -38,7 +48,7 @@
     "jsonName": "ALBUM63",
     "prefabsName": "AlbumDisco63",
     "free": false
-},
+  },
   {
       "uid": "music_package_61",
       "title": "欧拉快跑OlaDash",
