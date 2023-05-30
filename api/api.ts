@@ -28,12 +28,18 @@ const cache = new LRU({
 export const app = new Koa()
 
 app.use(async (ctx, next) => {
-  ctx.set('Access-Control-Allow-Origin', 'https://musedash.moe')
-  ctx.set('Access-Control-Allow-Headers', 'Content-Type')
-  ctx.set('Access-Control-Allow-Methods', 'POST, GET, OPTIONS')
-  if (ctx.method === 'OPTIONS') {
-    ctx.body = ''
+  const origin = ctx.get('Origin')
+  if (origin === 'https://musedash.moe') {
+    ctx.set('Access-Control-Allow-Origin', 'https://musedash.moe')
+    ctx.set('Access-Control-Allow-Headers', 'Content-Type')
+    ctx.set('Access-Control-Allow-Methods', 'POST, GET, OPTIONS')
+    if (ctx.method === 'OPTIONS') {
+      ctx.body = ''
+    } else {
+      await next()
+    }
   } else {
+    ctx.set('Access-Control-Allow-Origin', origin)
     await next()
   }
 })
