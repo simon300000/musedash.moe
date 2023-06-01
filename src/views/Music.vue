@@ -58,9 +58,7 @@ export default {
     this.updateTitle([this, this.title])
   },
   mounted() {
-    if (!this.albumsArray.length) {
-      this.loadAlbums()
-    }
+    this.loadAlbums()
   },
   methods: {
     ...mapActions(['loadAlbums']),

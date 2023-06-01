@@ -60,9 +60,7 @@ export default {
     return this.loadAlbums()
   },
   mounted() {
-    if (!this.albumsArray.length) {
-      this.loadAlbums()
-    }
+    this.loadAlbums()
   },
   methods: mapActions(['loadAlbums'])
 }

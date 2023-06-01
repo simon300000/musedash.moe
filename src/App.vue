@@ -129,7 +129,7 @@ export default {
       return Object.entries(langs)
         .filter(([lang]) => lang !== this.lang)
     },
-    currentTheme(){
+    currentTheme() {
       return themeConfig[this.theme] || themeConfig.dark
     }
   },

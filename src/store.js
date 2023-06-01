@@ -25,6 +25,7 @@ export const createStore = ({ lang, changeTitle, theme }) => {
 
   return new Vuex.Store({
     state: {
+      albumsLoaded: 0,
       fullAlbums: {},
       tag: [],
       rankCache: {},
@@ -69,6 +70,7 @@ export const createStore = ({ lang, changeTitle, theme }) => {
     mutations: {
       setAlbums(state, data) {
         state.fullAlbums = data
+        state.albumsLoaded = Date.now()
       },
       setTag(state, data) {
         state.tag = data
@@ -110,13 +112,17 @@ export const createStore = ({ lang, changeTitle, theme }) => {
       }
     },
     actions: {
-      async loadAlbums({ commit, dispatch }) {
-        const ceP = dispatch('loadCE')
-        const albumsP = getAlbums()
-        const tagP = getTag()
-        await ceP
-        commit('setAlbums', await albumsP)
-        commit('setTag', await tagP)
+      async loadAlbums({ getters: { albumsArray }, state: { albumsLoaded }, commit, dispatch }) {
+        const albumLifeDay = (Date.now() - albumsLoaded) / 1000 / 60 / 60 / 24
+        console.info('albumLifeDay', albumLifeDay)
+        if (!albumsArray.length || albumLifeDay > 0.5) {
+          const ceP = dispatch('loadCE')
+          const albumsP = getAlbums()
+          const tagP = getTag()
+          await ceP
+          commit('setAlbums', await albumsP)
+          commit('setTag', await tagP)
+        }
       },
       async loadCE({ commit, state }) {
         if (!Object.keys(state.ce.c).length) {

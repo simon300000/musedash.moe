@@ -69,10 +69,8 @@ export default {
     await this.loadUser(this.id)
     this.updateTitle([this, this.title])
   },
-  async mounted() {
-    if (!this.albumsArray.length) {
-      this.loadAlbums()
-    }
+  mounted() {
+    this.loadAlbums()
   },
   methods: {
     ...mapActions(['loadAlbums', 'loadUser']),
