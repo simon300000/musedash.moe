@@ -114,7 +114,6 @@ export const createStore = ({ lang, changeTitle, theme }) => {
     actions: {
       async loadAlbums({ getters: { albumsArray }, state: { albumsLoaded }, commit, dispatch }) {
         const albumLifeDay = (Date.now() - albumsLoaded) / 1000 / 60 / 60 / 24
-        console.info('albumLifeDay', albumLifeDay)
         if (!albumsArray.length || albumLifeDay > 0.5) {
           const ceP = dispatch('loadCE')
           const albumsP = getAlbums()
