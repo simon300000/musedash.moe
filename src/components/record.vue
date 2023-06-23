@@ -13,7 +13,7 @@
   </div>
   <div class="level-item">
     <div>
-      <p class="title is-3 is-spaced">{{Math.round(props.play.acc*10)/10}}%</p>
+      <p class="title is-3 is-spaced">{{Math.round(props.play.acc*100)/100}}%</p>
       <p class="subtitle is-5 is-spaced">{{props.play.score}}</p>
       <p class="subtitle is-6 is-spaced">{{props.character}} / {{props.elfin}}</p>
     </div>

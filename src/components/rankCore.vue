@@ -23,7 +23,7 @@
           <td class="nowarp ellipsis">
             <router-link :to="play.url">{{play.nickname}}</router-link>
           </td>
-          <td>{{Math.round(play.acc*10)/10}}%</td>
+          <td>{{Math.round(play.acc*100)/100}}%</td>
           <td>{{play.score}}</td>
           <td v-if="platform === 'all'">
             <octicon type="desktop" size="17" style="float:right;" v-if="play.platform === 'pc'"></octicon>
