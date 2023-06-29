@@ -34,6 +34,9 @@ export default {
       return this.fullAlbums[this.album]
     },
     title() {
+      if (this.$route.path.includes('/tag/')) {
+        return undefined
+      }
       if (this.currentAlbum) {
         return {
           ...this.currentAlbum,
