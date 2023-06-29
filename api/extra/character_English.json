@@ -282,7 +282,7 @@
     ],
     "chipName": "Paper Plane",
     "chipDescription": "Whoops! That paper looks like my report card!",
-    "cv": "Amatsuka Mao",
+    "cv": "Mao Amatsuka",
     "expressions": [
       [
         "Well, it's OK to play with you if you have donuts.",
@@ -350,7 +350,7 @@
     ],
     "chipName": "Energy Battery",
     "chipDescription": "The battery filled with energy of love",
-    "cv": "Amatsuka Mao",
+    "cv": "Mao Amatsuka",
     "expressions": [
       [
         "This hairstyle is carefully prepared! don't mess it up...",
@@ -418,7 +418,7 @@
     ],
     "chipName": "Misfortune Spell",
     "chipDescription": "Bring bad luck once pasted on someone",
-    "cv": "Amatsuka Mao",
+    "cv": "Mao Amatsuka",
     "expressions": [
       [
         "Can I still grow taller as a zombie...",
@@ -486,7 +486,7 @@
     ],
     "chipName": "Colorful Ball",
     "chipDescription": "Give you 3 seconds to find the treasures I hid~",
-    "cv": "Amatsuka Mao",
+    "cv": "Mao Amatsuka",
     "expressions": [
       [
         "Hehehehe~",
@@ -959,7 +959,7 @@
     "skills": null,
     "chipName": "Plastic Master 90",
     "chipDescription": "·Higher resistance to heat·Greater Durability·Wide Dynaic Range·Out of production",
-    "cv": "Amatsuka Mao",
+    "cv": "Mao Amatsuka",
     "expressions": [
       [
         "My favorite genre? Nope, not gonna tell you～",
@@ -1409,6 +1409,32 @@
       [ "Feel lonely because sisters are not here? Me, too. But I can play with you like sisters did... Maybe?",
         "I used to feel your gaze when I was in bear form...",
         "But now I don't have the soft, furry tummy. So... that means... you have nothing to feel, do you?"]
+    ],
+    "reviewExpressions": null,
+    "catExpressions": null
+  },
+  {
+    "characterName": "Buro",
+    "cosName": "Exorcist Master",
+    "description": "Exorcist Master",
+    "skill": "Exorcist Master Buro will first consume Fever Energy every time she gets hurt. \nWhen Fever Mode is active, defeating enemies grants 30% bonus scores.",
+    "skills": null,
+    "chipName": "Serious Sunglasses",
+    "chipDescription": "The switch to turn on the streamer's serious mode, \nwith cracks indicating the end of it.",
+    "cv": "Mao Amatsuka",
+    "expressions": [
+    [ "No matter it's the Eastern monster or the Western demon, there's nothing I can't exorcise. Alas, it's getting harder to scrape a living~",
+      "Tit for tat is fair game! If you invite something like a zombie or demon, don't count on me to rescue you~",
+      "Distressed everyday, how unlucky you are. But that's why you are a perfect match for someone like me, a 24/7 genius Exorcist Master~"],
+    [ "Ola, you might notice it too—this place must be haunted by an evil spirit!",
+      "That suspicious sister does business but collects no money. I smelled something fishy! Let me check her out!"],
+    [ "I saw you surrounded by darkness. This must be... Er, sorry, I forgot to take off the sunglasses!"],
+    [ "Is the streamer blind—this is my important prop to show... exorcise the demons!! I'll kill you!!",
+      "Snacks were gone? Figures were broken? I said it a thousand times! Spoiled brats are not ghosts! Fix it yourself!",
+      "Something is moving behind the streamer? Please raise your head and take a good look at the stream title? You can't even fool the ghosts!"],
+    [ "How about sealing... your head filled with evil thoughts?",
+      "When you have sleep paralysis, just imagine it's Buro sitting on you... Please hang in there a little longer!"],
+    [ "Sleeping with the pillow consecrated by me can bring you a good fortune... How about that? Wanna buy it?"]
     ],
     "reviewExpressions": null,
     "catExpressions": null
