@@ -19,7 +19,7 @@
         <router-link to="/player" class="navbar-item" :exact-active-class="'is-active'">Search</router-link>
         <router-link to="/mdmc" class="navbar-item mdmcPink" :active-class="'is-active'">mdmc</router-link>
         <router-link to="/rd" class="navbar-item" :active-class="'is-active'">R. Difficulty</router-link>
-        <p class="navbar-item anniversary">🎉 Happy 5th anniversary of MuseDash! 🥳</p>
+        <p class="navbar-item anniversary">🎉 <span class="anniversary-rainbow">Happy 5th anniversary of MuseDash!</span> 🥳</p>
       </div>
 
       <div class="navbar-end">
@@ -177,7 +177,29 @@ export default {
   transition: font-size 0.8s ease;
 }
 
+.anniversary-rainbow {
+  background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff, #ff0000);
+  background-clip: text;
+  animation: rainbow_animation 4s linear infinite;
+  background-size: 200% 100%;
+  transition: color 0.8s ease;
+}
+
+@keyframes rainbow_animation {
+  0% {
+    background-position: 0% 0;
+  }
+
+  100% {
+    background-position: 100% 0;
+  }
+}
+
 .anniversary:hover {
   font-size: 50px;
+}
+
+.anniversary-rainbow:hover {
+  color: transparent;
 }
 </style>
