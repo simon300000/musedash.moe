@@ -180,6 +180,7 @@ export default {
 .anniversary-rainbow {
   background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff, #ff0000);
   background-clip: text;
+  -webkit-background-clip: text;
   animation: rainbow_animation 4s linear infinite;
   background-size: 200% 100%;
   transition: color 0.8s ease;
