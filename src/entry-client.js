@@ -19,7 +19,7 @@ if (window.__INITIAL_STATE__) {
 }
 
 Vue.use(VueGtag, {
-  config: { id: "UA-123973162-5" }
+  config: { id: "G-B2JLBE6TE0" }
 }, router)
 
 app.$mount('#app')
