@@ -30,6 +30,16 @@
       "free": false
   },
   {
+    "uid": "music_package_64",
+    "title": "宇宙电台PEROLIST",
+    "tag": "Theme",
+    "needPurchase": true,
+    "price": "¥30.00",
+    "jsonName": "ALBUM65",
+    "prefabsName": "AlbumDisco65",
+    "free": false
+  },
+  {
     "uid": "music_package_63",
     "title": "暮 色 電 台 ＦＭ１０４",
     "tag": "Theme",

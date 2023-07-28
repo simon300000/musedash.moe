@@ -615,5 +615,25 @@
 	    "callBackDifficulty2": "6",
 	    "callBackDifficulty3": "8",
 	    "unlockLevel": "0"
+    },
+    {
+	    "uid": "43-30",
+	    "name": "The Day We Become Family",
+	    "author": "茶鸣拾贰律",
+	    "bpm": "125",
+	    "music": "the_day_we_become_family_music",
+	    "demo": "the_day_we_become_family_demo",
+	    "cover": "the_day_we_become_family_cover",
+	    "hexieCover": "",
+	    "noteJson": "the_day_we_become_family_map",
+	    "scene": "scene_01",
+	    "levelDesigner": "money钱",
+	    "difficulty1": "3",
+	    "difficulty2": "5",
+	    "difficulty3": "8",
+	    "callBackDifficulty1": "3",
+	    "callBackDifficulty2": "5",
+	    "callBackDifficulty3": "8",
+	    "unlockLevel": "0"
     }
 ]
