@@ -19,7 +19,6 @@
         <router-link to="/player" class="navbar-item" :exact-active-class="'is-active'">Search</router-link>
         <router-link to="/mdmc" class="navbar-item mdmcPink" :active-class="'is-active'">mdmc</router-link>
         <router-link to="/rd" class="navbar-item" :active-class="'is-active'">R. Difficulty</router-link>
-        <p class="navbar-item anniversary">🎉 <span class="anniversary-rainbow">Happy 5th anniversary of MuseDash!</span> 🥳</p>
       </div>
 
       <div class="navbar-end">
