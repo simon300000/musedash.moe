@@ -16,7 +16,7 @@
     "moe": "node index"
   },
   "dependencies": {
-    "@koa/router": "^10.1.1",
+    "@koa/router": "^12.0.0",
     "bulma": "^0.9.4",
     "chart.js": "^4.2.0",
     "chartjs-adapter-moment": "^1.0.1",
@@ -41,7 +41,7 @@
     "@babel/plugin-transform-runtime": "^7.5.5",
     "@types/encoding-down": "^5.0.0",
     "@types/koa": "^2.13.5",
-    "@types/koa__router": "^8.0.11",
+    "@types/koa__router": "^12.0.0",
     "@types/lru-cache": "^5.1.0",
     "@vue/cli-plugin-babel": "^4.0.5",
     "@vue/cli-plugin-eslint": "^4.0.5",
