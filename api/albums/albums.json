@@ -30,6 +30,17 @@
       "free": false
   },
   {
+      "uid": "music_package_65",
+      "title": "霓虹深渊 Neon Abyss",
+      "tag": "Other",
+      "needPurchase": true,
+      "price": "¥18.00",
+      "jsonName": "ALBUM66",
+      "prefabsName": "AlbumDisco66",
+      "free": false,
+      "lastActiveTime": "2026-08-17T15:00:00Z"
+  },
+  {
     "uid": "music_package_64",
     "title": "宇宙电台PEROLIST",
     "tag": "Theme",

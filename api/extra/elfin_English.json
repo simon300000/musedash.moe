@@ -70,5 +70,12 @@
 		"skill": "With Silencer interfering, the selected character's skill will be disabled and her HP is set default at 250.",
 		"chipName": "\"No\" lollipop",
 		"chipDescription": "All it takes to safeguard world peace is a lollipop!"
+	},
+	{
+		"name": "Neon Egg",
+		"description": "",
+		"skill": "After first bursting into Fever mode, a random Neon Abyss collab character will hatch out of Neon Egg: R-6 can shield 50% damage every time you gets hurt; Saya can earn a 5% score bonus for each \"Perfect\" judgement; when holding Sheets (hold note), Lin can convert \"Miss\" into \"Great\", but this doesn't work on Sheets (hold note) and Mash Enemies.",
+		"chipName": "Unhatched Egg",
+		"chipDescription": "You will never arrive at the truth of \"what's in the egg.\" ( ﾟ∀。)"
 	}
 ]

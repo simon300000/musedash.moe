@@ -122,12 +122,15 @@
 		"levelDesigner1": "HXJ_ConveX",
 		"levelDesigner2": "HXJ_ConveX",
 		"levelDesigner3": "#×]~（0^/v3><",
+		"levelDesigner4": "HXJ_ConveX",
 		"difficulty1": "5",
 		"difficulty2": "8",
 		"difficulty3": "10",
+		"difficulty4": "11",
 		"callBackDifficulty1": "5",
 		"callBackDifficulty2": "8",
 		"callBackDifficulty3": "10",
+		"callBackDifficulty4": "11",
 		"unlockLevel": "0"
 	}
 ]
