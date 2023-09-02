@@ -43,6 +43,7 @@ export default {
       Cute: 'IconCuteIsEveryting.png',
       GiveUp: 'IconGiveUpTreatment.png',
       X: 'X.png',
+      HideMap: 'IconHideMap.png',
       New: 'IconNew.png',
       PlannedPlus: 'IconJustAsPlanned.png'
     }

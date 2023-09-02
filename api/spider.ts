@@ -288,6 +288,16 @@ const refreshMusicList = async () => {
         Korean: '"계획대로" 보완 계획'
       },
       musicList: []
+    },
+    HideMap: {
+      displayName: {
+        ChineseS: "有里谱",
+        ChineseT: "有里譜",
+        English: "With Hidden Sheet",
+        Japanese: "裏譜面あり",
+        Korean: "히든 채보"
+      },
+      musicList: []
     }
   }
 
@@ -300,7 +310,6 @@ const refreshMusicList = async () => {
   for (const { uid } of musicList) {
     await checkNewSong(uid)
   }
-
 
   const newList: Record<string, string[]> = {}
   for (const { uid } of musicList) {
@@ -318,12 +327,13 @@ const refreshMusicList = async () => {
 
   const { music_tag_list: rawTag } = await downloadTag().catch(e => {
     log(e)
-    return { music_tag_list: [] }
+    return { music_tag_list: [] } as MusicTagList
   })
   if (!rawTag.length) {
     return
   }
-  const collab = rawTag.filter(({ tag_name: { English } }) => English === 'Collab').flatMap(({ music_list }) => music_list)
+
+  const { music_list: collab } = rawTag.find(({ tag_name: { English } }) => English === 'Collab')
   const collabMusicList: Record<string, string[]> = {}
   collab.forEach(id => {
     const [albumNum] = id.split('-')
@@ -335,6 +345,20 @@ const refreshMusicList = async () => {
   })
 
   tags.X.musicList = Object.entries(collabMusicList).map(([json, ids]) => ({ json, musics: ids }))
+
+  const hideMapList: Record<string, string[]> = {}
+  for (const { json, music } of albumList) {
+    for (const { uid, difficulty } of music) {
+      if (difficulty[3] !== '0' || difficulty[4] !== '0') {
+        if (!hideMapList[json]) {
+          hideMapList[json] = []
+        }
+        hideMapList[json].push(uid)
+      }
+    }
+  }
+
+  tags.HideMap.musicList = Object.entries(hideMapList).map(([json, ids]) => ({ json, musics: ids }))
 
   const tagExport = Object.entries(tags).map(([n, v]) => ({ name: n, ...v }))
   await putTag(tagExport)
