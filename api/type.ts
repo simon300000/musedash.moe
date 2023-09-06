@@ -74,7 +74,9 @@ export interface User {
 
 export interface RawAPI {
   result: APIResults,
-  total: number
+  total: number,
+  code: number
+  msg?: string
 }
 
 export interface APIResult {
