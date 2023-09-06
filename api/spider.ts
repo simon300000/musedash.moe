@@ -399,7 +399,7 @@ const wakeupSpider = async () => {
   if (spiders) {
     spiders--
     wakeupSpider()
-    await Promise.all([spider(), wait(1000 * 10)])
+    await spider()
     spiders++
   }
 }
