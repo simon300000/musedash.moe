@@ -59,7 +59,7 @@ const downloadCore = async ({ uid, difficulty, platform }: RankKey) => {
   const api = platforms[platform]
   const { result: firstPage, total, code, msg } = await down<RawAPI>(`https://prpr-muse-dash.peropero.net/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=100&offset=0&version=2.11.0&platform=musedash.moe`) //platform=ios_overseas
   if (code !== 0) {
-    error(`Error: ${msg}`)
+    console.error(`Error: ${msg}`)
     throw new Error(msg)
   }
   const pageNumber = Math.max(Math.ceil(total / 100) - 1, 0)
