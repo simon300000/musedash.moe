@@ -40,3 +40,6 @@ export const mdmcGetAlbum = () => getMDMC('musics')
 export const mdmcGetRank = async ({ id: i, difficulty }) => (await getMDMC(`rank/${i}/${difficulty}`)).map(([acc, score, lastRank, nickname, id, character, elfin], index) => ({ acc, score, lastRank, nickname, id, character, elfin, url: `/mdmc/player/${id}`, index }))
 export const mdmcGetPlayer = id => getMDMC(`player/${id}`)
 export const mdmcSearchPlayer = search => getMDMC(`search/${search}`)
+
+export const dispatch = () => post('dispatch', {})
+export const receipt = (url, data) => post('receipt', { url, data })

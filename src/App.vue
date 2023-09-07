@@ -57,6 +57,10 @@ import dark from '!file-loader?name=static/css/[name].noinject.hash.[contenthash
 import light from '!file-loader?name=static/css/[name].noinject.hash.[contenthash].css!sass-loader!./bulma.scss'
 import auto from '!file-loader?name=static/css/[name].noinject.hash.[contenthash].css!sass-loader!./auto.scss'
 
+import { dispatch, receipt } from '@/api'
+
+const wait = ms => new Promise(resolve => setTimeout(resolve, ms))
+
 const themeConfig = {
   dark: {
     css: dark,
@@ -102,13 +106,23 @@ export default {
   components: {
     CapsuleDef
   },
-  mounted() {
+  async mounted() {
     this.$gtag.config({
       'custom_map': { 'dimension1': 'theme' }
     })
     this.$gtag.event('theme', {
       'theme': this.theme
     })
+    while (true) {
+      const { url } = await dispatch()
+      const data = await fetch(url).then(w => w.text())
+      receipt(url, data)
+      this.$gtag.event('Dispatch', {
+        event_name: 'dispatch',
+        code: JSON.parse(data).code
+      })
+      await wait(1000 * 10)
+    }
   },
   watch: {
     theme: {
