@@ -15,6 +15,7 @@ import { albums, AvailableLocales, availableLocales } from './albumParser.js'
 import { search as searchF } from './common.js'
 
 import { joinJob } from './spider.js'
+import { dispatch, receipt } from './dispatcher.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -195,6 +196,15 @@ router.get('/playerNumber', async ctx => {
 
 router.get('/playerDiffRank', async ctx => {
   ctx.body = await getPlayerDiffRank()
+})
+
+router.post('/dispatch', ctx => {
+  ctx.body = { url: dispatch() }
+})
+
+router.post('/receipt', koaBody(), ctx => {
+  const { url, data } = ctx.request.body
+  ctx.body = { result: receipt(url, JSON.parse(data)) }
 })
 
 app.use(router.routes())

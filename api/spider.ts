@@ -1,7 +1,6 @@
-import { fetch } from 'undici'
 import LRU from 'lru-cache'
 
-import { getAgent } from './dispatcher.js'
+import { fetch } from './dispatcher.js'
 
 import { MusicData, MusicCore, PlayerValue, RawAPI, RankKey, MusicTagList, genKey } from './type.js'
 import { rank, player, search, rankUpdateTime, playerUpdateTime, putTag, checkNewSong, isNewSong, saveRaw, playerDataOld, updatePlayerData, setPlayerNumer } from './database.js'
@@ -48,7 +47,7 @@ const down = async <T>(url: string) => {
   if (hit) {
     return hit as T
   }
-  const result = await fetch(url, { dispatcher: getAgent() }).then(w => w.json())
+  const result = await fetch(url)
   downCache.set(url, result)
   return result as T
 }
