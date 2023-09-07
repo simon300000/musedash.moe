@@ -1,12 +1,15 @@
-import { fetch } from './dispatcher.js'
+import { Agent, setGlobalDispatcher } from 'undici'
 
-import { MusicData, MusicCore, PlayerValue, RawAPI, RankKey, MusicTagList, genKey } from './type.js'
+
+import { downloadCore } from './dispatcher.js'
+
+import { MusicData, MusicCore, PlayerValue, RankKey, MusicTagList, genKey } from './type.js'
 import { rank, player, search, rankUpdateTime, playerUpdateTime, putTag, checkNewSong, isNewSong, saveRaw, playerDataOld, updatePlayerData, setPlayerNumer } from './database.js'
 import { albums, AvailableLocales, musics } from './albumParser.js'
 
 import { log, error, reloadAlbums } from './api.js'
 
-import { resultWithHistory, wait } from './common.js'
+import { platforms, resultWithHistory, wait } from './common.js'
 
 import { diffdiff, diffPlayer } from './diffdiff.js'
 
@@ -18,10 +21,7 @@ let spiders = SPIDER_PARALLEL
 
 let musicList: MusicData[] = []
 
-const platforms = {
-  mobile: 'leaderboard',
-  pc: 'pcleaderboard'
-} as const
+setGlobalDispatcher(new Agent({ connect: { timeout: 120_000 } }))
 
 const sumMutexMap = new Map<string, Promise<void>>()
 
@@ -37,26 +37,11 @@ const sumLock = ({ uid, difficulty, platform }: RankKey) => {
 }
 
 const down = async <T>(url: string) => {
-  const result = await fetch(url)
+  const result = await fetch(url).then(w => w.json())
   return result as T
 }
 
 const downloadTag = () => down<MusicTagList>('https://prpr-muse-dash.peropero.net/musedash/v1/music_tag?platform=pc')
-
-const downloadCore = async ({ uid, difficulty, platform }: RankKey) => {
-  const api = platforms[platform]
-  const { result: firstPage, total, code, msg } = await down<RawAPI>(`https://prpr-muse-dash.peropero.net/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=100&offset=0&version=2.11.0&platform=musedash.moe`) //platform=ios_overseas
-  if (code !== 0) {
-    console.error(`Error: ${msg}`)
-    throw new Error(msg)
-  }
-  const pageNumber = Math.max(Math.ceil(total / 100) - 1, 0)
-  const urls = Array(pageNumber).fill(undefined).map((_, i) => i + 1).map(i => i * 100 - 1).map(limit => `https://prpr-muse-dash.peropero.net/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=${limit}&offset=1&version=2.11.0&platform=musedash.moe`)
-  return [firstPage, ...await Promise.all(urls.map(url => down<RawAPI>(url).then(({ result }) => result)))]
-    .flat()
-    .filter(r => r?.play?.score != undefined && r?.user?.user_id != undefined)
-    .filter(r => r.play.acc <= 100)
-}
 
 const toSum = ({ uid, difficulty }: RankKey) => !Object.keys(platforms)
   .map(otherPlatform => genKey({ uid, difficulty, platform: otherPlatform }))
@@ -429,10 +414,10 @@ const mal = async (musicData: MusicData[]) => {
   const players = await analyze([...waits.values()].map(({ core }) => core))
   await makeSearch(players)
   log('Search Cached')
-  // await diffdiff(musicData)
-  // log('Difficulty ranked')
-  // await diffPlayer()
-  // log('Players Analyzed')
+  await diffdiff(musicData)
+  log('Difficulty ranked')
+  await diffPlayer()
+  log('Players Analyzed')
   await reloadAlbums()
   await updatePlayerData()
 }

@@ -5,6 +5,11 @@ import { PlayerValue } from './type.js'
 type SearchType = AbstractSublevel<any, any, string, string>
 type PlayerType = AbstractSublevel<any, any, string, PlayerValue>
 
+export const platforms = {
+  mobile: 'leaderboard',
+  pc: 'pcleaderboard'
+} as const
+
 export const wait = (ms: number): Promise<void> => new Promise(resolve => setTimeout(resolve, ms))
 
 export const resultWithHistory = <U extends { user: { user_id: string } }, T extends U,>({ result, current }: { result: T[], current: U[] }): U[] => {
