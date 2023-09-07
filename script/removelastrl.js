@@ -3,11 +3,10 @@ import { RaveLevel } from 'rave-level'
 const db = new RaveLevel('./db')
 
 
-const playerDiffHistory = db.sublevel('playerDiffHistory', { valueEncoding: 'json' })
+const playerDiffHistory = db.sublevel('playerDiffHistory-new', { valueEncoding: 'json' })
 const playerDiffHistoryNumber = playerDiffHistory.sublevel('number', { valueEncoding: 'json' })
 
 const state = db.sublevel('state', { valueEncoding: 'json' })
-
 
 let count = 0
 
