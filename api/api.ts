@@ -199,12 +199,12 @@ router.get('/playerDiffRank', async ctx => {
 })
 
 router.post('/dispatch', ctx => {
-  ctx.body = { key: dispatch() }
+  ctx.body = { url: dispatch() }
 })
 
 router.post('/receipt', koaBody(), ctx => {
-  const { key, rank } = ctx.request.body
-  ctx.body = { result: receipt(key, rank) }
+  const { url, data } = ctx.request.body
+  ctx.body = { result: receipt(url, JSON.parse(data)) }
 })
 
 app.use(router.routes())
