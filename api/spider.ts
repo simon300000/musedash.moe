@@ -375,7 +375,6 @@ const waitSpiderSleep = async () => {
 
 const spider = async () => {
   while (spiderWorks()) {
-    await wait(1000 * 9)
     const next = [...waits.values()].find(({ ready, nextDownload }) => ready && nextDownload < Date.now())
     if (next) {
       next.ready = false
