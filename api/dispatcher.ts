@@ -40,7 +40,7 @@ export const receipt = (url: string, data: any) => {
 
 (async () => {
   while (true) {
-    await wait(1000 * 10)
+    await wait(1000 * 30)
     const url = dispatch()
     if (url) {
       const res = await f(url)
