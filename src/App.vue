@@ -108,7 +108,10 @@ export default {
   },
   async mounted() {
     this.$gtag.config({
-      'custom_map': { 'dimension1': 'theme' }
+      custom_map: {
+        dimension1: 'theme',
+        dimension2: 'code'
+      }
     })
     this.$gtag.event('theme', {
       'theme': this.theme
