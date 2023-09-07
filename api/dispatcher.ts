@@ -19,7 +19,7 @@ export const fetch = async (url: string) => {
   return promise
 }
 
-export const dispatch = () => jobs[Math.floor(Math.random() * jobs.length)].url
+export const dispatch = () => jobs[Math.floor(Math.random() * jobs.length)]?.url
 
 export const receipt = (url: string, data: any) => {
   if (data.code === 0) {
