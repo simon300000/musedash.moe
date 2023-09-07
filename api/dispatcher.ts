@@ -28,6 +28,7 @@ export const receipt = (url: string, data: any) => {
         job.p(data)
         return false
       }
+      console.log('queue count', jobs.length)
       return true
     })
     return true
