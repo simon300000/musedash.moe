@@ -202,8 +202,9 @@ router.post('/dispatch', ctx => {
   ctx.body = { url: dispatch() }
 })
 
-router.post('/dispatch256', ctx => {
-  ctx.body = { urls: dispatch256() }
+router.post('/dispatch256', koaBody(), ctx => {
+  const { i } = ctx.request.body
+  ctx.body = { urls: dispatch256(i) }
 })
 
 router.post('/receipt', koaBody(), ctx => {
