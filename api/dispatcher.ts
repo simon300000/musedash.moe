@@ -35,12 +35,16 @@ export const receipt = (url: string, data: any) => {
   return false
 }
 
-while (true) {
-  await wait(1000 * 10)
-  const url = dispatch()
-  if (url) {
-    const res = await f(url)
-    const data = await res.json() as any
-    receipt(url, data)
+  ;
+
+(async () => {
+  while (true) {
+    await wait(1000 * 10)
+    const url = dispatch()
+    if (url) {
+      const res = await f(url)
+      const data = await res.json() as any
+      receipt(url, data)
+    }
   }
-}
+})()
