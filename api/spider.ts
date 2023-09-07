@@ -1,5 +1,3 @@
-import LRU from 'lru-cache'
-
 import { fetch } from './dispatcher.js'
 
 import { MusicData, MusicCore, PlayerValue, RawAPI, RankKey, MusicTagList, genKey } from './type.js'
@@ -15,10 +13,6 @@ import { diffdiff, diffPlayer } from './diffdiff.js'
 import { SPIDER_PARALLEL } from './config.js'
 
 const waits = new Map<string, Wait>()
-
-const downCache = new LRU<string, any>({
-  maxAge: 1000 * 60 * 60
-})
 
 let spiders = SPIDER_PARALLEL
 
@@ -43,12 +37,7 @@ const sumLock = ({ uid, difficulty, platform }: RankKey) => {
 }
 
 const down = async <T>(url: string) => {
-  const hit = downCache.get(url)
-  if (hit) {
-    return hit as T
-  }
   const result = await fetch(url)
-  downCache.set(url, result)
   return result as T
 }
 
