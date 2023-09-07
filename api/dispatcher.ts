@@ -1,6 +1,6 @@
 import { Agent, fetch as f, setGlobalDispatcher } from 'undici'
 
-import { wait } from './common'
+import { wait } from './common.js'
 
 setGlobalDispatcher(new Agent({ connect: { timeout: 120_000 } }))
 
