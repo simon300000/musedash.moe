@@ -20,7 +20,7 @@ export const fetch = async (url: string) => {
 }
 
 export const dispatch = () => jobs[Math.floor(Math.random() * jobs.length)]?.url
-export const dispatch256 = (i = 0) => jobs.filter((_, i) => i >= i * 256).filter((_, i) => i < 256).map(job => job.url)
+export const dispatch256 = (index = 0) => jobs.filter((_, i) => i >= index * 256).filter((_, i) => i < 256).map(job => job.url)
 
 export const receipt = (url: string, data: any) => {
   if (data.code === 0) {
