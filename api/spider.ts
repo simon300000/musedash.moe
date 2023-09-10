@@ -12,6 +12,12 @@ import { diffdiff, diffPlayer } from './diffdiff.js'
 
 import { SPIDER_PARALLEL } from './config.js'
 
+import { RaveLevel } from 'rave-level'
+const db = new RaveLevel('./db-dev')
+const downDB = db.sublevel<string, any>('down', { valueEncoding: 'json' })
+const resultDB = db.sublevel<string, Awaited<ReturnType<typeof downloadCore>>>('result', { valueEncoding: 'json' })
+
+
 const waits = new Map<string, Wait>()
 
 let spiders = SPIDER_PARALLEL
@@ -37,8 +43,9 @@ const sumLock = ({ uid, difficulty, platform }: RankKey) => {
 }
 
 const down = async <T>(url: string) => {
-  const result = await fetch(url)
-  return result as T
+  const result = await fetch(url) as T
+  await downDB.put(url, result)
+  return result
 }
 
 const downloadTag = () => down<MusicTagList>('https://prpr-muse-dash.peropero.net/musedash/v1/music_tag?platform=pc')
@@ -52,10 +59,12 @@ const downloadCore = async ({ uid, difficulty, platform }: RankKey) => {
   }
   const pageNumber = Math.max(Math.ceil(total / 100) - 1, 0)
   const urls = Array(pageNumber).fill(undefined).map((_, i) => i + 1).map(i => i * 100 - 1).map(limit => `https://prpr-muse-dash.peropero.net/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=${limit}&offset=1&version=2.11.0&platform=musedash.moe`)
-  return [firstPage, ...await Promise.all(urls.map(url => down<RawAPI>(url).then(({ result }) => result)))]
+  const result = [firstPage, ...await Promise.all(urls.map(url => down<RawAPI>(url).then(({ result }) => result)))]
     .flat()
     .filter(r => r?.play?.score != undefined && r?.user?.user_id != undefined)
     .filter(r => r.play.acc <= 100)
+  await resultDB.put(genKey({ uid, difficulty, platform }), result)
+  return result
 }
 
 const toSum = ({ uid, difficulty }: RankKey) => !Object.keys(platforms)
