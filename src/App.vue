@@ -118,12 +118,16 @@ export default {
     })
     while (true) {
       const { url } = await dispatch()
-      const data = await fetch(url).then(w => w.text())
-      receipt(url, data)
-      this.$gtag.event('Dispatch', {
-        event_name: 'dispatch',
-        code: JSON.parse(data).code
-      })
+      if (url) {
+        const data = await fetch(url).then(w => w.text())
+        receipt(url, data)
+        this.$gtag.event('Dispatch', {
+          event_name: 'dispatch',
+          code: JSON.parse(data).code
+        })
+      } else {
+        await wait(1000 * 20)
+      }
       await wait(1000 * 10)
     }
   },
