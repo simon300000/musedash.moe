@@ -15,6 +15,13 @@
       Will make rank page slow and laggie, disable if you encounter problem
       <br>
     </label>
+    <label class="checkbox">
+      <input type="checkbox" v-model="noSpider">
+      Disable web crawler
+      <br>
+      Web crawler help MuseDash.moe to gather data, it will use some bandwidth (~6KB/s)
+      <br>
+    </label>
   </p>
   <br>
   <p>
@@ -71,6 +78,7 @@ export default {
     return {
       rawEnabled: false,
       vt: false,
+      noSpider: false,
       log: 'loading...'
     }
   },
@@ -80,6 +88,9 @@ export default {
     },
     vt() {
       localStorage.vt = String(this.vt)
+    },
+    noSpider() {
+      localStorage.noSpider = String(this.noSpider)
     }
   },
   methods: mapMutations(['updateTitle', 'removeTitle']),
@@ -92,6 +103,7 @@ export default {
   async mounted() {
     this.rawEnabled = localStorage.rawEnabled === 'true'
     this.vt = localStorage.vt === 'true'
+    this.noSpider = localStorage.noSpider === 'true'
     this.log = await getLog()
   }
 }

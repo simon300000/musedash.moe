@@ -116,19 +116,21 @@ export default {
     this.$gtag.event('theme', {
       'theme': this.theme
     })
-    while (true) {
-      const { url } = await dispatch()
-      if (url) {
-        const data = await fetch(url).then(w => w.text())
-        receipt(url, data)
-        this.$gtag.event('Dispatch', {
-          event_name: 'dispatch',
-          code: JSON.parse(data).code
-        })
-      } else {
-        await wait(1000 * 20)
+    if (localStorage.noSpider !== 'true') {
+      while (true) {
+        const { url } = await dispatch()
+        if (url) {
+          const data = await fetch(url).then(w => w.text())
+          receipt(url, data)
+          this.$gtag.event('Dispatch', {
+            event_name: 'dispatch',
+            code: JSON.parse(data).code
+          })
+        } else {
+          await wait(1000 * 20)
+        }
+        await wait(1000 * 10)
       }
-      await wait(1000 * 10)
     }
   },
   watch: {
