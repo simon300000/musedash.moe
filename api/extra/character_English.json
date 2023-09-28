@@ -71,10 +71,10 @@
     "characterName": "Rin",
     "cosName": "Bad Girl",
     "description": "You might kick the bucket under my stick! ~",
-    "skill": "Bad Girl Rin can turn  \"Great\" into \"Perfect\" judgements for 5 times (doesn't work for Sheets [hold note] and Mash Enemies)!",
+    "skill": "Bad Girl Rin can turn  \"Great\" into \"Perfect\" judgements for 5 times \n(doesn't work for Sheets [hold note] and Mash Enemies)!",
     "skills": [
-      "Bad Girl Rin can turn  \"Great\" into \"Perfect\" judgements for 5 times (doesn't work for Sheets [hold note] and Mash Enemies)!",
-      "Bad Girl Rin Nya can turn \"Great\" nya into \"Perfect\" nya judgements for 5 times,  (doesn't work for Sheets [Hold Note] and Mash Enemies nya)!"
+      "Bad Girl Rin can turn  \"Great\" into \"Perfect\" judgements for 5 times \n(doesn't work for Sheets [hold note] and Mash Enemies)!",
+      "Bad Girl Rin Nya can turn \"Great\" nya into \"Perfect\" nya judgements for 5 times,  \n(doesn't work for Sheets [Hold Note] and Mash Enemies nya)!"
     ],
     "chipName": "Baseball",
     "chipDescription": "If this baseball is yours, I won't return it.",
@@ -139,10 +139,10 @@
     "characterName": "Rin",
     "cosName": "Sleepwalker Girl",
     "description": "Um? Did I just sleepwalk again?... Huhooo...",
-    "skill": "Sleepwalker Girl Rin will fight automatically in all stages and not be controlled by the player. Scores will not be recorded.",
+    "skill": "Sleepwalker Girl Rin will fight automatically in all stages and not be controlled by the player. \nScores will not be recorded.",
     "skills": [
-      "Sleepwalker Girl Rin will fight automatically in all stages and not be controlled by the player. Scores will not be recorded.",
-      "Sleepwalker Girl Rin Nya will fight automatically in all nya stages and not be controlled by the player nya! Scores will not be recorded nya!"
+      "Sleepwalker Girl Rin will fight automatically in all stages and not be controlled by the player. \nScores will not be recorded.",
+      "Sleepwalker Girl Rin Nya will fight automatically in all nya stages and not be controlled by the player nya! \nScores will not be recorded nya!"
     ],
     "chipName": "White Pillow",
     "chipDescription": "It feels so soft, just like a lass' chest~~~~whir~whir",
@@ -207,10 +207,10 @@
     "characterName": "Rin",
     "cosName": "Bunny Girl",
     "description": "You really like my current look? (Facepalm)",
-    "skill": "Bunny Girl Rin can get 200% more score when collecting Red Hearts (at maximum HP) and Notes, knocking back Ghosts and dodging barriers.",
+    "skill": "Bunny Girl Rin can get 200% more score when collecting Red Hearts (at maximum HP) and Notes, \nknocking back Ghosts and dodging barriers.",
     "skills": [
-      "Bunny Girl Rin can get 200% more score when collecting Red Hearts (at maximum HP) and Notes, knocking back Ghosts and dodging barriers.",
-      "Bunny Girl Rin Nya can get 200% more score when collecting nya Red Hearts (at maximum nya HP) and nya Notes, knocking back nya Ghosts and dodging nya barries!"
+      "Bunny Girl Rin can get 200% more score when collecting Red Hearts (at maximum HP) and Notes, \nknocking back Ghosts and dodging barriers.",
+      "Bunny Girl Rin Nya can get 200% more score when collecting nya Red Hearts (at maximum nya HP) and nya Notes, \nknocking back nya Ghosts and dodging nya barries!"
     ],
     "chipName": "Black Bow Tie",
     "chipDescription": "Is it worn in front or on the back?",
@@ -615,10 +615,10 @@
     "characterName": "Marija",
     "cosName": "Maid",
     "description": "Master, do you want other services?",
-    "skill": "Maid Marija will gain 150% more HP and be invincible for 2 seconds upon collecting a Red Heart when HP is lower than 100.",
+    "skill": "Maid Marija will gain 150% more HP and be invincible for 2 seconds upon collecting a Red Heart \nwhen HP is lower than 100.",
     "skills": [
-      "Maid Marija will gain 150% more HP and be invincible for 2 seconds upon first collecting a Red Heart when HP is lower than 100.",
-      "Maid Marija Nya will gain 150% more HP and be invincible for 2 seconds upon first collecting a nya Red Heart when nya HP is lower than 100 nya!"
+      "Maid Marija will gain 150% more HP and be invincible for 2 seconds upon first collecting a Red Heart \nwhen HP is lower than 100.",
+      "Maid Marija Nya will gain 150% more HP and be invincible for 2 seconds upon first collecting a nya Red Heart \nwhen nya HP is lower than 100 nya!"
     ],
     "chipName": "Salted Fish",
     "chipDescription": "Master, should I believe in you?(ºOº)",
@@ -751,10 +751,10 @@
     "characterName": "Marija",
     "cosName": "Little Devil",
     "description": "Hmm, the taste of souls is so addictive~",
-    "skill": "Little Devil Marija will get 25% more score when knocking back enemies at the expense of losing 10 HP per second.",
+    "skill": "Little Devil Marija will get 25% more score \nwhen knocking back enemies at the expense of losing 10 HP per second.",
     "skills": [
-      "Little Devil Marija will get 25% more score when knocking back enemies at the expense of losing 10 HP per second.",
-      "Little Devil Marija Nya will get 25% more nya score when knocking back nya enemies at the expense of losing 10 nya HP per second nya!"
+      "Little Devil Marija will get 25% more score \nwhen knocking back enemies at the expense of losing 10 HP per second.",
+      "Little Devil Marija Nya will get 25% more nya score \nwhen knocking back nya enemies at the expense of losing 10 nya HP per second nya!"
     ],
     "chipName": "Dry Eyeball",
     "chipDescription": "Something left by a man who broke his oath",
@@ -1179,7 +1179,7 @@
     "characterName": "Hakurei Reimu",
     "cosName": "Red-white Miko",
     "description": "Red-white Miko",
-    "skill": "Reimu can keep hovering in the air without automatically landing, and shrunk the hitbox of obstacles (gears) , making it easier to dodge.",
+    "skill": "Reimu can keep hovering in the air without automatically landing, \nand shrunk the hitbox of obstacles (gears) , making it easier to dodge.",
     "skills": null,
     "chipName": "Yin-Yang Orb",
     "chipDescription": "A heavy and hard orb. It is in fact the key to Gensokyo.",
@@ -1242,7 +1242,7 @@
     "characterName": "El_Clear",
     "cosName": "Rebirth Girl",
     "description": "Rebirth Girl",
-    "skill": "Clear can automatically catch all the missed Blue Notes, Red Hearts, ghosts, and enemies with Heart. The automatically caught ghosts and enemies with Heart is \"Perfect\" judgment.",
+    "skill": "Clear can automatically catch all the missed Blue Notes, Red Hearts, ghosts, and enemies with Heart.\nThe automatically caught ghosts and enemies with Heart is \"Perfect\" judgment.",
     "skills": null,
     "chipName": "Crown",
     "chipDescription": "The crown which brings Clear falling to the ground, absolutely who hit by it will shout Ouch.",
@@ -1313,7 +1313,7 @@
     "characterName": "Marija",
     "cosName": "Sister",
     "description": "Sister",
-    "skill": "Sister Marija will swap the locations of enemies in the sky and on the ground. Specifically, raiders, hanging hammers, and ordinary obstacles (gears) will be rolled over.",
+    "skill": "Sister Marija will swap the locations of enemies in the sky and on the ground. \nSpecifically, raiders, hanging hammers, and ordinary obstacles (gears) will be rolled over.",
     "skills": null,
     "chipName": "Star Pendant",
     "chipDescription": "She finds the star shape more adorable for it’s a symbol of her belief.",
@@ -1339,7 +1339,7 @@
     "characterName": "Kirisame Marisa",
     "cosName": "Black-white Magician",
     "description": "Black-white Magician",
-    "skill": "Marisa can keep hovering in the air without automatically landing. She gains a 200% score bonus when catching Blue Notes or Red Hearts in full health.",
+    "skill": "Marisa can keep hovering in the air without automatically landing. \nShe gains a 200% score bonus when catching Blue Notes or Red Hearts in full health.",
     "skills": null,
     "chipName": "Mini-Hakkero",
     "chipDescription": "A mighty self-made magical item that can shoot lasers when stuffed with mushrooms - use it to blast your way to Gensokyo!",
@@ -1365,7 +1365,7 @@
     "characterName": "Amiya",
     "cosName": "Leader of Rhodes Island",
     "description": "Leader of Rhodes Island",
-    "skill": "Amiya earns more Fever Energy by repelling enemies. When Fever Mode is active, she will convert \"Miss\" into \"Great\", \nand \"Great\" into \"Perfect\".However, Amiya will not earn any Fever Energy for 3 seconds after Fever Mode ends.",
+    "skill": "Amiya earns more Fever Energy by repelling enemies. \nWhen Fever Mode is active, she will convert \"Miss\" into \"Great\", and \"Great\" into \"Perfect\".\nHowever, Amiya will not earn any Fever Energy for 3 seconds after Fever Mode ends.",
     "skills": null,
     "chipName": "Ring",
     "chipDescription": "One of Amiya's ten rings. Not sure which finger it's for, but it definitely won't fit you, Doctor.",
@@ -1391,7 +1391,7 @@
     "characterName": "Ola",
     "cosName": "Boxer",
     "description": "Boxer",
-    "skill": "Ola will not get hurt when bursting into Fever.But in exchange for the temporary command, he can only use Sis's skill? His rebellion is totally frustrated!",
+    "skill": "Ola will not get hurt when bursting into Fever.\nBut in exchange for the temporary command, he can only use Sis's skill? His rebellion is totally frustrated!",
     "skills": null,
     "chipName": "Champion Belt",
     "chipDescription": "A mountain of champion belts at home? How about we take them to Sis and transform them into henshin device?!",
@@ -1435,6 +1435,32 @@
     [ "How about sealing... your head filled with evil thoughts?",
       "When you have sleep paralysis, just imagine it's Buro sitting on you... Please hang in there a little longer!"],
     [ "Sleeping with the pillow consecrated by me can bring you a good fortune... How about that? Wanna buy it?"]
+    ],
+    "reviewExpressions": null,
+    "catExpressions": null
+  },
+  {
+    "characterName": "Hatsune Miku",
+    "cosName": "Virtual Singer",
+    "description": "Virtual Singer",
+    "skill": "Enemies and Sheets (hold note) can be hit regardless of the upper and lower tracks. \nBut this doesn't work on the Blue Notes, Red Hearts, and barriers.",
+    "skills": null,
+    "chipName": "Microphone",
+    "chipDescription": "It has the power to convey the singing to the whole universe, but there's also a possibility that it will be thrown to the audience as a bunch of leeks?",
+    "cv": "Saki Fujita",
+    "expressions": [
+      [ "Be it a 2- or 24-hour concert, \njust leave it to me!",
+        "This new suit looks so cute, \ndoesn't it? Look at this Muse-bag... \nIt tells me what the next song is!"],
+      [ "I'll take part in Buro's Gourmet \nand Music Festival as a representative of Team Leek\n—there's no such team?!"],
+      [ "I'm so glad to hear that \nmy live performance stopped troublemaking monsters from fighting~",
+        "I can feel your passion \nfor music while watching you challenge the stage again and again... \nI have the same feelings as you!",
+        "Here I encountered you, \nfound new songs, and made new friends... \nI have gained so much!"],
+      [ "I just forgot what I wanted to say after I opened my mouth.\n Maybe I can remember it after a meal. \nOkay, let's eat something—",
+        "During my live performance, \na flying cat threw me a fish. \nIs that a gift for me?",
+        "A ghost came to me for a photo. \nIt looked so happy despite the fact that \nthere's only me in it..."],
+      [ "Let me convey the words in your heart by singing...",
+        "Luka-san is so attractive on stage. \nWhen I met her eyes, \nher wink almost made me forget the lyrics...",
+        "Let me perform your favorite song! Why?\n Because I want to know more about... you."]
     ],
     "reviewExpressions": null,
     "catExpressions": null

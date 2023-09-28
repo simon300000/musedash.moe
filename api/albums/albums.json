@@ -21,7 +21,7 @@
   },
   {
       "uid": "music_package_43",
-      "title": "计划通补完计划",
+      "title": "MD 补完计划",
       "tag": "PlannedPlus",
       "needPurchase": true,
       "price": "¥25.00",
@@ -30,22 +30,37 @@
       "free": false
   },
   {
+      "uid": "music_package_66",
+      "title": "Miku in Museland",
+      "tag": "Other",
+      "needPurchase": true,
+      "price": "¥60.00",
+      "jsonName": "ALBUM67",
+      "prefabsName": "AlbumDisco67",
+      "free": false,
+      "pay_ids": [
+        "music_package_66",
+        "music_package_66_50",
+        "music_package_66_80",
+        "music_package_66_70"
+      ]
+  },
+  {
       "uid": "music_package_65",
-      "title": "霓虹深渊 Neon Abyss",
+      "title": "霓虹深渊 NeonAbyss",
       "tag": "Other",
       "needPurchase": true,
       "price": "¥18.00",
       "jsonName": "ALBUM66",
       "prefabsName": "AlbumDisco66",
-      "free": false,
-      "lastActiveTime": "2026-08-17T15:00:00Z"
+      "free": false
   },
   {
     "uid": "music_package_64",
     "title": "宇宙电台PEROLIST",
     "tag": "Theme",
     "needPurchase": true,
-    "price": "¥30.00",
+    "price": "¥25.00",
     "jsonName": "ALBUM65",
     "prefabsName": "AlbumDisco65",
     "free": false
@@ -89,7 +104,6 @@
     "jsonName": "ALBUM61",
     "prefabsName": "AlbumDisco61",
     "free": false,
-    "lastActiveTime": "2026-01-31T15:00:00Z"
   },
   {
       "uid": "music_package_59",
