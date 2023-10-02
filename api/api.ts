@@ -17,6 +17,8 @@ import { search as searchF } from './common.js'
 import { joinJob } from './spider.js'
 import { dispatch, dispatch256, receipt } from './dispatcher.js'
 
+import { router as mdmc, logEmitter } from './mdmc.js'
+
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 const PLAYER_NOT_FOUND: PlayerValue = { plays: [{ uid: '35-0', history: { lastRank: NaN }, difficulty: 0, score: NaN, acc: NaN, i: NaN, sum: NaN, platform: '?', character_uid: '2', elfin_uid: '' }], key: '', user: { user_id: '404', nickname: 'User not Found' } }
@@ -26,7 +28,7 @@ const cache = new LRU({
   max: 100
 })
 
-export const app = new Koa()
+const app = new Koa()
 
 app.use(async (ctx, next) => {
   const origin = ctx.get('Origin')
@@ -77,6 +79,9 @@ export const error = (s: string) => {
   console.error(s)
   logInsert(s)
 }
+
+logEmitter.on('rawLog', log)
+logEmitter.on('rawError', error)
 
 const parseAlbums = (a: Albums) => Object.fromEntries(a.map(album => [album.json, { ...album, music: Object.fromEntries(album.music.map(music => [music.uid, music])) }]))
 
@@ -213,5 +218,7 @@ router.post('/receipt', koaBody(), ctx => {
 })
 
 app.use(router.routes())
+
+app.use(mdmc.routes())
 
 app.listen(8301)
