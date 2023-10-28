@@ -71,6 +71,12 @@
 	},
 	{
 		"name": "Neon Egg",
+		"skins": 
+		[
+			{ "skinName": "R-6" },
+			{ "skinName": "サヤ" },
+			{ "skinName": "リン" }
+		],
 		"description": "",
 		"skill": "初めて Fever 状態に入ると Neon Egg がランダムに Neon Abyss コラボキャラを孵化する：R-6はキャラの受けたダメージを半減することができる。サヤは「Perfect」判定が出るとき5%ボーナススコアを与える。リンは楽譜（長押し）をする期間中に、「Miss」を「Great」判定に変更することが出来る。だが、楽譜（長押し）や連打敵（ボス）に効果がない。",
 		"chipName": "未孵化のエッグ",

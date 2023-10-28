@@ -844,6 +844,26 @@
 	    "callBackDifficulty2": "9",
 	    "callBackDifficulty3": "11",
 	    "unlockLevel": "0"
+    },
+    {
+	    "uid": "43-41",
+	    "name": "NICE TYPE feat. monii",
+	    "author": "KIRA",
+	    "bpm": "132",
+	    "music": "nice_type_music",
+	    "demo": "nice_type_demo",
+	    "cover": "nice_type_cover",
+	    "hexieCover": "",
+	    "noteJson": "nice_type_map",
+	    "scene": "scene_02",
+	    "levelDesigner": "money钱",
+	    "difficulty1": "3",
+	    "difficulty2": "6",
+	    "difficulty3": "8",
+	    "callBackDifficulty1": "3",
+	    "callBackDifficulty2": "6",
+	    "callBackDifficulty3": "8",
+	    "unlockLevel": "0"
     }
 
 ]

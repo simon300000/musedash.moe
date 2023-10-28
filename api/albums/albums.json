@@ -30,6 +30,16 @@
       "free": false
   },
   {
+      "uid": "music_package_67",
+      "title": "Happy Otaku Pack Vol.18",
+      "tag": "Happy",
+      "needPurchase": true,
+      "price": "¥25.00",
+      "jsonName": "ALBUM68",
+      "prefabsName": "AlbumDisco68",
+      "free": false
+  },
+  {
       "uid": "music_package_66",
       "title": "Miku in Museland",
       "tag": "Other",
@@ -104,6 +114,7 @@
     "jsonName": "ALBUM61",
     "prefabsName": "AlbumDisco61",
     "free": false,
+    "lastActiveTime": "2026-01-31T15:00:00Z"
   },
   {
       "uid": "music_package_59",
