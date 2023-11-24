@@ -30,6 +30,16 @@
       "free": false
   },
   {
+      "uid": "music_package_68",
+      "title": "形影博弈",
+      "tag": "Theme",
+      "needPurchase": true,
+      "price": "¥25.00",
+      "jsonName": "ALBUM69",
+      "prefabsName": "AlbumDisco69",
+      "free": false
+  },
+  {
       "uid": "music_package_67",
       "title": "Happy Otaku Pack Vol.18",
       "tag": "Happy",
