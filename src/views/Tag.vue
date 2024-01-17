@@ -37,7 +37,11 @@ export default {
     ...mapState(['fullAlbums', 'lang', 'tag']),
     ...mapGetters(['tagMap']),
     currentTag() {
-      return this.tagMap[this.name]
+      const tags = this.tagMap[this.name]
+      if (!tags) {
+        return []
+      }
+      return tags.filter(({ json }) => json in this.fullAlbums)
     },
     tagNames() {
       return Object.fromEntries(this.tag.map(({ name, displayName }) => [name, displayName[this.lang]]))
