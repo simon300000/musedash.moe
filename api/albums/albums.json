@@ -30,6 +30,23 @@
       "free": false
   },
   {
+  	  "uid": "music_package_70",
+  	  "title": "Rin·Len's Mirrorland",
+  	  "tag": "Other",
+  	  "needPurchase": true,
+  	  "price": "¥60.00",
+  	  "jsonName": "ALBUM71",
+  	  "prefabsName": "AlbumDisco71",
+      "free": false,
+      "pay_ids": [
+	      "music_package_70",
+	      "music_package_70_50",
+	      "music_package_70_70",
+	      "music_package_70_80",
+	      "music_package_70_100"
+      ]
+  },
+  {
       "uid": "music_package_69",
       "title": "东方暮乐团 -叁-",
       "tag": "Other",

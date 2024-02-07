@@ -65,7 +65,8 @@
       [
         "Meow? Meow?"
       ]
-    ]
+    ],
+    "listIndex": 0
   },
   {
     "characterName": "Rin",
@@ -133,7 +134,8 @@
       [
         "Meow? Meow?"
       ]
-    ]
+    ],
+    "listIndex": 0
   },
   {
     "characterName": "Rin",
@@ -201,7 +203,8 @@
       [
         "Meow? Meow?"
       ]
-    ]
+    ],
+    "listIndex": 0
   },
   {
     "characterName": "Rin",
@@ -269,7 +272,8 @@
       [
         "Meow? Meow?"
       ]
-    ]
+    ],
+    "listIndex": 0
   },
   {
     "characterName": "Buro",
@@ -337,7 +341,8 @@
       [
         "Meoooow~"
       ]
-    ]
+    ],
+    "listIndex": 0
   },
   {
     "characterName": "Buro",
@@ -405,7 +410,8 @@
       [
         "Meoooow~"
       ]
-    ]
+    ],
+    "listIndex": 0
   },
   {
     "characterName": "Buro",
@@ -473,7 +479,8 @@
       [
         "Meoooow~"
       ]
-    ]
+    ],
+    "listIndex": 0
   },
   {
     "characterName": "Buro",
@@ -541,7 +548,8 @@
       [
         "Meoooow~"
       ]
-    ]
+    ],
+    "listIndex": 0
   },
   {
     "characterName": "Marija",
@@ -609,7 +617,8 @@
       [
         "Meow?"
       ]
-    ]
+    ],
+    "listIndex": 0
   },
   {
     "characterName": "Marija",
@@ -677,7 +686,8 @@
       [
         "Meow?"
       ]
-    ]
+    ],
+    "listIndex": 0
   },
   {
     "characterName": "Marija",
@@ -745,7 +755,8 @@
       [
         "Meow?"
       ]
-    ]
+    ],
+    "listIndex": 0
   },
   {
     "characterName": "Marija",
@@ -813,7 +824,8 @@
       [
         "Meow?"
       ]
-    ]
+    ],
+    "listIndex": 0
   },
   {
     "characterName": "Marija",
@@ -881,7 +893,8 @@
       [
         "Meow?"
       ]
-    ]
+    ],
+    "listIndex": 0
   },
   {
     "characterName": "Rin",
@@ -949,7 +962,8 @@
       [
         "Meow? Meow?"
       ]
-    ]
+    ],
+    "listIndex": 0
   },
   {
     "characterName": "Buro",
@@ -1004,7 +1018,8 @@
         "Since you are here. I can' share my earphone but...I can share my coffee"
       ]
     ],
-    "catExpressions": null
+    "catExpressions": null,
+    "listIndex": 0
   },
   {
     "characterName": "Yume",
@@ -1059,7 +1074,8 @@
         "I will be very happy if you choose me... it, it's about being your navigator!"
       ]
     ],
-    "catExpressions": null
+    "catExpressions": null,
+    "listIndex": 0
   },
   {
     "characterName": "NEKO#ΦωΦ",
@@ -1114,7 +1130,8 @@
         "Oh~ The blush on NEKO means nothing, stop guessing! Haha... Ahhahaha..."
       ]
     ],
-    "catExpressions": null
+    "catExpressions": null,
+    "listIndex": 0
   },
   {
     "characterName": "Rin",
@@ -1173,7 +1190,8 @@
         ":( Your character has encountered an voicing issue.\nError Code: peroperoispoor\nPlease try buying the [Just As Planned] DLC pass to support the devs."
       ]
     ],
-    "catExpressions": null
+    "catExpressions": null,
+    "listIndex": 0
   },
   {
     "characterName": "Hakurei Reimu",
@@ -1236,7 +1254,8 @@
         "Want an S? That will cost you 100,000 yen. No? Then what?"
       ]
     ],
-    "catExpressions": null
+    "catExpressions": null,
+    "listIndex": 0
   },
   {
     "characterName": "El_Clear",
@@ -1307,7 +1326,8 @@
         "Ahhhh, geez! To prevent you from poking me and thus losing the game, keep three meters away from now on!"
       ]
     ],
-    "catExpressions": null
+    "catExpressions": null,
+    "listIndex": 0
   },
   {
     "characterName": "Marija",
@@ -1319,21 +1339,38 @@
     "chipDescription": "She finds the star shape more adorable for it’s a symbol of her belief.",
     "cv": "Yoshika Akashi",
     "expressions": [
-      [ "A good sense of smell, careful planning, and swift handling—those are what I've learned at the Church.",
+      [
+        "A good sense of smell, careful planning, and swift handling—those are what I've learned at the Church.",
         "Can enemies be defeated by prayers only? Of course not. So let's get started, while God is still in slumber.",
-        "You need not fear me. Only bad people are my target... Huh, are you here to confess?"],
-      [ "Enemies? It-It is they that targeted me first. I just... beat them too hard..."],
-      [ "If you are really a kind-hearted person, you should support me, as long as the result is correct, no...?"],
-      [ "Even if you are against my approach, we are already accomplices... So what do you think should be done to traitors..."],
-      [ "Unlike my devil who has a gentle soul, my angel is a naughty kid... Well, keep it a secret to the Church.",
-        "Wanna make a confession? Just tell me about it. I'm efficient~"],
-      [ "Familiars, who have lived several hundreds of years, can even argue about either the bunny girl suit or the sailor suit is cuter for a whole day. Oh, this is really..."],
-      [ "Behave yourself... This is not any doctrine, but something that even a child can understand...",
-        "Calm down, calm down, Marija... Don't submit to profane temptations. Come recite prayers. That's right, that's what you should do..."],
-      [ "What a sinful person... you are. I really look forward to the day when you are punished by myself..."]
+        "You need not fear me. Only bad people are my target... Huh, are you here to confess?"
+      ],
+      [
+        "Enemies? It-It is they that targeted me first. I just... beat them too hard..."
+      ],
+      [
+        "If you are really a kind-hearted person, you should support me, as long as the result is correct, no...?"
+      ],
+      [
+        "Even if you are against my approach, we are already accomplices... So what do you think should be done to traitors..."
+      ],
+      [
+        "Unlike my devil who has a gentle soul, my angel is a naughty kid... Well, keep it a secret to the Church.",
+        "Wanna make a confession? Just tell me about it. I'm efficient~"
+      ],
+      [
+        "Familiars, who have lived several hundreds of years, can even argue about either the bunny girl suit or the sailor suit is cuter for a whole day. Oh, this is really..."
+      ],
+      [
+        "Behave yourself... This is not any doctrine, but something that even a child can understand...",
+        "Calm down, calm down, Marija... Don't submit to profane temptations. Come recite prayers. That's right, that's what you should do..."
+      ],
+      [
+        "What a sinful person... you are. I really look forward to the day when you are punished by myself..."
+      ]
     ],
     "reviewExpressions": null,
-    "catExpressions": null
+    "catExpressions": null,
+    "listIndex": 0
   },
   {
     "characterName": "Kirisame Marisa",
@@ -1345,21 +1382,32 @@
     "chipDescription": "A mighty self-made magical item that can shoot lasers when stuffed with mushrooms - use it to blast your way to Gensokyo!",
     "cv": "Machico",
     "expressions": [
-      [ "I am the Great Magician—Kirisame Marisa! … Huh? You didn’t think it was me?"],
-      [ "Not like someone, if your request brings me fun, I won't charge you ~ ☆",
-        "Treating every enemy with care is not my style. Let me teach you how to use Master Spark ~ ☆"],
-      [ "It's Marija's book, I borrowed it! ...Taking a book can't be considered stealing!",
+      [
+        "I am the Great Magician—Kirisame Marisa! … Huh? You didn’t think it was me?"
+      ],
+      [
+        "Not like someone, if your request brings me fun, I won't charge you ~ ☆",
+        "Treating every enemy with care is not my style. Let me teach you how to use Master Spark ~ ☆"
+      ],
+      [
+        "It's Marija's book, I borrowed it! ...Taking a book can't be considered stealing!",
         "The mushroom world is really complicated! It took me a night to do a little research! So—please don't look at me as if I were an overachiever.",
-        "My luck today is… future blessing?! Future blessing again? Isn't it  \"Almost Misfortune \"!!"],
-      [ "Ah~ There are too many notes in some stages. Now, I understand how they feel when they see my danmaku…",
+        "My luck today is… future blessing?! Future blessing again? Isn't it  \"Almost Misfortune \"!!"
+      ],
+      [
+        "Ah~ There are too many notes in some stages. Now, I understand how they feel when they see my danmaku…",
         "Don't give me that\"please do Love Sign Master Spark again\"look! I'm not a busking magician!",
-        "I was called by a dangerous-looking girl in black to dust her car… Do I look like a maid?"],
-      [ "What are you staring at?! Ah… How do you know there are bombs under my dress?",
+        "I was called by a dangerous-looking girl in black to dust her car… Do I look like a maid?"
+      ],
+      [
+        "What are you staring at?! Ah… How do you know there are bombs under my dress?",
         "You can't eat that mushroom! It is… the magic mushroom, which can increase intimacy between you and who you love… I don't know the details! I didn't eat it!!",
-        "Stop—I handed over everything I stole... I took!If you dare do something that crosses the line, I'll call Reimu to sort you out!"]
+        "Stop—I handed over everything I stole... I took!If you dare do something that crosses the line, I'll call Reimu to sort you out!"
+      ]
     ],
     "reviewExpressions": null,
-    "catExpressions": null
+    "catExpressions": null,
+    "listIndex": 0
   },
   {
     "characterName": "Amiya",
@@ -1371,21 +1419,34 @@
     "chipDescription": "One of Amiya's ten rings. Not sure which finger it's for, but it definitely won't fit you, Doctor.",
     "cv": "Tomoyo Kurosawa",
     "expressions": [
-      [ "The very thought of performing before you is making me a little nervous, Doctor... but I'll do my best!",
-        "Running with music makes it easier. I must share this discovery with Miss Dobermann. It'll be great if she uses this in training!"],
-      [ "There are still many stages to challenge, Doctor... but make sure you get some rest, okay?"],
-      [ "Do the enemies feel pain if I knock them back with my Originium Arts? What? They enjoy this...? Alright then.",
+      [
+        "The very thought of performing before you is making me a little nervous, Doctor... but I'll do my best!",
+        "Running with music makes it easier. I must share this discovery with Miss Dobermann. It'll be great if she uses this in training!"
+      ],
+      [
+        "There are still many stages to challenge, Doctor... but make sure you get some rest, okay?"
+      ],
+      [
+        "Do the enemies feel pain if I knock them back with my Originium Arts? What? They enjoy this...? Alright then.",
         "Perhaps you can try mashing the buttons to get through the enemy mob. Don't give up now, Doctor.",
-        "Swing that violin like a weapon? If I must..."],
-      [ "Strategy matters, even in rhythm games. Let's have a mission briefing, Doctor.",
-        "I just plucked up my courage to ask Miss Marija for some violin tips, but she just picked me up and spun me around and around... Was that a yes or no?"],
-      [ "Please predict the charts based on our intel about the boss, Doctor! What? You can't? I'm sorry."],
-      [ "My violin skills have improved? Thank you, Doctor... you're also getting better at the game.",
+        "Swing that violin like a weapon? If I must..."
+      ],
+      [
+        "Strategy matters, even in rhythm games. Let's have a mission briefing, Doctor.",
+        "I just plucked up my courage to ask Miss Marija for some violin tips, but she just picked me up and spun me around and around... Was that a yes or no?"
+      ],
+      [
+        "Please predict the charts based on our intel about the boss, Doctor! What? You can't? I'm sorry."
+      ],
+      [
+        "My violin skills have improved? Thank you, Doctor... you're also getting better at the game.",
         "I'm so happy to hear people around us say how reliable you are, Doctor. But does that mean you're secretly doing overtime? I thought you told me you were getting some rest...",
-        "Me? No, I'm not nervous... but getting stage fright is pretty normal, Doctor. Do let me know if you're nervous as well."]
+        "Me? No, I'm not nervous... but getting stage fright is pretty normal, Doctor. Do let me know if you're nervous as well."
+      ]
     ],
     "reviewExpressions": null,
-    "catExpressions": null
+    "catExpressions": null,
+    "listIndex": 0
   },
   {
     "characterName": "Ola",
@@ -1397,21 +1458,32 @@
     "chipDescription": "A mountain of champion belts at home? How about we take them to Sis and transform them into henshin device?!",
     "cv": "Mariya Ise",
     "expressions": [
-      [ "I just found out I only have Sis's skill... Um, maybe it's okay. She is powerful after all...",
+      [
+        "I just found out I only have Sis's skill... Um, maybe it's okay. She is powerful after all...",
         "Ahhhhh, I'm so nervous. Think back to what Sis once told me: \"Run away from the fight you can't win.\"Run away from the fight I can't win. Run away from the fight I can't win...",
-        "Wow, I'm really weak in human form. I have a bad feeling that I'm gonna make a fool of myself... Oh, no..."],
-      [ "Gloves, check. Headgear, check. Henshin device, check. Skill, check. Good! I'm invincible today!!",
+        "Wow, I'm really weak in human form. I have a bad feeling that I'm gonna make a fool of myself... Oh, no..."
+      ],
+      [
+        "Gloves, check. Headgear, check. Henshin device, check. Skill, check. Good! I'm invincible today!!",
         "Ola ola ola ola ola! My endless punches can defeat any enemy!!",
-        "This is my trump card, Bear Punch! If that's not enough, Bear Punch Plus! Still not enough? Bear Punch Ultimate!"],
-      [ "Stamina—As long as I have it, I can take care of all my enemies! You should get more exercise like me, partner!",
-        "Bear, sanjou! How about that? I'm a copycat? It’s not that obvious!"],
-      [ "Sis is in that bear in pink braces? It can't be! Wait a minute, let me look again...?"],
-      [ "Feel lonely because sisters are not here? Me, too. But I can play with you like sisters did... Maybe?",
+        "This is my trump card, Bear Punch! If that's not enough, Bear Punch Plus! Still not enough? Bear Punch Ultimate!"
+      ],
+      [
+        "Stamina—As long as I have it, I can take care of all my enemies! You should get more exercise like me, partner!",
+        "Bear, sanjou! How about that? I'm a copycat? It’s not that obvious!"
+      ],
+      [
+        "Sis is in that bear in pink braces? It can't be! Wait a minute, let me look again...?"
+      ],
+      [
+        "Feel lonely because sisters are not here? Me, too. But I can play with you like sisters did... Maybe?",
         "I used to feel your gaze when I was in bear form...",
-        "But now I don't have the soft, furry tummy. So... that means... you have nothing to feel, do you?"]
+        "But now I don't have the soft, furry tummy. So... that means... you have nothing to feel, do you?"
+      ]
     ],
     "reviewExpressions": null,
-    "catExpressions": null
+    "catExpressions": null,
+    "listIndex": 0
   },
   {
     "characterName": "Buro",
@@ -1423,46 +1495,107 @@
     "chipDescription": "The switch to turn on the streamer's serious mode, \nwith cracks indicating the end of it.",
     "cv": "Mao Amatsuka",
     "expressions": [
-    [ "No matter it's the Eastern monster or the Western demon, there's nothing I can't exorcise. Alas, it's getting harder to scrape a living~",
-      "Tit for tat is fair game! If you invite something like a zombie or demon, don't count on me to rescue you~",
-      "Distressed everyday, how unlucky you are. But that's why you are a perfect match for someone like me, a 24/7 genius Exorcist Master~"],
-    [ "Ola, you might notice it too—this place must be haunted by an evil spirit!",
-      "That suspicious sister does business but collects no money. I smelled something fishy! Let me check her out!"],
-    [ "I saw you surrounded by darkness. This must be... Er, sorry, I forgot to take off the sunglasses!"],
-    [ "Is the streamer blind—this is my important prop to show... exorcise the demons!! I'll kill you!!",
-      "Snacks were gone? Figures were broken? I said it a thousand times! Spoiled brats are not ghosts! Fix it yourself!",
-      "Something is moving behind the streamer? Please raise your head and take a good look at the stream title? You can't even fool the ghosts!"],
-    [ "How about sealing... your head filled with evil thoughts?",
-      "When you have sleep paralysis, just imagine it's Buro sitting on you... Please hang in there a little longer!"],
-    [ "Sleeping with the pillow consecrated by me can bring you a good fortune... How about that? Wanna buy it?"]
+      [
+        "No matter it's the Eastern monster or the Western demon, there's nothing I can't exorcise. Alas, it's getting harder to scrape a living~",
+        "Tit for tat is fair game! If you invite something like a zombie or demon, don't count on me to rescue you~",
+        "Distressed everyday, how unlucky you are. But that's why you are a perfect match for someone like me, a 24/7 genius Exorcist Master~"
+      ],
+      [
+        "Ola, you might notice it too—this place must be haunted by an evil spirit!",
+        "That suspicious sister does business but collects no money. I smelled something fishy! Let me check her out!"
+      ],
+      [
+        "I saw you surrounded by darkness. This must be... Er, sorry, I forgot to take off the sunglasses!"
+      ],
+      [
+        "Is the streamer blind—this is my important prop to show... exorcise the demons!! I'll kill you!!",
+        "Snacks were gone? Figures were broken? I said it a thousand times! Spoiled brats are not ghosts! Fix it yourself!",
+        "Something is moving behind the streamer? Please raise your head and take a good look at the stream title? You can't even fool the ghosts!"
+      ],
+      [
+        "How about sealing... your head filled with evil thoughts?",
+        "When you have sleep paralysis, just imagine it's Buro sitting on you... Please hang in there a little longer!"
+      ],
+      [
+        "Sleeping with the pillow consecrated by me can bring you a good fortune... How about that? Wanna buy it?"
+      ]
     ],
     "reviewExpressions": null,
-    "catExpressions": null
+    "catExpressions": null,
+    "listIndex": 0
   },
   {
     "characterName": "Hatsune Miku",
     "cosName": "Virtual Singer",
     "description": "Virtual Singer",
-    "skill": "Enemies and Sheets (hold note) can be hit regardless of the upper and lower tracks. \nBut this doesn't work on the Blue Notes, Red Hearts, and barriers.",
+    "skill": "Hatsune Miku can hit enemies and Sheets(hold note) regardless of the upper and lower tracks. \nBut this skill doesn't work on the Blue Notes, Red Hearts, and barriers.",
     "skills": null,
     "chipName": "Microphone",
     "chipDescription": "It has the power to convey the singing to the whole universe, but there's also a possibility that it will be thrown to the audience as a bunch of leeks?",
     "cv": "Saki Fujita",
     "expressions": [
-      [ "Be it a 2- or 24-hour concert, \njust leave it to me!",
-        "This new suit looks so cute, \ndoesn't it? Look at this Muse-bag... \nIt tells me what the next song is!"],
-      [ "I'll take part in Buro's Gourmet \nand Music Festival as a representative of Team Leek\n—there's no such team?!"],
-      [ "I'm so glad to hear that \nmy live performance stopped troublemaking monsters from fighting~",
+      [
+        "Be it a 2- or 24-hour concert, \njust leave it to me!",
+        "This new suit looks so cute, \ndoesn't it? Look at this Muse-bag... \nIt tells me what the next song is!"
+      ],
+      [
+        "I'll take part in Buro's Gourmet \nand Music Festival as a representative of Team Leek\n—there's no such team?!"
+      ],
+      [
+        "I'm so glad to hear that \nmy live performance stopped troublemaking monsters from fighting~",
         "I can feel your passion \nfor music while watching you challenge the stage again and again... \nI have the same feelings as you!",
-        "Here I encountered you, \nfound new songs, and made new friends... \nI have gained so much!"],
-      [ "I just forgot what I wanted to say after I opened my mouth.\n Maybe I can remember it after a meal. \nOkay, let's eat something—",
+        "Here I encountered you, \nfound new songs, and made new friends... \nI have gained so much!"
+      ],
+      [
+        "I just forgot what I wanted to say after I opened my mouth.\n Maybe I can remember it after a meal. \nOkay, let's eat something—",
         "During my live performance, \na flying cat threw me a fish. \nIs that a gift for me?",
-        "A ghost came to me for a photo. \nIt looked so happy despite the fact that \nthere's only me in it..."],
-      [ "Let me convey the words in your heart by singing...",
+        "A ghost came to me for a photo. \nIt looked so happy despite the fact that \nthere's only me in it..."
+      ],
+      [
+        "Let me convey the words in your heart by singing...",
         "Luka-san is so attractive on stage. \nWhen I met her eyes, \nher wink almost made me forget the lyrics...",
-        "Let me perform your favorite song! Why?\n Because I want to know more about... you."]
+        "Let me perform your favorite song! Why?\n Because I want to know more about... you."
+      ]
     ],
     "reviewExpressions": null,
-    "catExpressions": null
+    "catExpressions": null,
+    "listIndex": 0
+  },
+  {
+    "characterName": "Kagamine Rin & Len",
+    "cosName": "Virtual Singers",
+    "description": "Virtual Singers",
+    "skill": "Kagamine Rin & Len can 100% earn you a \"Perfect\" judgement when you hit the enemies that reach the hitboxes \nat the same time on both tracks. If you only hit the enemy on one track, they can help you auto-hit the enemy on the other. \nBut this skill doesn't work on Sheets (hold note), Mash Enemies and BOSS' melee attacks.",
+    "skills": null,
+    "chipName": "G clef & F clef",
+    "chipDescription": "Just like this pair of G and F clefs, they have the confidence to work in tune at any instance!",
+    "cv": "Asami Shimoda",
+    "expressions": [
+      [
+        "Did you call me? If you want to praise me, don't hesitate to do it~",
+        "If I turn into a bear... I'll make my audience jump out of their skin! Let Len try it out next time!",
+        "Forget my lyrics? Don't worry, my freestyle will be the best solution! "
+      ],
+      [
+        "Did you call me? If you need any help, don't hesitate to say it!",
+        "I'm making the special strategy to confront Luka-san. No peeking at it before I finish it!",
+        "Right... I also memorized Rin's lyrics—the show is gonna be 100% foolproof～"
+      ],
+      [
+        "Prank Time! Let's go scare Miku-san～<=>It seems this unintended prank scared me first.",
+        "Verification Time! Len can make a knee-jerk reaction to our songs no matter which second they start from and dance with it, can't you?<=>You just wanna play that kind of game, don't you?"
+      ],
+      [
+        "Quiz Time! What is Len thinking now?<=>You'd never know. Bring it on!"
+      ],
+      [
+        "I will find you from the stage, don't you look around!<=>She means please keep your eyes on us!",
+        "It's a little bit weird to have new clothes on. I can't help but look in the mirror...<=>She means she really likes the new clothes, and me too!",
+        "There is a bewildering variety of songs...\n Good, we can show our charms in all aspects!<=>That means... We really had fun, thank you!"
+      ]
+    ],
+    "reviewExpressions": null,
+    "catExpressions": null,
+    "listIndex": 0
   }
 ]
