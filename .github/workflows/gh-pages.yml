@@ -20,6 +20,8 @@ jobs:
 
     - run: npm install
 
+    - run: npm run build:api
+
     - run: npm run build-html
 
     - name: build - 404.html
