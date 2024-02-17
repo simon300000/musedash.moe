@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "serve": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service serve",
+    "build-html": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build",
     "build": "npm run build:api && npm run build:vue",
     "build:vue": "NODE_OPTIONS=--openssl-legacy-provider node build",
     "build:dev": "export development=true; node build:vue; node index",
