@@ -933,8 +933,7 @@
 	    "callBackDifficulty1": "3",
 	    "callBackDifficulty2": "6",
 	    "callBackDifficulty3": "8",
-	    "unlockLevel": "0",
-        "newMusic":true
+	    "unlockLevel": "0"
     },
     {
 	    "uid": "43-45",
@@ -954,8 +953,7 @@
 	    "callBackDifficulty1": "4",
 	    "callBackDifficulty2": "7",
 	    "callBackDifficulty3": "9",
-	    "unlockLevel": "0",
-        "newMusic":true
+	    "unlockLevel": "0"
     },
     {
 	    "uid": "43-46",
@@ -975,8 +973,7 @@
 	    "callBackDifficulty1": "5",
 	    "callBackDifficulty2": "7",
 	    "callBackDifficulty3": "10",
-	    "unlockLevel": "0",
-        "newMusic":true
+	    "unlockLevel": "0"
     },
     {
 	    "uid": "43-47",
@@ -996,8 +993,7 @@
 	    "callBackDifficulty1": "3",
 	    "callBackDifficulty2": "6",
 	    "callBackDifficulty3": "8",
-	    "unlockLevel": "0",
-        "newMusic":true
+	    "unlockLevel": "0"
     },
     {
 	    "uid": "43-48",
@@ -1019,8 +1015,7 @@
 	    "callBackDifficulty1": "6",
 	    "callBackDifficulty2": "9",
 	    "callBackDifficulty3": "11",
-	    "unlockLevel": "0",
-        "newMusic":true
+	    "unlockLevel": "0"
     },
     {
 	    "uid": "43-49",
@@ -1040,8 +1035,7 @@
 	    "callBackDifficulty1": "6",
 	    "callBackDifficulty2": "8",
 	    "callBackDifficulty3": "10",
-	    "unlockLevel": "0",
-        "newMusic":true
+	    "unlockLevel": "0"
     },
     {
 	    "uid": "43-50",
@@ -1063,8 +1057,7 @@
 	    "callBackDifficulty1": "3",
 	    "callBackDifficulty2": "6",
 	    "callBackDifficulty3": "9",
-	    "unlockLevel": "0",
-        "newMusic":true
+	    "unlockLevel": "0"
     },
     {
 	    "uid": "43-51",
@@ -1084,8 +1077,7 @@
 	    "callBackDifficulty1": "1",
 	    "callBackDifficulty2": "3",
 	    "callBackDifficulty3": "6",
-	    "unlockLevel": "0",
-        "newMusic":true
+	    "unlockLevel": "0"
     },
     {
 	    "uid": "43-52",
@@ -1107,8 +1099,7 @@
 	    "callBackDifficulty1": "6",
 	    "callBackDifficulty2": "8",
 	    "callBackDifficulty3": "11",
-	    "unlockLevel": "0",
-        "newMusic":true
+	    "unlockLevel": "0"
     },
     {
 	    "uid": "43-53",
@@ -1130,8 +1121,7 @@
 	    "callBackDifficulty2": "8",
 	    "callBackDifficulty3": "10",
         "callBackDifficulty4": "11",
-	    "unlockLevel": "0",
-        "newMusic":true
+	    "unlockLevel": "0"
     }
 ]
 //注意!!! 在3.11版本, 当前的"补完计划"曲包添加了一个新的配置项(newMusic), 主要用于调整新增歌曲的展示.

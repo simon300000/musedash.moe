@@ -30,6 +30,16 @@
       "free": false
   },
   {
+    "uid": "music_package_71",
+    "title": "Valentine Stage",
+    "tag": "Theme",
+    "needPurchase": true,
+    "price": "¥25.00",
+    "jsonName": "ALBUM72",
+    "prefabsName": "AlbumDisco72",
+    "free": false
+  },
+  {
   	  "uid": "music_package_70",
   	  "title": "Rin·Len's Mirrorland",
   	  "tag": "Other",
