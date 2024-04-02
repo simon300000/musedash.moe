@@ -30,6 +30,16 @@
       "free": false
   },
   {
+    "uid": "music_package_72",
+    "title": "暮色斗士传奇",
+    "tag": "Theme",
+    "needPurchase": true,
+    "price": "¥25.00",
+    "jsonName": "ALBUM73",
+    "prefabsName": "AlbumDisco73",
+    "free": false
+  },
+  {
     "uid": "music_package_71",
     "title": "Valentine Stage",
     "tag": "Theme",

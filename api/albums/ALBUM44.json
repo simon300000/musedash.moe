@@ -1093,12 +1093,15 @@
 	    "levelDesigner1": "『月魄』無極·L",
         "levelDesigner2": "『月辉』無極·U",
         "levelDesigner3": "『月华』無極·N",
+		"levelDesigner4": "『月神』無極·A",
 	    "difficulty1": "6",
 	    "difficulty2": "8",
 	    "difficulty3": "11",
+		"difficulty4": "12",
 	    "callBackDifficulty1": "6",
 	    "callBackDifficulty2": "8",
 	    "callBackDifficulty3": "11",
+		"callBackDifficulty4": "12",
 	    "unlockLevel": "0"
     },
     {
