@@ -30,6 +30,16 @@
       "free": false
   },
   {
+    "uid": "music_package_73",
+    "title": "肥宅快乐包 Vol.19",
+    "tag": "Happy",
+    "needPurchase": true,
+    "price": "¥25.00",
+    "jsonName": "ALBUM74",
+    "prefabsName": "AlbumDisco74",
+    "free": false
+  },
+  {
     "uid": "music_package_72",
     "title": "暮色斗士传奇",
     "tag": "Theme",
