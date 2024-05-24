@@ -30,6 +30,16 @@
       "free": false
   },
   {
+    "uid": "music_package_74",
+    "title": "CHUNITHM CLASS MUSE",
+    "tag": "Other",
+    "needPurchase": true,
+    "price": "¥25.00",
+    "jsonName": "ALBUM75",
+    "prefabsName": "AlbumDisco75",
+    "free": false
+  },
+  {
     "uid": "music_package_73",
     "title": "肥宅快乐包 Vol.19",
     "tag": "Happy",
