@@ -30,6 +30,22 @@
       "free": false
   },
   {
+    "uid": "music_package_75",
+    "title": "新手上路包",
+    "tag": "Theme",
+    "needPurchase": true,
+    "price": "¥18.00",
+    "jsonName": "ALBUM76",
+    "prefabsName": "AlbumDisco76",
+    "free": false,
+    "pay_ids": [
+      "music_package_75",
+      "music_package_75_30",
+      "music_package_75_50",
+      "music_package_75_70"
+  ]
+  },
+  {
     "uid": "music_package_74",
     "title": "CHUNITHM CLASS MUSE",
     "tag": "Other",

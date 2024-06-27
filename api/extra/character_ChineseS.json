@@ -2,15 +2,26 @@
   {
     "characterName": "凛",
     "cosName": "贝斯手",
+    "cosNames": [
+      "贝斯手",
+      "贝斯手",
+      "暮色斗士"
+    ],
     "description": "我的小宇宙仿佛要燃烧了，如果不是组乐队那就不用找我了。",
     "skill": "贝斯手凛的生命值上限提升 50 点。",
     "skills": [
       "贝斯手凛的生命值上限提升 50 点。",
-      "贝斯手凛喵的喵命值上限提升 50 喵！"
+      "贝斯手凛喵的喵命值上限提升 50 喵！",
+      "暮色斗士登场了，眼前的齿轮反射出了她的美貌，暮色斗士被击败了，贝斯手归来！（总计存活 4 秒）"
     ],
     "chipName": "OK绷",
     "chipDescription": "嘶~一个绑带看起来不够用了",
     "cv": "内田爱美",
+    "cvs": [
+      "内田爱美",
+      "内田爱美",
+      "▇▇▇▇▇▇"
+    ],
     "expressions": [
       [
         "我在听！别瞎戳啦！",
@@ -55,6 +66,11 @@
         "什么啊……这种奇怪的感觉……"
       ]
     ],
+    "skinNames": [
+      "默认",
+      "喵形态",
+      "暮色斗士"
+    ],
     "catExpressions": [
       [
         "喵……喵……喵……"
@@ -66,20 +82,39 @@
         "喵？喵？"
       ]
     ],
+    "foolishExpressions": [
+      [
+        "Don't think, FEEL.",
+        "你应该多学习，我不介意做你的榜样，宝贝。",
+        "我的强大是你无法想象的。"
+      ],
+      [
+        "我这么帅是不是妨碍到你了？",
+        "我知道你在想什么，\n但是不必为我做到那个地步……真的。",
+        "没有人懂我的心。"
+      ],
+      [
+        "这是你自找的……！",
+        "不要再这样玩弄我的感情了……",
+        "啧……你这只……小泥鳅……"
+      ]
+    ],
     "listIndex": 0
   },
   {
     "characterName": "凛",
     "cosName": "问题少女",
+    "cosNames": null,
     "description": "我这一棒子下去，你可能会嗝屁哦~",
-    "skill": "问题少女凛可以将 5 个“Great”判定转化为“Perfect”判定；\n对乐谱（长按）和连打敌人无效。",
+    "skill": "问题少女凛可以将 5 个“Great”判定转化为“Perfect”判定；对乐谱（长按）和连打敌人无效。",
     "skills": [
-      "问题少女凛可以将 5 个“Great”判定转化为“Perfect”判定；\n对乐谱（长按）和连打敌人无效。",
-      "问题少女凛喵可以将 5 个“Great”喵转化为“Perfect”喵；\n对乐谱（长喵）和连打喵无效喵！"
+      "问题少女凛可以将 5 个“Great”判定转化为“Perfect”判定；对乐谱（长按）和连打敌人无效。",
+      "问题少女凛喵可以将 5 个“Great”喵转化为“Perfect”喵；对乐谱（长喵）和连打喵无效喵！"
     ],
     "chipName": "棒球",
     "chipDescription": "如果这个棒球是你的，我可不会还哦",
     "cv": "内田爱美",
+    "cvs": null,
     "expressions": [
       [
         "你看起来挺强的嘛，找个机会我们来比试一下吧？",
@@ -124,6 +159,10 @@
         "干、干什么呀，突然？！"
       ]
     ],
+    "skinNames": [
+      "默认",
+      "喵形态"
+    ],
     "catExpressions": [
       [
         "喵……喵……喵……"
@@ -135,11 +174,13 @@
         "喵？喵？"
       ]
     ],
+    "foolishExpressions": null,
     "listIndex": 0
   },
   {
     "characterName": "凛",
     "cosName": "梦游少女",
+    "cosNames": null,
     "description": "唉？我刚刚是不是又梦游了？……呼噜噜呼~~",
     "skill": "梦游少女凛进入关卡后将自动战斗，全程不受玩家控制且不记录得分。",
     "skills": [
@@ -149,6 +190,7 @@
     "chipName": "白色枕头",
     "chipDescription": "大姐姐的欧派抱起来好软啊~~~~啊呼呼呼呼",
     "cv": "内田爱美",
+    "cvs": null,
     "expressions": [
       [
         "盲盲盲盲盲…",
@@ -193,6 +235,10 @@
         "好热……5555"
       ]
     ],
+    "skinNames": [
+      "默认",
+      "喵形态"
+    ],
     "catExpressions": [
       [
         "喵……喵……喵……"
@@ -204,11 +250,13 @@
         "喵？喵？"
       ]
     ],
+    "foolishExpressions": null,
     "listIndex": 0
   },
   {
     "characterName": "凛",
     "cosName": "兔女郎",
+    "cosNames": null,
     "description": "这个样子的我，你真的会喜欢吗……（捂脸）",
     "skill": "兔女郎凛获得音符、击中幽灵、躲避障碍与获得红心（满生命值时）的得分增加 200%。",
     "skills": [
@@ -218,6 +266,7 @@
     "chipName": "黑色领结",
     "chipDescription": "这个是戴在前面的还是后面的呢？",
     "cv": "内田爱美",
+    "cvs": null,
     "expressions": [
       [
         "满、满足了吧，本大人都这样牺、牺牲了…",
@@ -262,6 +311,10 @@
         "用胡萝卜战斗有什么奇怪的！是你比较奇怪啦！"
       ]
     ],
+    "skinNames": [
+      "默认",
+      "喵形态"
+    ],
     "catExpressions": [
       [
         "喵……喵……喵……"
@@ -273,20 +326,32 @@
         "喵？喵？"
       ]
     ],
+    "foolishExpressions": null,
     "listIndex": 0
   },
   {
     "characterName": "布若",
     "cosName": "飞行员",
+    "cosNames": [
+      "飞行员",
+      "飞行员",
+      "暮色斗士"
+    ],
     "description": "嘿！给我一块钱！我要去坐摇摇车！",
     "skill": "当飞行员布若开启 FEVER 状态时，期间不会受到伤害。",
     "skills": [
       "当飞行员布若开启 FEVER 状态时，期间不会受到伤害。",
-      "当飞行员布若喵开启 FEVER 喵时，期间不会受到伤害喵！"
+      "当飞行员布若喵开启 FEVER 喵时，期间不会受到伤害喵！",
+      "暮色斗士登场了，小飞机超载报警了，暮色斗士被击败了，飞行员归来！（总计存活 4 秒）"
     ],
     "chipName": "纸飞机",
     "chipDescription": "啊呀！刚刚那张纸好像是人家的成绩单",
     "cv": "甘束舞音",
+    "cvs": [
+      "甘束舞音",
+      "甘束舞音",
+      "▇▇▇▇▇▇"
+    ],
     "expressions": [
       [
         "唔，要是有甜甜圈的话，陪你玩一会也不是不行啦。",
@@ -331,6 +396,11 @@
         "我当然有进入状态啦！！"
       ]
     ],
+    "skinNames": [
+      "默认",
+      "喵形态",
+      "暮色斗士"
+    ],
     "catExpressions": [
       [
         "喵喵喵喵喵喵喵喵喵"
@@ -342,11 +412,29 @@
         "喵喵喵～"
       ]
     ],
+    "foolishExpressions": [
+      [
+        "啊？",
+        "你再点两下试试呢？",
+        "被我看到的乖乖过来当沙包O.o"
+      ],
+      [
+        "我去，被你菜到吐了 5L 血……",
+        "我去，被凛菜到吐了 5L 血……",
+        "我去，被玛莉嘉菜到吐了 5L 血……"
+      ],
+      [
+        "喜欢布布的大胸肌吗？",
+        "腹肌都被看光了……还是第一次……",
+        "布布的肱二头肌……可以成为你的家吗？"
+      ]
+    ],
     "listIndex": 0
   },
   {
     "characterName": "布若",
     "cosName": "偶像",
+    "cosNames": null,
     "description": "Niko~niko~ni~~~",
     "skill": "每当成功通过一个关卡，偶像布若所获得经验将增加 50%。",
     "skills": [
@@ -356,6 +444,7 @@
     "chipName": "能量电池",
     "chipDescription": "这里面满满的都是爱的能量哦~",
     "cv": "甘束舞音",
+    "cvs": null,
     "expressions": [
       [
         "这可是准备了很久的发型呀！再碰就乱掉啦…",
@@ -400,6 +489,10 @@
         "歪，妖妖零吗？这里有变态！"
       ]
     ],
+    "skinNames": [
+      "默认",
+      "喵形态"
+    ],
     "catExpressions": [
       [
         "喵喵喵喵喵喵喵喵喵"
@@ -411,20 +504,23 @@
         "喵喵喵～"
       ]
     ],
+    "foolishExpressions": null,
     "listIndex": 0
   },
   {
     "characterName": "布若",
     "cosName": "僵尸少女",
+    "cosNames": null,
     "description": "叮铃铃~~~叮铃铃~~~天干物燥小心火烛。",
-    "skill": "当生命值耗尽时，僵尸少女布若将进入长达 15 秒的濒死状态；\n当濒死状态结束后，若布若没有获得红心，则不能再度进入濒死状态。",
+    "skill": "当生命值耗尽时，僵尸少女布若将进入长达 15 秒的濒死状态；当濒死状态结束后，若布若没有获得红心，则不能再度进入濒死状态。",
     "skills": [
-      "当生命值耗尽时，僵尸少女布若将进入长达 15 秒的濒死状态；\n当濒死状态结束后，若布若没有获得红心，则不能再度进入濒死状态。",
-      "当喵命值耗尽时，僵尸少女布若喵将进入长达 15 秒的喵死状态；\n当喵死状态结束后，若布若喵没有获得红心喵，则不能再度进入喵死状态喵！"
+      "当生命值耗尽时，僵尸少女布若将进入长达 15 秒的濒死状态；当濒死状态结束后，若布若没有获得红心，则不能再度进入濒死状态。",
+      "当喵命值耗尽时，僵尸少女布若喵将进入长达 15 秒的喵死状态；当喵死状态结束后，若布若喵没有获得红心喵，则不能再度进入喵死状态喵！"
     ],
     "chipName": "巨凶符咒",
     "chipDescription": "贴上就很凶呀",
     "cv": "甘束舞音",
+    "cvs": null,
     "expressions": [
       [
         "变成僵尸后还会不会长高呀…",
@@ -469,6 +565,10 @@
         "呜哇…我、我要咬你了哦！！"
       ]
     ],
+    "skinNames": [
+      "默认",
+      "喵形态"
+    ],
     "catExpressions": [
       [
         "喵喵喵喵喵喵喵喵喵"
@@ -480,11 +580,13 @@
         "喵喵喵～"
       ]
     ],
+    "foolishExpressions": null,
     "listIndex": 0
   },
   {
     "characterName": "布若",
     "cosName": "华服小丑",
+    "cosNames": null,
     "description": "来来我给你看一个宝贝~（打开袋子）",
     "skill": "当连击数达到 60/70 以上时，华服小丑布若将获得更高的额外连击分数加成。",
     "skills": [
@@ -494,6 +596,7 @@
     "chipName": "彩色皮球",
     "chipDescription": "给你们三秒看能不能找到我藏的宝贝~",
     "cv": "甘束舞音",
+    "cvs": null,
     "expressions": [
       [
         "诶嘿嘿嘿嘿~",
@@ -538,6 +641,10 @@
         "我、我不会的表演禁止点播><"
       ]
     ],
+    "skinNames": [
+      "默认",
+      "喵形态"
+    ],
     "catExpressions": [
       [
         "喵喵喵喵喵喵喵喵喵"
@@ -549,20 +656,32 @@
         "喵喵喵～"
       ]
     ],
+    "foolishExpressions": null,
     "listIndex": 0
   },
   {
     "characterName": "玛莉嘉",
     "cosName": "提琴少女",
+    "cosNames": [
+      "提琴少女",
+      "提琴少女",
+      "暮色斗士"
+    ],
     "description": "这一首是贝多芬的《d小调第九交响曲》哦~",
     "skill": "当连击数低于 100 时，即使提琴少女玛莉嘉取得“Miss”判定也不会中断连击。",
     "skills": [
       "当连击数低于 100 时，即使提琴少女玛莉嘉取得“Miss”判定也不会中断连击。",
-      "当连喵数低于 100 时，即使提琴少女玛莉嘉喵取得“Miss”喵也不会中断连喵！"
+      "当连喵数低于 100 时，即使提琴少女玛莉嘉喵取得“Miss”喵也不会中断连喵！",
+      "暮色斗士登场了，暮色斗士用爱拥抱齿轮，暮色斗士被击败了，提琴少女归来！（总计存活 4 秒）"
     ],
     "chipName": "玛莉嘉的日记本",
     "chipDescription": "少女的日记本里面到底会写些什么呢？",
     "cv": "赤司芳歌",
+    "cvs": [
+      "赤司芳歌",
+      "赤司芳歌",
+      "▇▇▇▇▇▇"
+    ],
     "expressions": [
       [
         "有时间发呆的话，不如多看几本书。",
@@ -607,6 +726,11 @@
         "喂，警察吗？又是那个人。"
       ]
     ],
+    "skinNames": [
+      "默认",
+      "喵形态",
+      "暮色斗士"
+    ],
     "catExpressions": [
       [
         "喵——？"
@@ -618,20 +742,39 @@
         "喵？"
       ]
     ],
+    "foolishExpressions": [
+      [
+        "用我的胜利换达令的胖次吧w",
+        "我会夺走属于达令的一切^^",
+        "抱歉可以当我不存在吗？\n我只想像看书一样偷看达令^^"
+      ],
+      [
+        "破怪物能不能删了？",
+        "破齿轮能不能删了？",
+        "破锤子能不能删了？"
+      ],
+      [
+        "喜欢达令的哪里？没有哦。但是喜欢////",
+        "达令什么都做不到的样子……多么可爱啊////",
+        "达令……达令……"
+      ]
+    ],
     "listIndex": 0
   },
   {
     "characterName": "玛莉嘉",
     "cosName": "女仆",
+    "cosNames": null,
     "description": "那个…主人，还需要其它服务吗？",
     "skill": "当生命值不足 100 时，女仆玛莉嘉获得红心时将拥有 2.5 倍的回复效果，并立刻进入 2 秒的无敌时间。",
     "skills": [
-      "当生命值不足 100 时，\n女仆玛莉嘉首次获得红心时将拥有 2.5 倍的回复效果，并立刻进入 2 秒的无敌时间。",
-      "当喵命值不足 100 时，\n女仆玛莉嘉喵首次获得红心喵时将拥有 2.5 倍的回复喵，并立刻进入 2 秒的无敌喵！"
+      "当生命值不足 100 时，女仆玛莉嘉首次获得红心时将拥有 2.5 倍的回复效果，并立刻进入 2 秒的无敌时间。",
+      "当喵命值不足 100 时，女仆玛莉嘉喵首次获得红心喵时将拥有 2.5 倍的回复喵，并立刻进入 2 秒的无敌喵！"
     ],
     "chipName": "咸鱼",
     "chipDescription": "主人你行不行呀(ºOº)",
     "cv": "赤司芳歌",
+    "cvs": null,
     "expressions": [
       [
         "我…我才没有在享受呢…",
@@ -676,6 +819,10 @@
         "全…全都洗干净了… "
       ]
     ],
+    "skinNames": [
+      "默认",
+      "喵形态"
+    ],
     "catExpressions": [
       [
         "喵——？"
@@ -687,11 +834,13 @@
         "喵？"
       ]
     ],
+    "foolishExpressions": null,
     "listIndex": 0
   },
   {
     "characterName": "玛莉嘉",
     "cosName": "魔法少女",
+    "cosNames": null,
     "description": "来不及解释了！快上扫把吧！",
     "skill": "魔法少女玛莉嘉的 Fever 累积速率增加 20%。",
     "skills": [
@@ -701,6 +850,7 @@
     "chipName": "看不懂的魔法书",
     "chipDescription": "书上写的都是啥呀？随心所欲不好吗~",
     "cv": "赤司芳歌",
+    "cvs": null,
     "expressions": [
       [
         "我才不会喵喵叫呢？别想啦…",
@@ -745,6 +895,10 @@
         "啊？！变、变成大人的黑魔法？"
       ]
     ],
+    "skinNames": [
+      "默认",
+      "喵形态"
+    ],
     "catExpressions": [
       [
         "喵——？"
@@ -756,20 +910,23 @@
         "喵？"
       ]
     ],
+    "foolishExpressions": null,
     "listIndex": 0
   },
   {
     "characterName": "玛莉嘉",
     "cosName": "小恶魔",
+    "cosNames": null,
     "description": "嗯~灵魂的味道真是让人欲罢不能呢~",
-    "skill": "每当成功击退敌人，小恶魔玛莉嘉将获得 25% 的额外分数；\n作为代价，玛莉嘉将以 10 点每秒的速率流失生命值。",
+    "skill": "每当成功击退敌人，小恶魔玛莉嘉将获得 25% 的额外分数；作为代价，玛莉嘉将以 10 点每秒的速率流失生命值。",
     "skills": [
-      "每当成功击退敌人，小恶魔玛莉嘉将获得 25% 的额外分数；\n作为代价，玛莉嘉将以 10 点每秒的速率流失生命值。",
-      "每当成功击退敌喵，小恶魔玛莉嘉喵将获得 25% 的额外喵数；\n作为代价，玛莉嘉喵将以 10 喵每秒的速率流失喵命值！"
+      "每当成功击退敌人，小恶魔玛莉嘉将获得 25% 的额外分数；作为代价，玛莉嘉将以 10 点每秒的速率流失生命值。",
+      "每当成功击退敌喵，小恶魔玛莉嘉喵将获得 25% 的额外喵数；作为代价，玛莉嘉喵将以 10 喵每秒的速率流失喵命值！"
     ],
     "chipName": "干涸的眼球",
     "chipDescription": "违背誓言的家伙所留下来的东西",
     "cv": "赤司芳歌",
+    "cvs": null,
     "expressions": [
       [
         "特制的酒哦，要和我喝~一~杯~吗？呵呵呵♪",
@@ -814,6 +971,10 @@
         "偶尔听听你的愿望，也…不是不可以啦…"
       ]
     ],
+    "skinNames": [
+      "默认",
+      "喵形态"
+    ],
     "catExpressions": [
       [
         "喵——？"
@@ -825,20 +986,23 @@
         "喵？"
       ]
     ],
+    "foolishExpressions": null,
     "listIndex": 0
   },
   {
     "characterName": "玛莉嘉",
     "cosName": "黑衣少女",
+    "cosNames": null,
     "description": "黑衣少女",
-    "skill": "黑衣少女玛莉嘉拥有更大的“Perfect”、“Great”、“Pass”判定范围，\n可以更加轻松地击退敌人和躲避障碍。",
+    "skill": "黑衣少女玛莉嘉拥有更大的“Perfect”、“Great”、“Pass”判定范围，可以更加轻松地击退敌人和躲避障碍。",
     "skills": [
-      "黑衣少女玛莉嘉拥有更大的“Perfect”、“Great”、“Pass”判定范围，\n可以更加轻松地击退敌人和躲避障碍。",
-      "黑衣少女玛莉嘉喵拥有更大的“Perfect”、“Great”、“Pass”判定喵，\n可以更加轻松地击退敌喵和躲避障碍喵！"
+      "黑衣少女玛莉嘉拥有更大的“Perfect”、“Great”、“Pass”判定范围，可以更加轻松地击退敌人和躲避障碍。",
+      "黑衣少女玛莉嘉喵拥有更大的“Perfect”、“Great”、“Pass”判定喵，可以更加轻松地击退敌喵和躲避障碍喵！"
     ],
     "chipName": "能量抑制器",
     "chipDescription": "摘除之后不知道会发生什么",
     "cv": "赤司芳歌",
+    "cvs": null,
     "expressions": [
       [
         "呐，下等生物，再多给我找些乐子吧。",
@@ -883,6 +1047,10 @@
         "明明只是个下等生物…"
       ]
     ],
+    "skinNames": [
+      "默认",
+      "喵形态"
+    ],
     "catExpressions": [
       [
         "喵——？"
@@ -894,11 +1062,13 @@
         "喵？"
       ]
     ],
+    "foolishExpressions": null,
     "listIndex": 0
   },
   {
     "characterName": "凛",
     "cosName": "圣诞礼物",
+    "cosNames": null,
     "description": "圣诞凛",
     "skill": "当圣诞礼物凛成功通过一个关卡后，将获得最多 5% 的准确率加成。",
     "skills": [
@@ -908,6 +1078,7 @@
     "chipName": "圣诞礼物",
     "chipDescription": "没人知道里面装了什么。",
     "cv": "内田爱美",
+    "cvs": null,
     "expressions": [
       [
         "这是特别准备的礼物哦，总之给、给本大人收下…",
@@ -952,6 +1123,10 @@
         "这里只能塞一个人！！而且…总总总总总之不可以过来！"
       ]
     ],
+    "skinNames": [
+      "默认",
+      "喵形态"
+    ],
     "catExpressions": [
       [
         "喵……喵……喵……"
@@ -963,17 +1138,20 @@
         "喵？喵？"
       ]
     ],
+    "foolishExpressions": null,
     "listIndex": 0
   },
   {
     "characterName": "布若",
     "cosName": "制服少女",
+    "cosNames": null,
     "description": "制服少女",
-    "skill": "通过长按操作，制服少女布若能够连续攻击被标记的密集敌人。\n作为代价，制服少女布若只能获得原始得分的80%。",
+    "skill": "通过长按操作，制服少女布若能够连续攻击被标记的密集敌人。作为代价，制服少女布若只能获得原始得分的80%。",
     "skills": null,
     "chipName": "Plastic Master 90",
     "chipDescription": "·更耐热 ·更耐用 ·高动态范围 ·已停产",
     "cv": "甘束舞音",
+    "cvs": null,
     "expressions": [
       [
         "喜欢的音乐风格么？才不会告诉你咧～",
@@ -1018,18 +1196,25 @@
         "就算呆在我身边，耳机也没有办法分你一半哦……不过咖、咖啡就可以…"
       ]
     ],
+    "skinNames": [
+      "默认",
+      "B-side"
+    ],
     "catExpressions": null,
+    "foolishExpressions": null,
     "listIndex": 0
   },
   {
     "characterName": "柚梅",
     "cosName": "领航员",
+    "cosNames": null,
     "description": "领航员",
     "skill": "来自 Groove Coaster 的领航员柚梅，障碍（齿轮）不会对她造成伤害。",
     "skills": null,
     "chipName": "菱形头饰",
     "chipDescription": "变身双马尾的道具，是少女维持可爱的秘密武器。",
     "cv": "高桥菜菜美",
+    "cvs": null,
     "expressions": [
       [
         "欢迎来到柚梅的梦之派对~",
@@ -1074,18 +1259,24 @@
         "如果可以选择我的话，会很开心的……当、当然是在说领航员的事啦！"
       ]
     ],
+    "skinNames": [
+      "默认"
+    ],
     "catExpressions": null,
+    "foolishExpressions": null,
     "listIndex": 0
   },
   {
     "characterName": "NEKO#ΦωΦ",
     "cosName": "游戏主播",
+    "cosNames": null,
     "description": "游戏主播",
-    "skill": "来自 Cytus II 的游戏主播 NEKO#ΦωΦ，在失去所有生命值后可继续游戏，\n在该状态下通关不记录成绩。好耶，居然是不会死的联动角色~",
+    "skill": "来自 Cytus II 的游戏主播 NEKO#ΦωΦ，在失去所有生命值后可继续游戏，在该状态下通关不记录成绩。好耶，居然是不会死的联动角色~",
     "skills": null,
     "chipName": "Meow Bot",
     "chipDescription": "在买够一打 Meow Bot 之前，那个人是不会收手的ΦωΦ",
     "cv": "花守由美里",
+    "cvs": null,
     "expressions": [
       [
         "好耶！这次又是 NEKO 穿越！\n唉？我为什么要说又？",
@@ -1130,18 +1321,24 @@
         "啊~ NEKO 脸红什么意思都没有哦，\n你不要瞎猜啊！哈哈……啊哈哈哈……"
       ]
     ],
+    "skinNames": [
+      "默认"
+    ],
     "catExpressions": null,
+    "foolishExpressions": null,
     "listIndex": 0
   },
   {
     "characterName": "凛",
     "cosName": "打工战士",
+    "cosNames": null,
     "description": "打工战士",
     "skill": "想不出来技能，摸...算了，给大家劈个叉吧",
     "skills": null,
     "chipName": "安全帽",
     "chipDescription": "久经风吹雨打的安全帽，打工战士的徽章。",
     "cv": "▇▇▇▇▇▇▇",
+    "cvs": null,
     "expressions": [
       [
         "我的新技能吗？是：\n降 智 攻 击 ( ﾟq 。)",
@@ -1155,7 +1352,7 @@
       ],
       [
         "别试了，这次没有你想的那种台词。",
-        "包含 200 首以上音乐的保本理财产品，\n长期持有还能稳定增长。计划通，年轻人的第一次理财。 ",
+        "我不下班，我对工地很有感情 (╬ﾟдﾟ)",
         "什么叫画得随便，这叫简约线条。"
       ],
       [
@@ -1163,7 +1360,7 @@
         "想不出台词了，凑个数。"
       ],
       [
-        ":( 你的​角色遇到了缺少语音的问题。\n错误代码：peroperoispoor\n请尝试购买计划通以帮助制作组。"
+        ":( 你的​角色遇到了缺少语音的问题。\n错误代码：peroperoispoor\n请尝试购买曲包以帮助制作组。"
       ]
     ],
     "reviewExpressions": [
@@ -1179,7 +1376,7 @@
       ],
       [
         "别试了，这次没有你想的那种台词。",
-        "包含 200 首以上音乐的保本理财产品，\n长期持有还能稳定增长。计划通，年轻人的第一次理财。 ",
+        "我不下班，我对工地很有感情 (╬ﾟдﾟ)",
         "什么叫画得随便，这叫简约线条。"
       ],
       [
@@ -1187,21 +1384,27 @@
         "想不出台词了，凑个数。"
       ],
       [
-        ":( 你的​角色遇到了缺少语音的问题。\n错误代码：peroperoispoor\n请尝试购买计划通以帮助制作组。"
+        ":( 你的​角色遇到了缺少语音的问题。\n错误代码：peroperoispoor\n请尝试购买曲包以帮助制作组。"
       ]
     ],
+    "skinNames": [
+      "默认"
+    ],
     "catExpressions": null,
+    "foolishExpressions": null,
     "listIndex": 0
   },
   {
     "characterName": "博丽灵梦",
     "cosName": "红白巫女",
+    "cosNames": null,
     "description": "红白巫女",
-    "skill": "灵梦能够在空中保持飞行，不会自动落下，\n并且障碍（齿轮）的判定区域将会变小，可以更轻松地回避。",
+    "skill": "灵梦能够在空中保持飞行，不会自动落下，并且障碍（齿轮）的判定区域将会变小，可以更轻松地回避。",
     "skills": null,
     "chipName": "阴阳玉",
     "chipDescription": "一颗又硬又重的圆球，其实是回到幻想乡的「钥匙」。",
     "cv": "五十岚裕美",
+    "cvs": null,
     "expressions": [
       [
         "节奏是什么？只要把敌人都打倒不就行了吗！",
@@ -1254,18 +1457,24 @@
         "想要S？那、那就十万...不是？那你指的是什么？"
       ]
     ],
+    "skinNames": [
+      "默认"
+    ],
     "catExpressions": null,
+    "foolishExpressions": null,
     "listIndex": 0
   },
   {
     "characterName": "El_Clear",
     "cosName": "重生的少女",
+    "cosNames": null,
     "description": "重生的少女",
-    "skill": "Clear 能将关卡内所有漏掉的音符、红心、幽灵和附带红心的敌人自动接住，\n被自动接住的幽灵和附带红心的敌人将获得“Perfect”判定。",
+    "skill": "Clear 能将关卡内所有漏掉的音符、红心、幽灵和附带红心的敌人自动接住，被自动接住的幽灵和附带红心的敌人将获得“Perfect”判定。",
     "skills": null,
     "chipName": "皇冠",
     "chipDescription": "带着 Clear 从天而降的皇冠，砸到人的话会很痛诶！",
     "cv": "加隈亚衣",
+    "cvs": null,
     "expressions": [
       [
         "我从墓地中诞生，象征着荣耀的归来——怎么样，很酷吧？"
@@ -1326,18 +1535,24 @@
         "哇啊啊～真是的！\n为了防止你在游戏里也像这样乱来然后输掉，现在开始保持三米距离！"
       ]
     ],
+    "skinNames": [
+      "默认"
+    ],
     "catExpressions": null,
+    "foolishExpressions": null,
     "listIndex": 0
   },
   {
     "characterName": "玛莉嘉",
     "cosName": "修女",
+    "cosNames": null,
     "description": "修女",
-    "skill": "修女玛莉嘉会将天空和地面敌人的位置互换。\n其中，突袭敌人、摆锤和普通障碍（齿轮）会以翻转形态出现。",
+    "skill": "修女玛莉嘉会将天空和地面敌人的位置互换。其中，突袭敌人、摆锤和普通障碍（齿轮）会以翻转形态出现。",
     "skills": null,
     "chipName": "星星挂坠",
     "chipDescription": "作为信仰的标志，她觉得星星的形状比较可爱。",
     "cv": "赤司芳歌",
+    "cvs": null,
     "expressions": [
       [
         "敏锐的嗅觉、缜密的计划、利落的手法，这些就是我在教会学到的全部了。",
@@ -1369,18 +1584,24 @@
       ]
     ],
     "reviewExpressions": null,
+    "skinNames": [
+      "默认"
+    ],
     "catExpressions": null,
+    "foolishExpressions": null,
     "listIndex": 0
   },
   {
     "characterName": "雾雨魔理沙",
     "cosName": "黑白魔法使",
+    "cosNames": null,
     "description": "黑白魔法使",
-    "skill": "魔理沙能够在空中飞行，不会自动落下，\n并且获得音符及满生命值时获得红心的得分增加 200%。",
+    "skill": "魔理沙能够在空中飞行，不会自动落下，并且获得音符及满生命值时获得红心的得分增加 200%。",
     "skills": null,
     "chipName": "迷你八卦炉",
     "chipDescription": "塞入蘑菇的话就能发射激光的自制魔法道具，威力巨大——就这样轰出一条回到幻想乡的路吧！",
     "cv": "Machico",
+    "cvs": null,
     "expressions": [
       [
         "我就是令人闻风丧胆的魔法使・雾雨魔理沙！……欸？看不出来？"
@@ -1406,18 +1627,24 @@
       ]
     ],
     "reviewExpressions": null,
+    "skinNames": [
+      "默认"
+    ],
     "catExpressions": null,
+    "foolishExpressions": null,
     "listIndex": 0
   },
   {
     "characterName": "阿米娅",
     "cosName": "罗德岛的领导者",
+    "cosNames": null,
     "description": "罗德岛的领导者",
-    "skill": "阿米娅击退敌人时可以获得更多的 Fever 能量，开启 Fever 状态时可以将“Miss”判定变为“Great”，\n将“Great”判定变为“Perfect”。作为代价，阿米娅在 Fever 状态结束后 3 秒内无法获得 Fever 能量。",
+    "skill": "阿米娅击退敌人时可以获得更多的 Fever 能量，开启 Fever 状态时可以将“Miss”判定变为“Great”，将“Great”判定变为“Perfect”。作为代价，阿米娅在 Fever 状态结束后 3 秒内无法获得 Fever 能量。",
     "skills": null,
     "chipName": "戒指",
     "chipDescription": "阿米娅的十枚戒指之一，不知道是哪个手指上的，反正博士戴不上。",
     "cv": "黑泽朋世",
+    "cvs": null,
     "expressions": [
       [
         "一想到要在博士面前演奏就有些害羞……但我会加油的！",
@@ -1445,18 +1672,24 @@
       ]
     ],
     "reviewExpressions": null,
+    "skinNames": [
+      "默认"
+    ],
     "catExpressions": null,
+    "foolishExpressions": null,
     "listIndex": 0
   },
   {
     "characterName": "欧拉",
     "cosName": "拳击手",
+    "cosNames": null,
     "description": "拳击手",
-    "skill": "当欧拉开启 Fever 状态时，期间不会受到伤害\n——暂时获得指挥权的代价是只能和姐姐用一样的技能？下克上失败！",
+    "skill": "当欧拉开启 Fever 状态时，期间不会受到伤害——暂时获得指挥权的代价是只能和姐姐用一样的技能？下克上失败！",
     "skills": null,
     "chipName": "冠军腰带",
     "chipDescription": "家里的冠军腰带多到放不下了？不如给大姐头拿去改造成变身器吧！",
     "cv": "伊濑茉莉也",
+    "cvs": null,
     "expressions": [
       [
         "话说回来刚才检查的时候才发现技能好像没带，身上只有大姐头的技能……应该没问题吧，毕竟大姐头很强嘛……",
@@ -1482,18 +1715,24 @@
       ]
     ],
     "reviewExpressions": null,
+    "skinNames": [
+      "默认"
+    ],
     "catExpressions": null,
+    "foolishExpressions": null,
     "listIndex": 0
   },
   {
     "characterName": "布若",
     "cosName": "道士",
+    "cosNames": null,
     "description": "道士",
-    "skill": "道士布若每次受伤将优先消耗 Fever 能量；\n在 Fever 期间成功击退敌人，将获得 30% 的额外分数。",
+    "skill": "道士布若每次受伤将优先消耗 Fever 能量；在 Fever 期间成功击退敌人，将获得 30% 的额外分数。",
     "skills": null,
     "chipName": "认真墨镜",
     "chipDescription": "主播进入认真模式的开关，通常以出现裂痕宣告认真模式结束。",
     "cv": "甘束舞音",
+    "cvs": null,
     "expressions": [
       [
         "不管东方的妖还是西方的魔，只有您想不到的没有咱除不掉的，没办法，想混口饭吃越来越难咯～",
@@ -1521,18 +1760,24 @@
       ]
     ],
     "reviewExpressions": null,
+    "skinNames": [
+      "默认"
+    ],
     "catExpressions": null,
+    "foolishExpressions": null,
     "listIndex": 0
   },
   {
     "characterName": "初音未来",
     "cosName": "虚拟歌手",
+    "cosNames": null,
     "description": "虚拟歌手",
-    "skill": "初音未来可以不区分上下轨道击打所有敌人和乐谱（长按），\n对音符、红心、障碍无效。",
+    "skill": "初音未来可以不区分上下轨道击打所有敌人和乐谱（长按），对音符、红心、障碍无效。",
     "skills": null,
     "chipName": "麦克风",
     "chipDescription": "有着将歌声传递给全宇宙的力量，但也存在被当成葱抛向观众席的可能性？",
     "cv": "藤田咲",
+    "cvs": null,
     "expressions": [
       [
         "2 小时的演唱会？\n24 小时也可以，尽管交给我吧！",
@@ -1558,18 +1803,24 @@
       ]
     ],
     "reviewExpressions": null,
+    "skinNames": [
+      "默认"
+    ],
     "catExpressions": null,
+    "foolishExpressions": null,
     "listIndex": 0
   },
   {
     "characterName": "镜音铃·连",
     "cosName": "虚拟歌手",
+    "cosNames": null,
     "description": "虚拟歌手",
-    "skill": "镜音铃·连在击打同时到达判定点的不同轨敌人时，一定会获得“Perfect”判定。\n只击打了轨道一侧的敌人时，能自动接住另一侧的敌人，\n但对乐谱（长按）、连打和 BOSS 的近身攻击无效。",
+    "skill": "镜音铃·连在击打同时到达判定点的不同轨敌人时，一定会获得“Perfect”判定。只击打了轨道一侧的敌人时，能自动接住另一侧的敌人，但对乐谱（长按）、连打和 BOSS 的近身攻击无效。",
     "skills": null,
     "chipName": "高音谱号&低音谱号",
     "chipDescription": "像这对高低音谱号一样，他们有着在任何情况下都能完美分工的默契和自信！",
     "cv": "下田麻美",
+    "cvs": null,
     "expressions": [
       [
         "你在叫我吗？想夸我的话就别客气～",
@@ -1595,7 +1846,54 @@
       ]
     ],
     "reviewExpressions": null,
+    "skinNames": [
+      "默认"
+    ],
     "catExpressions": null,
+    "foolishExpressions": null,
     "listIndex": 0
-  }
+  },
+    {
+        "characterName": "凛",
+        "cosName": "摩托车手",
+        "cosNames": null,
+        "description": "摩托车手",
+        "skill": "摩托车手凛的生命值在 150 点以上时，可将与角色同一轨道的 “Miss” 判定转化为 “Great” 判定，凛仍会受到该敌人造成的伤害，但受伤后的无敌时间增加 1 秒；生命值在 150 点及以下时，可将 “Great” 判定转化为 “Perfect” 判定，但无法获得无敌时间。此技能对乐谱（长按）和连打敌人无效。",
+        "skills": null,
+        "chipName": "头盔（狼人定制版）",
+        "chipDescription": "既掩盖了充满杀气的眼神，又突出了可爱的狼耳，粉丝+1！",
+        "cv": "内田爱美",
+        "cvs": null,
+        "expressions": [
+            [
+                "起风了……今天想去哪里转转？",
+                "轮胎、链条和离合器都要换新的，今天是能在工厂泡上一天的好日子～",
+                "你能看到自己的后脑勺吗？对吧，狼人也不知道狼变后的自己是什么样子……但我肯定是很凶的那种，你可要小心咯～"
+            ],
+            [
+                "这不是猫耳，那也不是狗尾巴。狼，狼听说过吗？",
+                "假道士又来找我麻烦，拜托，狼变和鬼上身根本不一样好不好……"
+            ],
+            [
+                "奖金当然是拿来改车……呃，又没钱了，\n下次比赛是几号来着？"
+            ],
+            [
+                "一个、两个、三个、四个……没有了吗？\n可以超越的人，已经。",
+                "下过雨的街道。黑衣女人的速度很快。追上她。",
+                "快的时候，月亮近。慢的时候，月亮远。"
+            ],
+            [
+                "要我教你怎么顺毛吗，从耳朵到尾巴……\n慢一点、温柔一点，对。",
+                "要是让我好好修理一下……\n你会比这辆车更听话吧？",
+                "你脖子上的伤……我咬的吗？说实话，对自己不记得的事情不想负责任呢～"
+            ]
+        ],
+        "reviewExpressions": null,
+        "skinNames": [
+            "默认"
+        ],
+        "catExpressions": null,
+        "foolishExpressions": null,
+        "listIndex": 0
+    }
 ]

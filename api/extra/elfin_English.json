@@ -83,5 +83,12 @@
 		"skill": "After first bursting into Fever mode, a random Neon Abyss collab character will hatch out of Neon Egg: R-6 can shield 50% damage every time you gets hurt; Saya can earn a 5% score bonus for each \"Perfect\" judgement; when holding Sheets (hold note), Lin can convert \"Miss\" into \"Great\", but this doesn't work on Sheets (hold note) and Mash Enemies.",
 		"chipName": "Unhatched Egg",
 		"chipDescription": "You will never arrive at the truth of \"what's in the egg.\" ( ﾟ∀。)"
+	},
+	{
+		"name": "BetaGo",
+		"description": "",
+		"skill": "Increases 50% EXP after clearing a stage; helps the character continue the game when the HP is 0, but the score won't be recorded in this state.",
+		"chipName": "TV",
+		"chipDescription": "The white collar dog behind the TV is doing the manual calculation of the escape routes for you. \nIf it doesn't work, go give it a whack!"
 	}
 ]
