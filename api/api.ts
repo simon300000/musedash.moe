@@ -90,7 +90,7 @@ let albumsObject: ReturnType<typeof parseAlbums>
 let ce: { c: Record<AvailableLocales, string[]>, e: Record<AvailableLocales, string[]> }
 
 const parseCe = async () => {
-  const c = Object.fromEntries(await Promise.all(availableLocales.map(async l => [l, JSON.parse(String(await readFile(join(__dirname, 'extra', `character_${l}.json`)))).map(({ cosName }) => cosName)])))
+  const c = Object.fromEntries(await Promise.all(availableLocales.map(async l => [l, JSON.parse(String(await readFile(join(__dirname, 'extra', `character_${l}.json`)))).map(({ characterName, cosName }) => `${characterName}·${cosName}`)])))
   const e = Object.fromEntries(await Promise.all(availableLocales.map(async l => [l, JSON.parse(String(await readFile(join(__dirname, 'extra', `elfin_${l}.json`)))).map(({ name }) => name)])))
   ce = { c, e }
 }
