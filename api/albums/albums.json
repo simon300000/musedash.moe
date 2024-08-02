@@ -30,6 +30,16 @@
       "free": false
   },
   {
+      "uid": "music_package_76",
+      "title": "暮 色 電 台 ＦＭ１０５",
+      "tag": "Theme",
+      "needPurchase": true,
+      "price": "¥18.00",
+      "jsonName": "ALBUM77",
+      "prefabsName": "AlbumDisco77",
+      "free": false
+  },
+  {
     "uid": "music_package_75",
     "title": "新手上路包",
     "tag": "Theme",

@@ -1144,8 +1144,7 @@
 		"callBackDifficulty1": "4",
 		"callBackDifficulty2": "6",
 		"callBackDifficulty3": "8",
-		"unlockLevel": "0",
-		"newMusic":true
+		"unlockLevel": "0"
 	},
 	{
 		"uid": "43-55",
@@ -1165,8 +1164,7 @@
 		"callBackDifficulty1": "3",
 		"callBackDifficulty2": "5",
 		"callBackDifficulty3": "9",
-		"unlockLevel": "0",
-		"newMusic":true
+		"unlockLevel": "0"
 	},
 	{
 		"uid": "43-56",
@@ -1186,8 +1184,7 @@
 		"callBackDifficulty1": "4",
 		"callBackDifficulty2": "7",
 		"callBackDifficulty3": "10",
-		"unlockLevel": "0",
-		"newMusic":true
+		"unlockLevel": "0"
 	},
 	{
 		"uid": "43-57",
@@ -1207,8 +1204,7 @@
 		"callBackDifficulty1": "4",
 		"callBackDifficulty2": "6",
 		"callBackDifficulty3": "9",
-		"unlockLevel": "0",
-		"newMusic":true
+		"unlockLevel": "0"
 	},
 	{
 		"uid": "43-58",
@@ -1228,13 +1224,12 @@
 		"callBackDifficulty1": "1",
 		"callBackDifficulty2": "3",
 		"callBackDifficulty3": "6",
-		"unlockLevel": "0",
-		"newMusic":true
+		"unlockLevel": "0"
 	},
 	{
 		"uid": "43-59",
-		"name": "心跳叮叮咚 iKz feat.Warma",
-		"author": "iKz",
+		"name": "心跳叮叮咚",
+		"author": "iKz feat.Warma",
 		"bpm": "198",
 		"music": "xintiao_dingdingdong_music",
 		"demo": "xintiao_dingdingdong_demo",
@@ -1249,8 +1244,7 @@
 		"callBackDifficulty1": "4",
 		"callBackDifficulty2": "6",
 		"callBackDifficulty3": "9",
-		"unlockLevel": "0",
-		"newMusic":true
+		"unlockLevel": "0"
 	}
 ]
 //注意!!! 在3.11版本, 当前的"补完计划"曲包添加了一个新的配置项(newMusic), 主要用于调整新增歌曲的展示.
