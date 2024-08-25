@@ -30,6 +30,16 @@
       "free": false
   },
   {
+      "uid": "music_package_77",
+      "title": "Let's 音游趴体！",
+      "tag": "Other",
+      "needPurchase": true,
+      "price": "¥25.00",
+      "jsonName": "ALBUM78",
+      "prefabsName": "AlbumDisco78",
+      "free": false
+  },
+  {
       "uid": "music_package_76",
       "title": "暮 色 電 台 ＦＭ１０５",
       "tag": "Theme",
