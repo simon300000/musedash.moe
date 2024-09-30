@@ -1874,9 +1874,9 @@
         "This is not the cat ear, and that is not the dog tail. Wolf, have you heard of the wolf?",
         "That fake exorcist master comes to trouble me again. Come on, the werewolf transformation has totally nothing to do with the spirit possession..."
       ],
-        [
-            "The bonus should definitely be used to modify my motorcycle... Uhm, my pocket is empty again. When will the next race be held?"
-        ],
+      [
+        "The bonus should definitely be used to modify my motorcycle... Uhm, my pocket is empty again. When will the next race be held?"
+      ],
       [
         "One, two, three, four... No more at all? Someone who I can surpass.",
         "The street is wet from the rain. That girl in black moves quite fast. I'll catch her up.",
@@ -1886,6 +1886,54 @@
         "Let me tell you how to comb my hair. From the ear to the tail... Take it slow and be gentler. That's right.",
         "If I fix you greatly... You can behave better than this motorcycle, can't you?",
         "The injury on your neck... was caused by my bite? To be honest, I don't want to take responsibility for something that I don't even remember~"
+      ]
+    ],
+    "reviewExpressions": null,
+    "skinNames": [
+      "Default"
+    ],
+    "catExpressions": null,
+    "foolishExpressions": null,
+    "listIndex": 0
+  },
+  {
+    "characterName": "Marija",
+    "cosName": "Mechanical Ballerina",
+    "cosNames": null,
+    "description": "Mechanical Ballerina",
+    "skill": "Mechanical Ballerina Marija will automatically receive Fever Energy over time. The higher the difficulty of the stage, the quicker the speed of Fever Energy accumulation. However, Marija will receive no Fever Energy when she repels the enemy.",
+    "skills": null,
+    "chipName": "Cleaning Robot Cat",
+    "chipDescription": "An android pets a robot cat. Anything wrong?",
+    "cv": "Yoshika Akashi",
+    "cvs": null,
+    "expressions": [
+      [
+        "Rome wasn't built in a day. Behind every dance performance are thousands of code tests.",
+        "Build the stage? I can do it all alone. For the android, it's just like blowing off dust."
+      ],
+      [
+        "My movements are quite agile? Thanks, I only hit where it hurts."
+      ],
+      [
+        "Get some rest... How long does \"some\" mean?",
+        "All my targets were reached. Please set new targets for me.",
+        "I tried to add singing to the performance, but the audience accused me of lip-synching... Is it because my singing sounds exactly like the studio version?"
+      ],
+      [
+        "The Doctor is my lifesaver? No, I don't think an android will feel gratitude just because it hasn't been scrapped...",
+        "That mad scientist who's sitting on the UFO is the Doctor who modified me. She only creates pointless inventions.",
+        "That doll made for the Doctor melted under the scorching sun. Cotton candy is not the candy made of the cotton, but the cotton made of the candy..."
+      ],
+      [
+        "Humans show affection by adopting a close interpersonal distance. I see. But if it's getting too close, my cooling system may be out of order...",
+        "I'm replaying your gaming clip. Don't worry, I didn't edit your score... Need I?",
+        "It takes me more time to handle compliments than orders... Please wait a moment."
+      ]
+    ],
+    "autoExpressions": [
+      [
+        "Every time I meet with the Doctor, she adds some useless functions to me, such as the sweating simulator which leads to not only a waste of memory but also a short circuit. It may make me look like a human, but that doesn't mean I can become one."
       ]
     ],
     "reviewExpressions": null,
