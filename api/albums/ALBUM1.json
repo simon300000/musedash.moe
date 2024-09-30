@@ -716,9 +716,11 @@
 		"difficulty1": "4",
 		"difficulty2": "6",
 		"difficulty3": "8",
+		"difficulty4": "10",
 		"callBackDifficulty1": "4",
 		"callBackDifficulty2": "6",
 		"callBackDifficulty3": "8",
+		"callBackDifficulty4": "10",
 		"unlockLevel": "32"
 	},
 	{

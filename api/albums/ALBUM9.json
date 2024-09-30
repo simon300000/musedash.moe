@@ -14,9 +14,11 @@
 		"difficulty1": "3",
 		"difficulty2": "5",
 		"difficulty3": "7",
+		"difficulty4": "10",
 		"callBackDifficulty1": "3",
 		"callBackDifficulty2": "5",
 		"callBackDifficulty3": "7",
+		"callBackDifficulty4": "10",
 		"unlockLevel": "0"
 	},
 	{

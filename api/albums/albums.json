@@ -30,6 +30,16 @@
       "free": false
   },
   {
+      "uid": "music_package_78",
+      "title": "无尽旋舞",
+      "tag": "Theme",
+      "needPurchase": true,
+      "price": "¥40.00",
+      "jsonName": "ALBUM79",
+      "prefabsName": "AlbumDisco79",
+      "free": false
+  },
+  {
       "uid": "music_package_77",
       "title": "Let's 音游趴体！",
       "tag": "Other",
