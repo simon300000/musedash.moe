@@ -1,7 +1,7 @@
 export const loadCover = name => {
   try {
-    return require(`@/covers/${name}.png`)
+    return require(`@/covers/${name}.webp`)
   } catch (_) {
-    return `/covers/${name}.png`
+    return `/covers/${name}.webp`
   }
 }

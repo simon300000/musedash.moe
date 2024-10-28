@@ -15,7 +15,7 @@ precacheAndRoute(self.__WB_MANIFEST)
 registerRoute(/https:\/\/api\.musedash\.moe/, new NetworkFirst())
 
 registerRoute(
-  /\/covers\/.*\.hash\..*\.png$/,
+  /\/covers\/.*\.hash\..*\.webp$/,
   new CacheFirst({
     cacheName: 'hashCovers',
     plugins: [
