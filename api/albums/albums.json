@@ -30,6 +30,16 @@
       "free": false
   },
   {
+      "uid": "music_package_79",
+      "title": "花雨合奏秘闻",
+      "tag": "Other",
+      "needPurchase": true,
+      "price": "¥18.00",
+      "jsonName": "ALBUM80",
+      "prefabsName": "AlbumDisco80",
+      "free": false
+  },
+  {
       "uid": "music_package_78",
       "title": "无尽旋舞",
       "tag": "Theme",
