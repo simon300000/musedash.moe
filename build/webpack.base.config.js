@@ -97,10 +97,10 @@ export default merge(process.env.development ? devConfig : prodConfig, {
         }
       },
       {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        test: /\.(png|jpe?g|gif|svg|webp)(\?.*)?$/,
         oneOf: [
           {
-            test: /covers\/.*_cover\.png$/,
+            test: /covers\/.*_cover\.webp$/,
             use: [
               {
                 loader: 'file-loader',
