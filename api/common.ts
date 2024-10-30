@@ -7,8 +7,8 @@ type PlayerType = AbstractSublevel<any, any, string, PlayerValue>
 
 export const wait = (ms: number): Promise<void> => new Promise(resolve => setTimeout(resolve, ms))
 
-export const resultWithHistory = <U extends { user: { user_id: string } }, T extends U,>({ result, current }: { result: T[], current: U[] }): U[] => {
-  const currentUidRank: string[] = current.map(({ user }) => user.user_id)
+export const resultWithHistory = <U extends { user: { user_id: string | number } }, T extends U,>({ result, current }: { result: T[], current: U[] }): U[] => {
+  const currentUidRank: (string | number)[] = current.map(({ user }) => user.user_id)
 
   return result.map(r => {
     if (currentUidRank.length) {

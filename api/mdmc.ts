@@ -1,10 +1,7 @@
 import { isMainThread, Worker, parentPort } from 'node:worker_threads'
-import { createHash } from 'node:crypto'
 import { EventEmitter } from 'node:events'
 
 import Router from '@koa/router'
-
-import AdmZip from 'adm-zip'
 
 import { mdmc as db } from './database.js'
 
@@ -27,61 +24,42 @@ export const player = db.sublevel<string, PlayerValue>('player', { valueEncoding
 const search = db.sublevel<string, string>('search', { valueEncoding: 'json' })
 
 const MUSIC_KEY = 'musics'
-const musicsDB = db.sublevel<typeof MUSIC_KEY, MusicAPIResult>('musics', { valueEncoding: 'json' })
+const musicsDB = db.sublevel<typeof MUSIC_KEY, MusicResult>('musics', { valueEncoding: 'json' })
 
 const refreshMusics = async () => {
-  await musicsDB.put(MUSIC_KEY, await downloadSongs())
+  const musics = (await downloadSongs())
+  const list = musics.map(({ sheets, ...rest }) => {
+    const difficultiesMap = Object.fromEntries(sheets.map(({ difficulty, map }) => [map - 1, difficulty]))
+    const hashMap = Object.fromEntries(sheets.map(({ hash, map }) => [map - 1, hash]))
+    const difficulties = Array(4).fill(0).map((_, i) => difficultiesMap[i] || '0') as [string, string, string, string]
+    const hashs = Array(4).fill(0).map((_, i) => hashMap[i] || undefined) as [string, string, string, string]
+    return {
+      ...rest,
+      difficulties,
+      sheets,
+      hashs
+    }
+  })
+  await musicsDB.put(MUSIC_KEY, list)
   log('Reload Musics')
-}
-
-const downloadMap = async (id: number) => fetch(`https://mdmc.moe/download/${id}`).then(w => w.arrayBuffer())
-
-const readZipFileAsync = (zip: AdmZip, name: string) => new Promise<Buffer>(resolve => zip.readFileAsync(name, (buffer, error) => {
-  if (error) {
-    resolve(undefined)
-  } else {
-    resolve(buffer)
-  }
-}))
-
-const bufferToHash = (buffer: Buffer) => buffer && createHash('md5').update(buffer).digest('hex')
-
-const getHashs = async (id: number) => {
-  const buffer = await downloadMap(id)
-  const zip = new AdmZip(Buffer.from(buffer))
-  const bmsBuffer = await Promise.all(DIFFICULTIES.map(level => readZipFileAsync(zip, `map${level}.bms`)))
-  return bmsBuffer.map(bufferToHash) as [string, string, string, string]
 }
 
 const makeList = async () => {
   const musics = await musicsDB.get(MUSIC_KEY)
 
   return musics
-    .map(({ id, ...rest }) => ({
-      id,
-      ...rest,
-      hashs: getHashs(id)
-        .catch(e => {
-          error(`hash error: ${id}, ${e}`)
-          return []
-        })
-    }))
-    .flatMap(({ name, id, difficulties, hashs }) => DIFFICULTIES.map((_, i) => ({ name, hash: hashs.then(hs => hs[i]), difficulty: i, id, level: difficulties[i] })))
-    .filter(({ level }) => level !== '0')
+    .flatMap(({ title: name, _id: id, hashs }) => DIFFICULTIES.map((_, i) => ({ name, hash: hashs[i], difficulty: i, id })))
+    .filter(({ hash }) => hash)
 }
 
-const downloadSongs = () => fetch('https://mdmc.moe/api/v1/charts').then<MusicAPIResult>(w => w.json())
+const downloadSongs = () => fetch('https://api.mdmc.moe/v2/charts/ranked').then<MusicAPIResult>(w => w.json())
 
-const downloadCore = async ({ hash }: { hash: Promise<string> }) => {
-  const h = await hash
-  if (!h) {
-    throw new Error('No hash')
-  }
-  const w = await fetch(`https://mdmc.moe/api/v1/charts/md?bms_id=${h}`).then<APIResults>(p => p.json())
-  return w.result.map(({ user: { discord_id, ...restUser }, ...rest }) => ({ ...rest, user: { ...restUser, user_id: discord_id } }))
+const downloadCore = async ({ hash }: { hash: string }) => {
+  const w = await fetch(`https://api.mdmc.moe/v2/hq/md?bms_id=${hash}`).then<APIResults>(p => p.json())
+  return w.result
 }
 
-const core = async ({ name, id, difficulty, l, hash }: MusicCore & { l: { i: number }, hash: Promise<string> }) => {
+const core = async ({ name, id, difficulty, l, hash }: MusicCore & { l: { i: number }, hash: string }) => {
   const s = `${name} - ${difficulty}`
   const result = await downloadCore({ hash }).catch(() => {
     error(`Skip: ${s} - Failed`)
@@ -103,9 +81,9 @@ const core = async ({ name, id, difficulty, l, hash }: MusicCore & { l: { i: num
 const analyze = async (results: (RankCode & { value: RankValue[] })[]) => {
   const batch = await Object.entries(results
     .reduce((r, { id, difficulty, value }) => value
-      .reduce((rr, { user: { user_id, nickname }, history, play: { score, acc, character_uid, elfin_uid } }, i) => {
+      .reduce((rr, { user: { user_id, ...restUser }, history, play: { score, acc, character_uid, elfin_uid } }, i) => {
         if (!rr[user_id]) {
-          rr[user_id] = { user: { user_id, nickname }, plays: [] }
+          rr[user_id] = { user: { user_id, ...restUser }, plays: [] }
         }
         rr[user_id].plays.push({ id, history, score, acc, difficulty, i, character_uid, elfin_uid })
         return rr
@@ -124,7 +102,7 @@ const mal = async () => {
   const list = await makeList()
   const l = { i: list.length }
 
-  const results = await Promise.all(list.map(w => ({ ...w, l })).map(core))
+  const results = await list.map(w => ({ ...w, l })).reduce(async (p, w) => [...await p, await core(w)], Promise.resolve([] as (RankCode & { value: RankValue[] })[]))
   log('Downloaded')
 
   await analyze(results)
@@ -168,7 +146,7 @@ export const router = new Router({
 
 router.get('/musics', async (ctx: any) => {
   const musicsRaw = await musicsDB.get(MUSIC_KEY)
-  const musics: Musics = musicsRaw.map(({ id, name, author, charter, bpm, difficulties }) => ({ id, name, author, levelDesigner: charter, bpm, difficulty1: difficulties[0], difficulty2: difficulties[1], difficulty3: difficulties[2], difficulty4: difficulties[3] }))
+  const musics: Musics = musicsRaw.map(({ _id: id, title: name, artist: author, charter, bpm, difficulties }) => ({ id, name, author, levelDesigner: charter, bpm, difficulty1: difficulties[0], difficulty2: difficulties[1], difficulty3: difficulties[2], difficulty4: difficulties[3] }))
   ctx.body = musics
 })
 
@@ -187,7 +165,7 @@ router.get('/search/:string', async ctx => {
   ctx.body = await searchF({ search, q: ctx.params.string })
 })
 
-type MusicAPIResult = {
+type MusicAPI = {
   analytics: {
     likes: string[]
     plays: number
@@ -195,15 +173,31 @@ type MusicAPIResult = {
     downloads: number
   }
   _id: string
-  id: number
-  name: string
-  author: string
+  title: string
+  artist: string
   bpm: string
-  difficulties: [string, string, string, string]
   charter: string
-  charter_id: [string]
+  length: number
+  owner_uid: number
+  sheets: {
+    _id: string
+    charter: string
+    difficulty: string
+    hash: string
+    map: 1 | 2 | 3 | 4
+  }[]
+  ranked: boolean
+  searchTags: string[]
+  timestamp: string
   __v: number
-}[]
+}
+
+type MusicAPIResult = MusicAPI[]
+
+type MusicResult = (MusicAPI & {
+  hashs: [string, string, string, string]
+  difficulties: [string, string, string, string]
+})[]
 
 type Musics = {
   name: string
@@ -214,38 +208,33 @@ type Musics = {
   difficulty2: string
   difficulty3: string
   difficulty4: string
-  id: number
+  id: string
 }[]
 
 type Play = {
   acc: number
   bms_id: string
-  character_uid: string
+  character_uid: number
   combo: number
-  elfin_uid: string
+  elfin_uid: number
   score: number
-  user_id: '0'
-  music_uid: ''
-  music_difficulty: number
+  user_id: number
+  music_uid: string
+  music_difficulty: string
   miss: number
   judge: string
   visible: boolean
 }
 
-type UserRaw = {
-  nickname: string
-  user_id: '0'
-  discord_id: string
-}
-
 type User = {
   nickname: string
-  user_id: string
+  user_id: number
+  discord_id: string
 }
 
 type APIResult = {
   play: Play
-  user: UserRaw
+  user: User
 }
 
 type APIResults = {
@@ -256,11 +245,13 @@ type APIResults = {
   }
   result: APIResult[]
   total: number
+  ranked: boolean
+  can_earn_mp: boolean
 }
 
 type RankCode = {
   difficulty: number
-  id: number
+  id: string
 }
 
 type MusicCore = RankCode & {

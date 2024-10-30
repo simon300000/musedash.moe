@@ -3,7 +3,7 @@
   <div class="level-left">
     <div class="level-item">
       <figure class="image is-128x128">
-        <img class="is-rounded" :src="props.src" :alt="props.src">
+        <img class="is-rounded" :src="props.src" :alt="props.src" referrerpolicy="no-referrer">
       </figure>
     </div>
   </div>
