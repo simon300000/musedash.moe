@@ -55,7 +55,7 @@ const makeList = async () => {
 const downloadSongs = () => fetch('https://api.mdmc.moe/v2/charts/ranked').then<MusicAPIResult>(w => w.json())
 
 const downloadCore = async ({ hash }: { hash: string }) => {
-  const w = await fetch(`https://api.mdmc.moe/v2/hq/md?bms_id=${hash}`).then<APIResults>(p => p.json())
+  const w = await fetch(`https://api.mdmc.moe/v2/hq/md?bms_id=${hash}&limit=2000`).then<APIResults>(p => p.json())
   return w.result
 }
 
