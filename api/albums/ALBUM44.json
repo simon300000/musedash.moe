@@ -1245,6 +1245,32 @@
 		"callBackDifficulty2": "6",
 		"callBackDifficulty3": "9",
 		"unlockLevel": "0"
+	},
+	{
+		"uid": "43-60",
+		"name": "Necromantic",
+		"author": "暁Records",
+		"bpm": "144",
+		"music": "necromantic_music",
+		"demo": "necromantic_demo",
+		"cover": "necromantic_cover",
+		"hexieCover": "",
+		"noteJson": "necromantic_map",
+		"scene": "scene_08",
+		"levelDesigner1": "dokidoki",
+		"levelDesigner2": "wakuwaku",
+		"levelDesigner3": "one more time",
+		"levelDesigner5": "未知谱作者",
+		"difficulty1": "6",
+		"difficulty2": "8",
+		"difficulty3": "10",
+		"difficulty5": "H",
+		"callBackDifficulty1": "6",
+		"callBackDifficulty2": "8",
+		"callBackDifficulty3": "10",
+		"callBackDifficulty5": "-1",
+		"unlockLevel": "0",
+		"newMusic": true
 	}
 ]
 //注意!!! 在3.11版本, 当前的"补完计划"曲包添加了一个新的配置项(newMusic), 主要用于调整新增歌曲的展示.

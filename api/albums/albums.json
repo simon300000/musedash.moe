@@ -30,6 +30,16 @@
       "free": false
   },
   {
+      "uid": "music_package_80",
+      "title": "东方暮乐团 -肆-",
+      "tag": "Other",
+      "needPurchase": true,
+      "price": "¥25.00",
+      "jsonName": "ALBUM81",
+      "prefabsName": "AlbumDisco81",
+      "free": false
+  },
+  {
       "uid": "music_package_79",
       "title": "花雨合奏秘闻",
       "tag": "Other",
