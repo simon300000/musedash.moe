@@ -30,6 +30,16 @@
       "free": false
   },
   {
+      "uid": "music_package_81",
+      "title": "MD 级战术教育光盘",
+      "tag": "Other",
+      "needPurchase": true,
+      "price": "¥18.00",
+      "jsonName": "ALBUM82",
+      "prefabsName": "AlbumDisco82",
+      "free": false
+  },
+  {
       "uid": "music_package_80",
       "title": "东方暮乐团 -肆-",
       "tag": "Other",

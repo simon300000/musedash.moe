@@ -1269,8 +1269,7 @@
 		"callBackDifficulty2": "8",
 		"callBackDifficulty3": "10",
 		"callBackDifficulty5": "-1",
-		"unlockLevel": "0",
-		"newMusic": true
+		"unlockLevel": "0"
 	}
 ]
 //注意!!! 在3.11版本, 当前的"补完计划"曲包添加了一个新的配置项(newMusic), 主要用于调整新增歌曲的展示.
