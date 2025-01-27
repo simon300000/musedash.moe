@@ -30,6 +30,16 @@
       "free": false
   },
   {
+      "uid": "music_package_82",
+      "title": "MSR特选曲目组合包_Vol.02",
+      "tag": "Other",
+      "needPurchase": true,
+      "price": "¥40.00",
+      "jsonName": "ALBUM83",
+      "prefabsName": "AlbumDisco83",
+      "free": false
+  },
+  {
       "uid": "music_package_81",
       "title": "MD 级战术教育光盘",
       "tag": "Other",
@@ -271,7 +281,7 @@
   },
   {
       "uid": "music_package_59",
-      "title": "MSR 特选曲目组合包",
+      "title": "MSR特选曲目组合包_Vol.01",
       "tag": "Other",
       "needPurchase": true,
       "price": "¥40.00",

@@ -99,6 +99,7 @@
         "Tut-tut... You... Little loach..."
       ]
     ],
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -175,6 +176,7 @@
       ]
     ],
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -251,6 +253,7 @@
       ]
     ],
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -327,6 +330,7 @@
       ]
     ],
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -429,6 +433,7 @@
         "Can Bubu's biceps…… be your home? "
       ]
     ],
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -505,6 +510,7 @@
       ]
     ],
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -581,6 +587,7 @@
       ]
     ],
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -638,7 +645,7 @@
       [
         "I know you're cheering for me, but it's too...too passionate!",
         "... Huh? This is for the performance! H-haven't you seen it before? ><",
-        "I… I don’t know how to do that… Y-you can't demand something that I don't know how to do! ><"
+        "I… I don't know how to do that… Y-you can't demand something that I don't know how to do! ><"
       ]
     ],
     "skinNames": [
@@ -657,6 +664,7 @@
       ]
     ],
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -671,7 +679,7 @@
     "skill": "When combo is less than 100, Violinist Marija's \"Miss\" judgement won't interrupt the combo.",
     "skills": [
       "When combo is less than 100, Violinist Marija's \"Miss\" judgement won't interrupt the combo.",
-      "When nya combo is less than 100,\nViolinst Marija Nya's \"Miss\" nya judgement won't interrupt the nya combo!",
+      "When nya combo is less than 100,Violinst Marija Nya's \"Miss\" nya judgement won't interrupt the nya combo!",
       "Here is Muse Warrior; Muse Warrior wraps the gear with love and gets defeated; the violinist returns! (Alive for a total of 4 seconds)"
     ],
     "chipName": "Marija's diary",
@@ -754,11 +762,12 @@
         "Can't you delete the f**k hammer?"
       ],
       [
-        "What do I like about darling?\n None, but I like darling////",
-        "The way darling can't do anything……\n How adorable////",
+        "What do I like about darling? None, but I like darling////",
+        "The way darling can't do anything…… How adorable////",
         "Darling…… Darling……"
       ]
     ],
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -835,6 +844,7 @@
       ]
     ],
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -911,6 +921,7 @@
       ]
     ],
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -987,6 +998,7 @@
       ]
     ],
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1063,6 +1075,7 @@
       ]
     ],
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1139,6 +1152,7 @@
       ]
     ],
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1164,7 +1178,7 @@
         "I have pet, well, an electronic one."
       ],
       [
-        "That's an earphone not ears, \nall right?",
+        "That's an earphone not ears, all right?",
         "It's far better to stay alone, you dummies.",
         "Milks are for kids, we grown-ups prefer coffee! ...ugh...that's terrible."
       ],
@@ -1186,7 +1200,7 @@
         "I have pet, well, an electronic one."
       ],
       [
-        "That's an earphone not ears, \nall right?",
+        "That's an earphone not ears, all right?",
         "It's far better to stay alone, you dummies.",
         "Milks are for kids, we grown-ups prefer coffee! ...ugh...that's terrible."
       ],
@@ -1202,6 +1216,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1264,6 +1279,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1279,18 +1295,18 @@
     "cvs": null,
     "expressions": [
       [
-        "Yeah! NEKO is chosen again!Hmm... \nWhy did I say again?",
+        "Yeah! NEKO is chosen again!Hmm... Why did I say again?",
         "NEKO is taking the top of this leaderboard!",
         "Chit-chat time~"
       ],
       [
         "What the...? Who did you say is a wildcat? ",
-        "What's your problem? \nNEKO is busy, go away.",
-        "The signal is so bad here!\n I can't scroll through iM..."
+        "What's your problem? NEKO is busy, go away.",
+        "The signal is so bad here! I can't scroll through iM..."
       ],
       [
-        "The girls are so cute here~ \nWho do we start with... heheheh",
-        "Though MeowBot is always the cutest, \nthis Muse is really lovely!",
+        "The girls are so cute here~ Who do we start with... heheheh",
+        "Though MeowBot is always the cutest, this Muse is really lovely!",
         "Beating up monsters feels shockingly good?! Taste more of my meow meow punch!"
       ],
       [
@@ -1301,18 +1317,18 @@
     ],
     "reviewExpressions": [
       [
-        "Yeah! NEKO is chosen again!Hmm... \nWhy did I say again?",
+        "Yeah! NEKO is chosen again!Hmm... Why did I say again?",
         "NEKO is taking the top of this leaderboard!",
         "Chit-chat time~"
       ],
       [
         "What the...? Who did you say is a wildcat? ",
-        "What's your problem? \nNEKO is busy, go away.",
-        "The signal is so bad here!\n I can't scroll through iM..."
+        "What's your problem? NEKO is busy, go away.",
+        "The signal is so bad here! I can't scroll through iM..."
       ],
       [
-        "The girls are so cute here~ \nWho do we start with... heheheh",
-        "Though MeowBot is always the cutest, \nthis Muse is really lovely!",
+        "The girls are so cute here~ Who do we start with... heheheh",
+        "Though MeowBot is always the cutest, this Muse is really lovely!",
         "Beating up monsters feels shockingly good?! Taste more of my meow meow punch!"
       ],
       [
@@ -1326,6 +1342,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1360,7 +1377,7 @@
         "Hmm... Running out of ideas... Might as well put this in."
       ],
       [
-        ":( Your character has encountered an voicing issue.\nError Code: peroperoispoor\nPlease try buying music packs to support the devs."
+        ":( Your character has encountered an voicing issue.Error Code: peroperoispoorPlease try buying music packs to support the devs."
       ]
     ],
     "reviewExpressions": [
@@ -1384,7 +1401,7 @@
         "Hmm... Running out of ideas... Might as well put this in."
       ],
       [
-        ":( Your character has encountered an voicing issue.\nError Code: peroperoispoor\nPlease try buying music packs to support the devs."
+        ":( Your character has encountered an voicing issue.Error Code: peroperoispoorPlease try buying music packs to support the devs."
       ]
     ],
     "skinNames": [
@@ -1392,6 +1409,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1462,6 +1480,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1540,6 +1559,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1550,7 +1570,7 @@
     "skill": "Sister Marija will swap the locations of enemies in the sky and on the ground. Specifically, raiders, hanging hammers, and ordinary obstacles (gears) will be rolled over.",
     "skills": null,
     "chipName": "Star Pendant",
-    "chipDescription": "She finds the star shape more adorable for it’s a symbol of her belief.",
+    "chipDescription": "She finds the star shape more adorable for it's a symbol of her belief.",
     "cv": "Yoshika Akashi",
     "cvs": null,
     "expressions": [
@@ -1589,6 +1609,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1604,7 +1625,7 @@
     "cvs": null,
     "expressions": [
       [
-        "I am the Great Magician—Kirisame Marisa! … Huh? You didn’t think it was me?"
+        "I am the Great Magician—Kirisame Marisa! … Huh? You didn't think it was me?"
       ],
       [
         "Not like someone, if your request brings me fun, I won't charge you ~ ☆",
@@ -1632,6 +1653,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1677,6 +1699,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1703,7 +1726,7 @@
       ],
       [
         "Stamina—As long as I have it, I can take care of all my enemies! You should get more exercise like me, partner!",
-        "Bear, sanjou! How about that? I'm a copycat? It’s not that obvious!"
+        "Bear, sanjou! How about that? I'm a copycat? It's not that obvious!"
       ],
       [
         "Sis is in that bear in pink braces? It can't be! Wait a minute, let me look again...?"
@@ -1720,6 +1743,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1730,7 +1754,7 @@
     "skill": "Exorcist Master Buro will first consume Fever Energy every time she gets hurt. When Fever Mode is active, defeating enemies grants 30% bonus scores.",
     "skills": null,
     "chipName": "Serious Sunglasses",
-    "chipDescription": "The switch to turn on the streamer's serious mode, \nwith cracks indicating the end of it.",
+    "chipDescription": "The switch to turn on the streamer's serious mode, with cracks indicating the end of it.",
     "cv": "Mao Amatsuka",
     "cvs": null,
     "expressions": [
@@ -1765,6 +1789,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1780,26 +1805,26 @@
     "cvs": null,
     "expressions": [
       [
-        "Be it a 2- or 24-hour concert, \njust leave it to me!",
-        "This new suit looks so cute, \ndoesn't it? Look at this Muse-bag... \nIt tells me what the next song is!"
+        "Be it a 2- or 24-hour concert, just leave it to me!",
+        "This new suit looks so cute, doesn't it? Look at this Muse-bag... It tells me what the next song is!"
       ],
       [
-        "I'll take part in Buro's Gourmet \nand Music Festival as a representative of Team Leek\n—there's no such team?!"
+        "I'll take part in Buro's Gourmet and Music Festival as a representative of Team Leek—there's no such team?!"
       ],
       [
-        "I'm so glad to hear that \nmy live performance stopped troublemaking monsters from fighting~",
-        "I can feel your passion \nfor music while watching you challenge the stage again and again... \nI have the same feelings as you!",
-        "Here I encountered you, \nfound new songs, and made new friends... \nI have gained so much!"
+        "I'm so glad to hear that my live performance stopped troublemaking monsters from fighting~",
+        "I can feel your passion for music while watching you challenge the stage again and again... I have the same feelings as you!",
+        "Here I encountered you, found new songs, and made new friends... I have gained so much!"
       ],
       [
-        "I just forgot what I wanted to say after I opened my mouth.\n Maybe I can remember it after a meal. \nOkay, let's eat something—",
-        "During my live performance, \na flying cat threw me a fish. \nIs that a gift for me?",
-        "A ghost came to me for a photo. \nIt looked so happy despite the fact that \nthere's only me in it..."
+        "I just forgot what I wanted to say after I opened my mouth. Maybe I can remember it after a meal. Okay, let's eat something—",
+        "During my live performance, a flying cat threw me a fish. Is that a gift for me?",
+        "A ghost came to me for a photo. It looked so happy despite the fact that there's only me in it..."
       ],
       [
         "Let me convey the words in your heart by singing...",
-        "Luka-san is so attractive on stage. \nWhen I met her eyes, \nher wink almost made me forget the lyrics...",
-        "Let me perform your favorite song! Why?\n Because I want to know more about... you."
+        "Luka-san is so attractive on stage. When I met her eyes, her wink almost made me forget the lyrics...",
+        "Let me perform your favorite song! Why? Because I want to know more about... you."
       ]
     ],
     "reviewExpressions": null,
@@ -1808,6 +1833,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1842,7 +1868,7 @@
       [
         "I will find you from the stage, don't you look around!<=>She means please keep your eyes on us!",
         "It's a little bit weird to have new clothes on. I can't help but look in the mirror...<=>She means she really likes the new clothes, and me too!",
-        "There is a bewildering variety of songs...\n Good, we can show our charms in all aspects!<=>That means... We really had fun, thank you!"
+        "There is a bewildering variety of songs... Good, we can show our charms in all aspects!<=>That means... We really had fun, thank you!"
       ]
     ],
     "reviewExpressions": null,
@@ -1851,6 +1877,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1894,6 +1921,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1931,9 +1959,52 @@
         "It takes me more time to handle compliments than orders... Please wait a moment."
       ]
     ],
+    "reviewExpressions": null,
+    "skinNames": [
+      "Default"
+    ],
+    "catExpressions": null,
+    "foolishExpressions": null,
     "autoExpressions": [
       [
         "Every time I meet with the Doctor, she adds some useless functions to me, such as the sweating simulator which leads to not only a waste of memory but also a short circuit. It may make me look like a human, but that doesn't mean I can become one."
+      ]
+    ],
+    "listIndex": 0
+  },
+  {
+    "characterName": "Wiš'adel",
+    "cosName": "Sarkaz Mercenary",
+    "cosNames": null,
+    "description": "Sarkaz Mercenary",
+    "skill": "Wiš'adel has 6 C4 bombs that need to be actively detonated. Within 5 seconds after detonating a bomb, all \"Miss\" and \"Great\" judgments in the sky track will be converted to \"Perfect\", and all enemies on the ground track cannot cause damage to her. As a price, Wiš'adel can not gain Fever energy in game.",
+    "skills": null,
+    "chipName": "Grinny Grenade",
+    "chipDescription": "Proudly displaying the creator's mark—because you won't get a chance to settle the score with her now—BOOM!",
+    "cv": "Ayana Taketatsu",
+    "cvs": null,
+    "expressions": [
+      [
+        "A little music makes you jumpy? What happened to that Doctor who loves going in guns blazing?",
+        "Leave those sweet, cozy concerts to the little bunny. I'm not here to make friends.",
+        "The more monsters, the better it feels to blow them up, huh? No wonder you love those tough missions."
+      ],
+      [
+        "Pump up the volume! The Revenant won't shut up.",
+        "That Exorcist chose to cycle through my minefield. I was just being strategically prepared!",
+        "That part-timer's outfit needs Ines's emergency tailoring—even mercenaries dress better than that!"
+      ],
+      [
+        "Today, I enlightened 200 little monsters with the legend of Theresa—the one and only King of Sarkaz! That's right, following Her Highness is your duty!",
+        "That boxing bear? One Revenant blast and KABOOM! Come on, who could resist taking a shot at a white bear that spits out gold coins?",
+        "No paperwork, no briefings—just pure instinct guiding the fight. Now this is my kind of place!"
+      ],
+      [
+        "Who says I can't read music? You're just playing with the bunny's powers, aren't you?",
+        "Why isn't the Doctor heading that way? Have my bomb spots been found out?"
+      ],
+      [
+        "You swiped the potatoes I just cooked, didn't you? If you're that hungry, I've got something with extra heat for you."
       ]
     ],
     "reviewExpressions": null,
@@ -1942,6 +2013,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   }
 ]

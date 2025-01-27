@@ -99,6 +99,7 @@
         "쳇...... 이....... 미꾸라지 같으니......"
       ]
     ],
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -175,6 +176,7 @@
       ]
     ],
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -255,6 +257,7 @@
       ]
     ],
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -331,6 +334,7 @@
       ]
     ],
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -433,6 +437,7 @@
         "부로의 이두박근은......너의 집이 될 수 있쓸까? "
       ]
     ],
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -509,6 +514,7 @@
       ]
     ],
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -585,6 +591,7 @@
       ]
     ],
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -661,6 +668,7 @@
       ]
     ],
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -763,6 +771,7 @@
         "달링...... 달링...... "
       ]
     ],
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -839,6 +848,7 @@
       ]
     ],
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -915,6 +925,7 @@
       ]
     ],
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -991,6 +1002,7 @@
       ]
     ],
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1067,6 +1079,7 @@
       ]
     ],
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1143,6 +1156,7 @@
       ]
     ],
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1206,6 +1220,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1268,6 +1283,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1330,6 +1346,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1364,7 +1381,7 @@
         "대사 짜기 귀찮아, 대충 때우ㅓ."
       ],
       [
-        ":( 오류: 당신의 캐릭터는 음성 파일이 부족합니다. 오류 코드: peroperoispoor\n음악 팩을 구매하셔서 개발진을 도와주세요."
+        ":( 오류: 당신의 캐릭터는 음성 파일이 부족합니다. 오류 코드: peroperoispoor음악 팩을 구매하셔서 개발진을 도와주세요."
       ]
     ],
     "reviewExpressions": [
@@ -1388,7 +1405,7 @@
         "대사 짜기 귀찮아, 대충 때우ㅓ."
       ],
       [
-        ":( 오류: 당신의 캐릭터는 음성 파일이 부족합니다. 오류 코드: peroperoispoor\n음악 팩을 구매하셔서 개발진을 도와주세요."
+        ":( 오류: 당신의 캐릭터는 음성 파일이 부족합니다. 오류 코드: peroperoispoor음악 팩을 구매하셔서 개발진을 도와주세요."
       ]
     ],
     "skinNames": [
@@ -1396,6 +1413,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1466,6 +1484,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1544,6 +1563,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1593,6 +1613,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1603,7 +1624,7 @@
     "skill": "마리사는 공중에서 자동으로 내려오지 않습니다. 동시에 음표 획득 및 생명치 충만 후 하트 획득 시 득점이 200% 증가됩니다.",
     "skills": null,
     "chipName": "미니 팔괴로",
-    "chipDescription": "버섯을 넣으면 레이저를 발사할 수 있는 수제 마법 도구입니다. \n위력이 엄청나니--이렇게 환상향까지 통하는 길을 터트려 내면 되겠지!",
+    "chipDescription": "버섯을 넣으면 레이저를 발사할 수 있는 수제 마법 도구입니다. 위력이 엄청나니--이렇게 환상향까지 통하는 길을 터트려 내면 되겠지!",
     "cv": "Machico",
     "cvs": null,
     "expressions": [
@@ -1636,6 +1657,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1681,6 +1703,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1724,6 +1747,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1734,7 +1758,7 @@
     "skill": "도사 부로는 매 부상 시, 먼저 Fever 에너지를 소모합니다. Fever 기간에 적 퇴치에 성공 시 30%의 추가 점수를 획득하게 됩니다.",
     "skills": null,
     "chipName": "진지 선글라스",
-    "chipDescription": "스트리머가 진지모드에 들어가는 스위치는 보통 금이 \n가는 것으로 진지모드의 종료를 알립니다.",
+    "chipDescription": "스트리머가 진지모드에 들어가는 스위치는 보통 금이 가는 것으로 진지모드의 종료를 알립니다.",
     "cv": "아마츠카 마오",
     "cvs": null,
     "expressions": [
@@ -1769,6 +1793,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1779,31 +1804,31 @@
     "skill": "하츠네 미쿠는 위아래 궤도를 구분하지 않고 모든 적과 악보(롱 노트)를 터치할 수 있으며, 음표, 하트, 장애물에는 효과가 없습니다. ",
     "skills": null,
     "chipName": "마이크",
-    "chipDescription": "노랫소리를 전 우주에 울려 퍼지게 하는 힘을 가지고 있지만, \n대파처럼 관객석으로 흩뿌려질 가능성도 없지 않아 있을걸?",
+    "chipDescription": "노랫소리를 전 우주에 울려 퍼지게 하는 힘을 가지고 있지만, 대파처럼 관객석으로 흩뿌려질 가능성도 없지 않아 있을걸?",
     "cv": "후지타 사키",
     "cvs": null,
     "expressions": [
       [
-        "2시간짜리 콘서트라고? \n24시간도 괜찮으니 나만 믿어줘요!",
-        "새 옷이 귀엽지 않나요~ \n특히 이 뮤즈 가방 말이에요......\n 이 가방이 다음 공연 곡을 바로바로 알려준다고요!"
+        "2시간짜리 콘서트라고? 24시간도 괜찮으니 나만 믿어줘요!",
+        "새 옷이 귀엽지 않나요~ 특히 이 뮤즈 가방 말이에요...... 이 가방이 다음 공연 곡을 바로바로 알려준다고요!"
       ],
       [
-        "부로의 푸드 뮤직 페스티벌, \n제가 대파 팀을 대표해서 참가할게요——\n이런 팀이 없다구요?!"
+        "부로의 푸드 뮤직 페스티벌, 제가 대파 팀을 대표해서 참가할게요——이런 팀이 없다구요?!"
       ],
       [
-        "듣자하니 제 라이브가 사고 치며 돌아다니는 몬스터들을 멈추게 한다던데, \n그것참 잘됐네요~",
-        "당신이 계속해서 스테이지에 도전하는 모습을 보니, \n당신의 음악에 대한 열정이 느껴져요...... \n저도 같은 마음이에요!",
-        "이곳에서 당신과 만나, \n새로운 음악을 듣고, \n새로운 친구도 사귀고...... \n그야말로 알차네요!"
+        "듣자하니 제 라이브가 사고 치며 돌아다니는 몬스터들을 멈추게 한다던데, 그것참 잘됐네요~",
+        "당신이 계속해서 스테이지에 도전하는 모습을 보니, 당신의 음악에 대한 열정이 느껴져요...... 저도 같은 마음이에요!",
+        "이곳에서 당신과 만나, 새로운 음악을 듣고, 새로운 친구도 사귀고...... 그야말로 알차네요!"
       ],
       [
-        "할 말이 입을 열자마자 잊어버렸어요, \n밥 한 끼 먹으면 생각이 난다던데, \n자, 우리 밥 먹으러 가요——",
-        "라이브 때 하늘을 나는 고양이가 물고기를 던져줬어요. \n이건 저에게 주는 선물일까요?",
-        "유령 팬분께서 같이 사진을 찍자고 했어요, \n사진에는 저만 나왔지만, \n그분은 엄청 즐거워하시더라고요......"
+        "할 말이 입을 열자마자 잊어버렸어요, 밥 한 끼 먹으면 생각이 난다던데, 자, 우리 밥 먹으러 가요——",
+        "라이브 때 하늘을 나는 고양이가 물고기를 던져줬어요. 이건 저에게 주는 선물일까요?",
+        "유령 팬분께서 같이 사진을 찍자고 했어요, 사진에는 저만 나왔지만, 그분은 엄청 즐거워하시더라고요......"
       ],
       [
-        "차마 하지 못한 말이 있으시다면, \n제가 노래로 전해 드릴게요......",
-        "무대 위의 루카 씨는 참 매력적이에요, \n눈길이 마주친 순간의 wink, \n다음 가사를 잊어버릴 뻔했어요......",
-        "좋아하시는 노래를 제가 연주해 드리죠! 왜요? \n좀 더 많이 알아가고 싶어서...... \n라고 해도 될까요."
+        "차마 하지 못한 말이 있으시다면, 제가 노래로 전해 드릴게요......",
+        "무대 위의 루카 씨는 참 매력적이에요, 눈길이 마주친 순간의 wink, 다음 가사를 잊어버릴 뻔했어요......",
+        "좋아하시는 노래를 제가 연주해 드리죠! 왜요? 좀 더 많이 알아가고 싶어서...... 라고 해도 될까요."
       ]
     ],
     "reviewExpressions": null,
@@ -1812,6 +1837,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1855,6 +1881,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1898,6 +1925,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   },
   {
@@ -1935,9 +1963,52 @@
         "명령보다 칭찬을 처리할 때 조금 더 시간이 걸려요... 잠시만 기다려 주시겠어요?"
       ]
     ],
+    "reviewExpressions": null,
+    "skinNames": [
+      "디폴트"
+    ],
+    "catExpressions": null,
+    "foolishExpressions": null,
     "autoExpressions": [
       [
         "박사님과 만날 때마다 저에게 사용하기 불편한 기능을 더해줘요. 예를 들면 땀이 흐르는 것을 모의하는 건 메모리를 낭비할 뿐만 아니라 몸체에 합선 문제도 일어날 수 있어요. 인간처럼 보인다고 인간이 될 수 있다는 건 아니죠."
+      ]
+    ],
+    "listIndex": 0
+  },
+  {
+    "characterName": "위셔델",
+    "cosName": "살카즈 용병",
+    "cosNames": null,
+    "description": "살카즈 용병",
+    "skill": "위셔델은 직접 폭파해야 하는 C4 폭탄 6개를 보유하고 있습니다. 폭발 5초 이내에 공중 궤도의 모든 \"Miss\"와 \"Great\"판정을 \"Perfect\"판정으로 변경하는 동시에 필드 내 모든 적은 위셔델에게 피해를 입힐 수 없습니다. 대가로 위셔델은 더 이상 Fever 에너지를 획득하지 못합니다.",
+    "skills": null,
+    "chipName": "웃음 수류탄",
+    "chipDescription": "제작자의 로고가 대담하게 새겨져 있다. 어차피 당신이 그녀에게 따질 기회는 없네——BOOM!",
+    "cv": "타케타츠 아야나",
+    "cvs": null,
+    "expressions": [
+      [
+        "음악 한 곡에 그렇게 긴장하다니, 공격적인 전술을 좋아하던 박사는 어디로 간 거지?",
+        "따뜻하고 즐거운 음악회는 그 토끼에게 맡기자고. 난 그 누구와도 친구가 될 생각이 없어.",
+        "몬스터가 모여있을수록 폭파하는 맛이 나지. 네가 고난도 임무를 맡는 이유를 이해할 것 같아."
+      ],
+      [
+        "음악 소리 좀 더 키워줄래? 이 사혼령 또 쓸데없는 말을 시작했어.",
+        "그 어린 도사가 스스로 내가 폭탄을 묻어둔 길에 자전거를 타고 온 거야. 난 전투 준비만 했을 뿐이라고.",
+        "그 알바 전사의 옷, 이네스가 좀 수선해 주는 게 좋겠어. 용병보다 못 하잖아."
+      ],
+      [
+        "오늘도 200마리의 몬스터에게 우리 살카즈의 유일한 마왕인 테레시아 전하의 전설을 들려주었어. 맞아, 전하를 따르는 것은 너희의 의무야!",
+        "그 권투 곰이, 내가 사혼령을 이용해 '펑!' 하고 한 방 먹였지... 코인을 터뜨리는 하얀 곰을 보면 참을 수가 있겠니?",
+        "공문도, 브리핑도 없고 오직 직감만으로 싸울 수 있는 곳이 진짜 있구나!"
+      ],
+      [
+        "누가 내가 악보를 못 읽겠대? 넌 토끼의 능력을 이렇게 함부로 이용하니?",
+        "왜 박사 그쪽으로 가지 않아? 내가 폭탄을 묻어둔 게 들킨 건가?"
+      ],
+      [
+        "내 삶은 감자, 네가 훔쳐 먹은 거 맞지? 그렇게 먹고 싶으면 더 자극적인 걸 먹어보는 건 어때?"
       ]
     ],
     "reviewExpressions": null,
@@ -1946,6 +2017,7 @@
     ],
     "catExpressions": null,
     "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   }
 ]
