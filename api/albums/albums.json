@@ -30,6 +30,16 @@
       "free": false
   },
   {
+      "uid": "music_package_83",
+      "title": "宇宙电台 2024",
+      "tag": "Theme",
+      "needPurchase": true,
+      "price": "¥25.00",
+      "jsonName": "ALBUM84",
+      "prefabsName": "AlbumDisco84",
+      "free": false
+  },
+  {
       "uid": "music_package_82",
       "title": "MSR特选曲目组合包_Vol.02",
       "tag": "Other",
