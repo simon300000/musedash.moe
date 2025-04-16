@@ -2015,5 +2015,42 @@
     "foolishExpressions": null,
     "autoExpressions": null,
     "listIndex": 0
+  },
+  {
+    "characterName": "Buro",
+    "cosName": "Divine Gear",
+    "cosNames": null,
+    "description": "Divine Gear",
+    "skill": "Divine Gear Buro strides across heaven and hell, completing combo attacks in one hit, reducing 90% damage when standing. Who's invincible? I am!",
+    "skills": null,
+    "chipName": "Magic Sword with 99+ ATK Speed",
+    "chipDescription": "Top-Tier Divine Gear (Attack speed is influenced by player skill; 99+ is the upper limit, actual usage may vary.)",
+    "cv": "Commentator: Pro Gamer Buro",
+    "cvs": null,
+    "expressions": [
+      [
+        "Always online, ready to rumble whenever I log in. I'm Buro with divine gears, come join me in Muse Dash!",
+        "Bullion decldivineg stock sold, deposit interest comes so low. Purchasing Muse Dash is the best investment you can have! I'm Buro with divine gears, come join me in Muse Dash!",
+        "Brutal thrills, welfare overload, slaying through a thousand monsters with just one slash. I'm Buro with divine gears, come join me in Muse Dash!"
+      ],
+      [
+        "First Move: The Inferno Dragon's nine forms flow at your fingertips, with one critical slash dealing 999 damage",
+        "Second Move: Celestial secrets reveal disasters, marvelous predictions disrupt combos",
+        "Ultimate Move: Million-dollar effects, entering with gusts, terrifying rows of minions"
+      ],
+      [
+        "No worries, just let it lag for a bit and it'll sort itself out",
+        "Functioning normally means no issues",
+        "Still under maintenance, we'll compensate with 200 divine gears once it's up"
+      ]
+    ],
+    "reviewExpressions": null,
+    "skinNames": [
+      "Default"
+    ],
+    "catExpressions": null,
+    "foolishExpressions": null,
+    "autoExpressions": null,
+    "listIndex": 0
   }
 ]

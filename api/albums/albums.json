@@ -10,7 +10,7 @@
       "free": false
   },
   {
-      "uid": "unlockall_29",
+      "uid": "unlockall_29", 
       "title": "Just as Planned",
       "tag": "Planned",
       "needPurchase": true,
@@ -27,6 +27,16 @@
       "price": "¥25.00",
       "jsonName": "ALBUM44",
       "prefabsName": "AlbumDisco44",
+      "free": false
+  },
+  {
+      "uid": "music_package_84",
+      "title": "喵斯快跑传奇",
+      "tag": "Theme",
+      "needPurchase": true,
+      "price": "¥25.00",
+      "jsonName": "ALBUM85",
+      "prefabsName": "AlbumDisco85",
       "free": false
   },
   {
