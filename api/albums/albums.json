@@ -30,6 +30,16 @@
       "free": false
   },
   {
+      "uid": "music_package_85",
+      "title": "肥宅快乐包 Vol.20",
+      "tag": "Happy",
+      "needPurchase": true,
+      "price": "¥25.00",
+      "jsonName": "ALBUM86",
+      "prefabsName": "AlbumDisco86",
+      "free": false
+  },
+  {
       "uid": "music_package_84",
       "title": "喵斯快跑传奇",
       "tag": "Theme",
