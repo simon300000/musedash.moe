@@ -2052,5 +2052,58 @@
     "foolishExpressions": null,
     "autoExpressions": null,
     "listIndex": 0
+  },
+  {
+    "characterName": "Buro",
+    "cosName": "Nocturne Bloodheir",
+    "cosNames": null,
+    "description": "Nocturne Bloodheir",
+    "skill": "Nocturne Bloodheir Buro's maximum health is increased by 200 points. Buro's score for knocking away enemies carrying \"Quality Plasma\" is increased by 300%. \n\"Quality Plasma\" can greatly strengthen Buro's body for 5 seconds, entering an invincible state, while changing \"Miss\" judgments to \"Great\" and \"Great\" judgments to \"Perfect\".",
+    "skills": null,
+    "chipName": "Blood Sample Collector LL",
+    "chipDescription": "Buro's portable rations, pink is sweet, yellow is salty!",
+    "cv": "Mao Amatsuka",
+    "cvs": null,
+    "expressions": [
+      [
+        "Did I hurt you? Woo... Sorry...but this is all to help me...to make you better faster...",
+        "Did you just have your blood drawn? I-I'm sorry! This tube of blood... Can you give it to me?",
+        "If I didn't have you, I could only drink Ola's blood... Drinking too much of that kind of blood will turn me into a polar bear. I don't want that!"
+      ],
+      [
+        "Lend me your phone to play with for a bit - Dean Marija confiscated the Switch I just bought again. What a cheapskate!",
+        "Sigh - I want to drink Rin's blood again. Can't she just get sick and be hospitalized?",
+        "Making me work the night shift alone because I'm a vampire is exploitation of child labor... A 500-year-old child laborer is still a child laborer!"
+      ],
+      [
+        "Hehe... It's soft and squishy here, and soft and squishy there~",
+        "So~ cute! I'm going to fall in love with myself! Hey, am I the cutest nurse in this hospital?",
+        "No one can call me a little shorty vampire anymore. From today onwards, I am the vampire queen!"
+      ],
+      [
+        "As a 500-year-old vampire, I know much more than you do, little one.",
+        "I'm still on the clock, but after I get off work... I suppose I can keep you company for a bit?",
+        "A mutually beneficial arrangement? Patients really do like to joke..."
+      ],
+      [
+        "Just watch it! My complete form as a vampire!"
+      ],
+      [
+        "That's so mean! Could it be that you like that little shorty more than me?"
+      ],
+      [
+        "Thank you~",
+        "You're going to spoil me rotten~",
+        "Mmhmm, it's delicious~Just watch it! My complete form as a vampire!"
+      ]
+    ],
+    "reviewExpressions": null,
+    "skinNames": [
+      "Default"
+    ],
+    "catExpressions": null,
+    "foolishExpressions": null,
+    "autoExpressions": null,
+    "listIndex": 0
   }
 ]
