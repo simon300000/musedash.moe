@@ -1290,8 +1290,7 @@
 		"callBackDifficulty1": "5",
 		"callBackDifficulty2": "7",
 		"callBackDifficulty3": "9",
-		"unlockLevel": "0",
-		"newMusic": true
+		"unlockLevel": "0"
 	},
 	{
 		"uid": "43-62",
@@ -1311,8 +1310,7 @@
 		"callBackDifficulty1": "5",
 		"callBackDifficulty2": "7",
 		"callBackDifficulty3": "9",
-		"unlockLevel": "0",
-		"newMusic": true
+		"unlockLevel": "0"
 	},
 	{
 		"uid": "43-63",
@@ -1334,8 +1332,7 @@
 		"callBackDifficulty2": "8",
 		"callBackDifficulty3": "10",
 		"callBackDifficulty4": "11",
-		"unlockLevel": "0",
-		"newMusic": true
+		"unlockLevel": "0"
 	},
 	{
 		"uid": "43-64",
@@ -1357,8 +1354,7 @@
 		"callBackDifficulty1": "6",
 		"callBackDifficulty2": "8",
 		"callBackDifficulty3": "10",
-		"unlockLevel": "0",
-		"newMusic": true
+		"unlockLevel": "0"
 	},
 	{
 		"uid": "43-65",
@@ -1378,8 +1374,7 @@
 		"callBackDifficulty1": "5",
 		"callBackDifficulty2": "7",
 		"callBackDifficulty3": "10",
-		"unlockLevel": "0",
-		"newMusic": true
+		"unlockLevel": "0"
 	},
 	{
 		"uid": "43-66",
@@ -1401,8 +1396,7 @@
 		"callBackDifficulty1": "2",
 		"callBackDifficulty2": "5",
 		"callBackDifficulty3": "8",
-		"unlockLevel": "0",
-		"newMusic": true
+		"unlockLevel": "0"
 	},
 	{
 		"uid": "43-67",
@@ -1422,8 +1416,7 @@
 		"callBackDifficulty1": "5",
 		"callBackDifficulty2": "7",
 		"callBackDifficulty3": "10",
-		"unlockLevel": "0",
-		"newMusic": true
+		"unlockLevel": "0"
 	}
 
 ]

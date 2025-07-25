@@ -29,6 +29,16 @@
       "prefabsName": "AlbumDisco44",
       "free": false
   },
+  {
+      "uid": "music_package_87",
+      "title": "我要成为节奏大师！",
+      "tag": "Other",
+      "needPurchase": true,
+      "price": "¥25.00",
+      "jsonName": "ALBUM88",
+      "prefabsName": "AlbumDisco88",
+      "free": false
+  },
    {
       "uid": "music_package_86",
       "title": "阿古亚星兜风指南",
