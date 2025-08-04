@@ -97,7 +97,7 @@ pm2 start ecosystem.config.cjs
 
 **Data sources:**
 - Official Muse Dash game data
-- MDMC API (https://api.mdmc.moe/v2/)
+- MDMC API (https://api.mdmc.moe/v3/)
 - User-contributed ranking data via spider system
 
 ## Special Considerations
