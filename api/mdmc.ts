@@ -237,7 +237,7 @@ type MusicAPI = {
     rankedDifficulty: number
     charter: string
     hash: string
-    map: 1 | 2 | 3 | 4 | 5
+    map: 1 | 2 | 3 | 4
   }[]
   ranked: boolean
   analytics: {
