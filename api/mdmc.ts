@@ -59,14 +59,25 @@ const downloadSongs = async (): Promise<MusicAPIResult> => {
 
   do {
     log(`Downloading page ${currentPage}...`)
-    const response = await fetch(`https://api.mdmc.moe/v3/charts?rankedOnly=true&limit=100&page=${currentPage}`)
-    const data: MusicAPIResult = await response.json()
+    try {
+      const response = await fetch(`https://api.mdmc.moe/v3/charts?rankedOnly=true&limit=100&page=${currentPage}`)
 
-    allCharts = allCharts.concat(data.charts)
-    totalPages = data.totalPages
-    currentPage++
+      if (!response.ok) {
+        error(`Failed to fetch page ${currentPage}: ${response.statusText}`)
+        throw new Error(`Failed to fetch page ${currentPage}`)
+      }
 
-    log(`Downloaded page ${currentPage - 1}/${totalPages} (${data.charts.length} charts)`)
+      const data: MusicAPIResult = await response.json()
+
+      allCharts = allCharts.concat(data.charts)
+      totalPages = data.totalPages
+      currentPage++
+
+      log(`Downloaded page ${currentPage - 1}/${totalPages} (${data.charts.length} charts)`)
+    } catch (err) {
+      error(`Error downloading page ${currentPage}: ${(err as Error).message}`)
+      throw err;
+    }
   } while (currentPage <= totalPages)
 
   return {
@@ -83,12 +94,23 @@ const downloadCore = async ({ hash }: { hash: string }): Promise<APIResult[]> =>
   let totalPages = 1
 
   do {
-    const response = await fetch(`https://api.mdmc.moe/v3/sheets/${hash}/scores?format=md&page=${currentPage}`)
-    const data: APIResults = await response.json()
+    try {
+      const response = await fetch(`https://api.mdmc.moe/v3/sheets/${hash}/scores?format=md&page=${currentPage}`)
 
-    allResults = allResults.concat(data.result)
-    totalPages = data.totalPages
-    currentPage++
+      if (!response.ok) {
+        error(`Failed to fetch scores for hash ${hash} on page ${currentPage}: ${response.statusText}`)
+        throw new Error(`Failed to fetch scores for hash ${hash} on page ${currentPage}`)
+      }
+
+      const data: APIResults = await response.json()
+
+      allResults = allResults.concat(data.result)
+      totalPages = data.totalPages
+      currentPage++
+    } catch (err) {
+      error(`Error downloading scores for hash ${hash} on page ${currentPage}: ${(err as Error).message}`)
+      throw err;
+    }
   } while (currentPage <= totalPages)
 
   return allResults
