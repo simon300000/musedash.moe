@@ -27,8 +27,8 @@ const MUSIC_KEY = 'musics'
 const musicsDB = db.sublevel<typeof MUSIC_KEY, MusicResult>('musics', { valueEncoding: 'json' })
 
 const refreshMusics = async () => {
-  const musics = (await downloadSongs())
-  const list = musics.map(({ sheets, ...rest }) => {
+  const musics = await downloadSongs()
+  const list = musics.charts.map(({ sheets, ...rest }) => {
     const difficultiesMap = Object.fromEntries(sheets.map(({ difficulty, map }) => [map - 1, difficulty]))
     const hashMap = Object.fromEntries(sheets.map(({ hash, map }) => [map - 1, hash]))
     const difficulties = Array(4).fill(0).map((_, i) => difficultiesMap[i] || '0') as [string, string, string, string]
@@ -48,15 +48,50 @@ const makeList = async () => {
   const musics = await musicsDB.get(MUSIC_KEY)
 
   return musics
-    .flatMap(({ title: name, _id: id, hashs }) => DIFFICULTIES.map((_, i) => ({ name, hash: hashs[i], difficulty: i, id })))
+    .flatMap(({ title: name, id, hashs }) => DIFFICULTIES.map((_, i) => ({ name, hash: hashs[i], difficulty: i, id })))
     .filter(({ hash }) => hash)
 }
 
-const downloadSongs = () => fetch('https://api.mdmc.moe/v2/charts/ranked').then<MusicAPIResult>(w => w.json())
+const downloadSongs = async (): Promise<MusicAPIResult> => {
+  let allCharts: MusicAPI[] = []
+  let currentPage = 1
+  let totalPages = 1
 
-const downloadCore = async ({ hash }: { hash: string }) => {
-  const w = await fetch(`https://api.mdmc.moe/v2/hq/md?bms_id=${hash}&limit=2000`).then<APIResults>(p => p.json())
-  return w.result
+  do {
+    log(`Downloading page ${currentPage}...`)
+    const response = await fetch(`https://api.mdmc.moe/v3/charts?rankedOnly=true&limit=100&page=${currentPage}`)
+    const data: MusicAPIResult = await response.json()
+
+    allCharts = allCharts.concat(data.charts)
+    totalPages = data.totalPages
+    currentPage++
+
+    log(`Downloaded page ${currentPage - 1}/${totalPages} (${data.charts.length} charts)`)
+  } while (currentPage <= totalPages)
+
+  return {
+    charts: allCharts,
+    total: allCharts.length,
+    page: 1,
+    totalPages: 1
+  }
+}
+
+const downloadCore = async ({ hash }: { hash: string }): Promise<APIResult[]> => {
+  let allResults: APIResult[] = []
+  let currentPage = 1
+  let totalPages = 1
+
+  do {
+    const response = await fetch(`https://api.mdmc.moe/v3/sheets/${hash}/scores?format=md&page=${currentPage}`)
+    const data: APIResults = await response.json()
+
+    allResults = allResults.concat(data.result)
+    totalPages = data.totalPages
+    currentPage++
+  } while (currentPage <= totalPages)
+
+  return allResults
 }
 
 const core = async ({ name, id, difficulty, l, hash }: MusicCore & { l: { i: number }, hash: string }) => {
@@ -146,7 +181,7 @@ export const router = new Router({
 
 router.get('/musics', async (ctx: any) => {
   const musicsRaw = await musicsDB.get(MUSIC_KEY)
-  const musics: Musics = musicsRaw.map(({ _id: id, title: name, artist: author, charter, bpm, difficulties }) => ({ id, name, author, levelDesigner: charter, bpm, difficulty1: difficulties[0], difficulty2: difficulties[1], difficulty3: difficulties[2], difficulty4: difficulties[3] }))
+  const musics: Musics = musicsRaw.map(({ id, title: name, artist: author, charter, bpm, difficulties }) => ({ id, name, author, levelDesigner: charter, bpm, difficulty1: difficulties[0], difficulty2: difficulties[1], difficulty3: difficulties[2], difficulty4: difficulties[3] }))
   ctx.body = musics
 })
 
@@ -166,33 +201,41 @@ router.get('/search/:string', async ctx => {
 })
 
 type MusicAPI = {
+  title: string
+  titleRomanized: string | null
+  artist: string
+  charter: string
+  bpm: string
+  length: number
+  owner: string
+  sheets: {
+    _id: string
+    chart: string
+    difficulty: string
+    rankedDifficulty: number
+    charter: string
+    hash: string
+    map: 1 | 2 | 3 | 4 | 5
+  }[]
+  ranked: boolean
   analytics: {
     likes: string[]
     plays: number
     views: number
     downloads: number
   }
-  _id: string
-  title: string
-  artist: string
-  bpm: string
-  charter: string
-  length: number
-  owner_uid: number
-  sheets: {
-    _id: string
-    charter: string
-    difficulty: string
-    hash: string
-    map: 1 | 2 | 3 | 4
-  }[]
-  ranked: boolean
-  searchTags: string[]
-  timestamp: string
-  __v: number
+  tags: string[]
+  uploadedAt: Date
+  rankedAt: Date | null
+  id: string
 }
 
-type MusicAPIResult = MusicAPI[]
+type MusicAPIResult = {
+  charts: MusicAPI[]
+  total: number
+  page: number
+  totalPages: number
+}
 
 type MusicResult = (MusicAPI & {
   hashs: [string, string, string, string]
@@ -245,8 +288,8 @@ type APIResults = {
   }
   result: APIResult[]
   total: number
-  ranked: boolean
-  can_earn_mp: boolean
+  page: number
+  totalPages: number
 }
 
 type RankCode = {
