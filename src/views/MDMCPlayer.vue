@@ -54,7 +54,7 @@ export default {
         .sort(({ i: a }, { i: b }) => a - b)
         .map(({ id, difficulty, character_uid, elfin_uid, ...rest }) => {
           const music = this.songs[id]
-          const src = `https://cdn.mdmc.moe/${id}/cover.png`
+          const src = `https://cdn.mdmc.moe/charts/${id}/cover.png`
           const { name, author } = music
           const lv = music[`difficulty${difficulty + 1}`]
           const link = `/mdmc/chart/${id}/${difficulty}`

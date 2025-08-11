@@ -14,7 +14,7 @@ export default {
   },
   computed: {
     src() {
-      return `https://cdn.mdmc.moe/${this.music.id}/cover.png`
+      return `https://cdn.mdmc.moe/charts/${this.music.id}/cover.png`
     },
     difficulties() {
       const { difficulty1, difficulty2, difficulty3, difficulty4, id } = this.music
