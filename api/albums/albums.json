@@ -30,6 +30,26 @@
       "free": false
   },
   {
+      "uid": "music_package_89",
+      "title": "奇航秘宝",
+      "tag": "Theme",
+      "needPurchase": true,
+      "price": "¥25.00",
+      "jsonName": "ALBUM90",
+      "prefabsName": "AlbumDisco90",
+      "free": false
+  },
+  {
+      "uid": "music_package_88",
+      "title": "暮 色 電 台 ＦＭ１０６",
+      "tag": "Theme",
+      "needPurchase": true,
+      "price": "¥18.00",
+      "jsonName": "ALBUM89",
+      "prefabsName": "AlbumDisco89",
+      "free": false
+  },
+  {
       "uid": "music_package_87",
       "title": "我要成为节奏大师！",
       "tag": "Other",

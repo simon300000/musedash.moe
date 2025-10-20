@@ -2105,5 +2105,51 @@
     "foolishExpressions": null,
     "autoExpressions": null,
     "listIndex": 0
+  },
+  {
+    "characterName": "Rin",
+    "cosName": "Flametide Pirate",
+    "cosNames": null,
+    "description": "Flametide Pirate",
+    "skill": "Flametide Pirate Rin only needs to hit the starting point of sheets (hold note), and it can automatically complete the performance of the entire Sheets (hold note).",
+    "skills": null,
+    "chipName": "The Jinxed Anchor",
+    "chipDescription": "She sealed the original abilities of that demon on the ship into this tiny pendant, using it as a weapon when necessary, said it's「managing on behalf」.",
+    "cv": "Uchida Mami",
+    "cvs": null,
+    "expressions": [
+      [
+        "Hmph, for me who has already conquered the entire Hell, conquering the surface world is just a matter of a plate of barbecue!",
+        "As long as we keep moving forward, we will surely get closer and closer to the sun, and then you shall be the witness to my showdown with it!"
+      ],
+      [
+        "Ever since I helped Marija get rid of that batch of potions, I've got different cops on my tail every day. Kind of fun, huh?"
+      ],
+      [
+        "Merry says「Thank you for taking good care of me until now」, I, I will take good care of Engine-chan too......",
+        "The sauna feels so comfortable, the heat is like Hell, but in a completely different way... So touching..."
+      ],
+      [
+        "No matter where this ship sails to, everyone will give way to us... Humans are so friendly!"
+      ],
+      [
+        "Fond memories? Like how my duel with Engine-chan turned Hell into a flame sea?",
+        "Speaking of which, the newly developed Ultimate Spiral · Peerless Lava Cannon should also be taken out to test its firepower... Won't let you escape this time, Buro!",
+        "Tomorrow is the release day for the new issue of Pirate Piece... Let's set off! We're gonna occupy all the bookstores before dark!"
+      ],
+      [
+        "Listen! This is my ship, whether you sit or lie down is up to me...",
+        "Is it hot? If it's not, how can I leave my mark on your body?",
+        "I understand why that little devil said you look delicious, but I will wait until the perfect timing~"
+      ]
+    ],
+    "reviewExpressions": null,
+    "skinNames": [
+      "Default"
+    ],
+    "catExpressions": null,
+    "foolishExpressions": null,
+    "autoExpressions": null,
+    "listIndex": 0
   }
 ]
