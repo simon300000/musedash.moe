@@ -30,6 +30,16 @@
       "free": false
   },
   {
+      "uid": "music_package_90",
+      "title": "五维回响",
+      "tag": "Other",
+      "needPurchase": true,
+      "price": "¥25.00",
+      "jsonName": "ALBUM91",
+      "prefabsName": "AlbumDisco91",
+      "free": false
+  },
+  {
       "uid": "music_package_89",
       "title": "奇航秘宝",
       "tag": "Theme",
