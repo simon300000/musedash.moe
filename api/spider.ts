@@ -369,7 +369,7 @@ const spider = async () => {
       if (success) {
         next.nextDownload = Date.now() + 1000 * 60 * 60 * 20
       } else {
-        next.nextDownload = Date.now() - 1000 * 60
+        next.nextDownload = Date.now() + 1000 * 60 * 60 * 2
       }
       next.ready = true
       if (next.pending) {
