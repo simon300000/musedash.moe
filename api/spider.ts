@@ -45,15 +45,12 @@ const downloadTag = () => down<MusicTagList>('https://prpr-muse-dash.peropero.ne
 
 const downloadCore = async ({ uid, difficulty, platform }: RankKey) => {
   const api = platforms[platform]
-  const { result: firstPage, total, code, msg } = await down<RawAPI>(`https://prpr-muse-dash.peropero.net/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=100&offset=0&version=2.11.0&platform=musedash.moe`) //platform=ios_overseas
+  const { result, code, msg } = await down<RawAPI>(`https://prpr-muse-dash.peropero.net/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=2000&offset=0&version=5.8.0&platform=musedash.moe`)
   if (code !== 0) {
     console.error(`Error: ${msg}`)
     throw new Error(msg)
   }
-  const pageNumber = Math.max(Math.ceil(total / 100) - 1, 0)
-  const urls = Array(pageNumber).fill(undefined).map((_, i) => i + 1).map(i => i * 100 - 1).map(limit => `https://prpr-muse-dash.peropero.net/musedash/v1/${api}/top?music_uid=${uid}&music_difficulty=${difficulty + 1}&limit=${limit}&offset=1&version=2.11.0&platform=musedash.moe`)
-  return [firstPage, ...await Promise.all(urls.map(url => down<RawAPI>(url).then(({ result }) => result)))]
-    .flat()
+  return result
     .filter(r => r?.play?.score != undefined && r?.user?.user_id != undefined)
     .filter(r => r.play.acc <= 100)
 }

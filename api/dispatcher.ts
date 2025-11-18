@@ -12,11 +12,8 @@ type Job = {
 let jobs: Job[] = []
 
 export const fetch = async (url: string) => {
-  if (url.includes('music_tag')) {
-    return f(url).then(res => res.json())
-  }
-  const promise = new Promise<unknown>(resolve => jobs.push({ url, p: resolve }))
-  return promise
+  console.log('fetch', url)
+  return f(url).then(res => res.json())
 }
 
 export const dispatch = () => jobs[Math.floor(Math.random() * jobs.length)]?.url
