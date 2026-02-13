@@ -2151,5 +2151,67 @@
     "foolishExpressions": null,
     "autoExpressions": null,
     "listIndex": 0
+  },
+  {
+    "characterName": "Buro",
+    "cosName": "Diver",
+    "cosNames": null,
+    "description": "Diver",
+    "skill": "When using Diver Buro, fish-toting enemies will appear. Beat enemies away to collect their fish.",
+    "skills": null,
+    "chipName": "Diving Goggles",
+    "chipDescription": "Buro customized diving goggles not only come with a built-in emergency SOS, but also lock your hairstyle in place perfectly.",
+    "cv": "Mao Amatsuka",
+    "cvs": null,
+    "expressions": [
+      [
+        "0<=>0@Nigiri sushi... gunkan... sashimi platter...<=>1@Don't say that to me! That's scary! <=>2@Don't worry. Rin must taste delicious~",
+        "1<=>0@That Coral Porridge is so tasty~ Impressive Chef Bancho!<=>1@Could that be... That's my dinner?!",
+        "2<=>0@Ola dug up 20 oysters. Guess how many Buro-chan ate?<=>1@Isn't it five per person?<=>2@The answer is 25. While Ola was digging, Buro had already sneaked away half to eat, right?"
+      ],
+      [
+        "3<=>0@Although Buro-chan is still a newbie as a diver, but I won't lose to anyone when it comes to guarding the fish tank! <=>2@Is that so? All I see is just a kid who plays the wildest and sleeps the sweetest...",
+        "4<=>0@Fear me! Buro-chan traded two doujinshi with Dave for the most advanced weapon~<=>2@The Burst Harpoon Gun? That's pretty advanced. <=>1@I got a bad feeling... Don... don't point the gun at me—",
+        "Remember to mention Buro-chan's name when you sell the fish to Chef Bancho~"
+      ],
+      [
+        "5<=>0@Ouch— Could Buro-chan be a mermaid who turned her tail into legs to pursue true love...!<=>2@Looks like you cramped up from skipping warm-ups...",
+        "6<=>0@Buro-chan works three jobs a day, yet still can't afford a Harpoon Gun. How could this happen...<=>1@Just save your money for a Diving Suit first!",
+        "7<=>0@I don't wannna practice diving anymore. Rin, just bite me and turn me into the Mermaid!<=>1@This is not a vampire thing..."
+      ],
+      [
+        "8<=>0@While I was talking earlier, you were staring at weird spots, weren't you... What gives—you're eyeing Marija!<=>2@Where does that disappointed tone come from...?",
+        "Wooah, I forgot sunscreen on my back... Don't snicker over there. Come and help me!",
+        "Do you want to lean against the fish tank for a rest too? It's cool and comfy..."
+      ],
+      [
+        "Nigiri sushi... gunkan... sashimi platter...",
+        "That Coral Porridge is so tasty~ Impressive Chef Bancho!",
+        "Ola dug up 20 oysters. Guess how many Buro-chan ate?"
+      ],
+      [
+        "Although Buro-chan is still a newbie as a diver, but I won't lose to anyone when it comes to guarding the fish tank! ",
+        "Fear me! Buro-chan traded two doujinshi with Dave for the most advanced weapon~",
+        "Remember to mention Buro-chan's name when you sell the fish to Chef Bancho~"
+      ],
+      [
+        "Ouch— Could Buro-chan be a mermaid who turned her tail into legs to pursue true love...!",
+        "Buro-chan works three jobs a day, yet still can't afford a Harpoon Gun. How could this happen...",
+        "I don't wannna practice diving anymore. Rin, just bite me and turn me into the Mermaid!"
+      ],
+      [
+        "While I was talking earlier, you were staring at weird spots, weren't you... What gives—you're eyeing Marija!",
+        "Wooah, I forgot sunscreen on my back... Don't snicker over there. Come and help me!",
+        "Do you want to lean against the fish tank for a rest too? It's cool and comfy..."
+      ]
+    ],
+    "reviewExpressions": null,
+    "skinNames": [
+      "Default"
+    ],
+    "catExpressions": null,
+    "foolishExpressions": null,
+    "autoExpressions": null,
+    "listIndex": 0
   }
 ]

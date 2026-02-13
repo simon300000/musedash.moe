@@ -1,0 +1,22 @@
+[
+	{
+		"uid": "93-0",
+		"name": "Serve, Sushi, Serve!",
+		"author": "D'anthoni Wooten",
+		"bpm": "128",
+		"music": "serve_sushi_serve_music",
+		"demo": "serve_sushi_serve_demo",
+		"cover": "serve_sushi_serve_cover",
+		"hexieCover": "",
+		"noteJson": "serve_sushi_serve_map",
+		"scene": "scene_13",
+		"levelDesigner": "ForeverFXS",
+		"difficulty1": "0",
+		"difficulty2": "?",
+		"difficulty3": "0",
+		"callBackDifficulty1": "0",
+		"callBackDifficulty2": "-1",
+		"callBackDifficulty3": "0",
+		"unlockLevel": "0"
+	}
+]

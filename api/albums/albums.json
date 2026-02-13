@@ -29,6 +29,36 @@
       "prefabsName": "AlbumDisco44",
       "free": false
   },
+   {
+      "uid": "music_package_94",
+      "title": "宇宙电台 2025",
+      "tag": "Theme",
+      "needPurchase": true,
+      "price": "¥25.00",
+      "jsonName": "ALBUM95",
+      "prefabsName": "AlbumDisco95",
+      "free": false
+  },
+  {
+      "uid": "music_package_93",
+      "title": "欢迎来到蓝洞！",
+      "tag": "Other",
+      "needPurchase": true,
+      "price": "¥18.00",
+      "jsonName": "ALBUM94",
+      "prefabsName": "AlbumDisco94",
+      "free": false
+  },
+  {
+      "uid": "music_package_92",
+      "title": "HARDCORE MOTTO TANO*C",
+      "tag": "Other",
+      "needPurchase": true,
+      "price": "¥25.00",
+      "jsonName": "ALBUM93",
+      "prefabsName": "AlbumDisco93",
+      "free": false
+  },
   {
       "uid": "music_package_91",
       "title": "出院后 48 小时",
@@ -743,7 +773,7 @@
       "uid": "music_package_21",
       "title": "经费在燃烧：纳米核心",
       "tag": "Default",
-      "needPurchase": true,
+      "needPurchase": false,
       "price": "Free",
       "jsonName": "ALBUM22",
       "prefabsName": "AlbumDisco22",
@@ -893,7 +923,7 @@
       "uid": "music_package_6",
       "title": "经费在燃烧 Vol.1",
       "tag": "Default",
-      "needPurchase": true,
+      "needPurchase": false,
       "price": "Free",
       "jsonName": "ALBUM7",
       "prefabsName": "AlbumDisco7",

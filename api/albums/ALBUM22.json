@@ -17,7 +17,7 @@
         "callBackDifficulty1": "2",
         "callBackDifficulty2": "5",
         "callBackDifficulty3": "8",
-        "unlockLevel": "0"
+        "unlockLevel": "15"
     },
     {
         "uid": "21-1",
@@ -37,7 +37,7 @@
         "callBackDifficulty1": "3",
         "callBackDifficulty2": "5",
         "callBackDifficulty3": "8",
-        "unlockLevel": "0"
+        "unlockLevel": "15"
     },
     {
         "uid": "21-2",
@@ -57,6 +57,6 @@
         "callBackDifficulty1": "4",
         "callBackDifficulty2": "6",
         "callBackDifficulty3": "8",
-        "unlockLevel": "0"
+        "unlockLevel": "15"
     }
 ]

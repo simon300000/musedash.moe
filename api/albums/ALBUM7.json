@@ -17,7 +17,7 @@
 		"callBackDifficulty1": "3",
 		"callBackDifficulty2": "5",
 		"callBackDifficulty3": "8",
-		"unlockLevel": "0"
+		"unlockLevel": "30"
 	},
 	{
 		"uid": "6-1",
@@ -37,7 +37,7 @@
 		"callBackDifficulty1": "2",
 		"callBackDifficulty2": "4",
 		"callBackDifficulty3": "7",
-		"unlockLevel": "0"
+		"unlockLevel": "30"
 	},
 	{
 		"uid": "6-2",
@@ -57,7 +57,7 @@
 		"callBackDifficulty1": "5",
 		"callBackDifficulty2": "7",
 		"callBackDifficulty3": "9",
-		"unlockLevel": "0"
+		"unlockLevel": "30"
 	},
 	{
 		"uid": "6-3",
@@ -77,7 +77,7 @@
 		"callBackDifficulty1": "4",
 		"callBackDifficulty2": "6",
 		"callBackDifficulty3": "8",
-		"unlockLevel": "0"
+		"unlockLevel": "30"
 	},
 	{
 		"uid": "6-4",
@@ -102,7 +102,7 @@
 		"callBackDifficulty2": "5",
 		"callBackDifficulty3": "8",
 		"callBackDifficulty4": "9",
-		"unlockLevel": "0"
+		"unlockLevel": "30"
 	},
 	{
 		"uid": "6-5",
@@ -122,6 +122,6 @@
 		"callBackDifficulty1": "4",
 		"callBackDifficulty2": "6",
 		"callBackDifficulty3": "8",
-		"unlockLevel": "0"
+		"unlockLevel": "30"
 	}
 ]
