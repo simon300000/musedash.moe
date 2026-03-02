@@ -100,7 +100,7 @@ Returns player rankings for a specific song and difficulty.
 
 **Parameters:**
 - `uid` - Music UID (e.g., `1-1`)
-- `difficulty` - Difficulty level: `1`, `2`, `3`, `4`
+- `difficulty` - Difficulty index: `0`, `1`, `2`, `3`, `4`
 - `platform` - Platform: `mobile`, `pc`, or `all`
 
 ```bash
@@ -247,8 +247,8 @@ curl https://api.musedash.moe/player/6ea4f986ffd211e8aa980242ac110011
 Returns player difficulty history with pagination.
 
 **Query Parameters:**
-- `start` - Starting index (optional)
-- `length` - Number of records to return (optional)
+- `start` - Starting index (required, integer)
+- `length` - Number of records to return (required, integer)
 
 ```bash
 curl 'https://api.musedash.moe/player/diffHistory/2dc6abd2c4d411e892380242ac11002b?start=0&length=5'
@@ -278,6 +278,50 @@ curl https://api.musedash.moe/search/simooo
 **Response:**
 ```json
 [["SiMOOOOOON","6ea4f986ffd211e8aa980242ac110011"]]
+```
+
+---
+
+### GET /log
+
+Returns recent backend logs as plain text.
+
+```bash
+curl https://api.musedash.moe/log
+```
+
+**Response:**
+```text
+mdmc: Icedust - 2 / 509
+mdmc: Icedust - 1 / 510
+mdmc: Icedust - 0 / 511
+mdmc: Constant Moderato - 1 / 512
+mdmc: Fantasia Sonata Mirror - 1 / 513
+mdmc: Pure Ruby - 2 / 514
+mdmc: Pure Ruby - 1 / 515
+mdmc: Pure Ruby - 0 / 516
+mdmc: 少女綺想曲 - 2 / 517
+mdmc: 少女綺想曲 - 1 / 518
+mdmc: 少女綺想曲 - 0 / 519
+mdmc: BULK UP - 1 / 520
+mdmc: ΩΩPARTS - 1 / 521
+mdmc: Bookmaker - 1 / 522
+mdmc: DIE IN - 3 / 523
+mdmc: DIE IN - 1 / 524
+mdmc: Kalis Mind - 1 / 525
+mdmc: Breakin' Asia - 2 / 526
+mdmc: Breakin' Asia - 1 / 527
+mdmc: Breakin' Asia - 0 / 528
+mdmc: ULTiMATE INFLATiON - 3 / 529
+mdmc: ULTiMATE INFLATiON - 2 / 530
+mdmc: ULTiMATE INFLATiON - 1 / 531
+mdmc: ULTiMATE INFLATiON - 0 / 532
+mdmc: Rrhar'il - 1 / 533
+mdmc: オニユリ - 2 / 534
+mdmc: オニユリ - 1 / 535
+mdmc: オニユリ - 0 / 536
+mdmc: folern - 2 / 537
+mdmc: folern - 1 / 538
 ```
 
 ---
@@ -474,7 +518,7 @@ curl https://api.musedash.moe/mdmc/player/1
 ```json
 {
   "user": {
-    "user_id": "1",
+    "user_id": 1,
     "nickname": "AshtonMemer",
     "discord_id": "373657230530052099"
   },
@@ -499,7 +543,7 @@ curl https://api.musedash.moe/mdmc/rank/670b5e11984eb9b7a347a899/0
 
 **Response:**
 ```json
-[[100,158101,0,"free0ne","21338",7,6],[100,158101,1,"Kuma熊","22038",7,6],[100,158101,2,"sintown","2224",7,6],[100,158101,3,"solar90","9698",7,6],[100,158101,4,"gugulop","22663",7,6],[100,158101,5,"Dream_Mercy","12864",7,6],[100,158101,6,"hqtf","25134",7,6],[100,158101,7,"Papa_Sora","20124",7,6],[100,158101,8,"Domster","7624",7,6],[100,158101,9,"VeeFy","27747",7,6],[100,158101,10,"Pockxto","23145",7,6],[100,158101,11,"reztracc","34948",7,6],[99.85,157981,12,"BenzylAlcohol","29061",7,6],[100,157861,13,"MissFrancesca","33907",7,6],[100,157861,14,"mieko","28211",7,6],[99.7,157686,15,"L_u_c_i_p_h_e_r","6439",7,6],[99.7,157676,16,"nywfan","19408",7,6],[99.7,157591,17,"seblade4231","25517",7,6],[99.7,157581,18,"ladno","24928",7,6],[100,157581,19,"12GAUGEGRL","29855",7,6],[99.7,157531,20,"OwlNest","23319",7,6] ...]
+[[100,158101,0,"free0ne",21338,7,6],[100,158101,1,"Kuma熊",22038,7,6],[100,158101,2,"sintown",2224,7,6],[100,158101,3,"solar90",9698,7,6],[100,158101,4,"gugulop",22663,7,6],[100,158101,5,"Dream_Mercy",12864,7,6],[100,158101,6,"hqtf",25134,7,6],[100,158101,7,"Papa_Sora",20124,7,6],[100,158101,8,"Domster",7624,7,6],[100,158101,9,"VeeFy",27747,7,6],[100,158101,10,"Pockxto",23145,7,6],[100,158101,11,"reztracc",34948,7,6],[99.85,157981,12,"BenzylAlcohol",29061,7,6],[100,157861,13,"MissFrancesca",33907,7,6],[100,157861,14,"mieko",28211,7,6],[99.7,157686,15,"L_u_c_i_p_h_e_r",6439,7,6],[99.7,157676,16,"nywfan",19408,7,6],[99.7,157591,17,"seblade4231",25517,7,6],[99.7,157581,18,"ladno",24928,7,6],[100,157581,19,"12GAUGEGRL",29855,7,6],[99.7,157531,20,"OwlNest",23319,7,6] ...]
 ```
 
 **Array format:** `[acc, score, lastRank, nickname, user_id, character_uid, elfin_uid]`
@@ -520,4 +564,3 @@ curl https://api.musedash.moe/mdmc/search/meme
 ```
 
 ---
-
