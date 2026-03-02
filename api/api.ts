@@ -23,7 +23,12 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 
 const PLAYER_NOT_FOUND: PlayerValue = { plays: [{ uid: '35-0', history: { lastRank: NaN }, difficulty: 0, score: NaN, acc: NaN, i: NaN, sum: NaN, platform: '?', character_uid: '2', elfin_uid: '' }], key: '', user: { user_id: '404', nickname: 'User not Found' } }
 
-const cache = new LRU({
+type CachedGetResponse = {
+  body: unknown
+  type?: string
+}
+
+const cache = new LRU<string, CachedGetResponse>({
   maxAge: 1000 * 5,
   max: 100
 })
@@ -51,10 +56,13 @@ app.use(async (ctx, next) => {
   if (ctx.method === 'GET') {
     const hit = cache.get(ctx.url)
     if (hit) {
-      ctx.body = hit
+      if (hit.type) {
+        ctx.type = hit.type
+      }
+      ctx.body = hit.body
     } else {
       await next()
-      cache.set(ctx.url, ctx.body)
+      cache.set(ctx.url, { body: ctx.body, type: ctx.response.type })
     }
   } else {
     await next()
