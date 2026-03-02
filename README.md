@@ -4,6 +4,7 @@ Repository of <https://musedash.moe>
 
 Track player ranks of game "Muse Dash" by "PeroPeroGames".
 
+API documentation: [API.md](API.md)
 
 
 This project/website is **unofficial**! I have no copyright with the music/picture/cover displayed in the website, they belong to the original owner. This website has no relation with MuseDash or PeroPeroGames.
@@ -92,4 +93,3 @@ npm run build:api
 ```sh
 pm2 start ecosystem.config.js 
 ```
-

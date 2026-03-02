@@ -62,6 +62,8 @@
 
   <br> <a href="https://github.com/simon300000/musedash.moe/" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/simon300000/musedash.moe.svg?style=social"></a> <br>
   <a href="https://github.com/simon300000/musedash.moe/" target="_blank">simon300000/musedash.moe</a>
+  <br>
+  <a href="https://github.com/simon300000/musedash.moe/blob/HEAD/API.md" target="_blank" rel="noopener noreferrer">API documentation</a>
   <hr>
   <pre class="log"><code>{{log}}</code></pre>
 
