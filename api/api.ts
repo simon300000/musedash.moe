@@ -89,6 +89,13 @@ let albumsObject: ReturnType<typeof parseAlbums>
 
 let ce: { c: Record<AvailableLocales, string[]>, e: Record<AvailableLocales, string[]> }
 
+const escapeXml = (value: string | number) => String(value)
+  .replace(/&/g, '&amp;')
+  .replace(/</g, '&lt;')
+  .replace(/>/g, '&gt;')
+  .replace(/"/g, '&quot;')
+  .replace(/'/g, '&apos;')
+
 const parseCe = async () => {
   const c = Object.fromEntries(await Promise.all(availableLocales.map(async l => [l, JSON.parse(String(await readFile(join(__dirname, 'extra', `character_${l}.json`)))).map(({ characterName, cosName }) => `${characterName}·${cosName}`)])))
   const e = Object.fromEntries(await Promise.all(availableLocales.map(async l => [l, JSON.parse(String(await readFile(join(__dirname, 'extra', `elfin_${l}.json`)))).map(({ name }) => name)])))
@@ -189,6 +196,15 @@ router.get('/ce', ctx => {
 router.get('/diffdiff', async ctx => {
   const diffDiff = await getDiffDiff()
   ctx.body = diffDiff.map(({ uid, difficulty, level, absolute, relative }) => [uid, difficulty, level, absolute, relative])
+})
+
+router.get('/diffdiff.xml', async ctx => {
+  const diffDiff = await getDiffDiff()
+  ctx.type = 'application/xml'
+  const songsXml = diffDiff.map(({ uid, difficulty, level, absolute, relative }) =>
+    `<song uid="${escapeXml(uid)}" difficulty="${escapeXml(difficulty)}"><level>${escapeXml(level)}</level><absolute>${escapeXml(absolute)}</absolute><relative>${escapeXml(relative)}</relative></song>`
+  ).join('')
+  ctx.body = `<?xml version="1.0" encoding="UTF-8"?><diffdiff>${songsXml}</diffdiff>`
 })
 
 router.get('/uptime', ctx => {
