@@ -1,6 +1,5 @@
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
-import OptimizeCSSPlugin from 'optimize-css-assets-webpack-plugin'
-import safeParser from 'postcss-safe-parser'
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin'
 import TerserPlugin from 'terser-webpack-plugin'
 import * as wba from 'webpack-bundle-analyzer'
 
@@ -13,7 +12,7 @@ const config = {
   },
   optimization: {
     splitChunks: {
-      name: true,
+      name: false,
       chunks: 'all',
       cacheGroups: {
         vue: {
@@ -25,7 +24,7 @@ const config = {
     },
     minimizer: [
       new TerserPlugin({ parallel: true }),
-      new OptimizeCSSPlugin({ cssProcessorOptions: { parser: safeParser, map: { inline: false } } })
+      new CssMinimizerPlugin()
     ]
   },
   plugins: [

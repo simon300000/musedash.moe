@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import { getAlbums, getTag, getRank, getRankUpdateTime, refreshRank, getPlayer, getCE, mdmcGetAlbum, mdmcGetPlayer, mdmcGetRank, getDiffDiff, getDiffDiffMusic } from './api'
-import { set as cookieSet } from 'js-cookie'
+import Cookies from 'js-cookie'
 
 import { loadCover } from './coverLoader'
 
@@ -91,11 +91,11 @@ export const createStore = ({ lang, changeTitle, theme }) => {
         state.userCache = { ...state.userCache, [id]: data }
       },
       setLang(state, data) {
-        cookieSet('lang', data)
+        Cookies.set('lang', data)
         state.lang = data
       },
       setTheme(state, data) {
-        cookieSet('theme', data)
+        Cookies.set('theme', data)
         state.theme = data
       },
       updateTitle(_state, [instance, part]) {

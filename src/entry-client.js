@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { get as cookieGet } from 'js-cookie'
+import Cookies from 'js-cookie'
 import VueGtag from "vue-gtag"
 
 import { createApp } from './app'
@@ -12,7 +12,7 @@ const changeTitle = (depth, part) => {
   document.title = titles.filter(Boolean).reverse().join(' - ')
 }
 
-const { app, store, router } = createApp({ changeTitle, lang: cookieGet('lang'), theme: cookieGet('theme') })
+const { app, store, router } = createApp({ changeTitle, lang: Cookies.get('lang'), theme: Cookies.get('theme') })
 
 if (window.__INITIAL_STATE__) {
   store.replaceState(window.__INITIAL_STATE__)

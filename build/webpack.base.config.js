@@ -4,7 +4,7 @@ import { merge } from 'webpack-merge'
 import prodConfig from './webpack.prod.config.js'
 import devConfig from './webpack.dev.config.js'
 
-import VueLoaderPlugin from 'vue-loader/lib/plugin.js'
+import VueLoaderPlugin from '@vue/vue-loader-v15/lib/plugin.js'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 import { fileURLToPath } from 'url'
@@ -26,18 +26,12 @@ export default merge(process.env.development ? devConfig : prodConfig, {
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/'
   },
-  resolve: {
-    extensions: ['.ts', '.js', '.vue', '.json'],
-    alias: {
-      '@': resolve('src')
-    }
-  },
   module: {
     rules: [
       {
         test: /\.vue$/,
         use: [
-          'vue-loader',
+          '@vue/vue-loader-v15',
           {
             loader: 'html-minifier-loader',
             options: {
@@ -78,7 +72,10 @@ export default merge(process.env.development ? devConfig : prodConfig, {
       },
       {
         test: /\.js$/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        resolve: {
+          fullySpecified: false
+        }
       },
       {
         test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
@@ -126,17 +123,23 @@ export default merge(process.env.development ? devConfig : prodConfig, {
       }
     ]
   },
-  node: {
-    // prevent webpack from injecting useless setImmediate polyfill because Vue
-    // source contains it (although only uses it if it's native).
-    setImmediate: false,
-    // prevent webpack from injecting mocks to Node native modules
-    // that does not make sense for the client
-    dgram: 'empty',
-    fs: 'empty',
-    net: 'empty',
-    tls: 'empty',
-    child_process: 'empty'
+  resolve: {
+    extensions: ['.ts', '.js', '.vue', '.json'],
+    alias: {
+      '@': resolve('src')
+    },
+    byDependency: {
+      esm: {
+        fullySpecified: false
+      }
+    },
+    fallback: {
+      dgram: false,
+      fs: false,
+      net: false,
+      tls: false,
+      child_process: false
+    }
   },
   plugins: [
     new VueLoaderPlugin()
