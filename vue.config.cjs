@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   lintOnSave: false,
   configureWebpack: {
@@ -15,6 +17,10 @@ module.exports = {
     }
   },
   devServer: {
+    static: {
+      directory: path.resolve(__dirname, 'src/covers'),
+      publicPath: '/covers'
+    },
     proxy: {
       '^/api': {
         target: 'https://api.musedash.moe', // use production api

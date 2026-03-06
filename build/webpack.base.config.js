@@ -1,4 +1,5 @@
 import path from 'path'
+import webpack from 'webpack'
 import utils from './utils.js'
 import { merge } from 'webpack-merge'
 import prodConfig from './webpack.prod.config.js'
@@ -133,6 +134,9 @@ export default merge(process.env.development ? devConfig : prodConfig, {
     }
   },
   plugins: [
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new webpack.DefinePlugin({
+      'process.env.BASE_URL': JSON.stringify('/')
+    })
   ]
 })

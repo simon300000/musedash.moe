@@ -9,7 +9,7 @@
   </div>
   <div class="level-item">
     <div>
-      <p class="title is-5 is-spaced" v-html="props.music.name"></p>
+      <p class="title is-5 is-spaced song-title" v-html="props.music.name"></p>
       <p class="subtitle is-6" title="Author">{{props.music.author}}</p>
       <router-link :to="props.albumLink" v-if="props.albumName">
         <p class="subtitle is-6 clickable">「{{props.albumName}}」</p>
@@ -31,3 +31,9 @@
   </div>
 </nav>
 </template>
+
+<style scoped>
+.song-title {
+  margin-bottom: 0 !important;
+}
+</style>

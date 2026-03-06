@@ -7,7 +7,7 @@
     <router-link :to="'/'" custom v-slot="{ navigate, href }">
       <a class="tag-btn tag-all" :href="href" :class="{'tag-btn-selecte': allSelected}" @click="navigate">
         <div class="tag-content-container">
-          <img src="@/icons/IconAllMusic.png" class="tag-img" alt="All">
+          <img :src="iconSrc('IconAllMusic.png')" class="tag-img" alt="All">
           <span class="tag-text">ALL</span>
         </div>
       </a>
@@ -16,7 +16,7 @@
     <router-link :to="`/tag/${name}`" :key="name" v-for="{name, displayName} in tag" custom v-slot="{ navigate, href, isActive }">
       <a class="tag-btn" :href="href" :class="{'tag-btn-selecte': isActive}" @click="navigate">
         <div class="tag-content-container">
-          <img :src="require(`@/icons/${tagImage[name]}`)" class="tag-img" alt="All">
+          <img :src="iconSrc(tagImage[name])" class="tag-img" alt="All">
           <span class="tag-text">{{displayName[lang]}}</span>
         </div>
       </a>
@@ -63,7 +63,13 @@ export default {
   mounted() {
     this.loadAlbums()
   },
-  methods: mapActions(['loadAlbums'])
+  methods: {
+    ...mapActions(['loadAlbums']),
+    iconSrc(file) {
+      const mod = require(`@/icons/${file}`)
+      return mod && mod.default ? mod.default : mod
+    }
+  }
 }
 </script>
 
