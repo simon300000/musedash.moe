@@ -1,6 +1,17 @@
-@use "./bulma.scss";
+@use "bulma/sass/themes/light";
+@use "bulma/sass/themes/dark";
+@use "bulma/sass/themes/setup";
 
+:root {
+  @include light.light-theme;
+  @include setup.setup-theme;
+}
 
 @media (prefers-color-scheme: dark) {
-  @import "./darkw.scss";
+  :root {
+    @include dark.dark-theme;
+    @include setup.setup-theme;
+  }
 }
+
+@import "./bulma-core.scss";

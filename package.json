@@ -17,12 +17,12 @@
     "moe": "node index"
   },
   "dependencies": {
-    "@koa/router": "^10.1.1",
-    "bulma": "^0.9.4",
+    "@koa/router": "^15.3.1",
+    "bulma": "^1.0.4",
     "chart.js": "^4.2.0",
     "chartjs-adapter-moment": "^1.0.1",
     "js-cookie": "^3.0.1",
-    "koa": "^2.14.1",
+    "koa": "^3.1.2",
     "koa-body": "^4.2.0",
     "koa-mount": "^4.0.0",
     "koa-static": "^5.0.0",
