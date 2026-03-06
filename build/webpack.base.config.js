@@ -31,16 +31,7 @@ export default merge(process.env.development ? devConfig : prodConfig, {
       {
         test: /\.vue$/,
         use: [
-          '@vue/vue-loader-v15',
-          {
-            loader: 'html-minifier-loader',
-            options: {
-              keepClosingSlash: true,
-              html5: true,
-              caseSensitive: true,
-              collapseWhitespace: false
-            }
-          }
+          '@vue/vue-loader-v15'
         ]
       },
       {
