@@ -2,7 +2,7 @@
 <div>
   <input class="input" v-model="search" type="text" placeholder="Search Music">
   <hr v-if="finds.length">
-  <music :music="allMusics['0-0']" class="abs" style="top: -1000px;" ref="size"></music>
+  <music v-if="sizeProbeReady && allMusics['0-0']" :music="allMusics['0-0']" class="abs" style="top: -1000px;" ref="size"></music>
   <div class="musicContainer" ref="container" :style="{height:`${sumHeight}px`}">
     <music v-for="{music, key, top} in findsRender" :key="key" :music="music" class="abs" :style="`top: ${top}px;`"></music>
   </div>
@@ -25,6 +25,7 @@ export default {
       search: '',
       unitHeight: 152,
       skipRatio: 0,
+      sizeProbeReady: false,
       resizeObserver: undefined,
       intersectionObserver: undefined
     }
@@ -73,23 +74,30 @@ export default {
     }
   },
   mounted() {
-    this.resizeObserver = new ResizeObserver(([{ contentRect: { height } }]) => {
-      this.unitHeight = height + 24
-    })
-    this.resizeObserver.observe(this.$refs.size.$el)
+    this.sizeProbeReady = true
+    this.$nextTick(() => {
+      this.resizeObserver = new ResizeObserver(([{ contentRect: { height } }]) => {
+        this.unitHeight = height + 24
+      })
+      this.resizeObserver.observe(this.$refs.size.$el)
 
-    this.intersectionObserver = new IntersectionObserver(([{ intersectionRatio }]) => {
-      this.skipRatio = intersectionRatio
-    }, {
-      rootMargin: '999999px 0px -50% 0px',
-      root: null,
-      threshold
+      this.intersectionObserver = new IntersectionObserver(([{ intersectionRatio }]) => {
+        this.skipRatio = intersectionRatio
+      }, {
+        rootMargin: '999999px 0px -50% 0px',
+        root: null,
+        threshold
+      })
+      this.intersectionObserver.observe(this.$refs.container)
     })
-    this.intersectionObserver.observe(this.$refs.container)
   },
   beforeDestroy() {
-    this.resizeObserver.disconnect()
-    this.intersectionObserver.disconnect()
+    if (this.resizeObserver) {
+      this.resizeObserver.disconnect()
+    }
+    if (this.intersectionObserver) {
+      this.intersectionObserver.disconnect()
+    }
   }
 }
 </script>
