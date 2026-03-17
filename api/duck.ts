@@ -1,11 +1,13 @@
-import { resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
+import { dirname, resolve } from 'node:path'
 
 import { DuckDBInstance } from '@duckdb/node-api'
 
 import { RankValue } from './type.js'
 
 const duckDbPath = resolve(process.cwd(), 'duck.db')
-const duckTempDir = resolve(import.meta.dirname, '../duck-tmp')
+const currentDir = dirname(fileURLToPath(import.meta.url))
+const duckTempDir = resolve(currentDir, '../duck-tmp')
 
 const database = await DuckDBInstance.fromCache(duckDbPath, {
   max_memory: '4GB',
