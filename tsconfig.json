@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es2022",
+    "target": "es2024",
     "lib": ["esnext", "dom"],
-    "module": "ESNext",
+    "module": "nodenext",
     "noImplicitAny": false,
     "preserveConstEnums": true,
-    "moduleResolution": "node",
+    "moduleResolution": "nodenext",
     "esModuleInterop": true,
   },
   "include": [

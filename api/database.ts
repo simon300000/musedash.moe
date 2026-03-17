@@ -3,6 +3,8 @@ import { RaveLevel } from 'rave-level'
 import { RankKey, RankValue, PlayerValue, TagExport, APIResult, genKey, MusicCore } from './type.js'
 import { MusicDiffDiff, DiffDiffResult } from './diffdiff.js'
 
+import { insertPlays } from './duck.js'
+
 const TWO_DAY = 1000 * 60 * 60 * 24 * 2
 
 const db = new RaveLevel('./db')
@@ -50,7 +52,12 @@ class TimeDB<K> {
 }
 
 export const rank = {
-  put: ({ uid, difficulty, platform, value }: RankKey & { value: RankValue[] }) => rankdb.put(`${uid}_${platform}_${difficulty}`, value),
+  put: async ({ uid, difficulty, platform, value }: RankKey & { value: RankValue[] }) => {
+    await rankdb.put(`${uid}_${platform}_${difficulty}`, value)
+    if (platform !== 'all') {
+      await insertPlays(platform, value)
+    }
+  },
   get: ({ uid, difficulty, platform }: RankKey) => rankdb.get(`${uid}_${platform}_${difficulty}`).catch(() => [] as RankValue[])
 }
 
