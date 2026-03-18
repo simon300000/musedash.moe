@@ -2,13 +2,13 @@
 <div>
   <nav class="level">
     <div class="level-item">
-      <router-link class="button is-rounded" exact-active-class="is-primary" :to="`/music/${uid}/${difficulty}/mobile`">Mobile</router-link>
+      <router-link class="button is-rounded platform-button" exact-active-class="is-primary" :to="`/music/${uid}/${difficulty}/mobile`">Mobile</router-link>
     </div>
     <div class="level-item">
-      <router-link class="button is-rounded" exact-active-class="is-primary" :to="`/music/${uid}/${difficulty}`">All</router-link>
+      <router-link class="button is-rounded platform-button" exact-active-class="is-primary" :to="`/music/${uid}/${difficulty}`">All</router-link>
     </div>
     <div class="level-item">
-      <router-link class="button is-rounded" exact-active-class="is-primary" :to="`/music/${uid}/${difficulty}/pc`">PC</router-link>
+      <router-link class="button is-rounded platform-button" exact-active-class="is-primary" :to="`/music/${uid}/${difficulty}/pc`">PC</router-link>
     </div>
   </nav>
   <nav class="level">
@@ -91,3 +91,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.platform-button {
+  border-color: var(--bulma-border);
+}
+</style>
