@@ -1,16 +1,49 @@
 import Vue from 'vue'
 
 const url = process.env.NODE_ENV === 'development' ? '/api/' : new Vue().$isServer ? 'http://0.0.0.0:8301/' : 'https://api.musedash.moe/'
+const RESPONSE_TIME_HEADER = 'X-Response-Time'
+const CACHE_STATUS_HEADER = 'X-Cache-Status'
 
 let f = undefined
+let responseTimingRecorder = undefined
+
 export const injectFetch = w => {
   f = w
 }
 
-const get = async api => (await (f || fetch)(`${url}${api}`)).json()
-const getText = async api => (await (f || fetch)(`${url}${api}`)).text()
+export const injectResponseTimingRecorder = recorder => {
+  responseTimingRecorder = recorder
+}
 
-const post = async (api, obj) => (await (f || fetch)(`${url}${api}`, {
+const recordResponseTiming = (response, method, api) => {
+  if (!responseTimingRecorder || typeof window === 'undefined' || method === 'OPTIONS') {
+    return
+  }
+  const rawDuration = response.headers.get(RESPONSE_TIME_HEADER)
+  const duration = Number.parseInt(rawDuration, 10)
+  if (Number.isNaN(duration)) {
+    return
+  }
+  responseTimingRecorder({
+    method,
+    path: `/${api}`,
+    duration,
+    cacheStatus: response.headers.get(CACHE_STATUS_HEADER) || 'UNKNOWN',
+    at: Date.now()
+  })
+}
+
+const request = async (api, options = {}) => {
+  const method = options.method || 'GET'
+  const response = await (f || fetch)(`${url}${api}`, options)
+  recordResponseTiming(response, method, api)
+  return response
+}
+
+const get = async api => (await request(api)).json()
+const getText = async api => (await request(api)).text()
+
+const post = async (api, obj) => (await request(api, {
   method: 'POST',
   body: JSON.stringify(obj),
   headers: {

@@ -34,9 +34,22 @@ const cache = new LRU<string, CachedGetResponse>({
 })
 
 const app = new Koa()
+const cacheStatusHeader = 'X-Cache-Status'
+const responseTimeHeader = 'X-Response-Time'
+
+app.use(async (ctx, next) => {
+  const start = process.hrtime.bigint()
+  try {
+    await next()
+  } finally {
+    const durationMs = Number(process.hrtime.bigint() - start) / 1000000
+    ctx.set(responseTimeHeader, `${Math.round(durationMs)}ms`)
+  }
+})
 
 app.use(async (ctx, next) => {
   const origin = ctx.get('Origin')
+  ctx.set('Access-Control-Expose-Headers', `${responseTimeHeader}, ${cacheStatusHeader}`)
   if (origin === 'https://musedash.moe') {
     ctx.set('Access-Control-Allow-Origin', 'https://musedash.moe')
     ctx.set('Access-Control-Allow-Headers', 'Content-Type')
@@ -56,15 +69,18 @@ app.use(async (ctx, next) => {
   if (ctx.method === 'GET') {
     const hit = cache.get(ctx.url)
     if (hit) {
+      ctx.set(cacheStatusHeader, 'HIT')
       if (hit.type) {
         ctx.type = hit.type
       }
       ctx.body = hit.body
     } else {
+      ctx.set(cacheStatusHeader, 'MISS')
       await next()
       cache.set(ctx.url, { body: ctx.body, type: ctx.response.type })
     }
   } else {
+    ctx.set(cacheStatusHeader, 'BYPASS')
     await next()
   }
 })

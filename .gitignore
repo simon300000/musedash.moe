@@ -39,3 +39,4 @@ tsconfig.tsbuildinfo
 duck.db
 duck-tmp/*
 !duck-tmp/.gitkeep
+duck.db.wal

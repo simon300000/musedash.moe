@@ -35,6 +35,8 @@ export const createStore = ({ lang, changeTitle, theme }) => {
       diffDiff: [],
       ce: { c: {}, e: {} },
       blackWhite: false,
+      showApiTiming: false,
+      apiTimingLogs: [],
       lang,
       theme
     },
@@ -109,6 +111,12 @@ export const createStore = ({ lang, changeTitle, theme }) => {
       },
       setBlackWhite(state, data) {
         state.blackWhite = data
+      },
+      setShowApiTiming(state, data) {
+        state.showApiTiming = data
+      },
+      pushApiTimingLog(state, log) {
+        state.apiTimingLogs = [log, ...state.apiTimingLogs].slice(0, 10)
       }
     },
     actions: {

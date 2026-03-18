@@ -22,6 +22,13 @@
       Web crawler help MuseDash.moe to gather data, it will use some bandwidth (~6KB/s)
       <br>
     </label>
+    <label class="checkbox">
+      <input type="checkbox" v-model="showApiTiming">
+      Show API response time
+      <br>
+      Display recent API requests and server processing time in the bottom-right corner
+      <br>
+    </label>
   </p>
   <br>
   <p>
@@ -71,7 +78,7 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import { mapMutations, mapState } from 'vuex'
 
 import { getLog } from '@/api'
 
@@ -84,6 +91,19 @@ export default {
       log: 'loading...'
     }
   },
+  computed: {
+    ...mapState({
+      storedShowApiTiming: 'showApiTiming'
+    }),
+    showApiTiming: {
+      get() {
+        return this.storedShowApiTiming
+      },
+      set(value) {
+        this.setShowApiTiming(value)
+      }
+    }
+  },
   watch: {
     rawEnabled() {
       localStorage.rawEnabled = String(this.rawEnabled)
@@ -93,9 +113,12 @@ export default {
     },
     noSpider() {
       localStorage.noSpider = String(this.noSpider)
+    },
+    showApiTiming() {
+      localStorage.showApiTiming = String(this.showApiTiming)
     }
   },
-  methods: mapMutations(['updateTitle', 'removeTitle']),
+  methods: mapMutations(['updateTitle', 'removeTitle', 'setShowApiTiming']),
   created() {
     this.updateTitle([this, 'About'])
   },
@@ -106,6 +129,7 @@ export default {
     this.rawEnabled = localStorage.rawEnabled === 'true'
     this.vt = localStorage.vt === 'true'
     this.noSpider = localStorage.noSpider === 'true'
+    this.setShowApiTiming(localStorage.showApiTiming === 'true')
     this.log = await getLog()
   }
 }

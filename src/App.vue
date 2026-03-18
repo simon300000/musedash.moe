@@ -46,6 +46,16 @@
       <router-view></router-view>
     </div>
   </section>
+  <div v-if="showApiTiming && apiTimingLogs.length" class="api-timing-panel">
+    <div class="api-timing-title">API timing</div>
+    <div v-for="log in displayedApiTimingLogs" :key="`${log.at}-${log.method}-${log.path}`" class="api-timing-entry">
+      <span class="api-timing-time">{{formatApiTimingTime(log.at)}}</span>
+      <span class="api-timing-method">{{log.method}}</span>
+      <span class="api-timing-cache" :class="`api-timing-cache-${log.cacheStatus.toLowerCase()}`">{{log.cacheStatus}}</span>
+      <span class="api-timing-path">{{log.path}}</span>
+      <span class="api-timing-duration">{{log.duration}}ms</span>
+    </div>
+  </div>
   <CapsuleDef class="def"></CapsuleDef>
 </div>
 </template>
@@ -145,7 +155,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['lang', 'theme', 'blackWhite']),
+    ...mapState(['lang', 'theme', 'blackWhite', 'showApiTiming', 'apiTimingLogs']),
     currentLang() {
       return langs[this.lang]
     },
@@ -155,6 +165,9 @@ export default {
     },
     currentTheme() {
       return themeConfig[this.theme] || themeConfig.dark
+    },
+    displayedApiTimingLogs() {
+      return [...this.apiTimingLogs].reverse()
     }
   },
   created() {
@@ -170,6 +183,14 @@ export default {
     },
     switchMenu() {
       this.menu = !this.menu
+    },
+    formatApiTimingTime(at) {
+      return new Date(at).toLocaleTimeString([], {
+        hour12: false,
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+      })
     },
     closeMenu() {
       this.menu = false
@@ -225,5 +246,78 @@ export default {
 
 .anniversary-rainbow:hover {
   color: transparent;
+}
+
+.api-timing-panel {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  z-index: 30;
+  width: min(420px, calc(100vw - 24px));
+  max-height: 40vh;
+  overflow-y: auto;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(12, 18, 29, 0.92);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  color: #f5f7fa;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.api-timing-title {
+  margin-bottom: 6px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9ecbff;
+}
+
+.api-timing-entry {
+  display: grid;
+  grid-template-columns: auto auto auto 1fr auto;
+  gap: 8px;
+  align-items: baseline;
+  padding: 2px 0;
+}
+
+.api-timing-time {
+  color: rgba(245, 247, 250, 0.72);
+}
+
+.api-timing-method {
+  color: #7fe7c4;
+  font-weight: bold;
+}
+
+.api-timing-path {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.api-timing-cache {
+  font-weight: bold;
+}
+
+.api-timing-cache-hit {
+  color: #7fe7c4;
+}
+
+.api-timing-cache-miss {
+  color: #ffb86c;
+}
+
+.api-timing-cache-bypass {
+  color: #f78fb3;
+}
+
+.api-timing-cache-unknown {
+  color: rgba(245, 247, 250, 0.72);
+}
+
+.api-timing-duration {
+  color: #ffd36e;
+  font-variant-numeric: tabular-nums;
 }
 </style>
