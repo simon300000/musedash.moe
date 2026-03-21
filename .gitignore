@@ -36,6 +36,3 @@ size-plugin.json
 .security-key
 logs/security/
 tsconfig.tsbuildinfo
-duck.db
-duck-tmp/*
-!duck-tmp/.gitkeep
