@@ -4,8 +4,8 @@
 </template>
 
 <script>
-import mobile from '!raw-loader!@/octicons/icons/device-mobile-16.svg'
-import desktop from '!raw-loader!@/octicons/icons/device-desktop-16.svg'
+import mobile from '@/octicons/icons/device-mobile-16.svg'
+import desktop from '@/octicons/icons/device-desktop-16.svg'
 
 export default {
   props: ['type', 'size'],

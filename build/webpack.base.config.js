@@ -16,6 +16,8 @@ function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 
+const octiconsPath = resolve('src/octicons/icons')
+
 if (process.env.development) {
   console.log('Build for Development')
 }
@@ -88,6 +90,10 @@ export default merge(process.env.development ? devConfig : prodConfig, {
       {
         test: /\.(png|jpe?g|gif|svg|webp)(\?.*)?$/,
         oneOf: [
+          {
+            include: [octiconsPath],
+            type: 'asset/source'
+          },
           {
             test: /covers\/.*_cover\.webp$/,
             use: [

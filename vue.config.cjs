@@ -2,6 +2,18 @@ const path = require('path')
 
 module.exports = {
   lintOnSave: false,
+  chainWebpack: config => {
+    const octiconsPath = path.resolve(__dirname, 'src/octicons/icons')
+
+    config.module.rule('svg').exclude.add(octiconsPath)
+
+    config.module
+      .rule('octicons')
+      .test(/\.svg$/)
+      .include.add(octiconsPath)
+      .end()
+      .type('asset/source')
+  },
   configureWebpack: {
     module: {
       rules: [{
