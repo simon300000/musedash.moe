@@ -67,6 +67,9 @@ export interface AlbumData extends Record<AvailableLocales, AlbumLang> {
 export type Albums = AlbumData[]
 
 export interface User {
+  object_id?: string,
+  created_at?: string,
+  updated_at?: string,
   user_id: string,
   nickname: string,
   avatar?: string
@@ -81,14 +84,27 @@ export interface RawAPI {
 
 export interface APIResult {
   play: {
+    object_id?: string,
+    created_at?: string,
+    updated_at?: string,
     acc: number,
     bms_id: number,
+    bms_version?: string,
     character_uid: string,
     combo: number,
     elfin_uid: string,
+    game_version?: string,
     hp: number,
+    is_check?: boolean,
+    judge?: string,
+    lb_version?: string,
+    miss?: number,
+    music_difficulty?: number,
+    music_map_start_delay?: number,
+    music_uid?: string,
     score: number,
-    user_id: string
+    user_id: string,
+    visible?: boolean
   },
   user: User
 }
