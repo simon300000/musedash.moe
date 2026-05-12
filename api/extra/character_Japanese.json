@@ -2213,5 +2213,42 @@
     "foolishExpressions": null,
     "autoExpressions": null,
     "listIndex": 0
+  },
+  {
+    "characterName": "ウマリヤ",
+    "cosName": "made by Ora 2",
+    "cosNames": null,
+    "description": "made by Ora 2",
+    "skill": "コンボ数が100未満の時、ウマリヤが「Miss」判定になってもコンボが中断されません。",
+    "skills": null,
+    "chipName": "馬マスク",
+    "chipDescription": "真夜中の高速を全力疾走するウマリヤ……今、何か落ちなかった？",
+    "cv": "馬",
+    "cvs": null,
+    "expressions": [
+      [
+        "HORSE PAAARTY ALL NIGHT!!",
+        "今夜は私があなたの「くるま」になりましょうか？",
+        "手があるからサ！懐中電灯も持てるし、バイオリンだって余裕で弾けるよ！"
+      ],
+      [
+        "（指ハート）好きになっちゃえ！（蹄ドン）（蹄ドン）（蹄ドン）",
+        "顔、顔が…近すぎだって！…あ、な～んだ、私の顔だったか。えへへ～(∠・ω )⌒☆",
+        "ウマジか！魅力的すぎでしょ！"
+      ],
+      [
+        "やっば、ユーザーがカチ切れてる……！",
+        "合成したマリヤはどこ？見つからないんだけど！",
+        "私がAIだって、いつからわかってたの？"
+      ]
+    ],
+    "reviewExpressions": null,
+    "skinNames": [
+      "デフォルト"
+    ],
+    "catExpressions": null,
+    "foolishExpressions": null,
+    "autoExpressions": null,
+    "listIndex": 0
   }
 ]

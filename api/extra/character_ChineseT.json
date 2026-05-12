@@ -2213,5 +2213,42 @@
     "foolishExpressions": null,
     "autoExpressions": null,
     "listIndex": 0
+  },
+  {
+    "characterName": "馬莉嘉",
+    "cosName": "made by Ora 2",
+    "cosNames": null,
+    "description": "made by Ora 2",
+    "skill": "當連擊數低於 100 時，即使馬莉嘉取得“Miss”判定也不會中斷連擊。",
+    "skills": null,
+    "chipName": "馬面",
+    "chipDescription": "馬莉嘉在深夜的高速公路上狂奔……有什麼掉在了地上？",
+    "cv": "馬",
+    "cvs": null,
+    "expressions": [
+      [
+        "HORSE PAAARTY ALL NIGHT!!",
+        "今晚就由我來成為您的坐騎如何？",
+        "我有手！能拿手電筒！能拉小提琴！"
+      ],
+      [
+        "（比心）看我魅惑！（蹄咚你）（蹄咚你）（蹄咚你）",
+        "臉、臉…靠得太近了哦…啊，原來是我的臉，誒嘿～(∠・ω )⌒☆",
+        "馬耶！太有魅力了！"
+      ],
+      [
+        "臥槽，用戶徹底怒了……！",
+        "給我融的瑪莉嘉去哪了？怎麼找不到啊？",
+        "您是從什麼時候發現我是 AI 的？"
+      ]
+    ],
+    "reviewExpressions": null,
+    "skinNames": [
+      "默認"
+    ],
+    "catExpressions": null,
+    "foolishExpressions": null,
+    "autoExpressions": null,
+    "listIndex": 0
   }
 ]

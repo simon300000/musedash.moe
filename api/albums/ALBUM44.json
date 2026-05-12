@@ -1459,7 +1459,7 @@
 		"callBackDifficulty2": "6",
 		"callBackDifficulty3": "9",
 		"unlockLevel": "0",
-		"newMusic" : true
+		"newMusic" : false
 	},
 	{
 		"uid": "43-70",
@@ -1480,7 +1480,7 @@
 		"callBackDifficulty2": "8",
 		"callBackDifficulty3": "10",
 		"unlockLevel": "0",
-		"newMusic" : true
+		"newMusic" : false
 	},
 	{
 		"uid": "43-71",
@@ -1506,7 +1506,7 @@
 		"callBackDifficulty3": "11",
 		"callBackDifficulty4": "-1",
 		"unlockLevel": "0",
-		"newMusic" : true
+		"newMusic" : false
 	},
 	{
 		"uid": "43-72",
@@ -1524,6 +1524,28 @@
 		"difficulty2": "6",
 		"difficulty3": "9",
 		"callBackDifficulty1": "3",
+		"callBackDifficulty2": "6",
+		"callBackDifficulty3": "9",
+		"unlockLevel": "0",
+		"newMusic" : false
+	},
+	//6.2.0 音击&中二联动版本更新曲目
+	{
+		"uid": "43-73",
+		"name": "电波妄想美少女Q",
+		"author": "まろん feat. KOTOKO",
+		"bpm": "180",
+		"music": "denpa_tic_imaginary_girl_q_music",
+		"demo": "denpa_tic_imaginary_girl_q_demo",
+		"cover": "denpa_tic_imaginary_girl_q_cover",
+		"hexieCover": "",
+		"noteJson": "denpa_tic_imaginary_girl_q_map",
+		"scene": "scene_01",
+		"levelDesigner": "ForeverFXS",
+		"difficulty1": "4",
+		"difficulty2": "6",
+		"difficulty3": "9",
+		"callBackDifficulty1": "4",
 		"callBackDifficulty2": "6",
 		"callBackDifficulty3": "9",
 		"unlockLevel": "0",

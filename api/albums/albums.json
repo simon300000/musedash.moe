@@ -29,6 +29,26 @@
       "prefabsName": "AlbumDisco44",
       "free": false
   },
+  {
+      "uid": "music_package_97",
+      "title": "DASH AND SHOOT! ",
+      "tag": "Other",
+      "needPurchase": true,
+      "price": "¥25.00",
+      "jsonName": "ALBUM98",
+      "prefabsName": "AlbumDisco98",
+      "free": false
+  },
+  {
+      "uid": "music_package_95",
+      "title": "爱♡马",
+      "tag": "Theme",
+      "needPurchase": true,
+      "price": "¥25.00",
+      "jsonName": "ALBUM96",
+      "prefabsName": "AlbumDisco96",
+      "free": false
+  },
    {
       "uid": "music_package_94",
       "title": "宇宙电台 2025",
@@ -927,6 +947,16 @@
       "price": "Free",
       "jsonName": "ALBUM7",
       "prefabsName": "AlbumDisco7",
+      "free": true
+  },
+  {
+      "uid": "music_package_96",
+      "title": "鸣潮先约电台",
+      "tag": "Default",
+      "needPurchase": false,
+      "price": "Free",
+      "jsonName": "ALBUM97",
+      "prefabsName": "AlbumDisco97",
       "free": true
   },
   {

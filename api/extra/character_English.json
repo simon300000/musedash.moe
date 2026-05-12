@@ -2213,5 +2213,42 @@
     "foolishExpressions": null,
     "autoExpressions": null,
     "listIndex": 0
+  },
+  {
+    "characterName": "Umarija",
+    "cosName": "made by Ora 2",
+    "cosNames": null,
+    "description": "made by Ora 2",
+    "skill": "When the combo is less than 100, even if Umarija receives a \"Miss\" judgment, the combo will not be interrupted.",
+    "skills": null,
+    "chipName": "Horse Face",
+    "chipDescription": "Umarija races wildly down the highway late at night... What just fell to the ground?",
+    "cv": "Horse",
+    "cvs": null,
+    "expressions": [
+      [
+        "HORSE PAAARTY ALL NIGHT!!",
+        "Can I be your mount instead tonight?",
+        "I have hands! I can hold a flashlight! I can play the violin!"
+      ],
+      [
+        "(Finger Heart) Watch me charm! (Hoofbeat you) (Hoofbeat you) (Hoofbeat you)",
+        "Yo... your face... is getting too close... Ah, it's my face. Eheh～(∠・ω )⌒☆",
+        "Neighhhh! So charming!"
+      ],
+      [
+        "Holy crap, the user is completely angry now...!",
+        "Where did the merged Marija go? I couldn't find any?",
+        "When did you realize that I was an AI?"
+      ]
+    ],
+    "reviewExpressions": null,
+    "skinNames": [
+      "Default"
+    ],
+    "catExpressions": null,
+    "foolishExpressions": null,
+    "autoExpressions": null,
+    "listIndex": 0
   }
 ]
