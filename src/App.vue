@@ -19,7 +19,7 @@
         <router-link to="/player" class="navbar-item" :exact-active-class="'is-active'">Search</router-link>
         <router-link to="/mdmc" class="navbar-item mdmcPink" :active-class="'is-active'">mdmc</router-link>
         <router-link to="/rd" class="navbar-item" :active-class="'is-active'">R. Difficulty</router-link>
-        <p class="navbar-item">Sorry for the late update!</p>
+        <p class="navbar-item">Legacy history will return later.</p>
       </div>
 
       <div class="navbar-end">
