@@ -31,9 +31,9 @@
     "rave-level": "^1.0.0",
     "register-service-worker": "^1.6.2",
     "undici": "^7.24.0",
-    "vue": "^2.7.16",
+    "vue": "^3.5.30",
     "vue-router": "^3.0.3",
-    "vuex": "^3.0.1",
+    "vuex": "^3.6.2",
     "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
@@ -72,7 +72,7 @@
     "terser-webpack-plugin": "^5.3.14",
     "typescript": "^5.9.3",
     "url-loader": "^4.1.1",
-    "vue-gtag": "^1.16.1",
+    "vue-gtag": "^3.7.0",
     "vue-server-renderer": "^2.7.16",
     "vue-template-compiler": "^2.7.16",
     "webpack": "^5.101.3",
