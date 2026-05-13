@@ -439,12 +439,12 @@ export const run = async () => {
   log('hi~')
   await refreshMusicList()
   spiderClock()
-  if (await playerDataOld()) {
-    const startTime = Date.now()
-    await mal(musicList)
-    const endTime = Date.now()
-    log(`TAKE ${endTime - startTime}, at ${new Date().toString()}`)
-  }
+  // if (await playerDataOld()) {
+  const startTime = Date.now()
+  await mal(musicList)
+  const endTime = Date.now()
+  log(`TAKE ${endTime - startTime}, at ${new Date().toString()}`)
+  // }
   while (true) {
     const currentHour = new Date().getUTCHours()
     const waitTime = (19 - currentHour + 24) % 24 || 24

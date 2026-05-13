@@ -118,6 +118,7 @@ export const isNewSong = async (id: string) => {
 }
 
 export const isWeekOldSong = async (id: string) => {
+  return true
   const now = Date.now()
   const current = await newSong.get(id).catch(() => Date.now())
   return now - current > 1000 * 60 * 60 * 24 * 7
