@@ -18,9 +18,9 @@ const parseMusicc = (music: MusicData) => {
   const { uid, difficulty: difficulties } = music
   return difficulties.map((difficultyNum, difficulty) => {
     if (difficultyNum !== '0') {
-      return { uid, difficulty, level: difficultyNum } as MusicCoreExtended
+      return { uid, difficulty, level: difficultyNum }
     }
-  }).filter(Boolean)
+  }).filter(Boolean) as MusicCoreExtended[]
 }
 
 const normalDistribution = (level: number) => {
@@ -35,7 +35,7 @@ export const diffdiff = async (musics: MusicData[]) => {
   if (worker) {
     return dispatchJob({ cmd: 'diffdiff', params: [musics] })
   }
-  const musicList = musics.map(parseMusicc).flat()
+  const musicList = musics.flatMap(parseMusicc)
   const rankMap = new WeakMap<MusicCore, IdPercentagePairs>()
   const absoluteValueMap = new WeakMap<MusicCore, number>()
   const isWeekOld = new Map<string, boolean>()
@@ -58,9 +58,17 @@ export const diffdiff = async (musics: MusicData[]) => {
     const music = musicList[index]
     const rank = rankMap.get(music)
 
+    if (!rank) {
+      continue
+    }
+
     for (let index2 = index + 1; index2 < musicList.length; index2++) {
       const music2 = musicList[index2];
       const rank2 = rankMap.get(music2)
+
+      if (!rank2) {
+        continue
+      }
 
       const keys = Object.keys(rank).filter(key => rank2[key] !== undefined)
       if (keys.length) {
@@ -73,10 +81,10 @@ export const diffdiff = async (musics: MusicData[]) => {
           log('ranks', { rank, rank2 })
         } else {
           if (isWeekOld.get(music2.uid)) {
-            absoluteValueMap.set(music, absoluteValueMap.get(music) - averageDiff)
+            absoluteValueMap.set(music, (absoluteValueMap.get(music) || 0) - averageDiff)
           }
           if (isWeekOld.get(music.uid)) {
-            absoluteValueMap.set(music2, absoluteValueMap.get(music2) + averageDiff)
+            absoluteValueMap.set(music2, (absoluteValueMap.get(music2) || 0) + averageDiff)
           }
         }
       }
@@ -84,7 +92,7 @@ export const diffdiff = async (musics: MusicData[]) => {
   }
 
   const sortedMusicList = musicList
-    .sort((a, b) => absoluteValueMap.get(b) - absoluteValueMap.get(a))
+    .sort((a, b) => (absoluteValueMap.get(b) || 0) - (absoluteValueMap.get(a) || 0))
     .map(music => {
       const { uid, difficulty, level } = music
       return { uid, difficulty, level, absolute: absoluteValueMap.get(music) }
@@ -197,13 +205,13 @@ export const diffPlayer = async () => {
 }
 
 if (!worker) {
-  parentPort.on('message', async (message: WorkerCommand) => {
+  parentPort?.on('message', async (message: WorkerCommand) => {
     if (message.cmd === 'diffdiff') {
       await diffdiff(...message.params)
     } else if (message.cmd === 'diffPlayer') {
       await diffPlayer(...message.params)
     }
-    parentPort.postMessage(message.key)
+    parentPort?.postMessage(message.key)
   })
 } else {
   worker.on('message', (key: number) => {
