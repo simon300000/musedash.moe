@@ -21,7 +21,7 @@
     "bulma": "^1.0.4",
     "chart.js": "^4.2.0",
     "chartjs-adapter-moment": "^1.0.1",
-    "js-cookie": "^3.0.1",
+    "js-cookie": "^3.0.7",
     "koa": "^3.1.2",
     "koa-body": "^4.2.0",
     "koa-mount": "^4.0.0",
