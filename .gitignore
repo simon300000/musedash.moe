@@ -36,3 +36,4 @@ size-plugin.json
 .security-key
 logs/security/
 tsconfig.tsbuildinfo
+/StreamingAssets/aa
