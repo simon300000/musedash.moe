@@ -2250,5 +2250,61 @@
     "foolishExpressions": null,
     "autoExpressions": null,
     "listIndex": 0
+  },
+  {
+    "characterName": "Marija",
+    "cosName": "Ghost",
+    "cosNames": null,
+    "description": "Ghost",
+    "skill": "Ghost Marija will turn all enemies other than ghosts into the \"Ghost Form\".",
+    "skills": null,
+    "chipName": "Heart's Lock",
+    "chipDescription": "The lock on the girl's heart is opened by you.",
+    "cv": "Yoshika Akashi",
+    "cvs": null,
+    "expressions": [
+      [
+        "Hehe... Ah, forgive me, I was a little distracted, thinking of your matters... though you are just right here.",
+        "The reason I locked you here? Because I don't want to share you with anyone else.",
+        "When we first met, you were the only one who found me. How impressive. How did you do that? I had already made myself transparent..."
+      ],
+      [
+        "No one will come, nor will anyone leave—very \"safe\".",
+        "Do you like me? Really? Then... name ten reasons why you like me?",
+        "My smiles become more frequent lately? Just thinking about spending every day with you, fills me with joy..."
+      ],
+      [
+        "Where's the exit... Why bring that up so suddenly?",
+        "Did you go anywhere else today? Your scent is somewhat... different from usual...",
+        "I'm not gonna to reincarnate. Losing memories of being with you would be the same as death."
+      ],
+      [
+        "Hehe, the air carries your scent only..."
+      ],
+      [
+        "Even during sleep paralysis, you must not open your eyes. You know what I mean, right...?"
+      ],
+      [
+        "You are quite good at waiting... Well, I'm not."
+      ]
+    ],
+    "reviewExpressions": null,
+    "skinNames": [
+      "Default"
+    ],
+    "catExpressions": null,
+    "foolishExpressions": null,
+    "autoExpressions": [
+      [
+        "Ignore me because I'm a ghost? How cruel..."
+      ],
+      [
+        "Now I have the face you obsssessed with... You cannot look at anyone else."
+      ],
+      [
+        "You know I would be lonely, yet still left me alone here intentionally? You naughty child."
+      ]
+    ],
+    "listIndex": 0
   }
 ]
