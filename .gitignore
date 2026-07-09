@@ -37,3 +37,4 @@ size-plugin.json
 logs/security/
 tsconfig.tsbuildinfo
 /StreamingAssets/aa
+/.reasonix
