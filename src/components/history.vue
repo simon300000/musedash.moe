@@ -19,7 +19,7 @@ import {
 } from 'chart.js'
 import 'chartjs-adapter-moment'
 
-import { getDiffHistory } from '@/api'
+import { getDiffHistory } from '../api'
 
 Chart.register(
   TimeScale,
@@ -69,7 +69,7 @@ export default {
       return this.player.user.user_id
     }
   },
-  beforeDestroy() {
+  beforeUnmount() {
     this.chart.destroy()
   }
 }

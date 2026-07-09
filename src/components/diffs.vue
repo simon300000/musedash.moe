@@ -6,9 +6,9 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { useMainStore } from '../stores/main'
 
-import Diff from '@/components/diff'
+import Diff from '../components/diff.vue'
 
 const RENDER_LENGTH = 22
 
@@ -29,7 +29,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['diffDiff']),
+    diffDiff() { return useMainStore().diffDiff },
     sumHeight() {
       return this.diffDiff.length * this.height
     },
@@ -66,7 +66,7 @@ export default {
     })
     this.intersectionObserver.observe(this.$refs.container)
   },
-  beforeDestroy() {
+  beforeUnmount() {
     this.resizeObserver.disconnect()
     this.intersectionObserver.disconnect()
   }

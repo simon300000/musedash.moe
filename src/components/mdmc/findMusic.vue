@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import Music from '@/components/mdmc/music.vue'
+import Music from '../../components/mdmc/music.vue'
 
 export default {
   data() {

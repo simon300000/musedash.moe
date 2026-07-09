@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { mapGetters, mapState, mapMutations } from 'vuex'
+import { useMainStore } from '../stores/main'
 
 import Album from './Album.vue'
 
@@ -24,18 +24,19 @@ export default {
       immediate: true,
       handler() {
         if (this.tagName) {
-          this.updateTitle([this, this.tagName])
+          useMainStore().updateTitle(this, this.tagName)
         }
       }
     }
   },
-  beforeDestroy() {
-    this.removeTitle(this)
+  beforeUnmount() {
+    useMainStore().removeTitle(this)
   },
-  methods: mapMutations(['removeTitle', 'updateTitle']),
   computed: {
-    ...mapState(['fullAlbums', 'lang', 'tag']),
-    ...mapGetters(['tagMap']),
+    fullAlbums() { return useMainStore().fullAlbums },
+    lang() { return useMainStore().lang },
+    tag() { return useMainStore().tag },
+    tagMap() { return useMainStore().tagMap },
     currentTag() {
       const tags = this.tagMap[this.name]
       if (!tags) {

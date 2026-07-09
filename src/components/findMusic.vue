@@ -11,9 +11,9 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex'
+import { useMainStore } from '../stores/main'
 
-import music from '@/components/music.vue'
+import music from '../components/music.vue'
 
 const RENDER_LENGTH = 24
 
@@ -32,8 +32,10 @@ export default {
   },
   components: { music },
   computed: {
-    ...mapState(['lang', 'fullAlbums']),
-    ...mapGetters(['allMusics', 'musicAlbum']),
+    lang() { return useMainStore().lang },
+    fullAlbums() { return useMainStore().fullAlbums },
+    allMusics() { return useMainStore().allMusics },
+    musicAlbum() { return useMainStore().musicAlbum },
     musicMap() {
       return Object.values(this.allMusics)
         .map(music => {
@@ -91,7 +93,7 @@ export default {
       this.intersectionObserver.observe(this.$refs.container)
     })
   },
-  beforeDestroy() {
+  beforeUnmount() {
     if (this.resizeObserver) {
       this.resizeObserver.disconnect()
     }

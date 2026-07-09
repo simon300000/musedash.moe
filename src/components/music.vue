@@ -3,22 +3,22 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex'
+import { useMainStore } from '../stores/main'
 
-import Capsule from './capsule'
-import Core from './musicCore'
+import Core from './musicCore.vue'
 
-import { loadCover } from '@/coverLoader'
+import { loadCover } from '../coverLoader'
 
 export default {
   props: ['music', 'platform', 'level', 'hideAlbum'],
   components: {
-    Capsule,
     Core
   },
   computed: {
-    ...mapState(['lang', 'fullAlbums', 'diffDiffMusic']),
-    ...mapGetters(['musicAlbum']),
+    lang() { return useMainStore().lang },
+    fullAlbums() { return useMainStore().fullAlbums },
+    diffDiffMusic() { return useMainStore().diffDiffMusic },
+    musicAlbum() { return useMainStore().musicAlbum },
     src() {
       return loadCover(this.music.cover)
     },

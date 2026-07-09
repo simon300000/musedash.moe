@@ -78,9 +78,9 @@
 </template>
 
 <script>
-import { mapMutations, mapState } from 'vuex'
+import { useMainStore } from '../stores/main'
 
-import { getLog } from '@/api'
+import { getLog } from '../api'
 
 export default {
   data() {
@@ -92,15 +92,13 @@ export default {
     }
   },
   computed: {
-    ...mapState({
-      storedShowApiTiming: 'showApiTiming'
-    }),
+    storedShowApiTiming() { return useMainStore().showApiTiming },
     showApiTiming: {
       get() {
         return this.storedShowApiTiming
       },
       set(value) {
-        this.setShowApiTiming(value)
+        useMainStore().setShowApiTiming(value)
       }
     }
   },
@@ -118,18 +116,17 @@ export default {
       localStorage.showApiTiming = String(this.showApiTiming)
     }
   },
-  methods: mapMutations(['updateTitle', 'removeTitle', 'setShowApiTiming']),
   created() {
-    this.updateTitle([this, 'About'])
+    useMainStore().updateTitle(this, 'About')
   },
-  beforeDestroy() {
-    this.removeTitle(this)
+  beforeUnmount() {
+    useMainStore().removeTitle(this)
   },
   async mounted() {
     this.rawEnabled = localStorage.rawEnabled === 'true'
     this.vt = localStorage.vt === 'true'
     this.noSpider = localStorage.noSpider === 'true'
-    this.setShowApiTiming(localStorage.showApiTiming === 'true')
+    useMainStore().setShowApiTiming(localStorage.showApiTiming === 'true')
     this.log = await getLog()
   }
 }

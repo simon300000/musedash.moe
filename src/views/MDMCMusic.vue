@@ -10,11 +10,10 @@
 </template>
 
 <script>
-import { createNamespacedHelpers, mapMutations } from 'vuex'
+import { useMdmcStore } from '../stores/mdmc'
+import { useMainStore } from '../stores/main'
 
-import Music from '@/components/mdmc/music'
-
-const { mapState, mapActions } = createNamespacedHelpers('mdmc')
+import Music from '../components/mdmc/music.vue'
 
 export default {
   props: ['id'],
@@ -23,32 +22,28 @@ export default {
       immediate: true,
       handler(music) {
         if (music) {
-          this.updateTitle([this, music.name])
+          useMainStore().updateTitle(this, music.name)
         }
       }
     }
   },
   computed: {
-    ...mapState(['album']),
+    album() { return useMdmcStore().album },
     music() {
       return Object.fromEntries(this.album.map(({ id, ...rest }) => [id, { ...rest, id }]))[this.id]
     }
   },
   components: { Music },
-  beforeDestroy() {
-    this.removeTitle(this)
+  beforeUnmount() {
+    useMainStore().removeTitle(this)
   },
   async serverPrefetch() {
-    await this.loadAlbum()
-    this.updateTitle([this, this.music.name])
-  },
-  methods: {
-    ...mapActions(['loadAlbum']),
-    ...mapMutations(['removeTitle', 'updateTitle'])
+    await useMdmcStore().loadAlbum()
+    useMainStore().updateTitle(this, this.music.name)
   },
   mounted() {
-    if (!this.album.length) {
-      this.loadAlbum()
+    if (!useMdmcStore().album.length) {
+      useMdmcStore().loadAlbum()
     }
   }
 }

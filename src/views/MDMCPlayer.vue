@@ -6,11 +6,10 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations, createNamespacedHelpers } from 'vuex'
+import { useMainStore } from '../stores/main'
+import { useMdmcStore } from '../stores/mdmc'
 
-import Core from '@/components/PlayerCore.vue'
-
-const { mapActions, mapState, mapGetters: mapNamespacedGetters } = createNamespacedHelpers('mdmc')
+import Core from '../components/PlayerCore.vue'
 
 export default {
   props: ['id'],
@@ -22,7 +21,7 @@ export default {
       immediate: true,
       handler(title) {
         if (title) {
-          this.updateTitle([this, title])
+          useMainStore().updateTitle(this, title)
         }
       }
     },
@@ -30,18 +29,20 @@ export default {
       immediate: true,
       handler() {
         if (!this.currentPlayer) {
-          this.loadUser(this.id)
+          useMdmcStore().loadUser(this.id)
         }
       }
     }
   },
-  beforeDestroy() {
-    this.removeTitle(this)
+  beforeUnmount() {
+    useMainStore().removeTitle(this)
   },
   computed: {
-    ...mapGetters(['elfins', 'characters']),
-    ...mapState(['album', 'userCache']),
-    ...mapNamespacedGetters(['songs']),
+    elfins() { return useMainStore().elfins },
+    characters() { return useMainStore().characters },
+    album() { return useMdmcStore().album },
+    userCache() { return useMdmcStore().userCache },
+    songs() { return useMdmcStore().songs },
     currentPlayer() {
       return this.userCache[this.id]
     },
@@ -65,18 +66,16 @@ export default {
     }
   },
   async serverPrefetch() {
-    await this.loadAlbum()
-    await this.loadUser(this.id)
-    this.updateTitle([this, this.title])
+    const mdmc = useMdmcStore()
+    await mdmc.loadAlbum()
+    await mdmc.loadUser(this.id)
+    useMainStore().updateTitle(this, this.title)
   },
   async mounted() {
-    if (!this.album.length) {
-      await this.loadAlbum()
+    const mdmc = useMdmcStore()
+    if (!mdmc.album.length) {
+      await mdmc.loadAlbum()
     }
-  },
-  methods: {
-    ...mapActions(['loadAlbum', 'loadUser']),
-    ...mapMutations(['updateTitle', 'removeTitle'])
   }
 }
 </script>

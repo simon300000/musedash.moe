@@ -1,64 +1,64 @@
 <!-- From AbnerSquared, https://codepen.io/AbnerSquared/pen/xxZYEKv -->
 <!-- Also capsule-def.vue-->
-<template functional>
+<template>
 <div class="level-item">
   <div class="capsule">
 
-    <router-link :to="props.difficulties[0].link" v-if="props.difficulties[0].level !== '0'">
+    <router-link :to="difficulties[0].link" v-if="difficulties[0].level !== '0'">
       <svg class="node">
         <use href="#round" fill="url(#white-slash)" class="only" />
         <use href="#star" fill="url(#easy_slash)" />
-        <text x="50%" y="50%" class="easy_text text outline_easy">{{props.difficulties[0].level}}</text>
+        <text x="50%" y="50%" class="easy_text text outline_easy">{{difficulties[0].level}}</text>
       </svg>
     </router-link>
-    <div class="empty node" v-else-if="!props.hide">
+    <div class="empty node" v-else-if="!hide">
       <div class="dot"></div>
     </div>
 
-    <div class="padding" v-if="props.difficulties[0].level !== '0' && props.difficulties[1].level !== '0' || !props.hide"></div>
+    <div class="padding" v-if="difficulties[0].level !== '0' && difficulties[1].level !== '0' || !hide"></div>
 
-    <router-link :to="props.difficulties[1].link" v-if="props.difficulties[1].level !== '0'">
+    <router-link :to="difficulties[1].link" v-if="difficulties[1].level !== '0'">
       <svg class="node">
         <use href="#round" fill="url(#white-slash)" class="only" />
         <use href="#star" fill="url(#hard_slash)" />
-        <text x="50%" y="50%" class="hard_text text outline_hard">{{props.difficulties[1].level}}</text>
+        <text x="50%" y="50%" class="hard_text text outline_hard">{{difficulties[1].level}}</text>
       </svg>
     </router-link>
-    <div class="empty node" v-else-if="!props.hide">
+    <div class="empty node" v-else-if="!hide">
       <div class="dot"></div>
     </div>
 
-    <div class="padding" v-if="props.difficulties[1].level !== '0' && props.difficulties[2].level !== '0' || !props.hide"></div>
+    <div class="padding" v-if="difficulties[1].level !== '0' && difficulties[2].level !== '0' || !hide"></div>
 
-    <router-link :to="props.difficulties[2].link" v-if="props.difficulties[2].level !== '0'">
+    <router-link :to="difficulties[2].link" v-if="difficulties[2].level !== '0'">
       <svg class="node">
         <use href="#round" fill="url(#white-slash)" class="only" />
         <use href="#star" fill="url(#master_slash)" />
-        <text x="50%" y="50%" class="master_text text outline_master">{{props.difficulties[2].level}}</text>
+        <text x="50%" y="50%" class="master_text text outline_master">{{difficulties[2].level}}</text>
       </svg>
     </router-link>
-    <div class="empty node" v-else-if="!props.hide">
+    <div class="empty node" v-else-if="!hide">
       <div class="dot"></div>
     </div>
 
-    <div class="padding" v-if="props.difficulties[2].level !== '0' && props.difficulties[3].level !== '0'"></div>
+    <div class="padding" v-if="difficulties[2].level !== '0' && difficulties[3].level !== '0'"></div>
 
-    <router-link :to="props.difficulties[3].link" v-if="props.difficulties[3].level !== '0'">
+    <router-link :to="difficulties[3].link" v-if="difficulties[3].level !== '0'">
       <svg class="node">
         <use href="#round" fill="url(#white-slash)" class="only" />
         <use href="#star" fill="url(#inferno_slash)" />
-        <text x="50%" y="50%" class="inferno_text text outline_inferno">{{props.difficulties[3].level}}</text>
+        <text x="50%" y="50%" class="inferno_text text outline_inferno">{{difficulties[3].level}}</text>
       </svg>
     </router-link>
 
-    <template v-if="props.difficulties[4]">
-      <div class="padding" v-if="(props.difficulties[2].level !== '0' || props.difficulties[3].level !== '0') && props.difficulties[4].level !== '0'"></div>
+    <template v-if="difficulties[4]">
+      <div class="padding" v-if="(difficulties[2].level !== '0' || difficulties[3].level !== '0') && difficulties[4].level !== '0'"></div>
 
-      <router-link :to="props.difficulties[4].link" v-if="props.difficulties[4].level !== '0'">
+      <router-link :to="difficulties[4].link" v-if="difficulties[4].level !== '0'">
         <svg class="node">
           <use href="#round" fill="url(#white-slash)" class="only" />
           <use href="#star" fill="url(#touhou_slash)" />
-          <text x="50%" y="50%" class="touhou_text text outline_touhou">{{props.difficulties[4].level}}</text>
+          <text x="50%" y="50%" class="touhou_text text outline_touhou">{{difficulties[4].level}}</text>
         </svg>
       </router-link>
     </template>
@@ -68,7 +68,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  props: ['difficulties', 'hide']
+}
 </script>
 
 <style scoped>

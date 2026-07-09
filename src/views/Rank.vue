@@ -20,14 +20,14 @@
     </div>
   </nav>
   <progress class="progress is-small" max="100" v-if="!currentRank"></progress>
-  <core v-else :currentRank="currentRank" :platform="platform"></core>
+  <core v-else :currentRank="currentRank" :platform="effectivePlatform"></core>
 </div>
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { useMainStore } from '../stores/main'
 
-import Core from '@/components/rankCore.vue'
+import Core from '../components/rankCore.vue'
 
 export default {
   props: {
@@ -42,12 +42,14 @@ export default {
     Core
   },
   computed: {
-    ...mapState(['rankCache', 'rankUpdateTimeCache']),
+    rankCache() { return useMainStore().rankCache },
+    rankUpdateTimeCache() { return useMainStore().rankUpdateTimeCache },
+    effectivePlatform() { return this.platform || 'all' },
     currentRank() {
-      return this.rankCache[`${this.uid}_${this.platform}_${this.difficulty}`]
+      return this.rankCache[`${this.uid}_${this.effectivePlatform}_${this.difficulty}`]
     },
     updateTime() {
-      return this.rankUpdateTimeCache[`${this.uid}_${this.platform}_${this.difficulty}`]
+      return this.rankUpdateTimeCache[`${this.uid}_${this.effectivePlatform}_${this.difficulty}`]
     },
     update2hAgo() {
       if (!this.updateTime) {
@@ -77,15 +79,16 @@ export default {
     difficulty: 'mount'
   },
   methods: {
-    ...mapActions(['loadRank', 'updateRank']),
+    loadRank(p) { return useMainStore().loadRank(p) },
+    updateRank(p) { return useMainStore().updateRank(p) },
     mount() {
       if (!this.currentRank) {
-        const { uid, platform, difficulty } = this
+        const { uid, effectivePlatform: platform, difficulty } = this
         this.loadRank({ uid, platform, difficulty })
       }
     },
     update() {
-      const { uid, platform, difficulty } = this
+      const { uid, effectivePlatform: platform, difficulty } = this
       this.updateRank({ uid, platform, difficulty })
     }
   }

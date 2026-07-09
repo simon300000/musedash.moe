@@ -5,9 +5,9 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex'
+import { useMainStore } from '../stores/main'
 
-import music from '@/components/music.vue'
+import music from '../components/music.vue'
 
 export default {
   props: ['album', 'only'],
@@ -19,17 +19,17 @@ export default {
       immediate: true,
       handler(title) {
         if (title) {
-          this.updateTitle([this, title])
+          useMainStore().updateTitle(this, title)
         }
       }
     }
   },
-  beforeDestroy() {
-    this.removeTitle(this)
+  beforeUnmount() {
+    useMainStore().removeTitle(this)
   },
-  methods: mapMutations(['removeTitle', 'updateTitle']),
   computed: {
-    ...mapState(['fullAlbums', 'lang']),
+    fullAlbums() { return useMainStore().fullAlbums },
+    lang() { return useMainStore().lang },
     currentAlbum() {
       return this.fullAlbums[this.album]
     },

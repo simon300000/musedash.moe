@@ -40,19 +40,21 @@
 </template>
 
 <script>
-import { mapState, mapActions, mapGetters } from 'vuex'
+import { useMainStore } from '../stores/main'
 
 import { characterSkip, elfinSkip } from '../../api/config'
 
-import Diffs from '@/components/diffs'
+import Diffs from '../components/diffs.vue'
 
 export default {
   components: {
     Diffs
   },
   computed: {
-    ...mapState(['diffDiff']),
-    ...mapGetters(['albumsArray', 'elfins', 'characters']),
+    diffDiff() { return useMainStore().diffDiff },
+    albumsArray() { return useMainStore().albumsArray },
+    elfins() { return useMainStore().elfins },
+    characters() { return useMainStore().characters },
     characterSkip() {
       return characterSkip.map(i => this.characters[i]).join(', ')
     },
@@ -60,15 +62,13 @@ export default {
       return elfinSkip.map(i => this.elfins[i]).join(', ')
     }
   },
-  methods: {
-    ...mapActions(['loadAlbums', 'loadDiffDiff']),
-  },
   mounted() {
-    if (!this.albumsArray.length) {
-      this.loadAlbums()
+    const store = useMainStore()
+    if (!store.albumsArray.length) {
+      store.loadAlbums()
     }
-    if (!this.diffDiff.length) {
-      this.loadDiffDiff()
+    if (!store.diffDiff.length) {
+      store.loadDiffDiff()
     }
   }
 }

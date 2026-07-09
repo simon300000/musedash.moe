@@ -3,13 +3,11 @@
 </template>
 
 <script>
-import Capsule from '@/components/capsule'
-import Core from '@/components/musicCore'
+import Core from '../../components/musicCore.vue'
 
 export default {
   props: ['music'],
   components: {
-    Capsule,
     Core
   },
   computed: {

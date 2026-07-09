@@ -6,11 +6,9 @@
 </template>
 
 <script>
-import { createNamespacedHelpers } from 'vuex'
+import { useMdmcStore } from '../stores/mdmc'
 
-import Core from '@/components/rankCore.vue'
-
-const { mapState, mapActions } = createNamespacedHelpers('mdmc')
+import Core from '../components/rankCore.vue'
 
 export default {
   props: ['id', 'difficulty'],
@@ -18,7 +16,7 @@ export default {
     Core
   },
   computed: {
-    ...mapState(['rankCache']),
+    rankCache() { return useMdmcStore().rankCache },
     currentRank() {
       return this.rankCache[`${this.id}_${this.difficulty}`]
     }
@@ -27,15 +25,13 @@ export default {
     this.mount()
   },
   watch: {
-    platform: 'mount',
     difficulty: 'mount'
   },
   methods: {
-    ...mapActions(['loadRank']),
     mount() {
       if (!this.currentRank) {
         const { id, difficulty } = this
-        this.loadRank({ id, difficulty })
+        useMdmcStore().loadRank({ id, difficulty })
       }
     }
   }

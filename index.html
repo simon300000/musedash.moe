@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>{{ title }}</title>
+  <title><!--ssr-title--></title>
   <link rel=icon type=image/png sizes=32x32 href=/img/icons/favicon-32x32.png> <link rel=icon type=image/png sizes=16x16 href=/img/icons/favicon-16x16.png> <link rel=manifest href=/manifest.json> <meta name=theme-color content=#3498db>
   <meta name=apple-mobile-web-app-capable content=no>
   <meta name=apple-mobile-web-app-status-bar-style content=default>
@@ -18,6 +18,7 @@
     <strong>We're sorry but MuseDash.moe doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
   </noscript>
   <div id="app"></div>
+  <script type="module" src="/src/entry-client.ts"></script>
 </body>
 
 </html>

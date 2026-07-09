@@ -76,11 +76,10 @@
 </template>
 
 <script>
-import Octicon from '@/components/octicon.vue'
-import record from '@/components/record.vue'
-import History from '@/components/history.vue'
+import record from '../components/record.vue'
+import History from '../components/history.vue'
 
-import { getRankRaw } from '@/api'
+import { getRankRaw } from '../api'
 
 export default {
   props: ['plays', 'current', 'id', 'mdmc'],
@@ -91,7 +90,6 @@ export default {
     }
   },
   components: {
-    Octicon,
     record,
     History
   },

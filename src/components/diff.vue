@@ -29,9 +29,9 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { useMainStore } from '../stores/main'
 
-import Capsule from './capsule'
+import Capsule from './capsule.vue'
 
 export default {
   components: {
@@ -39,7 +39,7 @@ export default {
   },
   props: ['i'],
   computed: {
-    ...mapGetters(['diffDiffList']),
+    diffDiffList() { return useMainStore().diffDiffList },
     w() {
       return this.diffDiffList[this.i] || {}
     }

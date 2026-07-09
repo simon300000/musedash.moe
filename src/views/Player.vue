@@ -6,11 +6,11 @@
 </template>
 
 <script>
-import { mapActions, mapState, mapGetters, mapMutations } from 'vuex'
+import { useMainStore } from '../stores/main'
 
-import Core from '@/components/PlayerCore.vue'
+import Core from '../components/PlayerCore.vue'
 
-import { loadCover } from '@/coverLoader'
+import { loadCover } from '../coverLoader'
 
 export default {
   props: ['id'],
@@ -22,7 +22,7 @@ export default {
       immediate: true,
       handler(title) {
         if (title) {
-          this.updateTitle([this, title])
+          useMainStore().updateTitle(this, title)
         }
       }
     },
@@ -30,17 +30,21 @@ export default {
       immediate: true,
       handler() {
         if (!this.currentPlayer) {
-          this.loadUser(this.id)
+          useMainStore().loadUser(this.id)
         }
       }
     }
   },
-  beforeDestroy() {
-    this.removeTitle(this)
+  beforeUnmount() {
+    useMainStore().removeTitle(this)
   },
   computed: {
-    ...mapState(['userCache', 'lang']),
-    ...mapGetters(['albumsArray', 'allMusics', 'elfins', 'characters']),
+    userCache() { return useMainStore().userCache },
+    lang() { return useMainStore().lang },
+    albumsArray() { return useMainStore().albumsArray },
+    allMusics() { return useMainStore().allMusics },
+    elfins() { return useMainStore().elfins },
+    characters() { return useMainStore().characters },
     currentPlayer() {
       return this.userCache[this.id]
     },
@@ -65,16 +69,13 @@ export default {
     }
   },
   async serverPrefetch() {
-    await this.loadAlbums()
-    await this.loadUser(this.id)
-    this.updateTitle([this, this.title])
+    const store = useMainStore()
+    await store.loadAlbums()
+    await store.loadUser(this.id)
+    store.updateTitle(this, this.title)
   },
   mounted() {
-    this.loadAlbums()
-  },
-  methods: {
-    ...mapActions(['loadAlbums', 'loadUser']),
-    ...mapMutations(['updateTitle', 'removeTitle'])
+    useMainStore().loadAlbums()
   }
 }
 </script>

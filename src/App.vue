@@ -1,6 +1,5 @@
 <template>
 <div id="app" :class="{ blackWhite }">
-  <link rel="stylesheet" :href="currentTheme.css">
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <div class="navbar-brand">
@@ -61,30 +60,24 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex'
-import CapsuleDef from '@/components/capsule-def'
+import { useMainStore } from './stores/main'
+import CapsuleDef from './components/capsule-def.vue'
 
-import dark from '!file-loader?name=static/css/[name].noinject.hash.[contenthash].css!sass-loader!./dark.scss'
-import light from '!file-loader?name=static/css/[name].noinject.hash.[contenthash].css!sass-loader!./bulma.scss'
-import auto from '!file-loader?name=static/css/[name].noinject.hash.[contenthash].css!sass-loader!./auto.scss'
-
-import { dispatch, receipt } from '@/api'
+import { dispatch, receipt } from './api'
+import { gtag } from './gtag'
 
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 const themeConfig = {
   dark: {
-    css: dark,
     next: 'light',
     button: '🌙'
   },
   light: {
-    css: light,
     next: 'auto',
     button: '💡'
   },
   auto: {
-    css: auto,
     next: 'dark',
     button: 'Auto'
   }
@@ -105,7 +98,6 @@ const preventDefault = e => {
   if (e.defaultPrevented) return false
   // don't redirect on right click
   if (e.button !== undefined && e.button !== 0) return false
-  // https://github.com/vuejs/vue-router/blob/65de048ee9f0ebf899ae99c82b71ad397727e55d/src/components/link.js#L159-L164
   e.preventDefault()
   return true
 }
@@ -118,22 +110,25 @@ export default {
     CapsuleDef
   },
   async mounted() {
-    this.$gtag.config({
+    const store = useMainStore()
+
+    gtag('config', 'G-B2JLBE6TE0', {
       custom_map: {
         dimension1: 'theme',
         dimension2: 'code'
       }
     })
-    this.$gtag.event('theme', {
-      'theme': this.theme
+    gtag('event', 'theme', {
+      'theme': store.theme
     })
+
     if (localStorage.noSpider !== 'true') {
       while (true) {
         const { url } = await dispatch()
         if (url) {
           const data = await fetch(url).then(w => w.text())
           receipt(url, data)
-          this.$gtag.event('Dispatch', {
+          gtag('event', 'Dispatch', {
             event_name: 'dispatch',
             code: JSON.parse(data).code
           })
@@ -147,15 +142,22 @@ export default {
   watch: {
     theme: {
       immediate: false,
-      handler() {
-        this.$gtag.event('theme', {
-          'theme': this.theme
+      handler(t) {
+        if (typeof document !== 'undefined') {
+          document.documentElement.setAttribute('data-theme', t)
+        }
+        gtag('event', 'theme', {
+          'theme': t
         })
       }
     }
   },
   computed: {
-    ...mapState(['lang', 'theme', 'blackWhite', 'showApiTiming', 'apiTimingLogs']),
+    lang() { return useMainStore().lang },
+    theme() { return useMainStore().theme },
+    blackWhite() { return useMainStore().blackWhite },
+    showApiTiming() { return useMainStore().showApiTiming },
+    apiTimingLogs() { return useMainStore().apiTimingLogs },
     currentLang() {
       return langs[this.lang]
     },
@@ -171,10 +173,16 @@ export default {
     }
   },
   created() {
-    this.updateTitle([this, 'MuseDash.moe - Rank of Muse Dash'])
+    const store = useMainStore()
+    store.updateTitle(this, 'MuseDash.moe - Rank of Muse Dash')
+    // Apply initial theme (client-side only)
+    if (typeof document !== 'undefined') {
+      document.documentElement.setAttribute('data-theme', store.theme)
+    }
   },
   methods: {
-    ...mapMutations(['setLang', 'setTheme', 'updateTitle']),
+    setLang(data) { useMainStore().setLang(data) },
+    setTheme(data) { useMainStore().setTheme(data) },
     updateLang(lang, e) {
       if (preventDefault(e)) {
         this.setLang(lang)

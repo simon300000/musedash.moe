@@ -16,7 +16,7 @@
     <router-link :to="`/tag/${name}`" :key="name" v-for="{name, displayName} in tag" custom v-slot="{ navigate, href, isActive }">
       <a class="tag-btn" :href="href" :class="{'tag-btn-selecte': isActive}" @click="navigate">
         <div class="tag-content-container">
-          <img :src="iconSrc(tagImage[name])" class="tag-img" alt="All">
+          <img :src="iconSrc(tagImage[name])" class="tag-img" :alt="displayName[lang]">
           <span class="tag-text">{{displayName[lang]}}</span>
         </div>
       </a>
@@ -29,45 +29,69 @@
 </template>
 
 <script>
-import { mapState, mapActions, mapGetters } from 'vuex'
+import { useMainStore } from '../stores/main'
 
-import findMusic from '@/components/findMusic'
-import Albums from '@/components/albums.vue'
+import findMusic from '../components/findMusic.vue'
+import Albums from '../components/albums.vue'
+
+import IconAllMusic from '../icons/IconAllMusic.png'
+import IconDefaultMusic from '../icons/IconDefaultMusic.png'
+import IconConceptPack from '../icons/IconConceptPack.png'
+import IconHappyOtakuPack from '../icons/IconHappyOtakuPack.png'
+import IconCuteIsEveryting from '../icons/IconCuteIsEveryting.png'
+import IconGiveUpTreatment from '../icons/IconGiveUpTreatment.png'
+import IconHideMap from '../icons/IconHideMap.png'
+import IconNew from '../icons/IconNew.png'
+import IconJustAsPlanned from '../icons/IconJustAsPlanned.png'
+import X from '../icons/X.png'
+
+const tagImage = {
+  Default: 'IconDefaultMusic.png',
+  Theme: 'IconConceptPack.png',
+  Happy: 'IconHappyOtakuPack.png',
+  Cute: 'IconCuteIsEveryting.png',
+  GiveUp: 'IconGiveUpTreatment.png',
+  X: 'X.png',
+  HideMap: 'IconHideMap.png',
+  New: 'IconNew.png',
+  PlannedPlus: 'IconJustAsPlanned.png'
+}
+
+const iconUrls = {
+  'IconAllMusic.png': IconAllMusic,
+  'IconDefaultMusic.png': IconDefaultMusic,
+  'IconConceptPack.png': IconConceptPack,
+  'IconHappyOtakuPack.png': IconHappyOtakuPack,
+  'IconCuteIsEveryting.png': IconCuteIsEveryting,
+  'IconGiveUpTreatment.png': IconGiveUpTreatment,
+  'IconHideMap.png': IconHideMap,
+  'IconNew.png': IconNew,
+  'IconJustAsPlanned.png': IconJustAsPlanned,
+  'X.png': X
+}
 
 export default {
   data() {
-    this.tagImage = {
-      Default: 'IconDefaultMusic.png',
-      Theme: 'IconConceptPack.png',
-      Happy: 'IconHappyOtakuPack.png',
-      Cute: 'IconCuteIsEveryting.png',
-      GiveUp: 'IconGiveUpTreatment.png',
-      X: 'X.png',
-      HideMap: 'IconHideMap.png',
-      New: 'IconNew.png',
-      PlannedPlus: 'IconJustAsPlanned.png'
-    }
-    return {}
+    return { tagImage }
   },
   components: { findMusic, Albums },
   computed: {
-    ...mapState(['lang', 'tag']),
-    ...mapGetters(['albumsArray']),
+    lang() { return useMainStore().lang },
+    tag() { return useMainStore().tag },
+    albumsArray() { return useMainStore().albumsArray },
     allSelected() {
       return !this.$route.path.includes('/tag/')
     }
   },
   serverPrefetch() {
-    return this.loadAlbums()
+    return useMainStore().loadAlbums()
   },
   mounted() {
-    this.loadAlbums()
+    useMainStore().loadAlbums()
   },
   methods: {
-    ...mapActions(['loadAlbums']),
     iconSrc(file) {
-      const mod = require(`@/icons/${file}`)
-      return mod && mod.default ? mod.default : mod
+      return iconUrls[file] || ''
     }
   }
 }

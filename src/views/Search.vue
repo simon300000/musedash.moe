@@ -24,8 +24,8 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
-import { searchPlayer, mdmcSearchPlayer } from '@/api'
+import { useMainStore } from '../stores/main'
+import { searchPlayer, mdmcSearchPlayer } from '../api'
 
 export default {
   props: ['mdmc'],
@@ -46,13 +46,12 @@ export default {
     }
   },
   created() {
-    this.updateTitle([this, 'Search'])
+    useMainStore().updateTitle(this, 'Search')
   },
-  beforeDestroy() {
-    this.removeTitle(this)
+  beforeUnmount() {
+    useMainStore().removeTitle(this)
   },
   methods: {
-    ...mapMutations(['updateTitle', 'removeTitle']),
     async submit(e) {
       e.preventDefault()
       if (this.searching !== this.search) {

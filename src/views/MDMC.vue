@@ -3,18 +3,17 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import { useMainStore } from '../stores/main'
 
 export default {
-  beforeDestroy() {
-    this.removeTitle(this)
+  beforeUnmount() {
+    useMainStore().removeTitle(this)
   },
   serverPrefetch() {
-    this.updateTitle([this, 'MDMC'])
+    useMainStore().updateTitle(this, 'MDMC')
   },
   mounted() {
-    this.updateTitle([this, 'MDMC'])
-  },
-  methods: mapMutations(['removeTitle', 'updateTitle'])
+    useMainStore().updateTitle(this, 'MDMC')
+  }
 }
 </script>

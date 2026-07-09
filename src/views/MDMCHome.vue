@@ -17,12 +17,10 @@
 </template>
 
 <script>
-import { createNamespacedHelpers } from 'vuex'
+import { useMdmcStore } from '../stores/mdmc'
 
-import Music from '@/components/mdmc/music'
-import FindMusic from '@/components/mdmc/findMusic'
-
-const { mapState, mapActions } = createNamespacedHelpers('mdmc')
+import Music from '../components/mdmc/music.vue'
+import FindMusic from '../components/mdmc/findMusic.vue'
 
 export default {
   components: {
@@ -30,15 +28,14 @@ export default {
     FindMusic
   },
   computed: {
-    ...mapState(['album'])
+    album() { return useMdmcStore().album }
   },
-  methods: mapActions(['loadAlbum']),
   serverPrefetch() {
-    return this.loadAlbum()
+    return useMdmcStore().loadAlbum()
   },
   mounted() {
-    if (!this.album.length) {
-      this.loadAlbum()
+    if (!useMdmcStore().album.length) {
+      useMdmcStore().loadAlbum()
     }
   },
 }

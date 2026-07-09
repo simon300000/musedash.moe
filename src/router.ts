@@ -1,5 +1,4 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import { createRouter as createVueRouter, createWebHistory, createMemoryHistory, type Router } from 'vue-router'
 import Home from './views/Home.vue'
 import Album from './views/Album.vue'
 import Tag from './views/Tag.vue'
@@ -16,11 +15,10 @@ import MDMCMusic from './views/MDMCMusic.vue'
 import MDMCRank from './views/MDMCRank.vue'
 import MDMCPlayer from './views/MDMCPlayer.vue'
 
-Vue.use(Router)
+const isSSR: boolean = typeof window === 'undefined'
 
-export const createRouter = () => new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
+export const createRouter = (): Router => createVueRouter({
+  history: isSSR ? createMemoryHistory(import.meta.env.BASE_URL) : createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
@@ -41,10 +39,9 @@ export const createRouter = () => new Router({
       props: true,
       component: Music,
       children: [{
-        path: ':difficulty',
+        path: ':difficulty/:platform?',
         props: true,
-        component: Rank,
-        children: [{ path: ':platform', props: true }]
+        component: Rank
       }]
     }, {
       path: '/player/:id',
@@ -64,7 +61,7 @@ export const createRouter = () => new Router({
       path: '/mdmc',
       component: MDMC,
       children: [{
-        path: '/',
+        path: '',
         alias: ['chart'],
         component: MDMCHome
       }, {

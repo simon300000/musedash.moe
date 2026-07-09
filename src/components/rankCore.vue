@@ -42,12 +42,12 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { useMainStore } from '../stores/main'
 
-import Octicon from '@/components/octicon.vue'
-import change from '@/components/change.vue'
+import Octicon from '../components/octicon.vue'
+import change from '../components/change.vue'
 
-import { getRankRaw } from '@/api'
+import { getRankRaw } from '../api'
 
 const threshold = Array(300).fill().map((_, i) => i / 300)
 
@@ -60,8 +60,8 @@ export default {
       observer: undefined,
       skipRatio: 0,
       search: '',
-      raw: localStorage.rawEnabled === 'true',
-      vt: localStorage.vt === 'true',
+      raw: typeof localStorage !== 'undefined' ? localStorage.rawEnabled === 'true' : false,
+      vt: typeof localStorage !== 'undefined' ? localStorage.vt === 'true' : false,
       rawMap: {}
     }
   },
@@ -80,7 +80,8 @@ export default {
   },
   props: ['currentRank', 'platform'],
   computed: {
-    ...mapGetters(['elfins', 'characters']),
+    elfins() { return useMainStore().elfins },
+    characters() { return useMainStore().characters },
     renderLength() {
       return Math.min(renderLength, this.maxLength)
     },
@@ -131,7 +132,7 @@ export default {
       const skip = Math.floor(this.skipRatio * this.maxLength)
       const skipEven = skip % 2 === 0 ? skip : skip - 1
       const result = Math.max(0, Math.min(this.maxLength - renderLength, skipEven - 2 * Math.floor(renderLength / 8)))
-      if (result > 0 && document.activeElement === this.$refs.search) {
+      if (result > 0 && typeof document !== 'undefined' && document.activeElement === this.$refs.search) {
         this.$refs.search.blur()
       }
       return result
@@ -148,7 +149,7 @@ export default {
 
     this.observer.observe(this.$refs.container)
   },
-  beforeDestroy() {
+  beforeUnmount() {
     this.observer.disconnect()
   },
 }

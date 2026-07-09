@@ -2,14 +2,14 @@
 <div class="tabs is-centered is-large" ref="container" :class="{overflowhide: win}">
   <ul>
     <router-link :to="`/albums/${album.json}`" :key="album.json" v-for="album in albums" custom v-slot="{ navigate, href, isActive }">
-      <li @click="navigate" @keypress.enter="navigate" :class="{ 'is-active': isActive }"><a :href="href"><span>{{album.title}}</span></a></li>
+      <li @click="navigate" @keydown.enter="navigate" :class="{ 'is-active': isActive }"><a :href="href"><span>{{album.title}}</span></a></li>
     </router-link>
   </ul>
 </div>
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex'
+import { useMainStore } from '../stores/main'
 
 const onScroll = container => e => {
   const d = e.deltaY + e.deltaX
@@ -25,8 +25,8 @@ export default {
     }
   },
   computed: {
-    ...mapState(['lang']),
-    ...mapGetters(['albumsArray']),
+    lang() { return useMainStore().lang },
+    albumsArray() { return useMainStore().albumsArray },
     albums() {
       return this.albumsArray.map(album => ({ title: album.title, json: album.json, ...(album[this.lang] || {}) }))
     }
@@ -37,7 +37,7 @@ export default {
     this.scrollEventListner = onScroll(container)
     container.addEventListener('wheel', this.scrollEventListner)
   },
-  beforeDestroy() {
+  beforeUnmount() {
     const { container } = this.$refs
     container.removeEventListener('wheel', this.scrollEventListner)
   },
