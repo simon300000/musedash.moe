@@ -1606,7 +1606,7 @@
 		"callBackDifficulty3": "9",
 		"callBackDifficulty4": "11",
 		"unlockLevel": "0",
-		"newMusic" : true
+		"newMusic" : false
 	},
 	{
 		"uid": "43-76",
@@ -1627,7 +1627,7 @@
 		"callBackDifficulty2": "7",
 		"callBackDifficulty3": "10",
 		"unlockLevel": "0",
-		"newMusic" : true
+		"newMusic" : false
 	},
 	{
 		"uid": "43-77",
@@ -1648,7 +1648,7 @@
 		"callBackDifficulty2": "6",
 		"callBackDifficulty3": "9",
 		"unlockLevel": "0",
-		"newMusic" : true
+		"newMusic" : false
 	},
 	{
 		"uid": "43-78",
@@ -1671,7 +1671,7 @@
 		"callBackDifficulty3": "10",
 		"callBackDifficulty4": "11",
 		"unlockLevel": "0",
-		"newMusic" : true
+		"newMusic" : false
 	},
 	{
 		"uid": "43-79",
@@ -1692,7 +1692,7 @@
 		"callBackDifficulty2": "8",
 		"callBackDifficulty3": "10",
 		"unlockLevel": "0",
-		"newMusic" : true
+		"newMusic" : false
 	},
 	{
 		"uid": "43-80",
@@ -1713,7 +1713,7 @@
 		"callBackDifficulty2": "9",
 		"callBackDifficulty3": "11",
 		"unlockLevel": "0",
-		"newMusic" : true
+		"newMusic" : false
 	},
 	{
 		"uid": "43-81",
@@ -1736,7 +1736,7 @@
 		"callBackDifficulty2": "8",
 		"callBackDifficulty3": "11",
 		"unlockLevel": "0",
-		"newMusic" : true
+		"newMusic" : false
 	}
 ]
 //注意!!! 在3.11版本, 当前的"补完计划"曲包添加了一个新的配置项(newMusic), 主要用于调整新增歌曲的展示.

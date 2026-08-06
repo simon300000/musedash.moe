@@ -30,6 +30,16 @@
       "free": false
   },
   {
+      "uid": "music_package_99",
+      "title": "决心与力量之歌",
+      "tag": "Other",
+      "needPurchase": true,
+      "price": "¥30.00",
+      "jsonName": "ALBUM100",
+      "prefabsName": "AlbumDisco100",
+      "free": false
+  },
+  {
       "uid": "music_package_98",
       "title": "东方暮乐团 -伍-",
       "tag": "Other",
