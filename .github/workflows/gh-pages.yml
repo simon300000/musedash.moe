@@ -22,16 +22,16 @@ jobs:
 
     - run: npm run build:api
 
-    - run: npm run build-html
+    - run: npm run build:client
 
     - name: build - 404.html
-      run: cp dist/index.html dist/404.html
+      run: cp dist/client/index.html dist/client/404.html
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist
+        publish_dir: ./dist/client
         cname: 'master.musedash.moe'
         force_orphan: true
         user_name: 'nanashi'
