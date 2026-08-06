@@ -1,6 +1,6 @@
 <template>
 <div>
-  <progress class="progress is-small" max="100" v-if="!currentPlayer || !this.album.length"></progress>
+  <progress class="progress is-small" max="100" v-if="!currentPlayer || !album.length"></progress>
   <core v-else :plays="plays" :current="currentPlayer" :id="currentPlayer.user.user_id"  :mdmc="true"></core>
 </div>
 </template>

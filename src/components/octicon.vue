@@ -1,5 +1,5 @@
 <template>
-<span v-html="svgBig" class="svgWWW" :style="`height:${this.size}px;width:${this.size}px;position:relative;top:${Number(this.size)/11.3}px;`">
+<span v-html="svgBig" class="svgWWW" :style="`height:${size}px;width:${size}px;position:relative;top:${Number(size)/11.3}px;`">
 </span>
 </template>
 

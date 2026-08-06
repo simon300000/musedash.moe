@@ -2,10 +2,12 @@
 <div>
   <progress class="progress is-small" max="100" v-if="!album.length"></progress>
 
-  <template v-else>
+  <template v-else-if="music">
     <music :music="music"></music>
     <router-view></router-view>
   </template>
+
+  <p v-else>Music not found.</p>
 </div>
 </template>
 
@@ -39,7 +41,9 @@ export default {
   },
   async serverPrefetch() {
     await useMdmcStore().loadAlbum()
-    useMainStore().updateTitle(this, this.music.name)
+    if (this.music) {
+      useMainStore().updateTitle(this, this.music.name)
+    }
   },
   mounted() {
     if (!useMdmcStore().album.length) {
