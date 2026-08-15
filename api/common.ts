@@ -1,6 +1,7 @@
 import { AbstractSublevel } from 'abstract-level'
 
 import { PlayerValue } from './type.js'
+import { parseSearchQuery, TrigramSearchIndex } from './searchIndex.js'
 
 type SearchType = AbstractSublevel<any, any, string, string>
 type PlayerType = AbstractSublevel<any, any, string, PlayerValue>
@@ -29,13 +30,13 @@ export const makeSearch = async ({ search, player, log }: { log: (w: string) => 
   await batch.write()
 }
 
-export const search = async ({ search, q }: { search: SearchType, q: string }) => {
-  const query = [
-    ...new Set(q
-      .toLowerCase()
-      .split(' ')
-      .filter(Boolean))
-  ]
+export const search = async ({ search, q, index }: { search: SearchType, q: string, index?: TrigramSearchIndex }) => {
+  const indexedResult = index?.search(q)
+  if (indexedResult !== undefined) {
+    return indexedResult
+  }
+
+  const query = parseSearchQuery(q)
   if (query.length) {
     const result = []
     for await (const [id, name] of search.iterator()) {

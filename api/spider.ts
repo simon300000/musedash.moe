@@ -1,7 +1,7 @@
 import { fetch } from './dispatcher.js'
 
 import { MusicData, MusicCore, PlayerValue, RawAPI, RankKey, MusicTagList, genKey } from './type.js'
-import { rank, player, search, rankUpdateTime, playerUpdateTime, putTag, checkNewSong, isNewSong, saveRaw, playerDataOld, updatePlayerData, setPlayerNumer } from './database.js'
+import { rank, player, search, playerSearchIndex, rankUpdateTime, playerUpdateTime, putTag, checkNewSong, isNewSong, saveRaw, playerDataOld, updatePlayerData, setPlayerNumer } from './database.js'
 import { albums, AvailableLocales, musics } from './albumParser.js'
 
 import { log, error, reloadAlbums } from './api.js'
@@ -154,10 +154,19 @@ const analyze = async (musicData: RankKey[]) => {
   return players
 }
 
-const makeSearch = (players: [string, PlayerValue][]) => {
+const makeSearch = async (players: [string, PlayerValue][]) => {
   const batch = search.batch()
   players.forEach(([id, { user: { nickname } }]) => batch.put(id, nickname))
-  return search.clear().then(() => batch.write())
+  await search.clear()
+  await batch.write()
+  try {
+    const stats = await playerSearchIndex.rebuild(search.iterator(), { invalidateOnFailure: true })
+    if (stats.installed) {
+      log(`Search index ready: ${stats.rows} players, ${stats.uniqueGrams} trigrams, ${Math.round(stats.buildMs)}ms`)
+    }
+  } catch (reason) {
+    error(`Search index build failed: ${reason instanceof Error ? reason.message : String(reason)}`)
+  }
 }
 
 const prepare = (music: MusicData) => {

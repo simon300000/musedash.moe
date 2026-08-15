@@ -12,6 +12,7 @@
     "build:client": "vite build",
     "build:server": "vite build --ssr src/entry-server.ts --outDir dist/server",
     "build:api": "npx tsc -b",
+    "test:search": "npm run build:api && node --test test/search-index.test.mjs",
     "api": "node api",
     "serve": "cross-env NODE_ENV=production node server.js",
     "lint": "eslint src/"

@@ -9,7 +9,7 @@ import { fileURLToPath } from 'url'
 import { readFile } from 'fs/promises'
 
 import { Albums, RankKey, PlayerValue } from './type.js'
-import { rank, player, search, getDiffDiff, playerDiff, rankUpdateTime, playerUpdateTime, getTag, getRaw, getPlayerDiffHistoryNumber, getPlayerDiffHistory, getPlayerNumer, getPlayerDiffRank } from './database.js'
+import { rank, player, search, playerSearchIndex, getDiffDiff, playerDiff, rankUpdateTime, playerUpdateTime, getTag, getRaw, getPlayerDiffHistoryNumber, getPlayerDiffHistory, getPlayerNumer, getPlayerDiffRank } from './database.js'
 import { albums, AvailableLocales, availableLocales } from './albumParser.js'
 
 import { search as searchF } from './common.js'
@@ -67,7 +67,10 @@ app.use(async (ctx, next) => {
 
 app.use(async (ctx, next) => {
   if (ctx.method === 'GET') {
-    const hit = cache.get(ctx.url)
+    const cacheKey = ctx.path === '/search' || ctx.path.startsWith('/search/')
+      ? `search:${playerSearchIndex.version}:${ctx.path}`
+      : ctx.url
+    const hit = cache.get(cacheKey)
     if (hit) {
       ctx.set(cacheStatusHeader, 'HIT')
       if (hit.type) {
@@ -77,7 +80,7 @@ app.use(async (ctx, next) => {
     } else {
       ctx.set(cacheStatusHeader, 'MISS')
       await next()
-      cache.set(ctx.url, { body: ctx.body, type: ctx.response.type })
+      cache.set(cacheKey, { body: ctx.body, type: ctx.response.type })
     }
   } else {
     ctx.set(cacheStatusHeader, 'BYPASS')
@@ -102,6 +105,11 @@ export const log = (s: string) => {
 export const error = (s: string) => {
   console.error(s)
   logInsert(s)
+}
+
+const searchIndexStats = await playerSearchIndex.rebuild(search.iterator())
+if (searchIndexStats.installed) {
+  log(`Search index ready: ${searchIndexStats.rows} players, ${searchIndexStats.uniqueGrams} trigrams, ${Math.round(searchIndexStats.buildMs)}ms`)
 }
 
 logEmitter.on('rawLog', log)
@@ -206,7 +214,7 @@ router.get('/search', async ctx => {
 })
 
 router.get('/search/:string', async ctx => {
-  ctx.body = await searchF({ search, q: ctx.params.string })
+  ctx.body = await searchF({ search, q: ctx.params.string, index: playerSearchIndex })
 })
 
 router.get('/log', ctx => {

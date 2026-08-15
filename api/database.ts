@@ -2,6 +2,7 @@ import { RaveLevel } from 'rave-level'
 
 import { RankKey, RankValue, PlayerValue, TagExport, APIResult, genKey, MusicCore } from './type.js'
 import { MusicDiffDiff, DiffDiffResult } from './diffdiff.js'
+import { TrigramSearchIndex } from './searchIndex.js'
 
 const TWO_DAY = 1000 * 60 * 60 * 24 * 2
 
@@ -11,6 +12,7 @@ const rankdb = db.sublevel<string, RankValue[]>('rank', { valueEncoding: 'json' 
 
 export const player = db.sublevel<string, PlayerValue>('player', { valueEncoding: 'json' })
 export const search = db.sublevel<string, string>('search', { valueEncoding: 'json' })
+export const playerSearchIndex = new TrigramSearchIndex()
 
 export type PlayerType = typeof player
 export type SearchType = typeof search
