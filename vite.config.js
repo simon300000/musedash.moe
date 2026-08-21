@@ -21,7 +21,7 @@ export default defineConfig(({ mode }) => ({
       filename: 'service-worker.js',
       injectManifest: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,ttf,woff2}'],
-        globIgnores: ['**/covers/**']
+        globIgnores: ['**/covers/**', 'index.html']
       },
       devOptions: {
         enabled: mode === 'development'
