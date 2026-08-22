@@ -17,7 +17,82 @@ import { search as searchF } from './common.js'
 import { joinJob } from './spider.js'
 import { dispatch, dispatch256, receipt } from './dispatcher.js'
 
-import { router as mdmc, logEmitter } from './mdmc.js'
+import { router as mdmc } from './mdmc.js'
+
+import { WorkerBroadcastChannel, isCurrentWorkerRole } from './worker.js'
+
+type WorkerEventMap = {
+  rawLog: [string]
+  rawError: [string]
+  buildSearchIndex: []
+  reloadAlbums: []
+}
+
+const workerEventEmitter = new WorkerBroadcastChannel<WorkerEventMap>('moe')
+
+export const log = (s: string) => {
+  console.log(s)
+  workerEventEmitter.emit('rawLog', s)
+}
+
+export const error = (s: string) => {
+  console.error(s)
+  workerEventEmitter.emit('rawError', s)
+}
+
+const logs: string[] = []
+
+const logInsert = (s: string) => {
+  logs.unshift(s)
+  if (logs.length > 2048) {
+    logs.pop()
+  }
+}
+
+const runBuildSearchIndex = async () => {
+  log('Building search index...')
+  const searchIndexStats = await playerSearchIndex.rebuild(search.iterator())
+  if (searchIndexStats.installed) {
+    log(`Search index ready: ${searchIndexStats.rows} players, ${searchIndexStats.uniqueGrams} trigrams, ${Math.round(searchIndexStats.buildMs)}ms`)
+  }
+}
+
+export const buildSearchIndex = () => {
+  workerEventEmitter.emit('buildSearchIndex')
+}
+
+const parseAlbums = (a: Albums) => Object.fromEntries(a.map(album => [album.json, { ...album, music: Object.fromEntries(album.music.map(music => [music.uid, music])) }]))
+
+let albumsObject: ReturnType<typeof parseAlbums>
+
+let ce: { c: Record<AvailableLocales, string[]>, e: Record<AvailableLocales, string[]> }
+
+const parseCe = async () => {
+  const c = Object.fromEntries(await Promise.all(availableLocales.map(async l => [l, JSON.parse(String(await readFile(join(__dirname, 'extra', `character_${l}.json`)))).map(({ characterName, cosName }) => `${characterName}·${cosName}`)])))
+  const e = Object.fromEntries(await Promise.all(availableLocales.map(async l => [l, JSON.parse(String(await readFile(join(__dirname, 'extra', `elfin_${l}.json`)))).map(({ name }) => name)])))
+  ce = { c, e }
+}
+
+const runReloadAlbums = async () => {
+  albumsObject = parseAlbums(await albums())
+  await parseCe()
+  log('Reload Albums')
+}
+
+export const reloadAlbums = () => {
+  workerEventEmitter.emit('reloadAlbums')
+}
+
+if (isCurrentWorkerRole('api')) {
+  workerEventEmitter.on('rawLog', logInsert)
+  workerEventEmitter.on('rawError', logInsert)
+  workerEventEmitter.on('buildSearchIndex', async () => {
+    await runBuildSearchIndex()
+  })
+  workerEventEmitter.on('reloadAlbums', async () => {
+    await runReloadAlbums()
+  })
+}
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -88,59 +163,12 @@ app.use(async (ctx, next) => {
   }
 })
 
-const logs: string[] = []
-
-const logInsert = (s: string) => {
-  logs.unshift(s)
-  if (logs.length > 2048) {
-    logs.pop()
-  }
-}
-
-export const log = (s: string) => {
-  console.log(s)
-  logInsert(s)
-}
-
-export const error = (s: string) => {
-  console.error(s)
-  logInsert(s)
-}
-
-const searchIndexStats = await playerSearchIndex.rebuild(search.iterator())
-if (searchIndexStats.installed) {
-  log(`Search index ready: ${searchIndexStats.rows} players, ${searchIndexStats.uniqueGrams} trigrams, ${Math.round(searchIndexStats.buildMs)}ms`)
-}
-
-logEmitter.on('rawLog', log)
-logEmitter.on('rawError', error)
-
-const parseAlbums = (a: Albums) => Object.fromEntries(a.map(album => [album.json, { ...album, music: Object.fromEntries(album.music.map(music => [music.uid, music])) }]))
-
-let albumsObject: ReturnType<typeof parseAlbums>
-
-let ce: { c: Record<AvailableLocales, string[]>, e: Record<AvailableLocales, string[]> }
-
 const escapeXml = (value: string | number) => String(value)
   .replace(/&/g, '&amp;')
   .replace(/</g, '&lt;')
   .replace(/>/g, '&gt;')
   .replace(/"/g, '&quot;')
   .replace(/'/g, '&apos;')
-
-const parseCe = async () => {
-  const c = Object.fromEntries(await Promise.all(availableLocales.map(async l => [l, JSON.parse(String(await readFile(join(__dirname, 'extra', `character_${l}.json`)))).map(({ characterName, cosName }) => `${characterName}·${cosName}`)])))
-  const e = Object.fromEntries(await Promise.all(availableLocales.map(async l => [l, JSON.parse(String(await readFile(join(__dirname, 'extra', `elfin_${l}.json`)))).map(({ name }) => name)])))
-  ce = { c, e }
-}
-
-export const reloadAlbums = async () => {
-  albumsObject = parseAlbums(await albums())
-  await parseCe()
-  log('Reload Albums')
-}
-
-reloadAlbums()
 
 const router = new Router()
 
@@ -269,4 +297,10 @@ app.use(router.routes())
 
 app.use(mdmc.routes())
 
-app.listen(8301)
+
+if (isCurrentWorkerRole('api')) {
+  await runBuildSearchIndex()
+  await runReloadAlbums()
+  app.listen(8301)
+  console.log('API server listening on port 8301')
+}

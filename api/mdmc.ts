@@ -1,17 +1,14 @@
-import { isMainThread, Worker, parentPort } from 'node:worker_threads'
-import { EventEmitter } from 'node:events'
-
 import Router from '@koa/router'
 
 import { mdmc as db } from './database.js'
+import { log as rawLog, error as rawError } from './api.js'
 
 import { resultWithHistory, makeSearch, search as searchF, wait } from './common.js'
 
 const DIFFICULTIES = [1, 2, 3, 4] as const
 
-export const logEmitter = new EventEmitter()
-const log = (msg: string) => logEmitter.emit('rawLog', `mdmc: ${msg}`)
-const error = (msg: string) => logEmitter.emit('rawError', `mdmc: ${msg}`)
+const log = (msg: string) => rawLog(`mdmc: ${msg}`)
+const error = (msg: string) => rawError(`mdmc: ${msg}`)
 
 const rankdb = db.sublevel<string, RankValue[]>('rank', { valueEncoding: 'json' })
 
@@ -169,7 +166,7 @@ const mal = async () => {
   log('Search Cached')
 }
 
-const start = async () => {
+export const start = async () => {
   log('hi~')
   await mal().catch(() => error('error, skip'))
   while (true) {
@@ -182,19 +179,6 @@ const start = async () => {
     const endTime = Date.now()
     log(`TAKE ${endTime - startTime}, at ${new Date().toString()}`)
   }
-}
-
-export const run = () => {
-  if (isMainThread) {
-    const worker = new Worker(new URL(import.meta.url))
-    worker.on('message', ({ logName, msg }) => logEmitter.emit(logName, msg))
-  }
-}
-
-if (!isMainThread) {
-  logEmitter.on('rawLog', msg => parentPort?.postMessage({ logName: 'rawLog', msg }))
-  logEmitter.on('rawError', msg => parentPort?.postMessage({ logName: 'rawError', msg }))
-  start()
 }
 
 export const router = new Router({

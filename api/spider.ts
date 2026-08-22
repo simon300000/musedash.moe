@@ -1,10 +1,13 @@
 import { fetch } from './dispatcher.js'
 
 import { MusicData, MusicCore, PlayerValue, RawAPI, RankKey, MusicTagList, genKey } from './type.js'
+
+import { WorkerJobsBroadcastChannel, isCurrentWorkerRole } from './worker.js'
+
 import { rank, player, search, playerSearchIndex, rankUpdateTime, playerUpdateTime, putTag, checkNewSong, isNewSong, saveRaw, playerDataOld, updatePlayerData, setPlayerNumer } from './database.js'
 import { albums, AvailableLocales, musics } from './albumParser.js'
 
-import { log, error, reloadAlbums } from './api.js'
+import { log, error, reloadAlbums, buildSearchIndex } from './api.js'
 
 import { resultWithHistory, wait } from './common.js'
 
@@ -159,14 +162,7 @@ const makeSearch = async (players: [string, PlayerValue][]) => {
   players.forEach(([id, { user: { nickname } }]) => batch.put(id, nickname))
   await search.clear()
   await batch.write()
-  try {
-    const stats = await playerSearchIndex.rebuild(search.iterator(), { invalidateOnFailure: true })
-    if (stats.installed) {
-      log(`Search index ready: ${stats.rows} players, ${stats.uniqueGrams} trigrams, ${Math.round(stats.buildMs)}ms`)
-    }
-  } catch (reason) {
-    error(`Search index build failed: ${reason instanceof Error ? reason.message : String(reason)}`)
-  }
+  buildSearchIndex()
 }
 
 const prepare = (music: MusicData) => {
@@ -407,9 +403,9 @@ const spiderClock = async () => {
   }
 }
 
-export const joinJob = ({ uid, difficulty, platform }: RankKey): Promise<any> => {
+const runJoinJob = ({ uid, difficulty, platform }: RankKey): Promise<any> => {
   if (platform === 'all') {
-    return Promise.all([joinJob({ uid, difficulty, platform: 'mobile' }), joinJob({ uid, difficulty, platform: 'pc' })])
+    return Promise.all([runJoinJob({ uid, difficulty, platform: 'mobile' }), runJoinJob({ uid, difficulty, platform: 'pc' })])
   }
 
   const key = genKey({ uid, difficulty, platform })
@@ -428,6 +424,16 @@ export const joinJob = ({ uid, difficulty, platform }: RankKey): Promise<any> =>
   }
 
   return Promise.resolve()
+}
+
+const broadcastChannel = new WorkerJobsBroadcastChannel<{ joinJob: [RankKey] }>('moe-spider')
+export const joinJob = (rankKey: RankKey) => broadcastChannel.dispatchJob('joinJob', rankKey)
+
+if (isCurrentWorkerRole('master')) {
+  broadcastChannel.on('joinJob', async (finish, rankKey) => {
+    await runJoinJob(rankKey)
+    finish()
+  })
 }
 
 const mal = async (musicData: MusicData[]) => {

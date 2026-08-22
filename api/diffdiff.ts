@@ -1,18 +1,9 @@
-import { isMainThread, Worker, parentPort } from 'node:worker_threads'
-
 import { characterSkip, elfinSkip } from './config.js'
 import { MusicData, MusicCore } from './type.js'
 
 import { rank as rankDB, putDiffDiff, playerDiff, getDiffDiff, putDIffDiffMusic, isWeekOldSong, insertPlayerDiffHistory, setPlayerDiffRank, player } from './database.js'
 
-const worker = isMainThread ? new Worker(new URL(import.meta.url)) : undefined
-const workerJobs = new Map<number, () => void>()
-
-const dispatchJob = (instruction: WorkerInstruction) => new Promise<void>(resolve => {
-  const key = Math.random()
-  workerJobs.set(key, resolve)
-  worker?.postMessage({ key, ...instruction })
-})
+import { WorkerJobsBroadcastChannel, isCurrentWorkerRole } from './worker.js'
 
 const parseMusicc = (music: MusicData) => {
   const { uid, difficulty: difficulties } = music
@@ -31,10 +22,7 @@ const normalDistribution = (level: number) => {
   return p2 / (s * Math.sqrt(2 * Math.PI))
 }
 
-export const diffdiff = async (musics: MusicData[]) => {
-  if (worker) {
-    return dispatchJob({ cmd: 'diffdiff', params: [musics] })
-  }
+const runDiffdiff = async (musics: MusicData[]) => {
   const musicList = musics.flatMap(parseMusicc)
   const rankMap = new WeakMap<MusicCore, IdPercentagePairs>()
   const absoluteValueMap = new WeakMap<MusicCore, number>()
@@ -147,10 +135,7 @@ const accJudge = (acc: number, param1 = 0.36) => {
 
 const accJudgePlayerRL = (acc: number) => accJudge(acc, 1)
 
-export const diffPlayer = async () => {
-  if (worker) {
-    return dispatchJob({ cmd: 'diffPlayer', params: [] })
-  }
+const runDiffPlayer = async () => {
   const diffDiff = await getDiffDiff()
   const diffDiffMap = {} as Record<string, number[]>
   for (const { uid, difficulty, relative } of diffDiff) {
@@ -204,22 +189,25 @@ export const diffPlayer = async () => {
   }
 }
 
-if (!worker) {
-  parentPort?.on('message', async (message: WorkerCommand) => {
-    if (message.cmd === 'diffdiff') {
-      await diffdiff(...message.params)
-    } else if (message.cmd === 'diffPlayer') {
-      await diffPlayer(...message.params)
-    }
-    parentPort?.postMessage(message.key)
+const broadcastChannel = new WorkerJobsBroadcastChannel<WorkerEventMap>('moe-diffdiff')
+
+export const diffdiff = (musics: MusicData[]) => {
+  return broadcastChannel.dispatchJob('diffdiff', ...musics)
+}
+
+export const diffPlayer = () => {
+  return broadcastChannel.dispatchJob('diffPlayer')
+}
+
+if (isCurrentWorkerRole('diffdiff')) {
+  console.log('Starting diffdiff worker...')
+  broadcastChannel.on('diffdiff', async (finish, ...musics) => {
+    await runDiffdiff(musics)
+    finish()
   })
-} else {
-  worker.on('message', (key: number) => {
-    const resolve = workerJobs.get(key)
-    if (resolve) {
-      resolve()
-      workerJobs.delete(key)
-    }
+  broadcastChannel.on('diffPlayer', async finish => {
+    await runDiffPlayer()
+    finish()
   })
 }
 
@@ -238,14 +226,7 @@ export type MusicDiffDiff = MusicCoreExtended & DiffDiffResult
 
 type LevelAverage = Record<string, { count: number, level: number }>
 
-type WorkerInstruction = {
-  cmd: 'diffdiff'
-  params: [MusicData[]]
-} | {
-  cmd: 'diffPlayer'
-  params: []
-}
-
-type WorkerCommand = WorkerInstruction & {
-  key: number
+type WorkerEventMap = {
+  diffdiff: MusicData[]
+  diffPlayer: []
 }
