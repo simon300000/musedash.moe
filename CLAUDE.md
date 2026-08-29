@@ -40,6 +40,11 @@ npm run api
 npm run lint
 ```
 
+**Tests (builds API, then runs all suites):**
+```bash
+npm test
+```
+
 ## Production Commands
 
 **Full build (frontend + backend):**

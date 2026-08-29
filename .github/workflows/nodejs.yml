@@ -20,7 +20,7 @@ jobs:
       with:
         node-version: 20
     - run: npm install
-    - run: npm run test:search
+    - run: npm test
     - run: npm run build
       env:
         CI: true

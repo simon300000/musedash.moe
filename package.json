@@ -12,9 +12,9 @@
     "build:client": "vite build",
     "build:server": "vite build --ssr src/entry-server.ts --outDir dist/server",
     "build:api": "npx tsc -b",
+    "test": "npm run test:search && npm run test:worker",
     "test:search": "npm run build:api && node --test test/search-index.test.mjs",
-    "test:worker": "npm run build:api && node --test api/worker.spec.js",
-    "test:api": "npm run build:api && node --test test/search-index.test.mjs api/worker.spec.js",
+    "test:worker": "npm run build:api && node --test api/worker.test.js",
     "api": "node api",
     "serve": "cross-env NODE_ENV=production node server.js",
     "lint": "eslint src/"
