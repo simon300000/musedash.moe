@@ -33,6 +33,7 @@ export const startWorker = (filename: string | URL, role: ChildWorkerRole, optio
     throw new Error('startWorker can only be called from the main thread')
   }
   const worker = new Worker(filename, { ...options, workerData: workerDataFor(role) })
+  console.log(`Starting worker with role: ${role}`)
   worker.on('error', reason => {
     console.error(`Worker ${role} failed:`, reason)
   })
