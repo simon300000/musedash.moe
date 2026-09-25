@@ -14,6 +14,7 @@
       "The maximum nya HP of Bassist Rin Nya increases 50 nya!",
       "Here is Muse Warrior; the gear reflects her beauty; Muse Warrior gets defeated; the bassist returns! (Alive for a total of 4 seconds)"
     ],
+    "thiefSkill": "The maximum HP increases 50.",
     "chipName": "Band-Aid",
     "chipDescription": "Ow~I think a band-aid is not enough.",
     "cv": "Mami Uchida",
@@ -112,6 +113,7 @@
       "Bad Girl Rin can turn  \"Great\" into \"Perfect\" judgements for 5 times (doesn't work for Sheets [hold note] and Mash Enemies)!",
       "Bad Girl Rin Nya can turn \"Great\" nya into \"Perfect\" nya judgements for 5 times (doesn't work for Sheets [Hold Note] and Mash Enemies nya)!"
     ],
+    "thiefSkill": "Turn \"Great\" into \"Perfect\" judgements 5 times (doesn't work for Sheets [hold note] and Mash Enemies)!",
     "chipName": "Baseball",
     "chipDescription": "If this baseball is yours, I won't return it.",
     "cv": "Mami Uchida",
@@ -189,6 +191,7 @@
       "Sleepwalker Girl Rin will fight automatically in all stages and not be controlled by the player. Scores will not be recorded.",
       "Sleepwalker Girl Rin Nya will fight automatically in all nya stages and not be controlled by the player nya! Scores will not be recorded nya!"
     ],
+    "thiefSkill": "Fight automatically in all stages and will not be controlled by the player. Scores will not be recorded.",
     "chipName": "White Pillow",
     "chipDescription": "It feels so soft, just like a lass' chest~~~~whir~whir",
     "cv": "Mami Uchida",
@@ -266,6 +269,7 @@
       "Bunny Girl Rin can get 200% more score when collecting Red Hearts (at maximum HP) and Blue Notes, knocking back Ghosts and dodging barriers.",
       "Bunny Girl Rin Nya can get 200% more score when collecting nya Red Hearts (at maximum nya HP) and nya Blue Notes, knocking back nya Ghosts and dodging nya barries!"
     ],
+    "thiefSkill": "Get 200% more score when collecting Red Hearts (at maximum HP) and Blue Notes, knocking back Ghosts, and dodging barriers.",
     "chipName": "Black Bow Tie",
     "chipDescription": "Is it worn in front or on the back?",
     "cv": "Mami Uchida",
@@ -348,6 +352,7 @@
       "Pilot Buro Nya will not get hurt when bursting into Fever nya.",
       "Here is Muse Warrior; this little plane is heavily loaded; Muse Warrior gets defeated; the pilot returns! (Alive for a total of 4 seconds)"
     ],
+    "thiefSkill": "Won't get hurt when bursting into Fever.",
     "chipName": "Paper Plane",
     "chipDescription": "Whoops! That paper looks like my report card!",
     "cv": "Mao Amatsuka",
@@ -446,6 +451,7 @@
       "Idol Buro gets 50% more EXP after clearing a stage.",
       "Idol Buro Nya gets 50% more nya EXP after clearing a nya stage!"
     ],
+    "thiefSkill": "Get 50% more EXP after clearing a stage.",
     "chipName": "Energy Battery",
     "chipDescription": "The battery filled with energy of love",
     "cv": "Mao Amatsuka",
@@ -523,6 +529,7 @@
       "Zombie Girl can enter Dying Mode for 15 seconds when HP falls to the minimum. She cannot enter Dying Mode again if not collecting any red hearts after quiting the mode.",
       "Zombie Girl Nya can enter nya Dying Mode for 15 seconds when nya HP falls to the minimum.She cannot enter nya Dying Mode again if not collecting any nya Red Hearts after quitting the mode nya!"
     ],
+    "thiefSkill": "Enter Dying Mode for 15 seconds when HP falls to the minimum. Cannot enter Dying Mode again until collecting Red Hearts after quitting the mode.",
     "chipName": "Misfortune Spell",
     "chipDescription": "Bring bad luck once pasted on someone",
     "cv": "Mao Amatsuka",
@@ -600,6 +607,7 @@
       "When combo reaches above 60/70, Joker Buro can get higher combo bonus score.",
       "When nya combo reaches above 60/70, Joker Buro Nya can get higher nya combo bonus score!"
     ],
+    "thiefSkill": "When combo reaches above 60/70, higher combo bonus score will be gained.",
     "chipName": "Colorful Ball",
     "chipDescription": "Give you 3 seconds to find the treasures I hid~",
     "cv": "Mao Amatsuka",
@@ -682,6 +690,7 @@
       "When nya combo is less than 100,Violinst Marija Nya's \"Miss\" nya judgement won't interrupt the nya combo!",
       "Here is Muse Warrior; Muse Warrior wraps the gear with love and gets defeated; the violinist returns! (Alive for a total of 4 seconds)"
     ],
+    "thiefSkill": "When combo is less than 100, the \"Miss\" judgement won't interrupt the combo.",
     "chipName": "Marija's diary",
     "chipDescription": "What is written on earth in the girl's diary?",
     "cv": "Yoshika Akashi",
@@ -780,6 +789,7 @@
       "Maid Marija will gain 150% more HP and be invincible for 2 seconds upon first collecting a Red Heart when HP is lower than 100.",
       "Maid Marija Nya will gain 150% more HP and be invincible for 2 seconds upon first collecting a nya Red Heart when nya HP is lower than 100 nya!"
     ],
+    "thiefSkill": "Gain 150% more HP and be invincible for 2 seconds upon first collecting a Red Heart when HP is lower than 100.",
     "chipName": "Salted Fish",
     "chipDescription": "Master, should I believe in you?(ºOº)",
     "cv": "Yoshika Akashi",
@@ -857,6 +867,7 @@
       "Magical Girl Marija's increasing speed of Fever is 20% faster.",
       "Magical Girl Marija Nya's increasing speed of Fever is 20% faster nya!"
     ],
+    "thiefSkill": "The speed of increasing Fever is 20% faster.",
     "chipName": "Intricate Magic Book",
     "chipDescription": "What does the book say? Why can't we do in our own way?",
     "cv": "Yoshika Akashi",
@@ -934,6 +945,7 @@
       "Little Devil Marija will get 25% more score when knocking back enemies at the expense of losing 10 HP per second.",
       "Little Devil Marija Nya will get 25% more nya score when knocking back nya enemies at the expense of losing 10 nya HP per second nya!"
     ],
+    "thiefSkill": "Gain 25% more score when knocking back enemies at the expense of losing 10 HP per second.",
     "chipName": "Dry Eyeball",
     "chipDescription": "Something left by a man who broke his oath",
     "cv": "Yoshika Akashi",
@@ -1011,6 +1023,7 @@
       "The Girl In Black lengthens the area of \"Perfect\" \"Great\" \"Pass\", making it easier to hit enemies and avoid barriers.",
       "The Girl In Black lengthens the nya area of \"Perfect\" \"Great\" \"Pass\", making it easier to hit nya enemies and avoid barriers nya!"
     ],
+    "thiefSkill": "The judging area of \"Perfect\" \"Great\" \"Pass\" is lengthened, making it easier to hit enemies and avoid barriers.",
     "chipName": "Energy supressor",
     "chipDescription": "No idea what will happen after removal",
     "cv": "Yoshika Akashi",
@@ -1088,6 +1101,7 @@
       "With Christmas Gift Rin clearing a stage, at most 5% accuracy can be added.",
       "With Christmas Gift Rin Nya clearing a nya stage, at most 5% accuracy can be added nya!"
     ],
+    "thiefSkill": "After clearing a stage, at most 5% accuracy can be added.",
     "chipName": "Christmas Gift",
     "chipDescription": "Nobody knows what's in it.",
     "cv": "Mami Uchida",
@@ -1162,6 +1176,7 @@
     "description": "Sailor Suit",
     "skill": "Hold down on the button screen and Sailor Suit Buro will automatically attack marked enemies. keep in mind that this will reduce your score by 20%.",
     "skills": null,
+    "thiefSkill": "Hold on the button to automatically attack marked enemies. Keep in mind that this will reduce your score by 20%.",
     "chipName": "Plastic Master 90",
     "chipDescription": "·Higher resistance to heat·Greater Durability·Wide Dynaic Range·Out of production",
     "cv": "Mao Amatsuka",
@@ -1226,6 +1241,7 @@
     "description": "Navigator",
     "skill": "Navigator Yume from Groove Coaster. Obstacles (gears) will not harm her.",
     "skills": null,
+    "thiefSkill": "Obstacles (gears) will not harm her.",
     "chipName": "Rhombus hairband",
     "chipDescription": "The crucial item to become a twin-tail girl. The secret to be kawaii.",
     "cv": "Nanami Takahashi",
@@ -1289,6 +1305,7 @@
     "description": "Game streamer",
     "skill": "The streamer from Cytus II, Neko#ΦωΦ. You can still continue the game after her HP drops to 0. Your score will not be recorded if you clear the stage in this state. Yeah~ A collab character that won't die~",
     "skills": null,
+    "thiefSkill": "You can still continue the game after the HP drops to 0. The score will not be recorded if you clear the stage in this state.",
     "chipName": "Meow Bot",
     "chipDescription": "That person will not stop until being able to buy a dozen of Meow Bot.",
     "cv": "Hanamori Yumiri",
@@ -1352,6 +1369,7 @@
     "description": "Part-Time Warrior",
     "skill": "I give up, no idea for the skill. Eh, I'll do something funny to make up for it.",
     "skills": null,
+    "thiefSkill": "I give up, no idea for the skill. Eh, I'll do something funny to make up for it.",
     "chipName": "The Safety Helmet",
     "chipDescription": "This beat-up ol' safety helmet is the true staple of a Part-Time Warrior.",
     "cv": "▇▇▇▇▇▇▇▇▇▇",
@@ -1419,6 +1437,7 @@
     "description": "Red-white Miko",
     "skill": "Reimu can keep hovering in the air without automatically landing, and shrunk the hitbox of obstacles (gears) , making it easier to dodge.",
     "skills": null,
+    "thiefSkill": "Keep hovering in the air without automatically landing, and shrink the hitbox of obstacles (gears) , making it easier to dodge.",
     "chipName": "Yin-Yang Orb",
     "chipDescription": "A heavy and hard orb. It is in fact the key to Gensokyo.",
     "cv": "Hiromi Igarashi",
@@ -1490,6 +1509,7 @@
     "description": "Rebirth Girl",
     "skill": "Clear can automatically catch all the missed Blue Notes, Red Hearts, ghosts, and enemies with Heart. The automatically caught ghosts and enemies with Heart is \"Perfect\" judgment.",
     "skills": null,
+    "thiefSkill": "Automatically catch all the missed Blue Notes, Red Hearts, ghosts, and enemies with Heart. The automatically caught ghosts and enemies with Heart is \"Perfect\" judgment.",
     "chipName": "Crown",
     "chipDescription": "The crown which brings Clear falling to the ground, absolutely who hit by it will shout Ouch.",
     "cv": "Ai Kakuma",
@@ -1569,6 +1589,7 @@
     "description": "Sister",
     "skill": "Sister Marija will swap the locations of enemies in the sky and on the ground. Specifically, raiders, hanging hammers, and ordinary obstacles (gears) will be rolled over.",
     "skills": null,
+    "thiefSkill": "Swap the locations of enemies in the sky and on the ground. Specifically, raiders, hanging hammers, and ordinary obstacles (gears) will be rolled over.",
     "chipName": "Star Pendant",
     "chipDescription": "She finds the star shape more adorable for it's a symbol of her belief.",
     "cv": "Yoshika Akashi",
@@ -1619,6 +1640,7 @@
     "description": "Black-white Magician",
     "skill": "Marisa can keep hovering in the air without automatically landing. She gains a 200% score bonus when catching Blue Notes or Red Hearts in full health.",
     "skills": null,
+    "thiefSkill": "Keep hovering in the air without automatically landing. Gain a 200% score bonus when catching Blue Notes or Red Hearts in full health.",
     "chipName": "Mini-Hakkero",
     "chipDescription": "A mighty self-made magical item that can shoot lasers when stuffed with mushrooms - use it to blast your way to Gensokyo!",
     "cv": "Machico",
@@ -1663,6 +1685,7 @@
     "description": "Leader of Rhodes Island",
     "skill": "Amiya earns more Fever Energy by repelling enemies. When Fever Mode is active, she will convert \"Miss\" into \"Great\", and \"Great\" into \"Perfect\". However, Amiya will not earn any Fever Energy for 3 seconds after Fever Mode ends.",
     "skills": null,
+    "thiefSkill": "Earns more Fever Energy by repelling enemies. When Fever Mode is active, the \"Miss\" will be converted into \"Great\", and \"Great\" into \"Perfect\". However, no Fever Energy can be gained for 3 seconds after Fever Mode ends.",
     "chipName": "Ring",
     "chipDescription": "One of Amiya's ten rings. Not sure which finger it's for, but it definitely won't fit you, Doctor.",
     "cv": "Tomoyo Kurosawa",
@@ -1709,6 +1732,7 @@
     "description": "Boxer",
     "skill": "Ola will not get hurt when bursting into Fever. But in exchange for the temporary command, he can only use Sis's skill? His rebellion is totally frustrated!",
     "skills": null,
+    "thiefSkill": "Won't get hurt when bursting into Fever.",
     "chipName": "Champion Belt",
     "chipDescription": "A mountain of champion belts at home? How about we take them to Sis and transform them into henshin device?!",
     "cv": "Mariya Ise",
@@ -1753,6 +1777,7 @@
     "description": "Exorcist Master",
     "skill": "Exorcist Master Buro will first consume Fever Energy every time she gets hurt. When Fever Mode is active, defeating enemies grants 30% bonus scores.",
     "skills": null,
+    "thiefSkill": "Getting hurt will consumes Fever Energy first. When Fever Mode is active, defeating enemies grants 30% bonus scores.",
     "chipName": "Serious Sunglasses",
     "chipDescription": "The switch to turn on the streamer's serious mode, with cracks indicating the end of it.",
     "cv": "Mao Amatsuka",
@@ -1799,6 +1824,7 @@
     "description": "Virtual Singer",
     "skill": "Hatsune Miku can hit enemies and Sheets(hold note) regardless of the upper and lower tracks. But this skill doesn't work on the Blue Notes, Red Hearts, and barriers.",
     "skills": null,
+    "thiefSkill": "Hit enemies and Sheets(hold note) regardless of the upper and lower tracks. But this skill doesn't work on the Blue Notes, Red Hearts, and barriers.",
     "chipName": "Microphone",
     "chipDescription": "It has the power to convey the singing to the whole universe, but there's also a possibility that it will be thrown to the audience as a bunch of leeks?",
     "cv": "Saki Fujita",
@@ -1843,6 +1869,7 @@
     "description": "Virtual Singers",
     "skill": "Kagamine Rin & Len can 100% earn you a \"Perfect\" judgement when you hit the enemies that reach the hitboxes at the same time on both tracks. If you only hit the enemy on one track, they can help you auto-hit the enemy on the other. But this skill doesn't work on Sheets (hold note), Mash Enemies and BOSS' melee attacks.",
     "skills": null,
+    "thiefSkill": "Earn you a \"Perfect\" judgement when you hit the enemies that reach the hitboxes at the same time on both tracks. If you only hit the enemy on one track, the enemy on the other track will be auto-hit. But this skill doesn't work on Sheets (hold note), Mash Enemies and BOSS' melee attacks.",
     "chipName": "G clef & F clef",
     "chipDescription": "Just like this pair of G and F clefs, they have the confidence to work in tune at any instance!",
     "cv": "Asami Shimoda",
@@ -1887,6 +1914,7 @@
     "description": "Racer",
     "skill": "When Racer Rin's HP is above 150, the \"Miss\" judgment on the same track with the character can be converted into \"Great\". Rin still gets hurt by that enemy, but the invincible time after the injury can increase by 1 second; When its HP is below 150, the \"Great\" judgment can be converted into \"Perfect\", but there's no additional invincible time. This skill doesn't work on Sheets (hold note) or Mash Enemies.",
     "skills": null,
+    "thiefSkill": "When HP is above 150, the \"Miss\" judgment on the same track with the character can be converted into \"Great\". Although you still gets hurt by that enemy, the invincible time after the injury can increase by 1 second; When your HP is below 150, the \"Great\" judgment can be converted into \"Perfect\", but there's no additional invincible time. This skill doesn't work on Sheets (hold note) or Mash Enemies.",
     "chipName": "Helmet (Werewolf Version)",
     "chipDescription": "Not only hides her murderous eyes but also highlights her cute wolf ears. Follower+1!",
     "cv": "Mami Uchida",
@@ -1931,6 +1959,7 @@
     "description": "Mechanical Ballerina",
     "skill": "Mechanical Ballerina Marija will automatically receive Fever Energy over time. The higher the difficulty of the stage, the quicker the speed of Fever Energy accumulation. However, Marija will receive no Fever Energy when she repels the enemy.",
     "skills": null,
+    "thiefSkill": "Automatically gain Fever Energy over time. The higher the difficulty of the stage, the quicker the speed of Fever Energy accumulation. However, no Fever Energy is gained when repels the enemy.",
     "chipName": "Cleaning Robot Cat",
     "chipDescription": "An android pets a robot cat. Anything wrong?",
     "cv": "Yoshika Akashi",
@@ -1979,6 +2008,7 @@
     "description": "Sarkaz Mercenary",
     "skill": "Wiš'adel has 6 C4 bombs that need to be actively detonated. Within 5 seconds after detonating a bomb, all \"Miss\" and \"Great\" judgments in the sky track will be converted to \"Perfect\", and all enemies on the ground track cannot cause damage to her. As a price, Wiš'adel can not gain Fever energy in game.",
     "skills": null,
+    "thiefSkill": "Have 6 C4 bombs that need to be actively detonated. Within 5 seconds after detonating a bomb, all \"Miss\" and \"Great\" judgments in the sky track will be converted to \"Perfect\", and all enemies on the ground track cannot cause damage to her. As a price, Fever Energy cannot be gained in the game.",
     "chipName": "Grinny Grenade",
     "chipDescription": "Proudly displaying the creator's mark—because you won't get a chance to settle the score with her now—BOOM!",
     "cv": "Ayana Taketatsu",
@@ -2023,6 +2053,7 @@
     "description": "Divine Gear",
     "skill": "Divine Gear Buro strides across heaven and hell, completing combo attacks in one hit, reducing 90% damage when standing. Who's invincible? I am!",
     "skills": null,
+    "thiefSkill": "Stride across heaven and hell. Completing combo attacks in one hit can reduce 90% damage when standing. Who's invincible? I am!",
     "chipName": "Magic Sword with 99+ ATK Speed",
     "chipDescription": "Top-Tier Divine Gear (Attack speed is influenced by player skill; 99+ is the upper limit, actual usage may vary.)",
     "cv": "Caster : bur0gaming",
@@ -2060,6 +2091,7 @@
     "description": "Nocturne Bloodheir",
     "skill": "Nocturne Bloodheir Buro's maximum health is increased by 200 points. Buro's score for knocking away enemies carrying \"Quality Plasma\" is increased by 300%. \n\"Quality Plasma\" can greatly strengthen Buro's body for 5 seconds, entering an invincible state, while changing \"Miss\" judgments to \"Great\" and \"Great\" judgments to \"Perfect\".",
     "skills": null,
+    "thiefSkill": "The maximum HP is increased by 200 points. Score for knocking away the enemies carrying \"Quality Plasma\" is increased by 300%. \n\"Quality Plasma\" can greatly strengthen your body for 5 seconds, entering an invincible state, while changing \"Miss\" judgments to \"Great\" and \"Great\" judgments to \"Perfect\".",
     "chipName": "Blood Sample Collector LL",
     "chipDescription": "Buro's portable rations, pink is sweet, yellow is salty!",
     "cv": "Mao Amatsuka",
@@ -2113,6 +2145,7 @@
     "description": "Flametide Pirate",
     "skill": "Flametide Pirate Rin only needs to hit the starting point of sheets (hold note), and it can automatically complete the performance of the entire Sheets (hold note).",
     "skills": null,
+    "thiefSkill": "Only need to hit the starting point of sheets (hold note), and it can automatically complete the performance of the entire Sheets (hold note).",
     "chipName": "The Jinxed Anchor",
     "chipDescription": "She sealed the original abilities of that demon on the ship into this tiny pendant, using it as a weapon when necessary, said it's「managing on behalf」.",
     "cv": "Mami Uchida",
@@ -2159,6 +2192,7 @@
     "description": "Diver",
     "skill": "When using Diver Buro, fish-toting enemies will appear. Beat enemies away to collect their fish.",
     "skills": null,
+    "thiefSkill": "Fish-toting enemies will appear. Beat enemies away to collect their fish.",
     "chipName": "Diving Goggles",
     "chipDescription": "Buro customized diving goggles not only come with a built-in emergency SOS, but also lock your hairstyle in place perfectly.",
     "cv": "Mao Amatsuka",
@@ -2221,6 +2255,7 @@
     "description": "made by Ora 2",
     "skill": "When the combo is less than 100, even if Umarija receives a \"Miss\" judgment, the combo will not be interrupted.",
     "skills": null,
+    "thiefSkill": "When combo is less than 100, the \"Miss\" judgement won't interrupt the combo.",
     "chipName": "Horse Face",
     "chipDescription": "Umarija races wildly down the highway late at night... What just fell to the ground?",
     "cv": "Horse",
@@ -2258,6 +2293,7 @@
     "description": "Ghost",
     "skill": "Ghost Marija will turn all enemies other than ghosts into the \"Ghost Form\".",
     "skills": null,
+    "thiefSkill": "Turn all enemies other than ghosts into the \"Ghost Form\".",
     "chipName": "Heart's Lock",
     "chipDescription": "The lock on the girl's heart is opened by you.",
     "cv": "Yoshika Akashi",
@@ -2305,6 +2341,56 @@
         "You know I would be lonely, yet still left me alone here intentionally? You naughty child."
       ]
     ],
+    "listIndex": 0
+  },
+  {
+    "characterName": "Rin",
+    "cosName": "Phantom Thief",
+    "cosNames": null,
+    "description": "Phantom Thief",
+    "skill": "Phantom Thief Rin can steal the skill of any character.",
+    "skills": null,
+    "chipName": "mask",
+    "chipDescription": "Please focus on the performance, not the actor.",
+    "cv": "Mami Uchida",
+    "cvs": null,
+    "expressions": [
+      [
+        "Another puppet! Where on earth is that guy's real body?",
+        "A familiar scent... Could the phantom thief have already sneaked in here?",
+        "There must be some clues to that mask. If you don't put it on, you will know nothing! Ah, did I say the same thing last time?"
+      ],
+      [
+        "What is it... Heart-pounding smoke bomb? Senpai, you were tricked by something like this!",
+        "A thief is just a thief! Punishing bad people by stealing things? Then I'll just arrest both the bad guys and the thieves!",
+        "Cat-Eared Phantom Thief, Bear-Eared Phantom Thief, and now a Rabbit-Eared one? What a twisted taste... Huh? Senpai you like this type?"
+      ],
+      [
+        "A mask, yeah... With this mask on, I'm a phantom thief. Maybe this is the real me. Who knows…",
+        "Straight and bright like the sun, she may never notice that the answer lies in the shadow of the moon...",
+        "Punishing evil to promote good, returning things to their owners... These are also part of the performance for everyone. Senpai, you also like this kind of story, right?"
+      ],
+      [
+        "Let me announce it here: One day, I'll steal you away from that boring office, Senpai.",
+        "Senpai and I are now in a \"secret relationship\", right?"
+      ],
+      [
+        "Oh, you got me! What should I do to make you let me go~"
+      ],
+      [
+        "Remember the mission rather than the name, pursue romance rather than rules. The real me is..."
+      ],
+      [
+        "The moonlight shows me the way home. Let’s meet again in the world of night!"
+      ]
+    ],
+    "reviewExpressions": null,
+    "skinNames": [
+      "Default"
+    ],
+    "catExpressions": null,
+    "foolishExpressions": null,
+    "autoExpressions": null,
     "listIndex": 0
   }
 ]

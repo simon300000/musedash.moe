@@ -1,0 +1,22 @@
+[
+	{
+		"uid": "101-0",
+		"name": "Two Faces feat. Chen-U",
+		"author": "DR. VEGAS LABORATORY",
+		"bpm": "128",
+		"music": "two_faces_music",
+		"demo": "two_faces_demo",
+		"cover": "two_faces_cover",
+		"hexieCover": "",
+		"noteJson": "two_faces_map",
+		"scene": "scene_04",
+		"levelDesigner": "F or V?",
+		"difficulty1": "4",
+		"difficulty2": "6",
+		"difficulty3": "8",
+		"callBackDifficulty1": "4",
+		"callBackDifficulty2": "6",
+		"callBackDifficulty3": "8",
+		"unlockLevel": "0"
+	}
+]

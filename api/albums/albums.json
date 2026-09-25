@@ -30,6 +30,26 @@
       "free": false
   },
   {
+      "uid": "music_package_102",
+      "title": "沉睡的黄金刻痕",
+      "tag": "Theme",
+      "needPurchase": true,
+      "price": "¥25.00",
+      "jsonName": "ALBUM103",
+      "prefabsName": "AlbumDisco103",
+      "free": false
+  },
+  {
+      "uid": "music_package_101",
+      "title": "R的预告信",
+      "tag": "Theme",
+      "needPurchase": true,
+      "price": "¥18.00",
+      "jsonName": "ALBUM102",
+      "prefabsName": "AlbumDisco102",
+      "free": false
+  },
+  {
       "uid": "music_package_100",
       "title": "舞萌DX限定组曲_Vol.02",
       "tag": "Other",

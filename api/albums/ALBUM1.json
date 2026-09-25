@@ -1149,6 +1149,28 @@
 		"unlockLevel": "48"
 	},
 	{
+		"uid": "0-61",
+		"name": "Cryogenic",
+		"author": "Camellia ft. Petra Gurin",
+		"bpm": "145",
+		"music": "cryogenic_music",
+		"demo": "cryogenic_demo",
+		"cover": "cryogenic_cover",
+		"hexieCover": "",
+		"noteJson": "cryogenic_map",
+		"scene": "scene_02",
+		"levelDesigner": "Cooler",
+		"difficulty1": "3",
+		"difficulty2": "5",
+		"difficulty3": "8",
+		"difficulty4": "10",
+		"callBackDifficulty1": "3",
+		"callBackDifficulty2": "5",
+		"callBackDifficulty3": "8",
+		"callBackDifficulty4": "10",
+		"unlockLevel": "49"
+	},
+	{
 		"uid": "0-28",
 		"name": "無人区-Vacuum Track#ADD8E6-",
 		"author": "NoKANY",
