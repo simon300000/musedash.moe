@@ -2,6 +2,75 @@
 
 Base URL: `https://api.musedash.moe`
 
+This is the **unofficial Muse Dash Rank** API, not an API operated by PeroPeroGames.
+This reference describes routes implemented in [`api/api.ts`](api/api.ts) and
+[`api/mdmc.ts`](api/mdmc.ts) on the `master` branch. Response examples below are
+illustrative snapshots: numbers, player names, and database contents change, and
+`...` means an excerpt rather than valid, copy-pastable JSON.
+
+## Quick reference
+
+| Method | Path | Purpose |
+| --- | --- | --- |
+| GET | `/albums` | Album and song metadata |
+| GET | `/tag` | Song tags |
+| GET | `/ce` | Character and elfin names |
+| GET | `/rank/:uid/:difficulty/:platform` | Leaderboard for a chart |
+| GET | `/rank/:uid/:difficulty/:platform/:id` | Stored raw score for one user |
+| GET | `/rankUpdateTime/:uid/:difficulty/:platform` | Leaderboard refresh timestamp |
+| GET | `/player/:id` | Player profile, plays and computed rating |
+| GET | `/player/diffHistory/:id` | Paginated rating history |
+| GET | `/search` | Empty search result |
+| GET | `/search/:string` | Player nickname search |
+| GET | `/diffDiffMusic/:uid/:difficulty` | Estimated chart difficulty |
+| GET | `/diffdiff` | All estimated chart difficulties (JSON) |
+| GET | `/diffdiff.xml` | All estimated chart difficulties (XML) |
+| GET | `/playerDiffRank` | Computed player-rating leaderboard |
+| GET | `/playerNumber` | Indexed player count |
+| GET | `/uptime` | Backend process uptime in seconds |
+| GET | `/log` | Backend diagnostic log text |
+| GET | `/mdmc/musics` | Ranked MDMC custom charts |
+| GET | `/mdmc/rank/:id/:difficulty` | MDMC chart leaderboard |
+| GET | `/mdmc/player/:id` | MDMC player scores |
+| GET | `/mdmc/search/:string` | MDMC player nickname search |
+| POST | `/refreshRank` | **Internal:** schedule rank scraping |
+| POST | `/dispatch` | **Internal:** select pending fetch job |
+| POST | `/dispatch256` | **Internal:** list a batch of fetch jobs |
+| POST | `/receipt` | **Internal:** deliver a fetch result |
+
+The four POST routes are implementation/worker controls, **not supported
+third-party APIs**. Do not invoke them from ordinary client integrations.
+
+## Conventions and limitations
+
+- Paths and JSON field names are case-sensitive. Path parameters in examples
+  such as `:uid` and `:id` must be replaced with actual values.
+- Song `uid` values look like `1-1`; `difficulty` is a **zero-based chart index**
+  (`0` to `4` for built-in songs, when those charts exist). For MDMC charts,
+  valid stored difficulty indices are `0` to `3`. An album's
+  `difficulty` array contains **displayed level strings**, not those indices;
+  `"0"` indicates a missing chart.
+- For the built-in ranking routes, `platform` is `mobile`, `pc` or `all`.
+  The raw-score route is keyed by a specific platform and player ID.
+- Public GET handlers do not check API keys or bearer tokens. This does not
+  guarantee that a deployed proxy permits unlimited requests; no stable rate
+  limit contract is defined in the repository.
+- Responses are usually JSON, except `/diffdiff.xml` (XML) and `/log`
+  (plain text). Numeric endpoints return JSON numbers. Data comes from cached
+  databases and may lag behind the game, rather than being live game-server
+  lookups.
+- The application uses an in-process **five-second GET response cache**.
+  `X-Cache-Status` is `HIT`, `MISS` or `BYPASS`, and
+  `X-Response-Time` reports elapsed milliseconds. The server sets CORS
+  headers using the request's Origin.
+- Missing data and invalid inputs are **not handled consistently**:
+  some lookups return `[]` or a placeholder user, some return `0`,
+  while a missing raw record has no defined JSON response. Do not assume
+  every successful HTTP status contains a populated object or a stable
+  error envelope.
+- This API exposes cached leaderboard data. It does **not** provide a
+  first-party game authentication or score-submission endpoint.
+
 ## Endpoints
 
 ### GET /albums
@@ -119,7 +188,12 @@ curl https://api.musedash.moe/rank/1-1/1/all
 
 **Array format (for all platforms):** `[acc, score, lastRank, nickname, user_id, platform, character_uid, elfin_uid]`
 
-**Array format (for specific platform):** `[acc, score, lastRank, nickname, user_id, undefined, character_uid, elfin_uid]`
+**Array format (for specific platform):** `[acc, score, lastRank, nickname, user_id, null, character_uid, elfin_uid]`
+
+The sixth element is omitted as `undefined` in the TypeScript array construction,
+so JSON serialization emits `null`. `lastRank` is the **previous** stored
+leaderboard's zero-based position; `-1` means absent previously, and a missing
+history also defaults to `-1`. It is **not** the current array index.
 
 ---
 
@@ -193,7 +267,9 @@ curl https://api.musedash.moe/rankUpdateTime/1-1/1/all
 
 ### GET /diffDiffMusic/:uid/:difficulty
 
-Returns difficulty ratings for a specific song and difficulty.
+Returns the calculated chart difficulty (`relative` is an estimated
+level, `absolute` is an internal comparative score). For a chart not present
+in the current difficulty table, both values are serialized as `null`.
 
 ```bash
 curl https://api.musedash.moe/diffDiffMusic/1-1/1
@@ -211,7 +287,14 @@ curl https://api.musedash.moe/diffDiffMusic/1-1/1
 
 ### GET /player/:id
 
-Returns player profile with play data.
+Returns player profile, cached scores (`plays`), calculated player
+rating (`rl`), rating-history entry count (`diffHistoryNumber`), and
+`lastUpdate` (Unix time in **milliseconds**, or `0` if unknown).
+In a play record, `uid` and zero-based `difficulty` identify a chart;
+`i` is its current leaderboard index and `history.lastRank` is an earlier
+zero-based index. `platform` identifies the source platform. The response
+may use a placeholder `user.user_id` of `404` for an unknown player, and
+`rl` can be the string `"NaN"` if no calculated rating is stored.
 
 ```bash
 curl https://api.musedash.moe/player/6ea4f986ffd211e8aa980242ac110011
@@ -244,11 +327,18 @@ curl https://api.musedash.moe/player/6ea4f986ffd211e8aa980242ac110011
 
 ### GET /player/diffHistory/:id
 
-Returns player difficulty history with pagination.
+Returns saved player-rating history entries. `time` is a Unix timestamp
+in milliseconds, `diff` is the computed player rating, and `rank` is the
+**one-based** overall rating rank. The endpoint fetches indexed history,
+not necessarily one entry per day.
 
 **Query Parameters:**
-- `start` - Starting index (required, integer)
-- `length` - Number of records to return (required, integer)
+- `start` - Non-negative zero-based starting index (supply explicitly)
+- `length` - Positive integer number of records to request (supply explicitly)
+
+No pagination metadata is returned; use `diffHistoryNumber` from
+`/player/:id` to know the stored entry count. The current implementation
+does not validate the input range and can yield missing entries.
 
 ```bash
 curl 'https://api.musedash.moe/player/diffHistory/2dc6abd2c4d411e892380242ac11002b?start=0&length=5'
@@ -267,9 +357,24 @@ curl 'https://api.musedash.moe/player/diffHistory/2dc6abd2c4d411e892380242ac1100
 
 ---
 
+### GET /search
+
+Returns an empty array without a search term. To search by nickname, use
+`/search/:string` instead.
+
+```bash
+curl https://api.musedash.moe/search
+```
+
+**Response:** `[]`
+
+---
+
 ### GET /search/:string
 
-Searches for players by nickname.
+Searches for players by nickname (case-insensitive substring matching;
+space-separated terms must all match). Returns `[nickname, user_id]` tuples.
+URL-encode any whitespace or other special characters.
 
 ```bash
 curl https://api.musedash.moe/search/simooo
@@ -443,7 +548,7 @@ curl https://api.musedash.moe/uptime
 
 ### GET /playerNumber
 
-Returns total number of players in the database.
+Returns the cached count of players indexed by the backend (not a live count of current game users).
 
 ```bash
 curl https://api.musedash.moe/playerNumber
@@ -458,7 +563,8 @@ curl https://api.musedash.moe/playerNumber
 
 ### GET /playerDiffRank
 
-Returns player difficulty ranking.
+Returns the calculated player-rating leaderboard in descending `rl` order.
+Each object contains a `user_id` under the property `id` and a numeric `rl` rating.
 
 ```bash
 curl https://api.musedash.moe/playerDiffRank
@@ -480,7 +586,9 @@ curl https://api.musedash.moe/playerDiffRank
 
 ### GET /mdmc/musics
 
-Returns MDMC (Muse Dash Modding Community) music list.
+Returns ranked MDMC (Muse Dash Modding Community) custom charts mirrored
+from the external MDMC service. `difficulty1` through `difficulty4` are
+displayed level strings, not indices.
 
 ```bash
 curl https://api.musedash.moe/mdmc/musics
@@ -508,7 +616,8 @@ curl https://api.musedash.moe/mdmc/musics
 
 ### GET /mdmc/player/:id
 
-Returns MDMC player profile.
+Returns the cached MDMC player profile and plays. Unknown players receive
+a placeholder user with `user_id: "404"` and an empty `plays` array.
 
 ```bash
 curl https://api.musedash.moe/mdmc/player/1
@@ -535,7 +644,8 @@ curl https://api.musedash.moe/mdmc/player/1
 
 ### GET /mdmc/rank/:id/:difficulty
 
-Returns MDMC ranking data for a song.
+Returns the leaderboard for an MDMC chart ID and a zero-based difficulty
+index (`0` to `3`).
 
 ```bash
 curl https://api.musedash.moe/mdmc/rank/670b5e11984eb9b7a347a899/0
@@ -564,3 +674,60 @@ curl https://api.musedash.moe/mdmc/search/meme
 ```
 
 ---
+
+---
+
+## Best 50 / rating FAQ (Issue #344)
+
+**There is no `/best50` endpoint in the current server.** The `rl` value
+returned by `GET /player/:id` is an **aggregate rating**, not a sorted
+list of 50 charts. See [Issue #344](https://github.com/simon300000/musedash.moe/issues/344)
+for the feature request; this documentation change does **not** add that API.
+
+To generate a *client-defined* Best 50 list without one difficulty request
+per play:
+
+1. Fetch `GET /player/:id` once to obtain `plays`.
+2. Fetch `GET /diffdiff` once and index records by `(uid, difficulty)`.
+   This avoids repeated calls to `/diffDiffMusic/:uid/:difficulty`.
+3. Optionally fetch `GET /albums` once to resolve chart/song titles.
+4. Join records, apply your own eligibility, duplicate-score and ranking
+   rules, sort descending, and take the first 50.
+
+If you want to approximate this server's **per-chart** rating contribution,
+the current [`api/diffdiff.ts`](api/diffdiff.ts) uses:
+
+```js
+const x = play.acc / 100
+const accuracyWeight = x === 1 ? 1 : x - x * x + x ** 4
+const contribution = accuracyWeight * relativeDifficulty
+```
+
+The server also excludes plays using character/elfin IDs in
+[`api/config.ts`](api/config.ts), retains the highest accuracy for each
+`(uid, difficulty)`, and uses an **exponentially weighted aggregation**
+for `rl`. Therefore, simply taking the 50 highest `contribution` values
+is **not identical** to the server's `rl` calculation and should not be
+presented as an official Best 50 definition. These internals may change.
+
+## Internal/operational POST endpoints
+
+These routes are registered on the same Koa server, but are used by the
+scraper/distributed job machinery. **They are not stable public APIs.**
+There is no input validation/authentication implemented in these route
+handlers; exposing them directly to untrusted clients requires deployment
+controls. They are listed for completeness, without executable examples.
+
+| Method and path | Request body | Response | Effect |
+| --- | --- | --- | --- |
+| `POST /refreshRank` | JSON: `{"uid":"1-1","difficulty":1,"platform":"all"}` | `{"hi":"you found me!"}` | Awaits a rank scrape job for the provided chart |
+| `POST /dispatch` | None | `{"url":"..."}` when jobs exist, or `{}` when none are pending | Chooses a pending job URL |
+| `POST /dispatch256` | JSON: `{"i":0}` (zero-based batch index) | `{"urls":["..."]}` | Lists up to 256 queued URLs for that batch |
+| `POST /receipt` | JSON: `{"url":"...","data":"{\\"code\\":0,...}"}` | `{"result":true}` or `{"result":false}` | Parses the stringified JSON in `data`, and acknowledges a queued job if its result `code` is `0` |
+
+All four routes are defined in [`api/api.ts`](api/api.ts);
+`/dispatch`, `/dispatch256` and `/receipt` delegate to
+[`api/dispatcher.ts`](api/dispatcher.ts). The `receipt` payload's
+`data` member is a **JSON-encoded string**, not a nested object.
+Malformed bodies can fail rather than returning a documented error object.
+
