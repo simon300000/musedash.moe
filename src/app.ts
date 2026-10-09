@@ -1,6 +1,6 @@
 import type { App as VueApp } from 'vue'
 import type { Router } from 'vue-router'
-import { createApp as createVueApp, h } from 'vue'
+import { createSSRApp as createVueApp, h } from 'vue'
 import { createPinia } from 'pinia'
 import App from './App.vue'
 import { createRouter } from './router'
@@ -20,6 +20,7 @@ interface CreateAppResult {
 }
 
 export const createApp = ({ lang = 'ChineseS', changeTitle, theme = 'dark' }: CreateAppOptions): CreateAppResult => {
+  // Use the same SSR-aware factory on server and client so DOM is hydrated.
   const app = createVueApp({
     render: () => h(App)
   })
