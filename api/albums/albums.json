@@ -30,6 +30,16 @@
       "free": false
   },
   {
+      "uid": "music_package_103",
+      "title": "肥宅快乐包 Vol.21",
+      "tag": "Happy",
+      "needPurchase": true,
+      "price": "¥25.00",
+      "jsonName": "ALBUM104",
+      "prefabsName": "AlbumDisco104",
+      "free": false
+  },
+  {
       "uid": "music_package_102",
       "title": "沉睡的黄金刻痕",
       "tag": "Theme",
